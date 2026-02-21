@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Comment Choisir un Bon Plombier en Belgique (Sans Arnaque) ?" description="Ne vous faites plus escroquer ! Nos 8 conseils pour choisir un plombier honnête et compétent en Belgique. Agréments Cerga, devis clairs, numéro de TVA et Google Docs." faqs={[{q:"Comment savoir si un plombier est agréé en Belgique ?",a:"Vérifiez toujours s'il possède un numéro de TVA belge actif sur la BCE (Banque-Carrefour des Entreprises). Demandez-lui son attestation d'« Accès à la profession » s'il s'installe. Pour le gaz, exigez son agrément professionnel (Cerga, G1/G2)."},{q:"Dois-je payer un devis de plomberie ?",a:"En Belgique, le devis est généralement GRATUIT. Cependant, à la suite d'un déplacement exprès chez vous pour évaluer un dommage (ex: recherche de fuite de 2 heures), un forfait Diagnostic (50€ à 100€) peut être exigé. Il sera souvent déduit si vous acceptez le devis."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Choisir un plombier Belgique</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">✅ Conseils Pratiques</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Comment Choisir un Plombier en Belgique sans se Faire Arnaquer ?</h1>
+
+      <p class="blog-intro">Le secteur du dépannage plomberie d'urgence est tristement célèbre pour ses escroqueries. En situation de stress avec de l'eau jusqu'aux chevilles, on a tendance à appeler le premier numéro trouvé sur Google, sans vérifier. <strong>Factures de déboucheur de 1500€, techniciens fantômes qui disparaissent... Voici notre check-list absolue pour engager un plombier fiable à Bruxelles, Charleroi, Liège ou ailleurs en Belgique.</strong></p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#prospectus">1. La règle d'or : Jeter les prospectus "Cartes locales"</a></li>
+          <li><a href="#tva">2. Vérifiez l'existence légale de l'entreprise (TVA et BCE)</a></li>
+          <li><a href="#devis">3. Jamais de travaux sans Devis Préalable Signé !</a></li>
+          <li><a href="#google">4. Ne faites pas une confiance aveugle aux "Annonces Google"</a></li>
+          <li><a href="#cerga">5. L'agrément Gaz ou Mazout (Cerga)</a></li>
+          <li><a href="#materiel">6. Un vrai plombier a un VRAI véhicule équipé</a></li>
+          <li><a href="#tarif">7. Le Prix par téléphone doit être clair</a></li>
+          <li><a href="#facture">8. La Facture, votre ultime arme de défense</a></li>
+        </ol>
+      </div>
+
+      <h2 id="prospectus">1. Jetez les prospectus de boîtes aux lettres !</h2>
+      <p>C'est l'arnaque n°1 en Belgique depuis 20 ans. Vous recevez un petit carton (souvent aimanté ou jaune/bleu) avec les numéros de la Commune, de la Police, de la garde médicale, et juste en dessous : "Serrurier-Plombier Dépannage".</p>
+      <p>⚠️ <strong>Fuyez.</strong> Ces cartons sont distribués par des réseaux de dépannages "mafieux". Ils sous-traitent à des ouvriers amateurs et vous facturent 800€ un joint d'étanchéité.</p>
+
+      <h2 id="tva">2. Vérifiez le numéro de TVA sur la BCE</h2>
+      <p>Un plombier légal en Belgique a une identité transparente.</p>
+      <p>Sur son site web, sa carte de visite ou son Facebook, il doit afficher son numéro d'entreprise : <code>BE 0XXX.XXX.XXX</code>.</p>
+      <p>Allez sur l'outil "Public Search BCE" du gouvernement fédéral. Tapez le numéro. S'il n'existe pas, ou s'il s'agit d'une entreprise de "Vente au détail de vêtements" radiée en 2012 : vous avez affaire à un travailleur au noir ou une escroquerie.</p>
+
+      <h2 id="devis">3. Le Devis est obligatoire avant le premier coup de clé</h2>
+      <p>La faille principale : le dépanneur arrive, regarde votre WC, ne dit rien, sort son tournevis, démonte tout l'intérieur de la cuve pendant 5 minutes. Une fois votre WC de 500€ en mille morceaux, il se relève : <em>"Alors la réparation c'est 420€"</em>. Si vous refusez, il pose les pièces par terre et part.</p>
+      <p><strong>C'EST ILLÉGAL.</strong> Un plombier, même le week-end, DOIT vous formuler un prix (forfait, ou estimatif horaire plafond) <strong>AVANT</strong> de démonter ou casser quoi que ce soit. Si le gars force la réparation sans vous donner un prix sur une feuille / son téléphone, foutez-le dehors.</p>
+
+      <h2 id="google">4. Attention aux premières annonces "Sponsorisées"</h2>
+      <p>Quand vous cherchez <em>"Plombier urgence Woluwe"</em> sur Google, les 3 premiers résultats ont le mot <strong>Sponsorisé</strong> (AdWords). Ce sont des publicités. Les réseaux d'arnaqueurs paient des sommes faramineuses à Google (+20€ le clic) pour être en haut de page.</p>
+      <p>Descendez un peu plus bas, regardez la carte <strong>Google Maps (My Business)</strong>. Cherchez les plombiers locaux avec plus de 30 ou 40 avis (minimum 4 étoiles). Et lisez les avis les "Plus récents" ou "Les moins bien notés" pour détecter d'éventuelles plaintes.</p>
+
+      <h2 id="cerga">5. L'Agrément Gaz : Essentiel pour la Chaudière !</h2>
+      <p>S'il s'agit d'un problème strictement d'eau (débouchage, tuyau percé d'arrivée froide), n'importe quel plombier suffit.</p>
+      <p>Mais s'il s'agit du raccordement de votre chaudière VAILLANT au réseau de gaz de ville de FLUVIUS ou ORES, <strong>il lui FAUT un certificat Cerga (ou G1 / G2) valide.</strong> Il doit être capable de joindre son numéro d'agréation sur l'attestation de réception. Si l'artisan vous dit : "Bof le papier c'est pas grave" : refusez. Si votre maison explose à la suite d'une fuite de gaz monoxyde, votre assurance Habitation se retournera contre vous pour recours à un non-professionnel.</p>
+
+      <h2 id="materiel">6. Le véhicule du plombier parle pour lui</h2>
+      <p>Un plombier professionnel a un investissement de 10.000€ à 30.000€ dans son véhicule (marquage logo, étagères intérieures Sortimo, tuyaux Alpex multicouches en bobine, centaines d'embouts, machine à désembouage Rems, furets professionnels à tambour, chalumeaux à gaz, bouteilles d'acétylène). Il arrive dans sa camionnette remplie.</p>
+      <p>S'il se présente dans une petite Peugeot de tourisme vieille de 15 ans avec un sac de sport posé sur le siège passager en guise de caisse à outils... Ce n'est pas un installateur ni un vrai dépanneur équipé (il ne pourra d'ailleurs rien souder ni remplacer).</p>
+
+      <h2 id="tarif">7. Tarifs par téléphone</h2>
+      <p>Lors de votre appel angoissé à 22h, demanez le tarif :</p>
+      <ul>
+        <li>Plombier louche : <em>"Bah ça dépendra sur place madame, comptez un 45€ le déplacement et pis on verra ce que c'est le truc"</em>. (Résultat, il va inventer une réparation à 700€).</li>
+        <li>Plombier honnête : <em>"Pour un débouchage WC ce soir avec la majoration de nuit, on vous fera un forfait de 180 € TVAC comprenant déplacement et désengorgement à la pompe, sauf s'il faut passer le camion où ça grimpera à 300 €. Vous êtes d'accord ?"</em></li>
+      </ul>
+
+      <h2 id="facture">8. Demandez Toujours la Facture et Payez Traceable 💶</h2>
+      <p>Les mots fatidiques : <em>"Je vous fais un bon de travail sur un coin de feuille, ou sans TVA en cash ça ira plus vite pour vous ok ?"</em> Dites NON.</p>
+      <p>Payez par <strong>Bancontact, Payconiq, ou virement bancaire sur place</strong>. Et EXIGEZ une facture par email au nom de sa société belge (avec son IBAN d'entreprise). En cas de vice caché (le robinet qu'il a posé pète deux jours plus tard), si vous avez payé en cash "en noir", il s'entêtera et ne reviendra JAMAIS corriger la fuite de son fait.</p>
+
+
+      <div class="blog-cta card">
+        <h3>✅ Chez Plombier Urgence, on s'engage.</h3>
+        <p>100% de transparence. Nos prix sont fixes par téléphone, nos véhicules ultra-équipés, nos techniciens locaux (Wallonie/Bruxelles), et nos factures envoyées en bonne et due forme (garantie réparation d'un an incluse).</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Un plombier honnête au : 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Ne prenez aucun risque." subtitle="Appelez notre équipe locale, agréée, et transparente financièrement." />
+</Layout>
+
+<style set:html={css}></style>

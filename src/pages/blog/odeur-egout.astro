@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Odeur d'Égout dans la Maison : 5 Causes et Solutions (2025)" description="Ça sent l'égout dans la maison ou la salle de bain ? Découvrez les 5 causes principales (siphon vide, évent bouché, fuite cachée) et comment éliminer ces mauvaises odeurs." faqs={[{q:"Pourquoi ma salle de bain sent l'égout quand il pleut ?",a:"C'est généralement dû à un problème de ventilation (évent) sur votre toit ou à une saturation des égouts publics qui créent une surpression et remontent les gaz dans votre siphon."},{q:"Comment enlever une odeur d'égout dans une canalisation ?",a:"Bicarbonate de soude + Vinaigre blanc. Laissez agir 30 minutes, puis rincez à l'eau bouillante. Rajoutez de l'eau dans tous vos siphons, même ceux non utilisés (douche d'amis, baignoire inutilisée)."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Odeur d'égout dans la maison</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">👃 Diagnostic</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Odeur d'Égout dans la Maison : 5 Causes et Comment s'en Débarrasser</h1>
+
+      <p class="blog-intro">Vous rentrez chez vous et une violente odeur d'œufs pourris ou d'égout vous prend au nez ? Ces remontées olfactives sont causées par le sulfure d'hydrogène (gaz d'égout). Au-delà de l'inconfort, <strong>c'est souvent le signe d'une faille dans votre système de plomberie.</strong> Voici les 5 coupables les plus fréquents et comment régler le problème une bonne fois pour toutes.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#siphon">Cause 1 : Le siphon asséché (Le plus courant)</a></li>
+          <li><a href="#bouchon">Cause 2 : L'accumulation de déchets organiques</a></li>
+          <li><a href="#event">Cause 3 : Un défaut de ventilation (évent bloqué)</a></li>
+          <li><a href="#joint">Cause 4 : Le joint d'étanchéité des toilettes usé</a></li>
+          <li><a href="#fuite">Cause 5 : Une fuite cachée dans la tuyauterie</a></li>
+          <li><a href="#astuces">L'astuce anti-odeur naturelle de grand-mère</a></li>
+        </ol>
+      </div>
+
+      <h2 id="siphon">1. Cause N°1 : Le Siphon Asséché</h2>
+      <p>Un siphon (le coude en forme de "U" ou de "P" sous votre évier) n'est pas fait que pour rattraper la bague que vous avez fait tomber. <strong>Son rôle principal est de conserver un bouchon d'eau en permanence.</strong> Ce bouchon d'eau empêche les gaz des égouts de remonter dans la pièce.</p>
+      
+      <p><strong>Le problème :</strong> Si vous n'utilisez pas une douche ou un lavabo (ex: salle de bain d'amis ou lavabo de garage) pendant plusieurs semaines, l'eau du siphon s'évapore. Le bouchon d'eau disparaît, et les gaz remontent librement !</p>
+      
+      <p><strong>La solution DIY :</strong> Faites simplement couler de l'eau chaude pendant 10 secondes dans CHAQUE trou d'évacuation de la maison (n'oubliez pas la baignoire, le bidet et le sterput de la buanderie). Le siphon se remplira et l'odeur disparaîtra en 30 minutes.</p>
+
+      <h2 id="bouchon">2. L'Accumulation de Déchets Organiques (Effet Biofilm)</h2>
+      <p>Parfois, le siphon est bien rempli d'eau, mais l'odeur persiste. Cela arrive souvent dans les bondes de douches à l'italienne ou sous les éviers de cuisine.</p>
+      <p>Un "biofilm" gluant composé de savon, de sébum, de dentifrice, de cheveux et de graisses se forme dans les parois. Ces bactéries en décomposition sentent exactement comme un mini-égout.</p>
+      
+      <p><strong>La solution :</strong></p>
+      <ul>
+        <li>Démontez le siphon marin à la main (mettez un seau en dessous !).</li>
+        <li>Nettoyez-le avec une vieille brosse à dents et de l'eau de Javel.</li>
+        <li>Brossez l'intérieur du tuyau vertical.</li>
+      </ul>
+
+      <h2 id="event">3. Le Défaut d'Évent (Ventilation de chute)</h2>
+      <p>Entendez-vous un <em>"Glou-glou"</em> dans l'évier de la salle de bain au moment où vous tirez la chasse d'eau du WC situé à côté ? Et l'odeur apparaît juste après ?</p>
+      <p><strong>Explication :</strong> Vos canalisations ont besoin d'une prise d'air (qui donne souvent sur le toit : la cheminée d'évent). Quand l'énorme masse d'eau de la chasse descend le tuyau, elle fait un effet ventouse. Si l'évent de toit est bouché par un nid d'oiseau ou des feuilles mortes, l'eau va aspirer l'air par là où elle peut... C'est-à-dire en aspirant violemment l'eau contenue dans le siphon de votre lavabo. Résultat : le lavabo perd son bouchon d'eau (voir point 1) et sent l'égout !</p>
+      <p><strong>La solution Pro :</strong> Appelez un plombier pour installer un <em>Clapet Durgo</em> (clapet anti-vide) ou faire désobstruer la colonne d'aération sur votre toit.</p>
+
+      <h2 id="joint">4. Le Joint d'Étanchéité des Toilettes est Usé</h2>
+      <p>Ça sent l'égout en continu près de votre cuvette de WC suspendu ou sur pied ?</p>
+      <p>Entre la porcelaine du WC et le gros tuyau gris en PVC qui part au sol ou au mur, il y a un gros joint noir en caoutchouc (une pipe de raccordement / joint à lèvre). Avec les années, les produits wc chlorés détruisent et cuisent ce caoutchouc. Il se craquelle, et bien qu'il n'y ait pas toujours d'eau qui coule au sol, <strong>les gaz toxiques s'échappent par ces fissures.</strong></p>
+      <p><strong>Solution :</strong> Un technicien démontera le WC pour replacer un nouveau joint à lèvre (intervention à ± 150 €).</p>
+
+      <h2 id="fuite">5. Fuite Cachée sous le Sol / Fosse Sceptique</h2>
+      <p>Si vous vivez au rez-de-chaussée ou que l'odeur vient de votre vide sanitaire, une canalisation en grès ou PVC sous votre fondation a peut-être cédé, relâchant des flaques d'effluents fécaux sous votre maison.</p>
+      <p>Si vous n'êtes pas raccordé aux égouts mais avez une <strong>fosse septique</strong>, l'odeur peut indiquer que celle-ci est pleine ou que les bactéries aérobies sont mortes (trop de javel tuera votre fosse). Prévoyez une vidange d'urgence complète au camion de vidange.</p>
+
+      <h2 id="astuces">L'Astuce Anti-Odeur Naturelle au Quotidien</h2>
+      <p>Marre d'acheter de la Javel ou du Destop polluant et corrosif pour masquer l'odeur ?</p>
+      <ol>
+        <li>Versez 4 généreuses cuillères à soupe de Bicarbonate de Soude dans l'évacuation puante.</li>
+        <li>Gobelet de Vinaigre Blanc pur. Ça va mousser énormément, fermez avec le bouchon de l'évier.</li>
+        <li>Laissez agir le couple chimique magique pendant 30 minutes.</li>
+        <li>Versez 2 litres d'eau presque bouillante. La canalisation sera aseptisée, désodorisée, et les dépôts savonneux fondus.</li>
+      </ol>
+
+      <div class="blog-cta card">
+        <h3>👃 Une odeur tenace malgré vos efforts ?</h3>
+        <p>Il y a peut-être une fissure grave. Nous intervenons en Belgique pour des inspections caméra sous détecteur de gaz afin de débusquer les fuites olfactives invisibles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Expertise Gaz & Odeur : 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Dites adieu aux mauvaises odeurs !" subtitle="Plombiers agréés, spécialistes de la détection de fuite (Belgique)." />
+</Layout>
+
+<style set:html={css}></style>

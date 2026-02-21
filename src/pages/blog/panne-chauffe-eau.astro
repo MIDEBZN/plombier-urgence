@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Chauffe-eau Électrique ne Chauffe Plus : 8 Pannes et Solutions" description="Chauffe-eau ne chauffe plus ? Découvrez les 8 causes principales (résistance, thermostat, calcaire), comment réarmer le contacteur et les tarifs de réparation en 2025." faqs={[{q:"Pourquoi mon chauffe-eau électrique ne chauffe plus ?",a:"Les 3 causes principales sont : un disjoncteur sauté (vérifiez le tableau), un thermostat en sécurité (à réarmer), ou une résistance entartrée (calcaire) ou grillée."},{q:"Comment réarmer un chauffe-eau en sécurité ?",a:"Coupez l'électricité. Démontez le capot sous le chauffe-eau. Repérez le thermostat et appuyez sur le petit bouton rouge ('S' ou 'Sécurité') avec un tournevis fin jusqu'au clic. Remettez le courant."},{q:"Combien coûte le remplacement d'un chauffe-eau ?",a:"Le remplacement complet d'un chauffe-eau de 150L à 200L coûte entre 400€ et 900€ en Belgique, pose et matériel compris. Le changement de résistance coûte entre 150€ et 300€."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Chauffe-eau électrique ne chauffe plus</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">⚡ Dépannage</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Chauffe-eau Électrique ne Chauffe Plus : 8 Pannes Fréquentes et Solutions</h1>
+
+      <p class="blog-intro">De l'eau tiède ou complètement froide sous la douche le matin ? Une panne de chauffe-eau électrique (boiler) est l'une des pannes les plus courantes. <strong>Avant d'appeler un plombier, sachez que 40% des pannes peuvent être résolues sans frais</strong> en vérifiant le tableau électrique ou en réarmant le thermostat. Voici notre guide complet de dépannage étape par étape.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#tableau">Étape 1 : Vérifier le tableau électrique (Pannes 1 & 2)</a></li>
+          <li><a href="#rearmer">Étape 2 : Réarmer la sécurité du thermostat (Panne 3)</a></li>
+          <li><a href="#resistance">Panne 4 : La résistance est grillée ou entartrée</a></li>
+          <li><a href="#thermostat-hs">Panne 5 : Le thermostat est hors service</a></li>
+          <li><a href="#groupe">Panne 6 : Fuite au groupe de sécurité</a></li>
+          <li><a href="#contacteur">Panne 7 : Le contacteur jour/nuit (Heures Creuses)</a></li>
+          <li><a href="#calcaire">Panne 8 : Le calcaire massif dans la cuve</a></li>
+          <li><a href="#tarifs">Tarifs de réparation et remplacement 2025</a></li>
+        </ol>
+      </div>
+
+      <h2 id="tableau">Étape 1 : Vérifier le Tableau Électrique</h2>
+      <p>La première chose à faire est de vérifier si le chauffe-eau est bien alimenté en électricité.</p>
+      
+      <h3>Panne 1 : Le disjoncteur du chauffe-eau a sauté</h3>
+      <p>Ouvrez votre tableau électrique. Repérez le disjoncteur dédié au chauffe-eau (généralement 16A ou 20A). S'il est baissé (sur "OFF" ou "0"), remontez-le. Si ça disjoncte à nouveau immédiatement, il y a un court-circuit (souvent une fuite d'eau sur la partie électrique ou une résistance blindée fendue). Contactez un professionnel.</p>
+
+      <h3>Panne 2 : Le contacteur Jour/Nuit (Heures Creuses)</h3>
+      <p>Si vous avez un tarif bi-horaire, votre tableau comporte un contacteur jour/nuit avec 3 positions :</p>
+      <ul>
+        <li><strong>0 (Arrêt)</strong> : Le chauffe-eau est coupé.</li>
+        <li><strong>AUTO</strong> : Le chauffe-eau s'allume la nuit. C'est la position normale.</li>
+        <li><strong>1 ou Marche Forcée</strong> : Le chauffe-eau fonctionne immédiatement en heures pleines.</li>
+      </ul>
+      <p><strong>Le test :</strong> Mettez le contacteur sur "1". S'il y a un petit "clac", le courant passe. Attendez 3h : si l'eau est chaude, c'est que le signal EDF/votre fournisseur Heures Creuses ne passe plus (problème fournisseur) ou que le contacteur est HS.</p>
+
+      <h2 id="rearmer">Étape 2 : Réarmer la Sécurité du Thermostat (Panne 3)</h2>
+      <p>Le thermostat de votre chauffe-eau possède une sécurité thermique qui coupe l'alimentation si l'eau surchauffe (pour éviter l'explosion). Cette sécurité peut se déclencher lors d'un orage ou à cause du calcaire.</p>
+      <p><strong>Comment réarmer (manipulation facile) :</strong></p>
+      <ol>
+        <li><strong>🚨 IMPORTANT : Coupez le courant</strong> du chauffe-eau au tableau électrique.</li>
+        <li>Sous le chauffe-eau, démontez le capot de protection en plastique (1 ou 2 vis).</li>
+        <li>Repérez le thermostat (boîtier avec une molette de réglage et des fils électriques).</li>
+        <li>Cherchez un tout petit bouton rouge, carré ou rond, parfois signalé d'un "S" ou de la mention "Sécurité".</li>
+        <li>Appuyez dessus avec la pointe d'un stylo ou d'un tournevis fin jusqu'à entendre un petit "clic".</li>
+        <li>Refermez le capot, remettez le courant, attendez 4 heures et vérifiez si l'eau est chaude.</li>
+      </ol>
+      <p><em>Si la sécurité saute à nouveau quelques jours plus tard, votre thermostat est défectueux ou la cuve est pleine de calcaire.</em></p>
+
+      <h2 id="resistance">Panne 4 : La Résistance est Grillée ou Entartrée</h2>
+      <p>La résistance est la pièce qui chauffe l'eau. Il en existe deux types :</p>
+      <ul>
+        <li><strong>Résistance blindée (thermoplongeur) :</strong> elle est en contact direct avec l'eau. En Belgique (eau trè dure), elle s'entartre vite, surchauffe et fend. Si elle est fendue, l'eau touche le filament électrique et fait sauter le disjoncteur (court-circuit).</li>
+        <li><strong>Résistance stéatite :</strong> elle est insérée dans un fourreau (gant de doigt) et ne touche pas l'eau. Elle s'entartre moins vite et peut être remplacée sans vider toute la cuve (très pratique).</li>
+      </ul>
+      <p><strong>Diagnostic :</strong> Si l'eau met beaucoup plus de temps qu'avant à chauffer, la résistance est probablement très entartrée. Si l'eau reste totalement froide et que le courant passe bien (vérifié au multimètre), la résistance est grillée. Remplacement : 150€ à 300€.</p>
+
+      <h2 id="thermostat-hs">Panne 5 : Le Thermostat est Hors Service</h2>
+      <p>Le thermostat régule la température (généralement réglée entre 60°C et 65°C). S'il est HS, soit l'eau ne chauffe plus du tout, soit elle bout, ce qui fait disjoncter la sécurité thermique (voir étape 2).</p>
+      <p><strong>Comment tester au multimètre (pour les bricoleurs) :</strong> Courant coupé. Débranchez les deux fils du thermostat. Côté thermostat, mesurez la continuité (Ohmmètre). Si l'écran affiche "1" ou "OL" (Open Loop), le thermostat est grillé. Le remplacement d'un thermostat est simple et peu coûteux (pièce entre 30€ et 80€).</p>
+
+      <h2 id="groupe">Panne 6 : Fuite Continue au Groupe de Sécurité</h2>
+      <p>Le groupe de sécurité est une pièce située sous l'arrivée d'eau froide de la cuve. Il gère la pression. Pendant la chauffe, il est <strong>NORMAL</strong> qu'il goutte un peu pour évacuer la surpression. Mais s'il coule en filet continu :</p>
+      <ul>
+        <li>Soit la pression du réseau d'eau froide est trop forte (> 3,5 bars) → il faut installer un réducteur de pression au compteur.</li>
+        <li>Soit le groupe de sécurité est bloqué par le calcaire ou un débris. Essayez de tourner le bouton de purge (rouge) sèchement pour chasser le tartre. S'il continue à fuir, il faut le remplacer (environ 100€ à 150€, pièce et main d'œuvre).</li>
+      </ul>
+
+      <h2 id="contacteur">Panne 7 : Le Contacteur Jour/Nuit Défectueux</h2>
+      <p>Si vous avez suivi l'Étape 1, que l'eau chauffe en "Marche Forcée" (position 1) MAIS qu'elle ne chauffe pas la nuit en position AUTO, le contacteur est très probablement grillé ou la bobine interne ne réagit plus à l'impulsion de votre fournisseur d'électricité. C'est une intervention pour un électricien (remplacement : environ 100€).</p>
+
+      <h2 id="calcaire">Panne 8 : Le Calcaire Massif dans la Cuve (Entartrage)</h2>
+      <p>En Belgique, la forte dureté de l'eau est l'ennemi n°1 des boilers. Au fil des années, le calcaire s'accumule au fond de la cuve (jusqu'à 10 ou 15 kg de boue de tartre !). L'eau est chaude "moins longtemps" (vous n'avez plus que 10 min d'eau chaude au lieu d'en avoir assez pour 3 douches), l'eau met des heures à chauffer, ou le chauffe-eau fait un bruit de "bouilloire" (clac-clac) pendant la chauffe.</p>
+      <p><strong>La solution :</strong> Un détartrage complet. Il faut vider les 150 ou 200L de la cuve (prend des heures), ouvrir la trappe de visite, retirer le calcaire à la main, nettoyer la résistance (ou la remplacer), changer le joint d'étanchéité et refermer. Intervention d'un plombier : environ 200€ à 350€.</p>
+      
+      <p><em>👉 Si le chauffe-eau a plus de 10 ans, il est souvent plus économique de le remplacer par un neuf (plus isolé et plus économe en énergie) plutôt que de payer un grand entretien.</em></p>
+
+      <h2 id="tarifs">Tarifs indicatifs : Dépannage vs Remplacement en 2025</h2>
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead><tr><th>Type d'intervention (Bruxelles/Belgique)</th><th>Fourchette de Prix (Pose incluse)</th></tr></thead>
+          <tbody>
+            <tr><td>Déplacement et diagnostic en semaine</td><td class="price">Généralement 60€ à 90€</td></tr>
+            <tr><td>Réarmement du thermostat (panne bénigne)</td><td class="price">80€ à 120€</td></tr>
+            <tr><td>Remplacement groupe de sécurité</td><td class="price">100€ à 180€</td></tr>
+            <tr><td>Remplacement thermostat</td><td class="price">100€ à 200€</td></tr>
+            <tr><td>Remplacement résistance blindée</td><td class="price">150€ à 300€</td></tr>
+            <tr><td>Vidange et détartrage complet de la cuve</td><td class="price">200€ à 350€</td></tr>
+            <tr class="highlight"><td>Remplacement complet Chauffe-eau (150L-200L)</td><td class="price">400€ à 900€</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="blog-cta card">
+        <h3>🚿 Besoin d'eau chaude en urgence ?</h3>
+        <p>Nos artisans plombiers diagnostiquent votre panne de chauffe-eau rapidement et vous annoncent un prix fixe AVANT d'intervenir.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Appeler le 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Plus d'eau chaude ? Panne chauffe-eau" subtitle="Dépannage professionnel dans la journée en Belgique. Devis gratuit." />
+</Layout>
+
+<style set:html={css}></style>

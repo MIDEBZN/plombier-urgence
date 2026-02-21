@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Chaudière en Panne que Faire ? Les Bons Réflexes (2025)" description="Chaudière au gaz en panne ? Plus d'eau chaude ni chauffage ? Vérifiez la pression, réarmez, et découvrez les causes et codes erreurs les plus fréquents (Vaillant, Bulex, Junkers)." faqs={[{q:"Ma chaudière ne s'allume plus et indique un voyant rouge, que faire ?",a:"Le voyant rouge indique une mise en sécurité. Avant d'appeler, vérifiez que la pression est entre 1.2 et 1.5 bar (sur l'écran ou l'aiguille). Si c'est trop bas, rajoutez de l'eau avec les deux vannes de remplissage en dessous. Ensuite, appuyez sur le bouton RESET (ou flamme barrée)."},{q:"Pourquoi ma chaudière perd-elle souvent de la pression ?",a:"Une chute de pression répétée (vous devez ajouter de l'eau toutes les semaines) indique une fuite. Soit une fuite d'eau invisible sous vos carrelages (micro-goutte à goutte), soit le vase d'expansion (la bonbonne rouge à l'intérieur) qui est dégonflé ou percé."},{q:"Qui a le droit de réparer ma chaudière gaz en Belgique ?",a:"Uniquement un technicien plombier-chauffagiste possédant son agrément G1 ou Cerga en Belgique. Toute intervention sur l'arrivée de gaz (brûleur, vanne gaz) par une personne non agréée est illégale et annule l'assurance incendie."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Chaudière en panne</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔥 Chauffage</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Chaudière en Panne Que Faire ? Guide de Diagnostic Avant d'Appeler le Chauffagiste</h1>
+
+      <p class="blog-intro">L'hiver s'installe en Belgique et soudain <strong>vos radiateurs sont froids et l'eau de la douche est glacée</strong>. Chaudière en erreur, voyant rouge qui clignote... C'est la panne ! <strong>Pas de panique : environ 3 pannes sur 10 n'en sont pas vraiment.</strong> Une simple pression trop basse ou un défaut d'allumage gaz peut être résolu à la maison. Voici les vrais bons réflexes face à une chaudière Bulex, Vaillant, Viessmann ou Junkers bloquée.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#verifs">1. Les 3 vérifications obligatoires avant toute chose</a></li>
+          <li><a href="#pression">2. Le problème n°1 : La pression d'eau (Erreur F22 ou F10)</a></li>
+          <li><a href="#reset">3. Le bouton "Reset" ou "Rearmement" : L'ultime test</a></li>
+          <li><a href="#thermostat">4. Le thermostat d'ambiance (piles vides ?)</a></li>
+          <li><a href="#bruit">5. Bruits suspects (sifflement, bouilloire, explosion)</a></li>
+          <li><a href="#erreurs">6. Les codes erreurs fréquents selon la marque</a></li>
+          <li><a href="#urgence">7. Quand faut-il vraiment appeler notre chauffagiste ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="verifs">1. Les 3 Vérifications de Base (Évitez un déplacement pour rien)</h2>
+      <p>Un technicien chauffagiste qui se déplace en urgence (soir, hiver, Pâques) vous coûtera <strong>facilement 120 à 180 € le déplacement</strong>. Assurez-vous d'avoir coché ces trois cases :</p>
+      <ol>
+        <li><strong>L'alimentation électrique :</strong> La prise de la chaudière est-elle bien branchée ? Le disjoncteur "Chaufferie/Chaudière" au tableau électrique général a-t-il sauté ? Un orage récent a peut-être fait disjoncter l'installation.</li>
+        <li><strong>L'alimentation au Gaz :</strong> Vos taques de cuisson au gaz (si vous en avez) s'allument-elles ? La vanne jaune du compteur gaz (Ores/Fluvius/Sibelga) est-elle bien parallèle au tuyau ? Certains compteurs ont une sécurité "coup de poing" qui bloque le gaz après une secousse ou un entretien réseau dans votre rue.</li>
+        <li><strong>Le thermostat :</strong> Est-ce que votre thermostat dans le salon est Allumé ? Changez les piles ! C'est bête, mais 5% des appels en octobre viennent de piles mortes. Mettez-le sur 25°C pour "forcer" la chaudière à s'allumer et écoutez si elle démarre.</li>
+      </ol>
+
+      <h2 id="pression">2. La Pression d'Eau : Le Coupable N°1</h2>
+      <p>Pour faire circuler de l'eau chaude dans vos radiateurs du rez-de-chaussée au 2e étage, le circuit d'eau fermé (radiateurs + chaudière) doit être sous pression. En Belgique, la pression prescrite à l'écran LED (ou sur le thermomètre à aiguille) de votre chaudière doit être de <strong>1.5 bar (zone verte)</strong>.</p>
+      
+      <p>Si la pression chute <strong>sous 0.8 bar</strong> (zone rouge vif, zéro bar), la chaudière se met instantanément en erreur pour éviter que sa pompe ne tourne "à sec" et ne brûle.</p>
+      
+      <h3>Comment remettre de la pression (rajouter de l'eau) ?</h3>
+      <ol>
+        <li>Sous la chaudière murale, cherchez deux petites ailettes (noires, bleues, métalliques) ou un robinet, appelé "vannes ou disconnecteur de remplissage".</li>
+        <li>Ouvrez lentement la première, puis la seconde.</li>
+        <li>Vous allez entendre un "pssshhh" d'eau courante qui remplit la chaudière.</li>
+        <li>Regardez l'écran. Dès que l'aiguille remonte et passe <strong>exactement à 1.5 bars</strong>, refermez bien les deux ailettes/vannes (à fond ! sinon ça va grimper à 3 bars et fuir toute la nuit !).</li>
+      </ol>
+
+      <h2 id="reset">3. Le Bouton "Reset" (ou flamme barrée)</h2>
+      <p>La technologie d'une chaudière à condensation a pour but de s'éteindre à la moindre alerte pour une <strong>sécurité incendie et intoxication (CO)</strong>.</p>
+      <p>Si une rafale de vent s'engouffre dans votre cheminée d'échappement, la flamme s'éteint. Le capteur d'ionisation s'affole, se sentant "aveugle", coupe l'arrivée de gaz instantanément et fige la chaudière. C'est l'erreur (souvent voyant rouge).</p>
+      <p><strong>Remède :</strong> Il s'agit simplement d'un "bug" sécuritaire ponctuel. Pressez et maintenez la touche "RESET" (ou l'icône de flamme avec une croix dessus) <strong>pendant 5 secondes</strong>. L'écran va redémarrer, souffler, faire cliqueter son allumeur (les "tic tic tic") et... rallumer le brûleur avec un ronronnement puissant. Chauffage relancé !</p>
+      <p><em>Attention : Si le brûleur cliquète "tic tic", fait un "vlouf", et s'éteint encore, c'est grave. N'essayez jamais plus de 3 Resets ! Vous saturez la chambre en gaz et vous risquez une explosion d'allumage.</em></p>
+
+      <h2 id="erreurs">4. Les Codes Erreurs Courants (Vaillant, Bulex, Junkers)</h2>
+      <p>Un chiffre s'affiche à l'écran. Voici la traduction rapide des 3 marques reines en Belgique :</p>
+
+      <h3>Chaudière VAILLANT (F.xx)</h3>
+      <ul>
+        <li><strong>[F.22] ou [F.23] ou [F.24] ou [F.75] : Pression et eau.</strong> Il manque d'eau ! Suivez l'<a href="#pression">étape 2</a> et rajoutez de l'eau (1.5 bar) !</li>
+        <li><strong>[F.28] ou [F.29] : Problème d'allumage/Flamme.</strong> Plus de gaz au compteur, capteur d'ionisation HS, électrode d'allumage sale, ou détendeur gelé en hiver. → Intervention technicien (150-250€ selon l'électrode).</li>
+        <li><strong>[F.20] : Surchauffe de sécurité (température > 97°).</strong> Pompe bloquée ou filtre centralité obstrué.</li>
+      </ul>
+
+      <h3>Chaudière BULEX (ThemaCondens F..)</h3>
+      <ul>
+        <li><strong>[F1], [F4] : Flamme absente.</strong> Appuyez sur reset. Si ça persiste -> la sonde de détection est HS ou la bobine de la vanne gaz ne s'ouvre pas.</li>
+        <li><strong>[F9] ou [F61/62/63] : Carte mère HS (La totale).</strong> Le composant électronique complet de la chaudière est mort (surtension). C'est la panne qui coûte cher (300-400€ + de frais de carte mère).</li>
+      </ul>
+
+      <h3>Chaudière JUNKERS (Bosch) — Code EA, C6, etc.</h3>
+      <ul>
+        <li><strong>[EA] : Pas d'ionisation.</strong> Panne majeure ! Pas de gaz ou capteur usé. Il va falloir démonter le brûleur, passer la brosse métallique sur l'électrode. -> Technicien obligatoire.</li>
+        <li><strong>[C6] : Ventillateur extracteur.</strong> Les gaz de combustion brûlés ne peuvent plus sortir dans la cheminée ! Danger Oxyde de Carbone (CO) ! Le ventilateur est cassé ou gelé.</li>
+      </ul>
+
+      <h2 id="bruit">5. Les Bruits Suspects : Diagnostic à l'oreille</h2>
+      <p><strong>Le bruit de bouilloire sifflante (pssshhii) :</strong> Comme une casserole d'eau frémissante ! C'est le calcaire ! En chauffant l'eau à 65°C, les blocs de tartre au fond de la chambre sèchent et pètent de chaud. Le corps de chauffe s'entartre... Il finira par se percer.</p>
+      <p><strong>Clac Clac régulier en mode chauffage :</strong> Le purgeur d'air automatique au-dessus de la chaudière ne fonctionne plus, ce sont des poches d'air énormes qui circulent dans les pompes. Vos radiateurs au 2e étage sont froids sur la moitié supérieure. Solution : Purgez l'ensemble de vos radiateurs en partant du bas de la maison avec la petite clé carrée, puis remettez de l'eau (<a href="#pression">étape 2</a>).</p>
+
+      <h2 id="urgence">6. Quand faut-il VRAIMENT un Plombier-Chauffagiste Agrée (Cerga) ?</h2>
+      <p>Si la pression d'eau ne cesse de baisser (ajouter de l'eau quotidiennement est interdit, l'oxygène "neuf" rouille vos radiateurs par l'intérieur !), la panne est complexe (vase d'expansion percé = 130-180€ pour remplacer la bonbonne rouge au mur).</p>
+      
+      <p>Si ça sent "le gaz", <strong>FERMEZ L'ARRIVÉE, ouvrez les fenêtres et ne touchez plus au moindre interrupteur</strong>. Appelez Plombier Urgence (Ores) sur place dans la province ! Toute intervention en Belgique implique la manipulation de monoxyde de Carbone, de joints O-rings, du moniteur d'analyse O2/CO2 : aucune bidouille n'est admise.</p>
+
+      <div class="blog-cta card">
+        <h3>🔥 Chauffagiste d'urgence en Belgique</h3>
+        <p>Vos radiateurs sont un glaçon géant ? Nous dépannons Bulex, Vaillant, Junckers et Viessmann. Déplacement express.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Appeler un technicien</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Chaudière totalement bloquée ?" subtitle="Nos chauffagistes interviennent rapidement partout (Bruxelles/Wallonie). Devis transparent." />
+</Layout>
+
+<style set:html={css}></style>

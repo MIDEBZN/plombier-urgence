@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Réparation Fuite Chasse d'Eau WC : 4 Problèmes et Solutions" description="L'eau coule tout le temps dans la cuvette de vos WC ? Découvrez comment réparer une fuite de chasse d'eau : flotteur, clapet, calcaire. Tutoriel 2025 complet." faqs={[{q:"Pourquoi ma chasse d'eau coule sans arrêt ?",a:"Il y a généralement 3 causes : un flotteur mal réglé ou percé, le joint du clapet de mécanisme abîmé par le calcaire, ou une soupape d'arrivée d'eau entartrée."},{q:"Comment savoir de quelle fuite de chasse d'eau il s'agit ?",a:"Fermez le robinet d'arrivée d'eau sur le côté. Si l'eau arrête de couler dans la cuvette, c'est le mécanisme de remplissage (flotteur) qui pose souci. Si l'eau continue de couler jusqu'à vider le réservoir, c'est le joint de la soupape de fond (clapet)."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Fuite de chasse d'eau</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚽 Guide Pratique</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Fuite de Chasse d'Eau qui Coule : 4 Problèmes et Solutions</h1>
+
+      <p class="blog-intro">Une eau qui fait un petit sifflement et qui rince en permanence l'émail de votre cuvette, c'est <strong>jusqu'à 600 litres d'eau potable perdus par tranches de 24 heures</strong> ! Soit environ 5 € gaspillés par jour sur votre facture belge. Réparer une chasse d'eau qui coule est à la portée d'un bricoleur. Voici comment identifier le problème et le stopper aujourd'hui.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#test">Le test crucial en 1 minute (fermer le robinet)</a></li>
+          <li><a href="#flotteur">1. L'eau déborde par le tuyau central (Le flotteur déréglé)</a></li>
+          <li><a href="#flotteur-perce">2. Le robinet siffle mais ne coupe jamais (Flotteur percé / entartré)</a></li>
+          <li><a href="#clapet">3. Le joint d'évacuation, le vieux clapet (Fuite fond de cuve)</a></li>
+          <li><a href="#calcaire">Le Calcaire : le tueur numéro 1 des WC belges</a></li>
+          <li><a href="#pro">Quand remplacer complètement le mécanisme complet (Combien ça coûte ?)</a></li>
+        </ol>
+      </div>
+
+      <h2 id="test">Avant de tout démonter, faites "Le Test du Robinet" !</h2>
+      <p>Où est exactement la fuite dans le réservoir ? Voici la méthode infaillible pour le savoir (en coupant simplement le petit robinet souvent argenté situé en bas ou sur le côté du WC) :</p>
+      <ol>
+        <li>Fermez le robinet d'arrêt de la chasse d'eau.</li>
+        <li>Patientez 5 à 10 minutes, puis regardez dans la cuvette (le bol où vous vous asseyez).</li>
+      </ol>
+      <p><strong>Résultat A :</strong> L'eau a TOTALEMENT AUSSI ARRÊTÉ de couler dans la cuvette au bout de 5 minutes ? C'est parfait : le fond gère très bien l'étanchéité, mais <strong>votre robinet flotteur (qui gère le remplissage) ne fait plus son travail et déborde en continu.</strong></p>
+      <p><strong>Résultat B :</strong> L'eau CONTINUE à couler dans la cuvette un filet mince, et le niveau d'eau dans le bac supérieur en céramique baisse à vue d'œil ? Vous avez le problème inverse : le flotteur marchait bien, mais <strong>c'est le gros joint "clapet" tout au fond du réservoir qui est foutu.</strong></p>
+
+      <h2 id="flotteur">1. L'eau déborde par le trop-plein (Réglage flotteur)</h2>
+      <p>Le flotteur est la bouée (souvent un cube en plastique blanc ou en frigolite) qui remonte au fur et à mesure que l'eau remplit la chasse. Arrivée à la hauteur MAX, la poussée de la bouée actionne un clapet qui coupe le jet d'arrivée d'eau.</p>
+      <p>Si la bouée est réglée trop RÉSISTANTE, l'eau continue de monter, passe au dessus du gros tuyau central ouvert, et tombe en chute libre dans votre WC pour ne pas inonder votre parquet de salle de bain.</p>
+      
+      <p><strong>La solution DIY (0€) :</strong></p>
+      <ul>
+        <li>Ouvrez le couvercle de la chasse (dévissez parfois le double bouton poussoir chromé au centre).</li>
+        <li>Tirez la chasse d'eau pour vider la cuve.</li>
+        <li>Regardez le flotteur. Il y a une tige métallique à tordre un peu vers le bas, ou une longue vis en plastique à tourner (sens horaire pour baisser le niveau) de façon à ce que le bras coupe l'eau plus tôt, environ 2 centimètres en dessous du tuyau central vide de trop-plein.</li>
+      </ul>
+
+      <h2 id="flotteur-perce">2. La bouée est percée ou pleine de calcaire</h2>
+      <p>Parfois, vous tordez le bras au maximum, mais l'eau continue de siffler et couler. Sortez le flotteur avec la main : est-ce lourd ? S'il est plein d'eau, il ne "flotte" plus, donc il ne pousse plus le minuscule robinet d'arrêt de fermeture. C'est percé, mort.</p>
+      <p><strong>Solution :</strong> Allez chez Brico ou Mr.Bricolage, achetez un "Robinet Flotteur Universel" (15 €) et remplacez-le intégralement en dévissant simplement l'arrivée d'eau extérieure avec une clé anglaise.</p>
+
+      <h2 id="clapet">3. Le Joint de Fond ne fait plus ventouse (Le Clapet)</h2>
+      <p>Si la méthode du "Test du robinet" a indiqué le "Résultat B" (l'eau continue à se vider par le fond la nuit, ce qui relance un petit psshhh d'une seconde de temps en temps), c'est l'étanchéité de libération !</p>
+      <p>La pièce concernée est le gros joint rond en caoutchouc souple (souvent noir ou rouge siliconé) installé sous le grand cylindre central qui se soulève quand vous pressez la chasse.</p>
+      
+      <p><strong>Le remède :</strong></p>
+      <ol>
+        <li>Coupez l'eau, tirez la chasse à vide.</li>
+        <li>Saisissez la colonne centrale en plastique, opérez un petit quart de tour vers la gauche (clac) et soulevez-la toute entière pour la sortir du réservoir.</li>
+        <li>Allez dans le fond, retournez la tour. Au bout, vous avez un joint plat ou à lèvre moite. Otez-le.</li>
+        <li>Nettoyez minutieusement la surface ronde de siège en plastique gris ou blanc restée collée en fond de bac (souvent du calcaire s'y est incrusté). Si on met un joint neuf sur des grains de sable, ça fuitira d'emblée.</li>
+        <li>Achetez un joint identique (3 à 5 €) et replacez-le. Remontez la tour en clippant le quart de tour horaire.</li>
+      </ol>
+
+      <h2 id="calcaire">Le Calcaire : Pourquoi ça fuit toujours en Belgique</h2>
+      <p>La rudesse de l'eau en Région Bruxelloise et Wallonne crée un dépôt de "tartre" marron en plaques durcies. Chaque fois que la mécanique de chasse se lève puis retombe pour boucher l'eau, si de minuscules flocons de calcaire se glissent sur le rebord du joint pendant la descente, le joint sera déséquilibré de 1 millimètre.</p>
+      <p><strong>Ce seul pauvre millimètre de jour laisse couler de l'eau.</strong> Toujours détartrer son bac de WC au vinaigre blanc tous les ans en vidant le bac et en versant 1.5 L de jus pur toute la nuit ! Le lendemain, le mécanisme brillera comme en sortie d'usine.</p>
+
+      <h2 id="pro">Quand un professionnel change "La Mécanique Complète"</h2>
+      <p>Si le bouton central craque souvent, que le plastique s'effrite (15 à 25 ans d'ancienneté des marques Geberit / Grohe), ne chipotez plus avec le sauvetage au coup par coup.</p>
+      <p>Votre plombier de quartier débarque avec une "chasse universelle mécanisme + flotteur à câble" de marque, de préférence à économie d'eau (bouton 3 litres et 6 litres).</p>
+      <p><strong>Combien coûte le remplacement par le Plombier en Belgique ? (Tarifs 2025)</strong></p>
+      <ul>
+        <li>Forfait "Tout compris" Remplacement Flotteur seul : <strong>80 € à 110 € TVAC</strong>.</li>
+        <li>Forfait "Mécanisme Chasse d'eau complet" (Démontage du réservoir imposé pour le joint central de cuvette, fourniture + pose) : <strong>130 € à 180 € TVAC</strong>.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>🚿 Votre chasse d'eau coule encore ? Stoppez le gaspillage !</h3>
+        <p>Ne ruinez pas votre facture Vivaqua / SWDE de fin d'année. Remplacement exprès du mécanisme pour 0 surprise et un prix garanti au téléphone.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Dépannage Plomberie Belge : 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Une fuite coûte plus cher que notre dépannage" subtitle="Intervention urgente et forfaits bloqués sans mauvaise blague." />
+</Layout>
+
+<style set:html={css}></style>

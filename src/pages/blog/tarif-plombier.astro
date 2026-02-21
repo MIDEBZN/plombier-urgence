@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Tarif et Prix Plombier Belgique & Bruxelles (2025) : Le Guide" description="Quel est le prix d'un plombier en Belgique et à Bruxelles en 2025 ? Tarif horaire, frais de déplacement, suppléments d'urgence, et tableau des prix moyens." faqs={[{q:"Quel est le taux horaire d'un plombier en Belgique en 2025 ?",a:"Le tarif horaire moyen varie entre 50 € et 80 € HTVA. À Bruxelles, la moyenne tourne autour de 65 €/h. Les indépendants sont souvent un peu moins chers que les grandes sociétés multiservices."},{q:"Combien coûte un déplacement de plombier ?",a:"En moyenne, les frais de déplacement sont facturés entre 40 € et 60 € en Belgique. Chez Plombier Urgence ou certains plombiers locaux, le déplacement peut être gratuit si le devis est accepté."},{q:"Un plombier de nuit ou le week-end coûte-t-il plus cher ?",a:"Oui. Attendez-vous à un supplément de 50% entre 18h et 22h, et jusqu'à 100% (le double du prix) pour la nuit, les dimanches et les jours fériés."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Prix plombier Belgique</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💶 Guide Tarifs</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Prix d'un Plombier en Belgique et Tarif à Bruxelles : Le Guide 2025</h1>
+
+      <p class="blog-intro">Vous faites face à une fuite d'eau, un WC bouché ou une chaudière en panne, mais vous avez peur de la facture ? <strong>Le secteur de la plomberie manque parfois de transparence.</strong> Que vous soyez à Bruxelles, Liège ou Namur, découvrez les vrais tarifs pratiqués en Belgique en 2025 pour éviter les arnaques et payer le juste prix.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#horaire">Le tarif horaire moyen en Belgique</a></li>
+          <li><a href="#deplacement">Les frais de déplacement</a></li>
+          <li><a href="#urgences">Suppléments nuit, week-end et urgence</a></li>
+          <li><a href="#bruxelles">Le cas spécifique de Bruxelles (Tarifs)</a></li>
+          <li><a href="#forfaits">Prix forfaitaires par intervention (Fuite, WC...)</a></li>
+          <li><a href="#tva">La TVA applicable en plomberie (6% ou 21%)</a></li>
+          <li><a href="#arnaques">Comment repérer et éviter un plombier arnaqueur</a></li>
+        </ol>
+      </div>
+
+      <h2 id="horaire">1. Le Tarif Horaire Moyen en Belgique (2025)</h2>
+      <p>La plupart des plombiers belges (indépendants ou sociétés) facturent au temps passé. <strong>En 2025, le taux horaire d'un plombier qualifié varie de 50 € à 85 € HTVA.</strong></p>
+      <ul>
+        <li><strong>Plombier indépendant :</strong> 50 € - 70 € / heure</li>
+        <li><strong>Société de plomberie / Chauffagiste agréé (Cerga) :</strong> 65 € - 85 € / heure</li>
+      </ul>
+      <p><em>Attention : La première heure est généralement facturée entièrement dès que le plombier commence l'intervention, même si celle-il dure 15 minutes. Ensuite, la facturation se fait souvent par demi-heure ou quart d'heure.</em></p>
+
+      <h2 id="deplacement">2. Les Frais de Déplacement</h2>
+      <p>Au tarif horaire s'ajoutent systématiquement les frais de déplacement. Pourquoi ? Car rouler en ville (surtout à Bruxelles ou Liège avec les embouteillages) coûte du temps, du carburant et de l'amortissement de véhicule au professionnel.</p>
+      <p><strong>Frais de déplacement en Belgique : de 40 € à 65 €</strong>.</p>
+      <p><em>Notre engagement Plombier Urgence : Chez nous, le déplacement est inclus dans nos forfaits fixes si vous acceptez l'intervention. Pas de frais kilométriques cachés !</em></p>
+
+      <h2 id="urgences">3. Les Suppléments (Nuit, Week-end et Urgence)</h2>
+      <p>Une fuite à 3h du matin un dimanche soir vous coûtera logiquement plus cher qu'un robinet à changer un mardi à 10h.</p>
+      <ul>
+        <li><strong>Urgence en journée (Intervention dans l'heure) :</strong> +20% à +30% ou tarif horaire à 90€/h.</li>
+        <li><strong>Soirée (après 18h) et samedi :</strong> Supplément de +50 %.</li>
+        <li><strong>Nuit (22h - 6h), Dimanche et Jours fériés :</strong> Supplément de +100 % (majoration double).</li>
+      </ul>
+      <p>Un dépannage qui coûte 100 € en journée peut donc grimper à 200 € ou 250 € la nuit d'un jour férié.</p>
+
+      <h2 id="bruxelles">4. Le Cas Spécifique des Tarifs à Bruxelles</h2>
+      <p>Être plombier à Bruxelles coûte cher : stationnement payant partout, LEZ (Zones Basses Émissions) obligeant à acheter des utilitaires neufs, temps de transport allongé par les bouchons. En conséquence, <strong>le tarif plombier Bruxelles est traditionnellement 10 % à 15 % plus élevé</strong> qu'en Wallonie ou dans certaines régions flamandes.</p>
+      <p>Comptez environ <strong>65 € à 90 € de l'heure</strong> pour un artisan bruxellois, avec des frais de déplacement d'au moins 50 € (le stationnement est souvent facturé au client).</p>
+
+      <h2 id="forfaits">5. Prix Forfaitaires : Combien ça coûte vraiment ? (Notre Tableau)</h2>
+      <p>De plus en plus de bons plombiers proposent des "Forfaits" (Déplacement + Main d'œuvre inclus, hors pièces). C'est la méthode la plus honnête car le prix est fixe, que le plombier y passe 30 minutes ou 1h30.</p>
+      
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead><tr><th>Type d'intervention (En journée)</th><th>Fourchette de Prix constaté</th></tr></thead>
+          <tbody>
+            <tr><td>Débouchage WC manuel / pompe</td><td class="price">80 € – 120 €</td></tr>
+            <tr><td>Débouchage canalisation furet électrique</td><td class="price">120 € – 180 €</td></tr>
+            <tr><td>Recherche et réparation petite Fuite d'eau</td><td class="price">90 € – 150 € (+ pièces)</td></tr>
+            <tr><td>Diagnostic / Panne Chaudière</td><td class="price">80 € – 120 €</td></tr>
+            <tr><td>Changement de mitigeur (robinet évier)</td><td class="price">100 € – 150 € (+ achat du mitigeur)</td></tr>
+            <tr><td>Détartrage chauffe-eau électrique (boiler)</td><td class="price">180 € – 250 €</td></tr>
+            <tr><td>Installation ou remplacement de WC complet</td><td class="price">300 € – 500 € (WC inclus)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="tva">6. La TVA à 6% ou à 21% ?</h2>
+      <p>En Belgique, le taux de TVA a un impact énorme sur votre facture finale.</p>
+      <ul>
+        <li><strong>TVA 6 % :</strong> Applicable uniquement si l'habitation (où ont lieu les travaux) a <strong>plus de 10 ans d'ancienneté</strong>, ET que la facture est établie au nom d'un particulier (utilisateur final).</li>
+        <li><strong>TVA 21 % :</strong> Applicable pour les maisons de moins de 10 ans, ou pour les indépendants/sociétés qui déduisent la TVA, ou pour des travaux de pur nettoyage (certains débouchages non liés à la tuyauterie).</li>
+      </ul>
+
+      <h2 id="arnaques">7. Nos 3 conseils pour éviter les Plombiers Arnaqueurs</h2>
+      <p>Hélas, les "dépanneurs" frauduleux inondent Google Ads avec des offres mirobolantes à "15€ le déplacement". Voici comment ne pas tomber dans le panneau :</p>
+      <ol>
+        <li><strong>Fuyez les prospectus "mille-feuilles" dans la boîte aux lettres :</strong> Les cartes cartonnées avec tous les numéros d'urgence utiles (police, samu...) qui mettent en avant un serrurier/plombier sont presque toujours des réseaux d'escroquerie.</li>
+        <li><strong>Jamais de travaux sans devis :</strong> En Belgique, le plombier DOIT vous annoncer un prix avant de donner le moindre coup de clé anglaise. S'il commence à démonter votre siphon sans vous dire combien ça coûte, stoppez-le.</li>
+        <li><strong>Attention à "l'hydrocurage immédiat" :</strong> Certains techniciens non scrupuleux viennent pour un petit bouchon, facturent 50€, puis vous disent que la "tuyauterie est morte" et qu'il faut un passage caméra et un camion pompe à 1200€. Demandez TOUJOURS un deuxième avis pour les grosses sommes.</li>
+      </ol>
+
+      <div class="blog-cta card">
+        <h3>💡 Plombier Urgence garantit une transparence totale</h3>
+        <p>Ayez l'esprit tranquille : chez nous, <strong>les tarifs sont annoncés par téléphone</strong>, dès la prise de contact, avant le départ du technicien. Un simple message WhatsApp avec la photo de votre problème nous suffit pour deviser !</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Obtenir un prix fixe au 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Un problème de plomberie ce matin ?" subtitle="Tarifs clairs, devis 100% gratuits par téléphone. Le meilleur rapport qualité/prix de Belgique." />
+</Layout>
+
+<style set:html={css}></style>

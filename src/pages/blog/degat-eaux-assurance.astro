@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Dégât des Eaux et Assurance en Belgique : Qui Paie Quoi ?" description="Inondation, mur moisi ou fuite cachée ? Découvrez comment fonctionne la couverture Dégât des Eaux de votre assurance incendie en Belgique (Locataire vs Propriétaire)." faqs={[{q:"Mon assurance rembourse-t-elle la facture du plombier ?",a:"L'assurance habitation couvre généralement la facturation de la 'Recherche de Fuite' (lorsqu'elle est cachée ou destructive) et les dommages causés (peinture, parquet). Mais le coût de la réparation du tuyau ou la pièce cassée reste à votre charge."},{q:"Combien de temps ai-je pour déclarer un dégât des eaux à mon assurance en Belgique ?",a:"Légalement, dès la constatation du sinistre. S'il n'y a pas d'urgence absolue, il est conseillé d'envoyer la déclaration (Constat Amiable Dégât des Eaux ou courrier recommandé) endéans les 8 jours à votre courtier."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Dégât des eaux assurance </span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">📑 Administratif</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Dégât des Eaux et Assurance en Belgique : Le Guide Complet 2025</h1>
+
+      <p class="blog-intro">Le plafond du salon de votre voisin du dessous goutte à verse. Votre parquet flottant est complètement gondolé. Et là, l'angoisse financière frappe : <strong>qui va payer ces thousands d'euros de travaux ?</strong> Le propriétaire, le locataire, la copropriété ou l'assurance ? En Belgique, la couverture "Dégâts des eaux" de votre police Incendie suit des règles très strictes. On vous explique tout.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#definition">Qu'est-ce qu'un dégât des eaux "couvert" ?</a></li>
+          <li><a href="#cause-vs-consequences">La Règle d'or : Cause vs Conséquences (Que rembourse-t-on ?)</a></li>
+          <li><a href="#recherche">La Recherche de Fuite Destructive : est-ce couvert ?</a></li>
+          <li><a href="#marche-a-suivre">Les 4 étapes d'action lors du sinistre</a></li>
+          <li><a href="#bail">Locataire vs Propriétaire : qui est responsable ?</a></li>
+          <li><a href="#assitances">Les clauses d'Assistance directes (S.O.S plombier)</a></li>
+        </ol>
+      </div>
+
+      <h2 id="definition">1. Qu'est-ce qu'un sinistre "Couvert" (Assurance Incendie Habitation) ?</h2>
+      <p>En Belgique, l'assurance "Incendie" comporte obligatoirement un volet "Périls de l'eau". Il va couvrir financièrement les dommages liés à l'action soudaine et imprévue de l'eau. Parmi les cas couverts :</p>
+      <ul>
+        <li>Rupture d'une canalisation intérieure (arrivée ou évacuation d'eau).</li>
+        <li>Débordement exceptionnel des égouts (refoulement public).</li>
+        <li>Débordement et fuite d'un appareil ménager (machine à laver, lave-vaisselle, chaudière).</li>
+        <li>Fuite des installations de chauffage (radiateurs percés).</li>
+        <li>Infiltrations par la toiture, les balcons ou les châssis (souvent sous conditions d'entretien régulier).</li>
+      </ul>
+      <p><em>Attention : La mérule (champignon), la condensation ambiante chronique et les nappes phréatiques (remontées de cave sans pluie exceptionnelle) sont généralement exclues des garanties de base.</em></p>
+
+      <h2 id="cause-vs-consequences">2. La Règle d'Or en Belgique : Cause VS Conséquences</h2>
+      <p>C'est LA grande incompréhension entre les courtiers belges (AG, Ethias, KBC, AXA...) et leurs assurés !</p>
+      <p><strong>L'assurance paie toujours les CONSÉQUENCES de la fuite, mais (presque) jamais LA CAUSE.</strong></p>
+      
+      <h3>Concrètement, qu'est-ce qui vous est remboursé ?</h3>
+      <ul>
+        <li><strong>Conséquences (Remboursé 🟢) :</strong> Le parquet abîmé, la peinture du plafond du salon à refaire, l'assèchement des murs par des turbines, le canapé inondé, le matelas moisi...</li>
+        <li><strong>La Cause (Pas Remboursé 🔴) :</strong> Le prix du nouveau tuyau, le coût du nouveau robinet ou de la chasse d'eau, ainsi que la main-d'œuvre du plombier dédiée à réparer "le trou" originel dans le mur. <em>C'est le défaut d'entretien.</em> Vous payez donc la facture du plombier pour le remplacement du tuyau.</li>
+      </ul>
+
+      <h2 id="recherche">3. La Recherche de Fuite "Destructive"</h2>
+      <p>Il existe une immense exception à la non-prise en charge des factures de plomberie : <strong>La facture de "Recherche de Fuite"</strong>.</p>
+      <p>Si la fuite est invisible (sous un carrelage de cuisine, dans un mur porteur), le plombier devra utiliser des caméras thermiques, des gaz traceurs, ou parfois devoir casser 3 mètres carrés de carrelage pour "juste" trouver la fuite. </p>
+      <p><strong>La compagnie d'assurance DOIT indemniser 100% de la facture du plombier spécialisé "en Recherche de fuite"</strong>, y compris le colmatage d'urgence s'il a empêché que les dégâts ne s'aggravent. Conservez la facture détaillée (ex: "Passage caméra infrarouge et test pression") qui sera envoyée à votre AG ou Belfius Assurances.</p>
+
+      <h2 id="marche-a-suivre">4. Les 4 Étapes vitales DÈS DÉCOUVERTE DU DÉGÂT</h2>
+      <ol>
+        <li><strong>Stopper la source :</strong> Coupez l'arrivée générale d'eau (<a href="/blog/couper-eau-urgence">Voir notre article d'urgence d'eau</a>). Épongez au maximum pour "sauver les meubles". L'assurance vous demande d'agir en bon père de famille pour limiter la casse initiale.</li>
+        <li><strong>Appeler un vrai Plombier pour la mise en sécurité :</strong> Faites la réparation pour arrêter l'eau. Demandez une Facture séparée (Séparez "Main oeuvres recherche ou diagnostic" avec "Fourniture du tuyau X"). Ne jetez PAS la pièce qui a fuité ! (L'expert voudra voir le joint ou tube percé).</li>
+        <li><strong>Prenez des Photos :</strong> Prenez un maximum de photos avec votre smartphone. Tout ce qui est humide : Tapis, plinthes gonflées, plafonds tachés, l'arrière des meubles.</li>
+        <li><strong>Le Constat d'eau :</strong> Si un voisin de palier est concerné, remplissez ensemble un <em>"Constat Amiable de Dégât des Eaux"</em> et envoyez-le dans les 8 jours à votre courtier.</li>
+      </ol>
+
+      <h2 id="bail">5. Locataire VS Propriétaire Bailleur : Qui contacte son Assurance ?</h2>
+      <p>Depuis les réformes, en Wallonie, Bruxelles et Flandre, tant le Propriétaire que le Locataire ont (souvent) l'obligation de s'assurer en Incendie.</p>
+      <ul>
+        <li><strong>Responsabilité Locataire (RC Locative) :</strong> Si vous oubliez le robinet du bain, que le tuyau de votre propre lave-linge saute, ou que vous brisez le bac de douche : S'est VOS assurances qui casquent.</li>
+        <li><strong>Responsabilité Propriétaire (Assurance Bâtiment) :</strong> Si une canalisation en acier encoffrée "dans le bâti" depuis 30 ans lâche par usure intérieure. Sans faute reconnue du locataire ("Force majeure Bâtimentaire"), c'est l'assurance "Propriétaire Bailleur" qui couvre les dégâts du sol et paie l'expertise.</li>
+      </ul>
+
+      <h2 id="assitances">6. L'astuce "Assistance Rapide"</h2>
+      <p>Regardez votre dernier contrat d'assurance. Souvent, vous avez l'option <strong>"Home Assistance"</strong> (Assistance domicile 24/24). Si vous appelez le numéro d'urgence de la compagnie au lieu de chercher sur Google, c'est l'Assureur qui envoie LUI MÊME un plombier de garde. Le déplacement (le fameux coût de nuit ou dimanche) sera alors très souvent pris en charge par l'assurance directement pour la sécurisation de première nécessité.</p>
+
+      <div class="blog-cta card">
+        <h3>📄 Documents d'Assurance Reconnus</h3>
+        <p>Toutes les interventions de Plombier Urgence sont soumises à facturation officielle certifiée TVA Belge. Nos factures détaillées pour Recherche par Caméra ou Détection Thermique sont acceptées par tous les grands courtiers (Ethias, AG, DVV, Baloise...).</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Intervention Rapide & Facture Légale : 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Face aux dégâts des eaux, agissez vite." subtitle="Un dossier plombier carré pour votre assureur. Sécurisation immédiate." />
+</Layout>
+
+<style set:html={css}></style>

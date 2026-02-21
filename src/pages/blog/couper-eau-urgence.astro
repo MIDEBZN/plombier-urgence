@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Comment Couper l'Eau en Urgence ? Localiser la Vanne" description="Une fuite se déclare ? Apprenez comment trouver et fermer la vanne d'arrêt d'eau principale de votre maison ou appartement en moins de 30 secondes." faqs={[{q:"Dans quel sens fermer un robinet d'arrêt d'eau ?",a:"Il faut toujours tourner la vanne dans le sens des aiguilles d'une montre (vers la droite) pour la fermer. S'il s'agit d'un robinet droit « quart de tour », il faut mettre la poignée perpendiculaire au tuyau."},{q:"Je ne trouve pas le compteur d'eau dans mon appartement, que faire ?",a:"Dans un immeuble à appartements, si vous n'avez pas de compteur individuel près de votre porte ou dans les WC, l'arrivée principale de la copropriété se trouve généralement dans la cave, le local technique, ou au rez-de-chaussée."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Couper l'eau en urgence</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚨 Urgence</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 5 min de lecture</span>
+      </div>
+
+      <h1>Comment Couper l'Eau en Urgence ? Le Geste qui Sauve (2025)</h1>
+
+      <p class="blog-intro">Un tuyau éclate la nuit, le lave-linge inonde la salle de bain, l'eau coule à travers le plafond : c'est la panique ! En quelques minutes, les lames de votre parquet gonflent. Vous n'avez pas le temps de chercher un plombier sur Google. <strong>Avant d'appeler de l'aide, un seul réflexe compte : savoir couper la vanne d'arrêt principale de votre logement pour stopper l'hémorragie.</strong></p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#maison">1) Vous êtes dans une maison :Où chercher ?</a></li>
+          <li><a href="#appart">1bis) Vous êtes en appartement : Où chercher ?</a></li>
+          <li><a href="#sens">2) Dans quel SENS tourner la vanne ? (Gauche ou Droite)</a></li>
+          <li><a href="#vannes-locales">3) Éviter de couper toute la maison (Vannes locales)</a></li>
+          <li><a href="#gripper">4) Le robinet est trop dur et coincé (grippé) ! Que faire ?</a></li>
+          <li><a href="#electricite">5) Le deuxième geste : Électricité et Chaudière</a></li>
+        </ol>
+      </div>
+
+      <h2 id="maison">1. Vous habitez une maison : Où est la vanne principale ?</h2>
+      <p>La règle d'or d'une arrivée d'eau, c'est de chercher là où le tuyau sort du domaine public (la rue) et entre dans vos fondations (VIVAQUA, SWDE ou De Watergroep).</p>
+      <ul>
+        <li><strong>À la cave :</strong> Dans 80% des maisons belges, descendez la chercher sur le mur de façade avant, près du sol ou à hauteur d'yeux. Le compteur d'eau (cadran vitré avec un couvercle noir ou bleu) est là. La grosse vanne de coupure se trouve juste AVANT ou juste APRÈS ledit compteur.</li>
+        <li><strong>Au rez-de-chaussée :</strong> Si vous n'avez pas de cave, vérifiez le garage, la buanderie, ou encore sous l'escalier, dans une petite trappe technique d'entrée, ou encore sous l'évier de la cuisine.</li>
+        <li><strong>Dans un puits extérieur :</strong> De plus en plus rare en ville, parfois la cloche d'eau est cachée sous une plaque de fonte ou de béton dans l'allée du jardin ou sur le trottoir (attention au gel).</li>
+      </ul>
+
+      <h2 id="appart">2. Vous habitez en appartement : Où chercher ?</h2>
+      <p>Couper l'eau en appartement est plus délicat car il ne faut pas couper l'eau de vos voisins !</p>
+      <ul>
+        <li><strong>Le local palier :</strong> Ouvrez votre porte palière (la porte d'entrée rouge de votre loyer), regardez sur les murs du petit hall dans les armoires techniques peintes. Votre compteur et robinet s'y trouve, souvent étiqueté au numéro de votre appartement.</li>
+        <li><strong>Dans le débarras / les WC :</strong> Si vous avez des vannes de passage (sans compteur) dans <em>votre</em> salle d'eau ou audessus de la chasse d'eau de la petite toilette. Ouvrez le coffrage.</li>
+        <li><strong>Dans la baignoire :</strong> Parfois, la trappe de carrelage (aimantée) sous la faïence de votre baignoire cache l'arrivée d'oxygène et d'Ecs (eau chaude sanitaire).</li>
+        <li><strong>La chaudière murale :</strong> Vous pouvez peut-être isoler le circuit en tournant le bouton 1/4 tour d'arrivée d'eau froide sous votre Bulex/Junkers individuelle.</li>
+      </ul>
+
+      <h2 id="sens">3. Dans Quel Sens fermer la vanne d'arrêt ?</h2>
+      <p>Ne tournez pas dans tous les sens pour finalement lâcher la pression au maximum !</p>
+      <p><strong>A) Vanne Classique "à molette" ou "champignon jaune/rouge" :</strong> Il s'agit d'un clapet classique à visser. Vous serrez vers la droite, <strong>DANS LE SENS DES AIGUILLES D'UNE MONTRE</strong>. Tournez à fond, jusqu'à sentir le blocage du caoutchouc. Plus de 3 ou 4 tours de poignet au total.</p>
+      
+      <p><strong>B) Vanne quart-de-tour (Manette plate longue métallique) :</strong> Lorsqu'elle est "ouverte", la fine manette se positionne <strong>parallèlement</strong> au tuyau (elle suit la course de l'eau). Pour la fermer : Tirez-la d'un seul geste à 90° (en "croix") pour qu'elle soit perpendiculaire au tuyau de laison. (Attention : c'est parfois très rigide).</p>
+
+      <h2 id="vannes-locales">4. Les "Petites vannes", pour ne pas couper la cuvette à tout le monde</h2>
+      <p>Votre évier fuit mais vous aimeriez conserver l'accès au WC pour les enfants ? Ne coupez pas le compteur central.</p>
+      <p>Juste sous vos appareils de plomberie (Lavabo, douches, WC, Évier inox de cuisine), il y a souvent deux minuscules "Robinets d'arrêt" (Schell) vissés dans le carrelage mural (un chaud, un froid). Munissez-vous d'une pince, de vos doigts ou d'un tournevis plat et vissez simplement vers l'horloge ! <strong>Vous isolez l'unique évier percé sans perdre le courant d'eau potable sur le reste du logement.</strong> Pareil pour le lave-vaisselle (petit robinet en plastique bleu). Appelez cela un "robinet de service" ou Stopflex.</p>
+
+      <h2 id="gripper">5. Urgence : Le robinet du compteur est GRIPPÉ (Bloqué), impossible de le tourner !</h2>
+      <p>C'est l'un des freins les plus courants. Les compteurs d'eau croupissent à la cave pendant 10 ans sans jamais y être bougés, et finissent par rouiller dans leur jus de zinc ou de laiton !</p>
+      <p><strong>Dépannage système D :</strong> Munissez-vous d'un grand chiffon, et d'une "Clé Multiprise" (Pince crocodile) ou pince étau. Pincez fortement la tête de robinet tout en donnant quelques légers à-coups d'avant en arrière (Mouvement très sec "Tchic..Tchic...") pour briser le fil de la rouille sur les pas de vis intérieurs. Dès que le ressort lâche de 3 mm, il obéit de lui-même.</p>
+      <p><em>ATTENTION: Ne prenez pas une longue rallonge (barre à mine). Si la base du tuyau en plomb ancien cède sous vos biceps, c'est l'inondation majeure de cave (5.000 litres avant que la voirie ne coupe la rue). En cas de danger absolu, appelez votre distributeur d'eau.</em></p>
+
+      <h2 id="electricite">6. L'Électricité ! L'Eau courante et les Volts</h2>
+      <p>Si la zone d'inondation de votre fuite inclut une Multi-prise branchée par terre (lave-linge / box ADSL), <strong>ne touchez pas la flaque pour attraper le chiffon !</strong> Courez d'abord éteindre le disjoncteur différentiel ("général") de votre tableau de compteur électrique (Sibelga/Ores). Oubliez la réparation de fuite pour quelques secondes s'il y a grand risque d'électrisation humaine !</p>
+
+      <hr />
+
+      <p>Vous avez localisé la vanne, elle est fermée. Le jet d'eau vient de s'appauvrir puis de s'arrêter dans un gargarisme d'épuisement. Et maintenant ? Que faire des 500 litres jetés sur la moquette ? Prenez le temps d'ouvrir les fenêtres, commencez à éponger, <strong>séchez vos objets de valeur et de suite, APPELEZ Plombier Urgence ou l'une de vos assitances.</strong> Le compteur est coupé. Vous être désormais maître de la crise.</p>
+
+      <div class="blog-cta card">
+        <h3>🚨 Fuite d'eau stabilisée ? Besoin de remettre la pression ce soir ?</h3>
+        <p>Nos véhicules d'intervention sont déjà de sortie partout à Bruxelles, Liège, Namur ou Mons. Une soudure par notre plombier ou un remplacement de tuyau (100-200€) et vous récupérez votre eau !</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Sos Dépannage Plomberie : 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Dépannage Urgent Rapide en Belgique" subtitle="Devis immédiat sans frais surprises. Le dépannage 100% sans arnaque." />
+</Layout>
+
+<style set:html={css}></style>

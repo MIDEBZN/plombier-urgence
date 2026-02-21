@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Combien Coûte un Plombier en Urgence ? (Nuit & Week-end)" description="Fuite à 3h du matin ? Quel est le vrai prix d'un dépannage plomberie d'urgence la nuit ou le week-end en Belgique ? Découvrez nos suppléments tarifs 2025." faqs={[{q:"Un appel à 22h est-il facturé comme intervention de nuit ?",a:"Oui. En plomberie, le tarif de « Nuit » commence généralement à partir de 20h00 ou 22h00 selon l'entreprise. À ce moment, les frais horaires et parfois les frais de déplacement sont majorés de 50% à 100%."},{q:"Comment éviter la facture d'urgence la nuit ?",a:"Si la fuite concerne de l'eau claire (et non du gaz !), coupez simplement la vanne d'arrêt générale près du compteur d'eau, épongez le sol, et attendez le lendemain matin à 8h00 pour rappeler l'artisan au tarif normal."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Coût plombier nuit et urgence</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💶 Guide Tarifs Urgence</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 5 min de lecture</span>
+      </div>
+
+      <h1>Combien Coûte un Plombier en Urgence la Nuit et le Week-end ? (Tarifs 2025)</h1>
+
+      <p class="blog-intro">Un bouchon qui fait déborder les toilettes à 23h, ou un radiateur cassé un 25 décembre n'attendent pas les horaires de bureau. Mais <strong>faire déplacer un dépanneur au milieu de la nuit a un coût significatif qu'il faut anticiper</strong>. Voici les vraies grilles tarifaires 2025 pour les interventions express, sans les mauvaises surprises.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#majorations">Comprendre les Taux de Majoration (50% ou 100%)</a></li>
+          <li><a href="#soir">Intervention de soirée (18h00 - 22h00)</a></li>
+          <li><a href="#nuit">Intervention de nuit profonde (22h00 - 06h00)</a></li>
+          <li><a href="#weekend">Les samedis, dimanches et Jours Fériés</a></li>
+          <li><a href="#echapper">L'astuce en Or pour éviter la taxe de nuit</a></li>
+          <li><a href="#assurance">Ce que rembourse l'Assurance Incendie Habitation</a></li>
+        </ol>
+      </div>
+
+      <h2 id="majorations">1. Comprendre la Mécanique des Suppléments d'Urgence</h2>
+      <p>Un plombier (comme un serrurier ou un médecin) facture un "Tarif de Base" HTVA pour une heure de main d'œuvre classique (souvent 55€ à 85€ en Belgique). Quand vous l'appelez en urgence, il applique ce qu'on appelle "La Majoration horaire".</p>
+      <p>Cette majoration rémunère le fait qu'il sort de son lit, prend son utilitaire à une heure où aucune quincaillerie n'est ouverte (il doit avoir toutes les pièces dans son fourgon), et gère le stress d'une inondation active.</p>
+
+      <h2 id="soir">2. L'Urgence "Fin de Journée" / Soirée (18h-22h)</h2>
+      <p>C'est l'appel classique du retour avec les enfants à 18h30. Une canalisation d'évier vient de casser et vous recevez des invités.</p>
+      <ul>
+        <li><strong>Majoration typique : +50 % de l'heure.</strong></li>
+        <li><em>Exemple :</em> Un tarif normal de 65€ de l'heure passe à environ <strong>97€ HTVA</strong>.</li>
+        <li><em>Note :</em> Certains frais de déplacement (40-60€) peuvent eux aussi subir un supplément (car trafic du soir dense).</li>
+      </ul>
+
+      <h2 id="nuit">3. La Vraie Nuit (22h00 à 06h00 du Matin)</h2>
+      <p>Là, on touche aux extrêmes. Une chaudière au gaz qui lâche à minuit en plein hiver avec 3 bébés dans la maison demande une intervention sécuritaire de grade A.</p>
+      <ul>
+        <li><strong>Majoration typique : +100 % de l'heure.</strong> Le tarif est doublé.</li>
+        <li><em>Exemple :</em> Un tarif de 65€ passe à <strong>130€ l'heure d'intervention</strong>.</li>
+        <li>Le déplacement de nuit coûte souvent un tarif fixe élevé, parfois entre 80€ et 120€ selon votre distance (campagne wallonne vs centre-ville éclairé).</li>
+      </ul>
+      <p>Rassurez-vous, le dépannage de nuit vise rarement à "tout refaire à neuf". Le plombier intervient pour <strong>stopper l'hémorragie</strong>, sécuriser le gaz, mettre un bouchon d'épreuve et arrêter les fuites en 30 minutes. Le "gros" des réparations se fera le lendemain matin au tarif normal !</p>
+
+      <h2 id="weekend">4. Les Week-ends et "La Majoration Calendaire"</h2>
+      <p>En Belgique, le Samedi est généralement considéré comme un jour à +50% toute la journée par la plupart des grosses firmes corporatives (certains indépendants gentils font le samedi matin au tarif normal).</p>
+      <p>Le <strong>Dimanche et les jours fériés</strong> (Noël, Pâques, 21 Juillet, 15 Août...) sont rigoureusement taxés à +100% sur la durée totale du chantier. Un simple débouchage Manuel WC du Dimanche midi vous coûtera donc facilement les 200€ contre 90€ le jeudi à la même heure.</p>
+
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead><tr><th>Type d'intervention Plomberie</th><th>Coût Jour de Semaine</th><th>Estimation Coût Dimanche / Nuit (22h)</th></tr></thead>
+          <tbody>
+            <tr><td>Recherche de petite fuite évier</td><td>80 € - 100€</td><td class="price">160 € - 200 €</td></tr>
+            <tr><td>Débouchage WC avec pompe</td><td>90 € - 120 €</td><td class="price">180 € - 240 €</td></tr>
+            <tr><td>Dépannage Chaudière (Mise en sécurité)</td><td>110 € - 150 €</td><td class="price">220 € - 300 €</td></tr>
+            <tr class="highlight"><td>Camion Hydrocureur (Égouts)</td><td>250 €</td><td class="price">500 € ou intervention refusée</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="echapper">5. 💡 L'Astuce pour NE PAS payer l'urgence</h2>
+      <p>90% des fuites d'eau qui vous terrifient à 2h du matin peuvent attendre sereinement le lendemain matin (à partir de 8h00, tarif normal).</p>
+      <p><strong>Comment faire ? Allez couper le compteur !</strong> Descendez à la cave avec une lampe de poche. Tournez le papillon rouge ou noir 1/4 de tour. Votre maison n'a plus d'eau courante (ni les toilettes ni la douche ne marchent). Épongez la flaque avec de vieilles serviettes, placez un seau, et retournez vous coucher.</p>
+      <p>À 8h du matin, appelez notre <em>Plombier Urgence</em> qui arrivera avec sa camionnette au tarif le plus bas possible ! Vous venez d'économiser 150 € d'un simple geste.</p>
+      <p><em>(Attention : s'il s'agit d'une odeur de GAZ, ne coupez le compteur de gaz QUE si ça ne fait pas d'étincelles, ne touchez à aucun interrupteur et appelez immédiatement. L'urgence gaz, c'est de l'ordre de la vie ou de la mort).</em></p>
+
+      <h2 id="assurance">6. Mon Assurance "Dégât des Eaux" remboursera-t-elle la Nuit ?</h2>
+      <p>Votre assurance incendie/Habitation en Belgique rembourse les "conséquences" de la fuite (parquet gonflé, mur piqué), ainsi que le tarif de "Recherche de Fuite" destructrice.</p>
+      <p>Cependant, l'acte de "Dépannage plomberie du tuyau" en lui-même ainsi que ses <strong>frais de majoration de nuit, ne sont presque QUE RAREMENT pris en charge</strong> par la compagnie (sauf option Assistance Habitation Spécifique souscrite sur le contrat type Touring/EuropAssistance ou via votre courtier).</p>
+
+      <div class="blog-cta card">
+        <h3>🚨 Une Urgence en plein Week-End ?</h3>
+        <p>Pas de panique. Avant d'intervenir, nos techniciens locaux vous transmettent une grille de prix et notre dispatch calcule notre taux d'intervention horaire nocturne sur un Devis vocal 100% sans surprise.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 SOS Nuit & Dimanche au 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Dépannage de Nuit 24/7 en Belgique" subtitle="Transparence tarifaire. Majoration annoncée au téléphone." />
+</Layout>
+
+<style set:html={css}></style>

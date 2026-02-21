@@ -1,0 +1,174 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Comment Déboucher un WC ? 7 Méthodes Efficaces (2025)" description="WC bouché ? Découvrez 7 méthodes efficaces pour déboucher vos toilettes : ventouse, eau chaude, bicarbonate, furet. Guide étape par étape avec tarifs 2025." faqs={[{q:"Comment déboucher un WC rapidement ?",a:"Versez un seau d'eau chaude (pas bouillante) dans la cuvette. Ajoutez du liquide vaisselle. Attendez 15 min puis tirez la chasse. Si ça ne fonctionne pas, utilisez une ventouse."},{q:"Combien coûte un débouchage WC par un plombier ?",a:"Un débouchage WC professionnel coûte entre 80€ et 150€ selon la complexité. Prix fixe communiqué avant intervention."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Comment déboucher un WC</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚽 Guide Pratique</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 8 min de lecture</span>
+      </div>
+
+      <h1>Comment Déboucher un WC ? 7 Méthodes Efficaces et Prévention</h1>
+
+      <p class="blog-intro">Des toilettes bouchées, c'est l'urgence la plus stressante de la maison. <strong>Pas de panique :</strong> dans 80% des cas, vous pouvez résoudre le problème vous-même avec les bonnes techniques. Ce guide vous présente 7 méthodes testées, de la plus simple à la plus avancée, avec des instructions étape par étape.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#causes">Pourquoi votre WC est bouché</a></li>
+          <li><a href="#eau-chaude">Méthode 1 : Eau chaude + liquide vaisselle</a></li>
+          <li><a href="#ventouse">Méthode 2 : La ventouse</a></li>
+          <li><a href="#bicarbonate">Méthode 3 : Bicarbonate + vinaigre</a></li>
+          <li><a href="#furet">Méthode 4 : Le furet de plomberie</a></li>
+          <li><a href="#film">Méthode 5 : Le film alimentaire</a></li>
+          <li><a href="#bouteille">Méthode 6 : La bouteille en plastique</a></li>
+          <li><a href="#enzyme">Méthode 7 : Produits enzymatiques</a></li>
+          <li><a href="#eviter">Ce qu'il ne faut JAMAIS faire</a></li>
+          <li><a href="#plombier">Quand appeler un plombier</a></li>
+          <li><a href="#prevention">Prévention des bouchons</a></li>
+        </ol>
+      </div>
+
+      <h2 id="causes">Pourquoi Votre WC Est Bouché ? Les Causes Principales</h2>
+      <p>Comprendre la cause du bouchon permet de choisir la bonne méthode de débouchage :</p>
+      <ul>
+        <li><strong>Trop de papier toilette</strong> — La cause n°1. Surtout avec les papiers épais, « ultra-doux » ou « 4 plis » qui se dissolvent mal dans l'eau.</li>
+        <li><strong>Objets jetés dans les toilettes</strong> — Lingettes (même « jetables »), cotons-tiges, protections hygiéniques, préservatifs. Ces objets ne se dissolvent PAS et créent des bouchons solides.</li>
+        <li><strong>Accumulation de calcaire</strong> — En Belgique, l'eau est dure (25-35°f). Le calcaire rétrécit progressivement le diamètre des canalisations, facilitant les bouchons.</li>
+        <li><strong>Problème de canalisation principale</strong> — Si plusieurs appareils sont bouchés en même temps (WC + douche + évier), le problème est dans la canalisation principale, pas dans le WC lui-même.</li>
+        <li><strong>Défaut de conception</strong> — Coude trop serré dans l'évacuation, pente insuffisante, ventilation inexistante (siphon inversé).</li>
+      </ul>
+
+      <h2 id="eau-chaude">Méthode 1 : Eau Chaude + Liquide Vaisselle (Efficacité : 60%)</h2>
+      <p>La méthode la plus simple, idéale pour les bouchons légers causés par du papier toilette :</p>
+      <ol>
+        <li>Faites chauffer un grand seau d'eau (environ 5 litres). <strong>Attention : eau chaude, PAS bouillante !</strong> L'eau bouillante peut fissurer la porcelaine de votre WC.</li>
+        <li>Versez une bonne quantité de liquide vaisselle dans la cuvette (environ 10 cl). Le savon lubrifie les parois et aide à dissoudre les graisses.</li>
+        <li>Laissez agir 10 à 15 minutes. Le liquide vaisselle s'infiltre dans le bouchon.</li>
+        <li>Versez l'eau chaude d'une hauteur d'environ 50 cm pour créer une pression. Le poids et la chaleur de l'eau poussent le bouchon.</li>
+        <li>Attendez 5 minutes, puis tirez la chasse d'eau. Si l'eau s'écoule normalement, le bouchon est résolu !</li>
+      </ol>
+      <p><strong>Si ça ne fonctionne pas :</strong> le bouchon est probablement plus solide. Passez à la méthode suivante.</p>
+
+      <h2 id="ventouse">Méthode 2 : La Ventouse (Efficacité : 85%)</h2>
+      <p>La ventouse est l'outil de débouchage le plus efficace pour les particuliers. Voici comment l'utiliser correctement :</p>
+      <ol>
+        <li><strong>Choisissez la bonne ventouse.</strong> La ventouse pour WC a une forme de cloche avec un rabat intérieur (pas une ventouse plate pour évier). Elle coûte entre 5€ et 15€ en magasin de bricolage.</li>
+        <li><strong>Assurez-vous qu'il y a assez d'eau</strong> dans la cuvette pour couvrir la ventouse. Si l'eau a baissé, ajoutez-en manuellement.</li>
+        <li><strong>Positionnez la ventouse</strong> bien au centre du trou d'évacuation, à angle droit. Le caoutchouc doit créer un joint étanche sur la porcelaine.</li>
+        <li><strong>Pompez vigoureusement</strong> de haut en bas, 15 à 20 fois. Créez une alternance de pression et de dépression. Le mouvement doit venir des bras, pas du corps.</li>
+        <li><strong>Retirez brusquement</strong> la ventouse. La dépression soudaine aspire le bouchon et le déplace.</li>
+        <li><strong>Répétez 3 à 4 fois</strong> si nécessaire. Le bouchon se déplace progressivement à chaque tentative.</li>
+      </ol>
+      <p><strong>Astuce pro :</strong> appliquez un peu de vaseline sur le bord de la ventouse pour améliorer l'étanchéité. Plus l'étanchéité est bonne, plus la ventouse est efficace.</p>
+
+      <h2 id="bicarbonate">Méthode 3 : Bicarbonate de Soude + Vinaigre (Efficacité : 50%)</h2>
+      <p>La réaction chimique naturelle crée une effervescence qui peut dissoudre les bouchons organiques :</p>
+      <ol>
+        <li>Versez 200g de bicarbonate de soude dans la cuvette.</li>
+        <li>Ajoutez lentement 200ml de vinaigre blanc. La mousse qui se forme est normale — c'est la réaction chimique en action.</li>
+        <li>Laissez agir 30 minutes à 1 heure (idéalement toute la nuit pour les bouchons tenaces).</li>
+        <li>Versez un seau d'eau chaude pour rincer.</li>
+        <li>Tirez la chasse d'eau.</li>
+      </ol>
+      <p><strong>Note :</strong> cette méthode est écologique et sans danger pour vos canalisations. Elle est moins agressive que les produits chimiques et convient bien pour les bouchons légers à moyens.</p>
+
+      <h2 id="furet">Méthode 4 : Le Furet de Plomberie (Efficacité : 90%)</h2>
+      <p>Le furet est un câble métallique flexible muni d'une spirale au bout. C'est l'outil professionnel le plus efficace accessible aux particuliers (10€ à 30€ en magasin) :</p>
+      <ol>
+        <li>Insérez l'extrémité du furet dans le trou d'évacuation du WC.</li>
+        <li>Poussez doucement en tournant la manivelle dans le sens des aiguilles d'une montre.</li>
+        <li>Quand vous sentez une résistance, c'est le bouchon. Continuez à tourner et pousser pour le percer.</li>
+        <li>Tirez et poussez alternativement pour fragmenter le bouchon.</li>
+        <li>Retirez le furet et tirez la chasse. Si l'eau s'écoule, le bouchon est résolu.</li>
+      </ol>
+      <p><strong>Attention :</strong> ne forcez jamais. Si le furet ne passe pas, le bouchon est peut-être dans la canalisation principale — il faudra un furet professionnel plus long ou un hydrocurage.</p>
+
+      <h2 id="film">Méthode 5 : Le Film Alimentaire (Efficacité : 40%)</h2>
+      <p>Une méthode surprenante mais qui peut fonctionner pour les bouchons légers :</p>
+      <ol>
+        <li>Séchez bien les bords de la cuvette avec du papier absorbant.</li>
+        <li>Recouvrez entièrement la cuvette avec 3 couches de film alimentaire, bien tendu. L'étanchéité doit être parfaite.</li>
+        <li>Tirez la chasse d'eau. Le film va se gonfler vers le haut sous la pression.</li>
+        <li>Appuyez fermement sur le film bombé avec les deux mains. Ce mouvement crée une pression qui pousse le bouchon.</li>
+        <li>Répétez 2 à 3 fois si nécessaire.</li>
+      </ol>
+
+      <h2 id="bouteille">Méthode 6 : La Bouteille en Plastique (Efficacité : 55%)</h2>
+      <p>Si vous n'avez pas de ventouse, une bouteille en plastique de 1,5L peut faire office de ventouse improvisée :</p>
+      <ol>
+        <li>Coupez le fond de la bouteille avec des ciseaux ou un cutter.</li>
+        <li>Gardez le bouchon vissé sur la bouteille.</li>
+        <li>Insérez le côté coupé dans le trou d'évacuation du WC.</li>
+        <li>Pompez de haut en bas comme avec une ventouse.</li>
+        <li>La pression créée peut suffire à déplacer le bouchon.</li>
+      </ol>
+      <p><strong>Conseil :</strong> portez des gants en caoutchouc pour cette opération. L'eau des WC bouchés contient des bactéries.</p>
+
+      <h2 id="enzyme">Méthode 7 : Produits Enzymatiques (Efficacité : 70%)</h2>
+      <p>Les produits enzymatiques (disponibles en magasin de bricolage, 8€ à 15€) contiennent des enzymes qui « mangent » la matière organique :</p>
+      <ul>
+        <li>Versez le produit selon le dosage indiqué sur l'emballage.</li>
+        <li>Laissez agir plusieurs heures (idéalement toute la nuit).</li>
+        <li>Tirez la chasse d'eau le lendemain matin.</li>
+      </ul>
+      <p><strong>Avantage :</strong> contrairement aux produits chimiques (type Destop), les enzymes ne détruisent pas vos canalisations en PVC. Ils sont écologiques et sûrs pour les fosses septiques.</p>
+
+      <h2 id="eviter">Ce qu'il ne Faut JAMAIS Faire</h2>
+      <ul>
+        <li><strong>❌ Acide sulfurique ou soude caustique</strong> — Extrêmement dangereux (brûlures chimiques) et peut détruire vos canalisations en PVC.</li>
+        <li><strong>❌ Eau bouillante</strong> — Peut fissurer la porcelaine du WC et endommager les joints.</li>
+        <li><strong>❌ Destop à répétition</strong> — Attaque les joints et les canalisations en PVC. Usage très occasionnel uniquement.</li>
+        <li><strong>❌ Tirer la chasse en boucle</strong> — Si le WC est bouché, chaque chasse d'eau risque de faire déborder la cuvette.</li>
+        <li><strong>❌ Enfoncer un objet rigide</strong> — Vous risquez de pousser le bouchon plus profondément ou de rayer la porcelaine.</li>
+      </ul>
+
+      <h2 id="plombier">Quand Appeler un Plombier ?</h2>
+      <p>Faites appel à un professionnel dans ces cas :</p>
+      <ul>
+        <li>Aucune des 7 méthodes ci-dessus n'a fonctionné</li>
+        <li>Le WC déborde à chaque chasse d'eau</li>
+        <li>Plusieurs appareils sont bouchés en même temps (problème de canalisation principale)</li>
+        <li>Des remontées d'eau sale apparaissent dans la douche ou le lavabo</li>
+        <li>Le bouchon revient régulièrement (indique un problème structurel)</li>
+      </ul>
+      <p><strong>Tarif :</strong> un débouchage WC professionnel coûte entre <strong>80€ et 150€</strong>, inspection caméra incluse. Chez Plombier Urgence, le prix est fixe et communiqué AVANT intervention.</p>
+
+      <div class="blog-cta card">
+        <h3>🚽 WC bouché ? Intervention en 30 min !</h3>
+        <p>Nos plombiers sont équipés de furets professionnels et d'hydrocurage haute pression. Débouchage garanti.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 0470 12 34 56</a>
+          <a href="https://wa.me/32470123456" class="btn btn-outline" target="_blank">WhatsApp →</a>
+        </div>
+      </div>
+
+      <h2 id="prevention">Comment Prévenir les Bouchons de WC</h2>
+      <ul>
+        <li><strong>Utilisez du papier toilette fin</strong> — le papier simple plis se dissout mieux que le triple plis « ultra-doux »</li>
+        <li><strong>Ne jetez RIEN d'autre</strong> que du papier toilette dans le WC — gardez une poubelle dans les toilettes pour le reste</li>
+        <li><strong>Tirez la chasse deux fois</strong> si vous avez utilisé beaucoup de papier</li>
+        <li><strong>Versez un seau d'eau chaude</strong> une fois par mois pour dissoudre les dépôts</li>
+        <li><strong>Utilisez un produit enzymatique</strong> une fois par mois en entretien préventif</li>
+        <li><strong>Détartrez vos canalisations</strong> une fois par an (vinaigre blanc ou produit spécifique)</li>
+        <li><strong>Ne laissez pas les enfants jouer</strong> avec des objets près du WC — jouets et crayons sont des causes fréquentes de bouchons</li>
+      </ul>
+    </div>
+  </article>
+
+  <CTABanner title="WC bouché ? Débouchage garanti dès 80€" subtitle="Intervention en 30 min, 24h/24. Prix fixe. Inspection caméra incluse." />
+</Layout>
+
+<style set:html={css}></style>

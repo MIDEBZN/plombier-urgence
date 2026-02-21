@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Tarif Débouchage Canalisation Belgique (2025) : Les Vrais Prix" description="Quel est le vrai prix d'un débouchage de canalisation ou de WC en Belgique en 2025 ? Forfaits furet, pompe, hydrocurage camion, inspection caméra. Évitez les arnaques." faqs={[{q:"Quel est le prix pour déboucher une canalisation en Belgique ?",a:"Pour un bouchon simple (WC, évier), le prix au furet électrique tourne autour de 80 € à 150 €. S'il faut nettoyer la canalisation principale au camion hydrocureur (haute pression), le prix grimpe entre 150 € et 300 €."},{q:"Est-ce que le locataire doit payer le débouchage ?",a:"Oui. L'entretien courant et l'usage quotidien (papier, graisse dans l'évier) incombent au locataire, qui paie donc le débouchage. Si le déboucheur prouve par caméra que c'est une malfaçon des tuyaux ou un affaissement, le propriétaire doit payer."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Tarif débouchage canalisation</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💶 Guide Tarifs</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Tarif Débouchage Canalisation Belgique : Le Juste Prix en 2025</h1>
+
+      <p class="blog-intro">Éviers qui débordent, WC inutilisables ou eaux usées qui remontent dans la baignoire : le bouchon de canalisation est LA plus grande panique domestique. <strong>Mais attention aux prix gonflés dans l'urgence !</strong> Voici le barème réel 2025 des artisans déboucheurs belges honnêtes (Bruxelles, Liège, Namur, Charleroi) pour ne payer que ce qui est juste.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#manuel">Tarifs du débouchage léger (manuel ou petite pompe)</a></li>
+          <li><a href="#furet">Tarifs du furet électrique spiral</a></li>
+          <li><a href="#hydrocurage">Tarifs de l'hydrocurage Haute Pression (camion pompe)</a></li>
+          <li><a href="#camera">Inspection Caméra Endoscopique : utile ou gadget ?</a></li>
+          <li><a href="#locataire">Qui paie : Locataire ou Propriétaire ?</a></li>
+          <li><a href="#arnaques">Arnaques d'urgence : Le coup de l'acide à 100€ le litre</a></li>
+        </ol>
+      </div>
+
+      <h2 id="manuel">1. Le débouchage Manuel ou à la Pompe à Air (Bouchon léger)</h2>
+      <p>C'est l'intervention de base pour un amas de cheveux dans la douche ou un tampon coincé juste derrière le siphon des toilettes. Le plombier n'utilise pas de grosse machine. Il se sert de ses bras, d'une grosse ventouse professionnelle ou d'une pompe à vide (pression d'air) pour chasser le bouchon.</p>
+      <p><strong>💶 Le Prix (Déplacement, matos et M-O compris) : Entre 80 € et 120 € HTVA.</strong></p>
+      
+      <p><em>Rappel TVA : Sauf nettoyage pur, un débouchage qui nécessite démontage de canalisation facturera la TVA à 6% pour les particuliers dont la maison a plus de 10 ans. 21% dans les autres cas.</em></p>
+
+      <h2 id="furet">2. Le Furet Électrique Mécanique (Bouchons plus durs)</h2>
+      <p>Si la graisse solidifiée ou le bouchon de lingettes est à 3 ou 5 mètres loin dans les murs, la pompe ne suffira pas. Le déboucheur sort le furet électrique mécanique (une valise moteur avec un câble spiral en métal). Ce câble tourne sur lui-même et va "griffer" la graisse, hacher les lingettes, et débloquer les coudes de canalisations intérieures (ex: diamètre 40 ou 50mm).</p>
+      <p><strong>💶 Le Prix (Déplacement, machine et M-O compris) : Entre 120 € et 180 € HTVA.</strong></p>
+
+      <h2 id="hydrocurage">3. Le Camion Hydrocureur (Bouchon sévère, extérieur)</h2>
+      <p>C'est l'artillerie lourde. Quand tout l'appartement remonte d'eaux sales, ou quand la canalisation raclette jusqu'aux égouts (les canalisations grises extérieures de 90 ou 110 mm de large) est bouchée.</p>
+      <p>Le plombier déboucheur vient avec son camion/fourgon, branche une très longue bobine en caoutchouc haute résistance avec une bille au bout : l'Hydrocurage. Un jet de 150 à 350 bars est projeté en arrière pour avancer et fracasser les déchets (dépôts de lessive durs comme de la pierre, couches de calcaire, graisses vieilles de 10 ans, ou petites racines d'arbre).</p>
+      <p><strong>💶 Le Prix du passage camion (HTVA) : Entre 150 € et 300 €.</strong> Mais ça inclut un vrai nettoyage de toute la conduite sur 20 à 30 mètres de long.</p>
+
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead><tr><th>Type de bouchon</th><th>Quel Matériel le déboucheur utilise ?</th><th>Tarif moyen (journée)</th></tr></thead>
+          <tbody>
+            <tr><td>Douche / Lavabo bouché plein de cheveux</td><td>Pompe manuelle ou petit ressort</td><td class="price">80 € - 100 €</td></tr>
+            <tr><td>Cuisine : Évier avec des pâtes et du jus</td><td>Pump ou Furet 40mm</td><td class="price">80 € - 130 €</td></tr>
+            <tr><td>WC Toilettes (un demi-rouleau de papier ?)</td><td>Pompe spéciale à vide / Gros furet</td><td class="price">90 € - 150 €</td></tr>
+            <tr><td>Égouts de maison, Sterput, regard extérieur</td><td>Hydrocureuse (Camion Pompe Haute Pression)</td><td class="price">150 € - 300 €</td></tr>
+            <tr class="highlight"><td>Week-end ou après 20h00</td><td>N'importe quel matériel ci-dessus</td><td class="price">Ajouter 50% de supplément</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="camera">4. L'Inspection Vidéo par Caméra : Facturée en plus ?</h2>
+      <p>Très souvent, après avoir passé l'hydrocurage, le plombier de qualité fait glisser sa caméra endoscopique dans le tuyau "comme une coloscopie". Son but ? Voir s'il reste une trace de calcaire, s'il y a des racines ou surtout, voir si votre tuyauté en grès souterrain s'est écroulée ou non.</p>
+      <p><strong>Chez Plombier Urgence (et autres artisans sérieux) : L'inspection caméra est INCLUSE</strong> dans le forfait hydrocurage de votre débouchage pour garantir le travail. En revanche, certains factureront encore l'utilisation de la caméra de 50€ à 120€ en plus. Pensez à demander d'emblée à votre intervenant "L'inspection caméra est incluse dans le prix ?".</p>
+
+      <h2 id="locataire">5. Assurance Dégât des Eaux, Locataire ou Propriétaire ?</h2>
+      <p>L'éternelle discorde : le locataire de l'appartement X vit un cauchemar, mais qui doit payer l'artisan ? La loi belge sur les baux est assez claire.</p>
+      <ul>
+        <li><strong>L'entretien locatif journalier incombe au locataire :</strong> Si le plombier trouve 12 lingettes bébé, du riz de hier, deux tampons ou 2 kilos de cheveux, ça vient de "l'usage". C'est 100% à charge du locataire.</li>
+        <li><strong>La vétusté incombe au propriétaire bailleur :</strong> Si le déboucheur, image vidéo à l'appui (envoie de la vidéo par smartphone / Dropbox), constate une pente de canalisation trop plate (- d'un cm/mètre), un affaissement du tuyau dans la rue ou des morceaux de plâtre dus aux ouvriers de la rénovation de décembre... Là c'est incontestablement une charge propriétaire. Le plombier adressera alors la facture au proprio !</li>
+      </ul>
+
+      <h2 id="arnaques">6. L'arnaque de l'acide Sulfurique</h2>
+      <p>Prenez garde si le technicien appelé depuis un numéro de tract sans site web arrive "les mains dans les poches" et sans camion équipé.</p>
+      <p>La fameuse astuce consiste à vider des bouteilles non étiquetées de produit chimique (souvent base sulfurique) dans la cuvette pour fondre le bouchon. Une fois fini, le bonhomme compte : <em>"J'ai mis 5 litres de traitement, à 35€ par litre... Ça fera donc 175€ juste pour le produit mon P'tit Monsieur."</em> <strong>REFUSEZ.</strong> Ces méthodes tuent les stations d'épurations, corrodent vos PVC de l'intérieur (le PVC cuit et deviendra friable un an plus tard) et sont excessivement chères. Un vrai plombier répare avec un outillage lourd garanti. Jamais au Destop de supermarché surfacturé.</p>
+
+      <div class="blog-cta card">
+        <h3>🚿 Déboucher n'importe où en Belgique. Prix 100% garanti.</h3>
+        <p>Pompe à air, furet mécanique ou camion d'hydrocurage 200 bars : chez Plombier Urgence, on arrive avec tout, en 30 minutes, et on libère toujours vos canalisations avec le tarif négocié AVANT intervention.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Devis téléphone au 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Dites adieu aux eaux stagnantes et odeurs en 30 min" subtitle="Le meilleur forfait hydrocurage + Caméra à Bruxelles et en région wallonne." />
+</Layout>
+
+<style set:html={css}></style>

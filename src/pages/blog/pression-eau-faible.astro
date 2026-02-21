@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Pression d'Eau Faible dans la Maison : Causes & Solutions (2025)" description="Problème de pression d'eau faible dans la maison ? Découvrez les 6 causes principales (tartre, fuite, compteur, réducteur) et comment y remédier rapidement." faqs={[{q:"Pourquoi la pression d'eau baisse d'un coup dans la maison ?",a:"Si la baisse est soudaine et touche plusieurs robinets, il y a probablement une rupture de canalisation sur le réseau public, une fuite cachée chez vous, ou la valve d'arrêt n'est pas complètement ouverte."},{q:"Comment mesurer la pression d'eau à la maison ?",a:"Il vous suffit de raccorder un nanomètre (environ 15€ en magasin) sur une arrivée d'eau, comme celle de la machine à laver. La pression idéale en Belgique se situe entre 2,5 et 3,5 bars."},{q:"Comment augmenter la pression d'eau de mon domicile ?",a:"Détartrez vos mousseurs et le pommeau de douche. Vérifiez l'ouverture complète de votre réducteur de pression au compteur. Si le problème vient de votre étage (ex. appartement très haut), l'installation d'une pompe surpresseur (300 à 600€) est souvent indispensable."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Pression d'eau faible</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💧 Pression d'eau</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Pression d'Eau Faible : Les 6 Causes et Comment y Remédier</h1>
+
+      <p class="blog-intro">Il n'y a rien de plus frustrant qu'une douche qui coule au compte-gouttes ou une machine à laver qui met trois heures à se remplir. <strong>La perte de pression est un problème classique en Belgique.</strong> De l'astuce à 0€ (détartrage d'un mousseur) à l'installation d'un surpresseur professionnel, ce guide résout tous vos problèmes de pression d'eau courante.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#diagnostic">Étape 1 : Diagnostic (Un robinet ou toute la maison ?)</a></li>
+          <li><a href="#mousseur">Cause 1 : Mousseurs ou pommeau de douche entartrés</a></li>
+          <li><a href="#vanne">Cause 2 : La vanne d'arrêt n'est pas ouverte à 100%</a></li>
+          <li><a href="#reducteur">Cause 3 : Le réducteur de pression est déréglé</a></li>
+          <li><a href="#fuite">Cause 4 : Fuite cachée dans vos murs</a></li>
+          <li><a href="#tuyaux">Cause 5 : Tuyauterie bouchée ou rouillée</a></li>
+          <li><a href="#surpresseur">La Solution ultime : Installer un surpresseur (pompe)</a></li>
+        </ol>
+      </div>
+
+      <h2 id="diagnostic">Étape 1 : Le Diagnostic de base</h2>
+      <p>Avant d'acheter une coûteuse pompe ou d'appeler un professionnel, il est crucial de localiser l'étendue du problème.</p>
+      <ul>
+        <li><strong>Est-ce un seul robinet ?</strong> Le problème est localisé (mousseur, cartouche céramique usée, calcaire dans le flexible).</li>
+        <li><strong>Uniquement l'eau chaude ?</strong> Le problème vient de votre chauffe-eau ou de votre chaudière (résistance entartrée, échangeur à plaques bouché).</li>
+        <li><strong>Toute la maison ?</strong> Le problème vient du réseau public, du compteur ou de la vanne principale.</li>
+      </ul>
+      <p><em>Rappel : la pression normale distribuée en ville (Bruxelles, Liège...) se situe autour de <strong>3 bars</strong>.</em></p>
+
+      <h2 id="mousseur">Cause 1 : Le calcaire dans les mousseurs et pommeaux</h2>
+      <p>C'est la cause n°1 en Belgique si le problème ne touche qu'un seul point d'eau.</p>
+      <p>Le calcaire s'accumule dans le <em>brise-jet</em> (mousseur) au bout de votre robinet de cuisine, ou dans les picots en caoutchouc de votre pommeau de douche. L'eau ne passe plus, donnant l'illusion d'une perte totale de pression.</p>
+      <p><strong>La solution DIY (0€) :</strong></p>
+      <ol>
+        <li>Dévissez l'embout de votre robinet avec une pince ou une clé à molette (protégez le chrome avec un chiffon).</li>
+        <li>Si la petite grille est pleine de "cailloux" de sable blanc, c'est du calcaire.</li>
+        <li>Plongez le mousseur et votre pommeau de douche dans du vinaigre blanc tiède pendant 2 heures, ou achetez des nouveaux embouts en grande surface (3€ pièce).</li>
+      </ol>
+
+      <h2 id="vanne">Cause 2 : La Vanne d'Arrêt Générale (Compteur)</h2>
+      <p>Avez-vous fait des travaux récemment ? Ou êtes-vous rentré de longues vacances ?</p>
+      <p>Si la vanne d'arrêt principale (située juste après votre compteur d'eau en cave) n'est pas ouverte <em>à fond</em>, toute votre maison perdra en débit. Assurez-vous que le "papillon" rouge ou la molette soit tournée au maximum dans le sens inverse des aiguilles d'une montre.</p>
+
+      <h2 id="reducteur">Cause 3 : Réducteur de Pression Déréglé ou Encrassé</h2>
+      <p>Plus de 70% des compteurs d'eau possèdent un réducteur de pression. Pourquoi ? Pour éviter que les pics de pression du réseau public ne fassent éclater vos conduites. Cet appareil a une durée de vie d'environ 10 ans.</p>
+      <p><strong>S'il est déréglé ou bloqué par le tartre</strong>, la pression chute en aval.</p>
+      <p><strong>Que faire ?</strong> Tournez la vis de réglage sur le dessus de l'appareil avec un gros tournevis plat (dans le sens "+" ou des aiguilles d'une montre) pour augmenter la pression de quelques crans. Si l'appareil fuit ou semble "collé", il faut qu'un plombier le change (intervention à 150€ environ, pièce, MO et déplacement au tarif 2025).</p>
+
+      <h2 id="fuite">Cause 4 : Fuite Cachée Sévère</h2>
+      <p>Si la canalisation qui mène du compteur à vos étages est fendue (par le gel ou l'usure), une part de la pression s'en échappe directement dans les murs ou la terre avant d'arriver à la douche. <strong>Le test ?</strong> Fermez ABSOLUMENT TOUT chez vous. Regardez votre compteur d'eau. La petite roue noire ou rouge de décilitre tourne ? Vous avez une grosse fuite cachée (urgence, appelez un pro ou regardez notre guide de <a href="/blog/fuite-eau-que-faire">détection de fuite</a>).</p>
+
+      <h2 id="tuyaux">Cause 5 : Canalisation Rouillée (Acier Galvanisé)</h2>
+      <p>Si votre maison date des années 1970 ou avant, vous avez sûrement des tuyaux en fer galvanisé (des tuyaux gris et lourds). Contrairement au cuivre ou à l'Alpex, l'acier rouille par l'INTÉRIEUR. Un tuyau qui faisait 15 millimètres de large n'en fait plus que 4. La pression s'écroule, l'eau devient parfois brunâtre en sortie de robinet.</p>
+      <p><strong>La solution à ce stade est radicale :</strong> Repartir à zéro et refaire les arrivées d'eau en tubes multicouche (Alpex) partout dans votre logement. Une rénovation massive.</p>
+
+      <h2 id="surpresseur">La Solution Ultime : La Pompe Hydrophore (Surpresseur)</h2>
+      <p>Si vous vivez au dernier étage d'un vieil immeuble (Bruxelles-Ville ou Liège centre par exemple), <strong>il est physique et normal</strong> que la pression n'arrive pas en haut avec force (la pression baisse de 1 bar tous les 10 mètres de hauteur !).</p>
+      <p>Dans ce cas, votre plombier viendra installer une petite pompe silencieuse : un surpresseur ou "groupe hydrophore". Ce moteur électrique va aspirer le peu d'eau qui arrive de la rue pour la pousser violemment et l'envoyer dans vos tuyaux de salle de bain sous 3 ou 4 bars constants.</p>
+      <p><strong>Le prix ?</strong> Environ 300 à 600 € pour la pose complète d'un bon surpresseur par Plombier Urgence.</p>
+
+      <div class="blog-cta card">
+        <h3>💧 Retrouvez une vraie pression dans toute la maison !</h3>
+        <p>Douches maigres ou chaudières capricieuses ? Nous mesurons la pression de vos tuyaux, détartrons votre réseau au besoin ou installons des réducteurs.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Appeler le 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Retrouvez la pression de votre douche dès ce soir" subtitle="Plombiers équipés, spécialistes de la basse pression (Belgique)." />
+</Layout>
+
+<style set:html={css}></style>

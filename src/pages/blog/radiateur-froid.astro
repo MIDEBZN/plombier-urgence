@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const css = `
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-lg);font-weight:700;margin:var(--space-lg) 0 var(--space-sm)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}.tarif-table .price{color:var(--color-accent);font-weight:700;white-space:nowrap}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+`;
+---
+
+<Layout title="Radiateur qui ne Chauffe Pas : Diagnostic et Réparations (2025)" description="Un radiateur froid en haut ou en bas ? La chaudière tourne mais pas de chaleur ? Apprenez comment purger, débloquer la vanne thermostatique et équilibrer l'eau." faqs={[{q:"Pourquoi mon radiateur est froid en haut et chaud en bas ?",a:"C'est le signe typique d'une accumulation d'air dans le circuit d'eau. Il faut purger le radiateur d'urgence à l'aide d'une petite clé carrée pour laisser échapper l'air."},{q:"Comment débloquer la vanne d'un radiateur ?",a:"Enlevez la tête thermostatique (le gros robinet avec les numéros). Vous verrez une petite tige métallique (le pointeau) sortie de la valve. Si elle est enfoncée et bloquée par le calcaire d'avoir été coupée tout l'été, tapotez-la doucement ou tirez-la délicatement avec une pince jusqu'à ce qu'elle ressorte."}]}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog">Blog</a><span>›</span><span class="bc--current">Radiateur froid</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔥 Chauffage</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Radiateur qui ne Chauffe Pas : 4 Causes et Solutions Maison</h1>
+
+      <p class="blog-intro">L'hiver belge est rude et la température du salon refuse de dépasser les 16°C alors que votre chaudière tourne à plein régime. <strong>Pire, la moitié de vos radiateurs en fonte sont désespérément glacés au toucher.</strong> Avant de déclarer la mort de votre circuit de chauffage, 95% de ces pannes sont résolubles avec une pince, un seau et moins de dix minutes.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#purge">Problème 1 : Froid en haut (L'Air dans le circuit)</a></li>
+          <li><a href="#vanne">Problème 2 : Totalement froid (Le Thermostat bloqué)</a></li>
+          <li><a href="#pression">Problème 3 : Chaudière sans pression d'eau (Erreur F22 ou clignotant)</a></li>
+          <li><a href="#boue">Problème 4 : Froid en bas, chaud en haut (Radiateur Emboué)</a></li>
+          <li><a href="#prix">Quand faut-il désembouer ? Et à quel Prix ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="purge">1. Le Radiateur est froid en HAUT (L'Air Piégé)</h2>
+      <p>C'est le classique du mois de novembre. Vous rallumez le chauffage après 6 mois d'arrêt.</p>
+      <p><strong>L'explication :</strong> L'oxygène naturel "bulle" dans vos tuyauteries pendant l'année et finit par s'accumuler dans les radiateurs les plus hauts (au 2e étage de la maison par exemple). Comme l'air chaud ne transmet pas la chaleur comme l'eau, le haut du radiateur reste à température ambiante.</p>
+      
+      <p><strong>La Solution (Purger) :</strong></p>
+      <ol>
+        <li>Munissez-vous d'une clé de purge (la petite clé carrée vendue 2€ ou parfois un simple tournevis plat), d'un essuie-main et d'un petit bol.</li>
+        <li>Gardez la chaudière <strong>allumée</strong> pour pousser l'air, MAIS coupez la vanne du radiateur concerné.</li>
+        <li>Placez le bol sous la vis de purge (côté opposé au robinet, en haut).</li>
+        <li>Dévissez d'un demi-tour. Vous allez entendre un "Pshhhhh" persistant. C'est l'air qui s'échappe.</li>
+        <li>Dès qu'un filet d'eau sale ou noire sort en continu, sans bulles, le radiateur est plein. Refermez (sans forcer comme un bœuf pour ne pas écraser le petit joint O-ring délicat).</li>
+        <li><strong>TRÈS IMPORTANT :</strong> En enlevant l'air, la pression en bas à la chaudière vient de chuter à 0.8 bar. Allez remettre de l'eau à 1.5 bar ! (Voir <a href="/blog/panne-chaudiere">notre guide pression chaudière</a>).</li>
+      </ol>
+
+      <h2 id="vanne">2. Le Radiateur est TOTALEMENT glacé (Le Pointeau Bloqué)</h2>
+      <p>Vous avez beau tourner le robinet thermostatique sur "5", rien ne se passe. Les vieux radiateurs de vos colocataires chauffent très bien.</p>
+      <p><strong>L'explication :</strong> Pour couper le chauffage en été, vous avez tous vissé la vanne sur le flocon (zéro). En faisant cela, un petit clou en laiton (le pointeau) est venu écraser le clapet pour bloquer l'eau. Au bout de 4 mois, le calcaire sèche autour de ce pointeau. Il est "grippé" en position fermée.</p>
+      
+      <p><strong>La Solution ("Débloquer la pine") :</strong></p>
+      <ul>
+        <li>Dévissez le gros écrou rainuré chromé (ou la bague plastique) qui relie la "tête" numérotée blanche au tuyau métallique. Enlevez la grosse tête sans peur, l'eau ne jaillira pas.</li>
+        <li>Vous apercevez la tige métallique fine (2mm d'épaisseur).</li>
+        <li>Prenez un tournevis lourd, ou le plat d'un marteau, et <strong>Tapotez fermement</strong> (sans l'écraser de face ! Tapez de côté, ou tapotez le corps en laiton de la vanne) pour créer de la résonance. Le petit ressort derrière va se "décoller" du tartre et la petite tige en laiton ("pine") va sauter vers l'extérieur d'un petit millimètre magique.</li>
+        <li>L'eau chaude se rue à nouveau dans les tuyaux dans un "gloups" victorieux.</li>
+      </ul>
+
+      <h2 id="pression">3. Aucun radiateur de l'étage ne fonctionne</h2>
+      <p>Si la maison entière grelotte, ce n'est pas un radiateur solitaire qui est grippé. Allez lire la jauge de la chaudière à la cave. Sous 1 bar, la pompe de circulation n'a plus l'énergie physique ni le volume d'eau pour grimper les étages (la gravité joue contre elle). Ajoutez de l'eau claire avec le robinet de remplissage sous la chaudière Bulex/Vaillant. Montez à **1.5 ou 1.8 bars (et surtout SURTOUT refermez les vannes de remplissage à 100% après !)**.</p>
+
+      <h2 id="boue">4. Le radiateur est Chaud en HAUT, Froid en BAS (L'Embouage)</h2>
+      <p>C'est l'inverse de la purge. Si le haut brûle mais le sol de la fonte est à l'ombre (alors que l'eau chaude a tendance à naturellement monter par convection), c'est une <strong>formation de boues ferriques (Magnétite)</strong>.</p>
+      <p>Dans un circuit fermé contenant de l'acier et du cuivre, l'oxygène attaque les métaux. Cela crée de la rouille noire foncée et lourde. Cette boue épaisse (comme du chocolat noir liquide) s'effondre tout au fond de vos appareils. L'eau ne peut plus circuler que par un minuscule chemin sur la partie supérieure.</p>
+
+      <h2 id="prix">Le Désembouage Professionnel : La seule Issue</h2>
+      <p>Aucune astuce miracle : il faut faire venir un plombier chauffagiste équipé d'une <strong>pompe à désembouage Rems ou Virax</strong>. Il l'attache à votre chaudière, et propulse de l'eau claire mixée à des acides doux pendant 4 heures à haute vitesse avec de l'air sous pression (des sortes de vagues internes).</p>
+      <p>Les boues noires s'évacuent dans vos égouts. Ensuite, le chauffagiste injecte un <strong>produit inhibiteur lourd (Sentinel X100 ou Fernox Protector)</strong> pour stopper l'oxydation pendant 10 ans.</p>
+      <p><strong>💶 Tarif Désembouage 2025 :</strong> Environ 400 € à 700 € pour un appartement ou 800 € à 1.400 € pour une grande maison (facturation souvent établie par nombre de radiateurs à laver + forfaits location machine).</p>
+
+      <div class="blog-cta card">
+        <h3>🔥 Chauffage de retour ce soir !</h3>
+        <p>Vannes thermostatiques bloquées, thermostat mort ou purge infernale ? Nos chauffagistes bruxellois et wallons vous relancent un cycle sain sans surfacturation nocturne.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0470123456" class="btn btn-primary">📞 Dépannage Chauffage : 0470 12 34 56</a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Retrouvez le confort thermique." subtitle="Un simple diagnostic, ou un grand rinçage désemboueur. Intervention belge." />
+</Layout>
+
+<style set:html={css}></style>
