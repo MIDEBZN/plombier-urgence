@@ -1,39 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTABanner from '../components/CTABanner.astro';
-
-const regions = [
-  {
-    name: 'Bruxelles-Capitale',
-    icon: '🏛️',
-    cities: ['Bruxelles', 'Ixelles', 'Uccle', 'Schaerbeek', 'Etterbeek', 'Woluwe-Saint-Lambert', 'Woluwe-Saint-Pierre', 'Auderghem', 'Forest', 'Saint-Gilles', 'Anderlecht', 'Molenbeek', 'Jette', 'Ganshoren', 'Berchem-Sainte-Agathe', 'Koekelberg', 'Evere', 'Watermael-Boitsfort', 'Saint-Josse'],
-  },
-  {
-    name: 'Brabant Wallon',
-    icon: '🏡',
-    cities: ['Waterloo', 'Wavre', 'Nivelles', 'Ottignies-Louvain-la-Neuve', 'Braine-l\'Alleud', 'Rixensart', 'La Hulpe', 'Genappe', 'Jodoigne', 'Tubize'],
-  },
-  {
-    name: 'Province de Liège',
-    icon: '🌉',
-    cities: ['Liège', 'Seraing', 'Herstal', 'Verviers', 'Ans', 'Grâce-Hollogne', 'Flémalle', 'Chaudfontaine', 'Visé', 'Eupen'],
-  },
-  {
-    name: 'Province de Namur',
-    icon: '🏰',
-    cities: ['Namur', 'Dinant', 'Sambreville', 'Gembloux', 'Andenne', 'Ciney', 'Rochefort', 'Profondeville', 'Mettet', 'Fosses-la-Ville'],
-  },
-  {
-    name: 'Hainaut',
-    icon: '⚒️',
-    cities: ['Charleroi', 'Mons', 'La Louvière', 'Tournai', 'Mouscron', 'Binche', 'Soignies', 'Ath', 'Enghien', 'Braine-le-Comte'],
-  },
-  {
-    name: 'Brabant Flamand',
-    icon: '🌿',
-    cities: ['Louvain', 'Vilvorde', 'Hal', 'Dilbeek', 'Zaventem', 'Tervuren', 'Overijse', 'Hoeilaart', 'Beersel', 'Grimbergen'],
-  },
-];
+import { provinces, slugify } from '../data/communes';
 ---
 
 <Layout title="Zones d'Intervention" description="Plombier d'urgence partout en Belgique. Bruxelles, Brabant Wallon, Liège, Namur, Hainaut. Intervention rapide 24h/24.">
@@ -80,15 +48,18 @@ const regions = [
       </div>
 
       <div class="regions-grid">
-        {regions.map(region => (
-          <div class="region-card card">
+        {provinces.map(province => (
+          <div class="region-card card" id={province.slug}>
             <div class="region-card__header">
-              <span class="region-card__icon">{region.icon}</span>
-              <h3 class="region-card__name">{region.name}</h3>
+              <span class="region-card__icon">{province.icon}</span>
+              <h3 class="region-card__name">{province.name}</h3>
+              <span class="region-card__count">{province.communes.length} communes</span>
             </div>
             <div class="region-card__cities">
-              {region.cities.map(city => (
-                <span class="region-card__city">{city}</span>
+              {province.communes.map(commune => (
+                <a href={`/zones/${province.slug}/${commune.slug}`} class="region-card__city">
+                  {commune.name}
+                </a>
               ))}
             </div>
           </div>
@@ -194,6 +165,15 @@ const regions = [
   .region-card__name {
     font-size: var(--font-size-lg);
     font-weight: 700;
+    flex: 1;
+  }
+
+  .region-card__count {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-dim);
+    background: var(--color-bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
   }
 
   .region-card__cities {
@@ -210,11 +190,13 @@ const regions = [
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
     transition: all var(--transition-fast);
+    text-decoration: none;
   }
 
   .region-card__city:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
+    background: var(--color-accent-glow);
   }
 
   @media (max-width: 768px) {

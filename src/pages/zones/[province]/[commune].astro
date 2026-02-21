@@ -1,0 +1,484 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import CTABanner from '../../../components/CTABanner.astro';
+import { provinces, type Commune, type Province } from '../../../data/communes';
+
+export function getStaticPaths() {
+  return provinces.flatMap(province =>
+    province.communes.map(commune => ({
+      params: {
+        province: province.slug,
+        commune: commune.slug,
+      },
+      props: { commune, province },
+    }))
+  );
+}
+
+interface Props {
+  commune: Commune;
+  province: Province;
+}
+
+const { commune, province } = Astro.props;
+
+// Get nearby communes (same province, different commune)
+const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5);
+---
+
+<Layout
+  title={`Plombier à ${commune.name}`}
+  description={`Plombier d'urgence à ${commune.name} (${commune.province}). Intervention rapide en 30 min, 24h/24. Débouchage, fuites, chaudière. Devis gratuit.`}
+>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-section">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="/">Accueil</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="/zones">Zones</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href={`/zones#${province.slug}`}>{province.name}</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current">{commune.name}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="commune-hero">
+    <div class="commune-hero__bg"></div>
+    <div class="container commune-hero__inner">
+      <div class="commune-hero__badge">📍 {commune.province}</div>
+      <h1 class="commune-hero__title">
+        Plombier d'urgence à <span class="text-accent">{commune.name}</span>
+      </h1>
+      <p class="commune-hero__subtitle">{commune.description}</p>
+      <div class="commune-hero__actions">
+        <a href="tel:0470123456" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          Appeler le 0470 12 34 56
+        </a>
+        <a href="/contact" class="btn btn-outline btn-lg">Demander un Devis Gratuit</a>
+      </div>
+      {commune.population && (
+        <div class="commune-hero__stats">
+          <div class="commune-hero__stat">
+            <span class="commune-hero__stat-number">{commune.population}</span>
+            <span class="commune-hero__stat-label">Habitants</span>
+          </div>
+          <div class="commune-hero__stat-divider"></div>
+          <div class="commune-hero__stat">
+            <span class="commune-hero__stat-number">30 min</span>
+            <span class="commune-hero__stat-label">Délai moyen</span>
+          </div>
+          <div class="commune-hero__stat-divider"></div>
+          <div class="commune-hero__stat">
+            <span class="commune-hero__stat-number">24/7</span>
+            <span class="commune-hero__stat-label">Disponibilité</span>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Services in this commune -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Nos Services</p>
+      <h2 class="section-title">Services de Plomberie à {commune.name}</h2>
+      <p class="section-subtitle">Notre équipe intervient rapidement à {commune.name} et ses environs pour tous vos besoins en plomberie.</p>
+
+      <div class="grid grid-3">
+        <div class="service-mini card">
+          <div class="service-mini__icon">🚿</div>
+          <h3>Débouchage Canalisations</h3>
+          <p>Débouchage WC, évier, douche et baignoire à {commune.name}. Intervention haute pression, inspection caméra incluse.</p>
+          <a href="/services#debouchage" class="service-mini__link">En savoir plus →</a>
+        </div>
+        <div class="service-mini card">
+          <div class="service-mini__icon">🔍</div>
+          <h3>Recherche de Fuite</h3>
+          <p>Détection de fuites sans destruction à {commune.name}. Technologies thermique et acoustique pour une localisation précise.</p>
+          <a href="/services#fuite" class="service-mini__link">En savoir plus →</a>
+        </div>
+        <div class="service-mini card">
+          <div class="service-mini__icon">🔥</div>
+          <h3>Dépannage Chaudière</h3>
+          <p>Réparation et entretien de chaudières à {commune.name}. Chauffagistes agréés, toutes marques.</p>
+          <a href="/services#chaudiere" class="service-mini__link">En savoir plus →</a>
+        </div>
+        <div class="service-mini card">
+          <div class="service-mini__icon">🔧</div>
+          <h3>Réparation Robinetterie</h3>
+          <p>Remplacement robinets, mitigeurs et chasse d'eau à {commune.name}. Installation sanitaires neufs.</p>
+          <a href="/services#robinetterie" class="service-mini__link">En savoir plus →</a>
+        </div>
+        <div class="service-mini card">
+          <div class="service-mini__icon">🛁</div>
+          <h3>Rénovation Salle de Bain</h3>
+          <p>Rénovation complète de votre salle de bain à {commune.name}. Douche italienne, carrelage, robinetterie moderne.</p>
+          <a href="/services#renovation" class="service-mini__link">En savoir plus →</a>
+        </div>
+        <div class="service-mini card">
+          <div class="service-mini__icon">🌊</div>
+          <h3>Urgence Inondation</h3>
+          <p>Pompage et assèchement d'urgence à {commune.name}. Intervention 24h/24, mise en sécurité électrique.</p>
+          <a href="/services#inondation" class="service-mini__link">En savoir plus →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us for this commune -->
+  <section class="section why-local">
+    <div class="container">
+      <p class="section-label">Pourquoi Nous Choisir</p>
+      <h2 class="section-title">Votre Plombier de Proximité à {commune.name}</h2>
+      <div class="grid grid-2">
+        <div class="why-local__content">
+          <div class="why-local__item">
+            <span class="why-local__check">✓</span>
+            <div>
+              <h3>Connaissance du Terrain</h3>
+              <p>Nos techniciens connaissent parfaitement {commune.name} ({commune.landmarks}). Cette connaissance locale nous permet d'intervenir plus rapidement et efficacement.</p>
+            </div>
+          </div>
+          <div class="why-local__item">
+            <span class="why-local__check">✓</span>
+            <div>
+              <h3>Intervention Rapide</h3>
+              <p>Grâce à notre positionnement stratégique en {commune.province}, nous garantissons une arrivée en 30 minutes maximum à {commune.name}.</p>
+            </div>
+          </div>
+          <div class="why-local__item">
+            <span class="why-local__check">✓</span>
+            <div>
+              <h3>Prix Transparents</h3>
+              <p>Devis gratuit et sans engagement pour les habitants de {commune.name}. Pas de frais cachés, le prix annoncé est le prix final.</p>
+            </div>
+          </div>
+          <div class="why-local__item">
+            <span class="why-local__check">✓</span>
+            <div>
+              <h3>Garantie 2 Ans</h3>
+              <p>Toutes nos interventions à {commune.name} sont garanties 2 ans pièces et main d'œuvre.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-local__info-card card">
+          <h3>📞 Urgence à {commune.name} ?</h3>
+          <p>Ne perdez pas de temps. Nos techniciens sont disponibles 24h/24 et 7j/7 pour intervenir rapidement chez vous à {commune.name}.</p>
+          <a href="tel:0470123456" class="btn btn-primary" style="width:100%; justify-content:center; margin-top: var(--space-md);">
+            Appeler maintenant
+          </a>
+          <div class="why-local__info-line">
+            <span>⚡</span> Intervention en 30 min
+          </div>
+          <div class="why-local__info-line">
+            <span>💰</span> Devis gratuit
+          </div>
+          <div class="why-local__info-line">
+            <span>✅</span> Garantie 2 ans
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby communes -->
+  {nearby.length > 0 && (
+    <section class="section nearby-section">
+      <div class="container">
+        <p class="section-label">Communes Proches</p>
+        <h2 class="section-title">Nous Intervenons Aussi Près de {commune.name}</h2>
+        <div class="nearby-grid">
+          {nearby.map(c => (
+            <a href={`/zones/${province.slug}/${c.slug}`} class="nearby-card card">
+              <h3>{c.name}</h3>
+              {c.population && <span class="nearby-card__pop">{c.population} hab.</span>}
+              <span class="nearby-card__link">Voir la page →</span>
+            </a>
+          ))}
+        </div>
+        <div style="text-align:center; margin-top: var(--space-xl);">
+          <a href="/zones" class="btn btn-outline">← Toutes les zones d'intervention</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTABanner
+    title={`Besoin d'un plombier à ${commune.name} ?`}
+    subtitle={`Intervention rapide à ${commune.name} et dans toute la ${commune.province}. Appelez-nous maintenant.`}
+  />
+</Layout>
+
+<style>
+  /* Breadcrumb */
+  .breadcrumb-section {
+    padding: var(--space-lg) 0 0;
+  }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-dim);
+    flex-wrap: wrap;
+  }
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+  }
+  .breadcrumb a:hover { color: var(--color-accent); }
+  .breadcrumb__sep { color: var(--color-text-dim); }
+  .breadcrumb__current { color: var(--color-text); font-weight: 600; }
+
+  /* Hero */
+  .commune-hero {
+    position: relative;
+    padding: var(--space-3xl) 0 var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .commune-hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(80,160,226,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(80,160,226,0.04) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .commune-hero__inner { position: relative; }
+
+  .commune-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: var(--color-accent-glow);
+    border: 1px solid rgba(80,160,226,0.2);
+    color: var(--color-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+  }
+
+  .commune-hero__title {
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 750px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .commune-hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
+  }
+
+  .commune-hero__actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .commune-hero__stats {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    max-width: fit-content;
+  }
+
+  .commune-hero__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .commune-hero__stat-number {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-accent);
+  }
+
+  .commune-hero__stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+
+  .commune-hero__stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+  }
+
+  .section-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Service cards */
+  .service-mini {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .service-mini__icon {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .service-mini h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+  }
+
+  .service-mini p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .service-mini__link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  /* Why local */
+  .why-local {
+    background: var(--color-bg-alt);
+  }
+
+  .why-local__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .why-local__item {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .why-local__check {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin-top: 2px;
+  }
+
+  .why-local__item h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .why-local__item p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+  }
+
+  .why-local__info-card {
+    padding: var(--space-xl);
+  }
+
+  .why-local__info-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .why-local__info-card > p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+  }
+
+  .why-local__info-line {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-sm);
+  }
+
+  /* Nearby */
+  .nearby-section {
+    /* default bg */
+  }
+
+  .nearby-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-md);
+  }
+
+  .nearby-card {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .nearby-card h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+  }
+
+  .nearby-card__pop {
+    color: var(--color-text-dim);
+    font-size: var(--font-size-xs);
+  }
+
+  .nearby-card__link {
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-top: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .nearby-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .commune-hero__stats {
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .commune-hero__stat-divider {
+      display: none;
+    }
+
+    .nearby-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
