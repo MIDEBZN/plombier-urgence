@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Merci ! Votre Demande a Été Envoyée | Plombier Urgence" description="Merci pour votre demande de devis. Nous vous recontactons dans les 15 minutes.">
+
+  <section class="thankyou">
+    <div class="container thankyou__inner">
+      <div class="thankyou__icon">✅</div>
+      <h1 class="thankyou__title">Merci ! Votre Demande a Bien Été Envoyée</h1>
+      <p class="thankyou__text">Nous avons bien reçu votre demande de devis. <strong>Un plombier vous recontacte dans les 15 minutes</strong> (pendant les heures de service) ou dès le lendemain matin.</p>
+
+      <div class="thankyou__next">
+        <h2>Et maintenant ?</h2>
+        <div class="thankyou__steps">
+          <div class="thankyou__step">
+            <span class="thankyou__step-num">1</span>
+            <div>
+              <strong>Nous analysons votre demande</strong>
+              <p>Un expert évalue votre problème et prépare une estimation.</p>
+            </div>
+          </div>
+          <div class="thankyou__step">
+            <span class="thankyou__step-num">2</span>
+            <div>
+              <strong>Nous vous appelons</strong>
+              <p>Confirmation du diagnostic, du prix fixe et du créneau d'intervention.</p>
+            </div>
+          </div>
+          <div class="thankyou__step">
+            <span class="thankyou__step-num">3</span>
+            <div>
+              <strong>Intervention rapide</strong>
+              <p>Le plombier le plus proche de chez vous intervient dans les meilleurs délais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="thankyou__urgent card">
+        <h3>🚨 C'est urgent ? N'attendez pas !</h3>
+        <p>Appelez-nous directement pour une intervention immédiate :</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:1rem;">
+          <a href="tel:0470123456" class="btn btn-primary btn-lg">📞 0470 12 34 56</a>
+          <a href="https://wa.me/32470123456" class="btn btn-outline btn-lg" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <a href="/" class="btn btn-outline">← Retour à l'accueil</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .thankyou{padding:var(--space-4xl) 0 var(--space-3xl)}
+  .thankyou__inner{max-width:650px;margin:0 auto;text-align:center}
+  .thankyou__icon{font-size:4rem;margin-bottom:var(--space-lg)}
+  .thankyou__title{font-size:var(--font-size-3xl);font-weight:900;margin-bottom:var(--space-lg)}
+  .thankyou__text{font-size:var(--font-size-lg);color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-2xl)}
+
+  .thankyou__next{text-align:left;margin-bottom:var(--space-2xl)}
+  .thankyou__next h2{font-size:var(--font-size-xl);font-weight:800;margin-bottom:var(--space-lg);text-align:center}
+  .thankyou__steps{display:flex;flex-direction:column;gap:var(--space-lg)}
+  .thankyou__step{display:flex;gap:var(--space-lg);align-items:start}
+  .thankyou__step-num{width:40px;height:40px;min-width:40px;background:var(--color-accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900}
+  .thankyou__step strong{display:block;margin-bottom:4px}
+  .thankyou__step p{color:var(--color-text-muted);font-size:var(--font-size-sm)}
+
+  .thankyou__urgent{padding:var(--space-xl);margin-bottom:var(--space-xl);text-align:center}
+  .thankyou__urgent h3{font-size:var(--font-size-lg);margin-bottom:var(--space-sm)}
+  .thankyou__urgent p{color:var(--color-text-muted);font-size:var(--font-size-sm)}
+</style>
