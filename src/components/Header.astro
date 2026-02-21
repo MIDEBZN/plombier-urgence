@@ -1,0 +1,202 @@
+---
+const navLinks = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Zones', href: '/zones' },
+  { label: 'À Propos', href: '/a-propos' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header" id="main-header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo">
+      <svg class="header__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" stroke="var(--color-accent)" stroke-width="2"/>
+        <path d="M16 6 C16 6 10 10 10 16 C10 19.3 12.7 22 16 22 C19.3 22 22 19.3 22 16 C22 10 16 6 16 6Z" fill="var(--color-accent)" opacity="0.8"/>
+        <circle cx="16" cy="16" r="3" fill="var(--color-bg)"/>
+      </svg>
+      <span>Plombier <strong>Urgence</strong></span>
+    </a>
+
+    <nav class="header__nav" id="main-nav">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class={`header__link ${currentPath === link.href ? 'header__link--active' : ''}`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <a href="tel:0470123456" class="btn-phone header__cta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+      0470 12 34 56
+    </a>
+
+    <button class="header__burger" id="burger-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(10, 15, 26, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  .header__logo:hover {
+    color: var(--color-text);
+  }
+
+  .header__logo strong {
+    color: var(--color-accent);
+    font-weight: 800;
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .header__link {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    position: relative;
+    padding: 0.25rem 0;
+    transition: color var(--transition-fast);
+  }
+
+  .header__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    border-radius: 1px;
+    transition: width var(--transition-base);
+  }
+
+  .header__link:hover,
+  .header__link--active {
+    color: var(--color-text);
+  }
+
+  .header__link:hover::after,
+  .header__link--active::after {
+    width: 100%;
+  }
+
+  .header__cta {
+    display: flex;
+  }
+
+  .header__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+  }
+
+  .header__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: all var(--transition-base);
+  }
+
+  @media (max-width: 768px) {
+    .header__nav {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      background: var(--color-bg);
+      padding: var(--space-2xl);
+      gap: var(--space-lg);
+      transform: translateX(100%);
+      transition: transform var(--transition-base);
+    }
+
+    .header__nav.open {
+      transform: translateX(0);
+    }
+
+    .header__link {
+      font-size: var(--font-size-lg);
+    }
+
+    .header__cta {
+      display: none;
+    }
+
+    .header__burger {
+      display: flex;
+    }
+
+    .header__burger.active span:nth-child(1) {
+      transform: rotate(45deg) translateY(7px);
+    }
+    .header__burger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .header__burger.active span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-7px);
+    }
+  }
+</style>
+
+<script>
+  const burger = document.getElementById('burger-btn');
+  const nav = document.getElementById('main-nav');
+
+  burger?.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav?.classList.toggle('open');
+  });
+
+  // Close on link click
+  nav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burger?.classList.remove('active');
+      nav?.classList.remove('open');
+    });
+  });
+</script>

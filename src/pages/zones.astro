@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const regions = [
+  {
+    name: 'Bruxelles-Capitale',
+    icon: '🏛️',
+    cities: ['Bruxelles', 'Ixelles', 'Uccle', 'Schaerbeek', 'Etterbeek', 'Woluwe-Saint-Lambert', 'Woluwe-Saint-Pierre', 'Auderghem', 'Forest', 'Saint-Gilles', 'Anderlecht', 'Molenbeek', 'Jette', 'Ganshoren', 'Berchem-Sainte-Agathe', 'Koekelberg', 'Evere', 'Watermael-Boitsfort', 'Saint-Josse'],
+  },
+  {
+    name: 'Brabant Wallon',
+    icon: '🏡',
+    cities: ['Waterloo', 'Wavre', 'Nivelles', 'Ottignies-Louvain-la-Neuve', 'Braine-l\'Alleud', 'Rixensart', 'La Hulpe', 'Genappe', 'Jodoigne', 'Tubize'],
+  },
+  {
+    name: 'Province de Liège',
+    icon: '🌉',
+    cities: ['Liège', 'Seraing', 'Herstal', 'Verviers', 'Ans', 'Grâce-Hollogne', 'Flémalle', 'Chaudfontaine', 'Visé', 'Eupen'],
+  },
+  {
+    name: 'Province de Namur',
+    icon: '🏰',
+    cities: ['Namur', 'Dinant', 'Sambreville', 'Gembloux', 'Andenne', 'Ciney', 'Rochefort', 'Profondeville', 'Mettet', 'Fosses-la-Ville'],
+  },
+  {
+    name: 'Hainaut',
+    icon: '⚒️',
+    cities: ['Charleroi', 'Mons', 'La Louvière', 'Tournai', 'Mouscron', 'Binche', 'Soignies', 'Ath', 'Enghien', 'Braine-le-Comte'],
+  },
+  {
+    name: 'Brabant Flamand',
+    icon: '🌿',
+    cities: ['Louvain', 'Vilvorde', 'Hal', 'Dilbeek', 'Zaventem', 'Tervuren', 'Overijse', 'Hoeilaart', 'Beersel', 'Grimbergen'],
+  },
+];
+---
+
+<Layout title="Zones d'Intervention" description="Plombier d'urgence partout en Belgique. Bruxelles, Brabant Wallon, Liège, Namur, Hainaut. Intervention rapide 24h/24.">
+
+  <!-- Hero -->
+  <section class="zones-hero">
+    <div class="zones-hero__bg"></div>
+    <div class="container zones-hero__inner">
+      <p class="section-label">Zones d'Intervention</p>
+      <h1 class="zones-hero__title">Zone d'Intervention : <span class="text-accent">Partout en Belgique</span></h1>
+      <p class="zones-hero__subtitle">Nos équipes sont stratégiquement réparties pour garantir une intervention rapide dans votre commune. Disponible 24h/24 et 7j/7.</p>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="highlight-card card">
+          <div class="highlight-card__icon">⚡</div>
+          <h3>30 min en moyenne</h3>
+          <p>Temps d'intervention moyen dans toute la région bruxelloise</p>
+        </div>
+        <div class="highlight-card card">
+          <div class="highlight-card__icon">📍</div>
+          <h3>6 régions couvertes</h3>
+          <p>Bruxelles, Brabant Wallon, Liège, Namur, Hainaut et plus</p>
+        </div>
+        <div class="highlight-card card">
+          <div class="highlight-card__icon">🚐</div>
+          <h3>Flotte équipée</h3>
+          <p>Nos camionnettes sont entièrement équipées pour intervenir sur place</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regions -->
+  <section class="section regions-section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-2xl);">
+        <p class="section-label">Villes Principales</p>
+        <h2 class="section-title">Trouvez un Plombier Près de Chez Vous</h2>
+      </div>
+
+      <div class="regions-grid">
+        {regions.map(region => (
+          <div class="region-card card">
+            <div class="region-card__header">
+              <span class="region-card__icon">{region.icon}</span>
+              <h3 class="region-card__name">{region.name}</h3>
+            </div>
+            <div class="region-card__cities">
+              {region.cities.map(city => (
+                <span class="region-card__city">{city}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Votre commune n'est pas listée ?" subtitle="Contactez-nous, nous intervenons peut-être dans votre secteur. Devis et déplacement gratuits." />
+</Layout>
+
+<style>
+  .zones-hero {
+    position: relative;
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .zones-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(80,160,226,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .zones-hero__inner {
+    position: relative;
+    max-width: 700px;
+  }
+
+  .zones-hero__title {
+    font-size: var(--font-size-4xl);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .zones-hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .section-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Highlights */
+  .highlight-card {
+    text-align: center;
+    padding: var(--space-xl);
+  }
+
+  .highlight-card__icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .highlight-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .highlight-card p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  /* Regions */
+  .regions-section {
+    background: var(--color-bg-alt);
+  }
+
+  .regions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .region-card {
+    padding: var(--space-xl);
+  }
+
+  .region-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .region-card__icon {
+    font-size: 1.5rem;
+  }
+
+  .region-card__name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+  }
+
+  .region-card__cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .region-card__city {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+  }
+
+  .region-card__city:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 768px) {
+    .regions-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

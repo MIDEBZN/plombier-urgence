@@ -1,0 +1,438 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout title="Accueil" description="Plombier d'urgence en Belgique - Intervention rapide en 30 minutes, 24h/24 et 7j/7. Débouchage, fuites, chaudières. Prix transparents.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__inner">
+      <div class="hero__badge">🔧 Disponible 24h/24 – 7j/7</div>
+      <h1 class="hero__title">
+        Plombier d'urgence à Bruxelles
+        <span class="text-accent">Intervention en 30 min</span>
+      </h1>
+      <p class="hero__subtitle">
+        Disponible 24h/24 et 7j/7 pour tous vos problèmes de plomberie. Débouchage, fuites, chaudières. Prix transparents, sans surprise.
+      </p>
+      <div class="hero__actions">
+        <a href="tel:0470123456" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          Appeler Maintenant
+        </a>
+        <a href="/contact" class="btn btn-outline btn-lg">Demander un Devis</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-number">15+</span>
+          <span class="hero__stat-label">Années d'exp.</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">5 000+</span>
+          <span class="hero__stat-label">Clients satisfaits</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">30 min</span>
+          <span class="hero__stat-label">Délai moyen</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-number">4.9/5</span>
+          <span class="hero__stat-label">500+ avis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container text-center">
+      <p class="section-label">Nos Services</p>
+      <h2 class="section-title">Interventions Rapides & Efficaces</h2>
+      <p class="section-subtitle">Des solutions professionnelles pour chaque problème de plomberie, partout en Belgique.</p>
+    </div>
+    <div class="container grid grid-3">
+      <ServiceCard
+        icon="🚿"
+        title="Débouchage Canalisation"
+        description="WC, évier, douche ou baignoire bouchés ? Nous intervenons avec du matériel haute pression pour un débouchage immédiat."
+      />
+      <ServiceCard
+        icon="🔍"
+        title="Recherche de Fuite"
+        description="Détection précise de fuites d'eau sans casse grâce à nos caméras thermiques et acoustiques. Réparation rapide garantie."
+      />
+      <ServiceCard
+        icon="🔥"
+        title="Dépannage Chaudière"
+        description="Votre chaudière est en panne ? Plus d'eau chaude ? Nos chauffagistes agréés interviennent sur toutes les marques."
+      />
+      <ServiceCard
+        icon="🔧"
+        title="Réparation Robinetterie"
+        description="Remplacement de robinets, mitigeurs, chasse d'eau qui coule. Installation de nouveaux sanitaires."
+      />
+      <ServiceCard
+        icon="🛁"
+        title="Rénovation Salle de Bain"
+        description="Projet de rénovation ? Nous installons douches italiennes, baignoires et meubles vasques modernes."
+      />
+      <ServiceCard
+        icon="🌊"
+        title="Urgence Inondation"
+        description="Pompage d'eau en sous-sol et caves inondées. Assèchement professionnel et mise en sécurité électrique."
+      />
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section why-us" id="pourquoi-nous">
+    <div class="container text-center">
+      <p class="section-label">Pourquoi Nous Choisir</p>
+      <h2 class="section-title">La Référence Plomberie à Bruxelles</h2>
+    </div>
+    <div class="container grid grid-3">
+      <div class="why-card">
+        <div class="why-card__icon">⚡</div>
+        <h3 class="why-card__title">Intervention en 30 Minutes</h3>
+        <p class="why-card__text">Nos équipes sont réparties stratégiquement dans tout Bruxelles pour garantir une arrivée rapide.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">💰</div>
+        <h3 class="why-card__title">Tarifs Fixes et Transparents</h3>
+        <p class="why-card__text">Pas de mauvaise surprise. Nous vous communiquons une estimation avant toute intervention.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">✅</div>
+        <h3 class="why-card__title">Travail Garanti</h3>
+        <p class="why-card__text">Toutes nos réparations sont garanties 2 ans pièces et main d'œuvre. Satisfaction assurée.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials" id="avis">
+    <div class="container text-center">
+      <p class="section-label">Témoignages</p>
+      <h2 class="section-title">Ce que disent nos clients</h2>
+    </div>
+    <div class="container grid grid-3">
+      <div class="testimonial-card card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p class="testimonial-card__text">"Intervention en moins de 20 minutes pour une fuite urgente. Travail propre et soigné. Je recommande vivement !"</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">ML</div>
+          <div>
+            <strong>Marie L.</strong>
+            <span>Bruxelles</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p class="testimonial-card__text">"Chaudière réparée en une heure un dimanche soir. Très professionnel et tarif correct. Merci !"</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">PD</div>
+          <div>
+            <strong>Pierre D.</strong>
+            <span>Waterloo</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card card">
+        <div class="testimonial-card__stars">★★★★★</div>
+        <p class="testimonial-card__text">"Rénovation complète de notre salle de bain. Résultat magnifique et dans le budget annoncé. Top !"</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar">SB</div>
+          <div>
+            <strong>Sophie B.</strong>
+            <span>Namur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zones preview -->
+  <section class="section zones-preview">
+    <div class="container text-center">
+      <p class="section-label">Zones d'Intervention</p>
+      <h2 class="section-title">Nous Couvrons Toute la Belgique</h2>
+      <p class="section-subtitle">Bruxelles, Wallonie, Flandre — nos équipes sont proches de chez vous.</p>
+    </div>
+    <div class="container">
+      <div class="zones-grid">
+        <div class="zone-chip">Bruxelles</div>
+        <div class="zone-chip">Waterloo</div>
+        <div class="zone-chip">Namur</div>
+        <div class="zone-chip">Liège</div>
+        <div class="zone-chip">Charleroi</div>
+        <div class="zone-chip">Mons</div>
+        <div class="zone-chip">Nivelles</div>
+        <div class="zone-chip">Wavre</div>
+        <div class="zone-chip">Ottignies</div>
+        <div class="zone-chip">Uccle</div>
+        <div class="zone-chip">Ixelles</div>
+        <div class="zone-chip">Schaerbeek</div>
+      </div>
+      <div style="text-align: center; margin-top: var(--space-xl);">
+        <a href="/zones" class="btn btn-outline">Voir toutes les zones →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTABanner />
+</Layout>
+
+<style>
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: var(--space-4xl) 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(80,160,226,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(80,160,226,0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero__inner {
+    position: relative;
+  }
+
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: var(--color-accent-glow);
+    border: 1px solid rgba(80,160,226,0.2);
+    color: var(--color-accent);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-xl);
+    animation: fadeInUp 0.6s ease;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-5xl);
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: var(--space-lg);
+    animation: fadeInUp 0.6s ease 0.1s both;
+  }
+
+  .hero__title .text-accent {
+    display: block;
+    margin-top: var(--space-sm);
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: var(--space-xl);
+    animation: fadeInUp 0.6s ease 0.2s both;
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-3xl);
+    animation: fadeInUp 0.6s ease 0.3s both;
+  }
+
+  .hero__stats {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    max-width: fit-content;
+    animation: fadeInUp 0.6s ease 0.4s both;
+  }
+
+  .hero__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hero__stat-number {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-accent);
+  }
+
+  .hero__stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  .hero__stat-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Section label */
+  .section-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Why Us */
+  .why-us {
+    background: var(--color-bg-alt);
+  }
+
+  .why-card {
+    text-align: center;
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .why-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .why-card__title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+
+  .why-card__text {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .testimonial-card__stars {
+    color: #f59e0b;
+    font-size: var(--font-size-lg);
+    letter-spacing: 2px;
+  }
+
+  .testimonial-card__text {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+    flex: 1;
+    font-style: italic;
+  }
+
+  .testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .testimonial-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-accent-glow);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+  }
+
+  .testimonial-card__author strong {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+  }
+
+  .testimonial-card__author span {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-dim);
+  }
+
+  /* Zones preview */
+  .zones-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center;
+  }
+
+  .zone-chip {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: all var(--transition-base);
+  }
+
+  .zone-chip:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-accent-glow);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding: var(--space-2xl) 0;
+    }
+
+    .hero__stats {
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+
+    .hero__stat-divider {
+      display: none;
+    }
+  }
+</style>

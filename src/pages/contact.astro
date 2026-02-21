@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Contactez Plombier Urgence pour une intervention rapide ou un devis gratuit. Téléphone, email ou formulaire. Disponible 24h/24 en Belgique.">
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <div class="contact-hero__bg"></div>
+    <div class="container contact-hero__inner">
+      <p class="section-label">Contact</p>
+      <h1 class="contact-hero__title">Contactez <span class="text-accent">nos experts</span></h1>
+      <p class="contact-hero__subtitle">Un problème de plomberie ? Besoin d'un devis ? Notre équipe est disponible 24h/24 pour répondre à vos questions et planifier une intervention rapide.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-info-card card">
+          <div class="contact-info-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-accent)"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <h3>Téléphone</h3>
+            <a href="tel:0470123456">0470 12 34 56</a>
+            <p>Disponible 24h/24, 7j/7</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card card">
+          <div class="contact-info-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-accent)"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:info@plombierurgence.be">info@plombierurgence.be</a>
+            <p>Réponse sous 2 heures</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card card">
+          <div class="contact-info-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-accent)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          </div>
+          <div>
+            <h3>Adresse</h3>
+            <p>Bruxelles, Belgique</p>
+            <p>Intervention dans toute la Belgique</p>
+          </div>
+        </div>
+
+        <div class="contact-info-card card emergency-card">
+          <div class="contact-info-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-danger)"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+          </div>
+          <div>
+            <h3>Urgence Plomberie ?</h3>
+            <p>Ne perdez pas de temps avec un formulaire.</p>
+            <a href="tel:0470123456" class="btn btn-primary" style="margin-top: 0.5rem;">
+              Appeler maintenant
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-wrapper">
+        <div class="contact-form-card card">
+          <h2 class="contact-form__title">Envoyez-nous un message</h2>
+          <p class="contact-form__subtitle">Remplissez le formulaire ci-dessous et nous vous recontacterons dans les plus brefs délais.</p>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Nom complet *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Jean Dupont" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Téléphone *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="0470 12 34 56" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="jean@exemple.be" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="service">Type d'intervention</label>
+              <select id="service" name="service" class="form-select">
+                <option value="">Sélectionnez un service</option>
+                <option value="debouchage">Débouchage canalisation</option>
+                <option value="fuite">Recherche de fuite</option>
+                <option value="chaudiere">Dépannage chaudière</option>
+                <option value="robinetterie">Réparation robinetterie</option>
+                <option value="renovation">Rénovation salle de bain</option>
+                <option value="inondation">Urgence inondation</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Décrivez votre problème ou votre besoin..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+              Envoyer ma demande
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact-hero {
+    position: relative;
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .contact-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(80,160,226,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .contact-hero__inner {
+    position: relative;
+    max-width: 650px;
+  }
+
+  .contact-hero__title {
+    font-size: var(--font-size-4xl);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .section-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  /* Info cards */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .contact-info-card__icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: var(--color-accent-glow);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .emergency-card .contact-info-card__icon {
+    background: rgba(239, 68, 68, 0.1);
+  }
+
+  .contact-info-card h3 {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .contact-info-card p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+  }
+
+  .contact-info-card a {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  /* Form */
+  .contact-form-card {
+    padding: var(--space-2xl);
+  }
+
+  .contact-form__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-form__subtitle {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) {
+      btn.textContent = '✓ Message envoyé !';
+      btn.setAttribute('disabled', 'true');
+      (btn as HTMLElement).style.background = '#22c55e';
+    }
+    setTimeout(() => {
+      form.reset();
+      if (btn) {
+        btn.textContent = 'Envoyer ma demande';
+        btn.removeAttribute('disabled');
+        (btn as HTMLElement).style.background = '';
+      }
+    }, 3000);
+  });
+</script>

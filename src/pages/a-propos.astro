@@ -1,0 +1,311 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout title="À Propos" description="Découvrez Plombier Urgence — plus de 15 ans d'expérience en plomberie en Belgique. Équipe qualifiée, agréée et disponible 24h/24.">
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero__bg"></div>
+    <div class="container about-hero__inner">
+      <p class="section-label">À Propos</p>
+      <h1 class="about-hero__title">Votre Partenaire <span class="text-accent">Plomberie de Confiance</span></h1>
+      <p class="about-hero__subtitle">Depuis plus de 15 ans, nous accompagnons les particuliers et les professionnels en Belgique pour tous leurs besoins en plomberie, chauffage et sanitaire.</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Notre Histoire</h2>
+          <p>Fondée en 2009 à Bruxelles, Plombier Urgence est née de la conviction qu'un service de plomberie d'urgence devait être rapide, fiable et transparent. Notre fondateur, fort de 10 ans d'expérience dans le secteur, a rassemblé une équipe de techniciens passionnés et qualifiés.</p>
+          <p>Aujourd'hui, nous sommes fiers de compter plus de 5 000 clients satisfaits et d'être reconnus comme l'une des références de la plomberie d'urgence en Belgique. Notre engagement : une intervention de qualité, à un prix juste, dans les meilleurs délais.</p>
+        </div>
+        <div class="about-stats-panel">
+          <div class="about-stat-box">
+            <span class="about-stat-box__number">15+</span>
+            <span class="about-stat-box__label">Années d'expérience</span>
+          </div>
+          <div class="about-stat-box">
+            <span class="about-stat-box__number">5 000+</span>
+            <span class="about-stat-box__label">Clients satisfaits</span>
+          </div>
+          <div class="about-stat-box">
+            <span class="about-stat-box__number">24/7</span>
+            <span class="about-stat-box__label">Disponibilité totale</span>
+          </div>
+          <div class="about-stat-box">
+            <span class="about-stat-box__number">4.9/5</span>
+            <span class="about-stat-box__label">Note moyenne</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section values-section">
+    <div class="container text-center">
+      <p class="section-label">Nos Valeurs</p>
+      <h2 class="section-title">Ce Qui Nous Différencie</h2>
+    </div>
+    <div class="container grid grid-3">
+      <div class="value-card card">
+        <div class="value-card__icon">⚡</div>
+        <h3>Rapidité</h3>
+        <p>Nous savons qu'une urgence plomberie ne peut pas attendre. Nos équipes sont mobilisées en quelques minutes pour arriver chez vous en moins de 30 minutes.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-card__icon">🤝</div>
+        <h3>Transparence</h3>
+        <p>Pas de frais cachés ni de mauvaises surprises. Nous vous communiquons un devis clair et détaillé avant chaque intervention. Le prix annoncé est le prix final.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-card__icon">🏆</div>
+        <h3>Qualité</h3>
+        <p>Tous nos techniciens sont agréés et formés en continu. Nos réparations sont garanties 2 ans pièces et main d'œuvre pour votre tranquillité d'esprit.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-card__icon">🌿</div>
+        <h3>Respect</h3>
+        <p>Nous respectons votre domicile comme le nôtre. Protection des sols, nettoyage après intervention, et utilisation de matériaux durables et écologiques.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-card__icon">📞</div>
+        <h3>Écoute</h3>
+        <p>Chaque client est unique. Nous prenons le temps d'écouter votre problème, de vous expliquer les solutions et de vous conseiller la meilleure option.</p>
+      </div>
+      <div class="value-card card">
+        <div class="value-card__icon">🔒</div>
+        <h3>Fiabilité</h3>
+        <p>Pleinement assurés et agréés, nous intervenons dans le respect des normes belges en vigueur. Votre sécurité est notre priorité absolue.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section">
+    <div class="container">
+      <div class="certif-banner">
+        <div class="certif-banner__content">
+          <h2>Certifications & Agréments</h2>
+          <p>Notre équipe est certifiée et agréée par les autorités belges compétentes. Nous travaillons dans le respect des normes les plus strictes du secteur.</p>
+        </div>
+        <div class="certif-badges">
+          <div class="certif-badge">
+            <span>🏅</span>
+            <strong>Cerga</strong>
+            <small>Agréé chauffagiste</small>
+          </div>
+          <div class="certif-badge">
+            <span>📋</span>
+            <strong>BCE</strong>
+            <small>Entreprise enregistrée</small>
+          </div>
+          <div class="certif-badge">
+            <span>🛡️</span>
+            <strong>Assurance RC</strong>
+            <small>Pleinement assuré</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Prêt à travailler avec nous ?" subtitle="Contactez notre équipe pour un devis gratuit ou une intervention d'urgence." />
+</Layout>
+
+<style>
+  .about-hero {
+    position: relative;
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .about-hero__bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(80,160,226,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .about-hero__inner {
+    position: relative;
+    max-width: 700px;
+  }
+
+  .about-hero__title {
+    font-size: var(--font-size-4xl);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .section-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Story grid */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  .about-content h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-content p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  .about-stats-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .about-stat-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+  }
+
+  .about-stat-box:hover {
+    border-color: var(--color-accent);
+  }
+
+  .about-stat-box__number {
+    display: block;
+    font-size: var(--font-size-3xl);
+    font-weight: 900;
+    color: var(--color-accent);
+    margin-bottom: 4px;
+  }
+
+  .about-stat-box__label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  /* Values */
+  .values-section {
+    background: var(--color-bg-alt);
+  }
+
+  .value-card {
+    text-align: center;
+    padding: var(--space-xl);
+  }
+
+  .value-card__icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .value-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .value-card p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+  }
+
+  /* Certifications */
+  .certif-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3xl);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+  }
+
+  .certif-banner__content {
+    flex: 1;
+  }
+
+  .certif-banner__content h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    margin-bottom: var(--space-md);
+  }
+
+  .certif-banner__content p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  .certif-badges {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .certif-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    min-width: 100px;
+  }
+
+  .certif-badge span {
+    font-size: 1.5rem;
+  }
+
+  .certif-badge strong {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+  }
+
+  .certif-badge small {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-dim);
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .certif-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .certif-badges {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
