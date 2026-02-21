@@ -1,0 +1,185 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { serviceCityPages } from '../../data/seo-pages';
+
+export function getStaticPaths() {
+  return serviceCityPages.map(page => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title={page.metaTitle} description={page.metaDescription}>
+
+  <!-- Breadcrumb -->
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/services">Services</a><span>›</span>
+        <span class="bc--current">{page.serviceType} {page.city}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="svc-hero">
+    <div class="svc-hero__bg"></div>
+    <div class="container svc-hero__inner">
+      <div class="svc-hero__badge">{page.icon} {page.serviceType} — {page.province}</div>
+      <h1 class="svc-hero__title">{page.h1}</h1>
+      <p class="svc-hero__text">{page.heroText}</p>
+      <div class="svc-hero__actions">
+        <a href="tel:0470123456" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          Appeler le 0470 12 34 56
+        </a>
+        <a href="/contact" class="btn btn-outline btn-lg">Demander un Devis Gratuit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container">
+      <p class="label">Notre Méthode</p>
+      <h2 class="section-title">Comment Nous Intervenons à {page.city}</h2>
+      <div class="process-grid">
+        {page.processSteps.map((step, i) => (
+          <div class="process-step card">
+            <div class="process-num">{String(i + 1).padStart(2, '0')}</div>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Keyword content section -->
+  <section class="section kw-section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div>
+          <p class="label">{page.serviceType} à {page.city}</p>
+          <h2 class="section-title">Pourquoi Faire Appel à Nos Experts</h2>
+          <div class="kw-list">
+            <div class="kw-item">
+              <span class="kw-check">✓</span>
+              <div>
+                <h3>Expertise Locale</h3>
+                <p>Nos techniciens connaissent parfaitement {page.city} et interviennent quotidiennement dans la {page.province}. Cette expertise locale garantit une intervention plus rapide et plus efficace.</p>
+              </div>
+            </div>
+            <div class="kw-item">
+              <span class="kw-check">✓</span>
+              <div>
+                <h3>Matériel Professionnel</h3>
+                <p>Nos camionnettes sont équipées de tout le matériel nécessaire pour un service de {page.serviceType.toLowerCase()} complet directement sur place.</p>
+              </div>
+            </div>
+            <div class="kw-item">
+              <span class="kw-check">✓</span>
+              <div>
+                <h3>Devis Gratuit et Transparent</h3>
+                <p>Pas de surprise. Le prix est communiqué et accepté avant le début des travaux. Devis gratuit et sans engagement à {page.city}.</p>
+              </div>
+            </div>
+            <div class="kw-item">
+              <span class="kw-check">✓</span>
+              <div>
+                <h3>Garantie 2 Ans</h3>
+                <p>Tous nos travaux de {page.serviceType.toLowerCase()} à {page.city} sont garantis 2 ans pièces et main d'œuvre.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cta-card card">
+          <h3>📞 {page.serviceType} à {page.city}</h3>
+          <p>Contactez-nous pour un devis gratuit ou une intervention rapide.</p>
+          <a href="tel:0470123456" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-md);">
+            Appeler maintenant
+          </a>
+          <a href="/devis" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:var(--space-sm);">
+            Demander un devis en ligne
+          </a>
+          <div class="cta-line"><span>⚡</span> Intervention rapide</div>
+          <div class="cta-line"><span>💰</span> Devis gratuit</div>
+          <div class="cta-line"><span>✅</span> Garantie 2 ans</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container faq-container">
+      <p class="label">Questions Fréquentes</p>
+      <h2 class="section-title">FAQ — {page.serviceType} à {page.city}</h2>
+      <div class="faq-list">
+        {page.faqs.map(faq => (
+          <details class="faq-item card">
+            <summary class="faq-q">{faq.q}</summary>
+            <p class="faq-a">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    title={`Besoin d'un ${page.serviceType.toLowerCase()} à ${page.city} ?`}
+    subtitle="Appelez-nous pour une intervention rapide ou demandez un devis gratuit en ligne."
+  />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}
+  .bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}
+  .bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}
+  .bc a:hover{color:var(--color-accent)}
+  .bc--current{color:var(--color-text);font-weight:600}
+
+  .svc-hero{position:relative;padding:var(--space-3xl) 0 var(--space-2xl);overflow:hidden}
+  .svc-hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(80,160,226,.08) 0%,transparent 50%);pointer-events:none}
+  .svc-hero__inner{position:relative}
+  .svc-hero__badge{display:inline-flex;align-items:center;gap:var(--space-sm);background:var(--color-accent-glow);border:1px solid rgba(80,160,226,.2);color:var(--color-accent);padding:.4rem 1rem;border-radius:999px;font-size:var(--font-size-sm);font-weight:600;margin-bottom:var(--space-lg)}
+  .svc-hero__title{font-size:var(--font-size-5xl);font-weight:900;line-height:1.1;max-width:750px;margin-bottom:var(--space-lg)}
+  .svc-hero__text{font-size:var(--font-size-lg);color:var(--color-text-muted);max-width:650px;line-height:1.7;margin-bottom:var(--space-xl)}
+  .svc-hero__actions{display:flex;gap:var(--space-md);flex-wrap:wrap}
+
+  .label{font-size:var(--font-size-sm);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);margin-bottom:var(--space-sm)}
+
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-lg)}
+  .process-step{padding:var(--space-xl);text-align:center}
+  .process-num{font-size:var(--font-size-3xl);font-weight:900;color:var(--color-accent);margin-bottom:var(--space-md);opacity:.4}
+  .process-step h3{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-sm)}
+  .process-step p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.6}
+
+  .kw-section{background:var(--color-bg-alt)}
+  .kw-list{display:flex;flex-direction:column;gap:var(--space-xl)}
+  .kw-item{display:flex;gap:var(--space-md)}
+  .kw-check{color:var(--color-accent);font-size:1.2rem;margin-top:2px}
+  .kw-item h3{font-size:var(--font-size-base);font-weight:700;margin-bottom:4px}
+  .kw-item p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  .cta-card{padding:var(--space-xl)}
+  .cta-card h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-md)}
+  .cta-card>p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+  .cta-line{display:flex;align-items:center;gap:var(--space-sm);color:var(--color-text-muted);font-size:var(--font-size-sm);margin-top:var(--space-sm)}
+
+  .faq-container{max-width:800px}
+  .faq-list{display:flex;flex-direction:column;gap:var(--space-md)}
+  .faq-item{padding:var(--space-lg) var(--space-xl);cursor:pointer}
+  .faq-q{font-weight:700;font-size:var(--font-size-base);list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq-q::after{content:'＋';color:var(--color-accent);font-size:1.2rem}
+  .faq-item[open] .faq-q::after{content:'−'}
+  .faq-a{margin-top:var(--space-md);color:var(--color-text-muted);line-height:1.7;font-size:var(--font-size-sm)}
+
+  @media(max-width:1024px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:768px){.process-grid{grid-template-columns:1fr}}
+</style>

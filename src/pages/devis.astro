@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<Layout title="Devis Plombier Gratuit Bruxelles, Liège, Namur | Plombier Urgence" description="Demandez un devis plombier gratuit à Bruxelles, Liège, Namur. Plombier agréé, fiable et recommandé. Réponse rapide. ☎ 0470 12 34 56">
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <span class="bc--current">Devis Gratuit</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="devis-hero">
+    <div class="devis-hero__bg"></div>
+    <div class="container">
+      <div class="devis-hero__grid">
+        <div class="devis-hero__content">
+          <p class="label">Devis Gratuit</p>
+          <h1 class="devis-hero__title">Devis Plombier Gratuit — <span class="text-accent">Réponse en 1h</span></h1>
+          <p class="devis-hero__text">Remplissez le formulaire ci-contre pour recevoir un devis gratuit et sans engagement de la part de nos plombiers agréés. Que ce soit à Bruxelles, Liège ou Namur, nous répondons sous 1 heure.</p>
+          <div class="trust-badges">
+            <div class="trust-badge">
+              <span class="trust-icon">✅</span>
+              <div><strong>Plombier Agréé</strong><p>Certifiés et assurés</p></div>
+            </div>
+            <div class="trust-badge">
+              <span class="trust-icon">⭐</span>
+              <div><strong>Plombier Recommandé</strong><p>4.9/5 — 500+ avis</p></div>
+            </div>
+            <div class="trust-badge">
+              <span class="trust-icon">🛡️</span>
+              <div><strong>Plombier Fiable</strong><p>15+ ans d'expérience</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="devis-form-wrap card">
+          <h2>Demandez votre devis</h2>
+          <form class="devis-form" id="devis-form">
+            <div class="form-group">
+              <label for="d-name">Nom complet *</label>
+              <input type="text" id="d-name" name="name" required placeholder="Votre nom" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="d-phone">Téléphone *</label>
+                <input type="tel" id="d-phone" name="phone" required placeholder="0470 12 34 56" />
+              </div>
+              <div class="form-group">
+                <label for="d-email">Email</label>
+                <input type="email" id="d-email" name="email" placeholder="votre@email.be" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="d-city">Ville *</label>
+              <select id="d-city" name="city" required>
+                <option value="">Sélectionnez votre ville</option>
+                <option>Bruxelles</option>
+                <option>Liège</option>
+                <option>Namur</option>
+                <option>Charleroi</option>
+                <option>Mons</option>
+                <option>Waterloo</option>
+                <option>Wavre</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="d-service">Type de service *</label>
+              <select id="d-service" name="service" required>
+                <option value="">Type d'intervention</option>
+                <option>Débouchage canalisation</option>
+                <option>Fuite d'eau</option>
+                <option>Chauffe-eau / Chaudière</option>
+                <option>Rénovation salle de bain</option>
+                <option>Installation sanitaire</option>
+                <option>Robinetterie</option>
+                <option>Urgence</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="d-message">Description du problème *</label>
+              <textarea id="d-message" name="message" required rows="4" placeholder="Décrivez votre besoin ou problème en quelques mots..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Envoyer la Demande de Devis</button>
+            <p class="form-note">🔒 Vos données sont protégées. Réponse sous 1 heure.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avis / Témoignages -->
+  <section class="section reviews-section">
+    <div class="container">
+      <p class="label">Avis Clients</p>
+      <h2 class="section-title" style="text-align:center;">Plombier Recommandé à Bruxelles et en Belgique</h2>
+      <div class="grid grid-3">
+        <div class="review-card card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Plombier fiable et professionnel à Bruxelles. Intervention rapide pour une fuite d'eau dans ma salle de bain. Devis respecté à l'euro près. Je recommande !"</p>
+          <div class="review-author"><strong>Marie D.</strong> — Ixelles</div>
+        </div>
+        <div class="review-card card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Devis plombier gratuit reçu en 30 minutes par téléphone. Intervention le lendemain pour un remplacement de chauffe-eau. Travail soigné et prix correct."</p>
+          <div class="review-author"><strong>Jean-Pierre L.</strong> — Liège</div>
+        </div>
+        <div class="review-card card">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Plombier agréé et très compétent. Il a trouvé la fuite que deux autres plombiers n'avaient pas détectée. Caméra thermique très efficace."</p>
+          <div class="review-author"><strong>Sophie M.</strong> — Namur</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ devis -->
+  <section class="section">
+    <div class="container faq-container">
+      <p class="label">Questions Fréquentes</p>
+      <h2 class="section-title">FAQ — Devis Plombier</h2>
+      <div class="faq-list">
+        <details class="faq-item card">
+          <summary class="faq-q">Le devis plombier est-il vraiment gratuit ?</summary>
+          <p class="faq-a">Oui, à Bruxelles, Liège et Namur nos devis sont 100% gratuits et sans engagement. Le technicien évalue les travaux et vous fournit une estimation précise.</p>
+        </details>
+        <details class="faq-item card">
+          <summary class="faq-q">Comment savoir si un plombier est agréé à Bruxelles ?</summary>
+          <p class="faq-a">Un plombier agréé à Bruxelles possède les certifications requises et est inscrit auprès des organismes compétents. Tous nos techniciens sont certifiés et assurés RC professionnelle.</p>
+        </details>
+        <details class="faq-item card">
+          <summary class="faq-q">Comment trouver un plombier fiable à Bruxelles ?</summary>
+          <p class="faq-a">Vérifiez les avis clients, demandez si le plombier est assuré et agréé, et comparez les devis. Chez Plombier Urgence, nous avons 4.9/5 sur 500+ avis clients vérifiés.</p>
+        </details>
+        <details class="faq-item card">
+          <summary class="faq-q">Quel plombier est recommandé à Liège ?</summary>
+          <p class="faq-a">Plombier Urgence est recommandé à Liège avec d'excellents avis clients. Nous sommes agréés, assurés et nous proposons des devis gratuits pour tous types de travaux de plomberie.</p>
+        </details>
+        <details class="faq-item card">
+          <summary class="faq-q">Combien de temps pour recevoir un devis ?</summary>
+          <p class="faq-a">Nous répondons aux demandes de devis sous 1 heure pendant les heures ouvrables. Pour les urgences, appelez directement le 0470 12 34 56 pour un devis immédiat.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Préférez appeler directement ?" subtitle="Nos experts sont disponibles 24h/24 au 0470 12 34 56 pour un devis immédiat par téléphone." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}
+  .bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}
+  .bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}
+  .bc a:hover{color:var(--color-accent)}
+  .bc--current{color:var(--color-text);font-weight:600}
+  .label{font-size:var(--font-size-sm);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);margin-bottom:var(--space-sm)}
+
+  .devis-hero{position:relative;padding:var(--space-3xl) 0 var(--space-2xl);overflow:hidden}
+  .devis-hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(80,160,226,.06) 0%,transparent 50%);pointer-events:none}
+  .devis-hero__grid{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--space-2xl);align-items:start}
+  .devis-hero__content{position:relative}
+  .devis-hero__title{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-lg)}
+  .devis-hero__text{font-size:var(--font-size-lg);color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-xl)}
+
+  .trust-badges{display:flex;flex-direction:column;gap:var(--space-md)}
+  .trust-badge{display:flex;align-items:center;gap:var(--space-md);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:var(--space-md) var(--space-lg)}
+  .trust-icon{font-size:1.5rem}
+  .trust-badge strong{font-size:var(--font-size-sm);display:block}
+  .trust-badge p{color:var(--color-text-muted);font-size:var(--font-size-xs);margin:0}
+
+  .devis-form-wrap{padding:var(--space-xl)}
+  .devis-form-wrap h2{font-size:var(--font-size-xl);font-weight:700;margin-bottom:var(--space-lg)}
+  .devis-form{display:flex;flex-direction:column;gap:var(--space-md)}
+  .form-group{display:flex;flex-direction:column;gap:var(--space-xs)}
+  .form-group label{font-size:var(--font-size-sm);font-weight:600;color:var(--color-text-muted)}
+  .form-group input,.form-group select,.form-group textarea{background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius);padding:.65rem .85rem;color:var(--color-text);font-family:inherit;font-size:var(--font-size-sm);transition:border-color var(--transition-fast)}
+  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--color-accent)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-md)}
+  .form-note{text-align:center;font-size:var(--font-size-xs);color:var(--color-text-dim);margin-top:var(--space-sm)}
+
+  .reviews-section{background:var(--color-bg-alt)}
+  .review-card{padding:var(--space-xl)}
+  .review-stars{margin-bottom:var(--space-md)}
+  .review-text{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7;font-style:italic;margin-bottom:var(--space-md)}
+  .review-author{font-size:var(--font-size-sm)}
+  .review-author strong{color:var(--color-text)}
+
+  .faq-container{max-width:800px}
+  .faq-list{display:flex;flex-direction:column;gap:var(--space-md)}
+  .faq-item{padding:var(--space-lg) var(--space-xl);cursor:pointer}
+  .faq-q{font-weight:700;font-size:var(--font-size-base);list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq-q::after{content:'＋';color:var(--color-accent);font-size:1.2rem}
+  .faq-item[open] .faq-q::after{content:'−'}
+  .faq-a{margin-top:var(--space-md);color:var(--color-text-muted);line-height:1.7;font-size:var(--font-size-sm)}
+
+  @media(max-width:768px){
+    .devis-hero__grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+  }
+</style>

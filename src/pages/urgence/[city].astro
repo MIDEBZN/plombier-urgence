@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { urgencePages } from '../../data/seo-pages';
+
+export function getStaticPaths() {
+  return urgencePages.map(page => ({
+    params: { city: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title={page.metaTitle} description={page.metaDescription}>
+
+  <!-- Breadcrumb -->
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/zones">Zones</a><span>›</span>
+        <span class="bc--current">Urgence {page.city}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="urg-hero">
+    <div class="urg-hero__bg"></div>
+    <div class="container urg-hero__inner">
+      <div class="urg-hero__badge">🚨 Urgence Plomberie — {page.city}</div>
+      <h1 class="urg-hero__title">{page.h1}</h1>
+      <p class="urg-hero__text">{page.heroText}</p>
+      <div class="urg-hero__actions">
+        <a href="tel:0470123456" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          Appeler le 0470 12 34 56
+        </a>
+        <a href="/contact" class="btn btn-outline btn-lg">Devis Gratuit</a>
+      </div>
+      <div class="urg-hero__stats">
+        <div class="urg-stat"><span class="urg-stat__num">30 min</span><span class="urg-stat__lbl">Intervention</span></div>
+        <div class="urg-stat__div"></div>
+        <div class="urg-stat"><span class="urg-stat__num">24/7</span><span class="urg-stat__lbl">Disponibilité</span></div>
+        <div class="urg-stat__div"></div>
+        <div class="urg-stat"><span class="urg-stat__num">0€</span><span class="urg-stat__lbl">Devis</span></div>
+        <div class="urg-stat__div"></div>
+        <div class="urg-stat"><span class="urg-stat__num">2 ans</span><span class="urg-stat__lbl">Garantie</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services urgentes -->
+  <section class="section">
+    <div class="container">
+      <p class="label">Nos Interventions d'Urgence</p>
+      <h2 class="section-title">Services d'Urgence à {page.city}</h2>
+      <div class="grid grid-3">
+        <div class="svc-card card">
+          <div class="svc-icon">🚿</div>
+          <h3>Débouchage Urgent</h3>
+          <p>Canalisation bouchée, WC bouché, évier — débouchage haute pression en urgence à {page.city}.</p>
+        </div>
+        <div class="svc-card card">
+          <div class="svc-icon">🔍</div>
+          <h3>Fuite d'Eau</h3>
+          <p>Détection et réparation de fuite d'eau en urgence à {page.city}. Technologies non-destructives.</p>
+        </div>
+        <div class="svc-card card">
+          <div class="svc-icon">🔥</div>
+          <h3>Panne Chaudière</h3>
+          <p>Dépannage chaudière en urgence à {page.city}. Plus d'eau chaude, plus de chauffage — on intervient.</p>
+        </div>
+        <div class="svc-card card">
+          <div class="svc-icon">🌊</div>
+          <h3>Inondation</h3>
+          <p>Pompage d'urgence, mise en sécurité et réparation après inondation à {page.city}.</p>
+        </div>
+        <div class="svc-card card">
+          <div class="svc-icon">🔧</div>
+          <h3>Tuyau Percé</h3>
+          <p>Réparation ou remplacement de tuyau percé en urgence. Intervention rapide à {page.city}.</p>
+        </div>
+        <div class="svc-card card">
+          <div class="svc-icon">🚰</div>
+          <h3>Robinetterie</h3>
+          <p>Fuite de robinet, chasse d'eau cassée — réparation immédiate à {page.city}.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi nous -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div>
+          <p class="label">Pourquoi Nous Choisir</p>
+          <h2 class="section-title">Plombier d'Urgence de Confiance à {page.city}</h2>
+          <div class="why-list">
+            <div class="why-item"><span class="why-check">✓</span><div><h3>Rapidité Garantie</h3><p>Intervention en 30 minutes maximum dans tout {page.city} et ses environs. Nos équipes sont stratégiquement positionnées.</p></div></div>
+            <div class="why-item"><span class="why-check">✓</span><div><h3>Disponible Nuit, Week-end et Jours Fériés</h3><p>Service continu 24h/24, 7j/7. Que ce soit à 3h du matin ou un dimanche, nous sommes là.</p></div></div>
+            <div class="why-item"><span class="why-check">✓</span><div><h3>Tarifs Transparents</h3><p>Prix communiqué avant intervention. Pas de frais cachés, pas de supplément abusif pour les urgences nocturnes.</p></div></div>
+            <div class="why-item"><span class="why-check">✓</span><div><h3>Plombiers Qualifiés</h3><p>Techniciens certifiés et expérimentés. Nous connaissons {page.city} et ses spécificités de plomberie.</p></div></div>
+          </div>
+        </div>
+        <div class="emergency-card card">
+          <h3>🚨 Urgence à {page.city} ?</h3>
+          <p>Ne perdez pas de temps. Appelez immédiatement, un plombier est en route en 30 minutes.</p>
+          <a href="tel:0470123456" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-md);">Appeler maintenant</a>
+          <div class="ec-line"><span>⚡</span> 30 min d'intervention</div>
+          <div class="ec-line"><span>💰</span> Devis gratuit</div>
+          <div class="ec-line"><span>🌙</span> Service nuit & week-end</div>
+          <div class="ec-line"><span>✅</span> Garantie 2 ans</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container faq-container">
+      <p class="label">Questions Fréquentes</p>
+      <h2 class="section-title">FAQ — Plombier Urgence {page.city}</h2>
+      <div class="faq-list">
+        {page.faqs.map(faq => (
+          <details class="faq-item card">
+            <summary class="faq-q">{faq.q}</summary>
+            <p class="faq-a">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby -->
+  {page.nearbyLinks.length > 0 && (
+    <section class="section nearby">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;">Plombier d'Urgence dans d'Autres Villes</h2>
+        <div class="nearby-links">
+          {page.nearbyLinks.map(l => (
+            <a href={l.href} class="nearby-link card">{l.label} →</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTABanner
+    title={`Urgence plomberie à ${page.city} ?`}
+    subtitle={`Intervention en 30 min, 24h/24, 7j/7. Appelez le 0470 12 34 56 maintenant.`}
+  />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}
+  .bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}
+  .bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}
+  .bc a:hover{color:var(--color-accent)}
+  .bc--current{color:var(--color-text);font-weight:600}
+
+  .urg-hero{position:relative;padding:var(--space-3xl) 0 var(--space-2xl);overflow:hidden}
+  .urg-hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(80,160,226,.1) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(239,68,68,.05) 0%,transparent 50%);pointer-events:none}
+  .urg-hero__inner{position:relative}
+  .urg-hero__badge{display:inline-flex;align-items:center;gap:var(--space-sm);background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);color:#ef4444;padding:.4rem 1rem;border-radius:999px;font-size:var(--font-size-sm);font-weight:600;margin-bottom:var(--space-lg)}
+  .urg-hero__title{font-size:var(--font-size-5xl);font-weight:900;line-height:1.1;max-width:750px;margin-bottom:var(--space-lg)}
+  .urg-hero__text{font-size:var(--font-size-lg);color:var(--color-text-muted);max-width:650px;line-height:1.7;margin-bottom:var(--space-xl)}
+  .urg-hero__actions{display:flex;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-2xl)}
+  .urg-hero__stats{display:flex;align-items:center;gap:var(--space-xl);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-lg) var(--space-xl);max-width:fit-content}
+  .urg-stat{display:flex;flex-direction:column;gap:2px}
+  .urg-stat__num{font-size:var(--font-size-2xl);font-weight:800;color:var(--color-accent)}
+  .urg-stat__lbl{font-size:var(--font-size-xs);color:var(--color-text-muted)}
+  .urg-stat__div{width:1px;height:40px;background:var(--color-border)}
+
+  .label{font-size:var(--font-size-sm);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);margin-bottom:var(--space-sm)}
+  .svc-card{padding:var(--space-xl);display:flex;flex-direction:column;gap:var(--space-sm)}
+  .svc-icon{font-size:1.8rem}
+  .svc-card h3{font-size:var(--font-size-base);font-weight:700}
+  .svc-card p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  .why-section{background:var(--color-bg-alt)}
+  .why-list{display:flex;flex-direction:column;gap:var(--space-xl)}
+  .why-item{display:flex;gap:var(--space-md)}
+  .why-check{color:var(--color-accent);font-size:1.2rem;margin-top:2px}
+  .why-item h3{font-size:var(--font-size-base);font-weight:700;margin-bottom:4px}
+  .why-item p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  .emergency-card{padding:var(--space-xl)}
+  .emergency-card h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-md)}
+  .emergency-card>p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+  .ec-line{display:flex;align-items:center;gap:var(--space-sm);color:var(--color-text-muted);font-size:var(--font-size-sm);margin-top:var(--space-sm)}
+
+  .faq-container{max-width:800px}
+  .faq-list{display:flex;flex-direction:column;gap:var(--space-md)}
+  .faq-item{padding:var(--space-lg) var(--space-xl);cursor:pointer}
+  .faq-q{font-weight:700;font-size:var(--font-size-base);list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .faq-q::after{content:'＋';color:var(--color-accent);font-size:1.2rem;transition:transform .2s}
+  .faq-item[open] .faq-q::after{content:'−'}
+  .faq-a{margin-top:var(--space-md);color:var(--color-text-muted);line-height:1.7;font-size:var(--font-size-sm)}
+
+  .nearby-links{display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap}
+  .nearby-link{padding:var(--space-lg) var(--space-xl);font-weight:600;color:var(--color-accent);text-decoration:none;transition:all var(--transition-fast)}
+  .nearby-link:hover{border-color:var(--color-accent)}
+
+  @media(max-width:768px){
+    .urg-hero__stats{flex-wrap:wrap;gap:var(--space-md)}
+    .urg-stat__div{display:none}
+  }
+</style>

@@ -1,0 +1,813 @@
+{
+  "headers": [
+    "Catégorie",
+    "Mot-clé",
+    "Difficulté",
+    "Valeur commerciale",
+    "Page cible",
+    "Notes"
+  ],
+  "total": 100,
+  "data": [
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier urgence Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Recherche immédiate, forte intention d'achat"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier urgence Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Liège",
+      "Notes": "Volume modéré, faible concurrence locale"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier urgence Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Namur",
+      "Notes": "Marché moins saturé"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier urgence Charleroi",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Charleroi",
+      "Notes": "Forte demande locale"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier urgence Mons",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Mons",
+      "Notes": "Peu de concurrents SEO"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier nuit Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Niche très rentable"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier week-end Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Tarifs majorés = forte valeur"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "dépannage plomberie Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Variante de recherche courante"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "dépannage plomberie Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Liège",
+      "Notes": "Mot-clé alternatif important"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier 24h/24 Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Signale besoin immédiat"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "fuite d'eau urgence Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Problème + urgence = conversion max"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier dimanche Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Liège",
+      "Notes": "Recherche hors horaires"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier jour férié Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Namur",
+      "Notes": "Niche temporelle rentable"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "SOS plombier Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Expression populaire d'urgence"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "SOS plombier Charleroi",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Urgence Charleroi",
+      "Notes": "Variante SOS locale"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "dépannage plombier rapide Mons",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Mons",
+      "Notes": "Long tail facile à ranker"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier intervention rapide Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Intention forte"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "urgence canalisation bouchée Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Problème spécifique urgent"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier urgence pas cher Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Sensible au prix mais urgent"
+    },
+    {
+      "Catégorie": "Urgence",
+      "Mot-clé": "plombier disponible maintenant Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Liège",
+      "Notes": "Recherche conversationnelle"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "fuite d'eau Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Fuite d'eau",
+      "Notes": "Problème fréquent, bon volume"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "fuite d'eau Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Fuite d'eau Liège",
+      "Notes": "Moins concurrentiel"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "canalisation bouchée Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage",
+      "Notes": "Problème courant à forte valeur"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "canalisation bouchée Charleroi",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage Charleroi",
+      "Notes": "Marché local accessible"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "WC bouché Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage",
+      "Notes": "Très recherché, urgent"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "WC bouché Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage Liège",
+      "Notes": "Volume décent"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "chauffe-eau en panne Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffe-eau",
+      "Notes": "Réparation coûteuse = forte valeur"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "chauffe-eau en panne Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffe-eau Namur",
+      "Notes": "Long tail rentable"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "radiateur qui fuit Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Chauffage",
+      "Notes": "Saisonnier (hiver)"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "problème chasse d'eau Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Sanitaires",
+      "Notes": "Volume modéré"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "tuyau percé Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Fuite d'eau",
+      "Notes": "Urgence implicite"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "évier bouché Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Débouchage",
+      "Notes": "Recherche fréquente"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "dégât des eaux Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Fuite d'eau",
+      "Notes": "Volume élevé, forte concurrence"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "odeur canalisation Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Blog / Page Débouchage",
+      "Notes": "Long tail informationnel"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "fuite robinet Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Robinetterie",
+      "Notes": "Problème simple mais fréquent"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "pression eau faible Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Blog / FAQ",
+      "Notes": "Peut être informationnel"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "ballon eau chaude en panne Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffe-eau Liège",
+      "Notes": "Synonyme chauffe-eau"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "fuite toit terrasse Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Fuite d'eau",
+      "Notes": "Travaux importants"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "remontée d'eau Charleroi",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage Charleroi",
+      "Notes": "Problème grave"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "siphon bouché Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Faible",
+      "Page cible": "Blog / FAQ",
+      "Notes": "Souvent DIY, faible valeur"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "fuite chauffe-eau Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffe-eau",
+      "Notes": "Croisement problème + service"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "problème évacuation eau Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage",
+      "Notes": "Variante sémantique"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "toilette qui coule Mons",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Sanitaires Mons",
+      "Notes": "Expression familière"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "tuyauterie gelée Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Blog / Page Urgence Namur",
+      "Notes": "Saisonnier hiver"
+    },
+    {
+      "Catégorie": "Problème",
+      "Mot-clé": "inondation cave Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Urgence Bruxelles",
+      "Notes": "Catastrophe = urgence max"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "débouchage canalisation Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage",
+      "Notes": "Service à forte demande"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "débouchage canalisation Liège",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage Liège",
+      "Notes": "Moins compétitif"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation chauffe-eau Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Chauffe-eau",
+      "Notes": "Devis élevé = forte valeur"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "remplacement chauffe-eau Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Chauffe-eau Namur",
+      "Notes": "Intention d'achat claire"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "détection fuite Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Détection fuite",
+      "Notes": "Service spécialisé premium"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation sanitaire Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Sanitaires",
+      "Notes": "Gros travaux, forte valeur"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "rénovation salle de bain Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Rénovation SDB",
+      "Notes": "Panier moyen très élevé"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "rénovation salle de bain Liège",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Rénovation SDB Liège",
+      "Notes": "Marché en croissance"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation douche Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Rénovation SDB",
+      "Notes": "Service spécifique"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "remplacement baignoire Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Rénovation SDB",
+      "Notes": "Conversion douche/baignoire tendance"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "entretien chaudière Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffage",
+      "Notes": "Obligatoire = demande récurrente"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "entretien chaudière Charleroi",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffage Charleroi",
+      "Notes": "Saisonnier récurrent"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "raccordement eau Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Services Plomberie",
+      "Notes": "Construction/rénovation"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation WC Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Sanitaires",
+      "Notes": "Service ponctuel"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "pose robinetterie Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Robinetterie",
+      "Notes": "Service courant"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "curage canalisation Liège",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage Liège",
+      "Notes": "Service préventif"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "inspection caméra canalisation Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Détection fuite",
+      "Notes": "Service technique niche"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation compteur eau Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Services Plomberie Namur",
+      "Notes": "Long tail spécialisé"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "détartrage canalisation Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Moyenne",
+      "Page cible": "Page Débouchage",
+      "Notes": "Service d'entretien"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "réparation fuite Charleroi",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Fuite d'eau Charleroi",
+      "Notes": "Intention transactionnelle"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation chauffage central Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Chauffage",
+      "Notes": "Gros chantier = très forte valeur"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "pose radiateur Mons",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Chauffage Mons",
+      "Notes": "Service d'installation"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "remplacement tuyauterie Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Services Plomberie",
+      "Notes": "Travaux importants"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "installation adoucisseur eau Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Services Plomberie",
+      "Notes": "Niche en croissance en Belgique"
+    },
+    {
+      "Catégorie": "Service",
+      "Mot-clé": "vidange fosse septique Namur",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Services Plomberie Namur",
+      "Notes": "Spécifique zones rurales"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Bruxelles",
+      "Notes": "Mot-clé principal, très concurrentiel"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Liège",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Liège",
+      "Notes": "2e ville, forte concurrence"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Namur",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Namur",
+      "Notes": "Capitale wallonne"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Charleroi",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Charleroi",
+      "Notes": "Bassin de population important"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Mons",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Mons",
+      "Notes": "Ville universitaire"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Ixelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Commune à fort pouvoir d'achat"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Uccle",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Quartier résidentiel aisé"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Saint-Gilles Bruxelles",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Commune densément peuplée"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Schaerbeek",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Grande commune bruxelloise"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Anderlecht",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Forte population"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Etterbeek",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Quartier européen"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Woluwe-Saint-Lambert",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Bruxelles Communes",
+      "Notes": "Long tail géographique"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier près de chez moi Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Bruxelles",
+      "Notes": "Recherche mobile locale"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Seraing",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Liège Zone",
+      "Notes": "Banlieue Liège"
+    },
+    {
+      "Catégorie": "Localisation",
+      "Mot-clé": "plombier Waterloo",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Brabant Wallon",
+      "Notes": "Zone résidentielle aisée"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "devis plombier Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Devis / Contact",
+      "Notes": "Intention de conversion maximale"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "devis plombier Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Devis / Contact Liège",
+      "Notes": "Prêt à engager"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "devis plombier Namur",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Devis / Contact Namur",
+      "Notes": "Forte intention commerciale"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "prix plombier Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Tarifs",
+      "Notes": "Comparaison prix"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "tarif plombier Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Tarifs",
+      "Notes": "Recherche tarifaire"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "plombier pas cher Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Tarifs",
+      "Notes": "Sensible au prix"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "plombier pas cher Charleroi",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Tarifs Charleroi",
+      "Notes": "Budget limité"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "meilleur plombier Bruxelles",
+      "Difficulté": "Difficile",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil / Avis",
+      "Notes": "Recherche qualité"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "plombier fiable Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Avis / Témoignages",
+      "Notes": "Recherche de confiance"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "plombier agréé Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Accueil",
+      "Notes": "Recherche certification"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "avis plombier Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Avis / GMB",
+      "Notes": "Phase de comparaison"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "plombier recommandé Liège",
+      "Difficulté": "Facile",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Avis Liège",
+      "Notes": "Bouche-à-oreille digital"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "devis rénovation salle de bain Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Rénovation SDB",
+      "Notes": "Gros projet = panier élevé"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "prix installation chauffe-eau Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Très élevée",
+      "Page cible": "Page Chauffe-eau",
+      "Notes": "Comparaison devis"
+    },
+    {
+      "Catégorie": "Commercial",
+      "Mot-clé": "prix débouchage canalisation Bruxelles",
+      "Difficulté": "Moyen",
+      "Valeur commerciale": "Élevée",
+      "Page cible": "Page Débouchage / Tarifs",
+      "Notes": "Recherche tarifaire service"
+    }
+  ]
+}
