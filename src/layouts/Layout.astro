@@ -11,7 +11,7 @@ interface Props {
   faqs?: { q: string; a: string }[];
 }
 
-const { title, description = "Plombier d'urgence Bruxelles & Belgique — Intervention rapide 24h/24, 7j/7. Tarifs clairs 2025. Prix affichés avant intervention. Débouchage, fuites, chaudières. ☎ 0470 12 34 56", faqs = [] } = Astro.props;
+const { title, description = "Plombier d'urgence Bruxelles & Belgique — Intervention rapide 24h/24, 7j/7. Tarifs clairs 2025. Prix affichés avant intervention. Débouchage, fuites, chaudières. ☎ 0465 68 51 58", faqs = [] } = Astro.props;
 
 // LocalBusiness schema
 const localBusinessSchema = {
@@ -20,8 +20,8 @@ const localBusinessSchema = {
   "name": "Plombier Urgence",
   "description": "Plombier d'urgence en Belgique — Intervention rapide 24h/24 et 7j/7. Tarifs clairs 2025, prix affichés. Bruxelles, Liège, Namur, Charleroi, Mons.",
   "url": "https://plombierurgence.be",
-  "telephone": "+32470123456",
-  "email": "midebzn@gmail.com",
+  "telephone": "+32465685158",
+  "email": "contact@plombierurgence.be",
   "priceRange": "€€",
   "image": "https://plombierurgence.be/og-image.jpg",
   "address": {
@@ -113,7 +113,7 @@ const isThankYou = Astro.url.pathname.includes('thank-you');
     <div class="emergency-banner" id="emergency-banner">
       <div class="container emergency-banner__inner">
         <span class="emergency-banner__text">🚨 <strong>Urgence Plomberie ?</strong> Intervention en 30 min — 24h/24</span>
-        <a href="tel:0470123456" class="emergency-banner__cta">📞 0470 12 34 56</a>
+        <a href="tel:0465685158" class="emergency-banner__cta">📞 0465 68 51 58</a>
         <button class="emergency-banner__close" id="close-banner" aria-label="Fermer">✕</button>
       </div>
     </div>
@@ -144,7 +144,7 @@ const isThankYou = Astro.url.pathname.includes('thank-you');
     </a>
 
     <!-- Floating Appeler Button -->
-    <a href="tel:0470123456" class="float-call" aria-label="Appeler">
+    <a href="tel:0465685158" class="float-call" aria-label="Appeler">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
       <span class="float-call__label">Appeler</span>
     </a>

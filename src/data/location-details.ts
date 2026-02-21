@@ -33,7 +33,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '1000 à 1210',
         responseTime: '20 min',
         metaTitle: 'Plombier Bruxelles — Urgence 24/7 | Tarif 2025 dès 80€ | 30 min',
-        metaDescription: 'Plombier à Bruxelles : intervention en 20 min dans les 19 communes. Urgence 24/7, tarifs clairs 2025 dès 80€. Débouchage, fuite, chaudière. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Bruxelles : intervention en 20 min dans les 19 communes. Urgence 24/7, tarifs clairs 2025 dès 80€. Débouchage, fuite, chaudière. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Bruxelles-Ville (Centre)', responseTime: '15 min', highlight: 'Immeubles anciens : tuyauterie en plomb, canalisations étroites nécessitant un savoir-faire spécifique' },
             { name: 'Ixelles & Saint-Gilles', responseTime: '18 min', highlight: 'Maisons de maître avec plomberie centenaire. Problèmes fréquents de pression d\'eau et fuites dans les murs' },
@@ -96,7 +96,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '4000 à 4032',
         responseTime: '25 min',
         metaTitle: 'Plombier Liège — Urgence 24/7 | Tarif 2025 dès 80€ | Intervention 25 min',
-        metaDescription: 'Plombier à Liège : intervention en 25 min. Urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Seraing, Herstal, Verviers aussi couverts. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Liège : intervention en 25 min. Urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Seraing, Herstal, Verviers aussi couverts. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Outremeuse', responseTime: '20 min', highlight: 'Quartier historique avec immeubles anciens en bord de Meuse. Problèmes fréquents d\'humidité et de canalisations vétustes' },
             { name: 'Guillemins & Laveu', responseTime: '22 min', highlight: 'Quartier rénové autour de la gare Calatrava. Mix d\'ancien et de neuf, fuites dans les rénovations récentes' },
@@ -153,7 +153,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '5000 à 5100',
         responseTime: '25 min',
         metaTitle: 'Plombier Namur — Urgence 24/7 | Tarif 2025 dès 80€ | 25 min',
-        metaDescription: 'Plombier à Namur : intervention en 25 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Capitale wallonne et province. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Namur : intervention en 25 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Capitale wallonne et province. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Corbeille', responseTime: '20 min', highlight: 'Cœur historique au confluent Sambre-Meuse. Immeubles anciens avec plomberie du XIXe siècle' },
             { name: 'Jambes & Erpent', responseTime: '22 min', highlight: 'Rive droite de la Meuse. Quartiers résidentiels avec maisons des années 50-70' },
@@ -205,7 +205,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '6000 à 6200',
         responseTime: '25 min',
         metaTitle: 'Plombier Charleroi — Urgence 24/7 | Tarif 2025 dès 80€ | 25 min',
-        metaDescription: 'Plombier à Charleroi : intervention en 25 min. Urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Toute la région couverte. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Charleroi : intervention en 25 min. Urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Toute la région couverte. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Ville Basse', responseTime: '20 min', highlight: 'Zone urbanisée dense en pleine rénovation. Immeubles des années 50-70 avec plomberie à moderniser' },
             { name: 'Marcinelle & Mont-sur-Marchienne', responseTime: '22 min', highlight: 'Quartiers résidentiels au sud. Maisons individuelles avec chaudières mazout' },
@@ -257,7 +257,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '7000 à 7034',
         responseTime: '30 min',
         metaTitle: 'Plombier Mons — Urgence 24/7 | Tarif 2025 dès 80€ | 30 min',
-        metaDescription: 'Plombier à Mons : intervention en 30 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Mons et arrondissement. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Mons : intervention en 30 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Mons et arrondissement. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Grand-Place', responseTime: '25 min', highlight: 'Centre historique avec le Beffroi UNESCO. Immeubles anciens, plomberie à rénover' },
             { name: 'Jemappes & Flénu', responseTime: '28 min', highlight: 'Quartiers ouest. Anciennes maisons ouvrières avec canalisations en fonte' },
@@ -307,7 +307,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '1410',
         responseTime: '25 min',
         metaTitle: 'Plombier Waterloo — Urgence 24/7 | Tarif 2025 | Intervention 25 min',
-        metaDescription: 'Plombier à Waterloo et Brabant Wallon : intervention en 25 min. Tarif 2025. Débouchage, fuite, chaudière, rénovation SDB. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Waterloo et Brabant Wallon : intervention en 25 min. Tarif 2025. Débouchage, fuite, chaudière, rénovation SDB. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre de Waterloo', responseTime: '22 min', highlight: 'Quartier aisé avec grandes villas. Rénovations haut de gamme et entretien préventif' },
             { name: 'Chenois', responseTime: '25 min', highlight: 'Zone résidentielle calme. Maisons individuelles avec jardins, fosses septiques' },
@@ -357,7 +357,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '1300 à 1301',
         responseTime: '28 min',
         metaTitle: 'Plombier Wavre — Urgence 24/7 | Tarif 2025 | Intervention Rapide',
-        metaDescription: 'Plombier à Wavre et Brabant Wallon est : intervention rapide. Tarifs 2025. Débouchage, fuite, chaudière. Ottignies-LLN, Rixensart couverts. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Wavre et Brabant Wallon est : intervention rapide. Tarifs 2025. Débouchage, fuite, chaudière. Ottignies-LLN, Rixensart couverts. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre de Wavre', responseTime: '25 min', highlight: 'Chef-lieu du Brabant Wallon. Mix de commerces et résidences avec plomberie diverse' },
             { name: 'Limal & Bierges', responseTime: '28 min', highlight: 'Quartiers résidentiels le long de la Dyle. Risques d\'humidité en bord de rivière' },
@@ -401,7 +401,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '1400',
         responseTime: '30 min',
         metaTitle: 'Plombier Nivelles — Urgence 24/7 | Tarif 2025 | Intervention 30 min',
-        metaDescription: 'Plombier à Nivelles : intervention en 30 min. Tarifs clairs 2025. Brabant Wallon sud, Genappe, Tubize couverts. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Nivelles : intervention en 30 min. Tarifs clairs 2025. Brabant Wallon sud, Genappe, Tubize couverts. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre de Nivelles', responseTime: '28 min', highlight: 'Centre historique autour de la Collégiale. Immeubles anciens avec plomberie à moderniser' },
             { name: 'Baulers & Thines', responseTime: '30 min', highlight: 'Quartiers résidentiels périphériques avec maisons individuelles' },
@@ -443,7 +443,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '7100 à 7110',
         responseTime: '30 min',
         metaTitle: 'Plombier La Louvière — Urgence 24/7 | Tarif 2025 | 30 min',
-        metaDescription: 'Plombier à La Louvière : urgence 24/7, intervention 30 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Centre et Le Roeulx. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à La Louvière : urgence 24/7, intervention 30 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Centre et Le Roeulx. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville', responseTime: '28 min', highlight: 'Zone commerciale et résidentielle. Immeubles des années 50-80 avec plomberie vieillissante' },
             { name: 'Haine-Saint-Paul & Haine-Saint-Pierre', responseTime: '30 min', highlight: 'Quartiers résidentiels historiques le long de la Haine' },
@@ -486,7 +486,7 @@ export const locationPages: LocationPage[] = [
         postalCodes: '7500 à 7548',
         responseTime: '35 min',
         metaTitle: 'Plombier Tournai — Urgence 24/7 | Tarif 2025 | Intervention Rapide',
-        metaDescription: 'Plombier à Tournai : urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Tournai et Hainaut occidental. ☎ 0470 12 34 56',
+        metaDescription: 'Plombier à Tournai : urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Tournai et Hainaut occidental. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre historique', responseTime: '32 min', highlight: 'Patrimoine UNESCO (Beffroi, Cathédrale). Plomberie très ancienne dans les immeubles du centre' },
             { name: 'Marquain & Templeuve', responseTime: '35 min', highlight: 'Quartiers sud proches de la frontière française' },
