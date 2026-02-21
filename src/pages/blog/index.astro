@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const articles = [
+  {
+    title: 'Combien Coûte un Plombier à Bruxelles en 2025 ?',
+    slug: '/blog/combien-coute-plombier-bruxelles-2025',
+    tag: '💰 Guide Tarifs',
+    excerpt: 'Tarifs réels 2025 pour débouchage, fuite, chauffe-eau, rénovation. Prix départ, prix horaire, TVA incluse. Le guide le plus complet.',
+    date: 'Mars 2025',
+    read: '6 min',
+  },
+  {
+    title: 'Plombier Pas Cher Bruxelles : Comment Ne Pas Se Faire Arnaquer',
+    slug: '/blog/plombier-pas-cher-bruxelles',
+    tag: '🛡️ Anti-Arnaque',
+    excerpt: '7 signaux d\'alarme d\'un plombier malhonnête. Comment vérifier qu\'un plombier est fiable. Prix réels vs arnaques.',
+    date: 'Mars 2025',
+    read: '5 min',
+  },
+  {
+    title: 'Les 7 Signes que Votre Chauffe-Eau va Lâcher',
+    slug: '/blog/signes-chauffe-eau-panne',
+    tag: '🔥 Guide Pratique',
+    excerpt: 'Reconnaître les signaux d\'alarme avant la panne totale. Réparation vs remplacement : comparatif prix 2025.',
+    date: 'Mars 2025',
+    read: '5 min',
+  },
+  {
+    title: 'Prix Débouchage Canalisation Bruxelles 2025',
+    slug: '/blog/prix-debouchage-canalisation-bruxelles',
+    tag: '💰 Guide Prix',
+    excerpt: 'Combien coûte un débouchage à Bruxelles ? Prix au mètre, tarif WC bouché, curage haute pression. Tableau complet.',
+    date: 'Mars 2025',
+    read: '4 min',
+  },
+  {
+    title: 'Plombier Dimanche & Nuit Bruxelles : Tarifs et Disponibilité',
+    slug: '/blog/plombier-dimanche-nuit-bruxelles',
+    tag: '🌙 Guide Urgences',
+    excerpt: 'Qui appeler la nuit ou le dimanche à Bruxelles ? Tarifs suppléments réels 2025. Communes desservies 24h/24.',
+    date: 'Mars 2025',
+    read: '4 min',
+  },
+];
+---
+
+<Layout title="Blog Plomberie Bruxelles | Guides Prix 2025 & Conseils | Plombier Urgence" description="Blog plomberie Bruxelles : guides tarifs 2025, conseils anti-arnaque, urgences nuit et dimanche. Tout savoir avant d'appeler un plombier.">
+
+  <section class="blog-hero">
+    <div class="blog-hero__bg"></div>
+    <div class="container blog-hero__inner">
+      <p class="label">Blog & Guides</p>
+      <h1 class="blog-hero__title">Guides Plomberie <span class="text-accent">Bruxelles 2025</span></h1>
+      <p class="blog-hero__text">Tarifs réels, conseils anti-arnaque, guides pratiques. Tout ce que les autres plombiers ne vous disent pas.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {articles.map(article => (
+          <a href={article.slug} class="blog-card card">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">{article.tag}</span>
+              <span class="blog-card__date">{article.date} · {article.read}</span>
+            </div>
+            <h2 class="blog-card__title">{article.title}</h2>
+            <p class="blog-card__excerpt">{article.excerpt}</p>
+            <span class="blog-card__link">Lire l'article →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner title="Le seul plombier qui affiche ses prix" subtitle="Tarifs clairs 2025 — Bruxelles et toute la Belgique. ☎ 0470 12 34 56" />
+</Layout>
+
+<style>
+  .label{font-size:var(--font-size-sm);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);margin-bottom:var(--space-sm)}
+  .blog-hero{position:relative;padding:var(--space-3xl) 0 var(--space-2xl);overflow:hidden}
+  .blog-hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(80,160,226,.06) 0%,transparent 50%);pointer-events:none}
+  .blog-hero__inner{position:relative;max-width:600px}
+  .blog-hero__title{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-lg)}
+  .blog-hero__text{font-size:var(--font-size-lg);color:var(--color-text-muted);line-height:1.7}
+
+  .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-xl)}
+  .blog-card{padding:var(--space-xl);display:flex;flex-direction:column;gap:var(--space-md);text-decoration:none;transition:all var(--transition-fast)}
+  .blog-card:hover{border-color:var(--color-accent);transform:translateY(-2px)}
+  .blog-card__meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap}
+  .blog-card__tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.25rem .7rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}
+  .blog-card__date{font-size:var(--font-size-xs);color:var(--color-text-dim)}
+  .blog-card__title{font-size:var(--font-size-lg);font-weight:700;color:var(--color-text);line-height:1.3}
+  .blog-card__excerpt{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7;flex:1}
+  .blog-card__link{color:var(--color-accent);font-weight:700;font-size:var(--font-size-sm)}
+
+  @media(max-width:768px){.blog-grid{grid-template-columns:1fr}}
+</style>
