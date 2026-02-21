@@ -1,0 +1,335 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import { servicePages } from '../../data/service-details';
+
+export function getStaticPaths() {
+  return servicePages.map(service => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+
+// Find related services
+const related = servicePages.filter(s => service.relatedServices.includes(s.slug));
+---
+
+<Layout title={service.metaTitle} description={service.metaDescription} faqs={service.faqs}>
+
+  <!-- Breadcrumb -->
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/services">Services</a><span>›</span>
+        <span class="bc--current">{service.title}</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="svc-hero">
+    <div class="svc-hero__bg"></div>
+    <div class="container svc-hero__inner">
+      <div class="svc-hero__icon">{service.icon}</div>
+      <h1 class="svc-hero__title">{service.title} <span class="text-accent">en Belgique</span></h1>
+      <p class="svc-hero__sub">{service.heroSubtitle}</p>
+      <div class="svc-hero__meta">
+        <div class="svc-hero__chip">💰 À partir de {service.priceFrom}</div>
+        {service.emergency.available && <div class="svc-hero__chip svc-hero__chip--urgent">⚡ Urgence 24/7</div>}
+        <div class="svc-hero__chip">⭐ 4.9/5 — 500+ avis</div>
+      </div>
+      <div class="svc-hero__actions">
+        <a href="tel:0470123456" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          0470 12 34 56
+        </a>
+        <a href="https://wa.me/32470123456" class="btn btn-outline btn-lg" target="_blank">WhatsApp — Envoyez une photo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section" id="inclus">
+    <div class="container">
+      <p class="label">Ce qui est inclus</p>
+      <h2 class="section-title">Tout est Compris dans le Prix</h2>
+      <p class="section-subtitle">Pas de surprise, pas de supplément caché. Voici exactement ce que vous obtenez.</p>
+      <div class="included-grid">
+        {service.included.map((item: {item: string; detail: string}, i: number) => (
+          <div class="included-card card">
+            <div class="included-card__num">{String(i + 1).padStart(2, '0')}</div>
+            <h3 class="included-card__title">{item.item}</h3>
+            <p class="included-card__text">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Problems -->
+  <section class="section section--alt" id="problemes">
+    <div class="container">
+      <p class="label">Problèmes courants</p>
+      <h2 class="section-title">Problèmes que Nous Résolvons</h2>
+      <div class="problems-grid">
+        {service.problems.map((problem: {title: string; description: string}) => (
+          <div class="problem-card">
+            <h3 class="problem-card__title">⚠️ {problem.title}</h3>
+            <p class="problem-card__text">{problem.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process -->
+  <section class="section" id="processus">
+    <div class="container">
+      <p class="label">Notre processus</p>
+      <h2 class="section-title">Comment Ça Se Passe</h2>
+      <p class="section-subtitle">De votre appel à la résolution complète — voici les 6 étapes de notre intervention.</p>
+      <div class="process-timeline">
+        {service.process.map((step: {step: number; title: string; description: string}) => (
+          <div class="process-step">
+            <div class="process-step__num">{step.step}</div>
+            <div class="process-step__content">
+              <h3 class="process-step__title">{step.title}</h3>
+              <p class="process-step__text">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section--alt" id="pourquoi">
+    <div class="container">
+      <p class="label">Pourquoi nous choisir</p>
+      <h2 class="section-title">Le Choix N°1 pour {service.title.split(' ')[0]} en Belgique</h2>
+      <div class="why-grid">
+        {service.whyUs.map((item: {icon: string; title: string; text: string}) => (
+          <div class="why-card card">
+            <div class="why-card__icon">{item.icon}</div>
+            <h3 class="why-card__title">{item.title}</h3>
+            <p class="why-card__text">{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="tarifs">
+    <div class="container">
+      <div class="pricing-banner card">
+        <div class="pricing-banner__left">
+          <p class="label">Tarifs 2025</p>
+          <h2 class="pricing-banner__title">{service.title}</h2>
+          <p class="pricing-banner__range">À partir de <strong>{service.priceFrom}</strong></p>
+          <p class="pricing-banner__text">Fourchette de prix : {service.priceRange} (TVA incluse). Le prix exact est toujours communiqué AVANT l'intervention.</p>
+        </div>
+        <div class="pricing-banner__right">
+          <a href="/tarifs" class="btn btn-primary">Voir tous les tarifs 2025 →</a>
+          <a href="/devis" class="btn btn-outline">Devis gratuit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <p class="label">Questions Fréquentes</p>
+      <h2 class="section-title">FAQ — {service.title}</h2>
+      <div class="faq-list">
+        {service.faqs.map((faq: {q: string; a: string}) => (
+          <details class="faq-item">
+            <summary class="faq-item__q">{faq.q}</summary>
+            <div class="faq-item__a">{faq.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency -->
+  <section class="section" id="urgence">
+    <div class="container">
+      <div class={`emergency-box card ${service.emergency.available ? 'emergency-box--yes' : 'emergency-box--no'}`}>
+        <div class="emergency-box__header">
+          <h2 class="emergency-box__title">
+            {service.emergency.available ? '🚨 Service d\'Urgence Disponible' : '📅 Service sur Rendez-vous'}
+          </h2>
+        </div>
+        <p class="emergency-box__desc">{service.emergency.description}</p>
+        <div class="emergency-box__stats">
+          <div class="emergency-box__stat">
+            <span class="emergency-box__stat-label">Temps de réponse</span>
+            <span class="emergency-box__stat-value">{service.emergency.responseTime}</span>
+          </div>
+          <div class="emergency-box__stat">
+            <span class="emergency-box__stat-label">Supplément</span>
+            <span class="emergency-box__stat-value">{service.emergency.extraCost}</span>
+          </div>
+          <div class="emergency-box__stat">
+            <span class="emergency-box__stat-label">Disponibilité</span>
+            <span class="emergency-box__stat-value">{service.emergency.available ? '24h/24 — 7j/7' : 'Lun-Sam 8h-18h'}</span>
+          </div>
+        </div>
+        {service.emergency.available && (
+          <a href="tel:0470123456" class="btn btn-primary btn-lg">Appeler Urgence : 0470 12 34 56</a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="section section--alt" id="zones">
+    <div class="container">
+      <p class="label">Zones d'intervention</p>
+      <h2 class="section-title">{service.title} — Zones Couvertes</h2>
+      <div class="zones-chips">
+        {service.serviceAreas.map((area: string) => (
+          <div class="zone-chip">{area}</div>
+        ))}
+      </div>
+      <div style="text-align:center;margin-top:var(--space-xl);">
+        <a href="/zones" class="btn btn-outline">Voir toutes les communes →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  {related.length > 0 && (
+    <section class="section" id="services-lies">
+      <div class="container">
+        <p class="label">Services liés</p>
+        <h2 class="section-title">Vous Pourriez Aussi Avoir Besoin De</h2>
+        <div class="related-grid">
+          {related.map((r: any) => (
+            <a href={`/service/${r.slug}`} class="related-card card">
+              <div class="related-card__icon">{r.icon}</div>
+              <h3 class="related-card__title">{r.title}</h3>
+              <p class="related-card__price">Dès {r.priceFrom}</p>
+              <span class="related-card__link">En savoir plus →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTABanner title={`Besoin d'un ${service.title.toLowerCase()} ?`} subtitle="Tarifs clairs 2025 — Pas de surprise. Appelez ou envoyez une photo par WhatsApp." />
+
+</Layout>
+
+<style>
+  /* Breadcrumb */
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+
+  /* Labels */
+  .label{font-size:var(--font-size-sm);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent);margin-bottom:var(--space-sm)}
+
+  .section--alt{background:var(--color-bg-alt)}
+
+  /* Hero */
+  .svc-hero{position:relative;padding:var(--space-3xl) 0 var(--space-2xl);overflow:hidden}
+  .svc-hero__bg{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(80,160,226,.08) 0%,transparent 50%);pointer-events:none}
+  .svc-hero__inner{position:relative;max-width:700px}
+  .svc-hero__icon{font-size:3rem;margin-bottom:var(--space-lg)}
+  .svc-hero__title{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-lg)}
+  .svc-hero__sub{font-size:var(--font-size-lg);color:var(--color-text-muted);line-height:1.7;margin-bottom:var(--space-xl)}
+  .svc-hero__meta{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-bottom:var(--space-xl)}
+  .svc-hero__chip{background:var(--color-surface);border:1px solid var(--color-border);padding:.4rem 1rem;border-radius:999px;font-size:var(--font-size-sm);font-weight:600;color:var(--color-text-muted)}
+  .svc-hero__chip--urgent{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.2);color:#ef4444}
+  .svc-hero__actions{display:flex;gap:var(--space-md);flex-wrap:wrap}
+
+  /* Included Grid */
+  .included-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-lg);margin-top:var(--space-xl)}
+  .included-card{padding:var(--space-xl);display:flex;flex-direction:column;gap:var(--space-sm)}
+  .included-card__num{font-size:var(--font-size-2xl);font-weight:900;color:var(--color-accent);opacity:.5}
+  .included-card__title{font-size:var(--font-size-base);font-weight:700}
+  .included-card__text{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  /* Problems */
+  .problems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-lg);margin-top:var(--space-xl)}
+  .problem-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-xl)}
+  .problem-card__title{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-sm)}
+  .problem-card__text{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  /* Process */
+  .process-timeline{display:flex;flex-direction:column;gap:0;margin-top:var(--space-xl);max-width:700px;margin-left:auto;margin-right:auto}
+  .process-step{display:flex;gap:var(--space-xl);padding:var(--space-xl) 0;border-bottom:1px solid var(--color-border)}
+  .process-step:last-child{border-bottom:none}
+  .process-step__num{width:48px;height:48px;min-width:48px;background:var(--color-accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:var(--font-size-lg)}
+  .process-step__title{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs)}
+  .process-step__text{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  /* Why Us */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-lg);margin-top:var(--space-xl)}
+  .why-card{padding:var(--space-xl);text-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--space-sm)}
+  .why-card__icon{font-size:2rem;margin-bottom:var(--space-sm)}
+  .why-card__title{font-size:var(--font-size-base);font-weight:700}
+  .why-card__text{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+
+  /* Pricing banner */
+  .pricing-banner{padding:var(--space-2xl);display:flex;align-items:center;justify-content:space-between;gap:var(--space-2xl);background:linear-gradient(135deg,var(--color-surface) 0%,rgba(80,160,226,.05) 100%)}
+  .pricing-banner__title{font-size:var(--font-size-2xl);font-weight:800;margin-bottom:var(--space-sm)}
+  .pricing-banner__range{font-size:var(--font-size-xl);color:var(--color-accent);font-weight:700;margin-bottom:var(--space-sm)}
+  .pricing-banner__text{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7;max-width:450px}
+  .pricing-banner__right{display:flex;flex-direction:column;gap:var(--space-sm);min-width:200px}
+
+  /* FAQ */
+  .faq-list{display:flex;flex-direction:column;gap:var(--space-sm);max-width:760px;margin:var(--space-xl) auto 0}
+  .faq-item{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color var(--transition-fast)}
+  .faq-item[open]{border-color:var(--color-accent)}
+  .faq-item__q{padding:var(--space-lg) var(--space-xl);font-weight:700;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between}
+  .faq-item__q::after{content:'+';font-size:1.4rem;color:var(--color-accent);font-weight:300;transition:transform var(--transition-fast)}
+  .faq-item[open] .faq-item__q::after{content:'−'}
+  .faq-item__q::-webkit-details-marker{display:none}
+  .faq-item__a{padding:0 var(--space-xl) var(--space-lg);color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.8}
+
+  /* Emergency */
+  .emergency-box{padding:var(--space-2xl);text-align:center}
+  .emergency-box--yes{border-color:rgba(239,68,68,.3);background:linear-gradient(135deg,var(--color-surface) 0%,rgba(239,68,68,.03) 100%)}
+  .emergency-box--no{border-color:var(--color-border)}
+  .emergency-box__title{font-size:var(--font-size-2xl);font-weight:800;margin-bottom:var(--space-md)}
+  .emergency-box__desc{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7;max-width:600px;margin:0 auto var(--space-xl)}
+  .emergency-box__stats{display:flex;justify-content:center;gap:var(--space-2xl);margin-bottom:var(--space-xl)}
+  .emergency-box__stat{display:flex;flex-direction:column;gap:4px}
+  .emergency-box__stat-label{font-size:var(--font-size-xs);color:var(--color-text-dim);text-transform:uppercase;letter-spacing:.05em}
+  .emergency-box__stat-value{font-size:var(--font-size-lg);font-weight:700;color:var(--color-accent)}
+
+  /* Zones */
+  .zones-chips{display:flex;flex-wrap:wrap;gap:var(--space-sm);justify-content:center;margin-top:var(--space-xl)}
+  .zone-chip{background:var(--color-surface);border:1px solid var(--color-border);padding:.5rem 1.25rem;border-radius:999px;font-size:var(--font-size-sm);font-weight:500;color:var(--color-text-muted)}
+
+  /* Related */
+  .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-lg);margin-top:var(--space-xl);max-width:600px;margin-left:auto;margin-right:auto}
+  .related-card{padding:var(--space-xl);text-align:center;text-decoration:none;transition:all var(--transition-fast)}
+  .related-card:hover{border-color:var(--color-accent);transform:translateY(-2px)}
+  .related-card__icon{font-size:2rem;margin-bottom:var(--space-sm)}
+  .related-card__title{font-size:var(--font-size-lg);font-weight:700;color:var(--color-text);margin-bottom:var(--space-xs)}
+  .related-card__price{color:var(--color-accent);font-weight:700;font-size:var(--font-size-sm);margin-bottom:var(--space-sm)}
+  .related-card__link{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600}
+
+  @media(max-width:1024px){
+    .included-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .pricing-banner{flex-direction:column;text-align:center}
+    .pricing-banner__text{max-width:100%}
+    .pricing-banner__right{min-width:auto;flex-direction:row;justify-content:center}
+  }
+  @media(max-width:768px){
+    .included-grid{grid-template-columns:1fr}
+    .problems-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+    .emergency-box__stats{flex-direction:column;gap:var(--space-lg)}
+    .related-grid{grid-template-columns:1fr}
+    .pricing-banner__right{flex-direction:column}
+  }
+</style>
