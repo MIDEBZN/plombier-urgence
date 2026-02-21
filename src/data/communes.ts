@@ -40,7 +40,7 @@ function makeCommune(name: string, province: string, provinceSlug: string, extra
       'Dépannage et entretien chaudière',
       'Réparation robinetterie et sanitaires',
       'Rénovation salle de bain',
-      'Urgence inondation',
+      'Urgence plomberie',
     ],
     landmarks: `${name} et ses environs`,
     ...extras,
