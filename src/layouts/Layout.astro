@@ -58,6 +58,40 @@ const localBusinessSchema = {
     "reviewCount": "523",
     "bestRating": "5"
   },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de plomberie",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Débouchage canalisations, WC, éviers"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Recherche et réparation de fuite d'eau"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dépannage et entretien chaudière & chauffe-eau"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Installation et rénovation plomberie complète"
+        }
+      }
+    ]
+  },
   "foundingDate": "2009",
   "sameAs": [
     "https://maps.app.goo.gl/i7W6nLrabKjKykHE9"
@@ -89,7 +123,7 @@ const isThankYou = Astro.url.pathname.includes('thank-you');
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={`https://plombierurgence.be${Astro.url.pathname}`} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://plombierurgence.be').href} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
