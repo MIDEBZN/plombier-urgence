@@ -1,0 +1,195 @@
+﻿
+> new-plombier@0.0.1 build
+> astro build
+
+[2m03:23:49[22m [34m[content][39m Syncing content
+[2m03:23:49[22m [34m[content][39m Synced content
+[2m03:23:49[22m [34m[types][39m Generated [2m73ms[22m
+[2m03:23:49[22m [34m[build][39m output: [34m"static"[39m
+[2m03:23:49[22m [34m[build][39m mode: [34m"static"[39m
+[2m03:23:49[22m [34m[build][39m directory: [34mC:\Users\MEDLO\Desktop\coding projects\new plombier\dist\[39m
+[2m03:23:49[22m [34m[build][39m Collecting build info...
+[2m03:23:49[22m [34m[build][39m [32mΓ£ô Completed in 109ms.[39m
+[2m03:23:49[22m [34m[build][39m Building static entrypoints...
+[2m03:23:51[22m [34m[vite][39m [32mΓ£ô built in 2.02s[39m
+[2m03:23:51[22m [34m[build][39m [32mΓ£ô Completed in 2.07s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m03:23:51[22m [34m[vite][39m transforming...
+[2m03:23:51[22m [34m[vite][39m [32mΓ£ô[39m 3 modules transformed.
+[2m03:23:51[22m [34m[vite][39m rendering chunks...
+[2m03:23:51[22m [34m[vite][39m [32mΓ£ô built in 33ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m03:23:51[22m [32mΓû╢[39m src/pages/a-propos.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/a-propos/index.html[22m [2m(+13ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/bruit-tuyaux.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/bruit-tuyaux/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/choisir-plombier.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/choisir-plombier/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/combien-coute-plombier-bruxelles-2025.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/combien-coute-plombier-bruxelles-2025/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/couper-eau-urgence.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/couper-eau-urgence/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/cout-plombier-urgence.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/cout-plombier-urgence/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/deboucher-canalisation.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/deboucher-canalisation/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/deboucher-wc.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/deboucher-wc/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/degat-eaux-assurance.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/degat-eaux-assurance/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/fuite-chasse-eau.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/fuite-chasse-eau/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/fuite-eau-que-faire.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/fuite-eau-que-faire/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/odeur-egout.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/odeur-egout/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/panne-chaudiere.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/panne-chaudiere/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/panne-chauffe-eau.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/panne-chauffe-eau/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/plombier-dimanche-nuit-bruxelles.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/plombier-dimanche-nuit-bruxelles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/plombier-pas-cher-bruxelles.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/plombier-pas-cher-bruxelles/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/pression-eau-faible.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/pression-eau-faible/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/prix-debouchage-canalisation-bruxelles.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/prix-debouchage-canalisation-bruxelles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/radiateur-froid.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/radiateur-froid/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/signes-chauffe-eau-panne.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/signes-chauffe-eau-panne/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/tarif-debouchage.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/tarif-debouchage/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/tarif-plombier.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/tarif-plombier/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/blog/index.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/blog/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/contact.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/contact/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/devis.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/devis/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/location/[location].astro
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/bruxelles/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/liege/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/namur/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/charleroi/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/mons/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/waterloo/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/wavre/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/nivelles/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/location/la-louviere/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/location/tournai/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/service/[service].astro
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/service/debouchage-canalisation/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/service/recherche-fuite/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/service/depannage-chaudiere/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/service/reparation-robinetterie/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/service/renovation-salle-de-bain/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/service/urgence-plomberie/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/services/[slug].astro
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/debouchage-bruxelles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/debouchage-liege/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/debouchage-charleroi/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/fuite-eau-bruxelles/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/fuite-eau-liege/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/fuite-eau-charleroi/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/chauffe-eau-bruxelles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/chauffe-eau-namur/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/chauffage-charleroi/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/chauffage-mons/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/services/renovation-sdb-liege/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/services/plomberie-bruxelles/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/services.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/services/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/tarifs.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/tarifs/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/thank-you/index.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/thank-you/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/urgence/[city].astro
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/urgence/bruxelles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/urgence/liege/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/urgence/namur/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/urgence/charleroi/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/urgence/mons/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/zones/[province]/[commune].astro
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/bruxelles/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/ixelles/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/uccle/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/schaerbeek/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/etterbeek/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/woluwe-saint-lambert/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/woluwe-saint-pierre/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/auderghem/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/forest/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/saint-gilles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/anderlecht/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/molenbeek/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/jette/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/ganshoren/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/berchem-sainte-agathe/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/koekelberg/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/evere/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/watermael-boitsfort/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/bruxelles-capitale/saint-josse/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/waterloo/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/wavre/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/nivelles/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/ottignies-louvain-la-neuve/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/braine-l-alleud/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/rixensart/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/la-hulpe/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/genappe/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/jodoigne/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-wallon/tubize/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/liege/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/seraing/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/herstal/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/verviers/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/ans/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/grace-hollogne/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/flemalle/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/chaudfontaine/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/vise/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-liege/eupen/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/namur/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/dinant/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/sambreville/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/gembloux/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/andenne/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/ciney/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/rochefort/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/profondeville/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/mettet/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/province-de-namur/fosses-la-ville/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/charleroi/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/mons/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/la-louviere/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/tournai/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/mouscron/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/binche/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/soignies/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/ath/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/enghien/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/hainaut/braine-le-comte/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/louvain/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/vilvorde/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/hal/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/dilbeek/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/zaventem/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/tervuren/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/overijse/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/hoeilaart/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m   [34mΓö£ΓöÇ[39m [2m/zones/brabant-flamand/beersel/index.html[22m [2m(+2ms)[22m 
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/zones/brabant-flamand/grimbergen/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/zones.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/zones/index.html[22m [2m(+3ms)[22m 
+[2m03:23:51[22m [32mΓû╢[39m src/pages/index.astro
+[2m03:23:51[22m   [34mΓööΓöÇ[39m [2m/index.html[22m [2m(+4ms)[22m 
+[2m03:23:51[22m [32mΓ£ô Completed in 491ms.
+[39m
+[2m03:23:52[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m03:23:52[22m [34m[build][39m 132 page(s) built in [1m2.80s[22m
+[2m03:23:52[22m [34m[build][39m [1mComplete![22m

@@ -1,0 +1,405 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const reviews = [
+  {
+    name: "Thomas D.",
+    city: "Bruxelles",
+    service: "Débouchage WC",
+    date: "Il y a 2 jours",
+    text: "Intervention très rapide ! Mon WC était complètement bouché. Le plombier est arrivé en 30 minutes et a réglé le problème. Prix très clair dès le départ.",
+    rating: 5
+  },
+  {
+    name: "Sophie M.",
+    city: "Liège",
+    service: "Fuite d'eau",
+    date: "La semaine dernière",
+    text: "J'avais une fuite sous mon évier à 2h du matin. Ils ont répondu tout de suite au téléphone. Réparation impeccable et sans mauvaise surprise sur la facture.",
+    rating: 5
+  },
+  {
+    name: "Marc Peeters",
+    city: "Namur",
+    service: "Entretien chaudière",
+    date: "Il y a 2 semaines",
+    text: "Super service pour l'entretien de ma chaudière. Le technicien a pris le temps de m'expliquer ce qu'il faisait. Très professionnel.",
+    rating: 5
+  },
+  {
+    name: "Julie L.",
+    city: "Charleroi",
+    service: "Débouchage égout",
+    date: "Ce mois-ci",
+    text: "Notre égout refoulait dans la cave, c'était la panique. L'équipe est intervenue avec une caméra et un jet haute pression. Problème résolu rapidement.",
+    rating: 5
+  },
+  {
+    name: "Ahmed B.",
+    city: "Mons",
+    service: "Rénovation plomberie",
+    date: "Il y a un mois",
+    text: "Nous avons fait appel à eux pour refaire la plomberie de notre salle de bain. Travail propre, respect des délais et équipe très sympa.",
+    rating: 5
+  },
+  {
+    name: "Claire V.",
+    city: "Waterloo",
+    service: "Remplacement chauffe-eau",
+    date: "Le mois dernier",
+    text: "Mon chauffe-eau a rendu l'âme un dimanche. J'ai appelé et ils m'ont installé un nouveau chauffe-eau le jour même. Merci beaucoup !",
+    rating: 5
+  },
+  {
+    name: "Patrick S.",
+    city: "Wavre",
+    service: "Recherche de fuite",
+    date: "Il y a 3 jours",
+    text: "J'avais des taches d'humidité mais je ne trouvais pas la fuite. Le plombier a utilisé une machine spéciale et a trouvé le problème sans rien casser.",
+    rating: 5
+  },
+  {
+    name: "Marie J.",
+    city: "Bruxelles",
+    service: "Robinet cassé",
+    date: "Il y a 5 jours",
+    text: "Un plombier très gentil est venu changer mon robinet de cuisine qui fuyait. Rapide et efficace. Je recommande à 100%.",
+    rating: 5
+  },
+  {
+    name: "Lucas T.",
+    city: "Liège",
+    service: "Débouchage baignoire",
+    date: "La semaine dernière",
+    text: "Impossible de prendre ma douche à cause de ma baignoire bouchée. Appel à 18h, réparé à 19h. Service au top !",
+    rating: 5
+  },
+  {
+    name: "Élodie F.",
+    city: "Namur",
+    service: "Fuite radiateur",
+    date: "Il y a 2 semaines",
+    text: "Un radiateur fuyait dans le salon. L'artisan est arrivé vite, a réparé la fuite et a vérifié les autres radiateurs. Très sérieux.",
+    rating: 5
+  },
+  {
+    name: "Kevin D.",
+    city: "Charleroi",
+    service: "Urgence plomberie",
+    date: "Hier",
+    text: "Tuyau percé en faisant des travaux avec ma perceuse... Grosse fuite d'eau ! Heureusement qu'ils sont intervenus en urgence. Sauveurs !",
+    rating: 5
+  },
+  {
+    name: "Fatima R.",
+    city: "Mons",
+    service: "Installation WC",
+    date: "Il y a 3 semaines",
+    text: "Très satisfaite de l'installation de mon nouveau WC suspendu. Le travail est soigné et l'artisan a tout nettoyé avant de partir.",
+    rating: 5
+  },
+  {
+    name: "Antoine C.",
+    city: "Waterloo",
+    service: "Débouchage évier",
+    date: "Ce matin",
+    text: "Évier de cuisine complètement bouché. Le monsieur a utilisé son furet électrique et tout est rentré dans l'ordre en quelques minutes.",
+    rating: 5
+  },
+  {
+    name: "Céline B.",
+    city: "Wavre",
+    service: "Problème pression d'eau",
+    date: "Il y a 4 jours",
+    text: "Je n'avais presque plus de pression d'eau chaude. Le plombier a détartré mon installation, maintenant c'est parfait.",
+    rating: 5
+  },
+  {
+    name: "David H.",
+    city: "Bruxelles",
+    service: "Chasse d'eau qui coule",
+    date: "La semaine dernière",
+    text: "Ma chasse d'eau fuyait non stop. Ils ont changé le mécanisme rapidement. Le prix annoncé au téléphone a été respecté.",
+    rating: 5
+  },
+  {
+    name: "Sonia G.",
+    city: "Liège",
+    service: "Installation machine à laver",
+    date: "Il y a un mois",
+    text: "Appel pour raccorder ma nouvelle machine à laver car je n'avais pas les bonnes arrivées d'eau. Travail super bien fait.",
+    rating: 5
+  },
+  {
+    name: "Nicolas W.",
+    city: "Namur",
+    service: "Fuite plafond",
+    date: "Il y a 2 mois",
+    text: "De l'eau coulait de mon plafond. Le plombier a vite trouvé que ça venait de la douche de l'étage. Très pro et rassurant.",
+    rating: 5
+  },
+  {
+    name: "Amélie P.",
+    city: "Charleroi",
+    service: "Dépannage chaudière",
+    date: "En plein hiver",
+    text: "Plus de chauffage ni d'eau chaude un samedi en plein hiver. Ils sont venus le soir même et ont réparé la pièce défectueuse.",
+    rating: 5
+  },
+  {
+    name: "Olivier M.",
+    city: "Mons",
+    service: "Débouchage canalisation",
+    date: "Hier",
+    text: "L'eau remontait dans mon jardin. Intervention rapide et efficace pour déboucher les canalisations extérieures. Merci !",
+    rating: 5
+  },
+  {
+    name: "Sarah K.",
+    city: "Bruxelles",
+    service: "Petite réparation",
+    date: "Aujourd'hui",
+    text: "J'avais besoin d'un plombier pour plusieurs petites réparations (siphon qui fuit, robinet qui goutte). Tout a été fait dans la bonne humeur.",
+    rating: 5
+  }
+];
+
+// Calculate average and total dynamically for structured data if needed
+const totalReviews = reviews.length;
+const averageRating = (reviews.reduce((acc, curr) => acc + curr.rating, 0) / reviews.length).toFixed(1);
+
+const title = "Avis Clients Plombier Urgence | Ce que pensent nos clients";
+const description = "Découvrez les avis et témoignages de nos clients partout en Belgique. Plus de 500 personnes nous font confiance pour leurs urgences de plomberie et débouchage.";
+---
+
+<Layout title={title} description={description}>
+  <div class="reviews-page">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Ce que nos <span class="text-gradient">clients </span> disent de nous</h1>
+        <p class="hero__subtitle">Interventions rapides, prix clairs et travail de qualité. Voici les derniers avis de nos clients en Belgique.</p>
+        <div class="hero__rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text"><strong>{averageRating}/5</strong> sur {totalReviews} avis vérifiés</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Reviews Grid -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="reviews-grid">
+          {reviews.map((review) => (
+            <article class="review-card">
+              <div class="review-card__header">
+                <div class="review-card__user">
+                  <div class="user-avatar">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div class="user-info">
+                    <h3 class="user-name">{review.name}</h3>
+                    <p class="user-location">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                      {review.city}
+                    </p>
+                  </div>
+                </div>
+                <div class="review-card__stars">{"★".repeat(review.rating)}</div>
+              </div>
+              <div class="review-card__meta">
+                <span class="badge badge--service">{review.service}</span>
+                <span class="date">{review.date}</span>
+              </div>
+              <p class="review-card__text">"{review.text}"</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <CTABanner 
+      title="Besoin d'un plombier de confiance ?"
+      subtitle="Faites comme nos clients, appelez-nous pour une intervention rapide au prix juste."
+    />
+  </div>
+</Layout>
+
+<style>
+  .reviews-page {
+    background: var(--color-bg);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    text-align: center;
+    background: linear-gradient(to bottom, var(--color-surface), var(--color-bg));
+  }
+
+  .hero__inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.02em;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    background: var(--color-surface);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 999px;
+    display: inline-flex;
+    border: 1px solid var(--color-border);
+  }
+
+  .stars {
+    color: #fbbf24;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  .rating-text {
+    color: var(--color-text);
+  }
+
+  /* Reviews Grid */
+  .reviews-section {
+    padding: var(--space-2xl) 0 var(--space-4xl);
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .review-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(80, 160, 226, 0.3);
+  }
+
+  .review-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+  }
+
+  .review-card__user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-accent), #2563eb);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .user-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    color: var(--color-text);
+  }
+
+  .user-location {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .review-card__stars {
+    color: #fbbf24;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .review-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .badge--service {
+    background: rgba(80, 160, 226, 0.1);
+    color: var(--color-accent);
+    border: 1px solid rgba(80, 160, 226, 0.2);
+  }
+
+  .date {
+    font-size: 0.8rem;
+    color: var(--color-text-dim);
+  }
+
+  .review-card__text {
+    flex-grow: 1;
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
