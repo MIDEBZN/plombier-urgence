@@ -18,13 +18,17 @@ import CTABanner from '../components/CTABanner.astro';
   <!-- Story -->
   <section class="section">
     <div class="container">
-      <div class="about-grid">
+      <div class="story-grid">
+        <div class="story-grid__image">
+          <img src="/images/about-team.webp" alt="Notre équipe de plombiers" loading="lazy" decoding="async" />
+        </div>
         <div class="about-content">
           <h2>Notre Histoire</h2>
           <p>Fondée en 2009 à Bruxelles, Plombier Urgence est née de la conviction qu'un service de plomberie d'urgence devait être rapide, fiable et transparent. Notre fondateur, fort de 10 ans d'expérience dans le secteur, a rassemblé une équipe de techniciens passionnés et qualifiés.</p>
           <p>Aujourd'hui, nous sommes fiers de compter plus de 5 000 clients satisfaits et d'être reconnus comme l'une des références de la plomberie d'urgence en Belgique. Notre engagement : une intervention de qualité, à un prix juste, dans les meilleurs délais.</p>
         </div>
-        <div class="about-stats-panel">
+      </div>
+      <div class="about-stats-panel">
           <div class="about-stat-box">
             <span class="about-stat-box__number">15+</span>
             <span class="about-stat-box__label">Années d'expérience</span>
@@ -128,7 +132,9 @@ import CTABanner from '../components/CTABanner.astro';
   .about-hero__bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 60% 40%, rgba(80,160,226,0.06) 0%, transparent 50%);
+    background:
+      linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%),
+      url('/images/hero-bg.webp') center/cover no-repeat;
     pointer-events: none;
   }
 
@@ -142,11 +148,16 @@ import CTABanner from '../components/CTABanner.astro';
     font-weight: 900;
     line-height: 1.15;
     margin-bottom: var(--space-lg);
+    color: #fff;
+  }
+
+  .about-hero__title .text-accent {
+    color: var(--color-accent);
   }
 
   .about-hero__subtitle {
     font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
   }
 
@@ -160,11 +171,19 @@ import CTABanner from '../components/CTABanner.astro';
   }
 
   /* Story grid */
-  .about-grid {
+  .story-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-3xl);
-    align-items: start;
+    align-items: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .story-grid__image img {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
   }
 
   .about-content h2 {
@@ -181,7 +200,7 @@ import CTABanner from '../components/CTABanner.astro';
 
   .about-stats-panel {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
   }
 
@@ -294,8 +313,12 @@ import CTABanner from '../components/CTABanner.astro';
   }
 
   @media (max-width: 768px) {
-    .about-grid {
+    .story-grid {
       grid-template-columns: 1fr;
+    }
+    
+    .about-stats-panel {
+      grid-template-columns: 1fr 1fr;
     }
 
     .certif-banner {

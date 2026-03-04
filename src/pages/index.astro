@@ -61,31 +61,37 @@ import CTABanner from '../components/CTABanner.astro';
         icon="🚿"
         title="Débouchage Canalisation"
         description="WC, évier, douche ou baignoire bouchés ? Nous intervenons avec du matériel haute pression pour un débouchage immédiat."
+        image="/images/service-debouchage.webp"
       />
       <ServiceCard
         icon="🔍"
         title="Recherche de Fuite"
         description="Détection précise de fuites d'eau sans casse grâce à nos caméras thermiques et acoustiques. Réparation rapide garantie."
+        image="/images/service-fuite.webp"
       />
       <ServiceCard
         icon="🔥"
         title="Dépannage Chaudière"
         description="Votre chaudière est en panne ? Plus d'eau chaude ? Nos chauffagistes agréés interviennent sur toutes les marques."
+        image="/images/service-chaudiere.webp"
       />
       <ServiceCard
         icon="🔧"
         title="Réparation Robinetterie"
         description="Remplacement de robinets, mitigeurs, chasse d'eau qui coule. Installation de nouveaux sanitaires."
+        image="/images/service-robinetterie.webp"
       />
       <ServiceCard
         icon="🛁"
         title="Rénovation Salle de Bain"
         description="Projet de rénovation ? Nous installons douches italiennes, baignoires et meubles vasques modernes."
+        image="/images/service-renovation.webp"
       />
       <ServiceCard
         icon="🚨"
         title="Urgence Plomberie"
         description="Dépannage plomberie express 24/7 : fuite d'eau, canalisation bouchée, panne de chaudière ou dégât des eaux. Intervention en 30 minutes."
+        image="/images/hero-bg.webp"
       />
     </div>
   </section>
@@ -96,21 +102,26 @@ import CTABanner from '../components/CTABanner.astro';
       <p class="section-label">Pourquoi Nous Choisir</p>
       <h2 class="section-title">Le Plombier N°1 en Belgique</h2>
     </div>
-    <div class="container grid grid-3">
-      <div class="why-card">
-        <div class="why-card__icon">⚡</div>
-        <h3 class="why-card__title">Intervention en 30 Minutes</h3>
-        <p class="why-card__text">Nos équipes de plombiers sont réparties stratégiquement dans toute la Belgique pour garantir une arrivée rapide.</p>
+    <div class="container why-us__grid">
+      <div class="why-us__image-col">
+        <img src="/images/about-team.webp" alt="Plombier professionnel" class="why-us__image" loading="lazy" decoding="async" />
       </div>
-      <div class="why-card">
-        <div class="why-card__icon">💰</div>
-        <h3 class="why-card__title">Tarifs Fixes et Transparents</h3>
-        <p class="why-card__text">Pas de mauvaise surprise. Nous vous communiquons une estimation avant toute intervention.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-card__icon">✅</div>
-        <h3 class="why-card__title">Travail Garanti</h3>
-        <p class="why-card__text">Toutes nos réparations sont garanties 2 ans pièces et main d'œuvre. Satisfaction assurée.</p>
+      <div class="why-us__content-col">
+        <div class="why-card">
+          <div class="why-card__icon">⚡</div>
+          <h3 class="why-card__title">Intervention en 30 Minutes</h3>
+          <p class="why-card__text">Nos équipes de plombiers sont réparties stratégiquement dans toute la Belgique pour garantir une arrivée rapide.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon">💰</div>
+          <h3 class="why-card__title">Tarifs Fixes et Transparents</h3>
+          <p class="why-card__text">Pas de mauvaise surprise. Nous vous communiquons une estimation avant toute intervention.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__icon">✅</div>
+          <h3 class="why-card__title">Travail Garanti</h3>
+          <p class="why-card__text">Toutes nos réparations sont garanties 2 ans pièces et main d'œuvre. Satisfaction assurée.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -205,8 +216,8 @@ import CTABanner from '../components/CTABanner.astro';
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse at 20% 50%, rgba(80,160,226,0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(80,160,226,0.05) 0%, transparent 50%);
+      linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%),
+      url('/images/hero-bg.webp') center/cover no-repeat;
     pointer-events: none;
   }
 
@@ -235,17 +246,19 @@ import CTABanner from '../components/CTABanner.astro';
     line-height: 1.1;
     max-width: 700px;
     margin-bottom: var(--space-lg);
+    color: #ffffff;
     animation: fadeInUp 0.6s ease 0.1s both;
   }
 
   .hero__title .text-accent {
     display: block;
     margin-top: var(--space-sm);
+    color: var(--color-accent);
   }
 
   .hero__subtitle {
     font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.85);
     max-width: 550px;
     line-height: 1.7;
     margin-bottom: var(--space-xl);
@@ -322,26 +335,55 @@ import CTABanner from '../components/CTABanner.astro';
     background: var(--color-bg-alt);
   }
 
+  .why-us__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+
+  .why-us__image {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+
+  .why-us__content-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
   .why-card {
-    text-align: center;
-    padding: var(--space-2xl) var(--space-xl);
+    text-align: left;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease;
+  }
+
+  .why-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
   }
 
   .why-card__icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--space-lg);
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
   }
 
   .why-card__title {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: 700;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
   }
 
   .why-card__text {
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
   /* Testimonials */
@@ -433,6 +475,10 @@ import CTABanner from '../components/CTABanner.astro';
 
     .hero__stat-divider {
       display: none;
+    }
+
+    .why-us__grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

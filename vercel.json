@@ -1,0 +1,181 @@
+{
+    "cleanUrls": true,
+    "trailingSlash": true,
+    "redirects": [
+        {
+            "source": "/conditions-generales-de-vente-cgv(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/depannage-plomberie(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/installation-chaudiere-gaz(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-canalisation(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-intervention-rapide-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-molenbeek-saint-jean(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/installation-sanitaire-bruxelles(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-pas-cher-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/contactez-nous(.*)",
+            "destination": "/contact/",
+            "permanent": true
+        },
+        {
+            "source": "/nos-services(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-evere(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-schaerbeek(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/tarif-debouchage-canalisation-bruxelles(.*)",
+            "destination": "/tarifs/",
+            "permanent": true
+        },
+        {
+            "source": "/prix-plombier-bruxelles(.*)",
+            "destination": "/tarifs/",
+            "permanent": true
+        },
+        {
+            "source": "/fuite-deau-urgence-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/reparation-chaudiere-bruxelles(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-urgence-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/installation-de-sanitaire(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/recherche-de-fuite(.*)",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/reparation-fuite-eau-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-etterbeek(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/accueil(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-content/uploads/(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-json/elementskit/v1/(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-content/themes/hello-elementor/(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-content/plugins/(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-content/(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-(.*)\\.php",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-chauffagiste-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-bruxelles-pas-cher(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-bruxelles(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/hello-world(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/installation-de-sanitaires(.*)",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/cdn-cgi/l/email-protection(.*)",
+            "destination": "/",
+            "permanent": true
+        }
+    ]
+}
