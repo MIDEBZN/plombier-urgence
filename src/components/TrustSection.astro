@@ -3,6 +3,7 @@
  * Trust section — shows on every page via Layout
  * Years in business, certifications, guarantees, response time, review badge, GBP embed
  */
+const isBruxelles = Astro.url.pathname.includes('bruxelles');
 ---
 
 <!-- Trust Stats Bar -->
@@ -78,26 +79,53 @@
   </div>
   <div class="container">
     <div class="reviews-grid">
-      <div class="review-card card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">"Intervention en moins de 20 minutes pour une fuite urgente un dimanche soir. Travail propre et soigné. Prix annoncé respecté. Je recommande vivement !"</p>
-        <div class="review-card__author"><div class="review-card__avatar">ML</div><div><strong>Marie L.</strong><span>Bruxelles — Google</span></div></div>
-      </div>
-      <div class="review-card card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">"Chaudière réparée en une heure. Très professionnel, a tout expliqué clairement. Tarif correct et facture immédiate. Merci !"</p>
-        <div class="review-card__author"><div class="review-card__avatar">PD</div><div><strong>Pierre D.</strong><span>Waterloo — Google</span></div></div>
-      </div>
-      <div class="review-card card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">"J'ai envoyé une photo par WhatsApp, j'ai eu un prix en 5 minutes et le plombier était là en 25 min. C'est la première fois qu'un plombier affiche ses prix. Enfin !"</p>
-        <div class="review-card__author"><div class="review-card__avatar">SB</div><div><strong>Sophie B.</strong><span>Namur — Google</span></div></div>
-      </div>
-      <div class="review-card card">
-        <div class="review-card__stars">★★★★★</div>
-        <p class="review-card__text">"Rénovation complète de notre salle de bain. Résultat magnifique, dans le budget annoncé et dans les délais. Équipe sérieuse et soignée."</p>
-        <div class="review-card__author"><div class="review-card__avatar">JM</div><div><strong>Jean M.</strong><span>Liège — Google</span></div></div>
-      </div>
+      {isBruxelles ? (
+        <>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Intervention en moins de 20 minutes pour une fuite urgente un dimanche soir. Travail propre et soigné. Prix annoncé respecté. Je recommande vivement !"</p>
+            <div class="review-card__author"><div class="review-card__avatar">ML</div><div><strong>Marie L.</strong><span>Bruxelles — Google</span></div></div>
+          </div>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Canalisation débouchée rapidement et proprement. Le plombier m'a bien expliqué le problème et les prix étaient très clairs. Super service."</p>
+            <div class="review-card__author"><div class="review-card__avatar">AD</div><div><strong>Antoine D.</strong><span>Ixelles — Google</span></div></div>
+          </div>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"J'ai appelé pour un tuyau percé en pleine nuit. 25 minutes plus tard, ils étaient chez moi. Rapides, efficaces et très polis."</p>
+            <div class="review-card__author"><div class="review-card__avatar">CL</div><div><strong>Camille L.</strong><span>Uccle — Google</span></div></div>
+          </div>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Super équipe ! J'avais une fuite que je ne trouvais pas. Ils ont détecté ça sans rien casser. Très pros et prix justes."</p>
+            <div class="review-card__author"><div class="review-card__avatar">PB</div><div><strong>Paul B.</strong><span>Schaerbeek — Google</span></div></div>
+          </div>
+        </>
+      ) : (
+        <>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Intervention en moins de 20 minutes pour une fuite urgente un dimanche soir. Travail propre et soigné. Prix annoncé respecté. Je recommande vivement !"</p>
+            <div class="review-card__author"><div class="review-card__avatar">ML</div><div><strong>Marie L.</strong><span>Bruxelles — Google</span></div></div>
+          </div>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Chaudière réparée en une heure. Très professionnel, a tout expliqué clairement. Tarif correct et facture immédiate. Merci !"</p>
+            <div class="review-card__author"><div class="review-card__avatar">PD</div><div><strong>Pierre D.</strong><span>Waterloo — Google</span></div></div>
+          </div>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"J'ai envoyé une photo par WhatsApp, j'ai eu un prix en 5 minutes et le plombier était là en 25 min. C'est la première fois qu'un plombier affiche ses prix. Enfin !"</p>
+            <div class="review-card__author"><div class="review-card__avatar">SB</div><div><strong>Sophie B.</strong><span>Namur — Google</span></div></div>
+          </div>
+          <div class="review-card card">
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">"Rénovation complète de notre salle de bain. Résultat magnifique, dans le budget annoncé et dans les délais. Équipe sérieuse et soignée."</p>
+            <div class="review-card__author"><div class="review-card__avatar">JM</div><div><strong>Jean M.</strong><span>Liège — Google</span></div></div>
+          </div>
+        </>
+      )}
     </div>
     <!-- Google Review Badge -->
     <div class="review-badge">

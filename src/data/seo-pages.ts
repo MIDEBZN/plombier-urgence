@@ -41,7 +41,7 @@ export const urgencePages: UrgencePage[] = [
         metaTitle: 'Plombier Urgence Bruxelles | Dépannage 24h/24 7j/7 | 30 min',
         metaDescription: 'Plombier urgence Bruxelles disponible 24h/24, 7j/7 y compris nuit, week-end et jours fériés. Intervention en 30 min. SOS plombier. Devis gratuit. ☎ 0465 68 51 58',
         keywords: ['plombier urgence Bruxelles', 'plombier nuit Bruxelles', 'plombier week-end Bruxelles', 'plombier 24h/24 Bruxelles', 'SOS plombier Bruxelles', 'dépannage plomberie Bruxelles', 'fuite d\'eau urgence Bruxelles', 'plombier intervention rapide Bruxelles', 'urgence canalisation bouchée Bruxelles', 'plombier urgence pas cher Bruxelles', 'inondation cave Bruxelles'],
-        heroText: 'Une fuite d\'eau ? Une canalisation bouchée ? Une inondation dans votre cave ? Notre équipe de plombiers d\'urgence à Bruxelles intervient en moins de 30 minutes, 24 heures sur 24, 7 jours sur 7 — nuits, week-ends et jours fériés compris. Tarifs transparents, sans surprise.',
+        heroText: 'Une fuite d\'eau ? Une canalisation bouchée ? Une inondation dans votre cave ? Notre équipe de plombiers d\'urgence à Bruxelles intervient en moins de 30 minutes, 24 heures sur 24, 7 jours sur 7 — nuits, week-ends et jours fériés compris. Tarifs transparents, sans surprise. À partir de 60€.',
         faqs: [
             { q: 'Quel est le délai d\'intervention d\'un plombier urgence à Bruxelles ?', a: 'Notre équipe intervient en 30 minutes maximum dans toute la région de Bruxelles-Capitale. Nos techniciens sont répartis stratégiquement dans les 19 communes bruxelloises.' },
             { q: 'Combien coûte un dépannage plomberie en urgence à Bruxelles ?', a: 'Nos tarifs sont transparents et communiqués avant intervention. Le déplacement est gratuit et le devis est sans engagement. Pas de frais cachés, même la nuit et le week-end.' },
@@ -140,11 +140,11 @@ export const serviceCityPages: ServiceCityPage[] = [
         province: 'Bruxelles-Capitale',
         serviceType: 'Débouchage',
         icon: '🚿',
-        h1: 'Débouchage Canalisation Bruxelles — Intervention Rapide',
+        h1: 'Débouchage Urgent Bruxelles — Canalisation, WC, Évier',
         metaTitle: 'Débouchage Canalisation Bruxelles | WC & Évier Bouché | 24h/24',
         metaDescription: 'Débouchage canalisation à Bruxelles : WC bouché, évier bouché, odeur canalisation, problème évacuation eau. Intervention rapide 24h/24. ☎ 0465 68 51 58',
         keywords: ['canalisation bouchée Bruxelles', 'WC bouché Bruxelles', 'évier bouché Bruxelles', 'odeur canalisation Bruxelles', 'problème évacuation eau Bruxelles', 'détartrage canalisation Bruxelles'],
-        heroText: 'Votre canalisation est bouchée à Bruxelles ? WC bouché, évier qui ne s\'écoule plus, mauvaises odeurs de canalisation ? Notre équipe spécialisée en débouchage intervient dans toute la région bruxelloise avec du matériel haute pression professionnel. Résultat garanti.',
+        heroText: 'Votre canalisation est bouchée à Bruxelles ? WC bouché, évier qui ne s\'écoule plus, mauvaises odeurs de canalisation ? Notre équipe spécialisée en débouchage intervient dans toute la région bruxelloise avec du matériel haute pression professionnel. Résultat garanti. À partir de 60€.',
         processSteps: [
             { title: 'Diagnostic', desc: 'Inspection caméra pour localiser le bouchon avec précision.' },
             { title: 'Débouchage', desc: 'Intervention haute pression pour éliminer le bouchon durablement.' },
@@ -152,7 +152,7 @@ export const serviceCityPages: ServiceCityPage[] = [
             { title: 'Vérification', desc: 'Test d\'écoulement et inspection caméra de contrôle.' },
         ],
         faqs: [
-            { q: 'Combien coûte un débouchage de canalisation à Bruxelles ?', a: 'Le prix d\'un débouchage à Bruxelles dépend de la complexité. Un débouchage simple (évier, WC) coûte entre 80€ et 150€. Un débouchage de canalisation principale peut aller de 150€ à 350€. Devis gratuit sur place.' },
+            { q: 'Combien coûte un débouchage de canalisation à Bruxelles ?', a: 'Le prix d\'un débouchage à Bruxelles dépend de la complexité. Un débouchage simple (évier, WC) coûte entre 60€ et 150€. Un débouchage de canalisation principale peut aller de 150€ à 350€. Devis gratuit sur place.' },
             { q: 'Mon WC est bouché à Bruxelles, que faire ?', a: 'Évitez d\'utiliser des produits chimiques qui peuvent endommager vos canalisations. Appelez notre service de débouchage WC à Bruxelles au 0465 68 51 58. Intervention en 30 minutes.' },
             { q: 'D\'où viennent les mauvaises odeurs de canalisation à Bruxelles ?', a: 'Les odeurs de canalisation à Bruxelles sont souvent causées par un siphon sec, un bouchon partiel ou une mauvaise ventilation. Un diagnostic professionnel permet d\'identifier et résoudre le problème rapidement.' },
             { q: 'Comment éviter les problèmes d\'évacuation d\'eau ?', a: 'Un entretien régulier (détartrage) et l\'utilisation de grilles sur vos évacuations préviennent la plupart des bouchons. Nous proposons des contrats d\'entretien préventif à Bruxelles.' },
@@ -199,7 +199,7 @@ export const serviceCityPages: ServiceCityPage[] = [
         ],
         faqs: [
             { q: 'Que faire en cas de remontée d\'eau à Charleroi ?', a: 'Une remontée d\'eau est une urgence. Coupez l\'arrivée d\'eau et appelez immédiatement le 0465 68 51 58. Nous intervenons en 30 minutes à Charleroi pour diagnostiquer et résoudre le problème.' },
-            { q: 'Combien coûte le débouchage d\'une canalisation à Charleroi ?', a: 'Les tarifs varient selon la complexité, mais nous pratiquons des prix transparents. Un débouchage simple démarre à 80€. Devis gratuit et sans engagement.' },
+            { q: 'Combien coûte le débouchage d\'une canalisation à Charleroi ?', a: 'Les tarifs varient selon la complexité, mais nous pratiquons des prix transparents. Un débouchage simple démarre à 60€. Devis gratuit et sans engagement.' },
         ],
     },
     {
@@ -208,11 +208,11 @@ export const serviceCityPages: ServiceCityPage[] = [
         province: 'Bruxelles-Capitale',
         serviceType: 'Fuite d\'eau',
         icon: '🔍',
-        h1: 'Fuite d\'Eau Bruxelles — Détection et Réparation Rapide',
+        h1: 'Fuite d\'Eau Urgence Bruxelles — Détection et Réparation',
         metaTitle: 'Fuite d\'Eau Bruxelles | Détection Fuite | Tuyau Percé | 24h/24',
         metaDescription: 'Fuite d\'eau à Bruxelles ? Détection et réparation de fuites, tuyau percé, fuite robinet, fuite chauffe-eau. Intervention rapide sans casse. ☎ 0465 68 51 58',
         keywords: ['fuite d\'eau Bruxelles', 'tuyau percé Bruxelles', 'fuite robinet Bruxelles', 'fuite toit terrasse Bruxelles', 'fuite chauffe-eau Bruxelles', 'détection fuite Bruxelles'],
-        heroText: 'Vous avez une fuite d\'eau à Bruxelles ? Qu\'il s\'agisse d\'un tuyau percé, d\'une fuite de robinet, d\'une fuite de chauffe-eau ou même d\'une fuite en toiture terrasse, nous intervenons rapidement avec des technologies de détection non-destructives pour localiser et réparer la fuite.',
+        heroText: 'Vous avez une fuite d\'eau à Bruxelles ? Qu\'il s\'agisse d\'un tuyau percé, d\'une fuite de robinet, d\'une fuite de chauffe-eau ou même d\'une fuite en toiture terrasse, nous intervenons rapidement avec des technologies de détection non-destructives pour localiser et réparer la fuite. À partir de 60€.',
         processSteps: [
             { title: 'Détection précise', desc: 'Caméra thermique et détection acoustique pour localiser la fuite sans casse.' },
             { title: 'Diagnostic', desc: 'Évaluation de l\'étendue des dégâts et du type de réparation nécessaire.' },
