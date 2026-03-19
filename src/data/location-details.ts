@@ -32,8 +32,8 @@ export const locationPages: LocationPage[] = [
         population: '1 200 000 (Région)',
         postalCodes: '1000 à 1210',
         responseTime: '20 min',
-        metaTitle: 'Plombier Bruxelles — Urgence 24/7 | Tarif 2025 dès 80€ | 30 min',
-        metaDescription: 'Plombier à Bruxelles : intervention en 20 min dans les 19 communes. Urgence 24/7, tarifs clairs 2025 dès 80€. Débouchage, fuite, chaudière. ☎ 0465 68 51 58',
+        metaTitle: 'Plombier Bruxelles — Urgence 24/7 | Tarif 2025 dès 60€ | 30 min',
+        metaDescription: 'Plombier à Bruxelles : intervention en 20 min dans les 19 communes. Urgence 24/7, tarifs clairs 2025 dès 60€. Débouchage, fuite, chaudière. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Bruxelles-Ville (Centre)', responseTime: '15 min', highlight: 'Immeubles anciens : tuyauterie en plomb, canalisations étroites nécessitant un savoir-faire spécifique' },
             { name: 'Ixelles & Saint-Gilles', responseTime: '18 min', highlight: 'Maisons de maître avec plomberie centenaire. Problèmes fréquents de pression d\'eau et fuites dans les murs' },
@@ -81,7 +81,7 @@ export const locationPages: LocationPage[] = [
         ],
         faqs: [
             { q: 'Quel est le meilleur plombier à Bruxelles ?', a: 'Plombier Urgence est noté 4.9/5 sur Google avec plus de 500 avis vérifiés. Nous sommes le seul plombier bruxellois à afficher tous nos tarifs en ligne.' },
-            { q: 'Combien coûte un plombier à Bruxelles ?', a: 'Nos tarifs démarrent à 80€ pour un débouchage simple. Réparation de fuite dès 95€. Remplacement robinet dès 80€. Tous les prix sont fixes et communiqués AVANT intervention.' },
+            { q: 'Combien coûte un plombier à Bruxelles ?', a: 'Nos tarifs démarrent à 60€ pour un débouchage simple. Réparation de fuite dès 95€. Remplacement robinet dès 60€. Tous les prix sont fixes et communiqués AVANT intervention.' },
             { q: 'Intervenez-vous dans toutes les communes de Bruxelles ?', a: 'Oui, nous couvrons les 19 communes de la Région de Bruxelles-Capitale : Bruxelles-Ville, Ixelles, Uccle, Schaerbeek, Etterbeek, Woluwe, Anderlecht, Forest, Saint-Gilles, Molenbeek, Jette, et toutes les autres.' },
             { q: 'Quel est votre délai d\'intervention à Bruxelles ?', a: 'Notre temps de réponse moyen est de 20 minutes dans les 19 communes. En centre-ville (Bruxelles, Ixelles, Etterbeek), nous arrivons souvent en 15 minutes.' },
         ],
@@ -95,7 +95,7 @@ export const locationPages: LocationPage[] = [
         population: '197 000',
         postalCodes: '4000 à 4032',
         responseTime: '25 min',
-        metaTitle: 'Plombier Liège — Urgence 24/7 | Tarif 2025 dès 80€ | Intervention 25 min',
+        metaTitle: 'Plombier Liège — Urgence 24/7 | Tarif 2025 dès 60€ | Intervention 25 min',
         metaDescription: 'Plombier à Liège : intervention en 25 min. Urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Seraing, Herstal, Verviers aussi couverts. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Outremeuse', responseTime: '20 min', highlight: 'Quartier historique avec immeubles anciens en bord de Meuse. Problèmes fréquents d\'humidité et de canalisations vétustes' },
@@ -152,7 +152,7 @@ export const locationPages: LocationPage[] = [
         population: '112 000',
         postalCodes: '5000 à 5100',
         responseTime: '25 min',
-        metaTitle: 'Plombier Namur — Urgence 24/7 | Tarif 2025 dès 80€ | 25 min',
+        metaTitle: 'Plombier Namur — Urgence 24/7 | Tarif 2025 dès 60€ | 25 min',
         metaDescription: 'Plombier à Namur : intervention en 25 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Capitale wallonne et province. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Corbeille', responseTime: '20 min', highlight: 'Cœur historique au confluent Sambre-Meuse. Immeubles anciens avec plomberie du XIXe siècle' },
@@ -204,7 +204,7 @@ export const locationPages: LocationPage[] = [
         population: '202 000',
         postalCodes: '6000 à 6200',
         responseTime: '25 min',
-        metaTitle: 'Plombier Charleroi — Urgence 24/7 | Tarif 2025 dès 80€ | 25 min',
+        metaTitle: 'Plombier Charleroi — Urgence 24/7 | Tarif 2025 dès 60€ | 25 min',
         metaDescription: 'Plombier à Charleroi : intervention en 25 min. Urgence 24/7, tarifs clairs 2025. Débouchage, fuite, chaudière. Toute la région couverte. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Ville Basse', responseTime: '20 min', highlight: 'Zone urbanisée dense en pleine rénovation. Immeubles des années 50-70 avec plomberie à moderniser' },
@@ -244,7 +244,7 @@ export const locationPages: LocationPage[] = [
         ],
         faqs: [
             { q: 'Couvrez-vous toute la région de Charleroi ?', a: 'Oui : Charleroi et les 15 sections (Marcinelle, Gilly, Gosselies, Jumet, Couillet, etc.) + Châtelet, Fleurus, Fontaine-l\'Évêque.' },
-            { q: 'Combien coûte un plombier à Charleroi ?', a: 'Nos tarifs sont les mêmes dans toute la Belgique : débouchage dès 80€, fuite dès 95€, chauffe-eau dès 150€. Prix fixe avant intervention.' },
+            { q: 'Combien coûte un plombier à Charleroi ?', a: 'Nos tarifs sont les mêmes dans toute la Belgique : débouchage dès 60€, fuite dès 95€, chauffe-eau dès 150€. Prix fixe avant intervention.' },
         ],
     },
 
@@ -256,7 +256,7 @@ export const locationPages: LocationPage[] = [
         population: '95 000',
         postalCodes: '7000 à 7034',
         responseTime: '30 min',
-        metaTitle: 'Plombier Mons — Urgence 24/7 | Tarif 2025 dès 80€ | 30 min',
+        metaTitle: 'Plombier Mons — Urgence 24/7 | Tarif 2025 dès 60€ | 30 min',
         metaDescription: 'Plombier à Mons : intervention en 30 min. Tarifs clairs 2025. Débouchage, fuite, chaudière. Mons et arrondissement. ☎ 0465 68 51 58',
         neighborhoods: [
             { name: 'Centre-ville & Grand-Place', responseTime: '25 min', highlight: 'Centre historique avec le Beffroi UNESCO. Immeubles anciens, plomberie à rénover' },

@@ -1,17 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTABanner from '../components/CTABanner.astro';
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plombier Urgence",
+  "url": "https://www.plombierurgence.be",
+  "logo": "https://www.plombierurgence.be/favicon.png",
+  "description": "Plombier d'urgence en Belgique depuis plus de 15 ans. Débouchage, réparation fuite, dépannage chaudière. Certifié et agréé. Disponible 24h/24, 7j/7.",
+  "telephone": "+32465685158",
+  "email": "contact@plombierurgence.be",
+  "foundingDate": "2009",
+  "areaServed": "Belgique",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "value": "10+" },
+  "knowsAbout": [
+    "Débouchage canalisation",
+    "Réparation fuite d'eau",
+    "Dépannage chaudière",
+    "Rénovation salle de bain",
+    "Urgence plomberie"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certification",
+      "name": "Certification CP1/CP2 Synergrid"
+    }
+  ],
+  "sameAs": [
+    "https://maps.app.goo.gl/o5ncKidk5CEoTWMr8",
+    "https://www.facebook.com/plombierurgencee/",
+    "https://fr-be.trustpilot.com/review/plombierurgence.be"
+  ]
+};
 ---
 
-<Layout title="À Propos" description="Découvrez Plombier Urgence — plus de 15 ans d'expérience en plomberie en Belgique. Équipe qualifiée, agréée et disponible 24h/24.">
+<Layout 
+  title="À Propos — Plombier Urgence Belgique | 15 Ans d'Expérience, Certifié & Agréé" 
+  description="Découvrez Plombier Urgence : plus de 15 ans d'expérience en plomberie en Belgique. Techniciens certifiés CP1/CP2 (Synergrid), garantie 2 ans, disponibles 24h/24. Votre plombier de confiance."
+  extraSchemas={[organizationSchema]}
+>
 
   <!-- Hero -->
   <section class="about-hero">
     <div class="about-hero__bg"></div>
     <div class="container about-hero__inner">
-      <p class="section-label">À Propos</p>
-      <h1 class="about-hero__title">Votre Partenaire <span class="text-accent">Plomberie de Confiance</span></h1>
-      <p class="about-hero__subtitle">Depuis plus de 15 ans, nous accompagnons les particuliers et les professionnels en Belgique pour tous leurs besoins en plomberie, chauffage et sanitaire.</p>
+    <p class="section-label">À Propos</p>
+      <h1 class="about-hero__title">Plombier Urgence : <span class="text-accent">15 Ans d'Expertise en Plomberie en Belgique</span></h1>
+      <p class="about-hero__subtitle">Depuis plus de 15 ans, nous accompagnons les particuliers et les professionnels en Belgique pour tous leurs besoins en plomberie, chauffage et sanitaire. Plus de <strong>5 000 interventions</strong> réalisées. Temps de réponse moyen : <strong>23 minutes</strong>. Note client : <strong>4,9/5</strong>.</p>
     </div>
   </section>
 
@@ -97,8 +134,17 @@ import CTABanner from '../components/CTABanner.astro';
         <div class="certif-banner__content">
           <h2>Certifications & Agréments</h2>
           <p>Notre équipe est certifiée et agréée par les autorités belges compétentes. Nous travaillons dans le respect des normes les plus strictes du secteur.</p>
+          <blockquote style="border-left: 3px solid var(--color-accent); padding-left: 1rem; margin: 1rem 0; color: var(--color-text-muted); font-style: italic; font-size: 0.9rem;">
+            &ldquo;Les plombiers agréés en Belgique doivent détenir une certification CP1 ou CP2 délivrée par SYNERGRID pour toute intervention sur les installations de gaz.&rdquo;
+            <footer style="margin-top:0.5rem; font-style:normal; font-weight:600; color: var(--color-text);">— <cite>Synergrid, Fédération des gestionnaires de réseaux belges</cite></footer>
+          </blockquote>
         </div>
         <div class="certif-badges">
+          <div class="certif-badge">
+            <span>🏅</span>
+            <strong>CP1/CP2</strong>
+            <small>Synergrid — Gaz agréé</small>
+          </div>
           <div class="certif-badge">
             <span>🏅</span>
             <strong>Cerga</strong>

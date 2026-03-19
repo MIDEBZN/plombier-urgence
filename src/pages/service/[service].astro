@@ -14,9 +14,60 @@ const { service } = Astro.props;
 
 // Find related services
 const related = servicePages.filter(s => service.relatedServices.includes(s.slug));
+
+const numericPrice = service.priceFrom ? service.priceFrom.replace(/[^0-9]/g, '') : "60";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": service.title,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Plombier Urgence",
+    "telephone": "+32465685158",
+    "image": "https://www.plombierurgence.be/images/og-default.jpg"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Belgique"
+  },
+  "description": service.metaDescription,
+  "offers": {
+    "@type": "Offer",
+    "price": numericPrice,
+    "priceCurrency": "EUR",
+    "url": `https://www.plombierurgence.be/service/${service.slug}`
+  }
+};
+
+const extraSchemas = [serviceSchema];
+
+// Add HowTo schema conditionally for debouchage and fuite
+if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plomberie') {
+  extraSchemas.push({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `Comment se déroule notre intervention pour : ${service.title}`,
+    "description": service.metaDescription,
+    "step": service.process.map((step: any, index: number) => ({
+      "@type": "HowToStep",
+      "url": `https://www.plombierurgence.be/service/${service.slug}#step${index + 1}`,
+      "name": step.title,
+      "itemListElement": [{
+        "@type": "HowToDirection",
+        "text": step.description
+      }]
+    }))
+  });
+}
 ---
 
-<Layout title={service.metaTitle} description={service.metaDescription} faqs={service.faqs}>
+<Layout 
+  title={service.metaTitle} 
+  description={service.metaDescription} 
+  faqs={service.faqs}
+  extraSchemas={extraSchemas}
+>
 
   <!-- Breadcrumb -->
   <section class="bc-section">
@@ -139,6 +190,18 @@ const related = servicePages.filter(s => service.relatedServices.includes(s.slug
       </div>
     </div>
   </section>
+
+  <!-- Expert Quote -->
+  {service.quote && (
+    <section class="section section--alt" style="padding-top: 0; padding-bottom: 0;">
+      <div class="container">
+        <blockquote class="expert-quote card">
+          <p class="expert-quote__text">"{service.quote.text}"</p>
+          <footer class="expert-quote__author">— <cite>{service.quote.author}</cite></footer>
+        </blockquote>
+      </div>
+    </section>
+  )}
 
   <!-- FAQs -->
   <section class="section section--alt" id="faq">
@@ -316,6 +379,11 @@ const related = servicePages.filter(s => service.relatedServices.includes(s.slug
   .related-card__title{font-size:var(--font-size-lg);font-weight:700;color:var(--color-text);margin-bottom:var(--space-xs)}
   .related-card__price{color:var(--color-accent);font-weight:700;font-size:var(--font-size-sm);margin-bottom:var(--space-sm)}
   .related-card__link{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600}
+
+  /* Expert Quote */
+  .expert-quote{padding:var(--space-2xl);text-align:center;border-left:4px solid var(--color-accent);margin:var(--space-2xl) 0}
+  .expert-quote__text{font-size:var(--font-size-lg);font-weight:600;font-style:italic;margin-bottom:var(--space-md);color:var(--color-text)}
+  .expert-quote__author{font-size:var(--font-size-sm);color:var(--color-text-muted);font-weight:700}
 
   @media(max-width:1024px){
     .included-grid{grid-template-columns:repeat(2,1fr)}

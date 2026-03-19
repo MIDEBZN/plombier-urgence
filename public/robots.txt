@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plombierurgence.be/sitemap-index.xml
+# AI Search Engines — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: GoogleBot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.plombierurgence.be/sitemap-index.xml

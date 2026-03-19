@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Merci ! Votre Demande a Été Envoyée | Plombier Urgence" description="Merci pour votre demande de devis. Nous vous recontactons dans les 15 minutes.">
+  <meta name="robots" content="noindex, nofollow" slot="head" />
 
   <section class="thankyou">
     <div class="container thankyou__inner">
@@ -42,7 +43,7 @@ import Layout from '../../layouts/Layout.astro';
         <p>Appelez-nous directement pour une intervention immédiate :</p>
         <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:1rem;">
           <a href="tel:0465685158" class="btn btn-primary btn-lg">📞 0465 68 51 58</a>
-          <a href="https://wa.me/32470123456" class="btn btn-outline btn-lg" target="_blank">💬 WhatsApp</a>
+          <a href="https://wa.me/32465685158" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
         </div>
       </div>
 

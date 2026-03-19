@@ -11,9 +11,37 @@ export function getStaticPaths() {
 }
 
 const { loc } = Astro.props;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `Plombier Urgence ${loc.city}`,
+  "description": loc.metaDescription,
+  "url": `https://www.plombierurgence.be/location/${loc.slug}`,
+  "telephone": "+32465685158",
+  "image": "https://www.plombierurgence.be/images/og-default.jpg",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": loc.city
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": loc.city,
+    "addressRegion": loc.province,
+    "postalCode": loc.postalCodes ? loc.postalCodes.split(',')[0].trim() : "",
+    "addressCountry": "BE"
+  }
+};
 ---
 
-<Layout title={loc.metaTitle} description={loc.metaDescription} faqs={loc.faqs}>
+<Layout 
+  title={loc.metaTitle} 
+  description={loc.metaDescription} 
+  faqs={loc.faqs}
+  extraSchemas={[localBusinessSchema]}
+>
 
   <!-- Breadcrumb -->
   <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/zones">Zones</a><span>›</span><span class="bc--current">Plombier {loc.city}</span></nav></div></section>

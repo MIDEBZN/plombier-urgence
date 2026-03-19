@@ -9,21 +9,37 @@ interface Props {
   title: string;
   description?: string;
   faqs?: { q: string; a: string }[];
+  ogImage?: string;
+  ogType?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  extraSchemas?: object[];
 }
 
-const { title, description = "Plombier d'urgence Bruxelles & Belgique — Intervention rapide 24h/24, 7j/7. Tarifs clairs 2025. Prix affichés avant intervention. Débouchage, fuites, chaudières. ☎ 0465 68 51 58", faqs = [] } = Astro.props;
+const { 
+  title, 
+  description = "Plombier d'urgence Belgique — Intervention rapide 24h/24, 7j/7. Tarifs 2025. Prix affichés avant intervention. Débouchage dès 60€, fuites dès 95€. Bruxelles, Liège, Namur, Charleroi. ☎ 0465 68 51 58", 
+  faqs = [],
+  ogImage = 'https://www.plombierurgence.be/images/og-default.jpg',
+  ogType = 'website',
+  twitterTitle,
+  twitterDescription,
+  extraSchemas = []
+} = Astro.props;
 
 // LocalBusiness schema
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   "name": "Plombier Urgence",
-  "description": "Plombier d'urgence en Belgique — Intervention rapide 24h/24 et 7j/7. Tarifs clairs 2025, prix affichés. Bruxelles, Liège, Namur, Charleroi, Mons.",
-  "url": "https://plombierurgence.be",
+  "description": "Plombier d'urgence en Belgique. Intervention en 30 minutes, 24h/24 et 7j/7. Débouchage dès 60€, réparation fuite dès 95€, dépannage chaudière dès 150€. Prix fixe avant intervention. Certifié et agréé.",
+  "url": "https://www.plombierurgence.be",
   "telephone": "+32465685158",
   "email": "contact@plombierurgence.be",
-  "priceRange": "€€",
-  "image": "https://plombierurgence.be/og-image.jpg",
+  "priceRange": "60€–500€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Card, Bank Transfer",
+  "image": "https://www.plombierurgence.be/images/og-default.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Bruxelles",
@@ -37,6 +53,13 @@ const localBusinessSchema = {
     "latitude": "50.8503",
     "longitude": "4.3517"
   },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "areaServed": [
     { "@type": "City", "name": "Bruxelles" },
     { "@type": "City", "name": "Liège" },
@@ -44,14 +67,9 @@ const localBusinessSchema = {
     { "@type": "City", "name": "Charleroi" },
     { "@type": "City", "name": "Mons" },
     { "@type": "City", "name": "Waterloo" },
-    { "@type": "City", "name": "Wavre" }
+    { "@type": "City", "name": "Wavre" },
+    { "@type": "Country", "name": "Belgique" }
   ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -64,34 +82,38 @@ const localBusinessSchema = {
     "itemListElement": [
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Débouchage canalisations, WC, éviers"
-        }
+        "itemOffered": { "@type": "Service", "name": "Débouchage canalisation" },
+        "price": "60",
+        "priceCurrency": "EUR",
+        "eligibleRegion": "Belgique"
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Recherche et réparation de fuite d'eau"
-        }
+        "itemOffered": { "@type": "Service", "name": "Réparation fuite d'eau" },
+        "price": "95",
+        "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Dépannage et entretien chaudière & chauffe-eau"
-        }
+        "itemOffered": { "@type": "Service", "name": "Dépannage chaudière" },
+        "price": "150",
+        "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Installation et rénovation plomberie complète"
-        }
+        "itemOffered": { "@type": "Service", "name": "Inspection caméra canalisation" },
+        "price": "120",
+        "priceCurrency": "EUR"
       }
     ]
   },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Certification",
+      "name": "Certification CP1/CP2 Synergrid"
+    }
+  ],
   "foundingDate": "2009",
   "sameAs": [
     "https://www.instagram.com/plom.bierurgence/",
@@ -120,6 +142,13 @@ const faqSchema = faqs.length > 0 ? {
 } : null;
 
 const isThankYou = Astro.url.pathname.includes('thank-you');
+
+// Canonical: use www for all pages
+const canonicalPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '');
+const canonicalUrl = new URL(canonicalPath, 'https://www.plombierurgence.be').href;
+const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `https://www.plombierurgence.be${ogImage}`;
+const resolvedTwitterTitle = twitterTitle || title;
+const resolvedTwitterDescription = twitterDescription || description;
 ---
 
 <!doctype html>
@@ -145,15 +174,23 @@ const isThankYou = Astro.url.pathname.includes('thank-you');
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="canonical" href={new URL(Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/', Astro.site || 'https://plombierurgence.be').href} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="preload" as="image" href="/images/hero-bg.webp" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="fr_BE" />
     <meta property="og:site_name" content="Plombier Urgence" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={resolvedTwitterTitle} />
+    <meta name="twitter:description" content={resolvedTwitterDescription} />
+    <meta name="twitter:image" content={resolvedOgImage} />
 
     <title>{title}</title>
 
@@ -164,6 +201,11 @@ const isThankYou = Astro.url.pathname.includes('thank-you');
     {faqSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     )}
+
+    <!-- Schema: Extra per-page schemas -->
+    {extraSchemas.map(schema => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body>
     <!-- Emergency Hotline Banner -->
@@ -190,10 +232,10 @@ const isThankYou = Astro.url.pathname.includes('thank-you');
 
     <!-- Floating WhatsApp Button -->
     <a
-      href="https://wa.me/32470123456?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20plombier%20urgence"
+      href="https://wa.me/32465685158?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20plombier%20urgence"
       class="float-wa"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       aria-label="Contactez-nous sur WhatsApp"
     >
       <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
