@@ -40,7 +40,7 @@ const serviceSchema = {
   }
 };
 
-const extraSchemas = [serviceSchema];
+const extraSchemas: any[] = [serviceSchema];
 
 // Add HowTo schema conditionally for debouchage and fuite
 if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plomberie') {
