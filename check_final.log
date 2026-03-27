@@ -1,0 +1,44 @@
+[2m01:24:11[22m [34m[content][39m Syncing content
+[2m01:24:11[22m [34m[content][39m Synced content
+[2m01:24:11[22m [34m[types][39m Generated [2m64ms[22m
+[2m01:24:11[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\MEDLO\Desktop\coding projects\new plombier...
+[96msrc/components/Header.astro[0m:[93m333[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'lastScroll' is declared but its value is never read.
+
+[7m333[0m   let lastScroll = 0;
+[7m   [0m [93m      ~~~~~~~~~~[0m
+
+[96msrc/layouts/Layout.astro[0m:[93m207[0m:[93m15[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m207[0m       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+[7m   [0m [93m              ~~~~[0m
+[96msrc/layouts/Layout.astro[0m:[93m202[0m:[93m15[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m202[0m       <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+[7m   [0m [93m              ~~~~[0m
+[96msrc/layouts/Layout.astro[0m:[93m198[0m:[93m13[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m198[0m     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+[7m   [0m [93m            ~~~~[0m
+
+[96msrc/pages/zones.astro[0m:[93m4[0m:[93m21[0m - [93mwarning[0m[90m ts(6133): [0m'slugify' is declared but its value is never read.
+
+[7m4[0m import { provinces, slugify } from '../data/communes';
+[7m [0m [93m                    ~~~~~~~[0m
+
+Result (103 files): 
+- 0 errors
+- 0 warnings
+- 5 hints
+
