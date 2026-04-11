@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Comment déboucher un évier bouché sans abîmer les tuyaux ?";
+const description = "Évitez de brûler vos joints PVC ! Découvrez les méthodes naturelles et mécaniques pour déboucher un évier ou lavabo en toute sécurité pour votre plomberie.";
+
+const faqs = [
+  {
+    "q": "Les produits chimiques (type Destop) abîment-ils vraiment mes tuyaux en PVC ?",
+    "a": "Oui. À force d'une utilisation régulière, l'acide sulfurique ou la soude caustique chauffe de manière exothermique au contact de l'eau. Si le liquide stagne à cause du bouchon, cette chaleur va déformer, ramollir voire fondre le plastique fin (PVC) du siphon et ronger les joints d'étanchéité en caoutchouc."
+  },
+  {
+    "q": "Quelle est la meilleure recette naturelle qui ne détruit pas la tuyauterie ?",
+    "a": "Le trio incontournable pour les bouchons de graisses légères : Versez une demi-tasse de cristaux de soude pure (ou bicarbonate), suivi d'une tasse de vinaigre blanc chaud. Recouvrez pour confiner la mousse. Laissez dissoudre 30 minutes. Rincez enfin avec deux litres d'eau très chaude."
+  },
+  {
+    "q": "Puis-je utiliser un cintre métallique pour gratter un bouchon loin dans l'évier ?",
+    "a": "C'est risqué. Le métal rigide d'un cintre peut facilement percer un tuyau flexible en T ou rayer sévèrement l'intérieur d'un conduit de raccordement, favorisant l'accroche de la moisissure. Préférez un petit furet de plomberie avec un embout flexible."
+  },
+  {
+    "q": "Démonter le siphon est-il dangereux pour mon installation ?",
+    "a": "Si vous dévissez le bol cylindrique à la main sans utiliser de pince métallique qui pourrait fissurer le plastique, non. Placez simplement une bassine en dessous au préalable. Veillez à bien repositionner le petit joint noir rond lors du remontage sous peine d'une fuite persistante."
+  },
+  {
+    "q": "Quand l'utilisation de la ventouse peut-elle causer des dégâts sur un double vasque ?",
+    "a": "La ventouse génère une très forte pression d'air. Dans un évier double vasque ou dans un lavabo muni d'un 'trop-plein' de sécurité, cette pression va propulser l'eau sale en dehors de l'autre conduit comme un geyser au lieu de forcer le bouchon vers le bas. Vous devez obligatoirement bloquer le second trou (avec un chiffon humide) pour rendre la ventouse étanche et performante."
+  }
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+  <article class="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-blue-900 mb-6">Comment déboucher un évier bouché sans abîmer les tuyaux ? L'approche Zéro Dégât</h1>
+    
+    <p class="lead text-xl text-gray-600 mb-8 border-l-4 border-blue-500 pl-4">
+      Un évier rempli d'eau stagnante et malodorante est le classique ennemi du foyer. La réaction instinctive de verser le premier bidon de liquide corrosif acheté au supermarché est non seulement désastreuse pour l'eau bruxelloise, mais potentiellement fatale pour vos canalisations en plastique (PVC). Comment désintégrer un bouchon de résidu organique sans fracturer l'étanchéité de vos tuyaux ? Guide.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">1. Comprendre l’anatomie de votre évier bruxellois commun</h2>
+    <p class="text-gray-700 mb-4">
+      Afin d'agir sans risquer la catastrophe technique, il faut visualiser ce qui se cache sous votre meuble de salle de bain ou de cuisine. L'architecture basique comporte :
+    </p>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>La bonde :</strong> Le filtre en inox visible, souvent entremêlé de longs cheveux ou de poils de barbe.</li>
+      <li><strong>Le trop-plein :</strong> Ce petit trou supérieur ou cette fente qui protège le lavabo contre les débordements (Mais qui crée une faille si vous utilisez une ventouse sans l'obturer).</li>
+      <li><strong>Le Siphon :</strong> Le réceptacle principal (en "U" ou cylindrique) prévu pour retenir environ 3 cm d’eau constante. Sa structure forme le « bouchon hydraulique » évitant que les pires odeurs de l’égout n’arrivent jusqu'à vos narines. 90% des bouchons (graisses de friture figées, shampoings, crèmes, reste de café) stagnent précisément ici.</li>
+      <li><strong>Les joints d'étanchéité :</strong> Des bagues en caoutchouc très sensibles à la torsion, à la sécheresse, et à l'acide caustique intense.</li>
+    </ul>
+
+    <!-- SECTION 2 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">2. Pourquoi les agents chimiques sont de faux amis destructeurs</h2>
+    <p class="text-gray-700 mb-4">
+      Lorsque vous versez de la soude liquide caustique en bouteille industrielle sur un bouchon de graisse impénétrable, voici la réalité thermodynamique à venir sous le lavabo :
+    </p>
+
+    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
+      <h4 class="text-xl font-bold text-gray-800 mb-3">La réaction chimique exothermique et ses conséquences :</h4>
+      <p class="text-gray-700 mb-4">
+        Le liquide brûle la surface et monte quasi instantanément à haute température (parfois au dessuis de 80°C). Dans les conduits en fonte ou métal des vieux bâtiments, le risque reste minime. Cependant, les constructions modernes de Bruxelles sont munies de dérivations en PVC ou PVC flexible (Polyéthylène). Ces plastiques résistent mal à une stagnation de liquide brûlant causée par le blocage. Conséquence ? Le tuyau à coude peut s'affaisser, se ramollir, se percer. De plus :
+      </p>
+      <ul class="list-none space-y-3 mb-4 text-gray-700">
+        <li class="flex items-center"><span class="text-red-600 mr-2">✗</span> Cuisson, assèchement puis fissuration du joint en caoutchouc retenant le filetage.</li>
+        <li class="flex items-center"><span class="text-red-600 mr-2">✗</span> Agglomération avec des protéines (cheveux ou poils) créant un ciment intouchable après 24 heures.</li>
+        <li class="flex items-center"><span class="text-red-600 mr-2">✗</span> Empoisonnement direct de l'air de votre domicile (émanations de fumées corrosives non ventilées).</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">3. La solution mécanique : Le Démontage manuel du siphon</h2>
+    <p class="text-gray-700 mb-4">
+      C'est l'action la plus sûre, la plus écologique et la plus saine pour le matériel existant. Voici la méthode sans danger qui supprime de l'équation l'ensemble du stress de tuyauterie :
+    </p>
+    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-2">
+      <li>Videz manuellement au maximum l'eau stagnante présente dans l'évier avec une grosse casserole et une éponge.</li>
+      <li>Glissez une <strong>bassine suffisamment large</strong> (ou un seau) sous la configuration sous-jacente du meuble, idéalement garnie de feuilles d'essuie-tout ou serpillère.</li>
+      <li>Localisez le "bol" terminal situé en-dessous du tuyau vertical de l'évier. Dévissez-le uniquement à la force de vos mains (n'utilisez surtout pas de pince multiprise affûtée qui va écailler ou craquer le filetage plastique fragile).</li>
+      <li>Lorsque ça tourne, une eau poisseuse (chargée d'odeurs intenses) va tomber rapidement : laissez l'effusion de crasse grasse se faire avec gravité.</li>
+      <li>Videz ce bol (et le bloc amalgamé immonde qui doit s'y trouver) dans la poubelle un un sachet à part.</li>
+      <li>Vérifiez la présence du <strong>petit ruban en caoutchouc noir (le "O-ring" ou joint)</strong>. Nettoyez le siphon, replacez le joint bien à plat et serrez fermement mais humainement (sans forcer). Si le joint est complètement cuit et s'émiette, ne remontez pas ! Allez en acheter un avec l'ancien pour modèle chez le Brico de votre quartier (Cela coûte moins d'un euro).</li>
+    </ol>
+
+    <!-- SECTION 4 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">4. Le duo Bicarbonate / Vinaigre Blanc pour les écoulements ralentis</h2>
+    <p class="text-gray-700 mb-4">
+      L'outil d'entretien majeur d'un réseau de petite évacuation n'est pas un furet lourd mais bien l'usage des produits naturellement oxydants.
+    </p>
+    <p class="text-gray-700 mb-4">
+      Lorsque l'évier "glougloute" ou que l'évacuation de l'eau de rinçage se fait de plus en plus lente semaine après semaine, agir avant l'obstruction totale est la clé, il faut décomposer les huiles.
+    </p>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>Le protocole préventif :</strong> Saupoudrez 200 grammes de bicarbonate ou de lourd cristaux de soude pure au fond de la bonde sèche. Versez immédiatement par-dessus un demi litre de Vinaigre Blanc chaud. Une réaction d'effervescence impressionnante se déclenche.</li>
+      <li><strong>Le bouchon anti-volatilisation :</strong> Mettez un chiffon lourd par dessus la bonde afin que la mousse chimique effervescente agisse vers le bas de la canalisation, dissolvant doucement savon graisseux et impuretés dans les coudes. </li>
+      <li><strong>Activation :</strong> Terminez par une grande bouilloire d’eau chaude, repoussant le dépôt dans le réseau principal avec vélocité.</li>
+    </ul>
+
+    <!-- SECTION 5 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">5. Quand le nettoyage du siphon ne suffit plus</h2>
+    <p class="text-gray-700 mb-4">
+      Vous avez tout démonté, le siphon est étincelant, vous remontez fidèlement le système, vous ouvrez le robinet... Et l'eau finit inévitablement par remonter lentement. C'est le constat implacable : l'agglomérat fautif ne situe pas sous l'évier, mais plus loin, dissimulé dans les murs de la maison ou la dalle de sol.
+    </p>
+    <p class="text-gray-700 mb-6 font-semibold border-l-4 border-blue-500 pl-4">
+      Si le bouchon est dans la décharge encastrée, toutes vos solutions à portée de bras ou via des pompes à vide ne feront rien ou, pire, briseront d'autres jonctions sous pression hydraulique dans le sol. Il est temps de solliciter un équipement à câble rotatif (furet électrique de pros). C'est le moment d'appeler l'expertise afin d'aspirer le problème par l'intérieur profond.
+    </p>
+
+    <!-- CTA BANNER -->
+    <div class="my-12">
+      <CTABanner 
+        title="Vos tuyaux réclament un pro et un traitement doux ?"
+        subtitle="Nos plombiers déboucheurs de la région bruxelloise sont équipés de furets mécaniques professionnels qui respectent vos installations tout en déchiquetant les bouchons lointains. Intervention expresse, tarif au forfait."
+      />
+    </div>
+
+    <!-- CONCLUSION -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">Conclusion</h2>
+    <p class="text-gray-700 mb-4">
+      Prendre soin de la plomberie revient à bannir la chimie agressive de vos placards. Une majorité d'évier se guérit simplement par l’hygiène manuelle prévenante (retrait de la bonde, vidange du système du siphon inférieur) ou via l'emploi de cristaux de soude écologiques. Dès que le bouchon se camoufle au delà du meuble et que votre écoulement s'en retrouve prisonnier, l'intervention mécanique modérée prodiguée par un expert représente la seule assurance pour éviter d'endommager gravement l'ossature interne de votre habitation.
+    </p>
+
+  </article>
+</Layout>

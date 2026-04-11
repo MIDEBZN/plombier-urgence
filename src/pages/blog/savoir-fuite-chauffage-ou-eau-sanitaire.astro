@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Comment savoir si une fuite vient du chauffage ou de l'eau sanitaire ?" 
+  description="L'eau s'infiltre dans votre mur mais vous ne savez pas d'où elle vient ? Apprenez à différencier une fuite de chauffage central d'une fuite d'eau sanitaire." 
+  faqs={[
+    {
+      q: "Quel est le symptôme principal d'une fuite de chauffage ?",
+      a: "Le symptôme majeur est la baisse fréquente de la pression indiquée par le manomètre de votre chaudière (qui descend en dessous de 1 bar) nécessitant de remettre de l'eau souvent."
+    },
+    {
+      q: "Le test du compteur fonctionne-t-il pour une fuite de chauffage ?",
+      a: "Non. Le chauffage est un réseau fermé. L'eau tourne en boucle entre la chaudière et les radiateurs. Le compteur VIVAQUA ne bougera pas s'il y a une fuite de chauffage, sauf si vous laissez le robinet de remplissage grand ouvert."
+    },
+    {
+      q: "Qu'est-ce qu'une fuite sur réseau sanitaire ?",
+      a: "Il s'agit d'une fuite sur l'eau qui sort des robinets (eau froide sous la pression de la ville, ou eau chaude sanitaire sortant du boiler). La fuite sanitaire fera tourner votre compteur d'eau en continu."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Fuite Chauffage vs Eau Sanitaire</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔎 Diagnostic Technique</span>
+        <span class="blog-date">Mis à jour : Avril 2026</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Comment savoir si une fuite vient du chauffage ou de l’eau sanitaire ?</h1>
+
+      <p class="blog-intro">Une tache d'humidité brunâtre apparaît mystérieusement sur le plafond de votre salon. Évidemment, vous suspectez une fuite d'eau, mais lorsque le plombier vous demande par téléphone : <em>"C'est l'eau sanitaire ou le chauffage ?"</em>, vous restez muet. Distinguer l'origine d'une fuite est crucial car ces deux réseaux fonctionnent de manière totalement différente au sein de votre habitation bruxelloise.</p>
+
+      <p class="blog-intro">Se tromper de diagnostic peut retarder l'intervention, alourdir la facture, et faire perdurer les dégâts. Dans cet article, nous allons vous apprendre les méthodes infaillibles pour jouer les détectives et savoir avec certitude si le tuyau percé est celui de vos radiateurs (chauffage central) ou celui de votre douche (eau chaude/froide sanitaire).</p>
+
+      <div class="blog-toc card">
+        <h2>Méthodes de diagnostic</h2>
+        <ol>
+          <li><a href="#comprendre-reseaux">Comprendre la différence (Circuit Fermé vs Circuit Ouvert)</a></li>
+          <li><a href="#manometre">L'indice roi pour le chauffage : La baisse du manomètre</a></li>
+          <li><a href="#test-compteur">L'indice roi pour le sanitaire : Le compteur VIVAQUA tourne</a></li>
+          <li><a href="#temperature">L'astuce de la température du mur</a></li>
+          <li><a href="#qui-appeler">Chauffagiste ou plombier ? Qui contacter ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="comprendre-reseaux">1. Comprendre la différence (Circuit Fermé vs Circuit Ouvert)</h2>
+      <p>Pour trouver le coupable, il faut comprendre l'architecture de la plomberie d'une maison.</p>
+      
+      <ul>
+        <li><strong>L'eau sanitaire (Circuit Ouvert) :</strong> C'est l'eau propre, acheminée par VIVAQUA à une pression de 3 à 5 bars. Elle passe par votre compteur, chauffe dans le boiler (pour l'eau chaude) et sort par le robinet pour être immédiatement jetée dans les égouts. Elle n'est jamais récupérée.</li>
+        <li><strong>Le réseau de chauffage (Circuit Fermé) :</strong> C'est la boucle de vos radiateurs ou de votre plancher chauffant. L'eau y est introduite manuellement via une vanne de remplissage jusqu'à une pression de 1.5 bar. Ensuite, elle tourne <em>en boucle</em> grâce à un circulateur : Chaudière ➔ Radiateur ➔ Chaudière. C'est toujours la même eau (souvent noirâtre et chargée en magnétite).</li>
+      </ul>
+
+      <h2 id="manometre">2. L'indice roi pour le chauffage : La chute du Manomètre</h2>
+      <p>Puisque le chauffage est en circuit fermé, sa contenance est limitée (par exemple, 100 litres d'eau pour toute la maison). S'il y a une fuite, même infime (l'équivalent d'un demi-verre par jour), l'eau disparaît du circuit et la pression chute inexorablement.</p>
+
+      <h3>Le test du manomètre :</h3>
+      <p>Allez devant votre chaudière au gaz ou au mazout. Cherchez le cadran rond avec une aiguille (le manomètre) ou l'écran digital :</p>
+      <ul>
+        <li>Il doit normalement afficher entre <strong>1.2 et 2.0 bars</strong> (dans la zone verte).</li>
+        <li>Si l'aiguille est dans la zone rouge ou s'approche du <strong>0 bar</strong>, et que votre chaudière s'est mise en sécurité ("Erreur Pression Basse"), c'est probablement une fuite de chauffage.</li>
+        <li><strong>La confirmation finale :</strong> Remettez de la pression via les deux petites vannes de remplissage jusqu'à 1.5 bar. Si le lendemain, la pression est retombée, vous avez 100% de certitude : c'est votre <strong>réseau de chauffage qui fuit</strong> (et non le réseau d'eau de ville).</li>
+      </ul>
+
+      <h2 id="test-compteur">3. L'indice roi pour le sanitaire : Le compteur d'eau tourne</h2>
+      <p>Si la pression de votre chaudière est parfaitement stable à 1.5 bar depuis des semaines, mais que le mur est pourri d'humidité, la fuite vient de l'eau sanitaire.</p>
+
+      <h3>Le test du compteur VIVAQUA :</h3>
+      <p>Comme expliqué dans notre <a href="/blog/comment-faire-test-compteur-fuite-eau">guide complet sur le test du compteur</a>, il suffit de fermer tous vos robinets. Si la petite étoile (ou les chiffres rouges) de votre compteur principal situé à la cave continuent de tourner, l'eau s'échappe de vos tuyaux sous la pleine pression du réseau public. Il s'agit d'une <strong>fuite d'eau sanitaire</strong>.</p>
+      
+      <p><em>Rappel important :</em> Le test du compteur ne couvre que l'eau entrante. Si le compteur ne tourne pas, mais que cela coule quand vous tirez la chasse, le problème vient de l'évacuation (PVC fissuré, joint défectueux).</p>
+
+      <h2 id="temperature">4. L'astuce sensorielle : La température de la tache</h2>
+      <p>Si la fuite s'infiltre à travers un mur ou un plafond, l'examen physique (avec précaution s'il y a de l'électricité proche) peut vous renseigner :</p>
+      
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead>
+            <tr>
+              <th>Observation</th>
+              <th>Cause probable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Le mur/sol est anormalement <strong>CHAUD</strong> (voir fumant en thermographie)</td>
+              <td>Fuite du réseau de chauffage en fonctionnement, ou conduite d'eau Chaude Sanitaire percée.</td>
+            </tr>
+            <tr>
+              <td>L'eau qui goutte est <strong>NOIRE/SOMBRE</strong> et malodorante (odeur métallique)</td>
+              <td>C'est la boue typique d'un circuit de radiateurs. Une décharge à coup sûr du chauffage.</td>
+            </tr>
+            <tr>
+              <td>L'eau qui goutte est <strong>LIMPIDE</strong>, claire (et froide)</td>
+              <td>C'est de l'eau sanitaire (votre consommation).</td>
+            </tr>
+            <tr>
+              <td>L'eau pue les égouts et la lessive</td>
+              <td>Fuite de drainage/évacuation des eaux usées venant du dessus.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="qui-appeler">5. Chauffagiste ou Plombier ? Qui appeler à Bruxelles ?</h2>
+      <p>En Belgique, bien que les métiers se croisent, la distinction est utile selon la gravité du problème :</p>
+
+      <ul>
+        <li><strong>Si c'est l'eau Sanitaire :</strong> Un artisan <strong>Plombier</strong> est le plus qualifié. Il va couper l'arrivée d'eau générale, utiliser ses outils de détection, et souder/remplacer le tuyau d'alimentation ou réparer les décharges.</li>
+        <li><strong>Si c'est le Chauffage :</strong> Même si un plombier qualifié (souvent "Chauffagiste-Sanitariste") peut réparer le tuyau du radiateur, si le problème vient de la chaudière elle-même (le corps de chauffe est percé, le vase d'expansion est mort), il faudra un technicien disposant de l'agrément "G1/G2" (Gaz) pour intervenir sur le bloc thermique.</li>
+      </ul>
+
+      <p>Dans tous les cas de fuite cachée, c'est une <strong>entreprise de recherche de fuite non destructive</strong> qu'il faut contacter en premier ressort, afin de pouvoir localiser le point exact sans démolir au hasard via des caméras thermiques (redoutablement efficaces sur les tuyaux chauds !).</p>
+
+      <div class="blog-cta card">
+        <h3>🚨 Chute de pression ? Compteur qui s’emballe ?</h3>
+        <p>Arrêtez de chercher, laissez la technologie infrarouge faire le travail. Nous couvrons toute dépannage en chauffage et réseaux sanitaires sur Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Expertise diagnostique immédiate : 0465 68 51 58</a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Besoin d'un dépannage Sanitaire / Chauffage ?" subtitle="Agréé assurances. Nous localisons avec précision si votre fuite provient du circuit d'eau ou de votre chaudière." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

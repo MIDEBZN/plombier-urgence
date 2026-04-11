@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Le prix du débouchage change-t-il selon la commune de Bruxelles ?";
+const description = "Uccle, Ixelles ou Anderlecht : payez-vous le même tarif pour un plombier ? Analyse des frais kilométriques, de parking et des zones d'intervention à Bruxelles.";
+
+const faqs = [
+  {
+    "q": "Le tarif de base d'un déboucheur est-il plus élevé dans les communes dites 'riches' (Uccle, Woluwe) ?",
+    "a": "Non, l'acte technique (passer la pompe ou le furet) est au même forfait. Toutefois, certains déboucheurs facturent ce qu'on appelle 'la difficulté logistique'. Les longs déplacements depuis leur base et les frais de stationnement annexes peuvent gonfler la note finale selon votre quartier."
+  },
+  {
+    "q": "Puis-je être facturé pour le stationnement de la camionnette du plombier ?",
+    "a": "Oui, et c'est légal. Si vous habitez dans l'hyper-centre (Bruxelles-Ville 1000) ou à Ixelles dans des rues où le parking professionnel est payant et rare, l'artisan vous répercutera souvent les frais de parcmètre ou le ticket de zone rouge dans sa facture globale."
+  },
+  {
+    "q": "Comment choisir le bon déboucheur pour éviter de payer des frais kilométriques énormes ?",
+    "a": "La règle d'or est de chercher 'Débouchage + Nom de votre Commune' (ex: Plombier débouchage Schaerbeek). Un artisan ayant sa base opérationnelle dans un rayon de 5 km de chez vous offrira les meilleurs délais et annulera généralement toute surtaxe de distance (les fameux frais forfaitaires de 'Mise en route')."
+  },
+  {
+    "q": "Une intervention en dehors des 19 communes de Bruxelles coûte-t-elle plus cher ?",
+    "a": "Oui. Si l'artisan bruxellois franchit le 'Ring' pour intervenir dans le Brabant Flamand (Vilvorde) ou Brabant Wallon (Waterloo), un coût kilométrique de 0,50€ à 1€ par kilomètre supplémentaire ou un forfait 'Hors zone' (de 30 à 50€) s'ajoute inexorablement."
+  },
+  {
+    "q": "La tarification de nuit est-elle unifiée partout à Bruxelles ?",
+    "a": "Absolument. Les majorations d'heures de garde (+50% après 18h, ou +100% à minuit) s'appliquent sur l'acte technique lui-même. Que vous habitiez à Jette ou à Auderghem, ce pourcentage de majoration est défini par l'entreprise et la loi sociale, il ne dépend pas de l'adresse géographique."
+  }
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+  <article class="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-blue-900 mb-6">Le prix d'un débouchage change-t-il selon votre commune à Bruxelles ? La vérité sur les frais</h1>
+    
+    <p class="lead text-xl text-gray-600 mb-8 border-l-4 border-blue-500 pl-4">
+      Régler un problème de tuyauterie bouchée est déjà un investissement imprévu désagréable. Mais une question taraude souvent les habitants des 19 communes de notre capitale : "Paie-t-on le dépannage au même prix si l'on habite Ixelles, Molenbeek ou Watermael-Boitsfort ?" En théorie, l'acte technique d'un plombier obéit aux mêmes règles économiques de la TVA. En pratique, l'urbanisme compliqué de Bruxelles ajoute des variables (Frais kilométriques, Parcmètres de zones) qui font fluctuer la facture. Découvrez comment la géographie impacte votre devis.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">1. L'Acte Technique : Une égalité stricte</h2>
+    <p class="text-gray-700 mb-4">
+      Démontons immédiatement le mythe du tarif "à la tête du client ou au code postal". Une heure de travail en plomberie pour démonter l'émail de vos WC ou la propulsion du furet mécanique demande le même matériel, le même salarié, et la même expertise et force d'outillage, peu importe le prestige de l'avenue. 
+    </p>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>Le Forfait de Base Main-d'œuvre :</strong> Un artisan sérieux aura une grille tarifaire unique pour sa société. Si son forfait "Débouchage manuel" est de 120€, il sera de 120€ à Etterbeek comme à Evere.</li>
+      <li>Cependant, c'est l'encadrement qui entoure la venue du plombier qui constitue le véritable nerf de guerre de la tarification locale.</li>
+    </ul>
+
+    <!-- SECTION 2 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">2. Les Frais de Déplacement (La zone de chalandise)</h2>
+    <p class="text-gray-700 mb-4">
+      Bruxelles est l'une des villes les plus embouteillées d'Europe. Le trajet aller-retour d'un camion plateau-pompe depuis Anderlecht vers Woluwe-Saint-Pierre à 17h ne prend pas 15 minutes, il prend très exactement une heure de perdue sur l'horaire de l'ouvrier, sans pouvoir y facturer le moindre acte d'hydrocurage.  
+    </p>
+    
+    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-3">Comment les déboucheurs s'organisent-ils géographiquement :</h3>
+    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-3">
+      <li><strong>Les grandes sociétés à antennes :</strong> Les cadors du dépannage bruxellois possèdent plusieurs ouvriers répartis aux 4 coins de Bruxelles (Nord, Sud, Centre). Elles garantissent très souvent "Un déplacement Gratuit sur tout Bruxelles". Leur tarif sera plus haut sur l'acte dès de base pour amortir ce réseau de véhicules immensément onéreux, mais sans supplément de zone.</li>
+      <li><strong>Les petits artisans locaux (La facturation kilométrique) :</strong> Le plombier indépendant au top, installé à Molenbeek-Saint-Jean, couvrira les communes limitrophes (Koekelberg, Jette, Anderlecht) sans aucune pénalité. Par contre, si vous l'appelez tout en habitant à l'opposé vers Boitsfort ou Uccle "Extrême" près de la forêt, il vous comptera souvent entre <strong>30€ et 50€ de frais de longue distance</strong> au-delà de son rayon initial d'intervention de 5 ou 10 kilomètres, qu'il annoncera généralement au départ téléphonique de l'urgence.</li>
+    </ol>
+
+    <!-- SECTION 3 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">3. L'enfer du Parking (Ixelles, Bruxelles 1000 et communes denses)</h2>
+    <p class="text-gray-700 mb-4">
+      Voici le supplément masqué mais parfaitement justifié dont de nombreux Bruxellois se plaignent et font l'objet. 
+    </p>
+    <div class="bg-red-50 p-6 rounded-lg border border-red-200 mb-8">
+      <h4 class="text-xl font-bold text-red-900 mb-3">La taxe du camion en zone rouge :</h4>
+      <p class="text-gray-700 mb-4">
+        Un plombier débarque dans votre rue à l'hyper-centre pour une urgence de canalisation. Il est dans l'incapacité absolue de se garer à l'adresse de son client et ne logera jamais de stationnement proche. 
+        Pour ne pas attraper de lourdes amendes liées à la plaque scannée et aux agents de la voie publique très nombreux, il paiera une série de "Quart d'heures aux horodateurs les plus contraignants". La répercussion légitime sur votre facture est généralement au prix coûtant du ticket public local. C'est inévitable sans place privative à lui offrir.
+      </p>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">4. Le Passage du Ring Central : Sortir de Bruxelles a un vrai Pris Pécuniaire</h2>
+    <p class="text-gray-700 mb-4">
+      Qu'advient-il si le dépannage quitte les 19 communes originelles (Le code postal inférieur à 1300 ou 1900) pour atteindre la périphérie (Zaventem, Rhode-Saint-Genèse, Kraainem, Grimbergen) ?
+    </p>
+    <p class="text-gray-700 mb-4">
+      Les plombiers bruxellois ont une obligation de facturation interprovinciale précise qui induit les coûts de "Franchissement de zone".
+    </p>
+    <ul class="list-none pl-6 mb-6 text-gray-700 space-y-3">
+      <li class="flex items-center"><span class="text-gray-500 mr-2">✅</span> <strong>Taxe forfait :</strong> Un surcoût moyen très généralisé de 25€ à 45€ de "frais d'intervention en Brabant ou Province".</li>
+      <li class="flex items-center"><span class="text-gray-500 mr-2">✅</span> <strong>Frais au kilomètre :</strong> Facturé brutalement une fois le Ring franchi, à concurrence de 0.60€ à 1,00€ par borne au compteur selon la société de transport de l'ouvrier.</li>
+    </ul>
+
+    <!-- SECTION 5 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">5. La recommandation absolue du "Dépannage Géolocalisé"</h2>
+    <p class="text-gray-700 mb-4">
+      L'urgence d'une cave qui stagne l'urine ou de matières fécales nous retire toute rationalité. Ne tapez pas un "SOS général" sur internet sous risque d’attirer un camion pompier du bout diamétral de la Province qui saignera votre code de carte bancaire pour ce service de déplacement déraisonnable : 
+    </p>
+    <p class="text-gray-700 mb-6 font-semibold border-l-4 border-gray-400 pl-4 bg-gray-50 py-3">
+      Assurez la bonne pratique du consommateur : Appelez la centrale proche tout en confirmant le <em>"Monsieur, je suis à Jette, avez-vous un de vos ouvriers dans mon secteur du Nord ce Lundi pour l'immédiateté d'intervention et s'abstenir de frais de déplacements monstrueux?"</em>. Une organisation intelligente locale dépêchera le fourgon le plus rapide, ce qui réduit les temps d’eau stagnante ou d'inondation pour le client concerné de plus d'une plénière d'heure.
+    </p>
+
+    <!-- CTA BANNER -->
+    <div class="my-12">
+      <CTABanner 
+        title="Une canalisation bloquée au beau milieu de la capitale ?"
+        subtitle="Nos plombiers locaux, déployés aux quatre coins des 19 communes de Bruxelles, garantissent une réactivité éclaire sans surtaxes de kilométrages extravagantes ni secrets commerciaux. Transparence téléphonique immédiate."
+      />
+    </div>
+
+  </article>
+</Layout>

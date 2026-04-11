@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Que faire si l’eau remonte dans l’évier ou la douche ?";
+const description = "Urgence inondation : L'eau sale refoule et sort de votre siphon ? Découvrez les 4 réflexes de sauvetage pour stopper l'hémorragie et sauver votre domicile avant l'arrivée du plombier.";
+
+const faqs = [
+  {
+    "q": "Puis-je utiliser un produit déboucheur chimique si l'eau refoule déjà vers le haut de la baignoire ?",
+    "a": "Surtout pas ! C'est la pire erreur. L'eau étant totalement stagnante (ou montante), le litre d'acide ou de soude caustique pur ne rejoindra jamais le bouchon en contrebas. Il se diluera simplement dans l'eau de votre baignoire de surface, la transformant en une piscine chimique très dangereuse."
+  },
+  {
+    "q": "Que signifie le fait que l'eau remonte dans ma douche lorsque mon lave-vaisselle tourne ?",
+    "a": "C'est un classique 'Refoulement Croisé'. La canalisation collective que partagent la douche et la cuisine est complètement bouchée plus loin. Dès que l'électroménager pompe son énorme volume d'eau usée avec force, cette eau rebondit contre le bouchon et ressort par le point de gravité le plus bas d'un siphon de votre logement."
+  },
+  {
+    "q": "Faut-il boucher l'évacuation de la douche avec un tissu humide pour bloquer la montée de l'eau sale ?",
+    "a": "Oui, dans l'extrême urgence, pour protéger un parquet délicat de chambre. Bloquez la bonde (la grille de douche) hermétiquement avec des essuies ou une ventouse appuyée vigoureusement et collée au sol. Ainsi la pression re-descendra vers la cave ou trouvera une issue dans un tuyau moins sensible temporairement."
+  },
+  {
+    "q": "Où se trouve le robinet principal pour bloquer l'eau de toute la maison au compteur ?",
+    "a": "Il est invariablement situé au point d'entrée de la voirie publique dans votre bâti : Généralement à la cave (profondeur, mur côté rue), ou dans le garage au rez-de-chaussée (boitier). Cherchez la grosse molette rouge ou la poignée verte et tournez-la fermement un quart de tour ou à fond vers la droite."
+  },
+  {
+    "q": "Est-ce qu'une pompe manuelle fonctionne pour refouler l'inondation ?",
+    "a": "L'outil à main 'Ventouse' peut exercer une petite pression et des micros chocs. Si le malheur est très local, l'amas organique de saleté se déliera, l'eau sale s'en ira en glougloutant joyeusement."
+  }
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+  <article class="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-blue-900 mb-6">L’eau sale remonte dans l’évier ou la douche : 4 Réflexes d'Urgence</h1>
+    
+    <p class="lead text-xl text-gray-600 mb-8 border-l-4 border-blue-500 pl-4">
+      C'est la vision d’horreur de tout locataire : vous n’avez touché à aucune vanne, mais l'eau nauséabonde (savon noirâtre des tuyauteries ou pires déjections pures) jaillit lentement de la bonde de votre douche italienne ou bouillonne insidieusement dans le bac de l'évier de votre cuisine. Il s'agit d'un "Refoulement Central". Vous n’avez que quelques minutes pour éviter la catastrophe (et l'inondation coûteuse des lattes du sol de vos pièces). Voici le protocole de sauvetage absolu immédiat.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">Réflexe 1 : Coupez l'origine mécanique de l'eau (Les machines)</h2>
+    <p class="text-gray-700 mb-4">
+      Si l'eau remonte violemment sans que vous n'ayez aucun robinet sanitaire d'ouvert dans la pièce d'eau de la montée, elle provient nécessairement par vases communicants d'une puissante pompe active située autre part dans votre habitat Bruxellois. 
+    </p>
+    <div class="bg-red-50 p-6 rounded-lg border border-red-200 mb-8">
+      <h4 class="text-xl font-bold text-red-900 mb-3">Stoppez net les appareils électroménagers</h4>
+      <p class="text-gray-700 mb-4">
+        Le lave-vaisselle vient d'entamer son cycle de rinçage à l'eau de fond brûlante ? La machine à laver le linge (lave-linge) procède à sa farouche étape de "Vidange & Essorage" ? Débranchez impérieusement ou pressez directement le bouton d'annulation rouge Arrêt de ceux-ci. Ce sont des propulseurs acharnés d'une centaine de litres en une poignée de secondes. Un tuyau bouché au mur du garage forgera mécaniquement l’afflux de ces cent litres vers la salle de bain du bas. 
+      </p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">Réflexe 2 : Barrer et Condamner la source générale</h2>
+    <p class="text-gray-700 mb-4">
+      Le drame provient peut-être d’un membre de votre propre famille qui se douche allègrement deux étages plus haut, complétement innocent de la crise nauséabonde que vous subissez dans votre cuisinette à ce même moment ? L'erreur classique est de crier d'en bas sans succès : Prenez les choses en main au lieu de regarder monter la marée avec d'intenses battements cardiaques !
+    </p>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>Fermez la vanne principale immédiatement :</strong> Précipitez-vous au <em>Compteur d'Eau Central</em> de la maison ou de l'appartement (Localisé soit dans la cave côté ruelle, sous votre évier principal, ou dans le hall commun) et "Vissez" le gros robinet avec une force désespérée dans le sens des aiguilles d'une montre pour couper intégralement la pression de la ville à tout le bâti.</li>
+    </ul>
+
+    <!-- SECTION 3 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">Réflexe 3 : Colmater provisoirement la bonde et Sauver son Plancher</h2>
+    <p class="text-gray-700 mb-4">
+      L'eau brune est passée par-dessus le rebord étanche en inox de votre douche italienne et menace directement de couler sur le fragile parquet onéreux du couloir.
+    </p>
+    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-3">
+      <li><strong>Le Barrage absorbant :</strong> Formez un rouleau en boudin avec toutes vos grandes serviettes de plage éponge autour du seuil du meuble inondé pour éponger la majorité flagrante de premier ruissellement à l'extérieur. </li>
+      <li><strong>Bouchon de gravité de Siphon :</strong> Forcez le refoulement à se contenir ! Plaquez impatiemment le caoutchouc lourd de la corolle de votre <em>Ventouse</em> sanitaire sur le trou béant fuyant. Sans faire des gestes de pompe, maintenez fermement le bâton de bois avec d'immenses pressions vers le bas physique durant très logues minutes afin que la physique réagisse. N'ayant plus la faculté d'échapper par le haut à l'air libre, le poids de la charge d'égout pourrait finalement repousser ses matières sous la résistance du bouchon, ou "déborder autre part" à un niveau bien moins menaçant (La cave).</li>
+    </ol>
+
+    <!-- SECTION 4 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">Réflexe 4 : La seule tentative manuelle tolérée (Ne touchez pas aux acides)</h2>
+    <p class="text-gray-700 mb-4">
+      Rappel formel et avertissement absolu : <strong>Ne jetez jamais un flacon de Destop, Soude caustique, gel industriel pur au coeur d'une eau dormante qui ne descend pas.</strong> La réaction du bouillonnement chimique, sans échappatoire, ruinera instantanément et de plein fouet tout le vernis de votre baignoire de valeur, vos chromes piqués, en diffusant d'abominables gaz de chlore brulantes dans toute l'enceinte close et saturée. Les déboucheurs l'inhaleront à leur arrivée sur place.
+    </p>
+    <p class="text-gray-700 mb-4">
+      Essorez plutôt le bassin avec un seau pour libérer le champ : Puis armez la pompe mécanique de vos gestes très athlétiques en pressant de courtes et rudes estocades afin d'ébranler le bouchon (sans appel d'air). Si la flaque stagne inexorablement, la colonne principale d’une taille de 90 millimètres est comblée de bétons gras. Admettez l'échec structurel et n’endommagez pas la canalisation !
+    </p>
+
+    <!-- SECTION 5 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">L'ultime appel aux Experts : Prenez une Photo</h2>
+    <p class="text-gray-700 mb-6 font-semibold border-l-4 border-gray-400 pl-4 bg-gray-50 py-3">
+      Vous avez coupé votre distribution de Vivaqua : Le niveau dans l'évacuation de la cabine ne bouge désormais pas. Immortalisiez de suite l'événement via un flash "Smartphone" (La couleur obscure du liquide ou la présence de miettes d'aliments renseigneront immédiatement les experts d'investigation sur la teneur du barrage profond et les responsabilités assurantielles potentielles ou fautes du voisinage) et téléphonez à l'équipe dédiée de votre province pour programmer le dégagement lourd sous "Haute-Pression ou Débouchage Machine furet lourd".
+    </p>
+
+    <!-- CTA BANNER -->
+    <div class="my-12">
+      <CTABanner 
+        title="L'eau menace le sol fragile de votre salle d'eau Bruxelloise ?"
+        subtitle="Appelez-nous d'urgence 24/7. Ne laissez pas un refoulement putride endommager durablement la salubrité de vos intérieurs ou créer des pourritures sanitaires. Intervention hydro-mécanique éclaire dans l'heure."
+      />
+    </div>
+
+  </article>
+</Layout>

@@ -1,0 +1,71 @@
+﻿
+> new-plombier@0.0.1 build
+> astro build
+
+[2m00:21:40[22m [34m[content][39m Syncing content
+[2m00:21:40[22m [34m[content][39m Synced content
+[2m00:21:40[22m [34m[types][39m Generated [2m178ms[22m
+[2m00:21:40[22m [34m[build][39m output: [34m"static"[39m
+[2m00:21:40[22m [34m[build][39m mode: [34m"static"[39m
+[2m00:21:40[22m [34m[build][39m directory: [34mC:\Users\MEDLO\Desktop\coding projects\new plombier\dist\[39m
+[2m00:21:40[22m [34m[build][39m Collecting build info...
+[2m00:21:40[22m [34m[build][39m [32mΓ£ô Completed in 423ms.[39m
+[2m00:21:40[22m [34m[build][39m Building static entrypoints...
+node.exe : 
+[31m[1m00:21:47[22m 
+[ERROR] [vite][39m 
+[31mΓ£ù[39m Build 
+failed in 6.25s
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (  
+  [31m[1m00:21:...fail   
+ ed in 6.25s:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+Expected "}" but found 
+"v├⌐rit├⌐"
+  [1mLocation:[22m
+    [4mC:/Users/MEDLO/Des
+ktop/coding projects/new p
+lombier/src/pages/blog/fui
+te-eau-augmente-facture-br
+uxelles.astro:33:73[24m
+  [1mStack trace:[22m
+[2m    at 
+failureErrorWithLog (C:\Us
+ers\MEDLO\Desktop\coding 
+projects\new plombier\node
+_modules\vite\node_modules
+\esbuild\lib\main.js:1467:
+15)
+    at responseCallbacks.<
+computed> (C:\Users\MEDLO\
+Desktop\coding 
+projects\new plombier\node
+_modules\vite\node_modules
+\esbuild\lib\main.js:603:9
+)
+    at 
+Socket.readFromStdout (C:\
+Users\MEDLO\Desktop\coding
+ projects\new plombier\nod
+e_modules\vite\node_module
+s\esbuild\lib\main.js:581:
+7)
+    at addChunk (node:inte
+rnal/streams/readable:563:
+12)
+    at Readable.push (node
+:internal/streams/readable
+:394:5)[22m

@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Comment éviter qu’une canalisation se bouche à nouveau ?";
+const description = "Évitez le retour du plombier ! Découvrez les 5 gestes quotidiens en prévention, les filtres magiques et l'entretien naturel pour des égouts toujours propres.";
+
+const faqs = [
+  {
+    "q": "Vider de l'eau bouillante chaque soir est-il vraiment utile pour l'évier ?",
+    "a": "Oui, c'est la prévention numéro une. La chaleur liquéfie les huiles de cuisson résiduelles collées sur la paroi en PVC avant qu'elles ne refroidissent et se solidifient pendant la nuit, empêchant la formation silencieuse du dangereux bouchon de graisse calcaire."
+  },
+  {
+    "q": "Puis-je utiliser de l'eau de javel pure pour garder mes conduits sains et sans bouchon ?",
+    "a": "Non. L'eau de javel désinfecte les bactéries de surface et blanchit la porcelaine, mais elle ne dissout ni le papier, ni les cheveux, ni la graisse. Pire : elle tue les saines bactéries des fosses septiques et abîme les microscopiques joints en caoutchouc."
+  },
+  {
+    "q": "Le vinaigre et le bicarbonate de soude préviennent-ils les gros bouchons dans les toilettes ?",
+    "a": "Ils sont utiles pour l'évier ou la douche afin de tuer les odeurs et faire fondre le petit tartre hebdomadaire de savon. Pour le WC et la grosse colonne fécale, ces produits doux de grand-mère ne sont pas assez agressifs chimiquement ni assez volumineux pour rincer un amas d'excréments bloqué à 10 mètres."
+  },
+  {
+    "q": "A quelle fréquence dois-je dévisser mes siphons de salle de bain pour bien faire ?",
+    "a": "Tous les 3 à 4 mois (à chaque changement de saison). Surtout dans la salle de bain, car les poils, la crème à raser et les cheveux longs s'y empêtrent constamment sur la vis centrale de retenue. Cinq minutes de nettoyage évitent un débordement fâcheux sur votre carrelage."
+  },
+  {
+    "q": "Même en faisant attention, ça refoule. Faut-il nettoyer tout le réseau de la maison annuellement ?",
+    "a": "Il n'est pas nécessaire d'hydrocurer chaque maison chaque année si vous faites attention. Cependant, pour un très vieil immeuble bruxellois aux tuyaux en fonte, un curage préventif professionnel (et caméras) tous les 5 ou 7 ans supprime le tartre et rajeunit totalement l'écoulement fondamental."
+  }
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+  <article class="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-blue-900 mb-6">Comment éviter qu’une canalisation se bouche à nouveau ? 5 actions vitales</h1>
+    
+    <p class="lead text-xl text-gray-600 mb-8 border-l-4 border-blue-500 pl-4">
+      Le déboucheur vient de quitter votre domicile de la région bruxelloise. L'eau de votre évier s'écoule de nouveau avec ce merveilleux petit tourbillon fluide et la facture a été salée. La pire erreur à faire désormais est de reprendre vos mauvaises routines hygiéniques. Une tuyauterie nouvellement nettoyée est vierge : c'est le moment idéal pour instituer « la prophylaxie domestique ». Voici les commandements drastiques pour ne plus jamais connaître l'anxiété du débordement fétide de vos sanitaires.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">1. La révolution matérielle : L'installation de Crépinettes et de Filtres</h2>
+    <p class="text-gray-700 mb-4">
+      Le combat contre les bouchons commence par une barrière physique. Ce qui ne rentre pas dans le tuyau ne pourra mathématiquement pas le boucher au fond. L'erreur la plus préjudiciable est de laisser la grande ouverture béante d'une douche italienne ou d'un évier de cuisine accueillir tous les gravats de votre vie.
+    </p>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>Le filtre tamis d'évier :</strong> Un petit réceptacle métallique perforé posé sur la bonde ne coûte que 3 euros au supermarché. Il interceptera le grain de riz mortel, le petit pois, et les résidus d’épluchures. Videz-le dans la poubelle (et non dans le tuyau à côté) après chaque vaisselle.</li>
+      <li><strong>Le piège à cheveux de baignoire :</strong> Le cheveu long humain (associé aux mousses de shampoing collantes) est le constituant le plus coriace des "moutons" de canalisation, tressant des filets presque incassables comme des fils de nylon. Placez une grille de rétention souple (une fleur de douche en silicone par exemple) qui piégera les fibres pilifères avant la barrière du clapet chromé.</li>
+    </ul>
+
+    <!-- SECTION 2 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">2. Bâtir le rituel hebdomadaire thermique de dissolution</h2>
+    <p class="text-gray-700 mb-4">
+      Le gras figé est le mortier de votre plomberie. Lorsque vous rincez une poêle beurrée de cuisson, l’eau tiède (40°C) emporte la graisse avec elle de manière liquide. Mais une fois glissée dans le tuyau encastré dans votre mur de cuisine froid ou au sol de la cave (15°C), la chute thermique va instantanément geler et solidifier ce fil de beurre ou de saindoux blanc contre la paroi en PVC dur.
+    </p>
+    <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 mb-8">
+      <h4 class="text-xl font-bold text-blue-900 mb-3">La règle de la Bouilloire du Jeudi :</h4>
+      <p class="text-gray-700 mb-4">
+        Choisissez un jour de la semaine. Faites bouillir un plein litre d'eau brûlante (100°C) et versez-le impérieusement et sans précipitation directe au fond de la cuvette de l'évier propre. L'onde de choc thermique balayera sur son trajet la fine couche de film gras fraîchement accumulée avant qu'elle ne devienne une brique de saponification calcaire de 4 centimètres d'épaisseur. C'est l'essence même de la propreté.
+      </p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">3. Proscrire catégoriquement les "Lourds Faux-Ami" des WC</h2>
+    <p class="text-gray-700 mb-4">
+      Votre cabinet sanitaire n'est ni un broyeur d'ordures de cantine, ni la poubelle blanche mystique qui fait tout disparaître sous terre. Le WC ne supporte que trois choses molles : <strong>L'Eau, L'Urine et les Excréments.</strong> Le reste est en sursis de pénalité.
+    </p>
+
+    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-3">Interdiction ferme et non-négociable :</h3>
+    <ul class="list-none pl-6 mb-6 text-gray-700 space-y-3">
+      <li class="flex items-center"><span class="text-red-500 mr-2">➜</span> <strong>Les lingettes intimes "biodégradables" :</strong> Même celles soi-disant estampillées sans risque sur l'emballage ; elles mettent des mois à se délayer en laboratoire et jamais instantanément dans un coude coudé en fonte de rue.</li>
+      <li class="flex items-center"><span class="text-red-500 mr-2">➜</span> <strong>Les tampons et protections féminines :</strong> Conçus précisément pour enfler et absorber jusqu'à 20 fois leur poids initial d'humidité, ils gonfleront monstrueusement dans le tuyau central.</li>
+      <li class="flex items-center"><span class="text-red-500 mr-2">➜</span> <strong>L'Huile de friture pure :</strong> Jeter l'huile usagée de la friterie du week-end causera une catastrophe dantesque. Ne versez jamais de matière grasse dans une évacuation. Stockez-la dans une bouteille pour le parc à conteneurs de la ville.</li>
+    </ul>
+
+    <!-- SECTION 4 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">4. Le couple magique mensuel (Bicarbonate et Vinaigre)</h2>
+    <p class="text-gray-700 mb-4">
+      Oubliez la panoplie des bouteilles de Destop ou de déboucheur acide jaune de la supérette qui corrodent violemment les anneaux en caoutchouc d'étanchéité sous vos bacs (Et dont l'usage mensuel ruine les soudures). Pour la prévention, restons chimiquement léger.
+    </p>
+    <p class="text-gray-700 mb-6 border-l-4 border-gray-400 pl-4 py-2 bg-gray-50">
+      <strong>La recette préventive :</strong> Une fois par mois, déposez généreusement 3 cuillères à soupe de "Bicarbonate de Soude technique" au creux des éviers. Par-dessus, versez doucement un verre entier de Vinaigre blanc (Acide Acétique doux). La prodigieuse réaction moussante effervescente s'attaque bio-chimiquement et dissoudra les minuscules adhérences de savon et neutralisera farouchement les moisissures malodorantes naissantes. Attendez 20 minutes (pour brûler les algues bactériennes), puis rincez énergiquement à l'eau très chaude. Coût de l'opération : Vingt centimes.
+    </p>
+
+    <!-- SECTION 5 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">5. Chassez puissamment, Chassez richement</h2>
+    <p class="text-gray-700 mb-4">
+      Pour les personnes possédant une chasse d'eau à double commande avec système ultra-économe : Ne soyez pas "trop" écologiques lors d'une commission solide. Si vous ne délivrez que 3 misérables litres d'eau pour propulser un demi rouleau de papier WC et une lourde masse fécale, ils ne traverseront pas les 8 mètres horizontaux de votre dalle en béton pour rejoindre la rue... ils caleront tristement à mi-chemin. Utilisez la grande chasse quand l'exigence de la masse le demande.
+    </p>
+
+    <!-- CTA BANNER -->
+    <div class="my-12">
+      <CTABanner 
+        title="Une odeur persistante malgré vos efforts préventifs ?"
+        subtitle="Il s'agit peut-être d'un défaut de vos joints d'évent ou d'un siphon poreux non visible. Demandez à nos techniciens de réparer l'intégrité de votre réseau intérieur à Bruxelles."
+      />
+    </div>
+
+    <!-- CONCLUSION -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">Conclusion</h2>
+    <p class="text-gray-700 mb-4">
+      S'immuniser contre le retour traumatisant de la flaque putride du plombier exige peu d'efforts budgétaires. Le filtre en résille posé, le bannissement impérial des lingettes, et l'apport brûlant d'une eau chauffée bi-hebdomadairement suffiront. Si malgré cette discipline scrupuleuse, vos canalisations souffrent d'une lente récidive, le mal est malheureusement logé "hors de votre portée biologique". L'inclinaison d'un tuyau affaissé, ou l'immersion pernicieuse des racines de jardin sont à l'œuvre. Le recours à la caméra vidéo d'un professionnel deviendra alors inévitable et le seul moyen d’accuser l'infrastructure au lieu de vos gestes propres.
+    </p>
+
+  </article>
+</Layout>

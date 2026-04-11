@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Combien coûte l'entretien de chaudière à Bruxelles ?" 
+  description="Découvrez les tarifs 2026 pour un entretien de chaudière gaz et mazout à Bruxelles. Faut-il prendre un contrat omnium, annuel, ou payer à l'acte ?" 
+  faqs={[
+    {
+      q: "Quel est le prix moyen d'un entretien chaudière gaz à Bruxelles ?",
+      a: "À Bruxelles, un entretien standard pour une chaudière murale au gaz naturel (type Bulex ou Vaillant) coûte en moyenne entre 120€ et 160€ (TVA 6% comprise). Ce tarif inclut généralement le déplacement, le nettoyage de l'appareil et la délivrance de l'attestation PEB."
+    },
+    {
+      q: "Est-il plus intéressant de prendre un abonnement (contrat d'entretien) ?",
+      a: "Un contrat d'entretien coûte environ 15€ à 20€ par mois (soit 180€ à 240€ par an). Il est intéressant pour les modèles anciens très exposés aux pannes, car ces contrats incluent souvent la gratuité absolue des frais de déplacements en urgence hivernale 24/7."
+    },
+    {
+      q: "L'entretien d'une chaudière au mazout coûte-t-il plus cher ?",
+      a: "Oui, la suie du mazout étant beaucoup plus dense, l'intervention est plus longue et plus salissante. Comptez entre 180€ et 230€ pour l'entretien, en incluant obligatoirement le remplacement régulier du gicleur à mazout."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Prix contrat entretien chaudière</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💶 Tarifs & Coûts</span>
+        <span class="blog-date">Mis à jour : Avril 2026</span>
+        <span class="blog-read">⏱ 5 min de lecture</span>
+      </div>
+
+      <h1>Combien coûte un contrat d'entretien chaudière gaz à Bruxelles ? (Tarifs)</h1>
+
+      <p class="blog-intro">Vous venez de recevoir un courrier du fabricant (Vaillant, Junkers...) ou d'une société d'énergie vous proposant une belle offre d'omnium mensuelle en échange d'une sérénité totale cet hiver. Ou vous êtes un jeune <a href="/blog/entretien-chaudiere-obligatoire-bruxelles-locataire">locataire qui doit budgétiser l'obligation légale PEB tous les 2 ans</a>. Quelle que soit votre situation, la question financière reste complexe face à la myriade d'offres tarifaires à Bruxelles.</p>
+
+      <p class="blog-intro">Faut-il payer à chaque fois "One-shot" chez le petit artisan de son quartier (souvent la solution la plus basique et plébiscitée), ou souscrire à de luxueux contrats mensuels (15€/mois) chez les grands distributeurs qui promettent zéro de frais de dépannage ? Examinons les prix du marché bruxellois.</p>
+
+      <div class="blog-toc card">
+        <h2>Naviguer dans les prix de l'entretien (2026)</h2>
+        <ol>
+          <li><a href="#deplacement">L'intervention (One-shot) vs l'Abonnement annuel mensuel</a></li>
+          <li><a href="#tarifs">Le tableau des prix réels à Bruxelles lissés</a></li>
+          <li><a href="#omnium">Faut-il craquer pour les contrats All-in (Omnium Totale) ?</a></li>
+          <li><a href="#tva">Rappel sur la TVA réduite (6% ou 21%)</a></li>
+        </ol>
+      </div>
+
+      <h2 id="deplacement">1. L'intervention exclusive (à la carte) vs l'Abonnement</h2>
+      <p>Le marché du chauffage s'est grandement transformé avec l'avènement des fournisseurs d'énergie (Engie, Luminus) qui agissent comme de gros recruteurs. Ils privilégient désormais le format abonnement comme sur Netflix ou Spotify.</p>
+      
+      <ul>
+        <li><strong>L'entretien "Ponctuel" (Vous appelez votre artisan vous-même à 140€) :</strong> Vous choisissez le jour, l'artisan local au meilleur prix, et s'il est agréable, vous le rappellerez dans 2 ans. Il n'y a pas le moindre d'engagement contractuel permanent.</li>
+        <li><strong>Le Contrat (Abonnement mensuel de 13€ à 20€) :</strong> Via un prélèvement SEPA automatisé. La société gère le calendrier pour vous. Ils vous appellent de force tous les deux ans pour faire venir un employé (souvent différent d'une année sur l'autre). L'immense avantage est souvent l'inclusion de "déplacements illimités gratuits" si votre radiateur ou brûleur fait des siennes en hiver.</li>
+      </ul>
+
+      <h2 id="tarifs">2. Tableau des prix (Moyennes pratiquées à Bruxelles en 2026)</h2>
+      <p>Les tarifs ci-dessous indiquent la somme moyenne TTC pour une maison ou un appartement standard d'une commune bruxelloise, et incluent l'attestation légale PEB du technicien G1.</p>
+
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead>
+            <tr>
+              <th>Type de Chaudière & Prestation</th>
+              <th>Tarif (à l'acte) constaté</th>
+              <th>Équivalent Abonnement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Chaudière MURALE à Gaz (jusqu'à 35kW)</strong><br/><small>Génère 90% du parc privé : Bulex, Vaillant, Bosch.</small></td>
+              <td>Entre <strong>120€ et 150€</strong></td>
+              <td>De <strong>11€ à 14€</strong> / mois</td>
+            </tr>
+            <tr>
+              <td><strong>Chaudière SOL à Gaz (Anciens modèles en fonte très lourdes)</strong></td>
+              <td>Entre <strong>140€ et 180€</strong></td>
+              <td>De <strong>15€ à 18€</strong> / mois</td>
+            </tr>
+            <tr>
+              <td><strong>Chaudière au MAZOUT / Fioul</strong><br/><small>Nettoyage complet avec ramonage lourd inclus.</small></td>
+              <td>Entre <strong>180€ et 240€</strong></td>
+              <td>De <strong>20€ à 25€</strong> / mois</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="omnium">3. Le mythe des contrats Omnium (L'assurance totale) : Est-ce rentable ?</h2>
+      <p>Certains contrats dits "Gold", "Omnium" ou "Garantie Totale" avoisinent les <strong>30€ à 40€ par mois</strong>.</p>
+      <p>En échange, on vous promet de réparer votre chaudière en moins de 12 heures le <a href="/blog/delai-intervention-moyen-fuite-eau-bruxelles">jour de l'urgence 24/7</a>, ET surtout, de prendre à charge non seulement la main-d'œuvre, mais aussi le prix de TOUTES les pièces de rechange (circulateur à 200€, carte mère à 400€, etc.).</p>
+
+      <h3>Notre Avis de Professionnel Indépendant :</h3>
+      <p>Ce contrat n'est intéressant QUE <strong>si vous êtes propriétaire direct d'une chaudière moyennement ancienne (7 à 12 ans)</strong> que vous souhaitez prolonger artificiellement... qui tombe assez souvent en panne mineure. <br/>Il est absurde de payer un grand contrat pour un locataire (car comme <a href="/blog/entretien-chaudiere-obligatoire-bruxelles-locataire">énoncé par la loi, toutes les grandes pièces sont en fait à charge du propriétaire</a>, le locataire paie l'omnium pour rien !) ou pour une chaudière complètement neuve couverte par ses 2 ans de garantie constructeurs.</p>
+
+      <h2 id="tva">4. L'avantage fiscal des plombiers agrées (TVA à 6%)</h2>
+      <p>Rappelez-vous avant de confier l'entretien de votre chaudière à votre cousin électricien auto-déclaré, que faire appel à une société officielle enregistrée avec numéro d'agrément modifie la TVA.</p>
+      
+      <p>En Belgique, tous travaux d'entretien, de réparation ou de rénovation d'une habitation <strong>ayant plus de 10 ans d'existence</strong> (ce qui englobe l'immense majorité du parc de Forest, Uccle ou Anderlecht) bénéficie d'une tarification très réduite de la <strong>TVA à 6%</strong> au lieu des 21% habituels pour des services.</p>
+      <p>Sur 120€ hors-taxe, cela fait donc 127€ (TTC 6%) contre 145€ (TTC 21%). Vous devenez ainsi légalement couvert sans vraiment creuser l'écart de prix.</p>
+
+      <div class="blog-cta card">
+        <h3>🔧 Vous préférez simplement un excellent service sans abonnement forcé ?</h3>
+        <p>Nous facturons nos entretiens de chaudières bruxelloises de manière forfaitaire, claire, et sans aucun engagement caché. Le prix négocié au téléphone est celui que vous paierez !</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander un devis Entretien</a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Entretien Chaudière : Forfait Clair & Attestation Légale" subtitle="Prestations techniques de très haute qualité par des agents frigoristes et chauffagistes agréés." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

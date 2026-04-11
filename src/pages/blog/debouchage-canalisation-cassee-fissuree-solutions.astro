@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqs = [
+  {
+    "q": "Comment savoir si ma canalisation est simplement bouchée ou cassée ?",
+    "a": "Certains signes ne trompent pas : si le débouchage par un furet est impossible (blocage franc métallique ou terreux), si l'eau refoule systématiquement avec des résidus de terre ou de sable, ou si des taches d'humidité profondes/affaissements de terrain apparaissent près des canalisations. L'inspection par caméra endoscopique est la seule méthode de diagnostic 100% fiable."
+  },
+  {
+    "q": "Peut-on déboucher une canalisation si elle est fissurée ?",
+    "a": "Oui, mais avec une extrême précaution ! Il ne faut JAMAIS utiliser d'hydrocurage à haute pression sauvage (plus de 150 bars) ni de furet mécanique rotatif lourd avec une tête coupante. Ces outils risquent d'arracher la conduite fragilisée. Un débouchage doux (basse pression ou manuel léger) est requis avant la vraie réparation."
+  },
+  {
+    "q": "Est-il possible de réparer une canalisation cassée sans faire de tranchée ?",
+    "a": "Absolument. La technique moderne s'appelle le chemisage (ou tubage). Après un nettoyage par jet et fraisage, une gaine en résine époxy est introduite dans le tuyau abîmé puis durcie. Cela recrée un 'tuyau neuf dans le tuyau endommagé' de manière 100% étanche, en évitant la démolition des sols ou des jardins."
+  },
+  {
+    "q": "Qui paie la réparation d'une canalisation enterrée fissurée ?",
+    "a": "Si la cassure se trouve sur le domaine privé (votre terrain, intérieur ou extérieur), les frais vous incombent (voir votre assurance multirisque habitation). Si la fracture se trouve au-delà de votre compteur d'eau/chambre de visite de raccordement, sur la voirie publique à Bruxelles, c'est Vivaqua (ou l'intercommunale locale) qui est responsable."
+  }
+];
+---
+
+<Layout 
+  title="Débouchage canalisation cassée ou fissurée : Que faire ? | Solutions" 
+  description="Une canalisation bouchée peut cacher une fissure, un écrasement ou des racines. Découvrez les symptômes, les risques et la réparation par chemisage sans casse." 
+  {faqs}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Déboucher un tuyau cassé ou fissuré</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔍 Diagnostic & Inspections</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 12 min de lecture</span>
+      </div>
+
+      <h1>Débouchage d'une canalisation cassée ou fissurée : Les vraies solutions sans tout démolir</h1>
+
+      <p class="blog-intro">C'est la hantise de tout propriétaire en Belgique : un évier, un WC ou un regard extérieur qui se bouche à répétition. Vous faites intervenir un plombier, il passe le furet, la situation se débloque... et 15 jours plus tard, c'est à nouveau l'inondation. Ce scénario cauchemardesque cache souvent une vérité structurelle fâcheuse : <strong>votre canalisation n'est pas seulement encrassée, elle est cassée, fissurée, affaissée ou envahie par les racines.</strong> Comment gérer un débouchage sur une tuyauterie mourante sans provoquer une inondation totale ? Et surtout, comment la réparer sans détruire le carrelage de votre salon ou ravager votre jardin ? Voici le guide d'expertise de Plombier Urgence.</p>
+
+      <div class="blog-toc card">
+        <h2>Au Sommaire</h2>
+        <ol>
+          <li><a href="#symptomes">Les 5 symptômes qui prouvent que le tuyau est cassé (et pas juste bouché)</a></li>
+          <li><a href="#causes">Pourquoi les canalisations se fissurent-elles ? (Grès, PVC, fonte...)</a></li>
+          <li><a href="#danger-debouchage">Danger : Ce qu'il ne faut SURTOUT PAS faire pour déboucher</a></li>
+          <li><a href="#camera">L'inspection télévisée (Caméra) : L'incontournable</a></li>
+          <li><a href="#chemisage">La solution miracle : Le chemisage complet sans tranchée</a></li>
+          <li><a href="#assurance">Assurances et responsabilités à Bruxelles</a></li>
+        </ol>
+      </div>
+
+      <h2 id="symptomes">1. Les 5 symptômes qui prouvent que le tuyau est cassé (et pas juste bouché)</h2>
+      <p>Identifier un simple bouchon d'une rupture structurelle est complexe à l'œil nu, car les refoulements d'eau se ressemblent. Toutefois, certains indices "périphériques" sont caractéristiques d'une fuite encastrée ou enterrée :</p>
+      
+      <ul>
+        <li><strong>La récurrence du bouchon :</strong> Un amas de graisse débouché correctement mettra des années à se reformer. Si vous devez faire intervenir un déboucheur tous les mois, c'est qu'un obstacle physique permanent (une lèvre de tuyau cassée) retient le papier toilette.</li>
+        <li><strong>Terres, gravillons ou sable dans le refoulement :</strong> Si l'eau qui remonte dans votre baignoire ou votre cave contient de la boue foncée, de la terre de jardin ou des petits cailloux, la conclusion est brutale : le tuyau enterré est éventré et la terre extérieure s'y engouffre.</li>
+        <li><strong>Des odeurs nauséabondes persistantes (H2S) :</strong> Même après un nettoyage chimique, une forte odeur de fosse septique stagne. Une fissure laisse non seulement s'échapper l'eau, mais aussi les gaz d'égouts en continu dans la maçonnerie de la maison.</li>
+        <li><strong>Zones d'humidité et taches sur vos murs/plafonds :</strong> Des auréoles jaunâtres (ou noires de moisissure) au niveau des plinthes, des murs ou d'un sol du rez-de-chaussée indiquent que l'eau usée perfuse les fondations depuis la fente d'une évacuation.</li>
+        <li><strong>L'affaissement du terrain (ou du pavage) :</strong> À l'extérieur, si les dalles de votre allée s'enfoncent ou qu'une zone de votre pelouse est étrangement toujours verte et marécageuse malgré la sécheresse estivale, une canalisation souterraine s'est rompue et délave le sol par le dessous (créant un vide de terrain).</li>
+      </ul>
+
+      <h2 id="causes">2. Pourquoi les canalisations se fissurent-elles ?</h2>
+      <p>L'espérance de vie d'un réseau d'évacuation est longue, mais pas éternelle. À Bruxelles, de nombreuses habitations possèdent encore leurs tuyauteries d'origine (1920-1960). Les causes de mortalité des tuyaux varient selon leur matériau :</p>
+      
+      <h3>Les canalisations en grès (anciennes)</h3>
+      <p>Très courantes dans les égouts urbains massifs et les vieilles maisons bruxelloises. Le grès est dur, mais <strong>cassant comme du verre.</strong>
+      <br><em>Cause de décès :</em> Les micro-mouvements de terrain (proximité de la route/trams), les tassements de la maison, ou les fameuses <strong>racines d'arbres</strong>. Les racines cherchent l'humidité, s'infiltrent dans les joints de grès poreux, puis grossissent et font éclater la canalisation.</p>
+
+      <h3>Les canalisations en fonte</h3>
+      <p>Le standard des descentes de WC des immeubles robustes. La fonte est immensément solide.
+      <br><em>Cause de décès :</em> <strong>L'oxydation (la rouille) et le tartre.</strong> Avec les décennies, l'intérieur se corrode, s'écaille et le tuyau finit par se percer de micro-trous ou se fissurer dans le sens de la longueur sous l'usure continue.</p>
+
+      <h3>Les canalisations en PVC (Modernes)</h3>
+      <p>C'est le plastique gris standard en Belgique.
+      <br><em>Cause de décès :</em> <strong>L'écrasement ou le choc au remblai.</strong> Un véhicule lourd garé au mauvais endroit sur un PVC non protégé (trop en surface), une mauvaise pose dès l'origine sous sans lit de sable, un glissement de terrain ou une erreur de percement lors de travaux de rénovation.</p>
+
+      <blockquote style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--color-surface);border-left:4px solid var(--color-danger);border-radius:0 var(--radius-lg) var(--radius-lg) 0;text-align:left;">
+        <p style="font-size:1.1rem;font-weight:600;font-style:italic;margin-bottom:0.5rem;">"80% des canalisations totalement brisées que nous constatons à Bruxelles en extérieur sont dues au travail souterrain lent mais impitoyable des racines de grands arbres (saule, chêne, peuplier) situés à moins de 5 mètres."</p>
+      </blockquote>
+
+      <h2 id="danger-debouchage">3. Danger : Ce qu'il ne faut SURTOUT PAS faire pour déboucher une rupture</h2>
+      <p>Si vous suspectez une casse ou une fissure de grande taille, <strong>le processus de débouchage classique devient extrêmement dangereux pour les fondations.</strong></p>
+      
+      <ul>
+        <li><strong>L'hydrocurage Haute Pression à l'aveugle :</strong> C'est la pire erreur. Une lance d'hydrocurage balance de l'eau entre 150 et 350 bars. Si le mur du PVC est fendu sur 20 centimètres, cette pression colossale n'ira pas pousser le bouchon : elle va directement s'injecter hors du tuyau, projetant des centaines de litres d'eau sous pression <em>sous</em> votre maison. Vous allez délaver les fondations en 5 minutes.</li>
+        <li><strong>Les acides chimiques :</strong> Inonder une fente d'acide sulfurique pur signifie envoyer du poison corrosif brûlant dans la terre de votre jardin, ou pire, le long de vos dalles bétons qu'il va détruire (l'acide attaque le ciment).</li>
+        <li><strong>Le furet mécanique électrique violent :</strong> Si le câble et la tête de fraisage trébuchent sur l'arête d'un tuyau cassé et désaxé (affaissement de 2cm entre deux tronçons), le furet ira s'enrouler autour du plastique brisé, arrachant littéralement le conduit. Le technicien risque également de coincer l'outil à des milliers d'euros sous terre.</li>
+      </ul>
+
+      <h2 id="camera">4. L'inspection télévisée (Caméra) : L'incontournable absolu</h2>
+      <p>C'est la SEULE méthodologie professionnelle à adopter. Chez Plombier Urgence, si une obstruction revient ou résiste étrangement à un curage doux, nous stoppons l'eau et passons immédiatement à l'endoscopie par caméra haute définition.</p>
+      
+      <p>L'inspection par caméra (passage d'une sonde avec éclairage LED) permet de remonter tout le tuyau depuis la chambre de visite ou l'évier. Sur l'écran de contrôle, le plombier constate l'état clinique :</p>
+      <ul>
+        <li><strong>Mise en évidence :</strong> L'écran montre si c'est une fissure, un écrasement plat (le tuyau a fait la crêpe), un désaxement des buses extérieures, ou un mur de racines enchevêtrées.</li>
+        <li><strong>Localisation millimétrique !</strong> La tête de la caméra est équipée d'un émetteur sonar. Le plombier marche au-dessus du sol avec un récepteur (détecteur de sonde). Le bip-bip lui indique EXACTEMENT où se trouve la caméra, là où le tuyau est cassé, et à quelle profondeur (ex: "La casse est sous le pas de la porte d'entrée, à 80 cm de profondeur"). Vous savez où opérer avec certitude.</li>
+      </ul>
+
+      <h2 id="chemisage">5. La solution miracle : Le chemisage complet sans tranchée ("Pipe Relining")</h2>
+      <p>Jadis, la seule solution pour réparer un égout sous une maison de ville était catastrophique : casser le carrelage avec un marteau piqueur, creuser une tranchée de 1m50, remplacer 2 mètres de PVC, remblayer, et refaire un sol neuf. Le coût (maçon, carreleur, plombier, désagréments) était astronomique.</p>
+      
+      <p>Aujourd'hui, une technique existe pour éviter toute démolition : le <strong>Chemisage partiel ou total.</strong></p>
+      <ol>
+        <li>Le plombier nettoie l'intérieur de la tuyauterie endommagée au jet rotatif doux.</li>
+        <li>S'il y a des racines, il passe une fraise mécanique spéciale (Robot Coupe-Racines) pour racler et redonner au tuyau une forme ronde.</li>
+        <li>On imprègne une gaine textile (sorte de chaussette en fibre hybride) avec de la résine époxy binaire ultra-forte.</li>
+        <li>Cette gaine est insérée dans la vieille canalisation cassée avec la caméra, positionnée sur la cassure, puis gonflée à l'air comprimé chaud.</li>
+        <li>Elle se plaque violemment contre les bords du tuyau percé. La résine durcit en 2 heures.</li>
+        <li>Résultat : Une fois le ballon interne dégonflé, il vous reste <strong>un nouveau tuyau en fibre dure cristallisée, lisse comme du verre, ultra-résistant</strong> (durée de vie 50 ans) à l'intérieur de l'ancien tuyau défaillant. La fuite est fermée 100% hermétiquement de l'intérieur. Pas une seule tuile d'abîmée dans le salon.</li>
+      </ol>
+
+      <div class="blog-cta card" style="background:var(--color-surface);border:1px solid var(--color-accent);box-shadow:var(--shadow-md);">
+        <h3>Votre problème d'évacuation semble insurmontable ou revient sans cesse ?</h3>
+        <p>Ne prenez pas le risque d'aggraver un effondrement par un mauvais débouchage. Notre équipe dispose des dernières caméras thermiques, endoscopiques et des équipements de réparation par l'intérieur.</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:1.2rem;">
+          <a href="/tarifs" class="btn btn-outline" style="font-size:1.05rem;">Tarifs Inspection Caméra</a>
+          <a href="tel:0465685158" class="btn btn-primary" style="font-size:1.1rem;box-shadow:var(--shadow-accent);">Programmer un Diagnostic Local</a>
+        </div>
+      </div>
+
+      <h2 id="assurance">6. Assurances et responsabilités à Bruxelles (Qui paie la facture lourde ?)</h2>
+      <p>Une réparation/rénovation d'égouttage coûte souvent entre 500€ et 3000€ selon les dégâts. Qui est responsable financièrement ?</p>
+      
+      <ul>
+        <li><strong>Locataire vs Propriétaire :</strong> L'usure structurelle d'une canalisation, l'affaissement du sol, ou la pénétration de racines <strong>incombe, par la loi, uniquement au propriétaire</strong> bailleur (C'est un problème de fond, pas d'usure courante locative). Le locataire n'est responsable que s'il a jeté une énorme pierre ou du ciment dans l'évier !</li>
+        <li><strong>Domaine Privé (Assurance incendie) :</strong> Si une canalisation souterraine s'est fracturée sous votre maison, certaines assurances habitation haut-de-gamme (garantie "frais de recherche de fuite et canalisations enterrées") prennent en charge l'inspection par caméra et parfois les réparations (mais d'autres considèrent l'usure de l'égout comme une "vétusté non assurable". Lisez scrupuleusement les petites lignes ou appelez votre courtier avant devis final).</li>
+        <li><strong>Le trottoir (Domaine Public) :</strong> Si l'inspection caméra révèle un écrasement juste après le trottoir ou à la connexion avec l'égout sous la route, la réparation relève des compétences de la Commune, de Vivaqua (ou autre régie). Il faudra demander à votre plombier de remettre le rapport vidéo numérisé validant exactement la limitation du sinistre comme preuve à fournir au service travaux de la ville.</li>
+      </ul>
+      
+      <p class="blog-intro" style="font-size:1.05rem;margin-top:2rem"><strong>En résumé :</strong> Si, après trois appels à un service de débouchage, l'eau sale reflue encore dans le mois qui suit, cessez immédiatement la chasse au furet. Exigez ou validez une <strong>inspection par caméra et sondage</strong> avec Plombier Urgence pour en avoir le cœur net. Cela vous coûtera le prix d'un passage aujourd'hui, mais vous fera réaliser des milliers d'euros d'économie sur la sécurisation de vos fondations de maison demain.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Caméra d'inspection disponible immédiatement" subtitle="Localisation d'une cassure, d'un affaissement ou d'un nid de racines dans l'heure. Rapport officiel fourni." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:800px;margin:0 auto;}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-sm)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.2;margin-bottom:var(--space-xl)}.blog-intro{font-size:1.15rem;line-height:1.8;color:var(--color-text);margin-bottom:var(--space-2xl);font-weight:500;}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-lg);font-weight:800;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.5rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600;}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;color:var(--color-text);margin:var(--space-3xl) 0 var(--space-lg);padding-top:var(--space-md);border-bottom:2px solid var(--color-border);padding-bottom:10px;}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;color:var(--color-text);margin:var(--space-xl) 0 var(--space-md);}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:1.05rem}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.8rem;font-size:1.05rem}.blog-article li{margin-bottom:var(--space-sm)}.blog-article strong{color:var(--color-text);font-weight:700;}
+  .blog-cta{padding:var(--space-2xl);margin:var(--space-2xl) 0;text-align:center;border-left:4px solid var(--color-accent);border-radius:var(--radius-lg);}.blog-cta h3{font-size:var(--font-size-xl);font-weight:800;margin-bottom:var(--space-sm);color:var(--color-text)}.blog-cta p{color:var(--color-text-muted);font-size:1.1rem;margin-bottom:var(--space-md)}
+</style>

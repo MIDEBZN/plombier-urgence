@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Un débouchage peut-il être fait sans rendez-vous à Bruxelles ?";
+const description = "Eau qui déborde à minuit ou le week-end ? Les plombiers d'urgence agissent sans rendez-vous. Découvrez nos délais moyens en capitale et nos horaires de garde nocturnes garanties.";
+
+const faqs = [
+  {
+    "q": "Puis-je appeler à 3h du matin pour un WC qui inonde complètement ma salle de bain ?",
+    "a": "Oui, de nombreuses équipes spécialisées disposent d'artisans de garde la nuit complète. Ce diagnostic d'urgence 'Sans délai' ou 'Sans rendez-vous planifié' permet de déployer une camionnette en moins de 45 minutes pour stopper un sinistre, même en plein milieu de la nuit."
+  },
+  {
+    "q": "Doit-on payer plus cher pour un plombier sans rendez-vous de journée ?",
+    "a": "Si l'urgence a lieu en semaine ouvrable (entre 8h et 17h, par exemple un lundi), la plupart des déboucheurs locaux ne factureront aucune 'surtaxe d'empressement'. Ils inséreront simplement la mission en tête de liste et opéreront au tarif du devis de dépannage régulier de la tranche horaire applicable."
+  },
+  {
+    "q": "Quelle 'preuve de gravité' dois-je fournir pour qu'un plombier vienne en 30 minutes ?",
+    "a": "Aucune preuve légale n'est requise, mais l'opérateur téléphonique évaluera la hiérarchie de priorité de sa flotte. Un écoulement capricieux du lavabo sera sans doute programmé à 'C'est pour la fin d'après-midi', mais un refoulement fétide dévorant le parquet de la grande penderie sera classé très prioritaire (Délai éclaire : 'On Arrive')."
+  },
+  {
+    "q": "Les interventions urgentes le dimanche excluent-elles certains gros équipements ?",
+    "a": "Non. Les véhicules utilitaires de garde du week-end (SOS) sont tout aussi techniquement équipés pour pulvériser les pires blocages en urgence (Furets très lourds semi-industriels, ou pompe karcher Haute-pression et petites vidéos de passage). Le déboucheur n’intervient pas à moitié seulement 'Parce que c’est dimanche'."
+  },
+  {
+    "q": "Dois-je signer quelque chose immédiatement lors d'une arrivée soudaine ?",
+    "a": "Oui, une fois au bord de la flaque et la fuite sécurisée des robinets fermés : Un bon d'intervention validant son prix forfaitaire de nuit (et stipulant la majoration légale des honoraires) sera présenté électroniquement."
+  }
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+  <article class="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-blue-900 mb-6">Un débouchage peut-il être fait sans rendez-vous à Bruxelles ? Délais et Garanties d'Urgence</h1>
+    
+    <p class="lead text-xl text-gray-600 mb-8 border-l-4 border-blue-500 pl-4">
+      La plomberie défaillante ne respecte jamais votre agenda personnel, ni celui des horaires de bureaucrates. L'évier décide généralement de refouler toute son acidité savonneuse le vendredi soir à 23h30 ou pire, le matin frénétique du retour de vos vacances. L'idée de devoir "planifier un rendez-vous pour dans 4 jours" est donc d'une absurdité terrifiante dans une urgence sanitaire d'égouttaige fécale ou organique. Un déboucheur bruxellois opère-t-il vraiment sur-le-champ (sans rendez-vous programmé en calendrier) ? Oui. Voici comment procèdent les équipes d'intervention locales express (Le SOS d'assainissement).
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">1. La réalité du Service "Sans Rendez-Vous" (Le SOS Dépannage)</h2>
+    <p class="text-gray-700 mb-4">
+      Contrairement à des travaux de rénovation de salle de bain qui exigent la coordination d'architectes et de monteurs plusieurs mois à l'avance, le secteur du <strong>Débouchage d'urgence</strong> de canalisations par furets fonctionne majoritairement à l'image des services urgentistes hospitaliers. 
+    </p>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>Le délai temporel garanti :</strong> Une centrale de dépannage professionnelle s'engage à envoyer le véhicule à votre porte à Auderghem ou Uccle dans une fenêtre variant de <strong>45 minutes à 2 heures</strong> (Selon l'atrocité du traffic routier urbain et central de La Capitale).</li>
+      <li>Il n'y a nul besoin de fixer conjointement et péniblement mardi prochain à 14H : vous appelez l'assistance, l'opérateur localise son véhicule professionnel le plus géographiquement proche et le "déroute" vers votre adresse en urgence majeure.</li>
+    </ul>
+
+    <!-- SECTION 2 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">2. Horaires de nuit de Garde et les Week-Ends</h2>
+    <p class="text-gray-700 mb-4">
+      Rassurez-vous totalement pour vos événements de fêtes nocturnes et de désastres de veillées : Les canalisations n'ont pas d'heures et les camions de débouchage non plus.
+    </p>
+    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
+      <h4 class="text-xl font-bold text-gray-800 mb-3">La permanence "24h/24 et 7 Jours sur 7"</h4>
+      <p class="text-gray-700 mb-4">
+        Un déboucheur de garde est affecté chaque week-end et jour férié et assure sa mission en pleine trêve de Pâques. Mieux encore : ils disposent généralement de l'intégralité du matériel industriel lourd à bord à la lumière des lampadaires, même au milieu de la nuit froide bruxelloise (Hydrocureuse de 300 bars pour l'égout ou petits furets portatifs de nettoyage de toilettes inondées au niveau du sol de rue). Il ne viendra jamais "faire les choses à moitié pour revenir facturer le lendemain". Seuls de très lourds travaux d'excavation du béton au tractopelle seraient relégué naturellement à une décision diurne.
+      </p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">3. À quoi vous expose logiquement le dépannage de minuit ? (Surtaxes)</h2>
+    <p class="text-gray-700 mb-4">
+      L'intervention n'est pas refusée ou bloquée sur "Agenda", et le plombier réparera très concrètement le désastre de l'eau en quelques coups de manivelles rotatives. Cependant, l'astuce légale intervient quant au coût de cette mobilisation exceptionnelle du facteur "Sommeil/Vacance de l'employé" : la grille de majoration !
+    </p>
+    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-3">La transparence du Coût Nocturne Sans RDV :</h3>
+    <ul class="list-none pl-6 mb-6 text-gray-700 space-y-3">
+      <li class="flex items-center"><span class="text-gray-500 mr-2">✅</span> <strong>Heures Standard diurnes :</strong> Du Lundi au Samedi (Midi ou Avant 17h/18h) : Le tarif forfaitaire de l'entreprise s'applique de façon "Normale" sans surprise aucune pénalité.</li>
+      <li class="flex items-center"><span class="text-red-500 mr-2">➜</span> <strong>Garde de Soir (Ex: 19h00 à minuit) :</strong> Une surtaxe coutumière allant de <strong>+50% à la main-d'œuvre</strong> du débouchage en compensation des horaires sociaux tardifs de son équipe d'intervention non programmée.</li>
+      <li class="flex items-center"><span class="text-red-500 mr-2">➜</span> <strong>Milieu de la nuit de Dimanche/Férié Profond (Ex: 02h00 Matin ou Noël) :</strong> Attendez-vous à un barème d'astreinte qui se hisse inévitablement entre <strong>+100% à +150%</strong> par obligation très logiquement compensatoire de rémunération d'urgence "SOS".</li>
+    </ul>
+
+    <!-- SECTION 4 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">4. Vaut-il mieux appeler "Sans Rendez-Vous la nuit" ou "Attendre le Matin" ?</h2>
+    <p class="text-gray-700 mb-4">
+      La décision est douloureuse et c'est un compromis strictement sécuritaire envers le bâti.
+      Fermez impérieusement le robinet général du domicile à sa source à la cave, et séchez très brièvement les litres d'eau au sol du siphon avant de prendre une décision réfléchie afin d'économiser près de 300 euros à une équipe de garde de Dimanche minuit.
+    </p>
+    <p class="text-gray-700 mb-6 border-l-4 border-gray-400 pl-4 py-2 bg-gray-50">
+      <strong>Vous pouvez et devez attendre le planning matinal économique SI et seulement si :</strong> La seule fuite puante est cantonnée à un second WC que vous pouvez sceller d'un panneau avec du scotch. Ou encore l'évier lent de cuisine (Vous ne laverez plus d'aliments jusqu'à demain).
+      <br /><br />
+      <strong>Vous OBLIGEZ d'appeler l'Immédiateté d'un numéro d'Urgence SI :</strong> La colonne fécale du premier étage et de tous vos locataires ou voisins crache violemment à l'ascendance la matière noire boueuse fienteuse dans votre baignoire de rez-de-chaussée de manière impitoyable et constante sans s’arrêter malgré votre coupure hydraulique (La poussée provient d'autrui !). Mieux vaut s'acquitter d'une honnête tarification de garde urgente de la pleine nuit plutôt que de régler la perte entière des sols massifs, lambris et de literie avoisinantes ruinées.
+    </p>
+
+    <!-- SECTION 5 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">5. Recommandations en l'attente du Technicien Express (30 minutes)</h2>
+    <p class="text-gray-700 mb-4">
+      Lorsque l'opérateur a juré "On arrive, le technicien s'équipe et sera là d'ici très courte heure", ne commettez pas d'actes absurdes à vos tuyaux.
+    </p>
+    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-3">
+      <li><strong>Ne détruisez ou coupez pas votre matériel au couteau.</strong></li>
+      <li>Ne noyez plus votre meuble de Destop de la panique : la machine lourde en ressortira les projections vers les yeux de notre technicien. N'entamez aucunement de travaux amateurs ou la facture augmentera par réparation tierce. Attendez simplement devant la porte la délivrance et le grand coup d'éponge magistral.</li>
+    </ol>
+
+    <!-- CTA BANNER -->
+    <div class="my-12">
+      <CTABanner 
+        title="1 heure du Matin et l'Eau sale se fraie un chemin dans la Cuisine ?"
+        subtitle="Respirez ! Oubliez les agendas inapplicables des gros devis d'architecte : Nous disposons des techniciens de l'extrême d'astreinte sur les grandes voies de Bruxelles cette nuit. Nous intervenons illico sous acceptation téléphonique par devis horaire transparents."
+      />
+    </div>
+
+  </article>
+</Layout>

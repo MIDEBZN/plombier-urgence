@@ -1,0 +1,130 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqs = [
+  {
+    "q": "Mon évier déborde alors que je n'utilise pas l'eau. D'où cela vient-il ?",
+    "a": "C'est l'illustration typique d'un problème sur la colonne d'évacuation verticale commune de l'immeuble. L'eau utilisée par vos voisins du dessus est bloquée par un bouchon situé plus bas que votre étage, et refoule naturellement par les tuyaux de votre appartement (le point de sortie le plus bas disponible avant le bouchon)."
+  },
+  {
+    "q": "Qui doit payer pour déboucher une colonne commune en copropriété ?",
+    "a": "Si le bouchon est identifié dans les parties communes (la grande colonne verticale partagée ou le collecteur du sous-sol), la facture doit être payée par le syndicat des copropriétaires (l'ACP) via le fonds de roulement, et non par vous seul."
+  },
+  {
+    "q": "Le syndic est injoignable le week-end et mon appartement est inondé, que faire ?",
+    "a": "Dans un cas d'urgence extrême menaçant l'intégrité du bâtiment (inondation d'eaux fécales), la loi permet à un copropriétaire de faire intervenir un plombier en urgence sans l'assentiment préalable du syndic. Les frais seront remboursés par l'ACP sur présentation du rapport technique justifiant l'urgence et la localisation commune du bouchon."
+  },
+  {
+    "q": "Le locataire doit-il payer la quote-part du débouchage commun ?",
+    "a": "Non. Sauf si le technicien peut prouver formellement (par exemple via inspection caméra) que l'obstruction a été causée par la faute exclusive de ce locataire spécifique (ex: litière pour chat identifiable), l'entretien des colonnes maîtresses incombe aux propriétaires (charge non récupérable)."
+  }
+];
+---
+
+<Layout 
+  title="Débouchage immeuble copropriété Bruxelles : Qui paie et qui est responsable ?" 
+  description="L'évacuation refoule dans votre appartement mais l'obstruction est commune ? Guide légal sur les responsabilités entre syndic, locataire et copropriété." 
+  {faqs}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Débouchage en Immeuble & Copropriété</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">⚖️ Législation & Syndic</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 12 min de lecture</span>
+      </div>
+
+      <h1>Débouchage collectif en immeuble à Bruxelles : Qui est responsable de quoi (et qui paie) ?</h1>
+
+      <p class="blog-intro">Vivre en appartement à Bruxelles offre de nombreux avantages, mais le réseau d'égouttage n'en fait pas toujours partie. La plomberie d'un immeuble à appartements est un vaste arbre vasculaire dont les branches (vos tuyaux privés) se jettent dans un immense tronc (la colonne de chute commune). Le cauchemar débute le jour où ce tronc s'obstrue. L'eau savonneuse ou fécale des résidents du 4ème étage va alors inonder le salon des habitants du 2ème étage. La panique s'installe, les appels au syndic se multiplient... et très vite vient la question épineuse : <strong>Est-ce un problème privé ou commun ? Et surtout, qui va payer la facture d'urgence du plombier ?</strong> Plombier Urgence dénoue le sac de nœuds juridique et technique de la copropriété.</p>
+
+      <div class="blog-toc card">
+        <h2>Au Sommaire :</h2>
+        <ol>
+          <li><a href="#anatomie-immeuble">Comprendre le réseau : Partie Privative vs Partie Commune</a></li>
+          <li><a href="#test-responsabilite">Le test infaillible pour savoir si l'obstruction vient de chez vous</a></li>
+          <li><a href="#role-syndic">Le rôle du Syndic et la fameuse "Avis de Force Majeure"</a></li>
+          <li><a href="#preuves-camera">La Caméra : L'outil de paix (et d'accusation) des copropriétaires</a></li>
+          <li><a href="#locataire">Le locataire doit-il prendre en charge les frais de curage ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="anatomie-immeuble">1. Comprendre le réseau : Partie Privative vs Partie Commune</h2>
+      <p>Avant d'envoyer la facture à l'ACP (Association des Copropriétaires), il faut comprendre la juridiction des tuyaux de votre immeuble. Il existe une frontière stricte :</p>
+      
+      <ul>
+        <li><strong>Vos Tuyaux Privatifs (Les branches) :</strong> C'est la tuyauterie qui va de votre évier/douche/WC jusqu'à sa connexion avec le gros tuyau dissimulé dans la gaine technique. Ce réseau "horizontal", situé physiquement DANS la chape de votre appartement ou sous vos meubles, n'est utilisé <em>que par vous</em>. S'il est bouché, <strong>la responsabilité (et la facture) vous incombent à 100%.</strong></li>
+        <li><strong>La Colonne de Chute / Collecteur (Le tronc) :</strong> C'est la tuyauterie "verticale" (les grosses colonnes de 90mm, 110mm) qui traverse l'immeuble de haut en bas et recueille l’eau de tous les appartements l'un au-dessus de l'autre, ainsi que les égouts du sous-sol. Ce réseau est utilisé par la collectivité. L'Acte de Base de l'immeuble le définit comme <em>Partie Commune</em>. <strong>S'il est bouché, c'est l'ACP qui paie.</strong></li>
+      </ul>
+
+      <h2 id="test-responsabilite">2. Le test infaillible pour savoir si l'obstruction est commune ou privée</h2>
+      <p>Il est minuit. Votre WC déborde. Faut-il appeler le plombier et payer à vos frais, ou est-ce l'affaire du bâtiment ? Faites cette rapide enquête :</p>
+      
+      <h3>Scenario A : C'est votre tuyau privé !</h3>
+      <p>L'eau s'écoule très mal (ou déborde) SEULEMENT quand VOUS utilisez l'eau de cet appareil ! Si vous ne tirez rien, l'eau reste sagement dans la cuvette mais ne monte pas toute seule... Vos voisins des autres étages n'ont aucun problème chez eux.</p>
+
+      <h3>Scenario B : C'est la colonne commune qui lâche ! (Alerte Rouge)</h3>
+      <p>L'eau sale, parfois mousseuse et sentant le savon des autres (ou l'odeur fécale pire encore) <strong>remonte toute seule de l'un de vos écoulements</strong>, alors que vous étiez confortablement assis dans le canapé à lire un livre sans avoir ouvert un seul robinet.<br>
+      <em>Pourquoi ?</em> Parce que le voisin du 5ème étage prend une grande douche de 50 Litres d'eau. Cette eau chute dans la colonne. Mais la colonne générale (au niveau de votre pallier 3ème) est bouchée. L'amas formant un bouchon étanche : l'eau va chercher l'échappement par le premier "trou" ouvert de tuyauterie qu'elle rencontre au-dessus de l'engorgement... C'est à dire par la bonde de votre douche !</p>
+
+      <blockquote style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--color-surface);border-left:4px solid var(--color-danger);border-radius:0 var(--radius-lg) var(--radius-lg) 0;text-align:left;">
+        <p style="font-size:1.1rem;font-weight:600;font-style:italic;margin-bottom:0.5rem;">"La Règle d'or de l'inondation passive : Si votre appartement commence à s’inonder par reflux inexpliqué alors que tous vos robinets sont fermés, l'Alerte Collective doit être donnée. Vous devez intimer l'ordre immédiat à tous vos voisins du DESSUS de ne PLUS envoyer d'eau."</p>
+      </blockquote>
+
+      <h2 id="role-syndic">3. Le rôle du Syndic et l'Intervention "en cas de Force Majeure" sans l'accord de la gérance.</h2>
+      <p>En temps normal, les travaux sur les parties communes doivent être validés par le conseil de copropriété ou commandés par le Syndic (le gestionnaire). Mais face à une inondation le dimanche :</p>
+      
+      <ul>
+        <li><strong>L'Article de Sauvegarde de l'ACP :</strong> La loi stipule très clairement que, face à un danger imminent et sérieux qui détruit des appartements (une remontée d'égout active), <strong>tout résident/copropriétaire impacté a le droit (et même le devoir de sauvegarde) de mandater directement une entreprise d'urgence (Plombier Urgence) sur-le-champ</strong> sans attendre l'ouverture des bureaux du Syndic lundi matin.</li>
+        <li><strong>Le Remboursement :</strong> Vous réglerez probablement la facture sur place en la signant (en votre nom agissant pour l'ACP). Mais cette facture sera transférée par le tribunal de syndic au fonds commun, qui effectuera votre remboursement complet suite à l'attestation des travaux qui préciseront noir et blanc : "Débouchage de la colonne principale de l'immeuble. Motif d'urgence : Dégâts des eaux imminents chez Mr. X."</li>
+      </ul>
+
+      <h2 id="preuves-camera">4. La Caméra : L'outil de paix (et d'accusation) financière</h2>
+      <p>Très souvent, le gérant de la copropriété refusera d'emblée de payer en répondant par téléphone : <em>"Si ça a débordé chez Madame Y, c'est Madame Y qui a dû boucher en jetant ses lingettes, c'est privé, qu'elle paie!"</em>.</p>
+      
+      <p>Face à ce flou, la facture d'un hydrocurage massif du camion pompe de l'immeuble va vite créer la guerre des résidents. <strong>La seule parade absolue est le Rapport sous Contrôle Caméra émis par les experts Plombier Urgence.</strong></p>
+
+      <ul>
+        <li>En passant l'endoscope, le déboucheur va marquer les diamètres d'obstructions et la localisation exacte : <em>"L'amas se trouve à 3 mètres EN AVAL du Y de raccordement du 2eme étage dans le collecteur 110mm de l'immeuble. La nature de bouchon démontre une calcification des descentes de l'historique sur 15 ans".</em> </li>
+        <li><strong>Le coupable épinglé :</strong> Parfois la manœuvre caméra "sauve" l'ACP et condamne un résident fautif précis ! Le technicien descelle un bouchon très agressif et y sort, sous validation photo de la caméra endoscopique: des litières de chat bleues et 3 jouets d'enfant... venant de l'appartement du père de famille du dessus... qui venait de rejeter la faute sur les "vieux tuyaux de l'immeuble". Ce résident se verra imputer personnellement la réparation à plein frais en frais extra-ACP pour faute de gestion civile !</li>
+      </ul>
+
+      <div class="blog-cta card" style="background:var(--color-surface);border:1px solid var(--color-accent);box-shadow:var(--shadow-md);">
+        <h3>Votre appartement est victime d'un refoulement extérieur collectif ?</h3>
+        <p>Ne payez pas les erreurs des autres ni de la vétusté de l'immeuble sans un rapport officiel ! Nos interventions génèrent un procès verbal complet de diagnostic de détection de localisation du bouchon, certifié juridiquement et conforme aux exigences strictes de validation de votre syndicat de copropriété (BCE).</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:1.2rem;">
+          <a href="tel:0465685158" class="btn btn-primary" style="font-size:1.1rem;box-shadow:var(--shadow-accent);">Demander un Constat + Débouchage Urgent</a>
+        </div>
+      </div>
+
+      <h2 id="locataire">5. Et si je suis locataire : Dois-je prendre en charge la facture ou payer avec mes charges ?</h2>
+      <p>En droit de bail locatif en Belgique : le curage des grandes colonnes et des égouts raccordement <strong>n'est pas une "charge locative ou un entretien courant". </strong></p>
+      
+      <ul>
+        <li>Le nettoyage périodique du petit siphon ou l'achat d'un déboucheur de surface chimique (Déstop) sont à vos modestes frais de bon locataire "en père de famille".</li>
+        <li>Mais s'il faut passer un hydrocurage camion haute-pression parce que les racines de jardin, le calcaire dense, l'accumulation sédimentaire ou la canalisation écrasée font leur œuvre, <strong>seul le Propriétaire Bailleur assumera le règlement du déboucheur.</strong> Lisez cette facture, et transférez-la lui tout court de plein droit ! N'acceptez pas que le syndic répartisse ces frais d'usure "au fond de roulement" des charges de vie des locataires. </li>
+      </ul>
+
+    </div>
+  </article>
+
+  <CTABanner title="Refoulement simultané au RDC d'un Immeuble ?" subtitle="Intervention lourde avec rapport officiel syndic et camion haute pression (200 à 350 bars) de mise des grands collecteurs." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:800px;margin:0 auto;}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-sm)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.2;margin-bottom:var(--space-xl)}.blog-intro{font-size:1.15rem;line-height:1.8;color:var(--color-text);margin-bottom:var(--space-2xl);font-weight:500;}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-lg);font-weight:800;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.5rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600;}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;color:var(--color-text);margin:var(--space-3xl) 0 var(--space-lg);padding-top:var(--space-md);border-bottom:2px solid var(--color-border);padding-bottom:10px;}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;color:var(--color-text);margin:var(--space-xl) 0 var(--space-md);}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:1.05rem}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.8rem;font-size:1.05rem}.blog-article li{margin-bottom:var(--space-sm)}.blog-article strong{color:var(--color-text);font-weight:700;}
+  .blog-cta{padding:var(--space-2xl);margin:var(--space-2xl) 0;text-align:center;border-left:4px solid var(--color-accent);border-radius:var(--radius-lg);}.blog-cta h3{font-size:var(--font-size-xl);font-weight:800;margin-bottom:var(--space-sm);color:var(--color-text)}.blog-cta p{color:var(--color-text-muted);font-size:1.1rem;margin-bottom:var(--space-md)}
+</style>

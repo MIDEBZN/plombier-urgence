@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqs = [
+  {
+    "q": "À quelle fréquence dois-je nettoyer mes siphons ?",
+    "a": "Il est recommandé de nettoyer le siphon de la douche ou de la baignoire tous les 2 mois (surtout si les occupants ont les cheveux longs), celui de l'évier de cuisine tous les 3 mois (graisses alimentaires), et le lavabo de salle de bains tous les 6 mois (dentifrice et savon)."
+  },
+  {
+    "q": "Faut-il utiliser une pince pour démonter un siphon en plastique ?",
+    "a": "Idéalement, NON. Les siphons récents en PVC moderne se dévissent très bien à la force de la main ! Utiliser une pince multiprise (surtout avec des dents métalliques crantées) risque d'écraser le pas de vis en plastique fin, de fendre la cloche, et de provoquer une fuite intarissable au remontage."
+  },
+  {
+    "q": "Puis-je verser de l'acide (desktop) préventivement pour nettoyer mon siphon ?",
+    "a": "C'est une très mauvaise idée 100% à proscrire. L'acide sulfurique pure versé même sans réel gros bouchon ronge le caoutchouc (joint d'étanchéité) de la cuvette, détruit très rapidement la faïence ou inox chromé du bonde évier par débordement de fumée chloridrique (micro-points noirs de brûlures d'acier infaçables) et empoisonne la station d'épuration locale pour aucun bénéfice."
+  },
+  {
+    "q": "Mon joint de siphon s'est détaché au démontage, que faire ?",
+    "a": "Lavez-le d'abord et remettez-le soigneusement dans la lèvre (le pas de vis femelle) ou en base au plat de la clochette inférieure. S'il est séché (craquelé comme un vieux cuir de roue), il n'assurera plus jamais l'étanchéité et coulera des gouttes dans le meuble par simple gravitation sous l'évier. Emportez-le au brico pour rachat, ça coûte seulement 1 euro en pochette d'adaptation sanitaire standard (joint thorique ou à lèvre)."
+  }
+];
+---
+
+<Layout 
+  title="Nettoyage de Siphon : Guide complet d'entretien préventif (Sans Fuite)" 
+  description="L'astuce pour ne jamais avoir de canalisation bouchée ? Démonter et doucher votre siphon vous-même tous les 3 mois ! Tutoriel nettoyage complet sans outils." 
+  {faqs}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Nettoyage complet d'un Siphon</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">✨ Entretien Ménager</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Comment bien nettoyer ses siphons (et ne jamais inonder son meuble au remontage)</h1>
+
+      <p class="blog-intro">Le siphon n'est pas conçu comme un piège vicieux que la plomberie aurait caché sous votre marbre d'évier pour le plaisir de vos malheurs. Ce composant est conçu justement pour <strong>capter l'erreur et vous éviter la casse majeure au mur.</strong> C'est la ligne de front (le filtre et la garde d’air) à maintenir au propre en maintenance numéro un ! Un siphon non-entretenu, c’est l’assurance fatidique d’une puanteur organique, et d’un engorgement de graisses qui migre durement des centimètres au-delà (et dont la suppression nécessite l'intervention d’un furet électrique coûteux). Nous expliquons pas-à-pas le véritable secret pro pour dévisser le godet d'eau noire, l'aseptiser sans outil, et – le plus critique – le re-visser pour zéro fuite.</p>
+
+      <div class="blog-toc card">
+        <h2>Au Sommaire de l'article</h2>
+        <ol>
+          <li><a href="#anatomie">Comprendre la pièce : Où est l'eau, et qu'est ce qu'un godet de recueil ?</a></li>
+          <li><a href="#pre-requis">Ce qu'il vous faut avant de démarrer (Le seau !)</a></li>
+          <li><a href="#demontage">Etape 1 : Le démontage en souplesse (L'astuce anti-pince)</a></li>
+          <li><a href="#nettoyage">Etape 2 : Le Curage Manuel Sans produit Corrosif</a></li>
+          <li><a href="#remontage">Etape 3 : Le Remontage et le test redouté du sopalin</a></li>
+        </ol>
+      </div>
+
+      <h2 id="anatomie">1. Comprendre la pièce : Où est l'eau, et qu'est ce qu'un godet de recueil ?</h2>
+      <p>Pour mieux intervenir, visualisons "Le Siphon basique". Il possède souvent une forme de vase ou de "bouteille plastique" avec deux branches. On l’appelle justement le "siphon à culot" (très très majoritaire sous l'évier en Belgique).</p>
+      
+      <ul>
+        <li><strong>L'arrivée (En haut) :</strong> Il est raccordé à la bonde (le grand trou inox métallique collé au fond du vasque de votre lavage). L'eau tombe à pic de l’étage.</li>
+        <li><strong>La Garde (en milieu en forme de U) :</strong> C’est ici qu'un volume de liquide de 5 à 10 cm stagne en rétention constante d'hermétisme (le fameux bouclier aquatique pour barrer les relents d'égout). Et c’est aussi et surtout là... au fond du culot central démontable "que tombe et se coince par gravité l'alliance en or" échappée de doigt, et toutes les pelotes de cheveux agglutinés et savonneuses ! </li>
+        <li><strong>La Sortie (latérale ou haut remontant) :</strong> Le tube PVC évacuateur qui file vers le perçage au mur puis loin sous le sol.</li>
+      </ul>
+
+      <p><em>Le but de notre nettoyage de ménage : Ne dévisser que la partie inférieure sous plan du "U" de rétention (le "godet" ou la grosse vis-socle de bas en cloche plastique), pas de toucher ni de débloquer le long tuyau branché au mur.</em></p>
+
+      <h2 id="pre-requis">2. Ce qu'il vous faut avant de démarrer (L'indispensable Bassine)</h2>
+      <p>Rien d'irréversible lors du démontage ! Vous avez besoin des 3 choses rudimentaires. Le plus gros risque c’est de mouiller votre stock de lessive carton ou le meuble MDF très absorbant (et qui gonflerait s'il est noyé !), videz tout l'espace d’accès en dessous au large ! </p>
+      
+      <ul>
+        <li><strong>Une bassine creuse et un Seillon (ou bol Tupperware) :</strong> On doit "réceptionner" la garde d'eau sale coincée dès la première détonation de l’écrou (il va en couler l'équivalent d'un gros verre de moutarde très pestilentiel).</li>
+        <li><strong>Des Gants réutilisables souples  (de ménages en Mapa à texture agrippante) :</strong> L’odeur capilleuse "pourrie" organique s'imprègne au doigt 48h. Une paire Mapa de l’évier de cuisine à picots assure également une excellente force anti-dérapante d'ouverture !</li>
+        <li><strong>Un chiffons essuie-tout (sopalin vierge très sec) :</strong> Le "scanneur de larmes fuiteuses" indispensable au test d’écoulement post-bricolage pour s’assurer un boulot sec de nuit au réveil demain.</li>
+      </ul>
+
+      <h2 id="demontage">3. Etape 1 : Le démontage en souplesse (L'astuce du Gant Anti-Pince)</h2>
+      <p>Les novices partent paniqués fouiller le garage pour sortir la pince étau monstrueuse dès que ça "colle" un peu. ERREUR MONUMENTALE ! C'est la mort du filet du plastique friable, et des frais majeurs sans secours en heure tardive.</p>
+      
+      <ol>
+        <li><strong>Placement sûr :</strong> Ne vous occupez pas de couper le robinet d'arrêt de l'arrivée sanitaire propre sous l'évier (sauf si votre chat l'ouvre au mauvais moment). Interdisez juste à la famille d'utiliser le mitigeur et ça ira. Déposez la passoire en bol sous cloche !</li>
+        <li><strong>Le Sens (Ne vissez pas plus fort) !</strong> Placé "le nez par terre les yeux au ciel sous votre meuble", repérez le culot rond de bas central. Vous allez serrer sa circonférence d'une main avec le fameux "gant caoutchouc pour le grip" et dévisser classiquement <strong>dans le sens trigonométrique INVERSE des aiguilles d'une grosse horloge (Antihoraire vers la gauche / devisser - vissez est à droite).</strong>  </li>
+        <li><strong>La lèvre tenace ? Et les chocs ?</strong> Si le calcaire d'urine a pris à mort au tartre la visière et que votre poignet n'y fait pas bouger du tout... pas de Pince non! L’astuce de tous dépanneurs : prenez le manche lourd en bois de votre brosse à poil brosse. <em>Tapotez par légers et sec sur les nervures latérales plastique du godet au bas.</em> L'onde du tap-tap de choc fissure au micro le calcaire figeant par l'air, deux essais plus tard de forçage manuel grippant et l'ensemble crépit et capitule sous vos gros gants adhésifs. </li>
+        <li>Videz l'entierté visqueuse et grassement puante dans la bassine de recueil.</li>
+      </ol>
+
+      <blockquote style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--color-surface);border-left:4px solid var(--color-accent);border-radius:0 var(--radius-lg) var(--radius-lg) 0;text-align:left;">
+        <p style="font-size:1.1rem;font-weight:600;font-style:italic;margin-bottom:0.5rem;">"Le gros danger de vidange (Attention): Oubliez d'un coup que de "vider" votre bassine très pleine d'eau crasse aux cheveux et bouts de plâtre ramassée de curage EN RETOUR DANS... l'évier (toujours au dessus au passage) ! S'il a plus son godet du fond de l'étage...toute l'évacuation repart en un Niagara pur direct sur un meuble et vous en inondation." </p>
+      </blockquote>
+      
+      <h2 id="nettoyage">4. Etape 2 : Le Curage Manuel Sans produit Corrosif d'un sou</h2>
+      <p>Le godet est sur vos genoux (Allez au lavabo de la douche à l’autre pièce pour le lavez) :</p>
+      <ul>
+        <li>Dextérité manuelle : Extrayez la masse agglomérée gluante filandreuse et les bouchons durs organiques, mettez la à la grande POUBELLE sac noire ! Ça fera pas du compost urbain heureux.  </li>
+        <li>Sous l'eau bouillante de mitigeur externe sain: Lavez tout au liquide vaisselle (dégraisseur de lipides naturel). Prenez l’éponge de l’évier pour rincer les pas-de-vis intérieur (dents crantés) du gros plastique central liasse l'évacuation au mur (resté coincé d’en haut) (là d'où ca s'attache d'une encastre). Les résidus secs gâcheront le remontage serré imperméable en faisant l'épaisseur de crasse étancheur.</li>
+        <li><strong>L’œil de l'Aigle - Le JOINT !!</strong> Cherchez précieusement "une petite liasse de rondelle noire fine en cautchouc". Elle reste souvent encastré en l'anneau d'étage, sèche... Il doit être parfaitement souple non coupé en 2 ni "mordu plissé". S'il s'est dilaté au chaud : il faut mettre un peu de savon liquide liquide lubrifant (le lubrifira pour pas qu'il "bloque ou ne se coince tordu à la revissade de l'outil des pas). </li>
+      </ul>
+
+      <h2 id="remontage">5. Etape 3 : Le Remontage et le test pur du sopalin </h2>
+      <p>Vous avez fini, l’intérieur pur est sans l'once d'un moustique noyé collé poisseux aux dent de tartre.</p>
+      <ul>
+        <li>Remettez le fond sur l’axe exactement droit sous les "dents du filet filetage" sans qu'il force ni qu'il ne se met "de travers biaisé" (sinon le filet saute). Tournez lentement le couvercle avec la fine ligne jointée en intercalaire, <strong>Sens d'une flèche droite à 180° des aiguilles en vis serrage horaire.</strong>.  </li>
+        <li>Force nécessaire (la sécurité) ? Serrage à la pleine force musculaire exclusive "d'un Homme/Femme" au contact de l'abrasion du gant de vaisselle ! Surtout PAS de 1/2 tour de vis "en serrage final de Clé ou Pince" le tuyau finira par fendre la semaine d'après en mode invisible et faire un goutteur à la fente du joint très fataliste un mois après !</li>
+        <li><strong>Le grand test infaillible ultime :</strong> Ouvrez le robinet fort chaud. Laissez l'eau du seau déverser comme torrent par gros litres, la garde de syphon de remplissage immédiate va repousser en refoulement de sur-poussée tout flux. 
+        Prenez le SO-PA-LIN (l'essuie-tout blanc vierge), tamponnez le tout doucement le long, autour de "l'anneau et de la coupelle scellée en dessous le tour complet"... S'il revient parfaitement d'aspect blanc SEC, d'aucunes minuscules mini tache de d'goute de perle à larme (la fameuse larmichette). C'est parfait : Vous avez réussi avec honneur le diplôme d'hygiène préventive en Plomberie 1ere classe. </li>
+      </ul>
+
+
+      <div class="blog-cta card">
+        <h3>Une fuite persistante ou un mur de crasse impossible derrière ?</h3>
+        <p>Ce geste banal évite la casse grave le samedi soir ou vos orteils inondés de salle de bain... Mais nous savons l'accident en encastre au raccord lâche mal fait des autres. L'équipe d’assistance colmate répare et nettoie profond pour toute usure sur tout l’ensemble des communes.</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem;">
+           <a href="tel:0465685158" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-accent);">☎️ Le Support au raccord (0465 68 51 58) </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CTABanner title="Nettoyage fâcheux ? Fuite déclarée par l'incident ?" subtitle="Une étanchéité ne va jamais se « réparer d'ellememe » . Le technicien refait toute l'extraction et fournit le remplacement 1er qualité par nos pièces lourdes certifiées en stock. Réglé aujourd'hui !" />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:800px;margin:0 auto;}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-sm)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.2;margin-bottom:var(--space-xl)}.blog-intro{font-size:1.15rem;line-height:1.8;color:var(--color-text);margin-bottom:var(--space-2xl);font-weight:500;}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-lg);font-weight:800;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.5rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600;}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;color:var(--color-text);margin:var(--space-3xl) 0 var(--space-lg);padding-top:var(--space-md);border-bottom:2px solid var(--color-border);padding-bottom:10px;}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;color:var(--color-text);margin:var(--space-xl) 0 var(--space-md);}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:1.05rem}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.8rem;font-size:1.05rem}.blog-article li{margin-bottom:var(--space-sm)}.blog-article strong{color:var(--color-text);font-weight:700;}
+  .blog-cta{padding:var(--space-2xl);margin:var(--space-2xl) 0;text-align:center;border-left:4px solid var(--color-accent);border-radius:var(--radius-lg);}.blog-cta h3{font-size:var(--font-size-xl);font-weight:800;margin-bottom:var(--space-sm);color:var(--color-text)}.blog-cta p{color:var(--color-text-muted);font-size:1.1rem;margin-bottom:var(--space-md)}
+</style>

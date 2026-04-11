@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Chaudière qui claque ou siffle : d'où vient le bruit ?" 
+  description="Bruit de bouillonnement, gros claquements métaliques, ou sifflements stridents dans votre chaudière ou radiateurs ? Le diagnostic des pannes par les sons typiques." 
+  faqs={[
+    {
+      q: "Pourquoi ma chaudière fait-elle un bruit de bouillonnement ?",
+      a: "Un son de clapotis, de glouglou ou de cascade d'eau indique souvent la présence récurrente d'air (des bulles) bloqué dans l'appareil ou dans le circulateur d'eau chaude."
+    },
+    {
+      q: "Est-il dangereux que ma chaudière claque fortement comme des coups de marteau ?",
+      a: "Oui, ce sont des bruits d'ébullition interne ('kettling') fréquents dans des tuyauteries remplies de boues de calcaire et de tartre. Le corps de chauffe ne parvient plus à libérer son énergie et l'eau bout brutalement, créant des secousses sismiques. Cela menace la structure de l'échangeur."
+    },
+    {
+      q: "Que signifie un sifflement aigu provenant de la chaudière ?",
+      a: "Un son strident (comme une bouilloire électrique) révèle souvent un excès de pression sur le circulateur (pompe) qui peine, un défaut du brûleur asymétrique, ou une vis mal serrée au niveau de l'extracteur de fumée."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Chaudière qui fait du bruit</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔊 Bruit, Sifflement & Résonnance</span>
+        <span class="blog-date">Mis à jour : Avril 2026</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Chaudière qui claque, siffle ou bouillonne : d'où vient ce bruit anormal ?</h1>
+
+      <p class="blog-intro">Une chaudière saine, qu'elle soit au gaz ou au mazout, ne doit produire qu'un léger "houuuu" soufflant et ronronnant lors de la mise en fonction de son grand brûleur. Tout d'un coup, en pleine froide nuit bruxelloise, votre installation se met à crépiter, à taper violemment contre le mur, ou la tuyauterie se met à hurler avec une fréquence aigue.</p>
+
+      <p class="blog-intro">Les bruits étranges ne sont que la façon dont votre machine vous informe qu'elle souffre ("Diagnostic sensoriel"). Un problème ignoré peut rapidement aggraver le bilan financier final : de la simple <a href="/blog/purger-radiateurs-comment-faire-tuto">purge d'air manuelle</a>, on peut vite glisser vers un changement entier du corps de chauffe à 1000€. Découvrons la traduction de ces bruits étranges pour savoir précisément comment agir.</p>
+
+      <div class="blog-toc card">
+        <h2>La symphonie des pannes (Types de bruits)</h2>
+        <ol>
+          <li><a href="#glouglou">1. Le glouglou (bruit d'eau qui coule / bulles)</a></li>
+          <li><a href="#claquement">2. Les gros 'Clangs' ou 'Coups de bélier' (Tac-Tac)</a></li>
+          <li><a href="#sifflement">3. Le sifflement strident de type bouilloire</a></li>
+          <li><a href="#vibration">4. La vibration "avion au décollage"</a></li>
+          <li><a href="#solution">Désembouage ou purge ? Que doit-on exiger du technicien ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="glouglou">1. Le "Glouglou" et le clapotis d'eau (L'Air)</h2>
+      <p>C'est le bruit le plus innocent, mais le plus agaçant, que l'on perçoit souvent depuis sa chambre à coucher en haut de la maison.</p>
+      
+      <h3>La Cause : La présence massive d'air</h3>
+      <p>L'air, plus léger que l'eau, va inévitablement monter dans les points les plus hauts de votre installation. Lorsqu'il percute de l'eau en mouvement, il crée ce fort bruit de cascade au sein des radiateurs ou directement au-dessus de la chaudière murale.</p>
+      
+      <h3>Le Remède immédiat :</h3>
+      <p>Vous n'avez généralement pas besoin d'un chauffagiste pour l'aspect de base :</p>
+      <ul>
+        <li>Éteignez le chauffage (ou abaissez le thermostat à fond).</li>
+        <li>Ouvrez doucement avec la petite clé carrée les purgeurs situés sur la gauche ou droite de tous les radiateurs en commençant par ceux du bas.</li>
+        <li>Laissez évacuer le "pshhht" typique de l'air comprimé, et refermez quand l'eau commence à s'écouler dans le chiffon.</li>
+        <li><strong>N'oubliez pas :</strong> En chassant l'air, la pression va baisser ! Pensez à r<a href="/blog/pression-chaudiere-baisse-tout-le-temps">emettre immédiatement de l'eau à 1.5 bar à la chaudière</a> après la purge massive.</li>
+      </ul>
+
+      <h2 id="claquement">2. Les gros "Clangs" (Coups de bélier / Tac-tac)</h2>
+      <p>Si cela semble marteler le mur lourdement avec un tac-tac rapide (surtout lors de l'allumage), c’est particulièrement angoissant.</p>
+
+      <h3>La dilatation thermique :</h3>
+      <p>Si le "tic tic tic" s'entend tout au long des grandes longueurs de vieux tuyaux et radiateurs qui bordent vos murs : c'est très probablement le fait de la <strong>dilatation</strong> de l'acier ou du cuivre chauffé. Le tuyau s'allonge de quelques millimètres, frotte violemment ses colliers de fixation, créant ce cognement. Si le tuyau est trop coincé dans un trou au plafond, il grince.</p>
+
+      <h3>"L'ébullition ou Kettling" (Grave) :</h3>
+      <p>Si les grands chocs ("Bang !") proviennent du cœur même de la chaudière. Dans une vieille chaudière entartrée (à cause de l'eau dure bruxelloise jamais adoucie), des cailloux de calcaire boueux s'incrustent autour de l'échangeur "Corps de Chauffe". L'eau ne sait plus circuler librement et va donc <strong>bouillir littéralement</strong> sur place au contact des 400°C du brûleur de flamme. Les immenses bulles de vapeur éclatent sous pression et tapent le métal de l'intérieur, faisant sauter l'ensemble de la machinerie.</p>
+      <p><strong>Solution pro :</strong> Il va falloir réaliser un traitement par "Détartrage chimique" ou remplacer directement le corps de chauffe s'il est irrémédiablement bouché.</p>
+
+      <h2 id="sifflement">3. Le sifflement strident de type bouilloire</td>
+      <p>Un sifflet permanent, qui monte dans les fréquences aiguës et descend en fonction de la chauffe, irrite le chat et vos tympans.</p>
+
+      <div class="tarif-table-wrap">
+        <table class="tarif-table">
+          <thead>
+            <tr>
+              <th>D'où vient le sifflement ?</th>
+              <th>Causes probables selon le chauffagiste</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Depuis le radiateur</strong> ou ses vannes ?</td>
+              <td>Le débit (la vitesse d'eau poussée par la pompe de la chaudière) est trop élevé. L'eau force à grande vitesse pour passer par le petit trou de l'aiguille thermostatique du radiateur. C'est l'équivalent de souffler très fort dans un lacet troué. Il faut "abaisser la vitesse du circulateur".</td>
+            </tr>
+            <tr>
+              <td><strong>Directement depuis la machine</strong></td>
+              <td>Entartrage léger commençant de l'échangeur, ou pire : un débit insuffisant. L'eau coince et commence à chanter (principe de la cocotte-minute sur le feu).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="vibration">4. La forte vibration ou bourdonnement ("Avion gros porteur")</h2>
+      <p>Lorsque la chaudière fait vibrer physiquement le mur ou produit un bruit sourd et massif à bas régime grave, on cible deux organes de puissance au sein de l'échine technique :</p>
+
+      <ul>
+        <li><strong>L'extracteur de fumées (Le gros ventilateur en haut) :</strong> Il tourne à très haute vitesse pour pousser le gaz mort (monoxyde de carbone toxique) vers votre cheminée de toit ou la sortie ventouse. S'il est désaxé (roulement usé), il va vibrer tout l'habitacle et produire un hurlement grave inquiétant. À changer d'urgence pour la sécurité de l'oxygénation.</li>
+        <li><strong>Le Circulateur usé (La grosse pompe d'eau rouge/noire ronde) :</strong> Ses petits pales sont cassées ou pleines de boues de fer, il force comme un mixeur embourbé et vibre. </li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>🚨 Bruits d'ébullition ou chaudière qui tressaute ?</h3>
+        <p>Alerte jaune : ne laissez pas un corps de chauffe se fissurer définitivement. Coupez l'énergie, confiez-nous le détartrage profond ou le calibrage de l'air avant d'assumer des factures colossales !</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander un chauffagiste : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="solution">5. Le diagnostic final : Quel rapport réclamer au professionnel ?</h2>
+      <p>Lorsque vous appelez un plombier-chauffagiste face à de ces nuisances sonores, son travail ne doit pas se limiter à passer "un coup de clé sur une vis". Exigez de lui les diagnostics suivants (facturés souvent sous le vocable "Diagnostic/Déplacement 85-120€") :</p>
+      
+      <ol>
+        <li><strong>Le contrôle physique du manomètre (Pression eau) :</strong> Assurez-vous d'être bien à 1,5 bar.</li>
+        <li><strong>La vérification du purgent automatique :</strong> La chaudière intègre un petit cylindre laiton (le purgeur d'air amovible). Son clapet est très souvent calcifié et reste bloqué ouvert ou fermé, bloquant fatalement l'air intérieur. Il coûte moins de 15€ à changer !</li>
+        <li><strong>Si diagnostic de boues confirmé :</strong> Demandez le devis pour un <strong>désembouage hydrodynamique du circuit entier</strong>. Inutile de changer la pièce la plus chère (Pompe/Échangeur) si le vrai mal demeure tapi dans l'eau de vos conduites, car la pompe de rechange avalera à nouveau les crasses et hurlera six mois plus tard.</li>
+      </ol>
+
+    </div>
+  </article>
+
+  <CTABanner title="Retrouvez le silence de votre maison" subtitle="Dépannage, vidange d'air et ajustement électronique des circulateurs de chauffage (Vaillant, Junkers, Bulex, Buaderus...)." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .tarif-table-wrap{overflow-x:auto;margin:var(--space-lg) 0 var(--space-2xl);border-radius:var(--radius-lg);border:1px solid var(--color-border)}.tarif-table{width:100%;border-collapse:collapse;font-size:var(--font-size-sm)}.tarif-table th{background:var(--color-surface);padding:.8rem 1rem;text-align:left;font-weight:700;border-bottom:2px solid var(--color-border);white-space:nowrap}.tarif-table td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--color-text-muted)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

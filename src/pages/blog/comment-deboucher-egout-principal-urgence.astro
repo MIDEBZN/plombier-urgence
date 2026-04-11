@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqs = [
+  {
+    "q": "Comment savoir si c'est l'égout principal qui est bouché ?",
+    "a": "Les symptômes sont massifs et simultanés : l'eau refoule dans les éviers, le bac de douche se remplit d'eaux usées quand on tire la chasse, les WC débordent de matière fécale et toute la maison sent les gaz d'égouts. C'est l'obstruction du collecteur central (le dernier tuyau avant la rue)."
+  },
+  {
+    "q": "Peut-on déboucher un égout principal soi-même ?",
+    "a": "Non, c'est totalement impossible sans équipement professionnel. Un égout fait en général de 110 à 200 mm de diamètre. Un furet domestique s'y enroulera dans le vide. De plus, la masse d'eau sale bloquée atteint souvent plusieurs centaines de litres. Tenter de l'ouvrir seul risque de provoquer une inondation géante dans la cave."
+  },
+  {
+    "q": "Quelle machine les plombiers utilisent-ils pour l'égout principal ?",
+    "a": "Le standard pour l'égout central est le camion ou la remorque d'hydrocurage. Une pompe très puissante envoie un jet d'eau (entre 200 et 350 bars) via une lance spéciale équipée d'une buse de curage. Cette buse avance d'elle-même en 'tranchant' l'eau vers l'avant et rejetant les lourds déchets vers l'arrière."
+  },
+  {
+    "q": "Les intercommunales (Vivaqua) peuvent-elles intervenir pour déboucher mon égout ?",
+    "a": "Si et seulement si le bouchon se situe côté 'rue' (sur le réseau public d'assainissement après le raccordement de votre habitation). Si le bouchon est dans votre égouttage privatif, en amont de la limite de votre propriété, c'est à vous d'appeler un déboucheur privé à vos frais."
+  }
+];
+---
+
+<Layout 
+  title="Comment déboucher un égout principal en urgence ?" 
+  description="WC, douche et évier bouchés en même temps ? C'est l'égout principal. Découvrez comment réagir en urgence, qui appeler et la méthode de l'hydrocurage." 
+  {faqs}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog">Blog</a><span>›</span>
+        <span class="bc--current">Déboucher un égout principal</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚨 Urgences & Dégâts</span>
+        <span class="blog-date">Mis à jour : Février 2025</span>
+        <span class="blog-read">⏱ 10 min de lecture</span>
+      </div>
+
+      <h1>Déboucher un égout principal en urgence : Comment éviter la catastrophe sanitaire</h1>
+
+      <p class="blog-intro">Un évier bouché est agaçant, mais un <strong>égout principal bouché</strong> est un véritable cauchemar éveillé. Imaginez tirer la chasse d'eau de vos toilettes et voir cette même eau usée refouler, non pas dans le WC, mais remonter par la bonde de la baignoire voisine ou pire, jaillir des avaloirs de la cave... L'obstruction de la colonne centrale condamne instantanément toute l'utilisation en eau du bâtiment. L'urgence est vitale : si l'étage continue de prendre des douches, le rez-de-chaussée est inondé de matières fécales. Que devez-vous faire dans les 5 prochaines minutes pour limiter les dégâts ? Pourquoi le furet ne fonctionnera jamais ? Voici le protocole de survie face au dysfonctionnement du tube collecteur, par Plombier Urgence.</p>
+
+      <div class="blog-toc card">
+        <h2>Au Sommaire :</h2>
+        <ol>
+          <li><a href="#diagnostic">L'égout est-il vraiment bouché ? Le test des vases communicants</a></li>
+          <li><a href="#reflexes">Les 3 réflexes immédiats à avoir (Arrêt des machines)</a></li>
+          <li><a href="#dangers-bricolage">Pourquoi les solutions domestiques (acides, furets) aggravent les dégâts</a></li>
+          <li><a href="#hydrocurage">L'Hydrocurage Haute Pression : La seule solution technique valable</a></li>
+          <li><a href="#responsabilite">Où est le bouchon public/privé et qui doit payer ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="diagnostic">1. L'égout est-il vraiment bouché ? Le "test des vases communicants"</h2>
+      <p>Avant d'appeler les urgences lourdes, identifiez si vous êtes face à un bouchon local ("uniquement le lavabo") ou généralisé ("le collecteur principal"). Le signe clinique ultime du blocage de l'égout principal est le comportement des fluides au point le plus bas de la maison :</p>
+      
+      <ul>
+        <li><strong>Symptôme de simultanéité :</strong> L'eau utilisée à l'étage cherche à descendre. Bloquée dans le gros canal du dessous, elle remonte par le "vase" le plus bas : souvent le siphon de sol de la buanderie, le sterput du garage ou la douche à l'italienne au rez-de-chaussée.</li>
+        <li><strong>L'inversion fécale :</strong> Des excréments ou du papier toilette (provenant logiquement des WC) se retrouvent inexplicablement dans la bonde de la baignoire, alors même que personne n'a pris de bain.</li>
+        <li><strong>Bruit d'alerte (Le souffle) :</strong> Vous entendez des gargouillements énormes (bloup-bloup roques) dans la cuisine chaque fois que la machine à laver essore dans la cave, signe que de gigantesques bulles d'air essaient de traverser de gros volumes d'eau emprisonnés.</li>
+      </ul>
+
+      <blockquote style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--color-surface);border-left:4px solid var(--color-danger);border-radius:0 var(--radius-lg) var(--radius-lg) 0;text-align:left;">
+        <p style="font-size:1.1rem;font-weight:600;font-style:italic;margin-bottom:0.5rem;">"Si plusieurs éléments s'engorgent ensemble, le robinet d'arrêt de la maison doit être coupé immédiatement."</p>
+      </blockquote>
+
+      <h2 id="reflexes">2. Les 3 réflexes immédiats à avoir (Éviter l'inondation de la cave)</h2>
+      <p>Une fois qu'il est certain que l'égout central ne draine plus vers la rue, <strong>vous avez une véritable de bombe à retardement constituée de milliers de litres d'eaux noires</strong> suspendues dans les murs et le plancher.</p>
+      
+      <ol>
+        <li><strong>Coupez l'eau de la maison (Vanne générale) :</strong> Personne n'a plus le droit d'utiliser l'eau, que ce soit pour se laver les mains ou aller aux toilettes. Si vos enfants tirent la chasse, c'est votre garage qui récoltera la misère 3 secondes plus tard. </li>
+        <li><strong>Débranchez les appareils automatiques :</strong> C'est la cause numéro 1 d'inondation nocturne lors d'un bouchon. Allez débrancher physiquement la prise du lave-linge, du lave-vaisselle, et surtout du boiler/adoucisseur d'eau qui pourraient faire un cycle de "nettoyage/rinçage" automatique sur minuterie pendant la nuit et cracher 60 litres d'eau sans surveillance.</li>
+        <li><strong>Localisez l'accès d'assainissement :</strong> Avant l'arrivée du plombier, cherchez où se trouve la "chambre de visite" (la plaque d'égout de votre propriété) ou l'avaloir principal dans votre garage ou jardin. Dégagez l'accès. Le technicien en aura obligatoirement besoin.</li>
+      </ol>
+
+      <h2 id="dangers-bricolage">3. Pourquoi les solutions domestiques (acides, furets) aggravent les dégâts</h2>
+      <p>Oubliez tout ce que vous avez lu sur l'évier. Le <strong>tube collecteur a un diamètre énorme (entre 110 et 150 mm) et peut mesurer 10 à 30 mètres de long</strong> sous votre jardin avant la route. L'assaillir avec les méthodes ménagères est pire qu'inutile.</p>
+      
+      <ul>
+        <li><strong>Acheter 15 litres d'hydrogène ou de Desktop (acide):</strong> Vous dépensez 50€ pour rien. Les acides agissent sur un point de stagnation, or le bouchon dans un égout de 110mm est enrobé de graisse massive ou de centaines de couches de linge solide/déchets sur plusieurs mètres. L'acide dilué dans 400 litres d'eau de stagnation n'a aucune action chimique : il va juste brûler la peau du pauvre professionnel de SOS Plombier bruxelles qui dévissera la plaque trois heures plus tard.</li>
+        <li><strong>Le Furet manuel :</strong> Un serpent à poignée du Brico fait 6mm de diamètre. Introduit dans un tube de fonte de 110mm... il va se courber, tourner dans le vide et très fort possiblement faire un nez-de-cochon (nœud parfait auto-bloquant) en s'enroulant sur la fange.  </li>
+      </ul>
+
+      <h2 id="hydrocurage">4. L'Hydrocurage Haute Pression : La seule solution technique valable (Le Camion)</h2>
+      <p>Pour l'égout principal, l'artillerie lourde (le camion déboucheur ou petite remorque pressurisée) est indispensable. C'est l'hydrocurage.</p>
+      
+      <p><strong>La science de la buse d'hydro-nettoyage rotative :</strong></p>
+      <ol>
+        <li>Le technicien ouvre la chambre de visite et insère un flexible renforcé (et non un câble d'acier rotatif comme le furet électrique, pour amoindrir le risque de fracture du vieux grès urbain).</li>
+        <li>Au bout du tuyau, une grosse buse en inox lourd (la "fusée" ou grenade) de curage. Pas de jets vers l'avant ! Elle possède par exemple 1 jet directionnel devant (pour percer un mini trou) et surtout <strong>6 à 8 jets obliques ultra-puissants propulsés vers l'ARRIÈRE</strong> (en rétro-poussée).</li>
+        <li><strong>La propulsion mécanique !</strong> Sous la pression colossale du moteur tractée (300 Bars), l'eau qui s'échappe de la grenade vers l'arrière la force à s'engouffrer toute seule vers l'avant dans le bouchon, comme un missile autodirigé.</li>
+        <li>En reculant le raccord, la puissance des jets arrière vient broyer les amas de papier-toilette et lessive amalgamée, pour les tracter mécaniquement vers la chambre de visite et les vider au réseau communal libre ! Tout le diamètre 110 est purifié. La pression décape littéralement tout le tartre des parois qui redeviennent luisantes. </li>
+      </ol>
+
+      <div class="blog-cta card">
+        <h3>Intervention express sur le grand égout par hydrocurage (Camion Pompe)</h3>
+        <p>Ne brisez pas vos planchers, n'inondez pas vos caves ! Nous disposons de remorques d'hydrocurage capables de passer dans le centre-ville bruxellois pour pulvériser tout blocage de colonne à la haute pression 350 bars.</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem;">
+          <a href="tel:0465685158" class="btn btn-primary btn-lg" style="box-shadow:var(--shadow-accent);">☎️ N° Urgence Camion Pompe : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="responsabilite">5. Où est le bouchon : Public ou Privé ? Et qui doit payer ?</h2>
+      <p>Il arrive que l'eau inonde votre cave au rez, alors que personne chez vous n'a tiré d'eau depuis le matin ! C'est le symptôme horrible signifiant que c'est... <strong>l'égout de la commune (la rue bruxelloise) qui refoule chez vous en sens inverse</strong> suite à de fortes pluies d'orage ou par un système municipal écrasé.</p>
+      
+      <p><strong>Ce qu'il faut savoir sur l'assainissement communal (Vivaqua ou compagnie locale) :</strong></p>
+      <ul>
+        <li><strong>La limite de propriété :</strong> Vous en tant que propriétaire êtes responsable du débouchage (et des frais du plombier ou camion pompe privé) de toute la tuyauterie située EN AMONT du domaine public. En bref, de votre toilette jusqu'à la limite du trottoir / ou la grande chambre de visite principale s'il y a lieu de séparation).</li>
+        <li><strong>Au-delà du raccord :</strong> Si l'hydrocureur n'arrive pas à avancer depuis votre seuil et que la caméra inspecte que la route est affaissée ou que le gros tuyau communal est saturé, La responsabilité retombe sur le gérant de réseaux. Plombier Urgence fermera les vannes avec système anti-retour ou vous délivrera ce jour-là le rapport écrit avec l'évidence de la caméra pour exiger de Vivaqua une prise en charge et le paiement immédiat des dégâts subis au sous-sol.</li>
+      </ul>
+
+      <p class="blog-intro" style="font-size:1.05rem;margin-top:2rem"><strong>Ne prenez aucun risque seul :</strong> L'ouverture d'un "tampon de visite" ou des plaques intérieures au sol, sous lequel l'eau stagnante méphytique forme une pression par poids (effet geyser lors du dévissage) peut blesser mortellement les voies respiratoires et vous intoxiquer instantanément au Sulfure de Dihydrogène de la ville au visage. Ne dévissez rien en aval d’un si gros volume sans l’encadrement à long bras des plombiers qualifiés d'un outil par air-ventilation de rigueur.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Refoulement des eaux dans toute la maison ?" subtitle="Débouchage égout principal en 45 minutes par camion hydrocureur. Protection totale de votre espace de vie." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:800px;margin:0 auto;}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-sm)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.2;margin-bottom:var(--space-xl)}.blog-intro{font-size:1.15rem;line-height:1.8;color:var(--color-text);margin-bottom:var(--space-2xl);font-weight:500;}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-lg);font-weight:800;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.5rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600;}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;color:var(--color-text);margin:var(--space-3xl) 0 var(--space-lg);padding-top:var(--space-md);border-bottom:2px solid var(--color-border);padding-bottom:10px;}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;color:var(--color-text);margin:var(--space-xl) 0 var(--space-md);}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:1.05rem}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.8rem;font-size:1.05rem}.blog-article li{margin-bottom:var(--space-sm)}.blog-article strong{color:var(--color-text);font-weight:700;}
+  .blog-cta{padding:var(--space-2xl);margin:var(--space-2xl) 0;text-align:center;border-left:4px solid var(--color-accent);border-radius:var(--radius-lg);}.blog-cta h3{font-size:var(--font-size-xl);font-weight:800;margin-bottom:var(--space-sm);color:var(--color-text)}.blog-cta p{color:var(--color-text-muted);font-size:1.1rem;margin-bottom:var(--space-md)}
+</style>

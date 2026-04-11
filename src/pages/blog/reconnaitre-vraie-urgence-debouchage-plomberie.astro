@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Comment reconnaître une vraie urgence de débouchage ?";
+const description = "Évier lent ou inondation imminente ? Apprenez à évaluer le degré de gravité d'un bouchon sanitaire pour éviter les frais nocturnes inutiles ou sauver votre maison.";
+
+const faqs = [
+  {
+    "q": "Un évier de cuisine qui coule très lentement est-il considéré comme une urgence ?",
+    "a": "Non. Le ralentissement (sans débordement spontané) est un signe avant-coureur d'un problème d'égouttaige en formation, mais il ne menace pas la structure de la bâtisse. Vous pouvez fermer ce point d'eau, utiliser d'autres éviers, et obtenir un tarif de dépannage régulier de jour au lieu de payer une astreinte de garde."
+  },
+  {
+    "q": "Qu'est-ce qu'un refoulement croisé et pourquoi est-ce si grave ?",
+    "a": "Un refoulement croisé, c'est quand l'eau de votre lave-linge (au premier étage) ressort physiquement par le siphon du receveur de votre douche (au rez-de-chaussée). C'est la confirmation technique que l'artère centrale de la maison (la colonne de décharge) est 100% bloquée. L'inondation majeure est imminente à la prochaine goutte."
+  },
+  {
+    "q": "Puis-je couper l'eau pour transformer une urgence de nuit en un dépannage régulier le matin ?",
+    "a": "Absolument. Si la fuite ou le WC bouché est contenu(e) et que l'eau ne s'élève plus, fermez simplement la vanne d'arrivée d'eau générale de votre domicile (près du compteur). La menace est gelée. Vous pourrez appeler à l'heure d'ouverture normale des bureaux pour économiser la surtaxe nocturne de +100%."
+  },
+  {
+    "q": "La présence d'odeurs intenses (œuf pourri) est-elle dangereuse pour la santé ?",
+    "a": "Le sulfure d'hydrogène (gaz d'égout nauséabond) qui remonte par un siphon vide est hautement inconfortable, induisant maux de têtes. Bien que perturbant fortement la nuit, s'il n'y a pas d'eau fécale visible, il suffit d'ouvrir les fenêtres et de barricader la porte des toilettes jusqu'au matin. L'aération est votre alliée d'urgence."
+  },
+  {
+    "q": "Les toilettes de l'immeuble du dessus débordent chez moi tout le temps. Qui appeler en urgence majeure ?",
+    "a": "Vous êtes victime dans ce schéma. Coupez d'abord vos compteurs, montez taper chez vos voisins pour arrêter leur production d'eau, et agissez vite car ce cas exige obligatoirement le service de garde de la plomberie pour dégorger la colonne syndicale avant que vos pièces de vies ne subissent la ruine des eaux usées tierces."
+  }
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+  <article class="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold text-blue-900 mb-6">Comment reconnaître une vraie urgence de débouchage (et éviter les frais de nuit) ?</h1>
+    
+    <p class="lead text-xl text-gray-600 mb-8 border-l-4 border-blue-500 pl-4">
+      Lorsque la plomberie dysfonctionne à 22h30, l’adrénaline dicte souvent la réponse. On se jette sur son smartphone pour commander, dans la panique la plus totale, un déboucheur de garde qui facturera des tarifs majoritaires nocturnes vertigineux. Pourtant, plus de la moitié des <em>"urgences pures"</em> classées par les clients sont en réalité de simples contrariétés pouvant attendre sagement et sans dommage le lever du soleil de demain. Apprenez le triage rationnel des symptômes d'un blocage d'égouts pour agir de concert avec votre portefeuille.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">1. Ce qui PEUT attendre : Les "Urgences Différables"</h2>
+    <p class="text-gray-700 mb-4">
+      Règle numéro une en plomberie : L'inconfort n'est pas un sinistre de voirie. S'il n'y a aucun débordement massif des matières sur vos planchers, il n'y a pas péril en l'habitation, et une astreinte de nuit n'est financièrement pas requise.
+    </p>
+
+    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-3">Symptômes d’une contrariété basique :</h3>
+    <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+      <li><strong>Le "glouglou" et l'évier lent :</strong> L’eau de votre cuisinette met 10 intenses minutes à descendre ? L'eau ne quitte jamais la cuve de l'évier en métal ? C'est le début d'un colmatage gras localisé, mais cela ne fuite pas. N'utilisez plus cet évier jusqu'à demain.</li>
+      <li><strong>Le WC unique bouché (et contenus) :</strong> Le "Popo" du rez-de-chaussée est engorgé : le niveau d'urine monte jusqu'au rebord supérieur de la cuvette mais s'arrête là par effet de pression. <strong>Interdisez à quiconque d'appuyer sur la chasse !</strong> L’eau est bloquée à l'intérieur de la porcelaine, sans rien dégrader aux alentours ? Fermez le couvercle et prenez patience dans votre lit. </li>
+      <li><strong>Mauvaises odeurs sèches :</strong> Le siphon asséché ou fêlé lâche des miasmes (Odeur de marais) dans l'appartement. Aérez fortement, barricadez la pièce et demandez le remplacement de l'évent fuyard à la lumière du jour.</li>
+    </ul>
+
+    <!-- SECTION 2 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">2. Ce qui NE PEUT PAS attendre : L'Alerte Rouge Majeure</h2>
+    <p class="text-gray-700 mb-4">
+      Les urgences absolues sont des situations où le dommage collatéral en centaines d'euros (inondation des sols, propagation fécale, affaissement du bâtit ou ruine électrique) frappe de nouvelles pièces à chaque minute perdue. Si votre problème matche ces trois critères, la facturation à +100% de la garde nocturne est le moindre de vos immenses soucis : un dépannage est rentable face à l'étendue sinistrée.
+    </p>
+
+    <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-3">Cas No. 1 : Le Débordement Autonome et Continu</h3>
+    <p class="text-gray-700 mb-4">
+      Il survient même si vous avez sagement coupé l'arrivée d'eau froide à votre réseau principal de compteur. Si l'eau grise continue vicieusement de sourdre et de se déverser de façon magique par les points bas de vos carrelages (le trop-plein d'une douche de cave, le regard central du hall), c'est une <strong>Pression Tierce</strong>. 
+      Celle-ci provient le plus souvent des déjections cumulées d'étages entiers des appartements logés au dessus de vous (Les voisins qui utilisent allègrement leur douchette), ou pire : du refoulement brut de l'égout extérieur de la grande rue de votre commune (Collecteur de ville écrasé par de lourds camions ou racines, recrachant la ville entière chez vous). 
+      Seul le camion Hydrocureur lourd SOS de 3 tonnes sauvera le parquet du désastre.
+    </p>
+
+    <!-- SECTION 3 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">3. L'Acte qui sauve de la surtarification nocturne : "Le Gel de Situation"</h2>
+    <p class="text-gray-700 mb-4">
+      La seule manipulation que tous les experts en assurances et dépannages bruxellois imposent pour bloquer le chronomètre d'une crise, c'est de procéder à une "Stagnation hydrique forcée".
+    </p>
+    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 mb-8">
+      <h4 class="text-xl font-bold text-gray-800 mb-3">La procédure d'isolement temporel : </h4>
+      <p class="text-gray-700 mb-4">
+        Si l'eau débordante n'est causée <strong>Que par vous</strong> (ex: l'évier que vous venez de vider bêtement ou la machine à laver qui rince et coule subitement chez vous). Le bouchon n'évoluera plus si aucune goutte nouvelle ne frappe le seuil de rétention.
+      </p>
+      <ul class="list-disc pl-4 text-gray-700 space-y-2">
+        <li>Arrachez la prise des appareils électroménagers tournants.</li>
+        <li>Tournez vigoureusement le robinet en T (Quart de tour) sur le tuyau métallique de l'entrée d'eau à la cave d'habitation.</li>
+        <li>Bandez la cuvette du WC bouchée avec de l'adhésif large et collez-y une étiquette explicite "DO NOT USE - HS !" pour les éventuels invités.</li>
+        <li>Brossez le quart de litre pollué au sol de la salle de bain... Allez dormir. Les artisans prendront en charge le furet demain matin à 8h pour 120 euros au forfait diurne au lieu de vous saigner pour un blocage passif de nuit.</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">4. Le risque psychologique de la Ventouse et de l'Acide</strong></h2>
+    <p class="text-gray-700 mb-4">
+      Si vous avez déterminé dans la panique que le problème "peut attendre lundi" via l'isolement hydrique du bloc wc, vous serez souvent tentés (tristesse et remords face au meuble engorgé) d'attraper les armes du bricolage un dimanche à 16h pour épargner totalement les frais. <strong>Attention !</strong>
+    </p>
+    <p class="text-gray-700 mb-6 font-semibold border-l-4 border-gray-400 pl-4 bg-gray-50 py-3">
+      Verser une cruche d'eau brûlante et de cristaux est salvateur. Mais jeter des granules industriels très denses de soude pure qui se marbrent (Durcissent comme du ciment s'ils ne trouvent pas l'issue) créera un second bouchon rocailleux "Artificiel" mille fois plus compliqué à extraire via furet rotatif pour le technicien que vous rappellerez en larmes le Lundi ! Une obstruction molle est extraite en douceur ; une croûte d'acide amalgamée exige une facturation lourde, bruyante (Moteurs) et potentiellement destructrice des PVCs vieux des lointaines années 1970 avec de minuscules épanchements de fuites.
+    </p>
+
+    <!-- SECTION 5 -->
+    <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-4">5. Résumé de votre Checklist décisionnelle</h2>
+    <p class="text-gray-700 mb-4">Avant d'appeler l'urgence de minuit au bord de la sédition financière, posez-vous ces 3 questions :</p>
+    <ol class="list-decimal pl-6 mb-6 text-gray-700 space-y-3">
+      <li><strong>L'eau continue-t-elle de jaillir par elle-même malgré tous mes robinets coupés ?</strong> (Si OUI : Urgence absolue 24H, Appelez la flotte d'hydrocurage).</li>
+      <li><strong>Puis-je utiliser un autre point d'eau chez moi ?</strong> (J'ai bloqué la petite cuvette d'en haut, mais l'évacuation de la SDB de l'étage principal coule parfaitement vers la rue). Si OUI : Attendez le forfait économique de jour !</li>
+      <li><strong>Le parquet ou équipement électronique commence-t-il à baigner ?</strong> L'inondation en action demande la présence de l'extracteur de l'artisan express et de ses pompes sans aucun repoussement.</li>
+    </ol>
+
+    <!-- CTA BANNER -->
+    <div class="my-12">
+      <CTABanner 
+        title="Une colonne de douche bouillonne brutalement de fond en comble ?"
+        subtitle="Si vos démarches du gel de la source et la coupure des réseaux sont insuffisants, c'est l'Artère commune qui asphyxie vos sols ! Nous déployons nos techniciens de nuit très rapidement dans toutes les 19 communes afin de refouler le raz de marée. Interventions et diagnostics francs par téléphone 24h/24."
+      />
+    </div>
+
+  </article>
+</Layout>

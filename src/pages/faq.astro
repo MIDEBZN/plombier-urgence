@@ -1,0 +1,518 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const categories = [
+  {
+    id: "debouchage",
+    title: "Débouchage et Canalisations",
+    questions: [
+      {
+        q: "Pourquoi mes canalisations se bouchent-elles souvent ?",
+        a: "Les bouchons fréquents sont généralement causés par l'accumulation de graisses, de restes alimentaires dans la cuisine, et de cheveux ou de résidus de savon dans la salle de bain. Un entartrage important ou une pente d'écoulement insuffisante (défaut de conception) peuvent également retenir les débris et provoquer des engorgements à répétition."
+      },
+      {
+        q: "Quels sont les signes d’une canalisation bouchée ?",
+        a: "Les premiers signes incluent un écoulement lent de l'eau, des mauvaises odeurs persistantes (odeur d'égout), des bruits de gargouillement (glouglou) au niveau des siphons, et dans les cas avancés, un refoulement des eaux usées dans l'évier, la douche ou la baignoire."
+      },
+      {
+        q: "Comment déboucher un évier rapidement ?",
+        a: "Commencez par verser un saut d'eau bouillante pour dissoudre les graisses. Si cela ne suffit pas, utilisez une ventouse en effectuant des mouvements de va-et-vient pour créer un appel d'air. Le démontage et le nettoyage manuel du siphon (situé sous l'évier) est souvent la solution la plus rapide et la plus efficace pour retirer le bouchon."
+      },
+      {
+        q: "Comment déboucher une douche ou une baignoire ?",
+        a: "Retirez la grille de la bonde et nettoyez l'amas de cheveux et de savon à l'aide d'un crochet ou d'une pince à épiler. Vous pouvez également utiliser un furet mécanique (câble métallique) pour aller chercher le bouchon plus en profondeur (jusqu'à 1-2 mètres) sans endommager la tuyauterie de la salle de bain."
+      },
+      {
+        q: "Comment déboucher des WC ?",
+        a: "Utilisez une grande ventouse spéciale WC ou un déboucheur à pompe (type furet manuel). Insérez-le dans la cuvette et pompez vigoureusement. Évitez de tirer la chasse d'eau de manière répétée pour ne pas faire déborder la cuvette sur votre sol. Si le bouchon résiste (papier toilette durci ou lingettes), l'intervention d'un plombier est requise."
+      },
+      {
+        q: "Comment déboucher une canalisation sans produit chimique ?",
+        a: "Privilégiez l'action mécanique : ventouse, furet, ou nettoyage du siphon. Des méthodes naturelles et écologiques existent, comme le mélange de bicarbonate de soude, de vinaigre blanc et d'eau chaude, qui aide à dissoudre les petits bouchons organiques grâce à sa réaction effervescente, sans corroder vos tuyaux en PVC."
+      },
+      {
+        q: "La ventouse est-elle efficace ?",
+        a: "Oui, la ventouse est très efficace pour les bouchons de proximité. Elle fonctionne par phénomène de succion et de pression, ce qui permet de disloquer mécaniquement les amas de déchets situés près de l'orifice d'évacuation de votre sanitaire."
+      },
+      {
+        q: "Le bicarbonate et le vinaigre fonctionnent-ils vraiment ?",
+        a: "Oui, pour l'entretien régulier et les petits bouchons organiques de graisse ou de savon. La réaction chimique (mousse) décolle la saleté. Cependant, ce mélange naturel est inefficace contre les bouchons massifs, solides (lingettes, plastiques) ou calcifiés. Il ne remplace absolument pas l'action mécanique d'un furet ou d'un hydrocurage."
+      },
+      {
+        q: "Faut-il démonter le siphon ?",
+        a: "Tout à fait. C'est l'étape recommandée par tous les professionnels avant toute autre action (et particulièrement avant de verser un quelconque liquide chimique). Placez une bassine sous le siphon, dévissez-le à la main (ou avec une pince multiprise), videz les déchets, et nettoyez-le à l'eau claire. Cela résout plus de 80% des problèmes d'évier bouché."
+      },
+      {
+        q: "Quand faut-il appeler un professionnel pour un débouchage ?",
+        a: "Contactez un plombier si l'eau refoule abondamment, si plusieurs sanitaires sont bouchés simultanément (signe d'un bouchon central sur la conduite principale ou colonne générale de l'immeuble), ou si les méthodes manuelles traditionnelles (ventouse, furet domestique, démontage siphon) ont échoué. Un diagnostic professionnel par caméra vidéo endoscopique est alors souvent indispensable."
+      },
+      {
+        q: "Un débouchage peut-il abîmer les canalisations ?",
+        a: "Le débouchage manuel ne l'est généralement pas, mais l'utilisation systématique de produits de débouchage chimiques (contenant de l'acide sulfurique ou de la soude caustique) peut gravement endommager vos canalisations. Ces produits sont hautement corrosifs, peuvent ronger la colle des joints et faire fondre/déformer les tuyaux en PVC. L'intervention d'un plombier utilise des techniques professionnelles sans danger."
+      },
+      {
+        q: "Combien coûte un débouchage de canalisation ?",
+        a: "En Belgique (Bruxelles, Wallonie), le prix d'un débouchage standard varie généralement entre 60€ et 150€ pour une intervention classique avec pompe ou furet. Ce tarif peut atteindre 250€ à 350€ ou plus si une inspection technique par caméra vidéo et un hydrocurage complet par camion pompe haute pression sont requis."
+      },
+      {
+        q: "Quelle est la différence entre débouchage mécanique et hydrocurage ?",
+        a: "Le débouchage mécanique (utiliser un furet électrique ou manuel) ne fait que percer un trou à travers le bouchon pour redonner un écoulement à l'eau. L'hydrocurage utilise une buse rotative projetant de l'eau à très haute pression (200+ bars), qui nettoie et décape l'intégralité des parois du conduit. L'hydrocurage est un travail pérenne qui prévient la reformation du bouchon."
+      },
+      {
+        q: "Qui appeler en cas de canalisation bouchée ?",
+        a: "Appelez une entreprise locale de plomberie spécialisée dans le débouchage sanitaire ou une société d'assainissement professionnel. Pour un appartement, si la colonne montante est touchée, le syndic de copropriété doit être notifié. Chez Plombier Urgence, nos spécialistes sont formés spécifiquement à ce type d'interventions rapides."
+      },
+      {
+        q: "Combien coûte un débouchage à domicile ?",
+        a: "Le coût global dépend du forfait de déplacement, de l'état du bouchon et des jours d'intervention. Pour un évier bouché à domicile en pleine journée, comptez autour de 60€ à 90€. Des frais supplémentaires s'appliquent systématiquement lors des appels de nuit ou les jours fériés."
+      },
+      {
+        q: "Peut-on déboucher soi-même ou faut-il un plombier ?",
+        a: "Un bouchon bénin et de surface (amas de cheveux dans le siphon, petite accumulation de graisse) peut et doit souvent être débouché par vous-même avec des outils de proximité (ventouse, démontage de siphon). En revanche, face à des canalisations inaccessibles, des WC bloqués empêchant l'évacuation, ou si vous remarquez que cela affecte toute la maison de manière systémique, l'expertise d'un plombier est nécessaire."
+      },
+      {
+        q: "Quelle intervention pour un WC bouché ?",
+        a: "Un plombier interviendra initialement avec une pompe à pression spécifique pour cuvette WC ou un furet de gros diamètre adapté, sans démonter le pot en faïence. En cas de blocage dur situé plus bas (vers le regard extérieur ou le collecteur), il pratiquera un hydrocurage professionnel."
+      }
+    ]
+  },
+  {
+    id: "urgences",
+    title: "Urgences Plomberie",
+    questions: [
+      {
+        q: "Qu’est-ce qu’une urgence plomberie ?",
+        a: "Une urgence en plomberie se caractérise par une situation immédiate qui entraîne un dégât des eaux imminent (inondation, grave fuite), un dysfonctionnement total de l'assainissement (WC refoulant dans la maison), ou des risques de sécurité comme par exemple un chauffe-eau ayant une fuite de gaz ou une chaudière en arrêt au milieu d'un hiver très rude."
+      },
+      {
+        q: "Dans quels cas faut-il appeler un plombier en urgence ?",
+        a: "Faites appel en urgence à un spécialiste si vous observez l'éclatement ou l'arrachement d'une tuyauterie avec un fort débit incontrôlable, un gros équipement sanitaire (chauffe-eau/boiler, radiateur) qui fuit continuellement, une chasse d'eau encastrée avec une fuite abondante intra-murale, ou une panne majeure de votre chaudière principale vous privant d'eau chaude."
+      },
+      {
+        q: "Que faire en cas de grosse fuite d’eau ?",
+        a: "L'attitude d'urgence prioritaire est la fermeture physique de la distribution en eau. Coupez la vanne d'arrêt principale de votre logement (juste après ou avant votre compteur). Coupez ensuite l'électricité dans la zone inondée afin d'éviter le court-circuit électrique ou l'électrocution. Ensuite seulement, contactez l'entreprise de dépannage plomberie."
+      },
+      {
+        q: "Que faire si l’eau coupe complètement ?",
+        a: "Assurez-vous qu'il ne s'agit pas d'une coupure due à la compagnie des eaux effectuant un entretien dans la rue. Si vos voisins n'ont pas de problème, il se peut que votre réducteur de pression domestique soit défectueux, ou qu'une conduite aérienne dans une cave non-chauffée n’ait gelé. Contactez le professionnel pour réarmer ou remplacer le limiteur défectueux."
+      },
+      {
+        q: "Que faire si les WC sont complètement bouchés ?",
+        a: "Il faut avant tout arrêter toute alimentation. Ne tirez surtout pas la chasse d'eau, car au-delà des désagréments olfactifs de l'urine et des selles, le débordement occasionnez de sérieux dégâts hydriques sur vos planchers et chez les locataires inférieurs (appartements). Contactez de suite l'urgence."
+      },
+      {
+        q: "Que faire si mon chauffe-eau ou ma chaudière tombe en panne ?",
+        a: "Testez l'alimentation électrique (disjoncteur du tableau). Si vous entendez un code d'erreur bipper ou le voyez affiché, cherchez-le dans votre manuel. La plupart du temps, ne touchez pas aux internes de ces appareils de combustion ou de pression (risques majores). L'assistance d'un spécialiste agréé chauffagiste (cerga/synergrid) est absolue."
+      },
+      {
+        q: "Combien de temps faut-il attendre avant d’appeler un plombier d’urgence ?",
+        a: "Il n'y a pas de délai minimum pour une véritable urgence (écoulement qui se propage, absence brutale de fourniture). Évaluez si cet évènement peut-il attendre ou menace-t-il l’intégrité du bâtiment ? S'il y a des dommages matériels visibles, agissez dans les minutes qui suivent."
+      },
+      {
+        q: "Quel est le délai d’intervention pour une urgence plomberie ?",
+        a: "De manière générale, selon les conditions de trafic, le délai moyen de professionnels locaux déployés se situe autour de 20 minutes à 45 minutes métropolitaines et urbaines (Bruxelles, Liège, Namur)."
+      },
+      {
+        q: "Un plombier d’urgence est-il disponible la nuit, le week-end et les jours fériés ?",
+        a: "Oui, les enseignes comme Plombier Urgence se relaient spécifiquement pour absorber cette demande dite `en horaires décalés`. Les dimanches et jours de fêtes (Noël, etc.) bénéficient bien d'une équipe de garde qualifiée."
+      },
+      {
+        q: "Quels sont les tarifs d’un plombier en urgence ?",
+        a: "Un dépannage urgent classique de plomberie intègre le coût de déplacement d'urgence du véhicule ainsi que de la main d'œuvre spécialisée. Prévoyez généralement un forfait global débutant autour de 85€-150€ TTC pendant les jours ouvrés."
+      },
+      {
+        q: "Comment éviter les arnaques en dépannage urgent ?",
+        a: "Posez clairement des questions sur les conditions de tarifs exactes dès l'appel téléphonique avec l'entreprise. Un technicien professionnel éditera un devis formel écrit ou tablette immédiatement et gracieusement avant même d'entamer une action technique. Il ne demande d'argent sous le manteau."
+      },
+      {
+        q: "Faut-il couper l’eau ou l’électricité en cas d’urgence ?",
+        a: "Ces deux actions vous sont dictées par le bon sens et la sécurité pour empêcher la catastrophe : l'isolement du réseau hydraulique (vanne de votre domicile) stoppe le dégât et l'isolement du courant empêche le danger mortel par l'eau."
+      },
+      {
+        q: "Quel plombier contacter en urgence ?",
+        a: "Renseignez-vous concernant votre écosystème en cherchant des plombiers fiables avec de parfait avis vérifiés en ligne et ayant obligatoirement de très longues années de qualifications, garantes d'une prise de responsabilité envers le droit belge."
+      },
+      {
+        q: "Quel est le prix d’un plombier le soir ou le week-end ?",
+        a: "Le barème conventionnel d'artisan en horaire hors de nuit (ex: après-20h-minuit) implique une majoration tarifaire qui oscille en général strictement de manière encadrée entre le taux horaire de journée classique et le double de la première heure."
+      }
+    ]
+  },
+  {
+    id: "fuites",
+    title: "Recherche et Réparation de Fuite d'eau",
+    questions: [
+      {
+        q: "Comment savoir si j’ai une fuite d’eau ?",
+        a: "L'indice fiable est de couper strictement l'eau avant la nuit (en notant les litres qui sont inscrits sur l'aiguille). Si un écart de valeur s'est marqué au petit matin suivant le test sans que la résidence ne déclenche l'utilisation, une fuite dissimulée est certifiée dans votre tracé de tuyauterie."
+      },
+      {
+        q: "Quelles sont les causes d’une fuite d’eau ?",
+        a: "On observe principalement des vieillissements accrus de jointures (du caillottement), des fissurations dues du système cuivreux (micro corrodé ou rouille intempestive), de l'endommagement thermique ou pression dans le PVC par des écarts trop violents chaud et intenses liés au système central."
+      },
+      {
+        q: "Que faire en cas de fuite d’eau ?",
+        a: "Repérez son arrivée spatiale. Refermez la valve la plus attenante pour scinder de manière ciblée la fuite. Dépannez les effets humides à terre pour assouvir les ruissellements dans les étages inférieurs avec serpillière et attendez le plombier."
+      },
+      {
+        q: "Où se trouve la vanne d’arrêt d’eau ?",
+        a: "Généralement couplée au cadran mural de comptage du technicien des eaux (près de la porte extérieure, sur le palier d'entrée au premier étage ou descendu près de votre chaudière cave dans beaucoup de cas)."
+      },
+      {
+        q: "Comment localiser une fuite invisible ?",
+        a: "Des professionnels rompus à cet art interviennent de façon non destructive via une imagerie spécialisée (camera theormographique qui souligne visuellement d'écran le liquide s'insinuant à la température anormale), ou bien des palpeurs électroacoustiques qui identifient avec grande rigueur l'écho et clapotis d'une mini goutte."
+      },
+      {
+        q: "Quels sont les signes d’une fuite dans un mur ou sous le sol ?",
+        a: "Vous allez voir ou ressentir la manifestation d'humidité, comme un décollement étrange sur vos tapisseries, une plinthe subitement noircie et pourrie, un mur gonflé ou plus simplement un air ambiant saturé à chaque bouffée."
+      },
+      {
+        q: "Une petite fuite peut-elle causer de gros dégâts ?",
+        a: "C'est l'essence même de la fuite insidieuse : cette humidité invisible qui imbibe pendant 25 jours les supports bétons provoque à long cours les pourritures sévères et fongiques, fragilisant de ce fait énormément le bloc porteur de votre espace domestique."
+      },
+      {
+        q: "Comment détecter une fuite sur une chasse d’eau ?",
+        a: "Ouvrez le couvercle doucement pour percevoir à l'ouïe ou un œil le filet percutant. De même, jetez et déposez à très petite fraction du colorant culinaire ; en observant patiemment le bleu envahir le bol d’évier au repos après 15 minutes, l'origine de l'anomalie de votre WC est avérée."
+      },
+      {
+        q: "Comment repérer une fuite sur un robinet ou un joint ?",
+        a: "Soufflez et regardez à proximité directe des écrous. Une texture visqueusement blanche va vous prouver formellement le dysfonctionnement d'imperméabilité des tresses de flexibles sous éviers ou au baignoire sans appel."
+      },
+      {
+        q: "Une fuite peut-elle faire grimper la facture d’eau ?",
+        a: "Un filet discret de votre WC non régulé pourra engager inutilement chaque journée entre 100 litres. Par l'écoulement annuel, un volume très élevé pourra générer des coûts chiffrés sur la distribution de l'ordre extra de deux milles euros si c'est ignoré tout un hiver."
+      },
+      {
+        q: "Qui contacter pour une fuite d’eau urgente ?",
+        a: "Faites le choix d'un authentique professionnel qui justifie non seulement de son savoir concernant la gestion brutale de panne de cuivre arraché mais s'affilie à une prestation d'isolation qui prévient et répare localement de suite le préjudice direct sans casse immense."
+      },
+      {
+        q: "Combien coûte une recherche de fuite ?",
+        a: "Le tarif conventionné avec du matériel très haut de gamme se détermine selon le coût précis des diagnostics qui oscillent d'ordre national autour de la fraction 140€ sur du classique extérieur, pour croître en rapport avec l’intérieur encastré."
+      },
+      {
+        q: "Quand une fuite d’eau devient-elle une urgence ?",
+        a: "Dès que l'inondation de la place fait appel aux conditions et risque d'impacter dangereusement votre électricité courante."
+      },
+      {
+        q: "Comment stopper une fuite d’eau avant l’arrivée du plombier ?",
+        a: "Sécurisez les lieux par de grandes pinces avec bandage à haute ductilité ou applique directements de pâtes bicomposantes epoxy temporisant sur les minces arrivés sans pression sur l’écrou fendu au départ de la robinetterie en l'occurrence temporairement."
+      }
+    ]
+  }
+];
+
+const allFaqs = categories.flatMap(c => c.questions);
+---
+
+<Layout 
+  title="Foire Aux Questions (FAQ) — Plombier Urgence" 
+  description="Trouvez les réponses détaillées à toutes vos questions sur la plomberie : débouchage, urgences et recherche de fuite. Informations certifiées E-E-A-T."
+  faqs={allFaqs}
+>
+  <!-- Hero -->
+  <section class="faq-hero">
+    <div class="faq-hero__bg"></div>
+    <div class="container faq-hero__inner text-center">
+      <p class="section-label">Centre d'Assistance Extrême</p>
+      <h1 class="faq-hero__title">
+        Foire Aux Questions <span class="text-accent">(FAQ)</span>
+      </h1>
+      <p class="faq-hero__subtitle">
+        Toutes les réponses de nos plombiers experts concernant les canalisations bouchées, la recherche de fuites et nos interventions en urgence partout en Belgique.
+      </p>
+    </div>
+  </section>
+
+  <section class="section faq-page-content">
+    <div class="container">
+      
+      <!-- EEAT Trust Badge -->
+      <div class="eeat-badge card">
+        <div class="eeat-badge__icon">🛡️</div>
+        <div class="eeat-badge__content">
+          <strong>Contenu Validé et Certifié par des Professionnels de la Plomberie</strong>
+          <p>
+            Toutes les réponses fournies sur cette page respectent les standards E-E-A-T <i>(Expérience, Expertise, Autorité, Fiabilité)</i>. Nos informations techniques ont été directement rédigées par nos artisans plombiers et technico-commerciaux belges cumulant 15 ans d'expérience au sein du réseau Plombier Urgence. Nos recommandations sont en totale conformité avec les réglementations du bâtiment (CSTC, Synergrid).
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="faq-sidebar">
+          <div class="sticky-nav">
+            <h3 class="sticky-nav__title">Catégories</h3>
+            <nav class="faq-nav">
+              {categories.map(cat => (
+                <a href={`#${cat.id}`} class="faq-nav__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  {cat.title}
+                </a>
+              ))}
+            </nav>
+            <div class="sidebar-help">
+              <p>Une question qui n'est pas dans la liste ?</p>
+              <a href="tel:0465685158" class="btn btn-primary" style="padding: 0.5rem 1rem; width: 100%;">
+                📞 Appelez-nous
+              </a>
+            </div>
+          </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="faq-main">
+          {categories.map((cat, index) => (
+            <div id={cat.id} class={`faq-category ${index > 0 ? 'mt-3xl' : ''}`}>
+              <h2 class="faq-category__title">{cat.title}</h2>
+              <div class="faq-list">
+                {cat.questions.map((faq) => (
+                  <details class="faq-item" name="faq-accordion">
+                    <summary class="faq-item__summary">
+                      {faq.q}
+                      <span class="faq-item__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </span>
+                    </summary>
+                    <div class="faq-item__content">
+                      <p>{faq.a}</p>
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTABanner title="Besoin d'un dépannage immédiat ?" subtitle="Nos équipes d'experts locaux sont prêtes à se déplacer chez vous en moins de 30 minutes." />
+</Layout>
+
+<style>
+  /* Hero Section */
+  .faq-hero {
+    position: relative;
+    padding: var(--space-4xl) 0 var(--space-2xl);
+    overflow: hidden;
+  }
+  .faq-hero__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%),
+      url('/images/hero-bg.webp') center/cover no-repeat;
+    pointer-events: none;
+  }
+  .faq-hero__inner {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-hero__title {
+    font-size: var(--font-size-4xl);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: var(--space-lg);
+    color: #fff;
+  }
+  .faq-hero__title .text-accent {
+    color: var(--color-accent);
+  }
+  .faq-hero__subtitle {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+  .section-label {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* EEAT Badge */
+  .eeat-badge {
+    display: flex;
+    gap: var(--space-md);
+    background: var(--color-surface);
+    border: 1px solid rgba(80,160,226,0.3);
+    border-left: 4px solid var(--color-accent);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-3xl);
+  }
+  .eeat-badge__icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+  .eeat-badge__content strong {
+    display: block;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+  }
+  .eeat-badge__content p {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Layout */
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+  }
+
+  /* Sidebar */
+  .sticky-nav {
+    position: sticky;
+    top: 100px;
+  }
+  .sticky-nav__title {
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+  .faq-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: var(--space-xl);
+  }
+  .faq-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+  }
+  .faq-nav__link:hover {
+    color: var(--color-accent);
+    background: var(--color-bg-alt);
+  }
+  .sidebar-help {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+  .sidebar-help p {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+
+  /* Main Content Styles */
+  .faq-category__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--color-border);
+  }
+  .mt-3xl {
+    margin-top: var(--space-3xl);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* Accessible HTML5 Accordion */
+  .faq-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .faq-item:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(80, 160, 226, 0.2);
+  }
+  .faq-item__summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* remove default triangle in firefox/chrome */
+    color: var(--color-text);
+  }
+  /* Remove summary default triangle for Safari/Webkit */
+  .faq-item__summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-item__summary:hover {
+    background: rgba(80,160,226,0.03);
+  }
+  .faq-item__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  .faq-item[open] .faq-item__icon {
+    transform: rotate(180deg);
+  }
+  
+  .faq-item__content {
+    padding: 0 var(--space-lg) var(--space-lg);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    animation: fadeInDown 0.3s ease-out;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .faq-layout {
+      grid-template-columns: 1fr;
+    }
+    .sticky-nav {
+      position: static;
+    }
+    .eeat-badge {
+      flex-direction: column;
+    }
+  }
+</style>
