@@ -170,10 +170,22 @@ const totalReviews = reviews.length;
 const averageRating = "4.9";
 
 const title = "Avis Clients Plombier Urgence | Ce que pensent nos clients";
-const description = "Découvrez les avis et témoignages de nos clients partout en Belgique. Plus de 500 personnes nous font confiance pour leurs urgences de plomberie et débouchage.";
+const description = "Découvrez les avis de nos clients partout en Belgique. Plus de 500 personnes nous font confiance pour leurs urgences de plomberie. ☎ 0465 68 51 58";
+
+const extraSchemas = [{
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "Plombier Urgence"
+  },
+  "ratingValue": averageRating,
+  "reviewCount": totalReviews.toString(),
+  "bestRating": "5"
+}];
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} extraSchemas={extraSchemas}>
   <div class="reviews-page">
     <!-- Hero Section -->
     <header class="hero">

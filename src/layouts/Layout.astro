@@ -144,7 +144,7 @@ const faqSchema = faqs.length > 0 ? {
 const isThankYou = Astro.url.pathname.includes('thank-you');
 
 // Canonical: use www for all pages
-const canonicalPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '');
+const canonicalPath = Astro.url.pathname === '/' ? '/' : (Astro.url.pathname.endsWith('/') ? Astro.url.pathname : Astro.url.pathname + '/');
 const canonicalUrl = new URL(canonicalPath, 'https://www.plombierurgence.be').href;
 const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `https://www.plombierurgence.be${ogImage}`;
 const resolvedTwitterTitle = twitterTitle || title;
@@ -239,7 +239,7 @@ if (isBlog) {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/images/hero-bg.webp" />
+    <link rel="preload" as="image" href="/images/hero-bg.webp" fetchpriority="high" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />

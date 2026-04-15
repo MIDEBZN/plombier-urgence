@@ -13,7 +13,7 @@ const { icon, title, description, href = '/services', image } = Astro.props;
 <div class="service-card card">
   {image && (
     <div class="service-card__image-wrap">
-      <img src={image} alt={title} class="service-card__image" loading="lazy" decoding="async" />
+      <img src={image} alt={title} class="service-card__image" loading="lazy" decoding="async" width="400" height="250" />
     </div>
   )}
   <div class="service-card__content">

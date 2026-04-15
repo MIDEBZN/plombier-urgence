@@ -39,7 +39,7 @@ export const urgencePages: UrgencePage[] = [
         province: 'Bruxelles-Capitale',
         h1: 'Plombier Urgence Bruxelles — Intervention 24h/24',
         metaTitle: 'Plombier Urgence Bruxelles | Dépannage 24h/24 7j/7 | 30 min',
-        metaDescription: 'Plombier urgence Bruxelles disponible 24h/24, 7j/7 y compris nuit, week-end et jours fériés. Intervention en 30 min. SOS plombier. Devis gratuit. ☎ 0465 68 51 58',
+        metaDescription: 'Plombier urgence Bruxelles 24h/24, 7j/7, nuit et week-end. Intervention en 30 min. SOS plombier. Devis gratuit. ☎ 0465 68 51 58',
         keywords: ['plombier urgence Bruxelles', 'plombier nuit Bruxelles', 'plombier week-end Bruxelles', 'plombier 24h/24 Bruxelles', 'SOS plombier Bruxelles', 'dépannage plomberie Bruxelles', 'fuite d\'eau urgence Bruxelles', 'plombier intervention rapide Bruxelles', 'urgence canalisation bouchée Bruxelles', 'plombier urgence pas cher Bruxelles', 'inondation cave Bruxelles'],
         heroText: 'Une fuite d\'eau ? Une canalisation bouchée ? Une inondation dans votre cave ? Notre équipe de plombiers d\'urgence à Bruxelles intervient en moins de 30 minutes, 24 heures sur 24, 7 jours sur 7 — nuits, week-ends et jours fériés compris. Tarifs transparents, sans surprise. À partir de 60€.',
         faqs: [

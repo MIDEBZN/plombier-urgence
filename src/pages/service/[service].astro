@@ -60,6 +60,21 @@ if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plom
     }))
   });
 }
+// Add FAQPage schema
+if (service.faqs && service.faqs.length > 0) {
+  extraSchemas.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faqs.map((faq: any) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  });
+}
 ---
 
 <Layout 
@@ -97,7 +112,7 @@ if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plom
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
           0465 68 51 58
         </a>
-        <a href="https://wa.me/32470123456" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">WhatsApp — Envoyez une photo</a>
+        <a href="https://wa.me/32465685158" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">WhatsApp — Envoyez une photo</a>
       </div>
     </div>
   </section>
@@ -256,9 +271,16 @@ if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plom
       <p class="label">Zones d'intervention</p>
       <h2 class="section-title">{service.title} — Zones Couvertes</h2>
       <div class="zones-chips">
-        {service.serviceAreas.map((area: string) => (
-          <div class="zone-chip">{area}</div>
-        ))}
+        {service.serviceAreas.map((area: string) => {
+          let link = "/zones";
+          if (area.toLowerCase().includes('bruxelles')) link = "/urgence/bruxelles";
+          else if (area.toLowerCase().includes('liège')) link = "/urgence/liege";
+          else if (area.toLowerCase().includes('namur')) link = "/urgence/namur";
+          else if (area.toLowerCase().includes('charleroi') || area.toLowerCase().includes('hainaut') || area.toLowerCase().includes('mons')) link = "/urgence/charleroi";
+          else if (area.toLowerCase().includes('brabant') || area.toLowerCase().includes('wavre')) link = "/urgence/wavre";
+          
+          return <a href={link} class="zone-chip">{area}</a>;
+        })}
       </div>
       <div style="text-align:center;margin-top:var(--space-xl);">
         <a href="/zones" class="btn btn-outline">Voir toutes les communes →</a>
@@ -369,7 +391,8 @@ if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plom
 
   /* Zones */
   .zones-chips{display:flex;flex-wrap:wrap;gap:var(--space-sm);justify-content:center;margin-top:var(--space-xl)}
-  .zone-chip{background:var(--color-surface);border:1px solid var(--color-border);padding:.5rem 1.25rem;border-radius:999px;font-size:var(--font-size-sm);font-weight:500;color:var(--color-text-muted)}
+  .zone-chip{background:var(--color-surface);border:1px solid var(--color-border);padding:.5rem 1.25rem;border-radius:999px;font-size:var(--font-size-sm);font-weight:500;color:var(--color-text-muted);text-decoration:none;transition:all var(--transition-fast)}
+  .zone-chip:hover{border-color:var(--color-accent);color:var(--color-accent);background:var(--color-accent-glow)}
 
   /* Related */
   .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-lg);margin-top:var(--space-xl);max-width:600px;margin-left:auto;margin-right:auto}

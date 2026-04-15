@@ -62,31 +62,37 @@ const { page } = Astro.props;
           <div class="svc-icon">🚿</div>
           <h3>Débouchage Urgent</h3>
           <p>Canalisation bouchée, WC bouché, évier — débouchage haute pression en urgence à {page.city}.</p>
+          <a href="/service/debouchage-canalisation" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🔍</div>
           <h3>Fuite d'Eau</h3>
           <p>Détection et réparation de fuite d'eau en urgence à {page.city}. Technologies non-destructives.</p>
+          <a href="/service/recherche-fuite" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🔥</div>
           <h3>Panne Chaudière</h3>
           <p>Dépannage chaudière en urgence à {page.city}. Plus d'eau chaude, plus de chauffage — on intervient.</p>
+          <a href="/service/depannage-chaudiere" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🚨</div>
           <h3>Urgence Plomberie</h3>
           <p>Dépannage plomberie express à {page.city} : fuite, débouchage, chauffage, inondation.</p>
+          <a href="/service/urgence-plomberie" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🔧</div>
           <h3>Tuyau Percé</h3>
           <p>Réparation ou remplacement de tuyau percé en urgence. Intervention rapide à {page.city}.</p>
+          <a href="/service/reparation-robinetterie" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🚰</div>
           <h3>Robinetterie</h3>
           <p>Fuite de robinet, chasse d'eau cassée — réparation immédiate à {page.city}.</p>
+          <a href="/service/reparation-robinetterie" class="svc-card__link">Voir le service →</a>
         </div>
       </div>
     </div>
@@ -179,7 +185,8 @@ const { page } = Astro.props;
   .svc-card{padding:var(--space-xl);display:flex;flex-direction:column;gap:var(--space-sm)}
   .svc-icon{font-size:1.8rem}
   .svc-card h3{font-size:var(--font-size-base);font-weight:700}
-  .svc-card p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7}
+  .svc-card p{color:var(--color-text-muted);font-size:var(--font-size-sm);line-height:1.7;flex:1}
+  .svc-card__link{color:var(--color-accent);font-size:var(--font-size-sm);font-weight:600;margin-top:auto}
 
   .why-section{background:var(--color-bg-alt)}
   .why-list{display:flex;flex-direction:column;gap:var(--space-xl)}
