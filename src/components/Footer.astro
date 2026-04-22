@@ -1,4 +1,4 @@
----
+import InterventionsLocales from './InterventionsLocales.astro';
 const year = new Date().getFullYear();
 ---
 
@@ -22,24 +22,28 @@ const year = new Date().getFullYear();
       <div class="footer__col">
         <h4 class="footer__heading">Navigation</h4>
         <a href="/" class="footer__link">Accueil</a>
-        <a href="/services" class="footer__link">Services</a>
-        <a href="/zones" class="footer__link">Zones</a>
-        <a href="/tarifs" class="footer__link">Tarifs</a>
-        <a href="/faq" class="footer__link">FAQ</a>
-        <a href="/devis" class="footer__link">Devis Gratuit</a>
-        <a href="/a-propos" class="footer__link">À Propos</a>
-        <a href="/avis-clients" class="footer__link">Avis Clients</a>
-        <a href="/contact" class="footer__link">Contact</a>
+        <a href="/services/" class="footer__link">Services</a>
+        <a href="/zones/" class="footer__link">Zones</a>
+        <a href="/tarifs/" class="footer__link">Tarifs</a>
+        <a href="/faq/" class="footer__link">FAQ</a>
+        <a href="/devis/" class="footer__link">Devis Gratuit</a>
+        <a href="/a-propos/" class="footer__link">À Propos</a>
+        <a href="/avis-clients/" class="footer__link">Avis Clients</a>
+        <a href="/contact/" class="footer__link">Contact</a>
       </div>
 
       <div class="footer__col">
-        <h4 class="footer__heading">Services</h4>
-        <a href="/services/debouchage-bruxelles" class="footer__link">Débouchage Bruxelles</a>
-        <a href="/services/fuite-eau-bruxelles" class="footer__link">Fuite d'Eau Bruxelles</a>
-        <a href="/services/chauffe-eau-bruxelles" class="footer__link">Chauffe-Eau Bruxelles</a>
-        <a href="/urgence/bruxelles" class="footer__link">Urgence Bruxelles</a>
-        <a href="/urgence/liege" class="footer__link">Urgence Liège</a>
-        <a href="/services/renovation-sdb-liege" class="footer__link">Rénovation SDB Liège</a>
+        <h4 class="footer__heading">Services Principaux</h4>
+        <a href="/service/debouchage-canalisation/" class="footer__link">Débouchage Canalisation</a>
+        <a href="/service/recherche-fuite/" class="footer__link">Recherche de Fuite</a>
+        <a href="/service/depannage-chaudiere/" class="footer__link">Dépannage Chaudière</a>
+        <a href="/service/urgence-plomberie/" class="footer__link">Urgence Plomberie</a>
+        <h4 class="footer__heading" style="margin-top: 1rem;">Interventions Locales</h4>
+        <a href="/urgence/bruxelles/" class="footer__link">Plombier Bruxelles</a>
+        <a href="/urgence/liege/" class="footer__link">Plombier Liège</a>
+        <a href="/urgence/namur/" class="footer__link">Plombier Namur</a>
+        <a href="/urgence/charleroi/" class="footer__link">Plombier Charleroi</a>
+        <a href="/urgence/wavre/" class="footer__link">Plombier Wavre</a>
       </div>
 
       <div class="footer__col">
@@ -85,6 +89,8 @@ const year = new Date().getFullYear();
         </div>
       </div>
     </div>
+
+    <InterventionsLocales />
 
     <div class="footer__bottom">
       <p>&copy; {year} Plombier Urgence. Tous droits réservés.</p>

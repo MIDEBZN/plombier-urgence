@@ -1,0 +1,80 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { provinces } from '../../../data/communes';
+
+export function getStaticPaths() {
+  return provinces.map(province => ({
+    params: { province: province.slug },
+    props: { province },
+  }));
+}
+
+const { province } = Astro.props;
+
+const areaServed = province.communes.map(c => ({
+  "@type": "City",
+  "name": c.name
+}));
+---
+
+<Layout 
+  title={`Plombier ${province.name} | Dépannage Urgence 24h/24`}
+  description={`Besoin d'un plombier en ${province.name} ? Nos techniciens interviennent en 30 min pour débouchage, fuite et chaudière. Intervention 24h/24 et 7j/7.`}
+  areaServed={areaServed}
+>
+  <section class="province-hero">
+    <div class="container">
+      <h1 class="hero-title">Plombier en <span class="text-accent">{province.name}</span></h1>
+      <p class="hero-subtitle">Nos plombiers et chauffagistes interviennent dans toutes les communes de la {province.name}.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Communes couvertes en {province.name}</h2>
+      <div class="communes-grid">
+        {province.communes.map(commune => (
+          <a href={`/zones/${province.slug}/${commune.slug}/`} class="commune-card card">
+            <h3>{commune.name}</h3>
+            <p>Intervention en 30 min à {commune.name}</p>
+            <span class="card-link">Voir plus →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .province-hero { 
+    padding: var(--space-4xl) 0; 
+    background: var(--color-bg-alt); 
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero-title { font-size: 3.5rem; font-weight: 900; margin-bottom: 1.5rem; }
+  .hero-subtitle { font-size: 1.25rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; }
+  .communes-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 1.5rem; 
+    margin-top: 3rem; 
+  }
+  .commune-card { 
+    padding: 2rem; 
+    text-decoration: none; 
+    color: inherit; 
+    transition: all 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .commune-card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .commune-card h3 { color: var(--color-accent); font-size: 1.5rem; font-weight: 700; }
+  .commune-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+  .card-link { color: var(--color-accent); font-weight: 600; margin-top: auto; }
+</style>

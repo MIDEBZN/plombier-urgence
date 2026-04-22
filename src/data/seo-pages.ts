@@ -50,9 +50,9 @@ export const urgencePages: UrgencePage[] = [
             { q: 'Votre service d\'urgence couvre-t-il toutes les communes de Bruxelles ?', a: 'Oui, nous intervenons dans les 19 communes : Bruxelles-Ville, Ixelles, Uccle, Schaerbeek, Etterbeek, Woluwe, Anderlecht, Molenbeek, Forest, Saint-Gilles, Jette et toutes les autres.' },
         ],
         nearbyLinks: [
-            { label: 'Plombier urgence Liège', href: '/urgence/liege' },
-            { label: 'Plombier urgence Namur', href: '/urgence/namur' },
-            { label: 'Plombier urgence Charleroi', href: '/urgence/charleroi' },
+            { label: 'Plombier urgence Liège', href: '/urgence/liege/' },
+            { label: 'Plombier urgence Namur', href: '/urgence/namur/' },
+            { label: 'Plombier urgence Charleroi', href: '/urgence/charleroi/' },
         ],
     },
     {
@@ -70,8 +70,8 @@ export const urgencePages: UrgencePage[] = [
             { q: 'Y a-t-il un plombier disponible maintenant à Liège ?', a: 'Oui, nos techniciens sont de garde 24h/24. Appelez le 0465 68 51 58 pour une intervention immédiate dans la région liégeoise.' },
         ],
         nearbyLinks: [
-            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles' },
-            { label: 'Plombier urgence Namur', href: '/urgence/namur' },
+            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles/' },
+            { label: 'Plombier urgence Namur', href: '/urgence/namur/' },
         ],
     },
     {
@@ -88,8 +88,8 @@ export const urgencePages: UrgencePage[] = [
             { q: 'Que faire si ma tuyauterie est gelée à Namur en hiver ?', a: 'N\'essayez pas de dégeler les tuyaux vous-même avec une flamme. Appelez notre service d\'urgence. Nos techniciens utilisent des techniques professionnelles pour dégeler vos canalisations sans risque de les endommager.' },
         ],
         nearbyLinks: [
-            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles' },
-            { label: 'Plombier urgence Charleroi', href: '/urgence/charleroi' },
+            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles/' },
+            { label: 'Plombier urgence Charleroi', href: '/urgence/charleroi/' },
         ],
     },
     {
@@ -106,8 +106,8 @@ export const urgencePages: UrgencePage[] = [
             { q: 'L\'intervention d\'urgence à Charleroi est-elle chère ?', a: 'Non. Nous pratiquons des tarifs transparents et compétitifs. Le devis est gratuit et communiqué avant toute intervention. Pas de surprise sur la facture.' },
         ],
         nearbyLinks: [
-            { label: 'Plombier urgence Mons', href: '/urgence/mons' },
-            { label: 'Plombier urgence Namur', href: '/urgence/namur' },
+            { label: 'Plombier urgence Mons', href: '/urgence/mons/' },
+            { label: 'Plombier urgence Namur', href: '/urgence/namur/' },
         ],
     },
     {
@@ -124,8 +124,26 @@ export const urgencePages: UrgencePage[] = [
             { q: 'Faites-vous des devis gratuits à Mons ?', a: 'Oui, tous nos devis sont gratuits et sans engagement. Le technicien évalue la situation sur place et vous communique un prix fixe avant de commencer les travaux.' },
         ],
         nearbyLinks: [
-            { label: 'Plombier urgence Charleroi', href: '/urgence/charleroi' },
-            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles' },
+            { label: 'Plombier urgence Charleroi', href: '/urgence/charleroi/' },
+            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles/' },
+        ],
+    },
+    {
+        city: 'Wavre',
+        slug: 'wavre',
+        province: 'Brabant Wallon',
+        h1: 'Plombier Urgence Wavre — Dépannage Rapide 24h/24',
+        metaTitle: 'Plombier Urgence Wavre | Dépannage Plombier Rapide | 24h/24',
+        metaDescription: 'Dépannage plombier rapide à Wavre. Intervention urgente 24h/24. Plombier de garde dans le Brabant Wallon. Devis gratuit. ☎ 0465 68 51 58',
+        keywords: ['plombier urgence Wavre', 'dépannage plombier rapide Wavre', 'plombier Brabant Wallon'],
+        heroText: 'Besoin d\'un plombier en urgence à Wavre ? Notre équipe intervient rapidement dans tout le Brabant Wallon pour vos urgences de plomberie. Service disponible 24h/24, 7j/7 avec des tarifs justes et transparents.',
+        faqs: [
+            { q: 'Quel est le temps d\'intervention pour un dépannage plombier à Wavre ?', a: 'Nos techniciens arrivent en 30 minutes maximum dans le centre de Wavre et le Brabant Wallon (Ottignies, Louvain-la-Neuve, Rixensart).' },
+            { q: 'Faites-vous des devis gratuits à Wavre ?', a: 'Oui, tous nos devis sont gratuits et sans engagement. Le technicien évalue la situation sur place et vous communique un prix fixe avant de commencer les travaux.' },
+        ],
+        nearbyLinks: [
+            { label: 'Plombier urgence Bruxelles', href: '/urgence/bruxelles/' },
+            { label: 'Plombier urgence Namur', href: '/urgence/namur/' },
         ],
     },
 ];

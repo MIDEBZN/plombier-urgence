@@ -24,11 +24,16 @@ const { commune, province } = Astro.props;
 
 // Get nearby communes (same province, different commune)
 const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5);
+const areaServed = [
+  { "@type": "City", "name": commune.name },
+  { "@type": "State", "name": commune.province }
+];
 ---
 
 <Layout
   title={`Plombier à ${commune.name} | Dépannage & Urgence 24h/24`}
   description={`Plombier d'urgence à ${commune.name} (${commune.province}). Intervention rapide en 30 min, 24h/24. Débouchage, fuites, chaudière. Devis gratuit.`}
+  areaServed={areaServed}
 >
 
   <!-- Breadcrumb -->
@@ -37,7 +42,7 @@ const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5
       <nav class="breadcrumb">
         <a href="/">Accueil</a>
         <span class="breadcrumb__sep">›</span>
-        <a href="/zones">Zones</a>
+        <a href="/zones/">Zones</a>
         <span class="breadcrumb__sep">›</span>
         <a href={`/zones#${province.slug}`}>{province.name}</a>
         <span class="breadcrumb__sep">›</span>
@@ -60,7 +65,7 @@ const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
           Appeler le 0465 68 51 58
         </a>
-        <a href="/contact" class="btn btn-outline btn-lg">Demander un Devis Gratuit</a>
+        <a href="/contact/" class="btn btn-outline btn-lg">Demander un Devis Gratuit</a>
       </div>
       {commune.population && (
         <div class="commune-hero__stats">
@@ -91,42 +96,21 @@ const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5
       <p class="section-subtitle">Notre équipe intervient rapidement à {commune.name} et ses environs pour tous vos besoins en plomberie.</p>
 
       <div class="grid grid-3">
-        <div class="service-mini card">
-          <div class="service-mini__icon">🚿</div>
-          <h3>Débouchage Canalisations</h3>
-          <p>Débouchage WC, évier, douche et baignoire à {commune.name}. Intervention haute pression, inspection caméra incluse.</p>
-          <a href="/services#debouchage" class="service-mini__link">En savoir plus →</a>
-        </div>
-        <div class="service-mini card">
-          <div class="service-mini__icon">🔍</div>
-          <h3>Recherche de Fuite</h3>
-          <p>Détection de fuites sans destruction à {commune.name}. Technologies thermique et acoustique pour une localisation précise.</p>
-          <a href="/services#fuite" class="service-mini__link">En savoir plus →</a>
-        </div>
-        <div class="service-mini card">
-          <div class="service-mini__icon">🔥</div>
-          <h3>Dépannage Chaudière</h3>
-          <p>Réparation et entretien de chaudières à {commune.name}. Chauffagistes agréés, toutes marques.</p>
-          <a href="/services#chaudiere" class="service-mini__link">En savoir plus →</a>
-        </div>
-        <div class="service-mini card">
-          <div class="service-mini__icon">🔧</div>
-          <h3>Réparation Robinetterie</h3>
-          <p>Remplacement robinets, mitigeurs et chasse d'eau à {commune.name}. Installation sanitaires neufs.</p>
-          <a href="/services#robinetterie" class="service-mini__link">En savoir plus →</a>
-        </div>
-        <div class="service-mini card">
-          <div class="service-mini__icon">🛁</div>
-          <h3>Rénovation Salle de Bain</h3>
-          <p>Rénovation complète de votre salle de bain à {commune.name}. Douche italienne, carrelage, robinetterie moderne.</p>
-          <a href="/services#renovation" class="service-mini__link">En savoir plus →</a>
-        </div>
-        <div class="service-mini card">
-          <div class="service-mini__icon">🚨</div>
-          <h3>Urgence Plomberie</h3>
-          <p>Dépannage rapide 24h/24 à {commune.name}. Fuite, canalisation, chaudière, inondation. Intervention en 30 minutes.</p>
-          <a href="/services#urgence-plomberie" class="service-mini__link">En savoir plus →</a>
-        </div>
+        {commune.services.map((service, index) => {
+          const icons = ['🚿', '🔍', '🔥', '🔧', '🛁', '🚨'];
+          const icon = icons[index % icons.length];
+          const serviceLinks = ['#debouchage', '#fuite', '#chaudiere', '#robinetterie', '#renovation', '#urgence-plomberie'];
+          const link = serviceLinks[index % serviceLinks.length];
+          
+          return (
+            <div class="service-mini card">
+              <div class="service-mini__icon">{icon}</div>
+              <h3>{service}</h3>
+              <p>Besoin d'un expert pour {service.toLowerCase()} ? Nous intervenons rapidement à {commune.name} avec tout le matériel nécessaire pour un résultat impeccable.</p>
+              <a href={`/services/${link}`} class="service-mini__link">En savoir plus →</a>
+            </div>
+          );
+        })}
       </div>
     </div>
   </section>
@@ -195,7 +179,7 @@ const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5
         <h2 class="section-title">Nous Intervenons Aussi Près de {commune.name}</h2>
         <div class="nearby-grid">
           {nearby.map(c => (
-            <a href={`/zones/${province.slug}/${c.slug}`} class="nearby-card card">
+            <a href={`/zones/${province.slug}/${c.slug}/`} class="nearby-card card">
               <h3>{c.name}</h3>
               {c.population && <span class="nearby-card__pop">{c.population} hab.</span>}
               <span class="nearby-card__link">Voir la page →</span>
@@ -203,7 +187,7 @@ const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5
           ))}
         </div>
         <div style="text-align:center; margin-top: var(--space-xl);">
-          <a href="/zones" class="btn btn-outline">← Toutes les zones d'intervention</a>
+          <a href="/zones/" class="btn btn-outline">← Toutes les zones d'intervention</a>
         </div>
       </div>
     </section>

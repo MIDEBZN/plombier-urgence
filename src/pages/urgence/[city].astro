@@ -11,16 +11,58 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Plombier Urgence",
+  "telephone": "+32465685158",
+  "url": "https://www.plombierurgence.be",
+  "image": "https://www.plombierurgence.be/images/og-default.jpg",
+  "priceRange": "€€",
+  "areaServed": [
+    { "@type": "City", "name": page.city },
+    { "@type": "State", "name": page.province }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "25 Boulevard de l'Abattoir",
+    "addressLocality": "Bruxelles",
+    "postalCode": "1000",
+    "addressCountry": "BE"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }]
+};
+
+const faqSchema = page.faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": page.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+} : null;
+
+const extraSchemas = faqSchema ? [localBusinessSchema, faqSchema] : [localBusinessSchema];
 ---
 
-<Layout title={page.metaTitle} description={page.metaDescription}>
+<Layout title={page.metaTitle} description={page.metaDescription} extraSchemas={extraSchemas} preloadHero={true}>
 
   <!-- Breadcrumb -->
   <section class="bc-section">
     <div class="container">
       <nav class="bc">
         <a href="/">Accueil</a><span>›</span>
-        <a href="/zones">Zones</a><span>›</span>
+        <a href="/zones/">Zones</a><span>›</span>
         <span class="bc--current">Urgence {page.city}</span>
       </nav>
     </div>
@@ -38,7 +80,7 @@ const { page } = Astro.props;
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
           Appeler le 0465 68 51 58
         </a>
-        <a href="/contact" class="btn btn-outline btn-lg">Devis Gratuit</a>
+        <a href="/contact/" class="btn btn-outline btn-lg">Devis Gratuit</a>
       </div>
       <div class="urg-hero__stats">
         <div class="urg-stat"><span class="urg-stat__num">30 min</span><span class="urg-stat__lbl">Intervention</span></div>
@@ -62,37 +104,37 @@ const { page } = Astro.props;
           <div class="svc-icon">🚿</div>
           <h3>Débouchage Urgent</h3>
           <p>Canalisation bouchée, WC bouché, évier — débouchage haute pression en urgence à {page.city}.</p>
-          <a href="/service/debouchage-canalisation" class="svc-card__link">Voir le service →</a>
+          <a href="/service/debouchage-canalisation/" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🔍</div>
           <h3>Fuite d'Eau</h3>
           <p>Détection et réparation de fuite d'eau en urgence à {page.city}. Technologies non-destructives.</p>
-          <a href="/service/recherche-fuite" class="svc-card__link">Voir le service →</a>
+          <a href="/service/recherche-fuite/" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🔥</div>
           <h3>Panne Chaudière</h3>
           <p>Dépannage chaudière en urgence à {page.city}. Plus d'eau chaude, plus de chauffage — on intervient.</p>
-          <a href="/service/depannage-chaudiere" class="svc-card__link">Voir le service →</a>
+          <a href="/service/depannage-chaudiere/" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🚨</div>
           <h3>Urgence Plomberie</h3>
           <p>Dépannage plomberie express à {page.city} : fuite, débouchage, chauffage, inondation.</p>
-          <a href="/service/urgence-plomberie" class="svc-card__link">Voir le service →</a>
+          <a href="/service/urgence-plomberie/" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🔧</div>
           <h3>Tuyau Percé</h3>
           <p>Réparation ou remplacement de tuyau percé en urgence. Intervention rapide à {page.city}.</p>
-          <a href="/service/reparation-robinetterie" class="svc-card__link">Voir le service →</a>
+          <a href="/service/reparation-robinetterie/" class="svc-card__link">Voir le service →</a>
         </div>
         <div class="svc-card card">
           <div class="svc-icon">🚰</div>
           <h3>Robinetterie</h3>
           <p>Fuite de robinet, chasse d'eau cassée — réparation immédiate à {page.city}.</p>
-          <a href="/service/reparation-robinetterie" class="svc-card__link">Voir le service →</a>
+          <a href="/service/reparation-robinetterie/" class="svc-card__link">Voir le service →</a>
         </div>
       </div>
     </div>

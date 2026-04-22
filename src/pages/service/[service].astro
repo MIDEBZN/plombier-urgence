@@ -89,7 +89,7 @@ if (service.faqs && service.faqs.length > 0) {
     <div class="container">
       <nav class="bc">
         <a href="/">Accueil</a><span>›</span>
-        <a href="/services">Services</a><span>›</span>
+        <a href="/services/">Services</a><span>›</span>
         <span class="bc--current">{service.title}</span>
       </nav>
     </div>
@@ -199,8 +199,8 @@ if (service.faqs && service.faqs.length > 0) {
           <p class="pricing-banner__text">Fourchette de prix : {service.priceRange} (TVA incluse). Le prix exact est toujours communiqué AVANT l'intervention.</p>
         </div>
         <div class="pricing-banner__right">
-          <a href="/tarifs" class="btn btn-primary">Voir tous les tarifs 2025 →</a>
-          <a href="/devis" class="btn btn-outline">Devis gratuit</a>
+          <a href="/tarifs/" class="btn btn-primary">Voir tous les tarifs 2025 →</a>
+          <a href="/devis/" class="btn btn-outline">Devis gratuit</a>
         </div>
       </div>
     </div>
@@ -272,18 +272,18 @@ if (service.faqs && service.faqs.length > 0) {
       <h2 class="section-title">{service.title} — Zones Couvertes</h2>
       <div class="zones-chips">
         {service.serviceAreas.map((area: string) => {
-          let link = "/zones";
-          if (area.toLowerCase().includes('bruxelles')) link = "/urgence/bruxelles";
-          else if (area.toLowerCase().includes('liège')) link = "/urgence/liege";
-          else if (area.toLowerCase().includes('namur')) link = "/urgence/namur";
-          else if (area.toLowerCase().includes('charleroi') || area.toLowerCase().includes('hainaut') || area.toLowerCase().includes('mons')) link = "/urgence/charleroi";
-          else if (area.toLowerCase().includes('brabant') || area.toLowerCase().includes('wavre')) link = "/urgence/wavre";
+          let link = "/zones/";
+          if (area.toLowerCase().includes('bruxelles')) link = "/urgence/bruxelles/";
+          else if (area.toLowerCase().includes('liège')) link = "/urgence/liege/";
+          else if (area.toLowerCase().includes('namur')) link = "/urgence/namur/";
+          else if (area.toLowerCase().includes('charleroi') || area.toLowerCase().includes('hainaut') || area.toLowerCase().includes('mons')) link = "/urgence/charleroi/";
+          else if (area.toLowerCase().includes('brabant') || area.toLowerCase().includes('wavre')) link = "/urgence/wavre/";
           
           return <a href={link} class="zone-chip">{area}</a>;
         })}
       </div>
       <div style="text-align:center;margin-top:var(--space-xl);">
-        <a href="/zones" class="btn btn-outline">Voir toutes les communes →</a>
+        <a href="/zones/" class="btn btn-outline">Voir toutes les communes →</a>
       </div>
     </div>
   </section>
@@ -296,7 +296,7 @@ if (service.faqs && service.faqs.length > 0) {
         <h2 class="section-title">Vous Pourriez Aussi Avoir Besoin De</h2>
         <div class="related-grid">
           {related.map((r: any) => (
-            <a href={`/service/${r.slug}`} class="related-card card">
+            <a href={`/service/${r.slug}/`} class="related-card card">
               <div class="related-card__icon">{r.icon}</div>
               <h3 class="related-card__title">{r.title}</h3>
               <p class="related-card__price">Dès {r.priceFrom}</p>

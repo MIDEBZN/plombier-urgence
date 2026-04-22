@@ -57,7 +57,7 @@ import { provinces, slugify } from '../data/communes';
             </div>
             <div class="region-card__cities">
               {province.communes.map(commune => (
-                <a href={`/zones/${province.slug}/${commune.slug}`} class="region-card__city">
+                <a href={`/zones/${province.slug}/${commune.slug}/`} class="region-card__city">
                   {commune.name}
                 </a>
               ))}

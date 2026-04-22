@@ -1,0 +1,70 @@
+---
+import { provinces } from '../data/communes';
+
+// Get a random selection of communes across all provinces for variety
+const allCommunes = provinces.flatMap(p => p.communes.map(c => ({ ...c, provinceSlug: p.slug })));
+const randomCommunes = allCommunes.sort(() => 0.5 - Math.random()).slice(0, 15);
+---
+
+<div class="interventions-locales">
+  <h4 class="interventions-locales__title">Nous intervenons aussi à...</h4>
+  <div class="interventions-locales__grid">
+    {randomCommunes.map(c => (
+      <a href={`/zones/${c.provinceSlug}/${c.slug}/`} class="interventions-locales__link">
+        Plombier {c.name}
+      </a>
+    ))}
+  </div>
+  <a href="/zones/" class="interventions-locales__more">Voir toutes nos zones d'intervention →</a>
+</div>
+
+<style>
+  .interventions-locales {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .interventions-locales__title {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    margin-bottom: var(--space-lg);
+  }
+
+  .interventions-locales__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.5rem 1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .interventions-locales__link {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .interventions-locales__link:hover {
+    color: var(--color-accent);
+  }
+
+  .interventions-locales__more {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: var(--space-sm);
+  }
+
+  @media (max-width: 768px) {
+    .interventions-locales__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

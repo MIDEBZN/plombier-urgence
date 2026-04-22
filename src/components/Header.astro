@@ -1,12 +1,12 @@
 ---
 const navLinks = [
   { label: 'Accueil', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'Tarifs', href: '/tarifs' },
-  { label: 'Zones', href: '/zones' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Avis', href: '/avis-clients' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Tarifs', href: '/tarifs/' },
+  { label: 'Zones', href: '/zones/' },
+  { label: 'FAQ', href: '/faq/' },
+  { label: 'Avis', href: '/avis-clients/' },
+  { label: 'Contact', href: '/contact/' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -61,7 +61,7 @@ const currentPath = Astro.url.pathname;
       </a>
 
       <!-- Devis gratuit -->
-      <a href="/devis" class="btn-devis header__devis">Devis Gratuit 24/7</a>
+      <a href="/devis/" class="btn-devis header__devis">Devis Gratuit 24/7</a>
 
       <!-- Phone -->
       <a href="tel:0465685158" class="btn-phone header__cta">
@@ -310,6 +310,20 @@ const currentPath = Astro.url.pathname;
       transform: rotate(-45deg) translateY(-7px);
     }
   }
+
+  /* Sticky Header Styles */
+  .topbar--hidden {
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+  }
+
+  .header--sticky {
+    top: 0;
+  }
 </style>
 
 <script>
@@ -328,25 +342,28 @@ const currentPath = Astro.url.pathname;
     });
   });
 
-  // Sticky topbar hide on scroll
+  // Sticky topbar hide on scroll with performance optimization
   const topbar = document.querySelector('.topbar') as HTMLElement;
   const header = document.querySelector('.header') as HTMLElement;
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y > 60) {
-      topbar.style.transform = 'translateY(-100%)';
-      topbar.style.position = 'fixed';
-      topbar.style.top = '0';
-      topbar.style.left = '0';
-      topbar.style.right = '0';
-      topbar.style.zIndex = '1001';
-      header.style.top = '0';
-    } else {
-      topbar.style.transform = 'translateY(0)';
-      topbar.style.position = 'relative';
-      header.style.top = '0';
-    }
-    lastScroll = y;
-  });
+  let ticking = false;
+
+  if (topbar && header) {
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          if (y > 60) {
+            topbar.classList.add('topbar--hidden');
+            header.classList.add('header--sticky');
+          } else {
+            topbar.classList.remove('topbar--hidden');
+            header.classList.remove('header--sticky');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+</script>
 </script>
