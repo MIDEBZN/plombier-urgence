@@ -18,6 +18,7 @@ export interface Commune {
   services: string[];
   landmarks: string;
   population?: string;
+  h1?: string;
 }
 
 export interface Province {
@@ -36,6 +37,7 @@ function makeCommune(name: string, province: string, provinceSlug: string, extra
     province,
     provinceSlug,
     description,
+    h1: extras?.h1,
     services: [
       `Débouchage de canalisations à ${name}`,
       `Recherche et réparation de fuites à ${name}`,
@@ -78,7 +80,12 @@ export const provinces: Province[] = [
       makeCommune('Etterbeek', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '48 000', landmarks: 'Parc du Cinquantenaire, Quartier des Casernes' }),
       makeCommune('Woluwe-Saint-Lambert', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '56 000', landmarks: 'Roodebeek, Shopping Center Woluwe, Parc de Woluwe' }),
       makeCommune('Woluwe-Saint-Pierre', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '42 000', landmarks: 'Parc de Woluwe, Stockel, Bibliotheca Wittockiana' }),
-      makeCommune('Auderghem', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '34 000', landmarks: 'Rouge-Cloître, Forêt de Soignes, Prieuré de Val Duchesse' }),
+      makeCommune('Auderghem', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
+        population: '34 000', 
+        landmarks: 'Rouge-Cloître, Forêt de Soignes, Prieuré de Val Duchesse',
+        h1: '<span class="text-accent">Plombier Auderghem</span> : Plombier Urgence Bruxelles',
+        description: 'Vous résidez à Auderghem et faites face à un imprévu sanitaire ? En tant que véritable plombier urgence Bruxelles, nous mettons notre expertise locale à votre service. Votre plombier Auderghem intervient en moins de 30 minutes (Rouge-Cloître, Val Duchesse, etc.). Nous offrons des solutions transparentes, durables et rapides pour toute fuite d\'eau, débouchage ou panne de chaudière. Ne laissez pas un petit souci gâcher votre confort !'
+      }),
       makeCommune('Forest', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '56 000', landmarks: 'Parc de Forest, Abbaye de Forest, Forest National' }),
       makeCommune('Saint-Gilles', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '50 000', landmarks: 'Parvis de Saint-Gilles, Hôtel de Ville, Barrière de Saint-Gilles' }),
       makeCommune('Anderlecht', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
@@ -129,7 +136,7 @@ export const provinces: Province[] = [
       makeCommune('Liège', 'Province de Liège', 'province-de-liege', { 
         population: '197 000', 
         landmarks: 'Gare de Liège-Guillemins, Montagne de Bueren, Cathédrale Saint-Paul, Outremeuse',
-        description: 'Plombier Liège : Dépannage en 30 minutes dans toute la Cité Ardente. Experts en recherche de fuite et débouchage de canalisation à Liège. Certifié Cerga pour vos interventions gaz.'
+        description: 'Plombier Liège : Dépannage en 30 minutes dans toute la Cité Ardente et la région liégeoise. Experts en recherche de fuite et débouchage de canalisation à Liège. Certifié Cerga pour vos interventions gaz.'
       }),
       makeCommune('Seraing', 'Province de Liège', 'province-de-liege', { 
         population: '64 000', 

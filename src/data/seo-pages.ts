@@ -404,10 +404,10 @@ export const serviceCityPages: ServiceCityPage[] = [
         serviceType: 'Services de Plomberie',
         icon: '🔧',
         h1: 'Services de Plomberie à Bruxelles — Installation et Réparation',
-        metaTitle: 'Plombier Bruxelles | Installation WC, Robinetterie, Adoucisseur',
+        metaTitle: 'Plomberie Bruxelles | Plombier Installation WC, Robinetterie',
         metaDescription: 'Plombier Bruxelles : installation WC, pose robinetterie, adoucisseur eau, raccordement, inspection caméra, remplacement tuyauterie. ☎ 0465 68 51 58',
         keywords: ['radiateur qui fuit Bruxelles', 'problème chasse d\'eau Bruxelles', 'pression eau faible Bruxelles', 'installation WC Bruxelles', 'pose robinetterie Bruxelles', 'inspection caméra canalisation Bruxelles', 'installation adoucisseur eau Bruxelles', 'raccordement eau Bruxelles', 'remplacement tuyauterie Bruxelles', 'installation douche Bruxelles', 'remplacement baignoire Bruxelles'],
-        heroText: 'Votre plombier de confiance à Bruxelles pour tous vos travaux de plomberie : installation WC, pose de robinetterie, raccordement eau, remplacement de tuyauterie, installation d\'adoucisseur d\'eau, inspection caméra de canalisations et bien plus. Des artisans qualifiés au service des Bruxellois.',
+        heroText: 'Votre plombier de confiance à Bruxelles pour tous vos travaux. Nous offrons un service adapté à vos besoins : installation de WC, pose de robinetterie, raccordement d\'eau et remplacement de tuyauterie. Qu\'il s\'agisse d\'un adoucisseur d\'eau ou d\'une inspection caméra de canalisations, nos artisans qualifiés garantissent un travail soigné au service des Bruxellois.',
         processSteps: [
             { title: 'Contact', desc: 'Décrivez votre besoin par téléphone ou formulaire.' },
             { title: 'Devis gratuit', desc: 'Visite et estimation détaillée sans engagement.' },

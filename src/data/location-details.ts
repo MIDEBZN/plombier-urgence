@@ -67,6 +67,7 @@ export const locationPages: LocationPage[] = [
         ],
         localContent: [
             { title: 'Plomberie dans les maisons bruxelloises', text: 'Bruxelles possède un parc immobilier unique : maisons de maître du XIXe siècle, immeubles art nouveau, et constructions modernes mélangés. Chaque type nécessite une expertise différente. Nos plombiers connaissent les spécificités de chaque quartier et époque de construction.' },
+            { title: 'Intervention Rapide et Expertise', text: 'Pour un dépannage plombier Bruxelles optimal, nos équipes de plombier sont mobilisées 24h/24. Nous intervenons rapidement pour tout dépannage urgent, que ce soit pour une réparation de fuite d\'eau ou un dépannage plomberie complexe. Notre zone d\'action s\'étend de la capitale jusqu\'au Brabant wallon.' },
             { title: 'Réglementations bruxelloises', text: 'À Bruxelles, l\'entretien de chaudière gaz est obligatoire tous les 2 ans (Arrêté du Gouvernement de la Région de Bruxelles-Capitale). Nous fournissons l\'attestation officielle conforme à la législation de Bruxelles Environnement (IBGE).' },
             { title: 'Problèmes d\'eau dure à Bruxelles', text: 'L\'eau à Bruxelles est moyennement dure (25-30°f). Cela provoque un entartrage progressif des chauffe-eau, robinets et canalisations. Un détartrage régulier prolonge la durée de vie de vos installations de 5 à 10 ans.' },
         ],
@@ -465,7 +466,7 @@ export const locationPages: LocationPage[] = [
             { name: 'Centres commerciaux La Louvière', type: 'Commerce' },
         ],
         localContent: [
-            { title: 'La Louvière : le Centre du Hainaut', text: 'La Louvière est une ville industrielle en reconversion avec un important patrimoine UNESCO (ascenseurs du Canal du Centre). Le parc immobilier, majoritairement des années 50 à 80, nécessite souvent des rénovations complètes de plomberie.' },
+            { title: 'La Louvière : le Centre du Hainaut', text: 'La Louvière est une ville industrielle en reconversion avec un important patrimoine UNESCO (ascenseurs du Canal du Centre). Le parc immobilier, majoritairement des années 50 à 80, nécessite souvent des rénovations complètes. En tant que partenaire de confiance, nous vous proposons des services de plomberie adaptés pour moderniser et sécuriser vos installations.' },
         ],
         competitors: [
             { feature: 'Temps de réponse', us: '30 min', others: '3+ heures' },

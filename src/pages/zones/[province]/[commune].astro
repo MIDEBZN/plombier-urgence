@@ -31,8 +31,8 @@ const areaServed = [
 ---
 
 <Layout
-  title={`Plombier à ${commune.name} | Dépannage & Urgence 24h/24`}
-  description={`Plombier d'urgence à ${commune.name} (${commune.province}). Intervention rapide en 30 min, 24h/24. Débouchage, fuites, chaudière. Devis gratuit.`}
+  title={`Plombier ${commune.name} | Dépannage & Urgence 24h/24`}
+  description={`Besoin d'un dépannage ? Vous cherchez à trouver un plombier ${commune.name} (${commune.province}) ? Nous garantissons un service rapide en 30 min pour tous vos travaux de plomberie et réparation de fuite d'eau.`}
   areaServed={areaServed}
 >
 
@@ -56,9 +56,7 @@ const areaServed = [
     <div class="commune-hero__bg"></div>
     <div class="container commune-hero__inner">
       <div class="commune-hero__badge">📍 {commune.province}</div>
-      <h1 class="commune-hero__title">
-        Plombier d'urgence à <span class="text-accent">{commune.name}</span>
-      </h1>
+      <h1 class="commune-hero__title" set:html={commune.h1 || `<span class="text-accent">Plombier ${commune.name}</span> : Dépannage d'urgence`}></h1>
       <p class="commune-hero__subtitle">{commune.description}</p>
       <div class="commune-hero__actions">
         <a href="tel:0465685158" class="btn btn-primary btn-lg">
@@ -93,7 +91,7 @@ const areaServed = [
     <div class="container">
       <p class="section-label">Nos Services</p>
       <h2 class="section-title">Services de Plomberie à {commune.name}</h2>
-      <p class="section-subtitle">Notre équipe intervient rapidement à {commune.name} et ses environs pour tous vos besoins en plomberie.</p>
+      <p class="section-subtitle">Vous cherchez à <strong>trouver un plombier</strong> fiable ? Si vous avez <strong>besoin d'un dépannage</strong>, notre <strong>équipe de plombiers</strong> intervient rapidement à {commune.name} pour tout <strong>dépannage urgent</strong>, la <strong>réparation de fuite d'eau</strong>, et tous vos <strong>travaux de plomberie</strong>. Nous <strong>garantissons un service</strong> professionnel de proximité.</p>
 
       <div class="grid grid-3">
         {commune.services.map((service, index) => {
@@ -126,14 +124,14 @@ const areaServed = [
             <span class="why-local__check">✓</span>
             <div>
               <h3>Connaissance du Terrain</h3>
-              <p>Nos techniciens connaissent parfaitement {commune.name} ({commune.landmarks}). Cette connaissance locale nous permet d'intervenir plus rapidement et efficacement.</p>
+              <p>Nos techniciens connaissent parfaitement {commune.name} ({commune.landmarks}). Cette connaissance locale de notre <strong>service de plombier</strong> nous permet d'intervenir plus rapidement et efficacement.</p>
             </div>
           </div>
           <div class="why-local__item">
             <span class="why-local__check">✓</span>
             <div>
               <h3>Intervention Rapide</h3>
-              <p>Grâce à notre positionnement stratégique en {commune.province}, nous garantissons une arrivée en 30 minutes maximum à {commune.name}.</p>
+              <p>Grâce à notre positionnement stratégique en {commune.province}, nous garantissons une arrivée en 30 minutes maximum à {commune.name} pour une totale <strong>tranquillité d'esprit</strong>.</p>
             </div>
           </div>
           <div class="why-local__item">
