@@ -19,6 +19,7 @@ export interface Commune {
   landmarks: string;
   population?: string;
   h1?: string;
+  title?: string;
 }
 
 export interface Province {
@@ -38,6 +39,7 @@ function makeCommune(name: string, province: string, provinceSlug: string, extra
     provinceSlug,
     description,
     h1: extras?.h1,
+    title: extras?.title,
     services: [
       `Débouchage de canalisations à ${name}`,
       `Recherche et réparation de fuites à ${name}`,
@@ -65,7 +67,9 @@ export const provinces: Province[] = [
       makeCommune('Ixelles', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
         population: '87 000', 
         landmarks: 'Place Flagey, Étangs d\'Ixelles, Université Libre de Bruxelles, Quartier Matongé',
-        description: 'Besoin d\'un plombier à Ixelles ? Nous intervenons près de la Place Flagey et de l\'ULB en moins de 30 minutes. Experts en dépannage de chaudière et débouchage de WC à Ixelles. Service premium 24h/24.'
+        title: 'Plomberie Ixelles | Dépannage Urgent & Débouchage 24/7',
+        h1: '<span class="text-accent">Plomberie Ixelles</span> : Votre Expert de Confiance',
+        description: 'Une fuite d eau dans votre logement ? Faites appel à notre service de plomberie ixelles pour une intervention rapide. Nous gérons tout dépannage urgent, que ce soit pour des canalisations bouchées ou pour limiter les dégâts des eaux. Une simple fuite d\'eau peut vite s\'aggraver, c\'est pourquoi nos artisans interviennent près de la Place Flagey et de l\'ULB en moins de 30 minutes. Disponibles 24h/24.'
       }),
       makeCommune('Uccle', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
         population: '83 000', 
@@ -115,12 +119,20 @@ export const provinces: Province[] = [
       makeCommune('Waterloo', 'Brabant Wallon', 'brabant-wallon', { 
         population: '30 000', 
         landmarks: 'Butte du Lion, Mémorial de la Bataille de Waterloo, Centre de Waterloo',
-        description: 'Plombier Waterloo : Service de dépannage rapide pour les résidences et commerces de Waterloo. Spécialiste du débouchage haute pression et du remplacement de chauffe-eau. Disponible 24h/24.'
+        title: 'Plomberie Waterloo | Dépannage & Urgence 24h/24',
+        h1: '<span class="text-accent">Plomberie Waterloo</span> : Dépannage & Urgence',
+        description: 'Besoin d\'un dépannage urgent à Waterloo ? Nos plombiers interviennent rapidement pour tous vos problèmes sanitaires avec un excellent rapport qualité prix. Que vous soyez un particulier ou un commerce, nous proposons des services sur mesure : pose d\'adoucisseurs d eau, débouchage haute pression et réparation de chaudière. Intervention garantie 24h/24.'
       }),
       makeCommune('Wavre', 'Brabant Wallon', 'brabant-wallon', { population: '35 000', landmarks: 'Walibi Belgium, Hôtel de Ville, Maca' }),
       makeCommune('Nivelles', 'Brabant Wallon', 'brabant-wallon', { population: '28 000', landmarks: 'Collégiale Sainte-Gertrude, Grand-Place de Nivelles' }),
       makeCommune('Ottignies-Louvain-la-Neuve', 'Brabant Wallon', 'brabant-wallon', { population: '32 000', landmarks: 'UCLouvain, Aula Magna, Musée Hergé' }),
-      makeCommune('Braine-l\'Alleud', 'Brabant Wallon', 'brabant-wallon', { population: '40 000', landmarks: 'Butte du Lion (proximité), Bois de la Houssière' }),
+      makeCommune('Braine-l\'Alleud', 'Brabant Wallon', 'brabant-wallon', { 
+        population: '40 000', 
+        landmarks: 'Butte du Lion (proximité), Bois de la Houssière',
+        title: 'Plombier Braine l\'Alleud | Dépannage & Urgence 24h/24',
+        h1: '<span class="text-accent">Plombier Braine l\'Alleud</span> : Dépannage & Urgence',
+        description: 'Vous habitez à braine l alleud et vous avez besoin d\'une intervention rapide ? Un plombier qualifié est à votre disposition pour résoudre tous vos problèmes dans le domaine de la plomberie. Que ce soit pour réparer une fuite d eau, dépanner un chauffe eau ou réaliser une nouvelle installation de plomberie, nous garantissons un résultat soigné et durable. Intervention garantie 24h/24.'
+      }),
       makeCommune('Rixensart', 'Brabant Wallon', 'brabant-wallon', { population: '22 000', landmarks: 'Château de Rixensart, Lac de Genval' }),
       makeCommune('La Hulpe', 'Brabant Wallon', 'brabant-wallon', { population: '8 000', landmarks: 'Domaine Solvay, Fondation Folon, Forêt de Soignes' }),
       makeCommune('Genappe', 'Brabant Wallon', 'brabant-wallon', { population: '16 000', landmarks: 'Ferme de la Cour, Sucrerie de Genappe' }),
@@ -214,7 +226,13 @@ export const provinces: Province[] = [
       }),
       makeCommune('Binche', 'Hainaut', 'hainaut', { population: '33 000', landmarks: 'Carnaval de Binche (UNESCO), Remparts, Musée du Masque' }),
       makeCommune('Soignies', 'Hainaut', 'hainaut', { population: '28 000', landmarks: 'Collégiale Saint-Vincent, Carrières de Soignies' }),
-      makeCommune('Ath', 'Hainaut', 'hainaut', { population: '29 000', landmarks: 'Ducasse d\'Ath (UNESCO), Tour Burbant, Dendre' }),
+      makeCommune('Ath', 'Hainaut', 'hainaut', { 
+        population: '29 000', 
+        landmarks: 'Ducasse d\'Ath (UNESCO), Tour Burbant, Dendre',
+        title: 'Plombier Ath | Dépannage & Urgence 24h/24',
+        h1: '<span class="text-accent">Plombier Ath</span> : Dépannage & Urgence',
+        description: 'Vous cherchez un expert de confiance à Ath ? Notre équipe intervient rapidement pour tous vos travaux de plomberie et de chauffage. Que vous ayez besoin d\'un dépannage urgent, d\'une réparation de fuite d\'eau ou d\'un entretien de chaudière, nous vous garantissons un service professionnel, propre et au juste prix. Disponibilité totale 24h/24.'
+      }),
       makeCommune('Enghien', 'Hainaut', 'hainaut', { population: '14 000', landmarks: 'Parc d\'Enghien, Château d\'Enghien, Centre historique' }),
       makeCommune('Braine-le-Comte', 'Hainaut', 'hainaut', { population: '22 000', landmarks: 'Église Saint-Géry, Aquascope Virelles (proximité)' }),
     ],

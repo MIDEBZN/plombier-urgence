@@ -31,7 +31,7 @@ const areaServed = [
 ---
 
 <Layout
-  title={`Plombier ${commune.name} | Dépannage & Urgence 24h/24`}
+  title={commune.title || `Plombier ${commune.name} | Dépannage & Urgence 24h/24`}
   description={`Besoin d'un dépannage ? Vous cherchez à trouver un plombier ${commune.name} (${commune.province}) ? Nous garantissons un service rapide en 30 min pour tous vos travaux de plomberie et réparation de fuite d'eau.`}
   areaServed={areaServed}
 >
