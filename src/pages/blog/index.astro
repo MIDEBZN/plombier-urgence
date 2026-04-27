@@ -2,46 +2,1150 @@
 import Layout from '../../layouts/Layout.astro';
 import CTABanner from '../../components/CTABanner.astro';
 
-const articles = [
+export const articles = [
   {
-    title: 'Combien Coûte un Plombier à Bruxelles en 2025 ?',
-    slug: '/blog/combien-coute-plombier-bruxelles-2025',
-    tag: '💰 Guide Tarifs',
-    excerpt: 'Tarifs réels 2025 pour débouchage, fuite, chauffe-eau, rénovation. Prix départ, prix horaire, TVA incluse. Le guide le plus complet.',
-    date: 'Mars 2025',
-    read: '6 min',
+    title: "Artisan Plombier Local VS Grande Société de Dépannage",
+    slug: "/blog/artisan-plombier-vs-societe-depannage",
+    tag: "💡 Guide Conseil",
+    excerpt: "Faut-il choisir le petit indépendant de votre rue ou un réseau régional de plomberie pour une urgence à Bruxelles ? Comparatif pour faire le bon choix.",
+    date: "Mars 2025",
+    read: "5 min"
   },
   {
-    title: 'Plombier Pas Cher Bruxelles : Comment Ne Pas Se Faire Arnaquer',
-    slug: '/blog/plombier-pas-cher-bruxelles',
-    tag: '🛡️ Anti-Arnaque',
-    excerpt: '7 signaux d\'alarme d\'un plombier malhonnête. Comment vérifier qu\'un plombier est fiable. Prix réels vs arnaques.',
-    date: 'Mars 2025',
-    read: '5 min',
+    title: "Comment utiliser le bicarbonate de soude pour déboucher une canalisation ? | Guide",
+    slug: "/blog/bicarbonate-de-soude-deboucher-canalisation",
+    tag: "💡 Guide Conseil",
+    excerpt: "Guide complet 2025 : découvrez comment utiliser efficacement le bicarbonate de soude, seul ou combiné, pour déboucher naturellement vos canalisations à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
   },
   {
-    title: 'Les 7 Signes que Votre Chauffe-Eau va Lâcher',
-    slug: '/blog/signes-chauffe-eau-panne',
-    tag: '🔥 Guide Pratique',
-    excerpt: 'Reconnaître les signaux d\'alarme avant la panne totale. Réparation vs remplacement : comparatif prix 2025.',
-    date: 'Mars 2025',
-    read: '5 min',
+    title: "Chaudière qui claque ou siffle : d'où vient le bruit ?",
+    slug: "/blog/bruit-chaudiere-claquement-sifflement-diagnostic",
+    tag: "💡 Guide Conseil",
+    excerpt: "Bruit de bouillonnement, gros claquements métaliques, ou sifflements stridents dans votre chaudière ou radiateurs ? Le diagnostic des pannes par les sons typiques.",
+    date: "Mars 2025",
+    read: "5 min"
   },
   {
-    title: 'Prix Débouchage Canalisation Bruxelles 2025',
-    slug: '/blog/prix-debouchage-canalisation-bruxelles',
-    tag: '💰 Guide Prix',
-    excerpt: 'Combien coûte un débouchage à Bruxelles ? Prix au mètre, tarif WC bouché, curage haute pression. Tableau complet.',
-    date: 'Mars 2025',
-    read: '4 min',
+    title: "Bruit dans les Tuyaux : Causes et Solutions Complètes (2025)",
+    slug: "/blog/bruit-tuyaux",
+    tag: "💡 Guide Conseil",
+    excerpt: "Bruits dans les tuyaux ? Coup de bélier, sifflements, glouglous, claquements. Découvrez les 7 causes et solutions pour éliminer les bruits de canalisation.",
+    date: "Mars 2025",
+    read: "5 min"
   },
   {
-    title: 'Plombier Dimanche & Nuit Bruxelles : Tarifs et Disponibilité',
-    slug: '/blog/plombier-dimanche-nuit-bruxelles',
-    tag: '🌙 Guide Urgences',
-    excerpt: 'Qui appeler la nuit ou le dimanche à Bruxelles ? Tarifs suppléments réels 2025. Communes desservies 24h/24.',
-    date: 'Mars 2025',
-    read: '4 min',
+    title: "Faut-il payer une Pompe à Chaleur (PAC) ou rester au gaz à Bruxelles ?",
+    slug: "/blog/chaudiere-gaz-vs-pompe-a-chaleur-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Avec la montée des normes environnementales à Bruxelles, est-il temps d'abandonner votre chaudière à gaz de ville pour une pompe à chaleur (PAC) ? Comparatif.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Ma chaudière se met en sécurité (témoin rouge) : que faire ?",
+    slug: "/blog/chaudiere-se-met-en-securite-que-faire",
+    tag: "💡 Guide Conseil",
+    excerpt: "Votre chaudière affiche un code d'erreur ou un voyant rouge et refuse de démarrer ? Découvrez les vérifications simples à faire avant d'appeler un chauffagiste.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Chemisage de Tuyau Bruxelles (Gainage sans Casser) : Réparer un égout cassé",
+    slug: "/blog/chemisage-canalisation-alternative-remplacement",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'inspection caméra montre un tuyau cassé sous le sol en ciment ou racine? Evitez la démolition terrassier grâce à la méthode révolutionnaire du Chemisage résine époxy.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment choisir un plombier d'urgence FIABLE à Bruxelles ?",
+    slug: "/blog/choisir-plombier-urgence-fiable",
+    tag: "💡 Guide Conseil",
+    excerpt: "Face à 100 annonces différentes sur Google pour une fuite à Bruxelles, comment trouver un plombier sérieux et fiable ? Suivez nos 5 critères de sélection.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Choisir un Bon Plombier en Belgique (Sans Arnaque) ?",
+    slug: "/blog/choisir-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Ne vous faites plus escroquer ! Nos 8 conseils pour choisir un plombier honnête et compétent en Belgique. Agréments Cerga, devis clairs, numéro de TVA et Google Docs.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien Coûte le Débouchage d'un Évier à Bruxelles ? Prix 2025",
+    slug: "/blog/combien-coute-debouchage-evier-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Tarifs réels 2025 pour déboucher un évier de cuisine ou un lavabo à Bruxelles. Le guide des prix justes, méthodes professionnelles et comment éviter les arnaques.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien Coûte un Débouchage de WC à Bruxelles en 2025 ? | Tarifs Réels",
+    slug: "/blog/combien-coute-debouchage-wc-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vous avez un WC bouché à Bruxelles ? Découvrez les tarifs réels d'un débouchage en 2025, les suppléments d'urgence (nuit/week-end) et comment éviter les arnaques.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien coûte une inspection caméra de canalisation à Bruxelles ?",
+    slug: "/blog/combien-coute-inspection-camera-canalisation-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Quels sont les vrais tarifs d'un passage caméra dans les égouts ? Découvrez les prix moyens, les suppléments et l'utilité pour le remboursement par l'assurance habitation.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien Coûte un Plombier à Bruxelles en 2025 ? Tarifs Réels",
+    slug: "/blog/combien-coute-plombier-bruxelles-2025",
+    tag: "💡 Guide Conseil",
+    excerpt: "Combien coûte un plombier à Bruxelles en 2025 ? Tarifs réels pour débouchage, fuite, chauffe-eau, rénovation. Prix départ, prix horaire, TVA incluse. Guide complet.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prix & Tarif d'une Recherche de Fuite d'Eau à Bruxelles 2025",
+    slug: "/blog/combien-coute-recherche-fuite-eau-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez le coût exact d'une recherche de fuite d'eau non destructive à Bruxelles. Caméra thermique, gaz traceur, et qui paie (assurance, locataire) ?",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Vous avez une urgence maintenant ?",
+    slug: "/blog/combien-de-temps-deboucheur-intervenir-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Urgence plomberie ? Découvrez les délais d'intervention réels d'un déboucheur professionnel à Bruxelles, les facteurs qui ralentissent le trajet et comment accélérer sa venue.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Couper l'Eau Rapidement lors d'une Fuite à Bruxelles ?",
+    slug: "/blog/comment-couper-eau-rapidement-fuite-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Geyser sous l'évier ou tuyau éclaté ? Découvrez comment et où trouver la vanne d'arrêt générale dans une maison ou un appartement bruxellois pour limiter les dégâts.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Déboucher une Baignoire Sans Plombier en 5 Étapes",
+    slug: "/blog/comment-deboucher-baignoire-sans-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Votre baignoire refuse de se vider ? Suivez notre tutoriel étape par étape pour libérer la bonde et le siphon des bouchons tenaces par vous-même.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Un débouchage lourd impossible à réaliser à la main ?",
+    slug: "/blog/comment-deboucher-canalisation-tres-bouchee-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Face à un bouchon tenace ou du béton dans les tuyaux ? Les techniques pro pour déboucher une canalisation extrêmement bouchée ou engorgée par des racines à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment d'éboucher un égout principal en urgence ?",
+    slug: "/blog/comment-deboucher-egout-principal-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "WC, douche et évier bouchés en même temps ? C'est l'égout principal. Découvrez comment réagir en urgence, qui appeler et la méthode de l'hydrocurage.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Déboucher un Évier Naturellement ? 5 Astuces Écolos",
+    slug: "/blog/comment-deboucher-evier-bouche-naturellement",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez 5 méthodes 100% naturelles au bicarbonate de soude, vinaigre et eau chaude pour déboucher votre évier sans polluer et sans produits chimiques nocifs.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Vos tuyaux réclament un pro et un traitement doux ?",
+    slug: "/blog/comment-deboucher-evier-sans-abimer-tuyaux",
+    tag: "💡 Guide Conseil",
+    excerpt: "Évitez de brûler vos joints PVC ! Découvrez les méthodes naturelles et mécaniques pour déboucher un évier ou lavabo en toute sécurité pour votre plomberie.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Canalisations de Cuisine Bouchées : 3 Méthodes Radicales",
+    slug: "/blog/comment-deboucher-les-canalisations-de-cuisine",
+    tag: "💡 Guide Conseil",
+    excerpt: "Votre évier de cuisine est totalement obstrué par les graisses et les pâtes ? Voici 3 méthodes professionnelles pour déboucher vos canalisations de cuisine.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Stop à l'eau qui monte, nous intervenons vite !",
+    slug: "/blog/comment-deboucher-wc-bouche-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Votre toilette est bouchée et l'eau menace de déborder ? Découvrez les méthodes efficaces pour déboucher un WC rapidement à Bruxelles avant d'appeler l'urgence.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Déboucher un WC Sans Plombier ? 7 Astuces 2025",
+    slug: "/blog/comment-deboucher-wc-sans-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "WC bouché ? Découvrez les 7 méthodes pour déboucher vos toilettes vous-même sans appeler de plombier. Eau chaude, bicarbonate, ventouse et astuces secrètes.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment détecter une fuite d'eau cachée derrière un mur à Bruxelles ?",
+    slug: "/blog/comment-detecter-fuite-eau-cachee-mur-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Peinture qui s'écaille, taches d'humidité, facture explosive ? Découvrez nos techniques professionnelles pour détecter une fuite d'eau cachée dans un mur à Bruxelles sans tout casser.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Une odeur persistante malgré vos efforts préventifs ?",
+    slug: "/blog/comment-eviter-canalisation-bouchee-nouveau",
+    tag: "💡 Guide Conseil",
+    excerpt: "Évitez le retour du plombier ! Découvrez les 5 gestes quotidiens en prévention, les filtres magiques et l'entretien naturel pour des égouts toujours propres.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment faire un test de compteur pour repérer une fuite d'eau ?",
+    slug: "/blog/comment-faire-test-compteur-fuite-eau",
+    tag: "💡 Guide Conseil",
+    excerpt: "Méthode simple et rapide pour vérifier si vous avez une fuite d'eau invisible. Apprenez à réaliser le test du compteur d'eau étape par étape avant d'appeler le plombier.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Nettoyage de Siphon : Guide complet d'entretien préventif (Sans Fuite)",
+    slug: "/blog/comment-nettoyer-siphons-regulierement",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'astuce pour ne jamais avoir de canalisation bouchée ? Démonter et doucher votre siphon vous-même tous les 3 mois ! Tutoriel nettoyage complet sans outils.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Prévenir les Bouchons dans les Canalisations ? 7 Astuces",
+    slug: "/blog/comment-prevenir-bouchons-canalisations",
+    tag: "💡 Guide Conseil",
+    excerpt: "Évitez de dépenser 150€ chez un plombier ! Découvrez nos 7 astuces simples et gratuites pour entretenir vos canalisations et prévenir la formation de bouchons.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prévenir le Tartre et Calcaire dans ses canalisations (Guide)",
+    slug: "/blog/comment-prevenir-tartre-canalisations",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau dure de Bruxelles transforme vos canalisations en roche ! Découvrez les solutions préventives (vinaigre, adoucisseur) et le curage anti-calcaire.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment savoir si j’ai une fuite d’eau sans casser à Bruxelles ?",
+    slug: "/blog/comment-savoir-fuite-eau-sans-casser-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Peut-on trouver une fuite d'eau sans détruire ses murs et ses sols en Belgique ? Le guide complet des méthodes non destructives utilisées par les plombiers bruxellois.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment utiliser une ventouse pour déboucher ? (Technique Pro)",
+    slug: "/blog/comment-utiliser-ventouse-deboucher",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'outil n°1 du plomberie : la ventouse ! Apprenez la technique infaillible pour déboucher rapidement un évier, un WC ou une douche comme un plombier.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien coâte l'entretien de chaudière à Bruxelles ?",
+    slug: "/blog/contrat-entretien-chaudiere-bruxelles-prix",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez les tarifs 2026 pour un entretien de chaudière gaz et mazout à Bruxelles. Faut-il prendre un contrat omnium, annuel, ou payer à l'acte ?",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Couper l'Eau en Urgence ? Localiser la Vanne",
+    slug: "/blog/couper-eau-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "Une fuite se déclare ? Apprenez comment trouver et fermer la vanne d'arrêt d'eau principale de votre maison ou appartement en moins de 30 secondes.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien Coâte un Plombier en Urgence la Nuit ou le Week-end à Bruxelles ?",
+    slug: "/blog/cout-plombier-nuit-weekend",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez les vrais tarifs d'un plombier en urgence à Bruxelles la nuit, le week-end et les jours fériés. Évitez les arnaques et comparez les suppléments.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Combien Coâte un Plombier en Urgence ? (Nuit & Week-end)",
+    slug: "/blog/cout-plombier-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "Fuite à 3h du matin ? Quel est le vrai prix d'un dépannage plomberie d'urgence la nuit ou le week-end en Belgique ? Découvrez nos suppléments tarifs 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Une annonce téléphonique de tarification ferme d'urgence ?",
+    slug: "/blog/debouchage-bruxelles-devis-gratuit",
+    tag: "💡 Guide Conseil",
+    excerpt: "Peut-on connaâtre le prix exact par téléphone avant le déplacement en Belgique ? Découvrez les pièges des devis gratuits et les conseils pour sécuriser la tarification d'urgence.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Bouchon en pleine nuit à Bruxelles ?",
+    slug: "/blog/debouchage-bruxelles-disponible-24h-24-7j-7",
+    tag: "💡 Guide Conseil",
+    excerpt: "Besoin d'un dépannage plomberie immédiat ? Décryptons le fonctionnement réel de l'astreinte 24/7 des sociétés de débouchage à Bruxelles, conditions de week-end et arnaques de nuit.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Inspection Caméra des Égouts à Bruxelles : Prix (2025) & Utilité",
+    slug: "/blog/debouchage-camera-inspection-bruxelles-cout",
+    tag: "💡 Guide Conseil",
+    excerpt: "Bouchons à répétition ? Découvrez l'importance de l'inspection par caméra endoscopique de vos canalisations, les tarifs à Bruxelles et comment éviter les arnaques.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage canalisation cassée ou fissurée : Que faire ? | Solutions",
+    slug: "/blog/debouchage-canalisation-cassee-fissuree-solutions",
+    tag: "💡 Guide Conseil",
+    excerpt: "Une canalisation bouchée peut cacher une fissure, un écrasement ou des racines. Découvrez les symptômes, les risques et la réparation par chemisage sans casse.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage Haute Pression à Bruxelles : Prix & Avantages",
+    slug: "/blog/debouchage-canalisation-haute-pression-bruxelles-prix",
+    tag: "💡 Guide Conseil",
+    excerpt: "Une canalisation complètement bouchée ? Découvrez les prix justes d'un hydrocurage haute pression à Bruxelles, ses avantages et quand l'exiger.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage Douche Italienne (Plain-Pied) : Les Dangers Spécifiques (Fuites & Siphon Plat)",
+    slug: "/blog/debouchage-canalisations-douche-italienne-particularites",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau stagne sur le carrelage de votre douche à l'italienne ? Attention aux siphons extra-plats et aux produits chimiques qui tuent l'étanchéité de vos de salles de bain.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage chambre de visite Bruxelles : Qui Intervient ?",
+    slug: "/blog/debouchage-chambre-visite-bruxelles-qui-intervient",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau refoule par votre plaque d'égout et la cour sent mauvais ? Découvrez le rôle de la chambre de visite et comment la nettoyer efficacement sans inonder la cave.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage immeuble copropriété Bruxelles : Qui paie et qui est responsable ?",
+    slug: "/blog/debouchage-collectif-immeuble-bruxelles-responsable",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'évacuation refoule dans votre appartement mais l'obstruction est commune ? Guide légal sur les responsabilités entre syndic, locataire et copropriété.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage Colonne d'Immeuble à Bruxelles : Qui gère et Quel prix ?",
+    slug: "/blog/debouchage-colonne-generale-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau sale remonte chez vous mais provient du voisin du dessus ? C'est la colonne générale de l'immeuble. Comment réagir, avec quel Syndic et quels sont les tarifs ?",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Hydrocurage Haute Pression Bruxelles : Intérêt et Prix",
+    slug: "/blog/debouchage-curage-haute-pression-bruxelles-prix",
+    tag: "💡 Guide Conseil",
+    excerpt: "Pourquoi le furet n'est plus suffisant pour les bouchons incrustés ? Découvrez le fonctionnement de l'hydrocurage à haute pression (200 bars) et les tarifs à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Douche Bouchée ? 4 Conseils Pratiques pour la Déboucher",
+    slug: "/blog/debouchage-douche-bouchee-conseils",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau stagne dans votre douche à l'italienne ? Découvrez nos 4 astuces professionnelles pour enlever les cheveux et le savon sans casser le carrelage.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage d'Égout à Bruxelles : Prix & Inspection (2025)",
+    slug: "/blog/debouchage-egout-bruxelles-cout",
+    tag: "💡 Guide Conseil",
+    excerpt: "Égout bouché ou odeurs nauséabondes ? Découvrez les vrais prix d'un débouchage d'égout à Bruxelles, l'intérêt de la caméra d'inspection et le curage haute pression.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Vidange & Débouchage Fosse Septique Bruxelles : Tarif et Entretien",
+    slug: "/blog/debouchage-fosse-septique-bruxelles-cout",
+    tag: "💡 Guide Conseil",
+    excerpt: "Fosse septique pleine, débordement ou odeurs nauséabondes ? Découvrez comment vérifier votre fosse, la fréquence de vidange idéale et les tarifs pour un pompage à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage Gouttière Bruxelles : Prix, Intervention & Prévention",
+    slug: "/blog/debouchage-gouttiere-bruxelles-tarifs-intervention",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau de pluie déborde de votre corniche ? Découvrez les risques d'une gouttière bouchée, le tarif d'un nettoyage pro et les solutions d'hydrocurage.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Un problème d'égout persistant que le furet ne résout pas ?",
+    slug: "/blog/debouchage-haute-pression-adapte-probleme",
+    tag: "💡 Guide Conseil",
+    excerpt: "Qu'est ce que l'hydrocurage ? Découvrez pourquoi le nettoyage des égouts à la haute pression à Bruxelles est l'ultime solution pour nettoyer sans tout casser.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage Lavabo à Bruxelles : Tarifs (2025) et Conseils",
+    slug: "/blog/debouchage-lavabo-bruxelles-tarifs",
+    tag: "💡 Guide Conseil",
+    excerpt: "Le lavabo de la salle de bain déborde ? Découvrez les causes fréquentes (dentifrice, poils), les tarifs d'un plombier à Bruxelles et comment éviter ce problème.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "1 heure du Matin et l'Eau sale se fraie un chemin dans la Cuisine ?",
+    slug: "/blog/debouchage-sans-rendez-vous-urgence-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Eau qui déborde à minuit ou le week-end ? Les plombiers d'urgence agissent sans rendez-vous. Découvrez nos délais moyens en capitale et nos horaires de garde nocturnes garanties.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Déboucher un Sterfput (Avaloir) : Causes et Prix 2025",
+    slug: "/blog/debouchage-sterfput-avaloir-bruxelles-tarifs",
+    tag: "💡 Guide Conseil",
+    excerpt: "Le sterfput de la cave refoule de l'eau sale ? Découvrez comment entretenir un avaloir et les tarifs d'un plombier déboucheur à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage Urgent WC Bruxelles : Qui Appeler Sous 30 Min ?",
+    slug: "/blog/debouchage-urgent-wc-bruxelles-qui-appeler",
+    tag: "💡 Guide Conseil",
+    excerpt: "Urgence absolue : WC bouché en pleine nuit ? Découvrez qui appeler pour un débouchage rapide à Bruxelles, les arnaques à éviter et les tarifs de nuit réels.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Tarifs débouchage urgent week-end Bruxelles (Majoration et Suppléments)",
+    slug: "/blog/debouchage-urgent-week-end-bruxelles-tarifs",
+    tag: "💡 Guide Conseil",
+    excerpt: "Quel est le vrai coût d'un débouchage en urgence le samedi ou le dimanche à Bruxelles ? Découvrez les tarifs, suppléments légaux et nos conseils.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage WC : Méthodes Sans Démontage VS Avec Démontage",
+    slug: "/blog/debouchage-wc-demontage-vs-sans-demontage",
+    tag: "💡 Guide Conseil",
+    excerpt: "WC bouché ras bord ? Découvrez quand un plombier le pulvérisera en surface, et pourquoi parfois, il n'y a pas d'autre choix que de 'casser' et dévisser la toilette.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Travaux Rénovation Salle de Bain : Doit-on curer les tuyaux Avant ou Après Chantier ?",
+    slug: "/blog/deboucher-avant-ou-apres-travaux-plomberie",
+    tag: "💡 Guide Conseil",
+    excerpt: "Gravats, joints, boue... La rénovation de la maison détruit vos canalisations ! Nos conseils pour planifier l'entretien des égouts avec son maitre d'œuvre.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Peut-on déboucher une canalisation avec du vinaigre blanc ? | Guide 2025",
+    slug: "/blog/deboucher-canalisation-vinaigre-blanc",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez comment déboucher et entretenir vos canalisations avec du vinaigre blanc. Efficacité, limites, méthodes et conseils de plombiers professionnels à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Débouchage des Canalisations & Canalisation Débouchage : Guide 2025",
+    slug: "/blog/deboucher-canalisation",
+    tag: "💡 Guide Conseil",
+    excerpt: "Comment déboucher une canalisation ? 6 méthodes efficaces : bicarbonate, furet, nettoyeur haute pression. Causes, prévention et tarifs 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Déboucher un WC ? 7 Méthodes Efficaces (2025)",
+    slug: "/blog/deboucher-wc",
+    tag: "💡 Guide Conseil",
+    excerpt: "WC bouché ? Découvrez 7 méthodes efficaces pour déboucher vos toilettes : ventouse, eau chaude, bicarbonate, furet. Guide étape par étape avec tarifs 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Déboucheur Bruxelles 24h/24 : Tarifs Nuit et Urgences",
+    slug: "/blog/deboucheur-bruxelles-disponible-24h-24",
+    tag: "💡 Guide Conseil",
+    excerpt: "Besoin d'un déboucheur en pleine nuit ou un dimanche à Bruxelles ? Découvrez le vrai tarif d'un plombier de garde 24h/24 et les arnaques à éviter.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Dégât des Eaux et Assurance en Belgique : Qui Paie Quoi ?",
+    slug: "/blog/degat-eaux-assurance",
+    tag: "💡 Guide Conseil",
+    excerpt: "Inondation, mur moisi ou fuite cachée ? Découvrez comment fonctionne la couverture Dégât des Eaux de votre assurance incendie en Belgique (Locataire vs Propriétaire).",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel est le délai d'intervention moyen pour une fuite d'eau à Bruxelles ?",
+    slug: "/blog/delai-intervention-moyen-fuite-eau-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Combien de temps faut-il attendre un plombier en urgence à Bruxelles ? Découvrez les délais moyens par commune, jour et nuit, et comment accélérer l'intervention.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel est le Délai Réel d'Intervention d'un Plombier Urgence à Bruxelles ?",
+    slug: "/blog/delai-intervention-plombier-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "En combien de temps un plombier d'urgence peut-il arriver chez vous à Bruxelles ? Découvrez les délais réels (centre et communes) et comment accélérer son arrivée.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Dépannage chaudière hiver : délais d'intervention Bruxelles",
+    slug: "/blog/depannage-chaudiere-urgence-hiver-delais",
+    tag: "💡 Guide Conseil",
+    excerpt: "Panne de chauffage par -2°C ? Découvrez les délais moyens réels d'intervention d'un chauffagiste à Bruxelles en pleine saison froide et comment obtenir une priorité.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Que contient le camion d'un Plombier en Urgence Bruxelles ?",
+    slug: "/blog/depannage-plomberie-bruxelles-materiel",
+    tag: "💡 Guide Conseil",
+    excerpt: "Machine à cloche, chalumeau, pompe hydrocureuse, joints en tout genre... Découvrez comment nos plombiers d'urgence s'équipent pour résoudre vos pannes.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment se passe l'intervention d'un plombier d'urgence à Bruxelles ?",
+    slug: "/blog/deroulement-intervention-plombier-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "Transparence totale : découvrez le déroulement exact, étape par étape, d'un dépannage plomberie avec Plombier Urgence. De l'appel à la facturation.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Devis Plombier Bruxelles par Photo/Vidéo (WhatsApp)",
+    slug: "/blog/devis-plombier-urgence-photo-video",
+    tag: "💡 Guide Conseil",
+    excerpt: "Envoyez vos photos ou vidéos de fuite par WhatsApp à un plombier bruxellois pour obtenir instantanément un diagnostic et un devis précis avant son déplacement.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "L'eau menace le sol fragile de votre salle d'eau Bruxelloise ?",
+    slug: "/blog/eau-remonte-evier-douche-que-faire",
+    tag: "💡 Guide Conseil",
+    excerpt: "Urgence inondation : L'eau sale refoule et sort de votre siphon ? Découvrez les 4 réflexes de sauvetage pour stopper l'hémorragie et sauver votre domicile avant l'arrivée du plombier.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Entretien Canalisations : 5 Gestes pour Éviter les Bouchons",
+    slug: "/blog/entretien-canalisations-conseils-reguliers",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vinaigre, bicarbonate, eau bouillante... Découvrez 5 astuces mensuelles simples pour nettoyer vos tuyaux et ne plus jamais payer de facture de plombier.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Entretien chaudière obligatoire à Bruxelles : qui paie ?",
+    slug: "/blog/entretien-chaudiere-obligatoire-bruxelles-locataire",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'entretien de la chaudière au gaz ou mazout est strictement encadré à Bruxelles. Découvrez les obligations PEB, les fréquences, et qui du locataire ou du propriétaire doit payer.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment éviter les arnaques de plombier en urgence à Bruxelles ?",
+    slug: "/blog/eviter-arnaques-plombier-urgence-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Factures gonflées, travaux inutiles, pressions psychologiques : le guide ultime pour repérer et éviter les arnaques au dépannage plomberie d'urgence en Belgique.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment Éviter les Arnaques de Plombier d'Urgence à Bruxelles ?",
+    slug: "/blog/eviter-arnaques-plombier-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "Les arnaques au dépannage d'urgence sont courantes à Bruxelles. Découvrez 7 techniques infaillibles pour repérer un faux plombier, vérifier les prix et exiger des garanties.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Lingettes WC : Pourquoi Elles Bouchent TOUJOURS vos Toilettes",
+    slug: "/blog/eviter-lingettes-bouchent-wc",
+    tag: "💡 Guide Conseil",
+    excerpt: "Le cauchemar des plombiers à Bruxelles : Les lingettes soi-disant 'biodégradables'. Découvrez pourquoi elles obstruent vos WC et comment réparer ce désastre.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Réparation Fuite Chasse d'Eau WC : 4 Problèmes et Solutions",
+    slug: "/blog/fuite-chasse-eau",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau coule tout le temps dans la cuvette de vos WC ? Découvrez comment réparer une fuite de chasse d'eau : flotteur, clapet, calcaire. Tutoriel 2025 complet.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Une fuite d'eau fait-elle augmenter la facture à Bruxelles ?",
+    slug: "/blog/fuite-eau-augmente-facture-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez l'impact financier d'une fuite d'eau sur votre facture VIVAQUA à Bruxelles. Chiffres, exemples concrets et solutions pour éviter de payer des milliers d'euros.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Qui appeler pour une fuite d'eau dans la cave à Bruxelles ? Guide Urgence",
+    slug: "/blog/fuite-eau-cave-qui-appeler",
+    tag: "💡 Guide Conseil",
+    excerpt: "La cave est sous eau ! Découvrez si vous devez faire appel aux pompiers, à Vivaqua, ou à un plombier d'urgence à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Fuite d'eau sur la chaudière : que faire en urgence ?",
+    slug: "/blog/fuite-eau-chaudiere-que-faire-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau goutte sous votre chaudière gaz ou mazout ? Découvrez les premiers gestes d'urgence pour sécuriser l'appareil et éviter un court-circuit à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Que faire en cas de fuite d'eau sur la chaussée ou en voirie à Bruxelles ?",
+    slug: "/blog/fuite-eau-chaussee-voirie-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau jaillit du trottoir ou au milieu de la rue ? Ce n'est plus du ressort privé ! La gestion d'une fuite sur la voirie publique à Bruxelles et la procédure VIVAQUA.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Fuite d'Eau que Faire ? Guide Urgence Complet 2025 | Plombier Urgence",
+    slug: "/blog/fuite-eau-que-faire",
+    tag: "💡 Guide Conseil",
+    excerpt: "Fuite d'eau que faire ? Découvrez les gestes d'urgence, comment couper l'eau, identifier la source et quand appeler un plombier. Guide complet 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Fuite d'eau nuit à Bruxelles : Vivaqua ou Plombier Urgence ?",
+    slug: "/blog/fuite-nuit-vivaqua-ou-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "En cas de fuite d'eau importante à Bruxelles, qui dois-je appeler ? Découvrez la limite exacte entre la responsabilité de Vivaqua et celle de votre plombier privé.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Oubliez les acides dangereux, faites confiance au matériel industriel",
+    slug: "/blog/furet-ventouse-produit-chimique-choisir",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vous hésitez entre ventouse, furet métallique ou acides de supermarché ? Guide ultime pour choisir l'outil idéal en fonction de votre tuyauterie et son état.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Garantie Débouchage Canalisation : Quels sont vos droits en cas de re-bouchon ?",
+    slug: "/blog/garantie-apres-intervention-debouchage",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'évier est à nouveau bouché 3 jours après le passage du plombier ? Découvrez vos droits, la garantie de prestation et l'importance de la caméra endoscopique.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment gérer une fuite d'eau dans un appartement à Bruxelles ?",
+    slug: "/blog/gerer-fuite-eau-appartement-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Qui est responsable : propriétaire, locataire ou syndic ? Guide pour gérer les dégâts des eaux, couper l'eau en copropriété et prévenir les voisins en appartement.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment gérer une fuite d'eau en location à Bruxelles ?",
+    slug: "/blog/gerer-fuite-eau-location-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Locataire ou propriétaire : qui paie quoi en cas de fuite d'eau ? Les règles légales en Belgique, les responsabilités de chacun et les démarches à suivre.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Mauvaises odeurs canalisations Bruxelles : Comment s'en débarrasser",
+    slug: "/blog/mauvaises-odeurs-canalisations-bruxelles-remedier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Ça sent l'égout ou l'œuf pourri dans la salle de bain ou la cuisine ? Découvrez les causes et nos astuces miracles pour éliminer définitivement ces odeurs.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "La certitude d'un service d'artisan garanti et local sur 1000 Bruxelles",
+    slug: "/blog/meilleur-deboucheur-bruxelles-intervention-rapide",
+    tag: "💡 Guide Conseil",
+    excerpt: "Quels sont les critères pour choisir un artisan fiable en plomberie d'urgence ? Conseils pour éviter les arnaques et trouver l'équipe au tarif transparent et sans surprises.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel est le Meilleur Déboucheur à Bruxelles ? | Critères 2025",
+    slug: "/blog/meilleur-deboucheur-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Comment choisir le meilleur plombier déboucheur à Bruxelles ? Découvrez les critères essentiels, les tarifs justes et les pièges à éviter pour un débouchage sans arnaque.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Odeur d'Égout dans la Maison : 5 Causes et Solutions (2025)",
+    slug: "/blog/odeur-egout",
+    tag: "💡 Guide Conseil",
+    excerpt: "Ça sent l'égout dans la maison ou la salle de bain ? Découvrez les 5 causes principales (siphon vide, évent bouché, fuite cachée) et comment éliminer ces mauvaises odeurs.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Chaudière en Panne que Faire ? Les Bons Réflexes (2025)",
+    slug: "/blog/panne-chaudiere",
+    tag: "💡 Guide Conseil",
+    excerpt: "Chaudière au gaz en panne ? Plus d'eau chaude ni chauffage ? Vérifiez la pression, réarmez, et découvrez les causes et codes erreurs les plus fréquents (Vaillant, Bulex, Junkers).",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Chauffe-eau Électrique ne Chauffe Plus : 8 Pannes et Solutions",
+    slug: "/blog/panne-chauffe-eau",
+    tag: "💡 Guide Conseil",
+    excerpt: "Chauffe-eau ne chauffe plus ? Découvrez les 8 causes principales (résistance, thermostat, calcaire), comment réarmer le contacteur et les tarifs de réparation en 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Perte d'eau visible (Fuite & Tache) : Est-ce le signe d'un gros bouchon ?",
+    slug: "/blog/perte-eau-visible-signe-canalisation-bouchee",
+    tag: "💡 Guide Conseil",
+    excerpt: "Une petite flaque sous l'évier ou de l'humidité au mur cachent souvent un engorgement lourd sous pression. Comprendre l'effet refoulement et les conséquences.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier Ouvert le Dimanche à Bruxelles : Dépannage Urgence",
+    slug: "/blog/plombier-dimanche-bruxelles-ouvert",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vous cherchez un plombier réellement ouvert le dimanche à Bruxelles ? Découvrez notre vrai service de garde dominicale sans fausses promesses.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier Dimanche & Nuit Bruxelles 2025 — Tarifs et Disponibilité",
+    slug: "/blog/plombier-dimanche-nuit-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Besoin d'un plombier dimanche, nuit ou jour férié à Bruxelles ? Tarifs 2025, suppléments réels, communes desservies. Plombier 24/24 Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier en moins de 30 min (Ixelles, Uccle, Anderlecht...)",
+    slug: "/blog/plombier-moins-30-minutes-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Obtenez un plombier d'urgence ultra-rapide en moins de 30 minutes partout dans les 19 communes de Bruxelles grâce à notre réseau réparti intelligemment.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier Pas Cher Bruxelles : Comment Ne Pas Se Faire Arnaquer",
+    slug: "/blog/plombier-pas-cher-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Plombier pas cher à Bruxelles : comment trouver un plombier sérieux sans se faire arnaquer. 7 conseils pour payer le juste prix. Guide 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier ou Chauffagiste en Urgence à Bruxelles ? Qui Appeler ?",
+    slug: "/blog/plombier-urgence-chauffage-chaudiere",
+    tag: "💡 Guide Conseil",
+    excerpt: "Ma chaudière est en panne à Bruxelles : dois-je appeler un plombier ou un chauffagiste ? Découvrez la différence et pourquoi Plombier Urgence règle les deux.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier de Garde 24/7 B2B pour Syndic d'Immeubles à Bruxelles",
+    slug: "/blog/plombier-urgence-immeuble-syndic",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vous gérez une copropriété à Bruxelles ? Découvrez nos contrats de maintenance et de garde 24/7 spécialement conçus pour les syndics et régisseurs.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier Pas Cher Bruxelles : Les Vrais Prix de l'Urgence",
+    slug: "/blog/plombier-urgence-pas-cher-prix-realistes",
+    tag: "💡 Guide Conseil",
+    excerpt: "Rechercher un plombier pas cher à Bruxelles peut coûter très cher. Découvrez les tarifs réalistes pour éviter de tomber dans les arnaques à 15€.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pourquoi ma canalisation se bouche-t-elle tout le temps ?",
+    slug: "/blog/pourquoi-canalisation-bouchee",
+    tag: "💡 Guide Conseil",
+    excerpt: "Ras-le-bol des bouchons récurrents ? Découvrez les causes cachées (pente, racines, tartre) et pourquoi les solutions de surface ne suffisent plus.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pourquoi l'évier se rebouche souvent malgré le débouchage ?",
+    slug: "/blog/pourquoi-evier-se-rebouche-souvent",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vous avez utilisé du Destop ou la ventouse mais l'évier se rebouche après 2 jours ? Découvrez le phénomène de la 'pâte de savon' et comment l'éliminer définitivement.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pourquoi les Papiers Toilettes Épais Causent des Bouchons de WC ?",
+    slug: "/blog/pourquoi-papiers-toilettes-epais-causent-bouchons",
+    tag: "💡 Guide Conseil",
+    excerpt: "Le confort du papier 4 plis a un prix pour vos canalisations ! Découvrez pourquoi le papier toilette 'ultra-confort' est l'ennemi n°1 des égouts bruxellois.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pourquoi mes Toilettes se Bouchent Régulièrement ? 5 Raisons",
+    slug: "/blog/pourquoi-toilettes-se-bouchent-regulierement",
+    tag: "💡 Guide Conseil",
+    excerpt: "Marre de la ventouse ? Découvrez les 5 causes structurelles qui font que vos WC se bouchent tout le temps et comment les résoudre durablement.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pourquoi utiliser un déboucheur professionnel plutôt que de l'acide ?",
+    slug: "/blog/pourquoi-utiliser-deboucheur-professionnel",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'acide sulfurique détruit vos tuyaux ! Découvrez pourquoi l'intervention mécanique d'un pro est plus sûre, plus efficace et finalement moins chère à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pression Chaudière qui Baisse : Pourquoi et que Faire ?",
+    slug: "/blog/pression-chaudiere-baisse-tout-le-temps",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vous devez remettre de l'eau dans votre chaudière tous les jours ? Découvrez les causes (vase d'expansion, fuite cachée, purgeur) et les solutions.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Pression d'Eau Faible à Bruxelles : Causes et Solutions (2025)",
+    slug: "/blog/pression-eau-faible",
+    tag: "💡 Guide Conseil",
+    excerpt: "Un filet d'eau à la douche ? Pression faible partout dans l'appartement ? Découvrez si le problème vient de Vivaqua, de votre réducteur de pression ou du tartre.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prix Débouchage Canalisation Bruxelles 2025 | Guide Complet",
+    slug: "/blog/prix-debouchage-canalisation-bruxelles-guide",
+    tag: "💡 Guide Conseil",
+    excerpt: "Combien coûte réellement un débouchage à Bruxelles en 2025 ? Tarifs fixes, suppléments, passage caméra et curage haute pression. Tableau comparatif.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prix Débouchage Canalisation Bruxelles 2025 ΓÇö Guide Complet",
+    slug: "/blog/prix-debouchage-canalisation-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Combien coûte un débouchage à Bruxelles ? Prix au mètre, tarif WC bouché, curage haute pression. Tableau complet des prix 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prix Débouchage à Bruxelles : Pourquoi ça varie selon la commune ?",
+    slug: "/blog/prix-debouchage-selon-commune-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Ixelles est-il plus cher qu'Anderlecht pour un débouchage ? Découvrez l'impact du stationnement et de la distance sur le prix de votre plombier à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel est le prix d'un débouchage en urgence à Bruxelles en 2026 ?",
+    slug: "/blog/prix-debouchage-urgence-2026",
+    tag: "💡 Guide Conseil",
+    excerpt: "Dégâts des eaux imminents ? Découvrez les tarifs prévisionnels 2026 pour un débouchage d'urgence à Bruxelles, de jour comme de nuit.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prix Maximum Garanti : Comment plafonner sa facture de plombier ?",
+    slug: "/blog/prix-maximum-garanti-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Marre des factures surprises ? Découvrez comment exiger un prix maximum garanti pour vos travaux de plomberie et de débouchage à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Procédure VIVAQUA en cas de fuite d'eau à Bruxelles : Guide",
+    slug: "/blog/procedure-vivaqua-fuite-eau-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Votre compteur s'emballe ? Découvrez la procédure officielle Vivaqua pour déclarer une fuite, demander un dégrèvement et les délais de réparation à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment purger ses radiateurs ? Guide Tuto Étape par Étape",
+    slug: "/blog/purger-radiateurs-comment-faire-tuto",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vos radiateurs glougloutent ou restent froids ? Apprenez comment purger l'air de votre circuit de chauffage vous-même pour gagner en chaleur et économiser.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Qu'est-ce qui cause les WC bouchés ? Top 5 des Objets",
+    slug: "/blog/qu-est-ce-qui-cause-wc-bouches",
+    tag: "💡 Guide Conseil",
+    excerpt: "Lingettes, tampons, jouets... Découvrez le top 5 des objets insolites qui bouchent les toilettes à Bruxelles et comment éviter le prochain drame sanitaire.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quand appeler un déboucheur professionnel à Bruxelles ?",
+    slug: "/blog/quand-appeler-deboucheur-professionnel-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "La ventouse ne suffit plus ? Découvrez les 5 situations critiques où l'intervention d'un déboucheur pro est indispensable pour sauver vos canalisations.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Que faire en cas de fuite d'eau à Bruxelles ? (Guide 2025)",
+    slug: "/blog/que-faire-en-cas-de-fuite-eau-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Urgence fuite d'eau ! Apprenez les 4 gestes vitaux à faire immédiatement à Bruxelles pour stopper les dégâts, contacter Vivaqua et trouver un plombier de nuit.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Que faire lors d'une fuite d'eau AVANT l'arrivée du plombier ?",
+    slug: "/blog/que-faire-fuite-eau-avant-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Gagnez du temps et sauvez vos meubles ! Découvrez les actions prioritaires à mener (coupure, épongage, photos) en attendant votre dépanneur à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Que faire en cas de fuite d'eau la nuit à Bruxelles ?",
+    slug: "/blog/que-faire-fuite-eau-nuit-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Il est 2h du matin et ça coule ! Découvrez qui appeler, comment limiter les dégâts et les tarifs réels d'une intervention de plomberie nocturne à Bruxelles.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel est le prix d'un débouchage à Bruxelles ? (Tableau 2025)",
+    slug: "/blog/quel-est-le-prix-debouchage-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Finies les surprises sur la facture ! Découvrez notre tableau complet des prix de débouchage à Bruxelles selon le type de bouchon et l'heure d'intervention.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel furet électrique est vraiment efficace pour déboucher ?",
+    slug: "/blog/quel-furet-electrique-efficace-deboucher",
+    tag: "💡 Guide Conseil",
+    excerpt: "Le furet manuel ne passe pas ? Découvrez l'efficacité du furet électrique professionnel pour détruire les bouchons de calcaire et de racines sans effort.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quel plombier pour une fuite d'eau à Bruxelles 24h/24 ?",
+    slug: "/blog/quel-plombier-urgence-fuite-eau-bruxelles-24h-24",
+    tag: "💡 Guide Conseil",
+    excerpt: "Besoin d'un expert en recherche de fuite disponible maintenant ? Découvrez comment choisir le bon dépanneur 24h/24 à Bruxelles pour un travail garanti.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quels produits utiliser pour déboucher une canalisation ?",
+    slug: "/blog/quels-produits-pour-deboucher-une-canalisation",
+    tag: "💡 Guide Conseil",
+    excerpt: "Acide, soude, enzymes ou bicarbonate ? Apprenez quels produits sont réellement efficaces et surtout lesquels ne pas utiliser pour préserver vos tuyaux.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Locataire ou Propriétaire : Qui Paie le Débouchage ? (Loi Belge)",
+    slug: "/blog/qui-paie-debouchage-locataire-proprietaire",
+    tag: "💡 Guide Conseil",
+    excerpt: "Un litige pour une facture de plombier ? Découvrez ce que dit la loi en Belgique : qui du locataire ou du propriétaire doit payer le débouchage des canalisations ?",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Racines dans Canalisations : Solutions et Prix Bruxelles",
+    slug: "/blog/racines-dans-canalisation-comment-deboucher",
+    tag: "💡 Guide Conseil",
+    excerpt: "Vos égouts sont détruits par les racines des arbres de votre jardin ? Découvrez pourquoi cela arrive, les techniques de fraisage pro et le prix des réparations.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Radiateur qui ne Chauffe Pas : Diagnostic et Réparations (2025)",
+    slug: "/blog/radiateur-froid",
+    tag: "💡 Guide Conseil",
+    excerpt: "Un radiateur froid en haut ou en bas ? La chaudière tourne mais pas de chaleur ? Apprenez comment purger, débloquer la vanne thermostatique et équilibrer l'eau.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Rapport d'Assurance par un Plombier d'Urgence à Bruxelles",
+    slug: "/blog/rapport-assurance-degat-eaux-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez si un plombier d'urgence peut rédiger votre rapport d'assurance après un dégât des eaux à Bruxelles et comment vous faire rembourser rapidement.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment obtenir un rapport de recherche de fuite pour l'assurance ?",
+    slug: "/blog/rapport-recherche-fuite-assurance-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'assurance belge exige un Rapport de Recherche de Fuite (RRF) pour rembourser les dégâts. Découvrez comment obtenir ce précieux document technique après un sinistre.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Une colonne de douche bouillonne brutalement de fond en comble ?",
+    slug: "/blog/reconnaitre-vraie-urgence-debouchage-plomberie",
+    tag: "💡 Guide Conseil",
+    excerpt: "Évier lent ou inondation imminente ? Apprenez à évaluer le degré de gravité d'un bouchon sanitaire pour éviter les frais nocturnes inutiles ou sauver votre maison.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier d'urgence à Bruxelles : votre assurance vous rembourse-t-elle ?",
+    slug: "/blog/remboursement-assurance-plombier-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "Fuite, dégât des eaux, canalisation bouchée en urgence : découvrez quelles interventions de plomberie sont remboursées par l'assurance habitation en Belgique.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Remplacer sa chaudière gaz à Bruxelles : coûts & Primes Renolution",
+    slug: "/blog/remplacer-chaudiere-gaz-bruxelles-primes-renolution",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'État bruxellois soutient le changement de chaudières vétustes via les primes Renolution 2026. Découvrez si le gaz est toujours autorisé et à quel prix remplacer votre chauffage.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment réparer une petite fuite de robinet soi-même ?",
+    slug: "/blog/reparer-petite-fuite-robinet-soi-meme",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau goutte sans arrêt dans la salle de bain ou la cuisine ? Apprenez comment démonter le robinet et changer le joint ou la cartouche facilement avant d'appeler le plombier.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Comment savoir si une fuite vient du chauffage ou de l'eau sanitaire ?",
+    slug: "/blog/savoir-fuite-chauffage-ou-eau-sanitaire",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau s'infiltre dans votre mur mais vous ne savez pas d'où elle vient ? Apprenez à différencier une fuite de chauffage central d'une fuite d'eau sanitaire.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Fuite d'Eau à Bruxelles : Réseau Public ou Installation Privée ?",
+    slug: "/blog/savoir-fuite-installation-privee-ou-reseau-public-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "L'eau sort de la chaussée ou d'avant votre compteur ? Découvrez les responsabilités entre VIVAQUA et le propriétaire pour réparer et payer la fuite.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Signes Canalisation Bouchée : 5 Alertes à Ne Pas Ignorer",
+    slug: "/blog/signes-canalisation-bouchee",
+    tag: "💡 Guide Conseil",
+    excerpt: "N'attendez pas l'inondation ! Apprenez à reconnaître les 5 signes d'alerte d'une canalisation qui se bouche (odeurs, eau lente, glouglou) pour agir à temps.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Les 7 Signes que Votre Chauffe-Eau va Lâcher — Guide 2025",
+    slug: "/blog/signes-chauffe-eau-panne",
+    tag: "💡 Guide Conseil",
+    excerpt: "Votre chauffe-eau montre des signes de faiblesse ? Découvrez les 7 signaux d'alarme avant la panne. Prix réparation et remplacement chauffe-eau Bruxelles 2025.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Vous repérez un glouglou menaçant dans vos tuyaux ?",
+    slug: "/blog/signes-precurseurs-canalisation-bouchee-avant-urgence",
+    tag: "💡 Guide Conseil",
+    excerpt: "Évitez l'astronomical inondation fécal! Comment reconnaître un évier, siphon, ou WC bruxellois en train de s'encrasser. Détectez les glougloutements et refoulements à temps.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Quels signes pour appeler un plombier en urgence ?",
+    slug: "/blog/signes-urgence-plomberie",
+    tag: "💡 Guide Conseil",
+    excerpt: "Découvrez les 5 signes qui prouvent que vous devez appeler un plombier en urgence à Bruxelles immédiatement pour éviter de graves dégâts à votre habitation.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Plombier 24h/24 Bruxelles : Suppléments nuit, week-end, fériés",
+    slug: "/blog/supplements-nuit-weekend-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Comprendre les suppléments tarifaires d'un plombier de garde à Bruxelles 24h/24. Pourcentages, forfaits fixes et pièges à éviter lors du dépannage.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Prix pour Déboucher Canalisation & Chemisage Canalisation Prix (2025)",
+    slug: "/blog/tarif-debouchage",
+    tag: "💡 Guide Conseil",
+    excerpt: "Quel est le vrai prix pour déboucher canalisation ou d'un WC en Belgique en 2025 ? Découvrez le chemisage canalisation prix, les forfaits furet, et l'hydrocurage.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Tarif et Prix Plombier Belgique & Bruxelles (2025) : Le Guide",
+    slug: "/blog/tarif-plombier",
+    tag: "💡 Guide Conseil",
+    excerpt: "Quel est le prix d'un plombier en Belgique et à Bruxelles en 2025 ? Tarif horaire, frais de déplacement, suppléments d'urgence, et tableau des prix moyens.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "En Combien de Temps Intervient un Déboucheur à Bruxelles ?",
+    slug: "/blog/temps-intervention-deboucheur-bruxelles",
+    tag: "💡 Guide Conseil",
+    excerpt: "Urgence plomberie : découvrez les délais réels d'intervention d'un déboucheur à Bruxelles selon la commune, l'heure et l'état du trafic routier.",
+    date: "Mars 2025",
+    read: "5 min"
+  },
+  {
+    title: "Toilette Boucher & WC Bouché : Que faire soi-même ?",
+    slug: "/blog/wc-bouche-que-faire-soi-meme",
+    tag: "💡 Guide Conseil",
+    excerpt: "Toilette bouchée ? Avant de payer un plombier en urgence, essayez ces 5 méthodes simples et sûres pour déboucher vous-même vos WC sans produit chimique.",
+    date: "Mars 2025",
+    read: "5 min"
   },
 ];
 ---
