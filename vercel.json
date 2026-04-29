@@ -38,32 +38,32 @@
         },
         {
             "source": "/depannage-plomberie(.*)",
-            "destination": "/services/",
+            "destination": "/service/urgence-plomberie/",
             "permanent": true
         },
         {
             "source": "/installation-chaudiere-gaz(.*)",
-            "destination": "/services/",
+            "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
         {
             "source": "/plombier-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
             "source": "/debouchage-canalisation(.*)",
-            "destination": "/services/",
+            "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
         {
             "source": "/plombier-intervention-rapide-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
             "source": "/plombier-a-molenbeek-saint-jean(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
@@ -88,12 +88,12 @@
         },
         {
             "source": "/plombier-a-evere(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
             "source": "/plombier-a-schaerbeek(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
@@ -108,17 +108,17 @@
         },
         {
             "source": "/fuite-deau-urgence-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/service/recherche-fuite/",
             "permanent": true
         },
         {
             "source": "/reparation-chaudiere-bruxelles(.*)",
-            "destination": "/services/",
+            "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
         {
             "source": "/plombier-urgence-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
@@ -128,17 +128,17 @@
         },
         {
             "source": "/recherche-de-fuite(.*)",
-            "destination": "/services/",
+            "destination": "/service/recherche-fuite/",
             "permanent": true
         },
         {
             "source": "/reparation-fuite-eau-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/service/recherche-fuite/",
             "permanent": true
         },
         {
             "source": "/plombier-a-etterbeek(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
@@ -178,17 +178,17 @@
         },
         {
             "source": "/plombier-chauffagiste-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
             "source": "/plombier-bruxelles-pas-cher(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
             "source": "/plombier-a-bruxelles(.*)",
-            "destination": "/",
+            "destination": "/urgence/bruxelles/",
             "permanent": true
         },
         {
