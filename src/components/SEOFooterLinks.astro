@@ -1,0 +1,110 @@
+---
+import { provinces, getAllCommunes } from '../data/communes';
+import { servicePages } from '../data/service-details';
+import { longTailFaqs } from '../data/long-tail-faqs';
+
+const allCommunes = getAllCommunes();
+---
+
+<div class="seo-footer-links">
+  <div class="container">
+    <h3 class="seo-footer-links__title">Réseau d'intervention et d'expertise — Plombier Urgence Belgique</h3>
+    
+    <div class="seo-footer-links__section">
+      <h4 class="seo-footer-links__subtitle">Nos Services de Plomberie</h4>
+      <div class="seo-footer-links__grid">
+        {servicePages.map(service => (
+          <a href={`/service/${service.slug}/`} class="seo-footer-links__item">
+            {service.title}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="seo-footer-links__section">
+      <h4 class="seo-footer-links__subtitle">Interventions par Province</h4>
+      <div class="seo-footer-links__grid">
+        {provinces.map(province => (
+          <a href={`/zones/${province.slug}/`} class="seo-footer-links__item seo-footer-links__item--bold">
+            Plombier {province.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="seo-footer-links__section">
+      <h4 class="seo-footer-links__subtitle">Toutes nos communes d'intervention</h4>
+      <div class="seo-footer-links__grid seo-footer-links__grid--dense">
+        {allCommunes.map(c => (
+          <a href={`/zones/${c.provinceSlug}/${c.slug}/`} class="seo-footer-links__item">
+            Plombier {c.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="seo-footer-links__section">
+      <h4 class="seo-footer-links__subtitle">Questions fréquentes — Plomberie Belgique</h4>
+      <div class="seo-footer-links__grid">
+        {longTailFaqs.map(faq => (
+          <a href={`/faq/${faq.slug}/`} class="seo-footer-links__item">
+            {faq.question}
+          </a>
+        ))}
+        <a href="/faq/" class="seo-footer-links__item seo-footer-links__item--bold">
+          Toutes les FAQ →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .seo-footer-links {
+    background: var(--color-bg-alt);
+    padding: var(--space-2xl) 0;
+    border-top: 1px solid var(--color-border);
+  }
+  .seo-footer-links__title {
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text);
+    text-align: center;
+  }
+  .seo-footer-links__section {
+    margin-bottom: var(--space-xl);
+  }
+  .seo-footer-links__subtitle {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+  }
+  .seo-footer-links__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem 1rem;
+  }
+  .seo-footer-links__grid--dense {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .seo-footer-links__item {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .seo-footer-links__item:hover {
+    color: var(--color-accent);
+  }
+  .seo-footer-links__item--bold {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+</style>

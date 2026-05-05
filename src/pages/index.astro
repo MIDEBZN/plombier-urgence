@@ -93,42 +93,54 @@ const faqs = [
       <p class="section-subtitle">Votre plombier en Belgique pour tous vos problèmes de plomberie. Interventions rapides et efficaces partout dans le pays.</p>
     </div>
     <div class="container grid grid-3">
-      <ServiceCard
-        icon="🚿"
-        title="Débouchage Canalisation"
-        description="WC, évier, douche ou baignoire bouchés ? Nous intervenons avec du matériel haute pression pour un débouchage immédiat."
-        image="/images/service-debouchage.webp"
-      />
-      <ServiceCard
-        icon="🔍"
-        title="Recherche de Fuite"
-        description="Détection précise de fuites d'eau sans casse grâce à nos caméras thermiques et acoustiques. Réparation rapide garantie."
-        image="/images/service-fuite.webp"
-      />
-      <ServiceCard
-        icon="🔥"
-        title="Dépannage Chaudière"
-        description="Votre chaudière est en panne ? Plus d'eau chaude ? Nos chauffagistes agréés interviennent sur toutes les marques."
-        image="/images/service-chaudiere.webp"
-      />
-      <ServiceCard
-        icon="🔧"
-        title="Réparation Robinetterie"
-        description="Remplacement de robinets, mitigeurs, chasse d'eau qui coule. Installation de nouveaux sanitaires."
-        image="/images/service-robinetterie.webp"
-      />
-      <ServiceCard
-        icon="🛁"
-        title="Rénovation Salle de Bain"
-        description="Projet de rénovation ? Nous installons douches italiennes, baignoires et meubles vasques modernes."
-        image="/images/service-renovation.webp"
-      />
-      <ServiceCard
-        icon="🚨"
-        title="Urgence Plomberie"
-        description="Dépannage plomberie express 24/7 : fuite d'eau, canalisation bouchée, panne de chaudière ou dégât des eaux. Intervention en 30 minutes."
-        image="/images/hero-bg.webp"
-      />
+      <a href="/service/debouchage-canalisation/" class="service-link">
+        <ServiceCard
+          icon="🚿"
+          title="Débouchage Canalisation"
+          description="WC, évier, douche ou baignoire bouchés ? Nous intervenons avec du matériel haute pression pour un débouchage immédiat. Dès 80€."
+          image="/images/service-debouchage.webp"
+        />
+      </a>
+      <a href="/service/recherche-fuite/" class="service-link">
+        <ServiceCard
+          icon="🔍"
+          title="Recherche de Fuite"
+          description="Détection précise de fuites d'eau sans casse grâce à nos caméras thermiques et acoustiques. Réparation rapide garantie. Dès 95€."
+          image="/images/service-fuite.webp"
+        />
+      </a>
+      <a href="/service/depannage-chaudiere/" class="service-link">
+        <ServiceCard
+          icon="🔥"
+          title="Dépannage Chaudière"
+          description="Votre chaudière est en panne ? Plus d'eau chaude ? Nos chauffagistes agréés interviennent sur toutes les marques. Dès 100€."
+          image="/images/service-chaudiere.webp"
+        />
+      </a>
+      <a href="/service/reparation-robinetterie/" class="service-link">
+        <ServiceCard
+          icon="🔧"
+          title="Réparation Robinetterie"
+          description="Remplacement de robinets, mitigeurs, chasse d'eau qui coule. Installation de nouveaux sanitaires. Dès 60€."
+          image="/images/service-robinetterie.webp"
+        />
+      </a>
+      <a href="/service/renovation-salle-de-bain/" class="service-link">
+        <ServiceCard
+          icon="🛁"
+          title="Rénovation Salle de Bain"
+          description="Projet de rénovation ? Nous installons douches italiennes, baignoires et meubles vasques modernes. Dès 5 000€."
+          image="/images/service-renovation.webp"
+        />
+      </a>
+      <a href="/service/urgence-plomberie/" class="service-link">
+        <ServiceCard
+          icon="🚨"
+          title="Urgence Plomberie"
+          description="Dépannage plomberie express 24/7 : fuite d'eau, canalisation bouchée, panne de chaudière ou dégât des eaux. Intervention en 30 minutes. Dès 95€."
+          image="/images/hero-bg.webp"
+        />
+      </a>
     </div>
   </section>
 
@@ -219,18 +231,24 @@ const faqs = [
     </div>
     <div class="container">
       <div class="zones-grid">
-        <div class="zone-chip">Bruxelles</div>
-        <div class="zone-chip">Waterloo</div>
-        <div class="zone-chip">Namur</div>
-        <div class="zone-chip">Liège</div>
-        <div class="zone-chip">Charleroi</div>
-        <div class="zone-chip">Mons</div>
-        <div class="zone-chip">Nivelles</div>
-        <div class="zone-chip">Wavre</div>
-        <div class="zone-chip">Ottignies</div>
-        <div class="zone-chip">Uccle</div>
-        <div class="zone-chip">Ixelles</div>
-        <div class="zone-chip">Schaerbeek</div>
+        <a href="/urgence/bruxelles/" class="zone-chip">Plombier Bruxelles</a>
+        <a href="/zones/brabant-wallon/waterloo/" class="zone-chip">Plombier Waterloo</a>
+        <a href="/urgence/namur/" class="zone-chip">Plombier Namur</a>
+        <a href="/urgence/liege/" class="zone-chip">Plombier Liège</a>
+        <a href="/urgence/charleroi/" class="zone-chip">Plombier Charleroi</a>
+        <a href="/zones/hainaut/mons/" class="zone-chip">Plombier Mons</a>
+        <a href="/zones/brabant-wallon/nivelles/" class="zone-chip">Plombier Nivelles</a>
+        <a href="/urgence/wavre/" class="zone-chip">Plombier Wavre</a>
+        <a href="/zones/brabant-wallon/ottignies-louvain-la-neuve/" class="zone-chip">Plombier Ottignies</a>
+        <a href="/zones/bruxelles-capitale/uccle/" class="zone-chip">Plombier Uccle</a>
+        <a href="/zones/bruxelles-capitale/ixelles/" class="zone-chip">Plombier Ixelles</a>
+        <a href="/zones/bruxelles-capitale/schaerbeek/" class="zone-chip">Plombier Schaerbeek</a>
+        <a href="/zones/bruxelles-capitale/" class="zone-chip">Bruxelles-Capitale</a>
+        <a href="/zones/brabant-wallon/" class="zone-chip">Brabant Wallon</a>
+        <a href="/zones/province-de-liege/" class="zone-chip">Province de Liège</a>
+        <a href="/zones/province-de-namur/" class="zone-chip">Province de Namur</a>
+        <a href="/zones/hainaut/" class="zone-chip">Hainaut</a>
+        <a href="/zones/brabant-flamand/" class="zone-chip">Brabant Flamand</a>
       </div>
       <div style="text-align: center; margin-top: var(--space-xl);">
         <a href="/zones/" class="btn btn-outline">Voir toutes les zones →</a>
@@ -495,12 +513,19 @@ const faqs = [
     font-weight: 500;
     color: var(--color-text-muted);
     transition: all var(--transition-base);
+    text-decoration: none;
   }
 
   .zone-chip:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
     background: var(--color-accent-glow);
+  }
+
+  .service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }
 
   @media (max-width: 768px) {
