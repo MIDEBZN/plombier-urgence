@@ -159,6 +159,13 @@ import CTABanner from '../components/CTABanner.astro';
       linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%),
       url('/images/hero-bg.webp') center/cover no-repeat;
     pointer-events: none;
+    z-index: 0;
+  }
+
+  .services-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
   }
 
   .services-hero__title {
