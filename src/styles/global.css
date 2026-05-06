@@ -290,13 +290,15 @@ button {
 
 @media (max-width: 768px) {
   :root {
+    --font-size-6xl: 2.5rem;
     --font-size-5xl: 2.25rem;
     --font-size-4xl: 1.875rem;
     --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
   }
 
   .section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-2xl) 0;
   }
 
   .grid-2,

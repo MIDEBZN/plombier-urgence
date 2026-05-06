@@ -291,11 +291,29 @@ import CTABanner from '../components/CTABanner.astro';
     }
     
     .service-detail__image-wrap {
-      min-height: 250px;
+      min-height: 200px;
+    }
+
+    .service-detail__content {
+      padding: var(--space-lg);
+    }
+    
+    .service-detail__title {
+      font-size: var(--font-size-xl);
     }
 
     .service-detail__features {
       grid-template-columns: 1fr;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .services-hero {
+      padding: var(--space-2xl) 0 var(--space-xl);
+    }
+    
+    .services-hero__title {
+      font-size: var(--font-size-3xl);
     }
   }
 </style>
