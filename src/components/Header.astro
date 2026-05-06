@@ -142,6 +142,8 @@ const currentPath = Astro.url.pathname;
     align-items: center;
     justify-content: space-between;
     height: 72px;
+    position: relative;
+    z-index: 100;
   }
 
   .header__logo {
@@ -280,7 +282,8 @@ const currentPath = Astro.url.pathname;
       gap: var(--space-lg);
       transform: translateX(100%);
       transition: transform var(--transition-base);
-      z-index: -1;
+      z-index: 90;
+      overflow-y: auto;
     }
 
     .header__nav.open {
