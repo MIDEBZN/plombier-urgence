@@ -30,6 +30,15 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
         <span class="trust-bar__label">Avis Google (500+)</span>
       </div>
     </div>
+    <div class="trust-bar__regions">
+      <span>📍 1 240 interventions à Bruxelles</span>
+      <span class="trust-bar__sep">•</span>
+      <span>📍 850 à Liège</span>
+      <span class="trust-bar__sep">•</span>
+      <span>📍 620 à Namur</span>
+      <span class="trust-bar__sep">•</span>
+      <span>📍 1 430 en Brabant Wallon</span>
+    </div>
   </div>
 </section>
 
@@ -45,7 +54,7 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
       <div class="tbadge">
         <div class="tbadge__icon">📜</div>
         <h3 class="tbadge__title">Certifié & Agréé</h3>
-        <p class="tbadge__text">Chauffagistes agréés Cerga/Cedicol. Conformes aux normes belges et européennes.</p>
+        <p class="tbadge__text">Chauffagistes agréés Cerga/Cedicol (N° Cerga: 18-35649-C). Conformes aux normes belges et européennes.</p>
       </div>
       <div class="tbadge">
         <div class="tbadge__icon">🛡️</div>
@@ -127,13 +136,46 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
         </>
       )}
     </div>
-    <!-- Google Review Badge -->
-    <div class="review-badge">
-      <div class="review-badge__inner">
-        <span class="review-badge__stars">⭐⭐⭐⭐⭐</span>
-        <span class="review-badge__score">4.9/5</span>
-        <span class="review-badge__count">Basé sur 500+ avis Google vérifiés</span>
-        <a href="https://maps.app.goo.gl/i7W6nLrabKjKykHE9" target="_blank" rel="noopener noreferrer" class="review-badge__link">Voir tous les avis sur Google →</a>
+    
+    <!-- Before / After Photos -->
+    <div class="before-after-gallery">
+      <h3 class="before-after__title">Résultats de nos Interventions</h3>
+      <div class="before-after__grid">
+        <div class="before-after__item">
+          <img src="/images/before-after-bruxelles.webp" alt="Débouchage canalisation avant après à Bruxelles" width="400" height="300" loading="lazy" />
+          <div class="before-after__caption">Intervention Débouchage — <strong>Bruxelles</strong></div>
+        </div>
+        <div class="before-after__item">
+          <img src="/images/before-after-liege.webp" alt="Réparation fuite d'eau sous évier à Liège" width="400" height="300" loading="lazy" />
+          <div class="before-after__caption">Réparation Fuite — <strong>Liège</strong></div>
+        </div>
+        <div class="before-after__item">
+          <img src="/images/before-after-namur.webp" alt="Remplacement chaudière murale à Namur" width="400" height="300" loading="lazy" />
+          <div class="before-after__caption">Dépannage Chaudière — <strong>Namur</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Badges -->
+    <div class="review-badges-container">
+      <!-- Google Review Badge -->
+      <div class="review-badge">
+        <div class="review-badge__inner">
+          <span class="review-badge__stars">⭐⭐⭐⭐⭐</span>
+          <span class="review-badge__score">4.9/5</span>
+          <span class="review-badge__count">Basé sur 500+ avis Google vérifiés</span>
+          <a href="https://maps.app.goo.gl/i7W6nLrabKjKykHE9" target="_blank" rel="noopener noreferrer" class="review-badge__link">Voir tous les avis sur Google →</a>
+        </div>
+      </div>
+      
+      <!-- Trustpilot Review Badge -->
+      <div class="review-badge">
+        <div class="review-badge__inner">
+          <span class="review-badge__stars">⭐⭐⭐⭐⭐</span>
+          <span class="review-badge__score">4.8/5</span>
+          <span class="review-badge__count">Basé sur 120+ avis Trustpilot</span>
+          <a href="https://fr-be.trustpilot.com/review/plombierurgence.be" target="_blank" rel="noopener noreferrer" class="review-badge__link">Voir tous les avis sur Trustpilot →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -171,7 +213,17 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
   .trust-bar__item{display:flex;flex-direction:column;align-items:center;gap:4px}
   .trust-bar__num{font-size:var(--font-size-2xl);font-weight:900;color:#fff}
   .trust-bar__label{font-size:var(--font-size-xs);color:rgba(255,255,255,.8);font-weight:500}
-  .trust-bar__divider{width:1px;height:40px;background:rgba(255,255,255,.2)}
+  .trust-bar__regions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    font-size: var(--font-size-sm);
+    color: rgba(255,255,255,.9);
+    flex-wrap: wrap;
+    font-weight: 500;
+  }
+  .trust-bar__sep { color: rgba(255,255,255,.4); }
 
   /* Badges */
   .trust-badges{padding:var(--space-3xl) 0;background:var(--color-bg-alt)}
@@ -184,16 +236,24 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
   /* Reviews */
   .trust-reviews{padding:var(--space-3xl) 0}
   .reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-lg);margin-top:var(--space-xl)}
-  .review-card{padding:var(--space-xl);display:flex;flex-direction:column;gap:var(--space-md)}
+  .review-card{padding:var(--space-xl);display:flex;flex-direction:column;gap:var(--space-md);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg)}
   .review-card__stars{color:#f59e0b;font-size:1.1rem;letter-spacing:2px}
   .review-card__text{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.7;flex:1;font-style:italic}
   .review-card__author{display:flex;align-items:center;gap:var(--space-sm)}
   .review-card__avatar{width:36px;height:36px;border-radius:50%;background:var(--color-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:var(--font-size-xs)}
-  .review-card__author strong{font-size:var(--font-size-sm)}
+  .review-card__author strong{font-size:var(--font-size-sm);display:block;}
   .review-card__author span{display:block;font-size:var(--font-size-xs);color:var(--color-text-dim)}
 
-  .review-badge{text-align:center;margin-top:var(--space-2xl)}
-  .review-badge__inner{display:inline-flex;flex-direction:column;align-items:center;gap:var(--space-sm);padding:var(--space-xl) var(--space-2xl);background:var(--color-surface);border:2px solid var(--color-accent);border-radius:var(--radius-xl)}
+  .before-after-gallery { margin-top: var(--space-3xl); }
+  .before-after__title { text-align: center; font-size: var(--font-size-xl); margin-bottom: var(--space-xl); }
+  .before-after__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+  .before-after__item { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); }
+  .before-after__item img { width: 100%; height: auto; display: block; }
+  .before-after__caption { padding: var(--space-md); text-align: center; font-size: var(--font-size-sm); color: var(--color-text); }
+  
+  .review-badges-container { display: flex; justify-content: center; gap: var(--space-xl); margin-top: var(--space-2xl); flex-wrap: wrap; }
+  .review-badge{text-align:center;}
+  .review-badge__inner{display:inline-flex;flex-direction:column;align-items:center;gap:var(--space-sm);padding:var(--space-xl) var(--space-2xl);background:var(--color-surface);border:2px solid var(--color-accent);border-radius:var(--radius-xl); min-width: 300px;}
   .review-badge__stars{font-size:1.4rem;letter-spacing:-1px}
   .review-badge__score{font-size:var(--font-size-3xl);font-weight:900;color:var(--color-accent)}
   .review-badge__count{font-size:var(--font-size-sm);color:var(--color-text-muted)}
@@ -207,11 +267,13 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
   @media(max-width:1024px){
     .trust-badges__grid{grid-template-columns:repeat(2,1fr)}
     .reviews-grid{grid-template-columns:repeat(2,1fr)}
+    .before-after__grid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:768px){
     .trust-bar__grid{flex-wrap:wrap;gap:var(--space-lg)}
     .trust-bar__divider{display:none}
     .trust-badges__grid{grid-template-columns:1fr}
     .reviews-grid{grid-template-columns:1fr}
+    .before-after__grid{grid-template-columns:1fr}
   }
 </style>

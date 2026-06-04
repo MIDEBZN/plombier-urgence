@@ -36,7 +36,7 @@ const faqs = [
 ---
 
 <Layout 
-  title="Plombier Belgique — Urgence 24/7 & Tarifs Clairs | Plombier Urgence" 
+  title="Plombier Urgence Belgique 24/7 — Dès 60€" 
   description="Plombier Belgique 24h/24 : débouchage dès 60€, fuite dès 95€. Intervention 30 min. Prix fixes, sans surprise. ☎ 0465 68 51 58"
   faqs={faqs}
   preloadHero={true}
@@ -252,6 +252,30 @@ const faqs = [
       </div>
       <div style="text-align: center; margin-top: var(--space-xl);">
         <a href="/zones/" class="btn btn-outline">Voir toutes les zones →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inline FAQ Section -->
+  <section class="section faq-section" id="faq-inline">
+    <div class="container text-center">
+      <p class="section-label">Vos Questions, Nos Réponses</p>
+      <h2 class="section-title">Questions Fréquentes (FAQ)</h2>
+    </div>
+    <div class="container faq-container">
+      {faqs.slice(0, 5).map((faq, index) => (
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-summary">
+            {faq.q}
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-content">
+            <p>{faq.a}</p>
+          </div>
+        </details>
+      ))}
+      <div style="text-align: center; margin-top: var(--space-xl);">
+        <a href="/faq/" class="btn btn-outline">Voir toutes les questions →</a>
       </div>
     </div>
   </section>
@@ -526,6 +550,52 @@ const faqs = [
     text-decoration: none;
     color: inherit;
     display: block;
+  }
+
+  /* FAQ Inline */
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .faq-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  .faq-summary {
+    padding: var(--space-lg);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    transition: background var(--transition-fast);
+  }
+  .faq-summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-summary:hover {
+    background: var(--color-bg-alt);
+  }
+  .faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform var(--transition-fast);
+  }
+  details[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+  .faq-content {
+    padding: 0 var(--space-lg) var(--space-lg);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
   }
 
   @media (max-width: 768px) {

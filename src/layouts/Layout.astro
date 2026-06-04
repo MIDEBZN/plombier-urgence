@@ -56,7 +56,7 @@ const localBusinessSchema = {
   "image": "https://www.plombierurgence.be/images/og-default.jpg",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Bruxelles",
+    "streetAddress": "25 Boulevard de l'Abattoir",
     "addressLocality": "Bruxelles",
     "addressRegion": "Bruxelles-Capitale",
     "postalCode": "1000",
@@ -343,6 +343,14 @@ if (isBlog) {
       <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
       <span class="float-call__label">Appeler</span>
     </a>
+
+    <!-- GDPR Cookie Consent -->
+    <div id="cookie-banner" class="cookie-banner cookie-banner--hidden">
+      <div class="container cookie-banner__inner">
+        <p class="cookie-banner__text">Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre <a href="/politique-de-confidentialite/">politique de confidentialité</a>.</p>
+        <button id="accept-cookies" class="btn btn-primary btn-sm">Accepter</button>
+      </div>
+    </div>
   </body>
 </html>
 
@@ -451,6 +459,42 @@ if (isBlog) {
     .emergency-banner__text { font-size: 0.75rem; }
     .emergency-banner__inner { gap: 0.5rem; }
   }
+
+  /* Cookie Banner */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-md) 0;
+    z-index: 10000;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  }
+  .cookie-banner--hidden {
+    display: none;
+  }
+  .cookie-banner__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+  .cookie-banner__text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .cookie-banner__text a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .cookie-banner__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 </style>
 
 <script>
@@ -459,5 +503,16 @@ if (isBlog) {
   const closeBtn = document.getElementById('close-banner');
   closeBtn?.addEventListener('click', () => {
     banner?.classList.add('emergency-banner--hidden');
+  });
+
+  // Cookie banner
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptCookiesBtn = document.getElementById('accept-cookies');
+  if (!localStorage.getItem('cookiesAccepted')) {
+    cookieBanner?.classList.remove('cookie-banner--hidden');
+  }
+  acceptCookiesBtn?.addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieBanner?.classList.add('cookie-banner--hidden');
   });
 </script>
