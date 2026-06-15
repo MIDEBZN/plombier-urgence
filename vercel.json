@@ -347,7 +347,7 @@
             "permanent": true
         },
         {
-            "source": "/debouchage/?",
+            "source": "/debouchage(.*)",
             "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
