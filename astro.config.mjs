@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://plombierurgence.be',
+  site: 'https://www.plombierurgence.be',
   trailingSlash: 'always',
   integrations: [sitemap()]
 });

@@ -205,6 +205,216 @@
             "source": "/cdn-cgi/l/email-protection(.*)",
             "destination": "/",
             "permanent": true
+        },
+        {
+            "source": "/remplacement-chauffe-eau-bruxelles(.*)",
+            "destination": "/service/depannage-chaudiere/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-wc-bruxelles-2(.*)",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-wc-bruxelles(.*)",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-woluwe-saint-lambert(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-liege(.*)",
+            "destination": "/urgence/liege/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-charleroi(.*)",
+            "destination": "/location/charleroi/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-namur(.*)",
+            "destination": "/location/namur/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-anderlecht(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-koekelberg(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-uccle(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-ganshoren(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-ixelles(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-auderghem(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-jette(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-forest(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-watermael-boitsfort(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-saint-josse-ten-noode(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-saint-gilles(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-woluwe-saint-pierre(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/chauffagiste-plombier-bruxelles(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/devis-plombier-bruxelles(.*)",
+            "destination": "/devis/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-sur-bruxelles(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/entretien-chaudiere-bruxelles(.*)",
+            "destination": "/service/depannage-chaudiere/",
+            "permanent": true
+        },
+        {
+            "source": "/politique-de-confidentialite(.*)",
+            "destination": "/politique-de-confidentialite/",
+            "permanent": true
+        },
+        {
+            "source": "/mentions-legales(.*)",
+            "destination": "/politique-de-confidentialite/",
+            "permanent": true
+        },
+        {
+            "source": "/a-propos-de-nous(.*)",
+            "destination": "/a-propos/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-24h-bruxelles(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-bruxelles-prix-tarif-wc(.*)",
+            "destination": "/tarifs/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage/?",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/articles(.*)",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/comments/feed(.*)",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-canalisation-bruxelles(.*)",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-bruxelles(.*)",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/urgence-plomberie(.*)",
+            "destination": "/service/urgence-plomberie/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-bxl(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plomberie-bruxelles(.*)",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/debouchage-urgence-bruxelles(.*)",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-mons(.*)",
+            "destination": "/location/mons/",
+            "permanent": true
+        },
+        {
+            "source": "/category/conseils(.*)",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/(.*)/feed/(.*)",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/feed/(.*)",
+            "destination": "/blog/",
+            "permanent": true
+        },
+        {
+            "source": "/wp-admin(.*)",
+            "destination": "/",
+            "permanent": true
         }
     ]
 }
