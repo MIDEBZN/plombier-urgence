@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Plan électrique : Réaliser le schéma unifilaire (RGIE)" 
+  description="Le schéma unifilaire et le plan de position sont obligatoires pour le contrôle électrique en Belgique. Découvrez comment les concevoir et éviter les refus." 
+  faqs={[
+    {
+      q: "C'est quoi un schéma unifilaire et un plan de position ?",
+      a: "Le schéma unifilaire est un dessin logique (avec des lettres et symboles) qui explique la structure de votre tableau électrique. Le plan de position est le plan architectural de la maison sur lequel sont dessinées toutes les prises, lumières et interrupteurs."
+    },
+    {
+      q: "Est-ce que je peux dessiner mes schémas électriques à la main ?",
+      a: "La législation n'interdit pas formellement les dessins à la main s'ils sont parfaits. Cependant, les inspecteurs sont très stricts sur la norme des symboles. Un schéma dessiné via un logiciel (comme Visio ou AutoCAD) est largement recommandé pour éviter un refus."
+    },
+    {
+      q: "Que se passe-t-il s'il me manque les plans lors du contrôle RGIE ?",
+      a: "C'est un refus immédiat. Même si votre installation physique est flambant neuve et parfaite, l'organisme de contrôle (BTV, Vinçotte) exigera toujours trois exemplaires des schémas avant même de commencer son inspection."
+    },
+    {
+      q: "Dois-je refaire les plans si j'ajoute simplement une prise ?",
+      a: "Oui ! Le RGIE impose que le schéma soit le reflet exact et actualisé de votre installation. Si vous tirez une nouvelle ligne pour ajouter une prise dans le garage, vous devez l'ajouter sur votre plan de position et votre schéma unifilaire."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Schémas électriques RGIE</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">📝 Documents & Plans</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Plan électrique de votre maison : Pourquoi le schéma unifilaire est crucial et comment le concevoir ?</h1>
+
+      <p class="blog-intro">C'est la bête noire de tous les propriétaires qui rénovent leur logement à Bruxelles. Vous avez passé des week-ends entiers à remplacer des câbles et à installer de belles prises, le courant fonctionne parfaitement... Mais lors du passage de l'inspecteur, c'est la douche froide : votre installation est refusée. Le motif ? "Absence ou non-conformité des schémas électriques". En Belgique, la paperasse électrique (le <strong>schéma unifilaire</strong> et le <strong>plan de position</strong>) est tout aussi importante que les fils eux-mêmes. Découvrez pourquoi le RGIE est si strict sur ce point et comment vous mettre en règle.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#difference-schemas">Schéma unifilaire vs Plan de position : Quelle différence ?</a></li>
+          <li><a href="#pourquoi-obligatoire">Pourquoi ces documents sont-ils obligatoires pour le RGIE ?</a></li>
+          <li><a href="#les-regles">Les règles d'or de la symbolique électrique</a></li>
+          <li><a href="#solution-pro">Comment un électricien crée vos plans (Mise en conformité)</a></li>
+        </ol>
+      </div>
+
+      <h2 id="difference-schemas">1. Schéma unifilaire vs Plan de position : Quelle différence ?</h2>
+      
+      <p>Pour être en règle avec le Règlement Général sur les Installations Électriques, vous devez toujours fournir ces deux documents complémentaires (en trois exemplaires !) :</p>
+
+      <h3>Le Plan de Position</h3>
+      <p>C'est le plan de votre maison (la vue de haut avec les murs et les portes). Sur ce plan, vous allez dessiner, à l'aide de symboles normés, l'emplacement exact de chaque prise de courant, chaque interrupteur et chaque point lumineux. Vous attribuez une lettre à chaque circuit (ex: le circuit "A" pour l'éclairage du salon).</p>
+
+      <h3>Le Schéma Unifilaire</h3>
+      <p>C'est un schéma logique sous forme d'arborescence (souvent abstrait, il ne ressemble pas à la maison). Il représente le contenu de votre <strong>tableau électrique</strong>. Il commence par le compteur, descend vers le différentiel principal, puis se divise en "branches" (Les disjoncteurs A, B, C...). Pour chaque branche, il indique la section du fil (ex: 3G2,5 mm²) et le type d'appareils branchés au bout de cette ligne.</p>
+
+      <h2 id="pourquoi-obligatoire">2. Pourquoi ces documents sont-ils obligatoires pour le RGIE ?</h2>
+      
+      <p>L'inspecteur n'a pas la capacité de voir à travers les murs de votre appartement à Ixelles ou Anderlecht. Les schémas sont la seule carte géographique de votre réseau électrique.</p>
+
+      <ul>
+        <li><strong>Contrôle des surcharges :</strong> En lisant le schéma unifilaire, l'inspecteur vérifie d'un coup d'œil si vous avez bien protégé un fil fin (1,5 mm²) par un petit disjoncteur (16A).</li>
+        <li><strong>Sécurité des futurs intervenants :</strong> Si un électricien doit intervenir chez vous dans 10 ans, le plan lui permettra de savoir exactement quel disjoncteur couper pour travailler sur la prise de la cuisine, sans devoir deviner ni prendre un coup de jus.</li>
+        <li><strong>Responsabilité en cas d'incendie :</strong> En cas de sinistre, les experts des assurances vérifieront si l'installation physique correspondait bien au plan validé par l'organisme de contrôle.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>📄 Vous avez perdu vos schémas électriques ?</h3>
+        <p>Pas de panique ! L'inspecteur vous a refusé pour manque de plans ? Nos électriciens viennent chez vous pour faire le repérage complet et dessiner vos schémas officiels par ordinateur.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander la création de mes plans</a>
+        </div>
+      </div>
+
+      <h2 id="les-regles">3. Les règles d'or de la symbolique électrique</h2>
+      
+      <p>C'est ici que les amateurs se font systématiquement piéger. Dessiner une petite ampoule pour représenter la lumière ne passera jamais au contrôle. Le RGIE impose une bibliothèque de symboles très précise :</p>
+
+      <ul>
+        <li>Une croix dans un cercle pour un point lumineux (lampe).</li>
+        <li>Un demi-cercle avec une barre au-dessus pour une prise avec terre (et le demi-cercle noirci si elle n'a pas de terre).</li>
+        <li>Un petit cercle avec une patte pour un interrupteur simple (deux pattes pour un interrupteur bipolaire).</li>
+      </ul>
+
+      <p>De plus, chaque élément sur le plan de position doit porter un nom de code (ex: "B3" signifie : la 3ème prise du circuit protégé par le disjoncteur B du tableau électrique).</p>
+
+      <h2 id="solution-pro">4. Comment un électricien crée vos plans (Mise en conformité)</h2>
+      
+      <p>Si vous achetez une vieille maison bruxelloise, il y a de fortes chances pour que les plans originaux aient été perdus depuis des décennies. Pour obtenir le <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">certificat de conformité</a>, il faut tout redessiner. C'est le travail minutieux (et souvent long) de l'électricien :</p>
+
+      <ol>
+        <li><strong>Le repérage physique :</strong> L'électricien coupe tous les disjoncteurs. Ensuite, il rallume le disjoncteur "A" et fait le tour de la maison pour identifier toutes les prises et lampes qui fonctionnent. Il note tout. Et il recommence pour chaque disjoncteur (B, C, D...).</li>
+        <li><strong>Le croquis sur plan :</strong> Il reporte chaque élément sur le plan architectural de votre maison.</li>
+        <li><strong>Le dessin assisté par ordinateur (DAO) :</strong> Fini le bic et la règle. Nous encodons les données dans des logiciels professionnels qui génèrent des schémas unifilaires vectoriels parfaits, intégrant d'office la symbolique RGIE officielle.</li>
+      </ol>
+
+      <p>Avoir des plans clairs et lisibles est le gage d'un professionnalisme qui rassure l'inspecteur dès son arrivée. Ne laissez pas un blocage administratif freiner votre rénovation ou la vente de votre bien immobilier à Bruxelles !</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Réalisation de Schémas Unifilaires" subtitle="Relevé sur place, dessin sur logiciel pro et fourniture des plans officiels pour réussir votre contrôle RGIE à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

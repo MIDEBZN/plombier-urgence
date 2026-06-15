@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Installation Plaque à Induction : Raccordement et Câblage" 
+  description="Peut-on brancher une plaque à induction sur une prise normale ? Découvrez les règles de câblage (monophasé/triphasé) et les normes de sécurité à Bruxelles." 
+  faqs={[
+    {
+      q: "Est-ce que je peux brancher ma plaque à induction sur une prise classique ?",
+      a: "Non ! Une prise classique (16 Ampères) est conçue pour supporter maximum 3680 Watts. Une plaque à induction à pleine puissance consomme souvent entre 7000 et 11000 Watts. La brancher sur une prise normale fera fondre les fils et déclenchera un incendie."
+    },
+    {
+      q: "De quel câble ai-je besoin pour une plaque de cuisson ?",
+      a: "Si vous êtes en monophasé (230V), le RGIE impose un circuit dédié avec des fils de cuivre d'une section minimale de 6 mm² (câble 3G6), protégé par un disjoncteur de 32 Ampères ou 40 Ampères."
+    },
+    {
+      q: "Que faire si ma maison n'a pas de câble de 6 mm² dans la cuisine ?",
+      a: "Si votre installation est ancienne, l'électricien devra tirer une nouvelle ligne électrique (un nouveau câble) directement depuis le tableau électrique général jusqu'à la cuisine, spécifiquement pour la plaque."
+    },
+    {
+      q: "Monophasé ou Triphasé pour l'induction, ça change quoi ?",
+      a: "Si vous êtes en triphasé (400V), la puissance est répartie sur plusieurs fils. L'électricien pourra alors utiliser un câble de section plus fine (ex: 5G2,5 mm² avec un disjoncteur tétrapolaire 20A), ce qui est souvent plus facile à faire passer dans les gaines."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Plaque à induction</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🍳 Électroménager & Câblage</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 5 min de lecture</span>
+      </div>
+
+      <h1>Installation d'une plaque de cuisson à induction : Câblage, raccordement et sécurité</h1>
+
+      <p class="blog-intro">Vous venez de dire adieu à votre vieille cuisinière au gaz pour passer à la modernité : la <strong>plaque à induction</strong>. Ultra-rapide, sécurisée et facile à nettoyer, l'induction est la star des cuisines modernes à Bruxelles. Cependant, au moment du déballage, surprise : la plaque n'a pas de prise mâle classique au bout de son câble, mais simplement des fils nus ! L'installation d'une table à induction n'est pas "Plug & Play". C'est l'appareil le plus puissant de votre maison. Découvrez pourquoi son raccordement exige une ligne électrique spécifique et comment un électricien procède.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#puissance-danger">La puissance de l'induction : Pourquoi la prise classique est interdite</a></li>
+          <li><a href="#normes-rgie">Que dit le RGIE ? (Section de câble et Disjoncteur)</a></li>
+          <li><a href="#mono-triphase">Branchement Monophasé (230V) vs Triphasé (400V)</a></li>
+          <li><a href="#installation-pro">Comment se déroule l'intervention de l'électricien ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="puissance-danger">1. La puissance de l'induction : Pourquoi la prise classique est interdite</h2>
+      
+      <p>Pour comprendre le problème, il faut faire un peu de mathématiques électriques. Une prise de courant classique dans une cuisine belge est protégée par un disjoncteur de 16 ou 20 Ampères (fils de 2,5 mm²). Elle peut délivrer au maximum <strong>4600 Watts</strong> de puissance.</p>
+
+      <p>Une plaque à induction standard avec 4 zones de cuisson allumées avec la fonction "Booster" (pour faire bouillir l'eau en 1 minute) va réclamer entre <strong>7200 Watts et 11 000 Watts</strong> !</p>
+
+      <p>Si vous bricolez une prise classique pour y brancher votre plaque, vous allez tirer deux fois plus d'énergie que ce que le fil peut supporter. Résultat garanti : les fils dans le mur vont chauffer à blanc, l'isolant va fondre, et c'est l'<strong>incendie assuré</strong> derrière les meubles de votre cuisine équipée.</p>
+
+      <h2 id="normes-rgie">2. Que dit le RGIE ? (Section de câble et Disjoncteur)</h2>
+      
+      <p>Le Règlement Général des Installations Électriques est extrêmement clair sur le raccordement des taques de cuisson (fours et inductions). L'appareil doit posséder un <strong>circuit électrique exclusif</strong> :</p>
+
+      <ul>
+        <li><strong>Ligne dédiée :</strong> Rien d'autre ne peut être branché sur ce circuit (ni le lave-vaisselle, ni le frigo).</li>
+        <li><strong>Câble renforcé :</strong> Pour un raccordement classique en monophasé, le RGIE impose un câble avec des fils de cuivre d'une section de <strong>6 mm² (câble 3G6)</strong>. C'est un câble très épais, presque aussi gros qu'un doigt.</li>
+        <li><strong>Protection adaptée :</strong> Ce câble énorme doit être protégé au tableau électrique par un disjoncteur spécifique de <strong>32 Ampères ou 40 Ampères</strong>.</li>
+        <li><strong>Connexion au mur :</strong> On n'utilise pas de fiche mâle/femelle. Le câble de la plaque est raccordé directement aux fils du mur à l'intérieur d'une "boîte de sortie de câble" à l'aide de dominos puissants ou de connecteurs Wago adaptés.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>🍳 Votre nouvelle cuisine attend sa plaque ?</h3>
+        <p>Ne prenez aucun risque d'incendie. Nos électriciens tirent la ligne dédiée de 6mm² et raccordent votre induction selon les normes RGIE.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander le Raccordement</a>
+        </div>
+      </div>
+
+      <h2 id="mono-triphase">3. Branchement Monophasé (230V) vs Triphasé (400V)</h2>
+      
+      <p>Au dos de votre nouvelle plaque à induction, vous verrez souvent un schéma complexe avec des pontages en cuivre (des petits cavaliers métalliques). C'est parce que les plaques modernes peuvent s'adapter à l'alimentation fournie par votre fournisseur Sibelga à Bruxelles :</p>
+
+      <h3>Le raccordement Monophasé (Le plus courant)</h3>
+      <p>Votre maison reçoit du 230V sur une seule phase. L'électricien rassemble les fils de la plaque avec le cavalier en cuivre et connecte le tout sur le fameux gros câble de 6 mm² avec un disjoncteur 32A.</p>
+
+      <h3>Le raccordement Triphasé ou Tétraphasé (Pour les gros modèles)</h3>
+      <p>Si vous avez du triphasé 400V, la puissance totale est divisée sur 3 fils de phase distincts. L'avantage ? Le courant est divisé, donc les fils chauffent moins. L'électricien retire les cavaliers de la plaque, et la raccorde souvent avec un câble plus fin (5G2,5 mm²) protégé par un disjoncteur tétrapolaire de 20A. <em>Attention : Une erreur de câblage en triphasé (brancher du 400V au lieu de 230V) fera exploser la carte électronique de la plaque instantanément !</em></p>
+
+      <h2 id="installation-pro">4. Comment se déroule l'intervention de l'électricien ?</h2>
+      
+      <p>Si vous rénovez votre cuisine, l'électricien interviendra en deux temps :</p>
+      
+      <ol>
+        <li><strong>Le tirage de ligne :</strong> Depuis votre tableau électrique (à la cave ou dans le hall), il va tirer le nouveau câble dédié (3G6 ou 5G2.5) jusqu'à l'emplacement futur de la plaque.</li>
+        <li><strong>L'adaptation du tableau :</strong> Il ajoutera le disjoncteur 32A au coffret. Il s'assurera également que votre compteur Sibelga est assez puissant pour supporter la plaque allumée en même temps que le reste de la maison (sinon, le compteur général sautera quand vous cuisinerez).</li>
+        <li><strong>Le raccordement final :</strong> Une fois le plan de travail de la cuisine posé, il connectera minutieusement les fils de la plaque en respectant les schémas de phase/neutre et serrera les connecteurs au couple recommandé pour éviter tout arc électrique.</li>
+      </ol>
+
+      <p>Mettre en service une plaque à induction demande une véritable expertise technique. Pour protéger votre investissement et votre famille, confiez toujours ce raccordement à un <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">électricien agréé</a>.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Raccordement de taque de cuisson" subtitle="Tirage de ligne 6mm², réglage monophasé/triphasé et mise en sécurité. Intervention rapide pour votre nouvelle cuisine à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

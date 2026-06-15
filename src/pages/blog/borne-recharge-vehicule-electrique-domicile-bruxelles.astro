@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Installation borne de recharge pour véhicule électrique à Bruxelles" 
+  description="Tout savoir sur l'installation d'une borne de recharge pour voiture électrique à domicile à Bruxelles. Démarches Sibelga, normes RGIE et prix de l'installation." 
+  faqs={[
+    {
+      q: "Puis-je charger ma voiture électrique sur une prise de courant normale ?",
+      a: "Techniquement oui, avec un câble de recharge lent. Cependant, c'est vivement déconseillé au quotidien. Une prise classique (16A) risque de surchauffer et de fondre si elle débite du courant maximum pendant 12 heures d'affilée. L'installation d'une vraie borne est beaucoup plus sécurisée."
+    },
+    {
+      q: "Dois-je demander l'autorisation à Sibelga pour installer une borne ?",
+      a: "Si la borne nécessite de faire passer votre compteur de monophasé (230V) à triphasé (400V) pour obtenir une charge rapide (11 kW ou 22 kW), vous devez introduire une demande officielle d'augmentation de puissance auprès de Sibelga."
+    },
+    {
+      q: "Quelles sont les normes du RGIE pour une borne de recharge ?",
+      a: "Le nouveau RGIE exige que la borne de recharge possède son propre circuit exclusif. Elle doit être protégée par un disjoncteur dédié et surtout par un interrupteur différentiel spécial (Type A avec détection 6mA DC, ou Type B) pour empêcher les fuites de courant continu mortelles."
+    },
+    {
+      q: "Combien coûte l'installation d'une borne de recharge à Bruxelles ?",
+      a: "L'installation complète (fourniture de la borne, câblage, protection différentielle type B et certification) coûte en moyenne entre 1200 € et 2500 €, selon la distance entre le tableau électrique et le parking, et la puissance de la borne."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Bornes de recharge électrique</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚗 Mobilité Électrique</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Bornes de recharge pour véhicules électriques à domicile : Votre guide complet à Bruxelles</h1>
+
+      <p class="blog-intro">La transition vers la voiture électrique s'accélère massivement en Belgique. Si charger sa Tesla ou sa Volkswagen ID.4 sur les bornes publiques bruxelloises est une solution de dépannage, la vraie liberté (et la véritable économie financière) se trouve à domicile. Recharger son véhicule la nuit, à bas coût, confortablement garé dans son garage à Uccle ou Woluwe, est le rêve de tout propriétaire. Mais attention, brancher une voiture n'est pas comme brancher un smartphone ! L'<strong>installation d'une borne de recharge</strong> nécessite une vraie mise aux normes électriques. Suivez notre guide complet pour faire les bons choix.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#prise-vs-borne">Prise classique vs Borne : Pourquoi faut-il investir ?</a></li>
+          <li><a href="#compteur-sibelga">Monophasé ou Triphasé ? La question du compteur Sibelga</a></li>
+          <li><a href="#normes-rgie">Le RGIE 2024 : Les protections différentielles obligatoires</a></li>
+          <li><a href="#etapes-installation">Prix et étapes d'installation par un électricien</a></li>
+        </ol>
+      </div>
+
+      <h2 id="prise-vs-borne">1. Prise classique vs Borne intelligente : Pourquoi faut-il investir ?</h2>
+      
+      <p>Certains propriétaires tentent de contourner l'achat de la borne en utilisant un câble adaptateur branché sur la prise classique de leur garage (le chargeur "Grand-Mère"). C'est une fausse bonne idée :</p>
+      
+      <ul>
+        <li><strong>Lenteur extrême :</strong> Une prise classique délivre au maximum 2 à 3 kW. Il faudra parfois plus de 24 heures pour recharger la batterie complète d'un gros SUV électrique.</li>
+        <li><strong>Danger d'incendie :</strong> Les prises domestiques ne sont pas conçues pour débiter 100% de leur puissance pendant 15 heures d'affilée. Les fils vont chauffer dans le mur, la prise va fondre, créant un arc électrique et un risque d'incendie majeur.</li>
+      </ul>
+      
+      <p>La <strong>borne de recharge murale (Wallbox)</strong> est conçue pour supporter ces charges industrielles en toute sécurité. De plus, elle offre des recharges intelligentes : elle peut s'activer uniquement pendant les heures creuses (la nuit), ou utiliser le surplus d'énergie de vos panneaux solaires !</p>
+
+      <h2 id="compteur-sibelga">2. Monophasé ou Triphasé ? La question du compteur Sibelga</h2>
+      
+      <p>La vitesse de votre recharge à la maison dépendra entièrement de la puissance de votre compteur électrique actuel (fourni par Sibelga à Bruxelles).</p>
+
+      <ul>
+        <li><strong>Le raccordement Monophasé (230V) :</strong> C'est le compteur standard de 90% des appartements et maisons bruxellois. Il vous permettra d'installer une borne de <strong>7,4 kW</strong>. C'est amplement suffisant pour récupérer environ 35 à 40 km d'autonomie par heure de charge (soit une nuit complète pour une charge à 100%).</li>
+        <li><strong>Le raccordement Triphasé (400V) :</strong> Si vous voulez une charge rapide (<strong>11 kW ou 22 kW</strong>), vous aurez besoin du triphasé. Si vous n'avez qu'un vieux compteur monophasé, vous devrez introduire une demande de "renforcement de puissance" chez Sibelga. Cette opération demande du temps et l'intervention de votre électricien pour modifier le coffret d'entrée.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>🚗 Envie d'une borne de recharge à la maison ?</h3>
+        <p>Ne prenez pas le risque d'installer votre borne vous-même. Nos électriciens dimensionnent le câble, adaptent le tableau et s'occupent de la certification RGIE.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander un Devis pour Borne de Recharge</a>
+        </div>
+      </div>
+
+      <h2 id="normes-rgie">3. Le RGIE 2024 : Les protections différentielles obligatoires</h2>
+      
+      <p>En Belgique, le nouveau Règlement Général sur les Installations Électriques (RGIE 2024) a imposé des normes drastiques pour les bornes de véhicules électriques (VE), car leurs batteries utilisent du <strong>courant continu (DC)</strong>, contrairement à la maison qui utilise du courant alternatif (AC).</p>
+
+      <p>Si la batterie de la voiture a un défaut, du courant continu mortel pourrait remonter dans votre maison, aveuglant vos différentiels habituels qui ne sauteraient plus !</p>
+      
+      <p>C'est pourquoi l'électricien agréé doit <strong>obligatoirement</strong> installer dans votre tableau électrique :</p>
+      <ol>
+        <li>Un <strong>circuit exclusif</strong> avec un disjoncteur dédié uniquement à la borne (rien d'autre ne peut y être branché).</li>
+        <li>Un <strong>interrupteur différentiel de Type B</strong> (très cher mais essentiel) ou un <strong>Type A couplé à un détecteur de fuite DC 6mA</strong> (souvent intégré dans les bornes modernes intelligentes).</li>
+      </ol>
+
+      <h2 id="etapes-installation">4. Prix et étapes d'installation par un électricien</h2>
+      
+      <p>Faire poser une borne de recharge à Forest ou Ixelles représente un certain budget, mais valorise considérablement votre bien immobilier (surtout avec l'obligation future des véhicules électriques).</p>
+
+      <p><strong>Le prix moyen à Bruxelles varie de 1200 € à 2500 € TVAC.</strong> Ce prix comprend :</p>
+      <ul>
+        <li>L'achat de la borne intelligente (qui permet le suivi sur smartphone et le déverrouillage par badge RFID).</li>
+        <li>La pose de la borne au mur du garage ou sur un pied dans l'allée.</li>
+        <li>Le tirage d'un nouveau câble renforcé (souvent du XVB 5G6 ou 5G10) depuis le tableau jusqu'au parking (parfois la partie la plus complexe s'il faut percer des murs épais).</li>
+        <li>Les composants de sécurité dans le tableau (Disjoncteur et Différentiel Type A/B).</li>
+        <li>Le passage de l'organisme de contrôle agréé pour <strong>mettre à jour les schémas électriques</strong> (sans quoi, en cas d'incendie, l'assurance refusera d'intervenir).</li>
+      </ul>
+
+      <p>N'oubliez pas ! Les autorités belges et régionales proposent régulièrement des <strong>déductions fiscales (réduction d'impôts)</strong> pour l'installation de bornes de recharge à domicile, à l'unique condition que la borne soit "intelligente" et que l'installation soit réalisée et facturée par un <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">électricien professionnel agréé</a>.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Passez à la mobilité électrique en toute sécurité" subtitle="Installation de bornes de recharge certifiées (monophasé/triphasé) à Bruxelles. Devis transparent et conseils personnalisés." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

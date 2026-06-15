@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Panne de courant à Bruxelles : Que faire en urgence ?" 
+  description="Victime d'une coupure de courant générale ou partielle à Bruxelles ? Découvrez les gestes d'urgence et quand appeler un électricien agréé (Dispo 24/7)." 
+  faqs={[
+    {
+      q: "Comment savoir si la panne de courant vient de chez moi ou du quartier ?",
+      a: "Regardez par la fenêtre ou dans le couloir de votre immeuble. Si les lampadaires de la rue ou vos voisins n'ont plus de lumière, c'est une panne du réseau Sibelga. Si vous êtes le seul dans le noir, le problème vient de votre tableau électrique."
+    },
+    {
+      q: "Que faire si mon compteur électrique intelligent disjoncte ?",
+      a: "Si vous avez dépassé la puissance maximale autorisée de votre compteur intelligent (compteur numérique), il suffit généralement d'éteindre de gros appareils (four, chauffage) et d'appuyer sur le bouton de réarmement vert de votre compteur."
+    },
+    {
+      q: "Mon différentiel saute à cause de la pluie, pourquoi ?",
+      a: "L'humidité s'infiltre souvent dans vos éclairages extérieurs (terrasse, jardin) ou dans des prises mal isolées. L'eau crée un court-circuit ou une fuite vers la terre, ce qui pousse le différentiel à couper le courant pour vous protéger."
+    },
+    {
+      q: "Combien coûte un dépannage électrique en urgence à Bruxelles ?",
+      a: "Pour une intervention de nuit ou le week-end, le tarif d'un électricien inclut les frais de déplacement et la main-d'œuvre majorée. Comptez généralement entre 120 € et 250 € la première heure pour sécuriser votre installation."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Panne de courant en urgence</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚨 Urgence & Dépannage</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Panne de courant à Bruxelles : Que faire en cas d'urgence électrique ?</h1>
+
+      <p class="blog-intro">Il est 21h, vous regardez la télévision, le lave-vaisselle tourne... et soudain : le noir complet ! Plus rien ne fonctionne. La <strong>panne de courant</strong> est l'une des pannes les plus stressantes au quotidien, surtout en hiver quand elle paralyse le chauffage et l'éclairage de votre appartement à Bruxelles. Avant de céder à la panique ou de jouer aux apprentis sorciers avec votre tableau électrique dans l'obscurité, voici les bons gestes à adopter et les vérifications de sécurité à faire pour rétablir la lumière sans risquer l'électrocution.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#etape-1">Étape 1 : Diagnostiquer l'origine de la panne (Réseau ou Domicile ?)</a></li>
+          <li><a href="#etape-2">Étape 2 : Le test du tableau électrique (Isoler le problème)</a></li>
+          <li><a href="#pannes-frequentes">Les 3 causes les plus fréquentes de coupure de courant</a></li>
+          <li><a href="#appeler-electricien">Quand faire appel à un électricien en urgence à Bruxelles ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="etape-1">Étape 1 : Diagnostiquer l'origine de la panne (Réseau ou Domicile ?)</h2>
+      
+      <p>La première question à vous poser est cruciale : êtes-vous la seule victime ?</p>
+      
+      <p><strong>Panne de réseau (Sibelga) :</strong> Ouvrez la fenêtre ou regardez sur le palier. Si tout votre quartier à Jette ou Evere est plongé dans le noir, c'est une panne générale du réseau de distribution Sibelga. Dans ce cas, aucun électricien privé ne pourra vous aider. Vous devez simplement patienter ou consulter le site de Sibelga pour connaître l'heure de rétablissement estimée.</p>
+
+      <p><strong>Panne locale (Chez vous) :</strong> Si les lampadaires brillent et que vos voisins regardent Netflix tranquillement, le problème se trouve dans votre propre habitation. C'est le moment d'allumer la lampe de poche de votre smartphone et de vous diriger vers le tableau électrique.</p>
+
+      <h2 id="etape-2">Étape 2 : Le test du tableau électrique (Isoler le problème)</h2>
+      
+      <p>Arrivé devant votre tableau électrique, ouvrez le capot. Cherchez la manette qui est tombée vers le bas (position "OFF" ou "0"). Trois scénarios peuvent se présenter :</p>
+
+      <h3>A. C'est le compteur principal qui a sauté</h3>
+      <p>Si le gros boîtier scellé par Sibelga a sauté, c'est probablement un problème de dépassement de puissance. Vous avez branché trop d'appareils gourmands en même temps (four + machine à laver + chauffage électrique). Débranchez les gros appareils et relevez la manette (ou appuyez sur le bouton vert du compteur intelligent).</p>
+
+      <h3>B. C'est un petit disjoncteur (divisionnaire) qui est en bas</h3>
+      <p>C'est une panne isolée ! Une seule zone de la maison pose problème (ex: les prises de la cuisine). Cela signifie qu'il y a un court-circuit ou une surcharge sur cette ligne précise. Essayez de relever la manette. Si elle retombe immédiatement en faisant "clac", n'insistez pas ! Débranchez tous les appareils de la cuisine et réessayez.</p>
+
+      <h3>C. C'est l'interrupteur différentiel (300mA ou 30mA) qui a sauté</h3>
+      <p>C'est le système de protection contre l'électrocution. S'il saute, cela signifie qu'un de vos appareils a une "fuite de courant" vers la terre ou qu'il y a de l'eau dans un circuit. Baissez tous les petits disjoncteurs, relevez le différentiel, puis remontez les petits disjoncteurs un par un. Celui qui fera sauter à nouveau le différentiel est le coupable !</p>
+
+      <div class="blog-cta card">
+        <h3>⚡ Le courant refuse de revenir ?</h3>
+        <p>Ne prenez pas le risque d'ouvrir le tableau électrique avec un tournevis. Nos électriciens d'urgence sont prêts à intervenir dans toutes les communes de Bruxelles en moins de 30 minutes.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:+32470000000" class="btn btn-outline" style="color:var(--color-accent);text-decoration:underline;">Dépannage Urgence 24/7</a>
+          <a href="/contact/" class="btn btn-primary">Nous contacter</a>
+        </div>
+      </div>
+
+      <h2 id="pannes-frequentes">3. Les 3 causes les plus fréquentes de coupure de courant à Bruxelles</h2>
+      
+      <p>D'après l'expérience de nos équipes d'interventions rapides dans la capitale, voici les coupables habituels :</p>
+      
+      <ul>
+        <li><strong>La résistance du chauffe-eau ou du four :</strong> Une résistance pleine de calcaire ou usée finit par se fendre. L'eau touche le fil électrique, créant une fuite vers la terre immédiate. Résultat : le différentiel saute dès que le boiler s'allume en tarif de nuit.</li>
+        <li><strong>L'humidité extérieure :</strong> Surtout en automne. L'eau de pluie s'infiltre dans une prise de la terrasse ou un éclairage du jardin mal étanchéifié.</li>
+        <li><strong>Le rongeur urbain :</strong> Dans les vieilles bâtisses bruxelloises, il n'est pas rare qu'une souris ait rongé la gaine d'un câble caché dans les faux-plafonds, causant un court-circuit franc (contact direct entre la phase et le neutre).</li>
+      </ul>
+
+      <h2 id="appeler-electricien">4. Quand faire appel à un électricien en urgence à Bruxelles ?</h2>
+      
+      <p>S'il s'agit simplement de votre grille-pain qui a fait sauter les plombs, jetez l'appareil et relevez le disjoncteur. Mais vous devez impérativement faire appel à un <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">électricien professionnel à Bruxelles</a> dans ces situations précises :</p>
+
+      <ul>
+        <li><strong>Odeur de poisson pourri ou de plastique brûlé :</strong> C'est le signe caractéristique d'un câble en train de fondre dans les murs ou d'un bornier desserré dans le tableau. Danger de mort par incendie. Coupez le courant général immédiatement !</li>
+        <li><strong>Le disjoncteur est brûlant au toucher :</strong> Il est surchargé mais refuse de sauter (vétusté). Le tableau entier doit être remplacé.</li>
+        <li><strong>Crépitements ou étincelles :</strong> Si vous entendez un bruit de "friture" derrière une prise murale, le contact est mauvais et l'arc électrique est amorcé.</li>
+      </ul>
+
+      <p>Une panne de courant persistante n'est jamais le fruit du hasard. Elle est le cri d'alarme de votre installation électrique. Nos techniciens disposent de l'outillage de pointe (mégohmmètres, caméras thermiques) pour trouver la faille invisible en un temps record, où que vous soyez (Ixelles, Anderlecht, Auderghem...).</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Dépannage Électrique en moins de 30 minutes" subtitle="Ne restez pas dans le noir ! Nos dépanneurs sillonnent Bruxelles 24h/24 et 7j/7 pour rétablir votre courant en toute sécurité." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Domotique à Bruxelles : Transformez votre maison en Smart Home" 
+  description="Découvrez comment la domotique intelligente peut révolutionner votre confort et faire baisser vos factures d'énergie à Bruxelles. Guide complet d'installation." 
+  faqs={[
+    {
+      q: "C'est quoi exactement la domotique ?",
+      a: "La domotique est l'ensemble des technologies qui permettent d'automatiser et de contrôler à distance les équipements électriques de votre maison (éclairage, chauffage, volets, alarme) via un smartphone ou la voix."
+    },
+    {
+      q: "Faut-il refaire toute l'électricité pour installer la domotique ?",
+      a: "Pas nécessairement. Si vous construisez, un câblage filaire (KNX) est idéal. Mais pour une maison existante à Bruxelles, un électricien peut installer des modules sans fil (Zigbee, Z-Wave) derrière vos interrupteurs actuels sans casser les murs."
+    },
+    {
+      q: "Est-ce que la domotique permet de faire des économies d'énergie ?",
+      a: "Oui, c'est l'un de ses plus grands atouts. En programmant le chauffage pièce par pièce, en éteignant les lumières oubliées à distance ou en couplant vos appareils aux panneaux solaires, vous pouvez réduire votre facture jusqu'à 30%."
+    },
+    {
+      q: "Combien coûte une installation domotique à Bruxelles ?",
+      a: "Le budget est très variable. Pour automatiser quelques lumières et le chauffage central avec des modules sans fil, comptez entre 1000 € et 2500 €. Pour une domotique filaire intégrée complète, le prix peut dépasser 10 000 €."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Domotique et Smart Home</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">📱 Technologie & Confort</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Domotique à Bruxelles : Transformez votre maison en un espace intelligent et connecté</h1>
+
+      <p class="blog-intro">La maison de demain est déjà là. Oubliez l'image des gadgets réservés aux films de science-fiction : la <strong>domotique (ou Smart Home)</strong> s'invite de plus en plus dans les appartements et maisons de maître de Bruxelles. Bien plus qu'un simple luxe de confort, l'automatisation de votre installation électrique est aujourd'hui le levier le plus puissant pour sécuriser votre foyer et, surtout, pour maîtriser vos factures d'énergie face aux tarifs grimpants de Sibelga. Découvrez comment un électricien qualifié peut transformer vos briques en une maison intelligente.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#avantages">Les 3 grands avantages d'une maison connectée</a></li>
+          <li><a href="#filaire-vs-sansfil">Filaire (KNX) ou Sans fil ? Quel système choisir ?</a></li>
+          <li><a href="#economies">Comment la domotique réduit vos factures d'électricité</a></li>
+          <li><a href="#installation-pro">Pourquoi l'intervention d'un expert est cruciale ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="avantages">1. Les 3 grands avantages d'une maison connectée</h2>
+      
+      <p>L'installation d'un système domotique agit sur trois axes majeurs de votre vie quotidienne :</p>
+
+      <ul>
+        <li><strong>Le confort absolu :</strong> Depuis votre canapé ou votre bureau au centre de Bruxelles, vous pouvez fermer tous les volets, ajuster la lumière du salon sur le mode "Cinéma" et lancer le chauffage de la salle de bain. Plus besoin de faire le tour de la maison avant de vous coucher (le fameux bouton "Bonne nuit").</li>
+        <li><strong>La sécurité renforcée :</strong> La domotique permet la simulation de présence. Quand vous partez en vacances, la maison allume et éteint les lumières aléatoirement, ouvre les volets le matin, dissuadant ainsi les cambrioleurs. Couplée à des caméras et un système de parlophonie, votre maison devient une forteresse.</li>
+        <li><strong>La gestion énergétique :</strong> C'est le nerf de la guerre. La domotique traque le gaspillage. Une fenêtre ouverte ? Le radiateur se coupe instantanément. Personne dans le couloir ? La lumière s'éteint.</li>
+      </ul>
+
+      <h2 id="filaire-vs-sansfil">2. Filaire (KNX) ou Sans fil ? Quel système choisir ?</h2>
+      
+      <p>C'est la première question que nos clients à Uccle ou Woluwe nous posent. Il existe deux grandes familles d'installation domotique :</p>
+
+      <h3>La Domotique Filaire (Le standard KNX)</h3>
+      <p>C'est la Rolls-Royce de la domotique. Tous les interrupteurs et appareils sont reliés par un câble spécifique ("câble bus") directement au tableau électrique central. <br/>
+      <strong>Avantage :</strong> Ultra-fiable, increvable, sans ondes wifi et compatible avec des centaines de marques.<br/>
+      <strong>Inconvénient :</strong> Il faut creuser des saignées partout dans les murs. C'est donc <strong>exclusivement réservé aux gros chantiers de rénovation totale</strong> ou aux constructions neuves.</p>
+
+      <h3>La Domotique Sans Fil (Zigbee, Z-Wave, EnOcean)</h3>
+      <p>C'est la solution magique pour la rénovation ! L'électricien installe de petits modules intelligents ("micromodules") directement derrière vos interrupteurs actuels (Niko, Bticino) ou dans les boîtes de dérivation.<br/>
+      <strong>Avantage :</strong> Aucune saignée dans le plâtre. On garde l'esthétique des vieux murs bruxellois. C'est évolutif : on peut commencer par le salon et équiper la cuisine l'année suivante.<br/>
+      <strong>Inconvénient :</strong> Dépendant d'une "box" centrale (pont) branchée à votre routeur internet.</p>
+
+      <div class="blog-cta card">
+        <h3>📱 Prêt à connecter votre maison ?</h3>
+        <p>De l'intégration d'éclairages Philips Hue à l'installation d'un chauffage par zones, nos experts en domotique vous accompagnent de A à Z à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander une Étude Domotique</a>
+        </div>
+      </div>
+
+      <h2 id="economies">3. Comment la domotique réduit vos factures d'électricité</h2>
+      
+      <p>Investir dans la technologie intelligente se rentabilise vite. La domotique permet de gérer ce qu'on appelle "l'autoconsommation".</p>
+      
+      <p>Si vous possédez des panneaux solaires sur votre toit bruxellois, le cerveau domotique détecte le moment exact où le soleil brille le plus au zénith. Il va alors automatiquement lancer la machine à laver, le lave-vaisselle, et allumer la pompe à chaleur du boiler d'eau. L'énergie produite est directement consommée, vous évitant de la renvoyer sur le réseau gratuitement et de devoir racheter de l'électricité le soir au prix fort.</p>
+
+      <h2 id="installation-pro">4. Pourquoi l'intervention d'un expert est cruciale ?</h2>
+      
+      <p>Acheter des ampoules connectées sur internet est facile. Mais créer un écosystème où tout communique ensemble (les stores, le chauffage, les caméras, les panneaux solaires) est un métier d'ingénierie électrique.</p>
+      
+      <p>Faire appel à un <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">électricien intégrateur domotique</a> vous garantit :</p>
+      <ul>
+        <li><strong>L'ajout du fil neutre :</strong> Beaucoup de micromodules domotiques exigent la présence du fil "neutre" derrière l'interrupteur, ce qui est rarement le cas dans les vieilles installations bruxelloises. L'électricien devra tirer ce fil.</li>
+        <li><strong>La sécurisation du tableau :</strong> La domotique demande de la place dans le tableau électrique. Nous redimensionnons le coffret pour accueillir les serveurs et disjoncteurs supplémentaires en respectant le RGIE.</li>
+        <li><strong>Une configuration réseau stable :</strong> Un expert configurera les ponts sans fil pour éviter que vos lumières ne cessent de fonctionner si votre Wi-Fi est capricieux.</li>
+      </ul>
+
+      <p>L'installation domotique valorise fortement votre bien immobilier sur le marché bruxellois. C'est un pas définitif vers le futur, combinant luxe, sécurité et responsabilité écologique.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Passez à la Maison Connectée" subtitle="Conseils, installation filaire/sans-fil et configuration de votre système domotique par nos experts à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

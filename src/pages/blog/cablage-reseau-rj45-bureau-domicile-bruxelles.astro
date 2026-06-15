@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Câblage réseau (RJ45) pour bureau à Bruxelles : Guide" 
+  description="Marre du Wi-Fi lent à Bruxelles ? Découvrez comment et pourquoi installer un câblage réseau RJ45 Ethernet pour un télétravail ou un bureau performant." 
+  faqs={[
+    {
+      q: "Pourquoi installer des câbles Ethernet alors qu'on a le Wi-Fi ?",
+      a: "Le Wi-Fi est instable (perturbé par les murs épais des maisons bruxelloises et par les réseaux des voisins) et souffre de pertes de débit. Un câble réseau RJ45 garantit une vitesse maximale (jusqu'à 10 Gigabits/s), un ping très bas (parfait pour le télétravail ou le gaming) et aucune déconnexion."
+    },
+    {
+      q: "Quelle catégorie de câble Ethernet choisir pour ma maison ?",
+      a: "Pour une installation pérenne, évitez le Cat5e. Choisissez au minimum du Catégorie 6 (Cat6) qui supporte le Gigabit sans problème. Si vous êtes exigeant (serveurs NAS, streaming 4K lourd), optez pour du Cat6a ou du Cat7 qui peuvent monter jusqu'à 10 Gbps."
+    },
+    {
+      q: "Faut-il casser les murs pour installer des câbles réseau ?",
+      a: "Pas forcément. Si vous rénovez l'électricité, c'est le moment idéal pour creuser des saignées. Sinon, l'électricien peut passer les câbles RJ45 dans des goulottes apparentes discrètes ou utiliser les gaines d'anciennes lignes téléphoniques si elles sont libres."
+    },
+    {
+      q: "C'est quoi un tableau de communication (ou baie de brassage) ?",
+      a: "C'est le 'tableau électrique' de votre réseau internet. Situé à côté de votre box opérateur (Proximus/Telenet), il centralise tous les câbles RJ45 de la maison sur un Switch. Depuis ce boîtier central, vous choisissez quelle prise murale reçoit internet."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Câblage réseau RJ45</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🌐 Réseaux & Télécoms</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Câblage réseau (RJ45) pour un bureau ou domicile à Bruxelles : Guide d'installation</h1>
+
+      <p class="blog-intro">Réunion Zoom qui coupe, téléchargement interminable, ou série Netflix qui fige en pleine soirée... À Bruxelles, nos connexions internet (fibre optique ou câble) n'ont jamais été aussi rapides, mais notre manière de distribuer cette vitesse dans la maison n'a pas suivi. Nous comptons tous sur le Wi-Fi. Or, dans les vieilles maisons bruxelloises (avec leurs murs épais en brique ou en béton), le signal Wi-Fi s'effondre d'une pièce à l'autre. La solution professionnelle et définitive ? Le <strong>câblage réseau filaire en RJ45</strong>. Découvrez pourquoi tirer des câbles Ethernet est le meilleur investissement pour le télétravail ou votre entreprise.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#wifi-vs-ethernet">Wi-Fi vs Câble Ethernet : Le match de la performance</a></li>
+          <li><a href="#categories-cables">Cat6, Cat6a, Cat7 : Quel câble réseau choisir ?</a></li>
+          <li><a href="#topologie-etoile">L'installation en étoile et la baie de brassage</a></li>
+          <li><a href="#bureau-entreprise">Solutions réseau pour les bureaux d'entreprises à Bruxelles</a></li>
+        </ol>
+      </div>
+
+      <h2 id="wifi-vs-ethernet">1. Wi-Fi vs Câble Ethernet : Le match de la performance</h2>
+      
+      <p>Le Wi-Fi est génial pour les smartphones et les tablettes. Mais pour le reste de vos équipements fixes (Smart TV, ordinateur fixe, console de jeu, décodeur TV), il est largement inférieur à une connexion filaire.</p>
+
+      <ul>
+        <li><strong>Stabilité absolue :</strong> Le câble ne subit aucune interférence. Le Wi-Fi de votre appartement à Ixelles est constamment pollué par les 20 autres réseaux Wi-Fi de vos voisins, ce qui cause des micro-coupures.</li>
+        <li><strong>Bande passante garantie :</strong> Si votre box délivre 1 Gigabit (1000 Mbps), le câble Ethernet amènera exactement 1 Gigabit jusqu'à votre ordinateur. En Wi-Fi, vous perdez souvent la moitié de la vitesse au bout de 5 mètres.</li>
+        <li><strong>Sécurité des données :</strong> Le Wi-Fi peut être piraté de l'extérieur. Une connexion filaire nécessite un accès physique à la prise murale, ce qui en fait le standard obligatoire dans les bureaux et administrations bruxelloises.</li>
+      </ul>
+
+      <h2 id="categories-cables">2. Cat6, Cat6a, Cat7 : Quel câble réseau choisir ?</h2>
+      
+      <p>Un câble réseau (câble VDI) est composé de 4 paires de fils de cuivre torsadés. L'évolution de la technologie a permis d'augmenter la fréquence de transmission. Lors de la conception de votre réseau avec votre <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">électricien installateur</a>, le choix de la catégorie est crucial pour l'avenir :</p>
+
+      <ul>
+        <li><strong>Catégorie 5e (Cat5e) :</strong> L'ancien standard. Débit jusqu'à 1 Gigabit/s. À éviter aujourd'hui car il est dépassé.</li>
+        <li><strong>Catégorie 6 (Cat6) :</strong> Le standard actuel pour le résidentiel. Débit de 1 Gigabit/s garanti (et jusqu'à 10 Gbps sur de courtes distances). Idéal pour le télétravail.</li>
+        <li><strong>Catégorie 6a (Cat6a) et Cat7 :</strong> La haute performance. Ils garantissent 10 Gigabits/s sur 100 mètres. Le câble est très blindé (S/FTP) pour repousser les interférences électromagnétiques. C'est ce que l'on installe pour les entreprises, les serveurs NAS ou les maisons haut de gamme qui pensent aux 20 prochaines années.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>💻 Marre de la mauvaise connexion ?</h3>
+        <p>Amenez la Fibre Optique directement dans votre bureau. Nous tirons vos câbles RJ45 et installons votre coffret de communication (patch panel) partout à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander un devis Câblage RJ45</a>
+        </div>
+      </div>
+
+      <h2 id="topologie-etoile">3. L'installation en étoile et le coffret de communication</h2>
+      
+      <p>Oubliez les fils qui traînent le long des plinthes ! Une vraie installation réseau (appelée réseau VDI - Voix Données Images) est structurée en "étoile".</p>
+
+      <p>Concrètement, l'électricien installe un <strong>coffret de communication (ou baie de brassage)</strong> souvent placé à côté de votre tableau électrique principal ou à la cave. Votre modem (Proximus/Voo/Telenet) est placé à l'intérieur.</p>
+      
+      <p>Depuis ce coffret central, un câble réseau dédié part directement vers chaque prise murale de la maison. Dans la baie, on utilise un "Switch Ethernet" (une multiprise internet) et des petits câbles de brassage pour distribuer internet dans la chambre 1, couper internet dans la chambre 2, ou distribuer le signal du décodeur TV dans le salon. C'est modulable à l'infini !</p>
+
+      <h2 id="bureau-entreprise">4. Solutions réseau pour les bureaux d'entreprises à Bruxelles</h2>
+      
+      <p>Si vous aménagez des bureaux (open-space) ou un local commercial, le câblage réseau est le cœur de votre productivité. L'intervention d'un professionnel est obligatoire pour :</p>
+
+      <ul>
+        <li><strong>Le passage dans les faux-planchers / chemins de câbles :</strong> Tirer 50 ou 100 câbles RJ45 Cat6a demande de la méthode pour ne pas croiser les courants forts (230V, qui créent des parasites) et les courants faibles (Data).</li>
+        <li><strong>L'alimentation PoE (Power over Ethernet) :</strong> Les câbles RJ45 modernes permettent d'alimenter électriquement les caméras de surveillance IP ou les points d'accès Wi-Fi du plafond, sans avoir besoin de tirer une prise de courant classique à côté !</li>
+        <li><strong>La certification au Fluke :</strong> En entreprise, l'électricien teste chaque prise installée avec un appareil de certification (Fluke Networks) pour garantir l'absence de pertes de paquets et valider la vitesse du réseau.</li>
+      </ul>
+
+      <p>Investir dans un bon câblage RJ45 lors d'une rénovation ou de l'aménagement de locaux commerciaux, c'est s'assurer une tranquillité numérique absolue pour la décennie à venir.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Installation Réseau Filaire Professionnel" subtitle="Tirage de câbles Cat6/Cat7, installation de baies de brassage et création de prises RJ45 pour particuliers et entreprises à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

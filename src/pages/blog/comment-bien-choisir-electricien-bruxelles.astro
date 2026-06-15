@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Comment bien choisir son électricien à Bruxelles ?" 
+  description="Trouver un bon artisan de confiance est difficile. Découvrez les 5 critères essentiels et les questions pièges à poser pour bien choisir votre électricien à Bruxelles." 
+  faqs={[
+    {
+      q: "Comment savoir si un électricien est agréé et fiable ?",
+      a: "Un électricien professionnel doit posséder un numéro de TVA (BCE) valide et être en mesure de fournir une attestation d'accès à la profession. Demandez toujours s'il garantit que son travail passera le contrôle RGIE (via Vinçotte ou BTV)."
+    },
+    {
+      q: "Un bon électricien fournit-il toujours un devis gratuit ?",
+      a: "Pour les projets de rénovation (tableau, câblage complet), un devis écrit et détaillé est la norme. En revanche, pour un dépannage en urgence (panne à 2h du matin), c'est une facturation à l'heure, mais le tarif doit vous être annoncé clairement au téléphone avant le déplacement."
+    },
+    {
+      q: "Quelles garanties dois-je exiger d'un électricien ?",
+      a: "Exigez toujours de savoir s'il possède une assurance Responsabilité Civile (RC Pro). En cas d'erreur de sa part provoquant un incendie, c'est cette assurance qui protégera votre patrimoine."
+    },
+    {
+      q: "Est-ce normal de payer un acompte avant les travaux ?",
+      a: "Oui, pour les gros chantiers nécessitant l'achat de matériel coûteux (tableau, bornes de recharge, dizaines de mètres de câbles), un acompte de 30% à l'acceptation du devis est la norme standard dans le bâtiment en Belgique."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Choisir son électricien</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🤝 Conseils & Devis</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 5 min de lecture</span>
+      </div>
+
+      <h1>Comment bien choisir son électricien à Bruxelles ? Les 5 critères essentiels</h1>
+
+      <p class="blog-intro">Confier les clés de sa maison et les fils de son tableau électrique à un inconnu est un acte de confiance qui ne doit pas se prendre à la légère. Une peinture mal appliquée peut être refaite ; une erreur de câblage électrique peut déclencher un incendie domestique mortel. À Bruxelles, face à la multitude de numéros trouvés sur internet ou sur des prospectus dans la boîte aux lettres, trouver l'artisan honnête, compétent et transparent relève parfois du défi. Pour éviter les arnaques de dépannage ou les chantiers abandonnés, voici le guide ultime pour <strong>bien choisir votre électricien de confiance</strong>.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#obligations-legales">L'accès à la profession et le numéro d'entreprise (BCE)</a></li>
+          <li><a href="#maitrise-rgie">Le test ultime : La maîtrise du RGIE et les schémas</a></li>
+          <li><a href="#transparence-prix">Transparence des tarifs : Comment lire un devis ?</a></li>
+          <li><a href="#proximite-avis">Proximité (Bruxelles) et réputation en ligne</a></li>
+        </ol>
+      </div>
+
+      <h2 id="obligations-legales">1. L'accès à la profession et le numéro d'entreprise (BCE)</h2>
+      
+      <p>C'est la première ligne de défense contre le travail au noir et l'amateurisme. En Belgique, le métier d'électricien est réglementé. Pour l'exercer, il faut prouver ses compétences à l'État (accès à la profession).</p>
+
+      <p><strong>Le réflexe :</strong> Avant même de l'appeler, vérifiez sur son site web s'il affiche un numéro de TVA (BE 0XXX.XXX.XXX). Vous pouvez entrer ce numéro gratuitement sur le site de la <em>Banque-Carrefour des Entreprises (BCE)</em>. Si l'entreprise n'existe pas, ou si elle est enregistrée comme "Nettoyage" ou "Lavage auto", fuyez ! C'est la garantie de perdre tout recours en cas de malfaçon.</p>
+
+      <h2 id="maitrise-rgie">2. Le test ultime : La maîtrise du RGIE et les schémas</h2>
+      
+      <p>Un bon électricien ne fait pas que brancher des fils, il conçoit un réseau sécurisé qui doit passer le contrôle de l'État (BTV, Vinçotte...).</p>
+
+      <p>Posez-lui la question clé : <em>"Fournissez-vous les schémas unifilaires et garantissez-vous que votre travail passera le contrôle RGIE ?"</em></p>
+      
+      <p>Si l'artisan balaie la question de la main ("<em>Ne vous inquiétez pas pour la paperasse</em>"), méfiez-vous. Un véritable professionnel du bâtiment intègre toujours la rédaction des schémas électriques officiels (souvent tracés sur logiciel) à la fin de sa prestation, car ils sont obligatoires en Belgique pour valider les travaux ou vendre le bien.</p>
+
+      <div class="blog-cta card">
+        <h3>✅ À la recherche d'un partenaire de confiance ?</h3>
+        <p>Agréés, assurés et experts des normes bruxelloises, nos électriciens s'engagent sur la transparence totale des prix et la qualité des finitions.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander un Devis Gratuit</a>
+        </div>
+      </div>
+
+      <h2 id="transparence-prix">3. Transparence des tarifs : Comment lire un devis ?</h2>
+      
+      <p>La règle d'or dans le bâtiment : un prix trop bas cache souvent de très mauvaises surprises. Le devis (ou l'annonce du prix au téléphone pour une urgence) doit être clair comme de l'eau de roche.</p>
+
+      <ul>
+        <li><strong>Pour un Dépannage Urgent :</strong> L'électricien doit vous donner son taux horaire ET ses frais de déplacement au téléphone. Les arnaqueurs refusent de donner un prix et disent toujours "<em>Il faut voir sur place</em>" avant de réclamer 600€ en liquide.</li>
+        <li><strong>Pour une Rénovation (Devis écrit) :</strong> Le devis ne doit pas se limiter à "Rénovation électrique : 5000€". Il doit lister le matériel ! S'agit-il d'un tableau haut de gamme de marque <em>Vynckier / Legrand</em> ou de sous-marques non certifiées ? Précise-t-il la marque de l'appareillage (prises <em>Niko</em>, <em>Bticino</em>) ? Mentionne-t-il le rebouchage partiel des saignées au plâtre ?</li>
+      </ul>
+
+      <h2 id="proximite-avis">4. Proximité (Bruxelles) et réputation en ligne</h2>
+      
+      <p>Faites appel à une entreprise <strong>locale</strong>. Si vous habitez Forest et que l'électricien est basé à Liège, vous paierez des frais de déplacement exorbitants, et en cas de pépin le lendemain, il mettra des jours à revenir pour le service après-vente.</p>
+
+      <p>Enfin, fiez-vous au bon sens numérique :</p>
+      <ul>
+        <li>Regardez les avis Google My Business de l'artisan. Sont-ils récents ? Ont-ils l'air authentiques ? L'artisan prend-il le temps de répondre aux clients (même mécontents) de manière professionnelle ?</li>
+        <li>Privilégiez le bouche-à-oreille. Le meilleur électricien d'un quartier bruxellois est souvent celui que votre voisin ou votre agent immobilier vous recommandera les yeux fermés.</li>
+      </ul>
+
+      <p>Chez nous, l'engagement est inscrit dans la brique : <strong>clarté des prix, sécurité absolue et respect strict du RGIE belge</strong>. N'hésitez pas à nous mettre au défi de vos projets, des plus simples aux plus complexes.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Le choix de la sécurité et du RGIE" subtitle="Évitez les mauvaises surprises. Travail garanti, devis détaillé gratuit et respect des délais pour tous vos chantiers à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

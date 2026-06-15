@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Odeur de brûlé électrique : Dépannage Urgence Bruxelles" 
+  description="Une odeur de poisson pourri ou de plastique brûlé sort d'une prise ou du tableau électrique ? C'est une urgence absolue. Découvrez les gestes qui sauvent." 
+  faqs={[
+    {
+      q: "D'où vient cette odeur de poisson pourri dans ma maison ?",
+      a: "Surprenant mais vrai : les plastiques isolants des vieux fils électriques et des boîtiers, lorsqu'ils surchauffent et commencent à fondre, dégagent une odeur chimique qui ressemble fortement à celle du poisson pourri ou de l'urine. C'est le signe d'un feu électrique imminent."
+    },
+    {
+      q: "Que faire si une prise de courant sent le brûlé ?",
+      a: "Ne touchez surtout pas la prise à mains nues et ne tentez pas de débrancher l'appareil en tirant sur le fil ! Allez immédiatement à votre tableau électrique et abaissez le disjoncteur général de la maison pour stopper l'échauffement."
+    },
+    {
+      q: "Pourquoi mon disjoncteur n'a-t-il pas sauté alors que ça sent le brûlé ?",
+      a: "C'est la définition même d'un mauvais contact. Le courant passe, mais avec difficulté (souvent à cause d'une vis desserrée). Cette résistance crée énormément de chaleur (effet Joule). Tant que la puissance totale ne dépasse pas la limite du disjoncteur (ex: 20A), il ne coupera pas le courant, même si le plastique fond."
+    },
+    {
+      q: "Puis-je éteindre un feu électrique avec de l'eau ?",
+      a: "JAMAIS ! L'eau conduit l'électricité : vous mourrez électrocuté instantanément. Coupez l'alimentation au compteur. Si des flammes apparaissent, utilisez un extincteur à poudre (ABC) ou étouffez les flammes avec une couverture anti-feu."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Odeur de brûlé électrique</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔥 Urgence & Incendie</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 5 min de lecture</span>
+      </div>
+
+      <h1>Dépannage électrique : Comment réagir face à une odeur de brûlé ?</h1>
+
+      <p class="blog-intro">Il est 21h, vous êtes tranquillement installé dans votre canapé, et une odeur âcre envahit la pièce. Ça sent le plastique chaud, voire le poisson pourri. Vous cherchez l'origine, et vous remarquez que la prise derrière la télévision fume légèrement, ou pire, que l'odeur provient directement de votre tableau électrique dans le hall. L'<strong>odeur de brûlé d'origine électrique</strong> n'est pas une simple panne : c'est la toute dernière étape avant l'incendie. À Bruxelles, c'est la cause de dizaines d'interventions dramatiques des pompiers chaque année. Ne cédez pas à la panique, mais agissez vite. Voici le protocole d'urgence.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#gestes-urgence">Protocole : Les 3 gestes immédiats qui sauvent la maison</a></li>
+          <li><a href="#causes-brule">Pourquoi l'électricité se met-elle à fondre sans faire sauter les plombs ?</a></li>
+          <li><a href="#odeur-poisson">Le mythe de l'odeur de poisson pourri (C'est électrique !)</a></li>
+          <li><a href="#intervention-depannage">Le rôle de l'électricien d'urgence (Sécurisation et réparation)</a></li>
+        </ol>
+      </div>
+
+      <h2 id="gestes-urgence">1. Protocole : Les 3 gestes immédiats qui sauvent la maison</h2>
+      
+      <p>Le feu couve à l'intérieur de vos murs ou de votre coffret. Chaque minute compte pour empêcher l'arc électrique de mettre le feu aux matériaux environnants (tapisserie, bois, isolation).</p>
+
+      <ol>
+        <li><strong>Coupez tout à la source (Priorité n°1) :</strong> N'essayez pas de débrancher un appareil (le fil fondu pourrait vous électrocuter). Foncez à la cave ou dans le hall d'entrée, ouvrez votre tableau électrique, et abaissez d'un coup sec le <strong>disjoncteur général</strong> ou l'interrupteur différentiel principal. Sans courant, l'échauffement s'arrêtera.</li>
+        <li><strong>N'utilisez jamais d'eau :</strong> Si une petite flamme apparaît derrière une prise, n'y jetez surtout pas un verre d'eau. L'eau conduit le 230V et vous foudroiera. Si vous devez intervenir, utilisez un extincteur à poudre (ABC) ou une couverture épaisse sèche.</li>
+        <li><strong>Appelez un électricien de garde :</strong> Même si l'odeur se dissipe après avoir coupé le courant, le problème est toujours là. Il est <strong>strictement interdit</strong> de remonter le disjoncteur général tant qu'un professionnel n'a pas localisé et remplacé les câbles carbonisés.</li>
+      </ol>
+
+      <div class="blog-cta card">
+        <h3>🚨 Ça sent le brûlé chez vous ?</h3>
+        <p>Ne prenez aucun risque d'incendie nocturne. Coupez votre courant général et appelez notre service de garde pour une intervention immédiate dans tout Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:+32470000000" class="btn btn-danger" style="background:var(--color-accent);color:#fff;">Urgence Incendie : +32 470 00 00 00</a>
+        </div>
+      </div>
+
+      <h2 id="causes-brule">2. Pourquoi l'électricité fond sans faire sauter les plombs ?</h2>
+      
+      <p>C'est la question que se posent tous les clients : <em>"J'ai des disjoncteurs récents, pourquoi n'ont-ils pas coupé le courant ?"</em></p>
+
+      <p>Le disjoncteur vous protège contre la surcharge (vous tirez trop de Watts) et le court-circuit franc (les fils se touchent). Mais l'odeur de brûlé provient généralement d'un <strong>mauvais contact (échauffement par Effet Joule)</strong>.</p>
+      
+      <p>Imaginez qu'une petite vis (qui retient le fil de cuivre dans la prise ou dans le disjoncteur) se desserre légèrement avec les années et les vibrations. Le courant a de plus en plus de mal à passer dans cet espace étroit. Le cuivre se met à chauffer énormément, atteignant des centaines de degrés, faisant fondre le plastique. Tant que l'appareil branché dessus (ex: un radiateur de 2000W) ne dépasse pas les 4000W autorisés par le disjoncteur, celui-ci "pense" que tout va bien et laisse le courant passer, attisant le feu.</p>
+
+      <h2 id="odeur-poisson">3. Le mythe de l'odeur de poisson pourri (C'est électrique !)</h2>
+      
+      <p>Vous avez cherché un poisson mort derrière vos meubles ou un animal décédé dans la plinthe ? Regardez plutôt vos prises murales !</p>
+
+      <p>L'isolation des fils électriques, les boîtes de dérivation et les caches-prises sont fabriqués en plastique ignifugé et en bakélite. Lorsqu'ils sont soumis à une chaleur intense due à un mauvais contact, ils ne brûlent pas avec une flamme vive, mais ils <strong>fondent et se consument lentement</strong>.</p>
+
+      <p>La combustion de ces polymères chimiques dégage une fumée invisible dont l'odeur s'apparente très fortement à celle de l'urine d'animal, du poisson pourri ou de l'ammoniac. C'est l'un des signaux d'alarme les plus caractéristiques d'un départ de feu électrique.</p>
+
+      <h2 id="intervention-depannage">4. Le rôle de l'électricien d'urgence (Sécurisation et réparation)</h2>
+      
+      <p>Une fois sur place, un <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">dépanneur électricien qualifié</a> agira comme un urgentiste :</p>
+
+      <ul>
+        <li><strong>L'inspection thermique :</strong> Les bons professionnels disposent souvent de caméras thermiques. Ils peuvent scanner votre tableau électrique pour trouver immédiatement le bornier (la vis) rouge incandescent qui a causé l'odeur.</li>
+        <li><strong>Le sectionnement :</strong> Il va retirer la portion de câble carbonisée. Un fil qui a chauffé s'est oxydé (il devient noir ou vert). Il est impossible de le réutiliser, car il recréera de la chaleur. Il faut couper jusqu'à retrouver du cuivre rose et propre.</li>
+        <li><strong>La remise en route sécurisée :</strong> Il remplacera la prise fondue ou le disjoncteur grillé au tableau, s'assurera du serrage au couple de toutes les vis (très important), et réarmera le courant pièce par pièce en mesurant la charge.</li>
+      </ul>
+
+      <p>Une odeur de brûlé n'est jamais passagère dans le domaine électrique. Le feu ne s'arrêtera pas tout seul. Au moindre doute, coupez le compteur principal, mettez votre famille en sécurité et attendez l'arrivée de nos experts.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Dépannage d'urgence 24/7 à Bruxelles" subtitle="Odeur de brûlé, crépitements, prises fondues : nos électriciens de garde sécurisent votre installation pour éviter l'incendie." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

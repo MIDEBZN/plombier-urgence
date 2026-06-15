@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="RGIE et sécurité : Protéger votre famille des risques électriques" 
+  description="L'électricité tue. Découvrez comment le RGIE protège votre maison à Bruxelles contre les incendies et les électrocutions. Mise aux normes par un électricien." 
+  faqs={[
+    {
+      q: "Quels sont les plus grands risques d'une ancienne installation électrique ?",
+      a: "Les deux risques majeurs sont l'incendie (dû à la surchauffe de fils trop fins ou aux courts-circuits) et l'électrocution mortelle (due à l'absence de fil de terre ou d'interrupteur différentiel pour stopper le courant)."
+    },
+    {
+      q: "Comment le différentiel 300 mA me protège-t-il ?",
+      a: "Le différentiel principal de 300 mA surveille en permanence s'il y a une fuite de courant vers la terre. Si une anomalie est détectée (par exemple un câble dénudé touchant une carcasse métallique), il coupe toute l'électricité de la maison en une fraction de seconde."
+    },
+    {
+      q: "Les multiprises sont-elles dangereuses pour la sécurité électrique ?",
+      a: "Oui, brancher plusieurs multiprises en guirlande (en cascade) crée une surcharge énorme sur une seule prise murale. Cela provoque une surchauffe du câble dans le mur, pouvant mener à un incendie silencieux."
+    },
+    {
+      q: "À quelle fréquence faut-il faire contrôler son installation électrique ?",
+      a: "Selon le RGIE, une installation électrique domestique en Belgique doit être soumise à un contrôle obligatoire tous les 25 ans. Toutefois, un diagnostic est recommandé tous les 10 ans pour les logements très anciens."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Sécurité électrique & RGIE</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🛡️ Prévention & Sécurité</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>RGIE et sécurité : Protégez votre famille et vos biens des risques électriques à Bruxelles</h1>
+
+      <p class="blog-intro">On l'utilise tous les jours sans y penser, mais l'électricité est une force invisible extrêmement dangereuse. En Belgique, on estime que près d'un incendie domestique sur trois est d'origine électrique. Dans les vieux quartiers de Bruxelles (comme Saint-Gilles, Forest ou Schaerbeek), les installations vétustes représentent une véritable bombe à retardement. C'est pour contrer ces tragédies que le <strong>RGIE (Règlement Général sur les Installations Électriques)</strong> existe. Découvrez comment ces normes strictes sont pensées pour sauver des vies et protéger votre patrimoine immobilier.</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#dangers-invisibles">Les dangers invisibles d'une installation vétuste</a></li>
+          <li><a href="#role-rgie">Le rôle vital du RGIE face à l'électrisation</a></li>
+          <li><a href="#prevention-incendie">Comment le RGIE prévient les incendies domestiques ?</a></li>
+          <li><a href="#bons-reflexes">Les bons réflexes pour sécuriser votre intérieur bruxellois</a></li>
+        </ol>
+      </div>
+
+      <h2 id="dangers-invisibles">1. Les dangers invisibles d'une installation vétuste</h2>
+      
+      <p>L'ennemi numéro un de la sécurité électrique est l'usure. Les fils électriques installés il y a 50 ans n'étaient pas conçus pour supporter la charge de nos équipements modernes (fours pyrolyse, lave-linge, radiateurs d'appoint, chargeurs multiples).</p>
+
+      <p>Les risques principaux sont doubles :</p>
+      <ul>
+        <li><strong>L'électrocution (ou électrisation) :</strong> Un contact direct avec un fil dénudé ou avec la carcasse métallique d'un appareil ménager défectueux. Sans protection adéquate, le courant traverse le corps humain, provoquant des brûlures ou un arrêt cardiaque.</li>
+        <li><strong>L'incendie par échauffement (Effet Joule) :</strong> Lorsqu'on demande trop de puissance à un fil trop fin, celui-ci chauffe. L'isolant en plastique fond, créant un arc électrique ou des flammes à l'intérieur même de vos murs.</li>
+      </ul>
+
+      <h2 id="role-rgie">2. Le rôle vital du RGIE face à l'électrisation</h2>
+      
+      <p>Le RGIE n'est pas qu'une simple contrainte administrative pour embêter les propriétaires lors d'une vente. Chaque règle dictée par cette réglementation a été écrite à la suite d'accidents réels. Voici les trois boucliers imposés par le RGIE :</p>
+
+      <h3>A. L'interrupteur différentiel : le gardien de votre vie</h3>
+      <p>Le RGIE impose l'installation d'un interrupteur différentiel général (300 mA) et d'un différentiel ultra-sensible (30 mA) pour les pièces humides comme la salle de bain. Ce composant est génial : il mesure la quantité de courant qui rentre dans la maison et celle qui en sort. S'il détecte la moindre perte (signifiant que le courant s'échappe vers la terre ou à travers un corps humain), il coupe le réseau en quelques millisecondes.</p>
+
+      <h3>B. La prise de terre : l'évacuation de secours</h3>
+      <p>S'il y a un défaut dans votre machine à laver, le châssis en métal devient électrifié. Si vous le touchez, vous êtes foudroyé. Le RGIE exige une <strong>mise à la terre efficace</strong> (avec un piquet enfoui dans le sol d'une résistance inférieure à 30 ohms). Le courant s'échappera toujours par le chemin le plus facile : le fil de terre en cuivre plutôt que par votre corps.</p>
+
+      <div class="blog-cta card">
+        <h3>🚨 Votre maison est-elle en sécurité ?</h3>
+        <p>Ne jouez pas à la roulette russe avec votre électricité. Nos électriciens interviennent à Bruxelles pour sécuriser immédiatement les installations dangereuses.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:+32470000000" class="btn btn-outline" style="color:var(--color-accent);text-decoration:underline;">Appel Urgence : +32 470 00 00 00</a>
+          <a href="/contact/" class="btn btn-primary">Demander un Audit Sécurité</a>
+        </div>
+      </div>
+
+      <h2 id="prevention-incendie">3. Comment le RGIE prévient les incendies domestiques ?</h2>
+      
+      <p>Pour éviter que votre appartement à Etterbeek ne parte en fumée, le RGIE s'attaque au problème de l'échauffement des câbles à travers le <strong>calibrage strict des disjoncteurs</strong>.</p>
+
+      <p>Autrefois, on utilisait des fusibles en porcelaine (qui mettaient énormément de temps à fondre). Aujourd'hui, le RGIE impose des disjoncteurs magnéto-thermiques qui sautent instantanément en cas de surcharge. La règle est mathématique : le disjoncteur doit toujours être calibré en fonction de l'épaisseur du fil.</p>
+      <ul>
+        <li>Un fil de 1,5 mm² ne tolère qu'un disjoncteur de maximum 16 Ampères.</li>
+        <li>Un fil de 2,5 mm² ne tolère qu'un disjoncteur de maximum 20 Ampères.</li>
+      </ul>
+
+      <h2 id="bons-reflexes">4. Les bons réflexes pour sécuriser votre intérieur bruxellois</h2>
+      
+      <p>Même si votre tableau électrique est conforme, la sécurité passe aussi par vos habitudes quotidiennes :</p>
+
+      <ol>
+        <li><strong>Bannissez les multiprises en cascade :</strong> Ne branchez jamais une multiprise sur une autre multiprise. Vous multipliez les points de chauffe.</li>
+        <li><strong>Testez vos différentiels :</strong> Le RGIE recommande d'appuyer sur le petit bouton "T" (Test) de vos interrupteurs différentiels tous les mois pour vérifier qu'ils sautent bien.</li>
+        <li><strong>Attention aux fils dénudés :</strong> La morsure du lapin de compagnie sur le câble de la lampe ou la vieille prise arrachée du mur par l'aspirateur sont des dangers mortels immédiats pour les enfants en bas âge. Faites réparer toute prise arrachée sans délai.</li>
+      </ol>
+
+      <p>La <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">sécurité électrique de votre habitation</a> doit être votre priorité absolue. Un électricien professionnel est le seul habilité à auditer et à corriger les failles invisibles de votre installation. N'attendez pas de sentir une odeur de brûlé pour agir !</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Protégez ce qui compte le plus" subtitle="Audit de sécurité, remplacement de tableau et mise aux normes RGIE par nos électriciens certifiés à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>

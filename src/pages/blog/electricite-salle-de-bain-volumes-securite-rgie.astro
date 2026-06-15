@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+---
+
+<Layout 
+  title="Électricité salle de bain : Volumes et Sécurité (RGIE)" 
+  description="L'eau et le courant sont mortels. Découvrez les 4 volumes de sécurité du RGIE pour installer prises et luminaires dans votre salle de bain à Bruxelles." 
+  faqs={[
+    {
+      q: "Est-ce que je peux installer une prise électrique juste au-dessus du lavabo ?",
+      a: "Oui, mais sous des conditions strictes. Selon le RGIE, le dessus du lavabo se trouve en 'Volume 2'. La prise doit être placée à au moins 60 cm du point d'eau, protégée par un différentiel 30 mA, et idéalement couverte (IP44)."
+    },
+    {
+      q: "Quelles sont les règles pour les spots encastrés au-dessus de la douche ?",
+      a: "La douche est le 'Volume 0' et 'Volume 1'. L'éclairage doit impérativement être en Très Basse Tension de Sécurité (TBTS 12 Volts) avec un indice d'étanchéité IP65. Le transformateur doit être caché à l'extérieur de cette zone humide."
+    },
+    {
+      q: "C'est quoi un interrupteur différentiel 30 mA ?",
+      a: "C'est un dispositif de protection ultra-sensible. Alors que le différentiel général coupe à 300 mA, le 30 mA est obligatoire pour tous les circuits de la salle de bain. Il coupe le courant à la moindre fuite avant que l'électrocution ne soit mortelle."
+    },
+    {
+      q: "Dois-je relier la baignoire métallique à la terre ?",
+      a: "Oui ! C'est ce qu'on appelle la liaison équipotentielle supplémentaire. Le RGIE exige que toutes les masses métalliques de la salle de bain (baignoire, tuyaux d'eau, tuyaux de gaz, radiateurs) soient reliées à la prise de terre."
+    }
+  ]}
+>
+
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        <span class="bc--current">Électricité en Salle de bain</span>
+      </nav>
+    </div>
+  </section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🛁 Pièces Humides & RGIE</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Électricité dans la salle de bain : Les volumes de sécurité à respecter à Bruxelles</h1>
+
+      <p class="blog-intro">La salle de bain est la pièce la plus dangereuse de votre maison. Avec l'eau, la vapeur et la nudité (la peau mouillée n'offre plus aucune résistance au courant électrique), une simple prise mal placée peut transformer un brossage de dents en un accident mortel. C'est pourquoi le Règlement Général sur les Installations Électriques (RGIE) en Belgique a défini des règles drastiques pour encadrer l'<strong>électricité dans les pièces humides</strong>. Vous rénovez votre salle d'eau à Bruxelles ? Voici tout ce que vous devez savoir sur le concept des "Volumes de sécurité".</p>
+
+      <div class="blog-toc card">
+        <h2>Au programme</h2>
+        <ol>
+          <li><a href="#differrentiel-30ma">La règle d'or universelle : Le différentiel 30 mA</a></li>
+          <li><a href="#les-4-volumes">Les 4 Volumes du RGIE expliqués (0, 1, 2, 3)</a></li>
+          <li><a href="#liaison-equipotentielle">La liaison équipotentielle : Protéger les tuyaux</a></li>
+          <li><a href="#pourquoi-pro">Pourquoi faire valider sa salle de bain par un pro ?</a></li>
+        </ol>
+      </div>
+
+      <h2 id="differrentiel-30ma">1. La règle d'or universelle : Le différentiel 30 mA</h2>
+      
+      <p>Avant même de parler de la position des prises, il y a une obligation légale incontournable pour toute salle de bain en Belgique : <strong>l'ensemble des circuits électriques de la pièce (prises, lumières, chauffage, aération) doit être protégé par un interrupteur différentiel à haute sensibilité de 30 mA (milliampères).</strong></p>
+
+      <p>Pourquoi ? Parce qu'un courant de seulement 50 mA traversant le corps humain peut provoquer un arrêt cardiaque. Si un rasoir électrique tombe dans le lavabo, le différentiel 30 mA va détecter la fuite de courant et couper l'alimentation en 30 millisecondes, vous sauvant la vie. Il doit être testé régulièrement via son bouton "Test".</p>
+
+      <h2 id="les-4-volumes">2. Les 4 Volumes du RGIE expliqués (0, 1, 2, 3)</h2>
+      
+      <p>Pour savoir où vous avez le droit de placer une prise (230V) ou une applique lumineuse, le RGIE a divisé l'espace autour de la baignoire et de la douche en 4 volumes virtuels :</p>
+
+      <h3>Volume 0 : Le bassin d'eau</h3>
+      <p>C'est l'intérieur même de la baignoire ou du bac à douche.<br/>
+      <strong>Autorisé :</strong> Strictement rien en 230V ! Uniquement de l'éclairage spécifique pour jacuzzi en Très Basse Tension de Sécurité (TBTS 12V), totalement immergeable (IPX7).</p>
+
+      <h3>Volume 1 : La zone de projection directe</h3>
+      <p>C'est la zone située au-dessus de la baignoire ou du bac à douche, jusqu'à 2,25 m de hauteur.<br/>
+      <strong>Autorisé :</strong> Toujours aucune prise de courant classique. Seuls les chauffe-eau électriques ou l'éclairage TBTS (12V) avec une étanchéité IPX4 (IPX5 pour les jets d'eau) sont tolérés, à condition que leur interrupteur soit à l'extérieur de ce volume.</p>
+
+      <h3>Volume 2 : La zone de proximité</h3>
+      <p>C'est la zone de 60 cm autour du Volume 1 (autour de la baignoire) et au-dessus du lavabo.<br/>
+      <strong>Autorisé :</strong> L'éclairage et les chauffages de salle de bain (classe II) sont autorisés. Les <strong>prises de courant</strong> y sont interdites, à une exception près : une prise rasoir spécifique équipée de son propre transformateur d'isolement.</p>
+
+      <h3>Volume 3 : Le reste de la pièce</h3>
+      <p>C'est la zone qui s'étend jusqu'à 2,40 m au-delà du Volume 2.<br/>
+      <strong>Autorisé :</strong> C'est la zone "libre". Vous pouvez y installer vos interrupteurs, des prises classiques 230V avec broche de terre (pour le sèche-cheveux) et des appareils électroménagers (lave-linge). Attention : tout ce matériel reste protégé par le différentiel 30 mA !</p>
+
+      <div class="blog-cta card">
+        <h3>🚿 Vous rénovez votre salle de bain ?</h3>
+        <p>Une prise mal placée et votre installation sera refusée par l'inspecteur. Nos électriciens vous accompagnent pour un aménagement esthétique et certifié 100% conforme au RGIE.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="/contact/" class="btn btn-primary">Demander un Devis Salle de Bain</a>
+        </div>
+      </div>
+
+      <h2 id="liaison-equipotentielle">3. La liaison équipotentielle : Protéger les tuyaux</h2>
+      
+      <p>En plus de la terre pour les prises de courant, le RGIE impose une sécurité supplémentaire dans la salle de bain : <strong>la liaison équipotentielle supplémentaire</strong>.</p>
+      
+      <p>Il s'agit de relier toutes les parties métalliques de la pièce entre elles à l'aide d'un fil de cuivre vert/jaune (section de 4 mm² ou 2,5 mm² sous gaine). Cela concerne :</p>
+      <ul>
+        <li>La carcasse de la baignoire ou du bac à douche (s'ils sont en métal).</li>
+        <li>Les canalisations d'eau chaude et d'eau froide.</li>
+        <li>Les radiateurs (sèche-serviettes à eau).</li>
+        <li>Les tuyaux de gaz ou de chauffage central traversant la pièce.</li>
+      </ul>
+      <p>Cette boucle de terre secondaire garantit que tous ces éléments métalliques restent au même potentiel (0 Volt). Si une fuite de courant touche un tuyau, vous ne serez pas électrocuté en ouvrant le robinet.</p>
+
+      <h2 id="pourquoi-pro">4. Pourquoi faire valider sa salle de bain par un pro ?</h2>
+      
+      <p>L'électricité dans une salle de bain est le point le plus sévèrement inspecté lors d'un contrôle RGIE à Bruxelles. De plus, l'utilisation de la <strong>Très Basse Tension (TBTS 12V)</strong> pour les spots de la douche nécessite de cacher le transformateur dans un endroit aéré (souvent un faux-plafond hors Volume 1) pour éviter les surchauffes et les risques d'incendie.</p>
+      
+      <p>Confiez le câblage de votre salle d'eau à un <a href="/urgence/bruxelles/" style="color:var(--color-accent);text-decoration:underline;">électricien professionnel agréé</a>. C'est l'assurance d'un confort optimal (prises pour la brosse à dents, miroir chauffant anti-buée, sèche-serviette) sans jamais transiger avec la vie de votre famille.</p>
+
+    </div>
+  </article>
+
+  <CTABanner title="Votre Salle de Bain aux Normes" subtitle="Tirage de ligne 30mA, spots TBTS et liaison équipotentielle. Demandez l'expertise de nos électriciens pour votre rénovation à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl);border-radius:var(--radius-lg)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-sm)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-sm)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+</style>
