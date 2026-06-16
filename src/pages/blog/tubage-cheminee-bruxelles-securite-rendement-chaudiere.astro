@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Tubage de Cheminée Bruxelles : Sécurité pour votre Chaudière";
+const description = "Le tubage de cheminée est souvent obligatoire lors du remplacement d'une chaudière à Bruxelles. Protégez-vous de l'intoxication au CO. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Qu'est-ce que le tubage d'une cheminée ?", a: "Le tubage consiste à glisser un conduit tubulaire en acier inoxydable (inox) à l'intérieur de l'ancien conduit de cheminée en briques de votre maison. Ce nouveau conduit intérieur parfaitement étanche est raccordé directement à la buse d'évacuation de votre chaudière au gaz."},
+  {q: "Pourquoi le tubage est-il obligatoire pour une chaudière à condensation ?", a: "Les fumées d'une chaudière à condensation sont beaucoup plus froides et chargées d'humidité (vapeur d'eau acide) que celles d'une vieille chaudière. Si ces fumées froides montent dans une cheminée en briques froides, la vapeur se condense sur les parois, attaque les briques, traverse les murs de la maison et crée d'énormes taches d'humidité."},
+  {q: "Quels sont les risques si je ne tube pas ma vieille cheminée ?", a: "Les vieilles cheminées en briques des maisons bruxelloises finissent par devenir poreuses ou fissurées avec les années. Les gaz de combustion, et particulièrement le monoxyde de carbone (CO), gaz mortel et inodore, peuvent alors s'infiltrer dans les chambres ou les étages supérieurs. C'est un risque vital absolu."},
+  {q: "Combien de temps prend l'installation d'un tubage inox à Bruxelles ?", a: "Dans la majorité des cas, s'il n'y a pas de blocage structurel (comme un ancien nid de guêpes pétrifié ou un coude trop prononcé), l'opération est rapide. Une équipe de deux chauffagistes glisse le tube depuis le toit jusqu'à la cave en une demi-journée de travail."},
+  {q: "Doit-on encore ramoner la cheminée une fois qu'elle est tubée (inox) ?", a: "Pour une chaudière au gaz avec un tubage en inox lisse, le ramonage classique n'est plus nécessaire. L'entretien obligatoire de la chaudière (tous les 2 ans) suffit amplement, car le chauffagiste vérifiera le bon tirage de l'installation et l'absence d'obstruction en haut du toit."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Tubage Cheminée Chaudière</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🔥 Chauffage & Sécurité</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Tubage de Cheminée Bruxelles : Sécurité et Rendement pour Votre Chaudière</h1>
+
+      <p class="blog-intro"><strong>Vous souhaitez remplacer votre vieille chaudière bruxelloise par un modèle à condensation ultra-performant ? Avant même de choisir la marque, une question technique s'impose : le tubage de votre cheminée.</strong> Dans les immeubles anciens et les maisons de maître de la capitale, les conduits en briques maçonnées ne sont plus adaptés à l'humidité dégagée par les chaudières modernes. L'installation d'un tube en acier inoxydable étanche à l'intérieur de l'ancien conduit est non seulement la garantie de préserver vos murs de la moisissure, mais surtout de protéger votre famille contre les infiltrations mortelles de monoxyde de carbone. Découvrez pourquoi le tubage est une étape incontournable validée par la norme PEB.</p>
+
+      <p class="blog-intro">Beaucoup de propriétaires à Ixelles, Forest ou Anderlecht sont surpris lorsqu'ils reçoivent le devis d'un chauffagiste pour le remplacement de leur chaudière. À côté du prix de la machine figure souvent une ligne coûteuse : "Tubage Inox Flexible (10 mètres)". Cette opération, qui consiste à monter sur le toit pour glisser un tuyau métallique à l'intérieur de la cheminée jusqu'à la cave, n'est pas une option pour gonfler la facture. C'est une obligation technique et sécuritaire liée à l'évolution des technologies de combustion. Une chaudière neuve à condensation branchée sur une cheminée en briques nue provoquera une catastrophe en moins de 3 ans. Explications de nos artisans chauffagistes agréés Cerga.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Comprendre le tubage</h2>
+        <ol>
+          <li><a href="#condensation">La chaudière à condensation et les fumées acides</a></li>
+          <li><a href="#degats">Les dégâts : Pourquoi la brique ne suffit plus</a></li>
+          <li><a href="#securite">La sécurité absolue contre le Monoxyde de Carbone</a></li>
+          <li><a href="#technique">Acier Inox : La technique d'installation depuis le toit</a></li>
+          <li><a href="#loi">La législation PEB à Bruxelles et les copropriétés</a></li>
+          <li><a href="#faq">FAQ : Les questions courantes sur l'évacuation des fumées</a></li>
+        </ol>
+      </div>
+
+      <h2 id="condensation">La chaudière à condensation et les fumées acides</h2>
+      <p>Pour comprendre pourquoi il faut tuber la cheminée, il faut comprendre comment fonctionne une <strong>chaudière à condensation</strong> (qui est le seul type de chaudière au gaz que l'on peut encore légalement installer aujourd'hui).</p>
+      
+      <p>L'ancien modèle (la chaudière atmosphérique) recrachait des fumées très chaudes, aux alentours de 150°C à 200°C. Cette chaleur intense créait un fort courant d'air chaud (le tirage naturel) qui propulsait les gaz à grande vitesse vers la sortie du toit. Les cheminées en briques restaient sèches.</p>
+      <p>À l'inverse, la technologie de la "condensation" récupère la chaleur de ces fumées pour chauffer l'eau. Les fumées rejetées dans la cheminée sont donc "froides" (environ 50°C) et extrêmement chargées en vapeur d'eau (qui est légèrement acide). Elles n'ont plus la force de monter toutes seules à travers un grand conduit froid en briques.</p>
+
+      <h2 id="degats">Les dégâts : Pourquoi la brique ne suffit plus</h2>
+      <p>Si vous branchez une chaudière à condensation moderne sur une ancienne cheminée en maçonnerie bruxelloise, voici ce qu'il va se passer très rapidement :</p>
+      <ul>
+        <li>Les fumées tièdes vont monter lentement dans le grand conduit.</li>
+        <li>Au contact des briques froides de la cheminée (qui traversent souvent des greniers non isolés), la vapeur d'eau contenue dans la fumée va se condenser et se transformer en eau liquide (le point de rosée).</li>
+        <li>Cette eau acide va s'infiltrer dans les briques et dans le ciment.</li>
+        <li><strong>Résultat :</strong> Au bout de quelques mois, d'énormes taches d'humidité brunâtres vont apparaître sur le papier peint de votre chambre ou de votre salon, là où passe le conduit de cheminée. Le mur est littéralement rongé de l'intérieur par la condensation.</li>
+      </ul>
+      <p>En installant un tube en acier inox étanche et d'un diamètre réduit (généralement 80 mm), les fumées sont canalisées, ne touchent jamais la brique, et sont poussées vers le toit par le ventilateur de la chaudière.</p>
+
+      <div class="blog-cta card">
+        <h3>🔥 Remplacement de chaudière prévu ?</h3>
+        <p>Ne prenez aucun risque avec l'évacuation des gaz de combustion. Nos chauffagistes réalisent l'inspection de votre cheminée et le tubage sécurisé inox à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander une inspection cheminée : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="securite">La sécurité absolue contre le Monoxyde de Carbone</h2>
+      <p>Le dégât des eaux est gênant, mais le monoxyde de carbone (CO) est mortel.</p>
+      <p>Les maisons de Bruxelles ont souvent 100 ans. Les conduits maçonnés sont vieux, le ciment s'est effrité. Si la cheminée se bouche (un nid d'oiseau ou des briques tombées), et que la maçonnerie n'est plus étanche, les gaz de combustion inodores refouleront et s'infiltreront directement dans les étages habités.</p>
+      <p>Le tubage inox crée un conduit d'évacuation 100% étanche, d'un seul tenant, de la sortie de la chaudière jusqu'au chapeau sur le toit. C'est l'assurance vie de votre installation thermique.</p>
+
+      <h2 id="technique">Acier Inox : La technique d'installation depuis le toit</h2>
+      <p>L'opération de tubage est spectaculaire mais maîtrisée par nos artisans spécialisés :</p>
+      <ol>
+        <li><strong>Vérification (Test du miroir / Caméra) :</strong> On s'assure que l'ancien conduit est libre et qu'il n'y a pas de coudes trop importants dans les murs.</li>
+        <li><strong>Déroulage depuis le toit :</strong> Une équipe monte sur la toiture. Un tube flexible en acier Inoxydable double paroi est lentement déroulé et inséré à l'intérieur de l'ancienne cheminée.</li>
+        <li><strong>Réception à la cave :</strong> Le deuxième plombier tire le flexible jusqu'à la chaufferie.</li>
+        <li><strong>Fixation et Raccordement :</strong> Le tube est fixé hermétiquement à la plaque supérieure sur le toit (pour éviter que l'eau de pluie ne rentre dans l'ancien conduit), puis raccordé via un adaptateur étanche à la sortie de la nouvelle chaudière.</li>
+      </ol>
+
+      <h2 id="loi">La législation PEB à Bruxelles et les copropriétés</h2>
+      <p>La réglementation PEB de Bruxelles Environnement est très stricte sur le sujet. Un chauffagiste agréé G1 n'engagera pas sa responsabilité pour installer une chaudière à condensation sans prévoir l'évacuation conforme (tubage ou système ventouse). Votre attestation de conformité ne pourra pas être validée sans cela.</p>
+      
+      <h3>Le cas complexe des immeubles à appartements</h3>
+      <p>Si vous vivez dans un immeuble à Ixelles avec 5 appartements branchés sur la même cheminée collective (les chaudières dites "type B" ou atmosphériques), vous ne pouvez pas tuber uniquement pour vous. Si le système doit être changé, il faut souvent rénover toute la colonne commune pour passer en système "CLV" (conduit collectif pour chaudières à condensation). C'est une décision qui doit se prendre lors de l'assemblée générale des copropriétaires (avec le syndic).</p>
+
+      <h2 id="faq">FAQ : Les questions courantes sur l'évacuation des fumées</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Mettez votre Cheminée en Conformité" subtitle="Nos techniciens installent votre nouvelle chaudière à condensation avec le tubage inox réglementaire. Sécurité et attestation garanties à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

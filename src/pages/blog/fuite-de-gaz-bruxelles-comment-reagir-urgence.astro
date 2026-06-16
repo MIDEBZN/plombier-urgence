@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Fuite de Gaz Bruxelles : Comment Réagir en Urgence";
+const description = "Une odeur de gaz dans votre habitation à Bruxelles ? Découvrez les gestes qui sauvent et comment faire intervenir un chauffagiste Cerga en urgence absolue. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Que faire immédiatement si je sens une odeur de gaz chez moi ?", a: "La première chose à faire est de ne créer aucune étincelle : n'allumez pas la lumière, n'utilisez pas votre téléphone portable dans la pièce, ne touchez à aucun interrupteur. Ouvrez grand toutes les fenêtres pour aérer. Fermez le robinet d'arrivée de gaz (près du compteur) si vous savez où il est, puis sortez du bâtiment."},
+  {q: "Quel numéro appeler en cas d'urgence gaz à Bruxelles ?", a: "Une fois à l'extérieur, appelez immédiatement Sibelga (le gestionnaire du réseau bruxellois) au numéro vert gratuit : 0800 19 400. Ils interviendront en urgence pour couper l'alimentation depuis la rue et sécuriser la zone."},
+  {q: "À quoi ressemble l'odeur du gaz de ville ?", a: "Le gaz naturel (gaz de ville) est naturellement inodore. Pour des raisons de sécurité évidentes, on y ajoute un produit chimique (le mercaptan) qui lui donne une odeur très forte et désagréable, souvent comparée à une odeur d'œuf pourri ou de soufre."},
+  {q: "Le chauffagiste peut-il réparer la fuite après le passage de Sibelga ?", a: "Oui. Sibelga est responsable de la sécurité du réseau jusqu'au compteur. Si la fuite provient de votre installation privée (tuyaux dans la maison, raccord de cuisinière ou chaudière), c'est un chauffagiste agréé Cerga (G1) comme nous qui doit intervenir pour réparer la fuite et vous délivrer une attestation de remise en service."},
+  {q: "Pourquoi les vieux tuyaux de gaz posent-ils problème ?", a: "Les anciennes installations bruxelloises utilisaient des tuyaux en acier avec des raccords vissés et de la pâte d'étanchéité qui sèche et s'effrite avec le temps (surtout avec les vibrations de la circulation). Aujourd'hui, on privilégie le cuivre serti ou brasé, beaucoup plus sûr et résistant aux fuites."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Urgence Fuite Gaz Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚨 Urgence Sécurité</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Fuite de Gaz Bruxelles : Comment Réagir et Qui Appeler en Urgence Absolue</h1>
+
+      <p class="blog-intro"><strong>Une forte odeur d'œuf pourri envahit votre cuisine ou votre cave à Bruxelles ? C'est l'alerte d'une fuite de gaz naturel. Face à ce danger mortel (risque d'explosion ou d'asphyxie), chaque seconde compte et les bons réflexes sauvent des vies.</strong> Ne paniquez pas, n'allumez aucune lumière, ouvrez les fenêtres et sortez de l'immeuble. Si le réseau public (Sibelga) est responsable de la coupure d'urgence pour sécuriser la rue, c'est à un chauffagiste agréé Cerga de réparer les tuyauteries privées de votre habitation. Découvrez les protocoles de sécurité stricts de la Région Bruxelloise et comment nos experts remettent votre installation aux normes de sécurité.</p>
+
+      <p class="blog-intro">La majorité des foyers bruxellois (à Schaerbeek, Ixelles, Jette, etc.) sont raccordés au gaz de ville pour le chauffage (chaudière) ou la cuisson (gazinière). Le gaz naturel est une énergie formidable, mais elle est hautement explosive si elle s'accumule dans un espace clos et qu'elle rencontre la moindre petite étincelle. Malheureusement, les installations vétustes, les raccords mal serrés ou les tuyaux flexibles périmés derrière les cuisinières sont à l'origine de nombreuses frayeurs. Si vous suspectez une fuite, il ne faut faire preuve d'aucune tolérance. Voici le guide de survie et d'intervention en cas de fuite de gaz à Bruxelles.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire de l'urgence gaz</h2>
+        <ol>
+          <li><a href="#reflexes">Les 5 réflexes de survie immédiats (Ce qu'il faut faire)</a></li>
+          <li><a href="#interdits">Les gestes strictement interdits (Danger d'étincelle)</a></li>
+          <li><a href="#sibelga">L'intervention de Sibelga (Réseau public)</a></li>
+          <li><a href="#reparation">La réparation par le chauffagiste agréé (Réseau privé)</a></li>
+          <li><a href="#prevention">Prévenir les fuites : Flexibles, aérations et entretiens</a></li>
+          <li><a href="#faq">FAQ : Les questions sur la sécurité gaz</a></li>
+        </ol>
+      </div>
+
+      <h2 id="reflexes">Les 5 réflexes de survie immédiats</h2>
+      <p>Dès l'instant où l'odeur caractéristique de soufre (le mercaptan) parvient à vos narines, vous devez agir avec calme et méthode. Voici le protocole de sécurité officiel :</p>
+      
+      <ol>
+        <li><strong>Ouvrez grand les fenêtres et les portes :</strong> Créez le plus de courants d'air possible. Le gaz naturel est plus léger que l'air, il va s'échapper rapidement vers l'extérieur au lieu de s'accumuler au plafond, réduisant immédiatement le risque d'explosion.</li>
+        <li><strong>Fermez la vanne générale de gaz :</strong> Si vous savez où se trouve votre compteur de gaz (souvent à la cave ou dans le hall d'entrée), fermez la poignée jaune ou rouge d'un quart de tour.</li>
+        <li><strong>Évitez toute source d'inflammation :</strong> (Voir la section suivante sur les interdits absolus).</li>
+        <li><strong>Évacuez les lieux :</strong> Faites sortir tous les occupants de la maison calmement, y compris les animaux de compagnie. Prévenez vos voisins directs en frappant à leur porte (n'utilisez pas la sonnette électrique !).</li>
+        <li><strong>Appelez les secours depuis l'extérieur :</strong> Une fois dans la rue, appelez <strong>Sibelga au 0800 19 400</strong> (ou le 112 si la situation est déjà critique, comme un incendie naissant).</li>
+      </ol>
+
+      <h2 id="interdits">Les gestes strictement interdits (Danger d'étincelle)</h2>
+      <p>C'est l'erreur classique qui cause des tragédies. Une étincelle microscopique invisible à l'œil nu suffit à enflammer l'air saturé en gaz. Dans un environnement suspect :</p>
+      <ul>
+        <li><strong>NE TOUCHEZ PAS aux interrupteurs :</strong> N'allumez pas et n'éteignez pas la lumière.</li>
+        <li><strong>N'UTILISEZ PAS votre téléphone portable :</strong> Pas d'appel, pas de lampe torche du téléphone. Le téléphone génère de la chaleur et des micro-étincelles internes. Sortez pour appeler.</li>
+        <li><strong>NE TOUCHEZ PAS aux prises électriques :</strong> Ne débranchez aucun appareil (le simple fait de retirer une prise du mur crée souvent un petit arc électrique).</li>
+        <li><strong>N'UTILISEZ PAS d'ascenseur :</strong> Descendez toujours par les escaliers. Le relais électrique de l'ascenseur est une source majeure d'étincelles.</li>
+        <li><strong>NE FUMEZ PAS :</strong> Pas de cigarette, de briquet ou d'allumettes, cela va sans dire.</li>
+      </ul>
+
+      <h2 id="sibelga">L'intervention de Sibelga (Réseau public)</h2>
+      <p>À Bruxelles, Sibelga est le gestionnaire officiel du réseau de distribution. Leur numéro vert (0800 19 400) est disponible 24h/24 et 7j/7. Leur intervention pour une odeur de gaz est totalement <strong>gratuite</strong>.</p>
+      <p>Leur équipe d'intervention rapide arrive généralement dans l'heure. Leur rôle n'est pas de réparer votre chaudière, mais de <strong>sécuriser les lieux</strong>. Ils vont mesurer la concentration de gaz dans l'air, localiser approximativement la fuite. S'ils constatent que la fuite provient de votre installation privée (après le compteur), <strong>ils scelleront votre compteur (pose d'un plomb) pour couper définitivement le gaz</strong> jusqu'à ce que la réparation soit effectuée par un professionnel.</p>
+
+      <div class="blog-cta card">
+        <h3>🚨 Sibelga a coupé votre compteur de gaz ?</h3>
+        <p>Il vous faut un chauffagiste agréé Cerga pour réparer la fuite et vous délivrer l'attestation légale de réouverture. Nos équipes interviennent en urgence.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander une réparation agréée : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="reparation">La réparation par le chauffagiste agréé (Réseau privé)</h2>
+      <p>C'est ici qu'intervient notre entreprise de chauffage. Toute intervention sur une conduite de gaz naturel en Belgique exige des compétences et des habilitations légales très strictes. On ne bricole pas avec le gaz.</p>
+      
+      <h3>Le diagnostic (Test d'étanchéité)</h3>
+      <p>Notre technicien agréé <strong>Cerga (G1)</strong> utilise un "reniflard électronique" (un détecteur de gaz haute sensibilité) pour pister la fuite au millimètre près le long de vos tuyaux en cuivre ou de vos raccords. Ensuite, nous effectuons un "test de pression" en mettant le tuyau sous pression d'air pour vérifier que l'aiguille du manomètre ne chute pas, prouvant que le circuit est étanche.</p>
+
+      <h3>La réparation et l'Attestation</h3>
+      <p>Une fois le tuyau remplacé, la soudure forte (brasage) refaite ou le joint défectueux changé, nous réalisons un dernier test sous pression. Si le test est parfait, nous vous délivrons une <strong>Attestation de Conformité</strong>. Vous pourrez transmettre ce document officiel à Sibelga, qui viendra retirer le scellé de votre compteur et rétablir le gaz en toute légalité.</p>
+
+      <h2 id="prevention">Prévenir les fuites : Flexibles, aérations et entretiens</h2>
+      <p>Pour éviter de revivre cette situation angoissante, quelques règles de bon sens s'imposent dans votre habitation :</p>
+      <ul>
+        <li><strong>Vérifiez vos flexibles :</strong> Le tuyau souple qui relie votre cuisinière au gaz possède une <em>date de péremption</em> imprimée dessus (généralement 5 ou 10 ans). S'il est périmé, le caoutchouc sèche et devient poreux. Remplacez-le par un flexible en inox sans date limite de validité.</li>
+        <li><strong>Ne bouchez jamais les ventilations :</strong> Les grilles d'aération basses et hautes dans la pièce où se trouve la chaudière sont obligatoires. Elles permettent au gaz de s'échapper en cas de micro-fuite, et apportent l'oxygène nécessaire à la combustion. Les boucher (pour éviter le froid) est extrêmement dangereux (risque de création de Monoxyde de Carbone).</li>
+        <li><strong>Faites l'entretien de votre chaudière :</strong> <a href="/blog/entretien-chaudiere-gaz-bruxelles-obligations/" style="color:var(--color-accent);text-decoration:underline;">L'entretien obligatoire tous les 2 ans</a> à Bruxelles permet justement au chauffagiste de vérifier l'étanchéité du bloc-gaz à l'intérieur de la machine.</li>
+      </ul>
+
+      <h2 id="faq">FAQ : Les questions sur la sécurité gaz</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Une Fuite de Gaz Détectée chez Vous ?" subtitle="Après l'intervention de Sibelga, contactez nos experts agréés pour la réparation de vos conduites et la remise en conformité immédiate de votre installation." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Plomberie Cuisine Bruxelles : Aménagement et Éviers";
+const description = "Rénovation de votre plomberie cuisine à Bruxelles ? Pose d'évier, raccordement lave-vaisselle, robinetterie design. Nos plombiers vous conseillent. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Pouvez-vous raccorder un frigo américain à l'arrivée d'eau ?", a: "Oui, nous pouvons tirer une nouvelle conduite d'eau fine (souvent un petit tube souple) depuis le point d'eau le plus proche (comme sous l'évier) et l'amener derrière votre frigo américain pour alimenter le distributeur de glaçons et d'eau fraîche."},
+  {q: "Que faire si la pression d'eau chaude de mon évier de cuisine est trop faible ?", a: "Une faible pression uniquement sur l'eau chaude de la cuisine indique souvent que le filtre du mousseur (au bout du robinet) est bouché par le calcaire. Dévissez-le et trempez-le dans du vinaigre blanc. Si le problème persiste, c'est la cartouche du robinet qui est entartrée."},
+  {q: "Quelles sont les normes d'évacuation pour un lave-vaisselle ou une machine à laver ?", a: "Le tuyau d'évacuation (en PVC gris) pour un lave-vaisselle doit idéalement avoir un diamètre de 40 mm. Il doit comporter un siphon en forme de 'U' pour éviter les mauvaises odeurs d'égout et le tuyau de la machine doit s'y insérer sans être enfoncé trop profondément (risque de siphonnage)."},
+  {q: "Est-il possible de déplacer l'évier sur un autre mur de la cuisine (îlot central) ?", a: "Oui, créer un îlot central avec un point d'eau est tout à fait réalisable. Cependant, l'évacuation des eaux usées étant gravitationnelle (elle a besoin d'une pente de 1 à 2 cm par mètre), il faudra souvent faire passer le tuyau dans la chape du sol ou dans la cave en dessous."},
+  {q: "Combien coûte la pose d'un nouveau mitigeur à douchette pour la cuisine ?", a: "Le tarif d'intervention de notre plombier à Bruxelles pour le remplacement d'un robinet de cuisine par un mitigeur moderne avec douchette extractible est d'environ 120 € à 150 €, hors prix d'achat du robinet lui-même. L'intervention prend moins d'une heure."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Plomberie Cuisine Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🍳 Rénovation Cuisine</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Plomberie Cuisine Bruxelles : Aménager Votre Espace avec Efficacité et Style</h1>
+
+      <p class="blog-intro"><strong>La cuisine est le cœur de la maison, et sa plomberie doit être irréprochable. Que vous installiez une nouvelle cuisine équipée à Bruxelles, que vous rêviez d'un îlot central, ou que vous souhaitiez simplement raccorder un lave-vaisselle, l'intervention d'un plombier qualifié est essentielle.</strong> Une mauvaise gestion des évacuations sous l'évier est la première cause de mauvaises odeurs et de dégâts des eaux. Du choix du mitigeur à douchette professionnel au raccordement de votre frigo américain, nos artisans bruxellois vous garantissent une installation sanitaire fonctionnelle, esthétique et sans fuite, sur les communes d'Ixelles, Woluwe, Anderlecht et environs.</p>
+
+      <p class="blog-intro">On passe de plus en plus de temps dans la cuisine. Autrefois pièce fermée purement utilitaire, elle s'ouvre aujourd'hui sur le salon, se dotant de magnifiques plans de travail et d'appareils électroménagers sophistiqués. Mais pour que cette belle cuisine fonctionne, la logistique de l'eau doit suivre. Les raccordements sous l'évier ressemblent souvent à un véritable casse-tête de tuyaux en PVC et de flexibles. Comment organiser les arrivées d'eau froide et chaude ? Comment garantir une évacuation rapide qui ne se bouchera pas au bout d'un an avec les graisses de cuisson ? Découvrez nos conseils pour réussir l'aménagement plomberie de votre cuisine.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : La plomberie sous l'évier</h2>
+        <ol>
+          <li><a href="#creation">Rénovation ou Îlot central : Modifier les arrivées d'eau</a></li>
+          <li><a href="#evier">Le choix et la pose de l'évier de cuisine</a></li>
+          <li><a href="#robinetterie">Mitigeur, douchette et eau bouillante instantanée</a></li>
+          <li><a href="#electromenager">Le raccordement parfait de l'électroménager</a></li>
+          <li><a href="#odeurs">Le cauchemar des mauvaises odeurs et les siphons</a></li>
+          <li><a href="#faq">FAQ : Vos questions sur la plomberie cuisine</a></li>
+        </ol>
+      </div>
+
+      <h2 id="creation">Rénovation ou Îlot central : Modifier les arrivées d'eau</h2>
+      <p>Lorsqu'on achète une nouvelle cuisine chez un cuisiniste, on a souvent envie de changer la disposition de la pièce. Déplacer l'évier du mur vers un îlot central panoramique est le rêve de beaucoup de Bruxellois.</p>
+      
+      <h3>Déplacer l'eau, c'est possible</h3>
+      <p>Tirer de nouveaux tuyaux d'arrivée d'eau froide et d'eau chaude (en cuivre ou en multicouche) d'un point A à un point B de la cuisine est une opération très facile pour un plombier. Ces tuyaux peuvent cheminer dans le mur (via des saignées) ou dans le vide sanitaire d'un faux plafond.</p>
+
+      <h3>Le véritable défi : L'évacuation des eaux usées</h3>
+      <p>C'est ici que les choses se corsent, surtout pour un îlot central. L'eau s'écoule par gravité. Il faut donc impérativement une "pente" d'écoulement d'au moins 1 à 2 cm par mètre vers la colonne de décharge principale de l'immeuble. Si vous déplacez votre évier au milieu de la pièce, il faudra faire passer ce tuyau d'évacuation (minimum 40 mm de diamètre pour une cuisine) dans le sol. Soit votre chape est assez épaisse pour l'encastrer, soit le plombier devra le faire passer par la cave en dessous, soit vous devrez rehausser le sol de la cuisine.</p>
+
+      <div class="blog-cta card">
+        <h3>🍳 Vous refaites votre cuisine prochainement ?</h3>
+        <p>Ne signez pas les plans du cuisiniste sans avoir vérifié la faisabilité technique de la plomberie ! Nos artisans se déplacent pour valider votre projet d'évacuations.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander une visite technique : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="evier">Le choix et la pose de l'évier de cuisine</h2>
+      <p>L'évier est soumis à rude épreuve tous les jours (chocs de casseroles, eau bouillante, produits détergents acides).</p>
+      <ul>
+        <li><strong>L'évier en Inox :</strong> C'est le grand classique, indestructible et hygiénique (utilisé par les professionnels). Pour éviter les rayures visibles, choisissez un inox "nid d'abeille" ou micro-structuré.</li>
+        <li><strong>L'évier en résine ou granit de synthèse :</strong> Très esthétique, disponible en noir mat ou en blanc pur. Il est extrêmement dur et résistant à la chaleur, mais les éviers noirs nécessitent un essuyage fréquent à Bruxelles à cause des traces blanches laissées par l'eau très calcaire.</li>
+        <li><strong>La pose sous plan :</strong> Si vous avez un plan de travail en pierre ou en quartz, l'évier collé par en-dessous (sous-plan) est magnifique. L'eau et les miettes se poussent directement dans la cuve d'un coup d'éponge.</li>
+      </ul>
+      <p>La pose de l'évier et la réalisation du joint de silicone périphérique doivent être parfaites. Si l'eau s'infiltre sous l'évier, le plan de travail en bois ou en aggloméré va gonfler et pourrir en quelques mois.</p>
+
+      <h2 id="robinetterie">Mitigeur, douchette et eau bouillante instantanée</h2>
+      <p>Fini les deux robinets séparés chaud/froid peu pratiques. Le mitigeur monotrou est roi en cuisine.</p>
+      
+      <h3>Le mitigeur avec douchette extractible</h3>
+      <p>C'est l'outil indispensable. Le bec se détache et se transforme en douchette (grâce à un flexible caché sous l'évier) pour rincer les grands plats, nettoyer les coins de l'évier ou remplir un grand seau posé sur le sol. Attention à choisir des marques fiables (Grohe, Hansgrohe), car les douchettes bas de gamme finissent souvent par fuir à la jonction.</p>
+
+      <h3>Le robinet à eau bouillante (Type Quooker)</h3>
+      <p>C'est la grande tendance dans les cuisines haut de gamme bruxelloises. Ces robinets distribuent directement de l'eau à 100°C (pour le thé ou les pâtes), de l'eau réfrigérée ou même de l'eau pétillante ! Ce système nécessite l'installation d'un petit réservoir (le boiler) et d'un filtre sous l'évier, ainsi qu'une prise de courant dédiée. Nos plombiers sont formés pour raccorder ces équipements de luxe avec précision.</p>
+
+      <h2 id="electromenager">Le raccordement parfait de l'électroménager</h2>
+      <p>Sous votre évier, l'espace est disputé. C'est le point névralgique (le nœud sanitaire) où vient se brancher le lave-vaisselle, et parfois même la machine à laver si vous n'avez pas de buanderie.</p>
+      <p>Chaque appareil doit posséder sa propre vanne d'arrêt d'eau froide (souvent une petite vanne quart de tour, ou un robinet "Shell"). L'erreur fréquente est de brancher l'évacuation (le tuyau gris annelé) du lave-vaisselle directement dans les tuyaux sans passer par un "coupe-odeur" (siphon). Résultat : des odeurs d'égout putrides remontent dans la machine et imprègnent votre vaisselle propre. Nos plombiers installent des siphons avec des "coudes de raccordement" spécifiques pour machines, garantissant une évacuation rapide (pas de refoulement) et sans aucune odeur.</p>
+
+      <h2 id="odeurs">Le cauchemar des mauvaises odeurs et les siphons</h2>
+      <p>C'est le motif d'appel le plus fréquent après le débouchage. "Ma cuisine sent mauvais". Le siphon (la pièce souvent en forme de bouteille sous l'évier) a pour rôle de retenir un fond d'eau, créant ainsi un "bouchon hydraulique" imperméable aux gaz d'égout.</p>
+      <p>Si votre cuisine sent mauvais, plusieurs causes sont possibles :</p>
+      <ul>
+        <li>Le siphon est encrassé par un amas de graisses de cuisson pourrissantes. (Il faut le dévisser et le nettoyer manuellement).</li>
+        <li>Un appel d'air ("siphonnage") a aspiré toute l'eau du siphon dans les tuyaux, le laissant vide et laissant passer les gaz. C'est un problème de conception de l'évacuation globale de l'immeuble. Il faut alors installer un petit clapet "aérateur" (reniflard) sous l'évier pour casser ce vide d'air.</li>
+      </ul>
+
+      <h2 id="faq">FAQ : Vos questions sur la plomberie cuisine</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Besoin d'Aménager la Plomberie de votre Cuisine ?" subtitle="Déplacement d'évier, raccordement de lave-vaisselle ou pose d'un nouveau mitigeur. Nos artisans interviennent proprement et rapidement sur Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

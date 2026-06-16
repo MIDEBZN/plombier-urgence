@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Contrat d'Entretien Chaudière Bruxelles : Le Choix Rentable";
+const description = "Pourquoi souscrire un contrat d'entretien chaudière à Bruxelles ? Obligation légale PEB, dépannages prioritaires en hiver et économies. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Est-ce que l'entretien de ma chaudière gaz est obligatoire à Bruxelles ?", a: "Oui, la Région de Bruxelles-Capitale (législation PEB) impose un 'contrôle périodique' obligatoire tous les 2 ans pour les chaudières fonctionnant au gaz (et tous les ans pour le mazout). Ce contrôle doit être effectué par un technicien agréé (G1) qui vous remet une attestation légale."},
+  {q: "Que couvre exactement un contrat d'entretien annuel ?", a: "Un contrat d'entretien de base inclut la visite planifiée du technicien, le nettoyage du corps de chauffe et du brûleur, la vérification des sécurités, l'analyse des gaz de combustion et la délivrance de l'attestation légale. Les contrats 'Omnium' peuvent inclure la gratuité des dépannages et des pièces de rechange."},
+  {q: "Le contrat me garantit-il une intervention rapide en cas de panne ?", a: "C'est l'un des avantages majeurs. En cas de grand froid à Bruxelles (décembre-janvier), les chauffagistes sont débordés. Les clients sous contrat d'entretien bénéficient toujours de la priorité absolue de dépannage (souvent garanti sous 24h), contrairement aux nouveaux clients qui peuvent attendre plusieurs jours."},
+  {q: "Puis-je changer de chauffagiste pour mon entretien obligatoire ?", a: "Absolument. Vous n'êtes pas lié à vie à l'entreprise qui a installé votre chaudière. Vous pouvez parfaitement choisir une nouvelle entreprise locale (tant qu'elle est agréée) pour reprendre la maintenance et signer un nouveau contrat d'entretien plus avantageux."},
+  {q: "Le locataire doit-il prendre en charge le contrat d'entretien ?", a: "L'entretien périodique est une charge locative. Le locataire doit payer la facture d'entretien (ou les mensualités du contrat) pour 'l'entretien en bon père de famille' de l'appareil. Le propriétaire prendra à sa charge les grosses réparations (ex: remplacement de carte mère) ou le changement de la machine."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Contrat d'Entretien Chaudière</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">📝 Contrat & Sérénité</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Contrat d'Entretien Chaudière Bruxelles : Pourquoi C'est le Choix le Plus Rentable</h1>
+
+      <p class="blog-intro"><strong>Vous appelez un chauffagiste en urgence un 15 décembre à Bruxelles car vos radiateurs sont glacés, et l'on vous répond que le délai d'attente est de deux semaines... Ce cauchemar est le quotidien de ceux qui n'ont pas de contrat d'entretien.</strong> Outre l'obligation légale PEB de faire réviser sa chaudière gaz tous les 2 ans, souscrire à un contrat de maintenance avec une entreprise locale est l'assurance absolue d'être dépanné en priorité VIP lors des vagues de froid. Suivi personnalisé de la machine, économies de gaz par un réglage annuel fin, et tranquillité d'esprit : découvrez pourquoi nos clients bruxellois ont fait le choix de la mensualisation pour sécuriser leur système de chauffage.</p>
+
+      <p class="blog-intro">La chaudière est la machine la plus chère et la plus complexe de votre maison. Elle contient du gaz inflammable, de l'eau sous pression, des cartes électroniques sensibles et du feu. Laisser un tel appareil fonctionner sans surveillance pendant des années, c'est comme rouler en voiture pendant 100 000 kilomètres sans jamais faire la vidange d'huile : la casse moteur est inévitable. À Bruxelles, la loi impose d'ailleurs un contrôle régulier pour des raisons environnementales et sécuritaires. Mais faut-il appeler un chauffagiste au coup par coup (en risquant d'oublier la date fatidique) ou souscrire un contrat d'entretien fixe ? Décryptage des bénéfices souvent méconnus du contrat de maintenance.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : La tranquillité thermique</h2>
+        <ol>
+          <li><a href="#loi">L'obligation légale (PEB) en Région Bruxelloise</a></li>
+          <li><a href="#priorite">Le passe-droit absolu : La priorité de dépannage en hiver</a></li>
+          <li><a href="#economies">Comment le contrat rembourse lui-même son coût</a></li>
+          <li><a href="#assurances">La preuve inattaquable pour votre assurance habitation</a></li>
+          <li><a href="#formules">Les différentes formules (De Base à l'Omnium)</a></li>
+          <li><a href="#faq">FAQ : Tout savoir sur le contrat d'entretien</a></li>
+        </ol>
+      </div>
+
+      <h2 id="loi">L'obligation légale (PEB) en Région Bruxelloise</h2>
+      <p>Commençons par le cadre légal. La Région de Bruxelles-Capitale (Bruxelles Environnement) impose que toute chaudière au gaz (d'une puissance supérieure à 20kW, ce qui inclut les logements résidentiels) subisse un <strong>contrôle périodique PEB obligatoire au moins tous les 2 ans</strong>.</p>
+      <p>L'objectif de cette loi est triple :</p>
+      <ul>
+        <li>Éviter les drames liés aux intoxications au <a href="/blog/fuite-de-gaz-bruxelles-comment-reagir-urgence/" style="color:var(--color-accent);text-decoration:underline;">monoxyde de carbone (CO)</a>.</li>
+        <li>Garantir que l'appareil ne rejette pas trop de particules polluantes (respect de l'environnement).</li>
+        <li>Assurer que la chaudière fonctionne de manière économe.</li>
+      </ul>
+      <p>L'avantage du <strong>contrat d'entretien</strong>, c'est l'automatisation. C'est notre secrétariat qui gère votre calendrier. Un mois avant l'échéance légale, nous vous contactons pour fixer le rendez-vous. Vous ne risquez plus d'être "hors-la-loi" par simple oubli.</p>
+
+      <h2 id="priorite">Le passe-droit absolu : La priorité de dépannage en hiver</h2>
+      <p>C'est sans doute l'argument le plus fort, celui qui convainc tous les propriétaires bruxellois.</p>
+      <p>Le métier de chauffagiste connaît une saisonnalité extrême. De mai à septembre, l'activité est calme. Mais dès que les premières gelées arrivent en novembre, les téléphones n'arrêtent plus de sonner. Lors d'une vague de froid en janvier, une entreprise de chauffage sérieuse ne peut physiquement pas répondre à toutes les nouvelles demandes de dépannage.</p>
+      <p><strong>La règle d'or de la profession : "Nos clients sous contrat d'abord".</strong></p>
+      <p>Si vous avez signé un contrat d'entretien chez nous, vous obtenez le statut de client prioritaire. Si votre chaudière tombe en panne un vendredi soir de janvier, nous garantissons une intervention de notre technicien de garde endéans les 24h ou 48h. Si vous êtes un nouveau client inconnu de nos services qui appelle au même moment, vous serez malheureusement placé sur liste d'attente (parfois jusqu'à 10 jours).</p>
+
+      <div class="blog-cta card">
+        <h3>❄️ Ne restez pas dans le froid cet hiver</h3>
+        <p>Sécurisez la chaleur de votre foyer en souscrivant un contrat d'entretien. Visite planifiée, attestation PEB légale et dépannage ultra-prioritaire à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Renseignements et souscription : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="economies">Comment le contrat rembourse lui-même son coût</h2>
+      <p>Payer une mensualité (ou un forfait annuel) pour l'entretien peut sembler être une charge supplémentaire. En réalité, c'est un investissement qui s'autofinance par les économies générées.</p>
+      
+      <h3>Rendement et Facture Vivaqua/Engie</h3>
+      <p>Pendant la visite annuelle ou bisannuelle incluse dans le contrat, le chauffagiste nettoie la suie accumulée sur le brûleur et le corps de chauffe. Il effectue également l'analyse des gaz avec sa sonde électronique pour régler le mélange air/gaz au millimètre. Une chaudière ainsi révisée retrouve son rendement initial (proche de 100%), consommant jusqu'à <strong>12% de gaz en moins</strong> qu'une chaudière encrassée. Cette seule économie d'énergie couvre généralement le prix du contrat.</p>
+
+      <h3>Prévention des pannes majeures</h3>
+      <p>Le technicien qui connaît votre machine (grâce au suivi de l'historique du contrat) repérera une petite pièce qui commence à fuir. Remplacer un joint préventivement coûte 10€. Attendre que l'eau coule sur la carte mère électronique et la brûle coûte 450€ de réparation.</p>
+
+      <h2 id="assurances">La preuve inattaquable pour votre assurance habitation</h2>
+      <p>En cas de sinistre majeur (comme un incendie démarrant dans la chaufferie ou une explosion de gaz), votre compagnie d'assurance enverra un expert. La première chose qu'il demandera sera de voir l'historique d'entretien de la chaudière.</p>
+      <p>Si vous n'êtes pas en mesure de prouver (par les attestations PEB) que la machine a été régulièrement suivie par un technicien agréé Cerga, l'assurance peut refuser catégoriquement de vous indemniser, arguant d'un "défaut d'entretien en bon père de famille". Le contrat de maintenance est votre bouclier juridique.</p>
+
+      <h2 id="formules">Les différentes formules (De Base à l'Omnium)</h2>
+      <p>Notre entreprise s'adapte à vos besoins avec plusieurs niveaux de sécurité :</p>
+      <ul>
+        <li><strong>Contrat Standard :</strong> Comprend le rappel automatique, le déplacement, la main-d'œuvre de l'entretien préventif (le nettoyage, les mesures) et la délivrance de l'attestation légale. Les éventuels dépannages au cours de l'année restent facturés normalement (mais avec priorité d'intervention).</li>
+        <li><strong>Contrat Confort / Omnium :</strong> En plus de l'entretien obligatoire, cette formule VIP inclut la gratuité totale des déplacements et de la main-d'œuvre en cas de panne dans l'année. Les pièces de rechange peuvent même être incluses selon les conditions. Le budget chauffage devient 100% prévisible, sans aucune mauvaise surprise.</li>
+      </ul>
+
+      <h2 id="faq">FAQ : Tout savoir sur le contrat d'entretien</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Rejoignez Nos Clients Privilégiés" subtitle="Confiez-nous la santé de votre chaudière. Nous vous garantissons un entretien méticuleux, une conformité totale et un dépannage ultra-rapide en hiver à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

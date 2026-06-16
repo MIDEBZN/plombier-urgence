@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Primes RENOLUTION Bruxelles 2026 : Aides Chauffage";
+const description = "Découvrez les Primes RENOLUTION 2026 à Bruxelles pour remplacer votre chauffage. Réduisez vos coûts avec l'aide de nos chauffagistes. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Qui a droit aux Primes RENOLUTION à Bruxelles en 2026 ?", a: "Tous les propriétaires et locataires bruxellois peuvent bénéficier des Primes RENOLUTION. Le montant de l'aide accordée dépend uniquement de vos revenus annuels imposables, divisés en trois catégories (I, II et III) pour favoriser les ménages les plus modestes."},
+  {q: "Une prime est-elle accordée pour l'installation d'une chaudière au gaz ?", a: "En 2026, la Région Bruxelloise concentre ses aides financières sur les énergies renouvelables. L'installation d'une chaudière au gaz classique ne bénéficie plus de primes majeures, contrairement aux pompes à chaleur ou aux chauffe-eaux thermodynamiques fortement subventionnés."},
+  {q: "Quelles sont les conditions techniques pour obtenir la prime chauffage ?", a: "L'installation doit impérativement être réalisée par un entrepreneur inscrit à la BCE et assujetti à la TVA. De plus, le matériel installé (comme la pompe à chaleur) doit respecter des critères de performance énergétique stricts (COP minimum)."},
+  {q: "Quand faut-il introduire la demande de Prime RENOLUTION ?", a: "Contrairement aux anciens systèmes, la demande de Prime RENOLUTION se fait toujours après la réalisation complète des travaux. Vous avez un délai de 12 mois à compter de la date de la dernière facture de solde pour introduire votre dossier en ligne via IRISbox."},
+  {q: "Votre entreprise de chauffage aide-t-elle pour les démarches administratives ?", a: "Oui, en tant que chauffagistes agréés à Bruxelles, nous fournissons toutes les attestations techniques (annexes) et factures détaillées nécessaires à la validation de votre dossier. Nous vous guidons pas à pas pour que votre demande de prime soit acceptée sans délai."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Primes RENOLUTION Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💶 Primes & Aides</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Primes RENOLUTION Bruxelles 2026 : Aides Financières pour Votre Chauffage</h1>
+
+      <p class="blog-intro"><strong>En 2026, rénover son système de chauffage n'a jamais été aussi bien soutenu financièrement grâce aux Primes RENOLUTION à Bruxelles.</strong> Ce dispositif unique simplifie les démarches et offre des montants d'aides très avantageux, particulièrement pour la transition vers les pompes à chaleur et l'énergie renouvelable. Que vous soyez à Ixelles, Uccle ou Molenbeek, remplacer une vieille installation énergivore par une solution moderne peut voir son coût financé jusqu'à 50% selon vos revenus. Découvrez avec nos chauffagistes experts comment maximiser vos droits et réduire votre facture énergétique durablement.</p>
+
+      <p class="blog-intro">La transition énergétique est un défi majeur pour la Région de Bruxelles-Capitale. Pour atteindre les objectifs de neutralité carbone, le gouvernement régional a fusionné les anciennes primes Énergie et primes à la Rénovation pour créer un guichet unique : <strong>RENOLUTION</strong>. Ce système se veut plus simple, plus juste et beaucoup plus incitatif pour les travaux de chauffage, d'isolation et de ventilation. Mais face à la complexité des tableaux de montants et des conditions techniques, de nombreux Bruxellois passent à côté de ces aides. Voici notre guide complet pour comprendre et obtenir votre prime en 2026.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Comprendre les aides bruxelloises</h2>
+        <ol>
+          <li><a href="#principe">Le principe des Primes RENOLUTION en 2026</a></li>
+          <li><a href="#categories">Les 3 catégories de revenus (I, II, III)</a></li>
+          <li><a href="#aides-chauffage">Quels systèmes de chauffage sont subventionnés ?</a></li>
+          <li><a href="#conditions">Les conditions strictes pour éviter le refus</a></li>
+          <li><a href="#demarche">Comment introduire sa demande pas à pas ?</a></li>
+          <li><a href="#pro">Pourquoi faire appel à un chauffagiste agréé ?</a></li>
+          <li><a href="#faq">FAQ : Vos questions fréquentes sur les primes</a></li>
+        </ol>
+      </div>
+
+      <h2 id="principe">Le principe des Primes RENOLUTION en 2026</h2>
+      <p>Le changement fondamental apporté par le système RENOLUTION réside dans son approche "ex-post", c'est-à-dire après les travaux. Auparavant, il fallait demander un accord de principe avant de commencer le chantier, ce qui bloquait de nombreux projets d'urgence (comme le remplacement d'une chaudière tombée en panne en plein hiver).</p>
+      <p>Aujourd'hui, l'approche est simplifiée : vous réalisez les travaux de rénovation thermique, vous payez l'entrepreneur, et vous avez ensuite une année entière pour soumettre votre dossier et récupérer une partie de votre investissement. De plus, les aides visent désormais de manière quasi exclusive la décarbonation. Les combustibles fossiles (gaz, mazout) sont écartés au profit des solutions électriques et renouvelables à haute efficacité énergétique.</p>
+
+      <h2 id="categories">Les 3 catégories de revenus (I, II, III)</h2>
+      <p>L'ambition sociale de Bruxelles se traduit par un système de primes progressif. L'aide financière ne dépend plus de la zone géographique de votre habitation (comme l'ancien système EDLR), mais uniquement des revenus de votre ménage. Plus vos revenus sont modestes, plus la prime est élevée, couvrant parfois l'essentiel du coût d'installation.</p>
+      <ul>
+        <li><strong>Catégorie I (Revenus de base) :</strong> Ce sont les ménages ayant les revenus imposables les plus élevés. Ils ont droit à la prime de base.</li>
+        <li><strong>Catégorie II (Revenus moyens) :</strong> La prime est majorée par rapport au montant de base. La majorité des ménages bruxellois se situent dans cette catégorie.</li>
+        <li><strong>Catégorie III (Revenus faibles) :</strong> La prime est doublée ou triplée pour rendre la rénovation énergétique accessible à tous, sans pénaliser les foyers modestes face aux factures de gaz exorbitantes.</li>
+      </ul>
+      <p><em>Astuce de pro :</em> Sur le site officiel de la Région, un simulateur vous permet de calculer instantanément votre catégorie sur base de votre dernier avertissement-extrait de rôle.</p>
+
+      <h2 id="aides-chauffage">Quels systèmes de chauffage sont subventionnés ?</h2>
+      <p>L'époque où l'on recevait une belle enveloppe pour installer une simple chaudière au gaz est révolue. En 2026, l'argent public finance la transition vers l'écologie.</p>
+
+      <h3>1. Les Pompes à Chaleur (PAC)</h3>
+      <p>C'est le système star des Primes RENOLUTION. Que ce soit une PAC air-eau (pour raccorder à des radiateurs ou un plancher chauffant) ou une PAC géothermique, la prime de base dépasse souvent les milliers d'euros. Pour les ménages de Catégorie III, cette aide peut prendre en charge une énorme partie de la facture. L'installation d'une pompe à chaleur à Bruxelles devient ainsi extrêmement rentable.</p>
+
+      <h3>2. Le Chauffe-eau Thermodynamique</h3>
+      <p>Pour la production exclusive d'eau chaude sanitaire, ce système (qui est une mini pompe à chaleur couplée à un ballon) bénéficie de primes très incitatives, encourageant le remplacement définitif des vieux boilers électriques énergivores.</p>
+
+      <h3>3. La suppression des cuves à mazout</h3>
+      <p>La Région offre également une aide financière (prime G1) pour la mise hors service et l'évacuation d'une ancienne citerne à mazout, une opération coûteuse mais indispensable pour la dépollution des sols bruxellois.</p>
+
+      <div class="blog-cta card">
+        <h3>💡 Vous souhaitez connaître le montant exact de vos aides ?</h3>
+        <p>Nos experts en chauffage évaluent votre projet et calculent pour vous les aides RENOLUTION auxquelles vous avez droit avant même de signer le devis.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander une estimation : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="conditions">Les conditions strictes pour éviter le refus</h2>
+      <p>Rien n'est plus frustrant que de voir son dossier refusé pour un détail administratif ou technique. Pour que la Région de Bruxelles-Capitale valide votre prime, des règles strictes s'appliquent :</p>
+      <ul>
+        <li><strong>L'entrepreneur :</strong> Il est strictement interdit d'installer soi-même sa pompe à chaleur ou de faire appel à un ami bricoleur non déclaré. La facture doit provenir d'une entreprise inscrite à la Banque-Carrefour des Entreprises (BCE) avec les bons codes d'activité (NACE).</li>
+        <li><strong>Les normes du matériel :</strong> Le nouvel équipement doit répondre à des normes européennes très précises (label ErP, coefficient de performance COP minimum, fluide frigorigène autorisé).</li>
+        <li><strong>L'âge du bâtiment :</strong> Généralement, les primes concernent les bâtiments construits depuis plus de 10 ans. Les constructions flambant neuves n'y ont pas droit.</li>
+      </ul>
+
+      <h2 id="demarche">Comment introduire sa demande pas à pas ?</h2>
+      <p>La procédure a été digitalisée à 100% pour accélérer les délais de traitement (qui peuvent tout de même prendre quelques mois).</p>
+      <ol>
+        <li><strong>La réalisation des travaux :</strong> Vous acceptez notre devis, nous installons votre nouveau système de chauffage et procédons à la mise en service.</li>
+        <li><strong>La facturation :</strong> Vous payez la facture totale. Nous vous remettons l'Annexe Technique officielle de la Région Bruxelloise, dûment complétée et signée par notre entreprise.</li>
+        <li><strong>L'introduction via IRISbox :</strong> Vous vous connectez au portail IRISbox avec votre carte d'identité électronique (eID) ou via l'application Itsme.</li>
+        <li><strong>Le téléchargement des pièces :</strong> Vous uploadez la facture finale, la preuve de paiement bancaire, et l'Annexe Technique. Et voilà !</li>
+      </ol>
+
+      <h2 id="pro">Pourquoi faire appel à un chauffagiste agréé ?</h2>
+      <p>Au-delà de l'obligation légale, s'entourer d'un <strong>chauffagiste professionnel à Bruxelles</strong> est une garantie de tranquillité d'esprit. Un système de chauffage mal dimensionné (une pompe à chaleur trop puissante ou trop faible, par exemple) surconsommera et s'usera prématurément, réduisant à néant le bénéfice de la prime perçue.</p>
+      <p>En choisissant notre entreprise d'installation thermique, nous nous engageons à rédiger des factures parfaitement lisibles par l'administration (avec la séparation claire des postes main-d'œuvre et matériel) et à vous fournir toutes les fiches techniques exigées par l'organisme RENOLUTION. Une simple erreur de numéro de série sur la facture peut retarder le paiement de votre aide de plusieurs semaines.</p>
+
+      <h2 id="faq">FAQ : Vos questions fréquentes sur les primes</h3>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Passez aux Énergies Vertes et Profitez des Primes" subtitle="Nos techniciens vous conseillent sur les meilleures pompes à chaleur éligibles aux Primes RENOLUTION à Bruxelles. Devis sans engagement." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

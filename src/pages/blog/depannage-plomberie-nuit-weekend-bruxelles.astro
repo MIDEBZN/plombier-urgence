@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Dépannage Plomberie Nuit et Weekend Bruxelles : Guide Pratique";
+const description = "Besoin d'un plombier en urgence la nuit ou le dimanche à Bruxelles ? Découvrez les tarifs de garde, les bons réflexes et nos services 24/7. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Est-ce normal que le plombier coûte plus cher la nuit ou le week-end ?", a: "Oui, la majoration est une norme légale pour les heures inconfortables. Généralement, une intervention après 18h, le samedi ou le dimanche fait l'objet d'une majoration allant de 50% à 100% sur le taux horaire de la main-d'œuvre. L'essentiel est que le plombier vous annonce ce pourcentage par téléphone avant de venir."},
+  {q: "Que dois-je faire immédiatement si un tuyau éclate en pleine nuit ?", a: "La première chose absolue est de couper l'eau pour limiter les dégâts. Cherchez la vanne d'arrêt générale (le robinet principal situé juste après votre compteur d'eau, souvent à la cave ou au rez-de-chaussée). Fermez-la d'un quart de tour, épongez l'eau pour sécuriser l'électricité, puis appelez un plombier de garde."},
+  {q: "Le plombier de nuit va-t-il remplacer toute ma chaudière défectueuse ?", a: "En principe, non. Le rôle d'un service de garde de nuit est la 'mise en sécurité'. Le chauffagiste va diagnostiquer la panne, arrêter la fuite ou relancer temporairement l'appareil. Si une pièce majeure doit être remplacée, il la commandera chez le fournisseur le lendemain matin pour vous l'installer au tarif normal de jour."},
+  {q: "Comment trouver la vanne d'arrêt d'eau dans mon appartement ?", a: "Dans les appartements récents, la vanne d'arrêt se trouve souvent dans la gaine technique palière ou derrière une trappe d'accès dans les toilettes ou la salle de bain. Dans les vieilles maisons bruxelloises, elle est presque toujours située dans la cave, au niveau de la façade côté rue."},
+  {q: "Mon assurance habitation rembourse-t-elle l'intervention d'urgence du plombier ?", a: "Cela dépend de votre contrat d'assurance. En général, l'assurance rembourse les dégâts causés par l'eau (peinture abîmée, parquet gonflé). Certaines garanties 'assistance' prennent en charge le déplacement et la 1ère heure de main-d'œuvre du plombier. La facture de la réparation du tuyau (la cause) reste souvent à votre charge."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Dépannage Nuit et Weekend</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🌙 Urgence & Garde</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Dépannage Plomberie Nuit et Weekend Bruxelles : Ce Qu'il Faut Savoir</h1>
+
+      <p class="blog-intro"><strong>Un tuyau qui éclate à 3 heures du matin, une chaudière qui lâche un samedi de grand froid ou un WC totalement bouché le dimanche soir... L'urgence sanitaire ne prévient pas. À Bruxelles, faire appel à un plombier de garde la nuit ou le week-end est possible, mais cela demande de garder son sang-froid.</strong> Faut-il appeler immédiatement ou attendre le lundi matin ? Quels sont les gestes de mise en sécurité (comme couper la vanne générale) que vous devez réaliser vous-même avant l'arrivée des secours ? Et surtout, comment fonctionnent les tarifs majorés légaux pour éviter les mauvaises surprises ? Notre service de dépannage 24/7 vous explique tout.</p>
+
+      <p class="blog-intro">La plomberie est le nerf sensible de la maison. Quand tout fonctionne, on l'oublie. Mais lorsque l'eau commence à couler du plafond en pleine nuit, c'est la panique absolue. Contrairement aux commerces, une entreprise de plomberie qui assure un service de "Garde" possède des techniciens d'astreinte, prêts à sauter dans leur camionnette à n'importe quelle heure pour traverser la capitale et sécuriser votre habitation. Cependant, ce service d'exception a un coût. Avant de composer le numéro d'urgence, il est crucial d'évaluer la gravité de la situation et de connaître les règles du jeu du dépannage de nuit en Région Bruxelloise.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire de l'urgence plomberie</h2>
+        <ol>
+          <li><a href="#reflexes">Les premiers réflexes avant d'appeler le plombier</a></li>
+          <li><a href="#vraie-urgence">Qu'est-ce qu'une vraie urgence de nuit ? (Critères)</a></li>
+          <li><a href="#tarifs">Comprendre les tarifs : La majoration nuit et dimanche</a></li>
+          <li><a href="#assurance">Le rôle de l'assurance incendie / dégâts des eaux</a></li>
+          <li><a href="#service">Notre service de garde SOS Plomberie à Bruxelles</a></li>
+          <li><a href="#faq">FAQ : Vos questions sur le dépannage de nuit</a></li>
+        </ol>
+      </div>
+
+      <h2 id="reflexes">Les premiers réflexes avant d'appeler le plombier</h2>
+      <p>Avant même de décrocher votre téléphone, vous devez stopper l'hémorragie pour limiter l'ampleur des dégâts matériels.</p>
+      
+      <h3>Couper l'alimentation en eau</h3>
+      <p>C'est LE geste de survie. Chaque membre de la famille devrait savoir où se trouve la <strong>vanne d'arrêt générale d'eau</strong>. Elle est toujours située juste après le compteur d'eau (souvent géré par Vivaqua à Bruxelles). Elle se trouve généralement dans la cave, ou dans un placard technique dans le hall d'entrée. Tournez la manette d'un quart de tour (ou vissez le robinet rouge à fond dans le sens des aiguilles d'une montre). Une fois l'eau coupée, le stress redescend. Ouvrez ensuite un robinet au rez-de-chaussée pour purger la pression résiduelle dans les tuyaux.</p>
+
+      <h3>Sécuriser l'électricité</h3>
+      <p>Si l'eau fuit près d'une prise de courant, d'un lustre ou directement sur le boîtier électrique, allez immédiatement à votre tableau électrique et <strong>coupez le disjoncteur différentiel général</strong>. L'eau et l'électricité forment un mélange mortel (électrocution, incendie).</p>
+
+      <h2 id="vraie-urgence">Qu'est-ce qu'une vraie urgence de nuit ? (Critères)</h2>
+      <p>Toutes les pannes ne nécessitent pas de payer une majoration nocturne. Savoir faire la différence entre l'inconfort et le danger vous fera économiser beaucoup d'argent.</p>
+
+      <ul>
+        <li><strong>La Vraie Urgence (Appel immédiat) :</strong> La rupture d'une canalisation principale que vous ne pouvez pas couper, un refoulement massif d'égouts (l'eau sale remonte dans la baignoire ou l'évier), la forte <a href="/blog/fuite-de-gaz-bruxelles-comment-reagir-urgence/" style="color:var(--color-accent);text-decoration:underline;">odeur de gaz de ville</a>, ou une panne totale de chauffage par une température extérieure négative avec des enfants en bas âge ou des personnes âgées dans la maison.</li>
+        <li><strong>L'Urgence relative (Attendre le matin) :</strong> Un robinet qui fait du goutte-à-goutte intensif, un WC qui fuit légèrement dans la cuvette (il suffit de fermer le petit robinet Shell situé à côté de la toilette pour la nuit), ou l'évier de la cuisine bouché (vous pouvez utiliser le lavabo de la salle de bain jusqu'au lendemain). Dans ces cas, fermez l'arrivée d'eau locale et appelez le plombier le lendemain à 8h pour un tarif de jour normal.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>🚨 Fuite incontrôlable ou panne totale de chauffage ?</h3>
+        <p>Notre équipe de garde est mobilisée 24h/24 et 7j/7 pour les interventions urgentes sur Bruxelles. Nous sécurisons votre maison dans l'heure.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 SOS Plomberie : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="tarifs">Comprendre les tarifs : La majoration nuit et dimanche</h2>
+      <p>L'intervention d'un technicien qui quitte son lit à 2h du matin pour réparer vos tuyaux est soumise à des règles tarifaires spécifiques, parfaitement légales en Belgique.</p>
+      
+      <p>Lors d'un dépannage en "heures inconfortables" (généralement entre 18h00 et 07h00 du matin, ainsi que les samedis, dimanches et jours fériés), les entreprises appliquent <strong>une majoration</strong>. Celle-ci varie souvent entre 50% et 100% selon l'heure et le jour. Cette majoration s'applique sur le taux horaire de la main-d'œuvre et sur les frais de déplacement. En revanche, le prix des pièces de rechange (un joint, un raccord) reste identique à celui de la journée.</p>
+      <p><em>Le conseil en or :</em> Un plombier honnête annoncera TOUJOURS ses tarifs de garde et son pourcentage de majoration par téléphone avant de confirmer l'intervention. Si la personne refuse de donner un prix indicatif, passez au numéro suivant pour <a href="/blog/choisir-plombier-bruxelles-pieges-a-eviter/" style="color:var(--color-accent);text-decoration:underline;">éviter les arnaques de dépannage</a>.</p>
+
+      <h2 id="assurance">Le rôle de l'assurance incendie / dégâts des eaux</h2>
+      <p>En cas de rupture de canalisation ou d'inondation, votre assurance habitation entre en jeu. Prenez toujours un maximum de <strong>photos de la fuite et des dégâts matériels</strong> avant l'arrivée du plombier. Ces preuves seront cruciales pour votre dossier de sinistre.</p>
+      <p>Notez bien que l'assurance rembourse généralement les dégâts causés par l'eau (la peinture à refaire, le meuble gonflé). Cependant, la réparation de la cause du problème (la facture du plombier pour le morceau de tuyau remplacé) reste très souvent à votre charge, à moins que vous n'ayez souscrit à une option d'assistance habitation spécifique.</p>
+
+      <h2 id="service">Notre service de garde SOS Plomberie à Bruxelles</h2>
+      <p>Nous avons structuré notre entreprise pour répondre aux détresses sanitaires des Bruxellois (Forest, Molenbeek, Etterbeek, Ixelles...). Notre priorité de nuit est la "mise en sécurité" : arrêter la fuite, sécuriser le gaz, déboucher la canalisation principale. Si un gros remplacement de pièce est nécessaire (comme le changement complet d'un chauffe-eau), le technicien sécurisera l'installation la nuit et vous proposera un devis pour effectuer le remplacement définitif le lendemain au tarif normal, vous évitant de payer des heures de nuit au prix fort.</p>
+
+      <h2 id="faq">FAQ : Vos questions sur le dépannage de nuit</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Une Urgence Plomberie en Pleine Nuit ?" subtitle="Gardez votre calme. Fermez la vanne d'eau et contactez notre service de garde pour une intervention rapide, transparente et professionnelle." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

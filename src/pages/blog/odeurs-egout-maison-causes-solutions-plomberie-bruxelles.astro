@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Odeurs d'Égout Maison Bruxelles : Causes et Solutions Plomberie";
+const description = "Des odeurs d'égout envahissent votre maison à Bruxelles ? Découvrez les causes (siphon sec, micro-fuites) et les solutions de nos plombiers. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Pourquoi ma salle de bain sent-elle soudainement l'égout ?", a: "La cause la plus fréquente est un siphon asséché. Le siphon de votre douche ou lavabo contient une réserve d'eau qui bloque les gaz d'égout. Si vous ne l'utilisez pas pendant plusieurs jours, l'eau s'évapore et les odeurs nauséabondes remontent librement dans la pièce."},
+  {q: "Comment résoudre le problème d'un siphon asséché ?", a: "La solution est extrêmement simple : il suffit de faire couler de l'eau froide pendant une dizaine de secondes dans le lavabo ou la douche concernée pour recréer le 'bouchon hydraulique'. Faites-le systématiquement à votre retour de vacances."},
+  {q: "Qu'est-ce que le phénomène de siphonnage qui cause des odeurs ?", a: "Le siphonnage se produit lorsqu'une grande quantité d'eau (comme la chasse d'un WC) descend dans le tuyau principal. Cela crée une aspiration (un vide d'air) qui 'aspire' l'eau des siphons voisins (ex: le lavabo). Le siphon se vide et laisse passer les odeurs d'égout."},
+  {q: "Comment empêcher le siphonnage dans mon appartement ?", a: "Il faut installer un 'aérateur à membrane' (aussi appelé clapet anti-vide ou reniflard) sur votre tuyauterie. Ce petit clapet laisse entrer l'air pour casser l'aspiration lorsque vous tirez la chasse, mais se referme hermétiquement pour bloquer les odeurs."},
+  {q: "Les odeurs d'égout peuvent-elles provenir d'une fuite cachée ?", a: "Oui, une micro-fissure sur un tuyau d'évacuation en PVC caché derrière un mur en Placo ou dans un faux-plafond laissera s'échapper des gaz d'égout nauséabonds avant même que l'eau ne commence à faire une tache visible. Une inspection par caméra est alors nécessaire."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Odeurs d'Égout Maison</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">👃 Diagnostic Plomberie</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Odeurs d'Égout dans la Maison : Causes et Solutions de Plomberie à Bruxelles</h1>
+
+      <p class="blog-intro"><strong>Une odeur d'égout persistante dans votre maison n'est pas seulement désagréable, c'est le signe d'une faille dans votre système de plomberie. Du siphon asséché à la fissure invisible dans la colonne d'évacuation, ces gaz nauséabonds (sulfure d'hydrogène) ne devraient jamais pénétrer vos pièces de vie.</strong> À Bruxelles, où les immeubles anciens partagent souvent des colonnes de décharge communes et vieillissantes, le problème est fréquent. Inutile de masquer le problème avec des sprays parfumés : découvrez comment nos artisans plombiers diagnostiquent l'origine de ces effluves et appliquent les solutions techniques pour vous rendre un air pur et sain.</p>
+
+      <p class="blog-intro">Il n'y a rien de plus frustrant que de nettoyer sa salle de bain de fond en comble et de constater qu'une tenace odeur de fosse septique ou d'œuf pourri flotte toujours dans l'air. Ces odeurs sont en réalité des gaz d'égout. Normalement, l'architecture même de votre plomberie (les fameux siphons en forme de U) est conçue spécifiquement pour créer une barrière étanche contre ces gaz. Si l'odeur est là, c'est que la barrière est rompue. Avant d'appeler notre service d'urgence à Ixelles, Uccle ou Woluwe, voici les causes les plus probables et les vérifications que vous pouvez faire vous-même.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Traquer les mauvaises odeurs</h2>
+        <ol>
+          <li><a href="#siphon">Le coupable n°1 : Le siphon asséché ou encrassé</a></li>
+          <li><a href="#siphonnage">Le problème invisible : Le siphonnage et les appels d'air</a></li>
+          <li><a href="#raccordement">Les erreurs de raccordement (Lave-vaisselle & Machine)</a></li>
+          <li><a href="#fuite">La micro-fuite sur les évacuations encastrées</a></li>
+          <li><a href="#camera">L'inspection par caméra : La solution ultime</a></li>
+          <li><a href="#faq">FAQ : Tout savoir sur les odeurs de plomberie</a></li>
+        </ol>
+      </div>
+
+      <h2 id="siphon">Le coupable n°1 : Le siphon asséché ou encrassé</h2>
+      <p>C'est de loin la cause la plus courante et la plus facile à réparer. Le siphon (cette pièce coudée sous l'évier ou la douche) a un rôle vital : il retient un fond d'eau en permanence. Cette eau agit comme un "bouchon" totalement imperméable aux gaz qui remontent des égouts de la rue.</p>
+      
+      <h3>Le siphon sec (Au retour de vacances)</h3>
+      <p>Si vous avez une salle de bain d'amis ou un lavabo dans la buanderie que vous n'utilisez presque jamais, l'eau présente dans le siphon va finir par s'évaporer. Résultat : le tuyau est directement ouvert sur les égouts. <strong>La solution :</strong> Faites simplement couler de l'eau froide pendant 10 secondes dans tous les points d'eau de la maison inutilisés depuis plus d'une semaine.</p>
+
+      <h3>Le siphon encrassé</h3>
+      <p>Dans la cuisine, le fond du siphon peut se remplir d'un mélange de graisse de cuisson, de résidus alimentaires et de savon. Cette boue organique pourrit sur place, générant sa propre odeur putride, indépendamment des égouts de la rue. <strong>La solution :</strong> Placez un seau sous le siphon, dévissez-le à la main, videz les crasses et nettoyez-le à l'eau chaude.</p>
+
+      <div class="blog-cta card">
+        <h3>👃 L'odeur persiste malgré le nettoyage des siphons ?</h3>
+        <p>Le problème est plus profond. Nos plombiers disposent d'équipements de détection (fumigènes, caméras) pour trouver la faille dans vos canalisations à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander un diagnostic : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="siphonnage">Le problème invisible : Le siphonnage et les appels d'air</h2>
+      <p>C'est un phénomène physique très fréquent dans les immeubles bruxellois mal conçus (ou rénovés sans respecter les règles de l'art de la plomberie). Vous entendez un grand "glouglou" dans l'évier de la salle de bain juste après avoir tiré la chasse d'eau des toilettes ? Vous êtes victime de siphonnage.</p>
+      
+      <p><strong>L'explication :</strong> La masse d'eau de la chasse descend à toute vitesse dans la colonne principale. Elle agit comme un piston et crée un "vide d'air" (une dépression) derrière elle. Pour combler ce vide, la canalisation aspire l'air là où elle le peut : dans le siphon de votre lavabo. L'eau du siphon est aspirée, le siphon se vide, et les odeurs passent.</p>
+
+      <p><strong>La solution du plombier :</strong> L'installation d'un <strong>"aérateur à membrane" (ou reniflard)</strong>. Ce petit clapet se place sur le tuyau sous le lavabo. Il laisse entrer l'air de la pièce pour casser l'effet d'aspiration, mais se referme hermétiquement pour empêcher l'odeur de sortir. C'est magique et redoutablement efficace.</p>
+
+      <h2 id="raccordement">Les erreurs de raccordement (Lave-vaisselle & Machine)</h2>
+      <p>Une mauvaise installation de l'électroménager est une source classique de mauvaises odeurs dans la cuisine ou la buanderie.</p>
+      <ul>
+        <li><strong>L'absence de siphon :</strong> Si le tuyau d'évacuation de votre machine à laver est enfoncé directement dans un tuyau en PVC droit qui part vers l'égout, sans aucun siphon en "U" intermédiaire, les odeurs remontent directement à l'intérieur de la machine (qui sentira mauvais même vide).</li>
+        <li><strong>Le tuyau enfoncé trop loin :</strong> Si vous enfoncez le tuyau annelé gris du lave-vaisselle trop profondément dans le siphon mural, le bout du tuyau plonge dans la "garde d'eau" et crée un auto-siphonnage. La machine se vide mal et sent mauvais.</li>
+      </ul>
+
+      <h2 id="fuite">La micro-fuite sur les évacuations encastrées</h2>
+      <p>Parfois, les siphons sont pleins et les machines bien raccordées, mais l'odeur d'égout est persistante dans un couloir ou derrière une cloison en Gyproc. C'est le scénario le plus redouté : la fuite sur évacuation.</p>
+      <p>Le vieux tuyau en fonte de la colonne principale est peut-être fissuré, ou un raccord PVC collé il y a 20 ans a cédé. Avant même qu'une goutte d'eau usée ne s'infiltre pour tacher votre mur, les gaz d'égout (qui sont très volatils) s'échappent par cette micro-fissure et se répandent dans la lame d'air derrière vos murs. C'est très fréquent dans les anciennes maisons de maître bruxelloises divisées en appartements.</p>
+
+      <h2 id="camera">L'inspection par caméra : La solution ultime</h2>
+      <p>Pour débusquer ces fissures invisibles sans devoir démolir vos murs à l'aveugle, notre entreprise utilise des technologies de pointe :</p>
+      <ul>
+        <li><strong>L'inspection par caméra endoscopique :</strong> Nous glissons une caméra miniature dans vos canalisations pour inspecter chaque centimètre de paroi depuis l'intérieur. Nous pouvons localiser avec précision les fissures, les racines intrusives ou les affaissements de terrain.</li>
+        <li><strong>Le test au fumigène :</strong> Nous injectons une fumée non toxique et sous pression dans votre réseau d'égouttage. Si la fumée ressort par une plinthe, un faux-plafond ou une prise électrique, nous avons localisé la fuite de gaz !</li>
+      </ul>
+      <p>Ne vivez plus avec des odeurs incommodantes. Nos experts plombiers diagnostiquent et réparent ces anomalies sur l'ensemble de la Région de Bruxelles-Capitale.</p>
+
+      <h2 id="faq">FAQ : Tout savoir sur les odeurs de plomberie</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Des Odeurs d'Égout Persistent Chez Vous ?" subtitle="Ne masquez plus le problème. Faites appel à nos plombiers équipés pour diagnostiquer et stopper définitivement les remontées d'odeurs à Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

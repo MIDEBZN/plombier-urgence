@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Certificat PEB Bruxelles : L'Impact de Votre Chauffage";
+const description = "Le certificat PEB est obligatoire pour vendre ou louer à Bruxelles. Découvrez comment l'optimisation de votre chaudière peut améliorer radicalement votre score PEB. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Qu'est-ce que le certificat PEB à Bruxelles ?", a: "Le certificat PEB (Performance Énergétique des Bâtiments) est la 'carte d'identité énergétique' de votre habitation. Il évalue la consommation d'énergie du bien sur une échelle de A (très économe) à G (passoire thermique). Il est légalement obligatoire en cas de vente ou de mise en location à Bruxelles."},
+  {q: "Le remplacement de ma vieille chaudière améliore-t-il vraiment mon PEB ?", a: "Oui, c'est l'un des moyens les plus rapides d'améliorer son score. Remplacer une vieille chaudière atmosphérique des années 90 par une chaudière à condensation à haut rendement (ou mieux, une pompe à chaleur) réduit drastiquement la consommation calculée, ce qui peut vous faire sauter d'une lettre (ex: de E à D)."},
+  {q: "Les vannes thermostatiques ont-elles un impact sur le calcul du PEB ?", a: "Tout à fait. L'auditeur PEB vérifiera si vos radiateurs sont équipés de vannes thermostatiques et si vous possédez un thermostat d'ambiance régulé. Ces outils de contrôle de la chaleur sont valorisés positivement dans l'algorithme de calcul du certificat bruxellois."},
+  {q: "Faut-il prouver l'entretien de la chaudière au certificateur PEB ?", a: "Oui. Lors de sa visite, le certificateur vous demandera la dernière 'Attestation de Contrôle Périodique PEB' (l'entretien de la chaudière) délivrée par votre chauffagiste agréé. Si ce document manque ou n'est pas conforme, cela pénalisera la note énergétique globale de l'installation."},
+  {q: "Pourquoi le score PEB de mon appartement bruxellois est-il si mauvais (F ou G) ?", a: "Le parc immobilier bruxellois est ancien. Sans isolation des murs par l'extérieur, sans double vitrage isolant (châssis) et avec de vieux systèmes de chauffage central collectifs ou des chaudières obsolètes, les pertes thermiques sont énormes, justifiant malheureusement ces scores F ou G (les passoires énergétiques)."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">PEB Bruxelles et Chauffage</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">📜 Législation & PEB</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Certificat PEB Bruxelles : L'Impact Majeur de Votre Système de Chauffage</h1>
+
+      <p class="blog-intro"><strong>Le certificat PEB (Performance Énergétique des Bâtiments) est devenu le sésame incontournable du marché immobilier à Bruxelles. Si un mauvais score (F ou G) fait fuir les acheteurs et limite vos droits d'indexation des loyers, l'optimisation de votre plomberie et de votre chauffage est la clé pour inverser la tendance.</strong> Saviez-vous que le remplacement d'une vieille chaudière au gaz ou l'installation de simples vannes thermostatiques sur vos radiateurs peuvent considérablement améliorer votre score final ? Découvrez comment nos chauffagistes agréés vous aident à valoriser votre patrimoine immobilier en Région de Bruxelles-Capitale avant le passage de l'expert PEB.</p>
+
+      <p class="blog-intro">Le gouvernement de la Région de Bruxelles-Capitale serre la vis concernant l'efficacité énergétique des bâtiments. Face à l'urgence climatique, la "chasse aux passoires thermiques" est ouverte. Désormais, chaque annonce immobilière pour une vente ou une location doit afficher publiquement la lettre du certificat PEB. Un appartement classé "A" se vendra très vite et à prix d'or. Un appartement classé "G" verra son prix négocié à la baisse, l'acheteur anticipant les énormes coûts de rénovation nécessaires. Si l'isolation des murs et du toit est le chantier le plus connu, le système de chauffage et de production d'eau chaude pèse d'un poids immense dans le calcul final. Décryptage.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Comprendre et améliorer son PEB</h2>
+        <ol>
+          <li><a href="#definition">Qu'est-ce que le PEB et pourquoi est-il si sévère à Bruxelles ?</a></li>
+          <li><a href="#chaudiere">Le poids de la chaudière dans l'algorithme PEB</a></li>
+          <li><a href="#regulation">Vannes thermostatiques et Thermostat d'ambiance</a></li>
+          <li><a href="#eau-chaude">La production d'Eau Chaude Sanitaire (Boilers)</a></li>
+          <li><a href="#documents">Les preuves de l'entretien (Attestation PEB)</a></li>
+          <li><a href="#faq">FAQ : Questions fréquentes sur le certificat PEB</a></li>
+        </ol>
+      </div>
+
+      <h2 id="definition">Qu'est-ce que le PEB et pourquoi est-il si sévère à Bruxelles ?</h2>
+      <p>Le certificat PEB évalue l'efficacité énergétique d'une habitation dans des conditions d'utilisation standardisées. Il calcule la quantité d'énergie nécessaire pour chauffer la maison, produire l'eau chaude, ventiler et parfois refroidir l'espace. Le résultat s'exprime en kWh/m²/an et se traduit par une lettre allant du Vert Foncé (A, très bon) au Rouge Foncé (G, très mauvais).</p>
+      <p>L'algorithme utilisé par Bruxelles Environnement est réputé pour être particulièrement strict. Il pénalise fortement les bâtiments construits avant 1970 (qui composent l'essentiel des quartiers d'Ixelles, Saint-Gilles ou Schaerbeek) et les énergies fossiles. Dès 2033, l'Europe imposera l'interdiction de location des logements classés F et G. L'amélioration de votre score n'est donc plus un luxe, c'est une nécessité légale.</p>
+
+      <h2 id="chaudiere">Le poids de la chaudière dans l'algorithme PEB</h2>
+      <p>Lors de sa visite, le certificateur PEB passe de longues minutes devant votre chaudière. Il va relever la marque, le modèle, l'année de fabrication et surtout, la technologie utilisée. C'est le cœur du calcul des "déperditions".</p>
+      
+      <h3>La vieille chaudière atmosphérique (Le boulet)</h3>
+      <p>Si vous possédez encore une ancienne chaudière au gaz naturel qui a plus de 15 ans (sans système de condensation), le logiciel PEB considérera que son rendement est médiocre (souvent inférieur à 70%). Cela signifie que pour 100€ de gaz acheté, 30€ partent littéralement en fumée par la cheminée. Le score PEB s'effondre.</p>
+
+      <h3>Le remplacement par la Condensation ou la PAC (Le boost)</h3>
+      <p>Le moyen le plus efficace d'améliorer son PEB sans casser l'isolation des murs (ce qui est souvent impossible en façade classée à Bruxelles) est d'installer une chaudière à condensation (rendement proche de 100%) ou, idéalement, <a href="/blog/pompe-a-chaleur-bruxelles-guide-installation/" style="color:var(--color-accent);text-decoration:underline;">une pompe à chaleur air/eau</a>. La PAC produisant plus d'énergie qu'elle n'en consomme, son impact positif sur le logiciel de certification est massif, permettant très souvent de gagner 1 ou 2 lettres sur l'échelle.</p>
+
+      <div class="blog-cta card">
+        <h3>📈 Vous allez vendre ou louer votre bien ?</h3>
+        <p>Ne laissez pas une vieille chaudière plomber le prix de votre appartement. Demandez un devis pour moderniser votre chauffage et valoriser votre bien immobilier.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Devis Remplacement Chaudière : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="regulation">Vannes thermostatiques et Thermostat d'ambiance</h2>
+      <p>Le PEB ne sanctionne pas seulement la façon dont la chaleur est produite, mais aussi comment elle est distribuée et régulée. Produire de la chaleur c'est bien, mais si les radiateurs chauffent à fond des pièces inoccupées, c'est du gaspillage pur et simple.</p>
+      <p>Le certificateur vérifiera :</p>
+      <ul>
+        <li><strong>Le Thermostat :</strong> Un thermostat d'ambiance programmable dans la pièce de vie permet au logiciel de considérer que le chauffage est coupé la nuit.</li>
+        <li><strong>Les Vannes Thermostatiques :</strong> Si vos radiateurs sont équipés de vieilles vannes manuelles en plastique qu'il faut tourner à fond, vous serez pénalisé. Nos plombiers remplacent ces vieilles vannes par des têtes thermostatiques modernes qui régulent finement la température de chaque pièce, ce qui apporte des points précieux au PEB.</li>
+        <li><strong>L'isolation des tuyaux :</strong> Le certificateur vérifiera si les tuyaux de chauffage qui traversent la cave ou le garage sont recouverts de mousse isolante. C'est une intervention peu coûteuse qui rapporte facilement quelques points.</li>
+      </ul>
+
+      <h2 id="eau-chaude">La production d'Eau Chaude Sanitaire (Boilers)</h2>
+      <p>C'est le deuxième poste énergétique de la maison. Le logiciel bruxellois pénalise fortement les anciens <strong>boilers électriques à accumulation</strong> qui fonctionnent en permanence. Le simple fait de remplacer un vieux ballon rouillé par un chauffe-eau thermodynamique (qui récupère la chaleur de l'air) divise par 3 la consommation électrique théorique de la maison, ce qui impacte drastiquement le certificat final.</p>
+      <p>De même, si votre chaudière gaz se charge également de l'eau chaude (système combiné), et si les canalisations d'eau chaude (jusqu'à la salle de bain) sont courtes et isolées, le PEB vous sera favorable.</p>
+
+      <h2 id="documents">Les preuves de l'entretien (Attestation PEB)</h2>
+      <p>Pour l'auditeur, ce qui n'est pas prouvé n'existe pas. Si vous avez une chaudière à condensation flambant neuve mais que vous ne pouvez pas fournir le manuel technique ou les étiquettes ErP, l'auditeur utilisera des "valeurs par défaut", qui sont très pénalisantes.</p>
+      <p>Plus important encore : l'obligation légale d'entretien. L'auditeur exigera de voir votre <strong>Attestation de Contrôle Périodique</strong> (réalisée tous les 2 ans pour le gaz). Si votre chaudière n'est pas entretenue par un technicien agréé Cerga, elle sera considérée comme "défaillante" ou obsolète. Nos chauffagistes vous remettent à chaque intervention les documents officiels conformes aux exigences de Bruxelles Environnement, prêts à être présentés à votre auditeur PEB ou à votre notaire.</p>
+
+      <h2 id="faq">FAQ : Questions fréquentes sur le certificat PEB</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Optimisez Votre Chauffage avant le Passage du PEB" subtitle="Nos chauffagistes remplacent vos vannes thermostatiques, isolent vos conduites et installent des chaudières à haut rendement pour améliorer la valeur de votre habitation." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

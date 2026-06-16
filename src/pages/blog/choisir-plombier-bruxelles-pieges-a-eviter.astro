@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Comment Choisir son Plombier à Bruxelles : Pièges à Éviter";
+const description = "Besoin d'un dépannage urgent ? Découvrez nos conseils pour choisir le bon plombier à Bruxelles et éviter les arnaques. Numéros TVA, agréments et transparence. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Comment savoir si un plombier à Bruxelles est fiable ?", a: "Un plombier fiable affiche publiquement son numéro de TVA (BCE) sur son site internet. Il accepte toujours de vous donner une estimation de prix par téléphone avant d'intervenir, ne vous pousse pas à tout remplacer immédiatement et vous fournit une facture détaillée après l'intervention."},
+  {q: "Qu'est-ce que l'agrément Cerga et pourquoi est-il important ?", a: "L'agrément Cerga est une certification officielle belge indispensable pour tout chauffagiste qui intervient sur une installation au gaz (chaudière, fuite de gaz). C'est la garantie que l'artisan a suivi une formation stricte sur les normes de sécurité en vigueur à Bruxelles pour éviter tout risque d'explosion."},
+  {q: "Est-ce normal de payer des frais de déplacement élevés pour une urgence ?", a: "Les frais de déplacement sont normaux en plomberie. Ils varient généralement entre 40€ et 80€ à Bruxelles. S'ils dépassent 100€ pour un trajet au sein de la capitale, c'est abusif. Attention, les interventions de nuit ou le week-end impliquent toujours une majoration légale des tarifs."},
+  {q: "Comment éviter les arnaques lors d'un dépannage plomberie de nuit ?", a: "La règle d'or est de toujours demander le tarif (déplacement + heure de main-d'œuvre majorée) par téléphone. Si l'interlocuteur reste vague et dit 'On verra sur place', refusez poliment. Ne signez aucun papier avant le diagnostic et refusez le remplacement immédiat d'une pièce très chère (ex: chauffe-eau) en pleine nuit."},
+  {q: "Les devis de plomberie sont-ils généralement gratuits à Bruxelles ?", a: "Pour des travaux de rénovation ou l'installation d'une nouvelle chaudière, un devis sérieux après visite technique est généralement gratuit. En revanche, pour un dépannage (recherche de fuite, débouchage), l'artisan se déplace pour réparer : il y a donc facturation du déplacement et de la première heure de travail."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Choisir son Plombier Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">💡 Conseils & Confiance</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Comment Choisir son Plombier à Bruxelles : Pièges à Éviter et Critères de Confiance</h1>
+
+      <p class="blog-intro"><strong>L'eau monte dans la salle de bain, c'est la panique, vous cherchez un numéro en urgence sur votre téléphone. C'est précisément dans ce moment de stress que les arnaques au dépannage se produisent. Comment trouver un plombier honnête et compétent à Bruxelles ?</strong> Entre les publicités trompeuses en tête des moteurs de recherche et les factures exorbitantes non justifiées, le marché du dépannage sanitaire souffre parfois d'une mauvaise réputation. Agrément Cerga, transparence des tarifs, et clarté du devis : découvrez nos conseils d'experts pour confier les clés de votre maison à un artisan fiable et dormir sur vos deux oreilles.</p>
+
+      <p class="blog-intro">Trouver un bon artisan est souvent comparé à trouver un bon médecin : on a besoin de confiance absolue. À Bruxelles, la densité de population et la diversité du parc immobilier (des vieux immeubles d'Ixelles aux nouvelles constructions d'Evere) font que la plomberie nécessite un haut niveau de savoir-faire. Malheureusement, l'urgence (fuite massive, panne de chauffage en plein hiver) pousse souvent les propriétaires à appeler le premier numéro trouvé sur un flyer déposé dans la boîte aux lettres. Résultat : des factures gonflées et un travail bâclé. Voici la check-list indispensable pour démasquer les artisans malhonnêtes et reconnaître le vrai professionnel.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Trouver le bon artisan</h2>
+        <ol>
+          <li><a href="#transparence">La règle n°1 : La transparence des prix par téléphone</a></li>
+          <li><a href="#agrement">Vérifier l'existence légale et l'agrément (Cerga)</a></li>
+          <li><a href="#flyers">Attention au piège des flyers dans la boîte aux lettres</a></li>
+          <li><a href="#devis">Le devis sur place et l'obligation d'information</a></li>
+          <li><a href="#notre-engagement">L'engagement de notre entreprise à Bruxelles</a></li>
+          <li><a href="#faq">FAQ : Éviter les arnaques en plomberie</a></li>
+        </ol>
+      </div>
+
+      <h2 id="transparence">La règle n°1 : La transparence des prix par téléphone</h2>
+      <p>C'est le filtre le plus efficace pour éliminer 90% des escrocs. Lorsque vous appelez une entreprise de plomberie pour une urgence à Bruxelles, exigez de connaître les tarifs de base <strong>avant</strong> de donner votre adresse. Un plombier honnête sera toujours capable de vous donner :</p>
+      <ul>
+        <li>Le coût forfaitaire du déplacement (généralement entre 40€ et 80€).</li>
+        <li>Le prix de la première heure de main-d'œuvre.</li>
+        <li>Le pourcentage de majoration (s'il s'agit d'une intervention de nuit ou le dimanche).</li>
+      </ul>
+      <p>Si la personne au bout du fil répond systématiquement <em>"Je ne sais pas vous dire, il faut que le technicien voie sur place"</em>, raccrochez. Il est évident que le prix des pièces de rechange dépendra du problème, mais les tarifs horaires et de déplacement doivent être transparents.</p>
+
+      <h2 id="agrement">Vérifier l'existence légale et l'agrément (Cerga)</h2>
+      <p>N'importe qui peut s'improviser "déboucheur" du jour au lendemain, mais la plomberie complexe et le chauffage sont des métiers réglementés en Belgique. Une entreprise fiable affiche clairement ses informations d'identification.</p>
+      
+      <h3>Le numéro d'entreprise (TVA / BCE)</h3>
+      <p>Il doit figurer en bas de la page web ou sur le devis. Ce numéro (qui commence par BE0...) prouve que l'entreprise est enregistrée à la Banque-Carrefour des Entreprises et paie ses impôts. S'il n'y a pas de numéro de TVA ou de nom d'entreprise clair sur le site, fuyez.</p>
+
+      <h3>Les agréments officiels</h3>
+      <p>Si votre problème concerne le chauffage, la chaudière ou le gaz, le plombier chauffagiste <strong>doit être agréé par la Région Bruxelloise</strong>. L'agrément le plus connu est l'agrément G1 (Cerga) pour les installations au gaz naturel. C'est une obligation légale pour des raisons évidentes de risque d'explosion et d'intoxication au monoxyde de carbone.</p>
+
+      <h2 id="flyers">Attention au piège des flyers dans la boîte aux lettres</h2>
+      <p>C'est l'une des arnaques les plus documentées en Belgique. Vous recevez dans votre boîte aux lettres un petit carton coloré listant des numéros d'urgence (Plombier, Serrurier, Électricien) avec parfois les logos de la commune pour rassurer. Ces numéros redirigent souvent vers des plateformes d'appel (des "répartiteurs") situées à l'étranger, qui envoient ensuite des sous-traitants non qualifiés. Leur modèle économique repose sur la facturation agressive de personnes en situation de stress. Privilégiez toujours la recherche d'une véritable entreprise locale établie à Bruxelles.</p>
+
+      <div class="blog-cta card">
+        <h3>🤝 Besoin d'un dépannage sans mauvaise surprise ?</h3>
+        <p>Notre entreprise affiche ses numéros d'agrément, annonce la couleur sur ses tarifs et garantit ses interventions sur tout Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander une intervention claire : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="devis">Le devis sur place et l'obligation d'information</h2>
+      <p>Une fois le plombier arrivé chez vous, et avant de sortir ses gros outils, il doit évaluer la situation (par exemple, localiser la fuite sous l'évier). Si la réparation consiste à resserrer un écrou, il vous facturera simplement l'heure entamée.</p>
+      
+      <p>En revanche, si le diagnostic révèle qu'il faut changer la pompe de votre chaudière ou remplacer votre robinetterie (ce qui va coûter plusieurs centaines d'euros), <strong>il doit vous en informer et vous demander votre accord (devis oral ou écrit) avant d'engager les frais</strong>. Ne vous laissez jamais forcer la main pour remplacer un équipement entier (comme une chaudière à 3000€) en plein milieu de la nuit. Acceptez une réparation de "mise en sécurité" (comme couper l'eau ou shunter un circuit), et attendez le lendemain pour comparer des devis.</p>
+
+      <h2 id="notre-engagement">L'engagement de notre entreprise à Bruxelles</h2>
+      <p>Chez nous, la philosophie est simple : la satisfaction client est notre seule publicité durable. Nous intervenons quotidiennement dans les 19 communes de Bruxelles (Jette, Forest, Auderghem...) avec un code de conduite strict :</p>
+      <ul>
+        <li><strong>Transparence :</strong> Vous savez ce que vous allez payer.</li>
+        <li><strong>Expertise :</strong> Nos artisans sont formés et agréés (gaz, plomberie sanitaire).</li>
+        <li><strong>Réparation plutôt que Remplacement :</strong> Si une pièce peut être réparée ou détartrée durablement, nous ne vous forcerons pas à acheter un équipement neuf.</li>
+        <li><strong>Facturation légale :</strong> Remise systématique d'une facture détaillée, indispensable pour vos assurances.</li>
+      </ul>
+
+      <h2 id="faq">FAQ : Éviter les arnaques en plomberie</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Confiez vos Travaux à un Artisan Plombier de Confiance" subtitle="Agréments officiels, tarifs annoncés et travail sous garantie. Appelez-nous pour un dépannage ou un projet de rénovation l'esprit tranquille." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Installation Sanitaire Bruxelles : Nos Services Complets";
+const description = "Besoin d'une nouvelle installation sanitaire à Bruxelles ? De la pose de WC suspendu à la robinetterie encastrée, confiez vos travaux à nos plombiers. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Quels sont les avantages d'un WC suspendu par rapport à un WC classique ?", a: "Le WC suspendu est beaucoup plus esthétique car le réservoir d'eau est caché dans le mur. De plus, comme la cuvette ne touche pas le sol, le nettoyage de la salle de bain est grandement facilité. Il est également plus silencieux grâce à l'isolation phonique du bâti-support."},
+  {q: "Combien coûte la pose d'un nouveau mitigeur de lavabo à Bruxelles ?", a: "Le prix pour l'installation d'un mitigeur classique (robinet) se situe généralement entre 100 € et 180 € TTC, incluant le déplacement et la main-d'œuvre. Si vous fournissez vous-même le robinet, le plombier ne facturera que son temps de travail."},
+  {q: "Pouvez-vous déplacer les arrivées d'eau pour créer une nouvelle salle de douche ?", a: "Oui, c'est l'essence même de notre métier. Nous pouvons prolonger vos arrivées d'eau (chaude et froide) et créer de nouvelles décharges d'évacuation dans une pièce existante pour la transformer en salle de bain supplémentaire ou en buanderie."},
+  {q: "Pourquoi choisir une robinetterie encastrée pour sa douche ?", a: "La robinetterie encastrée offre un design minimaliste et luxueux. Toute la machinerie (le corps d'encastrement) est cachée derrière le carrelage. Seuls la plaque de commande et le pommeau restent visibles. Cela libère de l'espace dans la douche, mais nécessite de creuser le mur lors de l'installation."},
+  {q: "Fournissez-vous les sanitaires ou dois-je les acheter moi-même ?", a: "Nous laissons le choix à nos clients. Vous pouvez acheter vos propres éléments (Grohe, Hansgrohe, Villeroy & Boch) et nous nous chargeons uniquement de la pose professionnelle. Alternativement, nous pouvons vous fournir les sanitaires à des prix professionnels avantageux."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Installation Sanitaire Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚽 Sanitaires & Plomberie</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Installation Sanitaire Bruxelles : Du Robinet à la Douche, Nos Services Complets</h1>
+
+      <p class="blog-intro"><strong>Vous souhaitez moderniser vos toilettes, remplacer un vieux lavabo ou installer une toute nouvelle salle de douche à Bruxelles ? L'installation sanitaire requiert précision et savoir-faire.</strong> De la pose complexe d'un WC suspendu (bâti-support Geberit) à l'encastrement d'un mitigeur de douche thermostatique, nos plombiers experts assurent un travail aux finitions impeccables. Que vous habitiez Etterbeek, Saint-Gilles ou Anderlecht, nous transformons vos pièces d'eau en espaces fonctionnels et design, avec la garantie d'une étanchéité absolue et de raccordements durables.</p>
+
+      <p class="blog-intro">Le terme "sanitaire" englobe tous les équipements liés à l'hygiène et à l'utilisation de l'eau dans votre maison : les toilettes (WC), les lavabos, les baignoires, les douches et la robinetterie associée. Changer un robinet peut sembler simple sur un tutoriel vidéo, mais raccorder un WC suspendu sans risquer la fuite derrière le faux-mur ou installer un receveur de douche parfaitement de niveau demande la patte d'un professionnel. À Bruxelles, notre entreprise de plomberie s'est spécialisée dans la pose méticuleuse de ces équipements, alliant la robustesse technique à l'exigence esthétique. Découvrez l'étendue de nos services d'installation sanitaire.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire de nos services sanitaires</h2>
+        <ol>
+          <li><a href="#wc-suspendu">L'installation de WC : Le succès du suspendu</a></li>
+          <li><a href="#robinetterie">Robinetterie classique et encastrée (Douche/Lavabo)</a></li>
+          <li><a href="#bain-douche">Création et remplacement de Baignoires et Douches</a></li>
+          <li><a href="#adaptation">Adaptation PMR (Personnes à Mobilité Réduite)</a></li>
+          <li><a href="#qualite">Le choix des grandes marques (Grohe, Geberit...)</a></li>
+          <li><a href="#faq">FAQ sur la pose de sanitaires</a></li>
+        </ol>
+      </div>
+
+      <h2 id="wc-suspendu">L'installation de WC : Le succès du WC suspendu</h2>
+      <p>Oubliez le bon vieux WC sur pied avec son réservoir apparent encombrant. La star incontestée des rénovations bruxelloises est aujourd'hui le <strong>WC suspendu</strong>.</p>
+      
+      <h3>Pourquoi choisir le suspendu ?</h3>
+      <p>Le WC suspendu est fixé au mur via une structure métallique très robuste appelée "bâti-support" (Geberit étant la marque de référence absolue). Le réservoir d'eau de chasse et les tuyaux d'évacuation sont entièrement cachés derrière un faux-mur recouvert de carrelage ou de peinture. L'effet est extrêmement épuré et moderne. De plus, l'absence de pied au sol rend le nettoyage de la pièce à la serpillière incroyablement rapide et hygiénique.</p>
+
+      <h3>Une pose qui exige un expert</h3>
+      <p>L'installation d'un bâti-support ne souffre d'aucune approximation. Le raccordement au tuyau de décharge (généralement en diamètre 90 ou 110 mm) doit être parfaitement étanche avant d'être emmuré. Une fuite à ce niveau nécessite de casser tout le nouveau mur. De plus, la structure doit être ancrée solidement au mur porteur ou au sol en béton pour supporter le poids de l'utilisateur (les bâtis-supports sont testés pour supporter 400 kg).</p>
+
+      <div class="blog-cta card">
+        <h3>🚽 Vous souhaitez remplacer vos anciennes toilettes ?</h3>
+        <p>Nous installons votre nouveau WC suspendu complet en 1 journée. Devis transparent et conseils sur le choix des cuvettes sans bride (Rimfree).</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander la pose d'un WC : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="robinetterie">Robinetterie classique et encastrée (Douche/Lavabo)</h2>
+      <p>Le choix de la robinetterie donne le ton final au design de votre salle de bain ou de votre cuisine.</p>
+
+      <h3>Mitigeurs thermostatiques (Confort et Sécurité)</h3>
+      <p>Fini de jouer avec l'eau chaude et l'eau froide pour trouver la bonne température sous la douche. Le mitigeur thermostatique possède deux poignées : l'une règle le débit, l'autre la température exacte (bloquée souvent à 38°C par sécurité). C'est l'équipement sanitaire indispensable si vous avez des enfants en bas âge, car il prévient tout risque de brûlure grave, même si quelqu'un tire la chasse d'eau en même temps (qui cause habituellement des baisses de pression).</p>
+
+      <h3>La robinetterie encastrée de douche</h3>
+      <p>C'est le summum de l'élégance. Au lieu d'avoir un gros bloc robinet qui dépasse dans la douche, toute la partie mécanique (la cartouche de mélange) est intégrée dans le mur. Seules la plaque de contrôle épurée et le pommeau supérieur "ciel de pluie" sortent du carrelage. Cette installation doit se faire à l'étape "gros œuvre" de votre <a href="/blog/renovation-salle-de-bain-bruxelles-conseils-plomberie/" style="color:var(--color-accent);text-decoration:underline;">rénovation de salle de bain</a>, avant la pose des panneaux étanches et du carrelage.</p>
+
+      <h2 id="bain-douche">Création et remplacement de Baignoires et Douches</h2>
+      <p>Vous souhaitez supprimer votre vieille baignoire encombrante pour la remplacer par une vaste douche spacieuse ? C'est une demande très courante, en particulier pour adapter les logements d'Ixelles ou Forest aux modes de vie actuels (gain de place et économie d'eau).</p>
+      
+      <p>Nous réalisons l'installation de receveurs de douche ultra-plats (en résine minérale, très résistants et anti-dérapants), la création des pentes d'évacuation, la pose de parois en verre sécurit (traitées anti-calcaire) et le raccordement complet. Nous pouvons également poser de nouvelles baignoires en îlot central pour les grandes salles de bain ou des baignoires asymétriques pour optimiser les petits espaces.</p>
+
+      <h2 id="adaptation">Adaptation PMR (Personnes à Mobilité Réduite)</h2>
+      <p>L'aménagement de l'espace sanitaire pour les personnes âgées ou à mobilité réduite est un sujet de société majeur. Notre entreprise de plomberie à Bruxelles installe des équipements spécifiques pour garantir sécurité et autonomie :</p>
+      <ul>
+        <li>Remplacement de baignoire à enjambement dangereux par des douches de plain-pied sans rebord (Walk-in).</li>
+        <li>Installation de sièges de douche rabattables et solides.</li>
+        <li>Pose de barres de maintien ergonomiques près des WC et dans la zone de douche.</li>
+        <li>Installation de WC surélevés pour faciliter l'assise et le relevage.</li>
+      </ul>
+
+      <h2 id="qualite">Le choix des grandes marques (Grohe, Geberit...)</h2>
+      <p>La plomberie est soumise à une usure constante due à l'eau, à la pression et au calcaire bruxellois. C'est pourquoi nous déconseillons fortement l'achat de robinetterie "premier prix" sur internet ou dans les supermarchés du bricolage discount. Leurs cartouches céramiques lâchent rapidement et il est impossible de trouver des pièces de rechange.</p>
+      <p>Nous installons et recommandons les marques de renommée internationale, garantissant une longévité exceptionnelle et la disponibilité des pièces de SAV pendant 15 ans : <strong>Grohe, Hansgrohe, Geberit, Villeroy & Boch, Duravit, ou encore Hansa</strong>. Que vous achetiez le matériel vous-même ou que nous le fournissions, notre installation sera toujours garantie pour un résultat parfait.</p>
+
+      <h2 id="faq">FAQ sur la pose de sanitaires</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Un Projet d'Installation Sanitaire à Bruxelles ?" subtitle="Contactez nos plombiers pour un travail soigné et des finitions haut de gamme sur la pose de vos WC, lavabos et douches." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

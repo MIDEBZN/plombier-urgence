@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Fuite WC Bruxelles : Réparer une Chasse d'Eau qui Coule";
+const description = "Votre WC coule en continu à Bruxelles ? Gaspillage d'eau et bruit incessant. Découvrez comment réparer la chasse ou le flotteur avec nos plombiers. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Combien d'eau gaspille une chasse d'eau qui coule en continu ?", a: "Un simple filet d'eau ininterrompu dans la cuvette d'un WC (souvent silencieux) peut gaspiller entre 150 et 300 litres d'eau potable par jour. Sur une année, cela représente une perte de plus de 500 € sur votre facture d'eau Vivaqua. C'est la fuite la plus coûteuse de la maison."},
+  {q: "Pourquoi l'eau coule-t-elle par le petit tuyau vertical (trop-plein) ?", a: "Si le niveau d'eau dans le réservoir dépasse le tuyau de sécurité (le trop-plein), l'eau se déverse dans la cuvette. C'est le signe que le mécanisme d'arrêt (le flotteur ou la valve d'admission) ne se ferme plus correctement, souvent à cause du tartre qui bloque le bras du flotteur."},
+  {q: "Comment détartrer soi-même un mécanisme de chasse d'eau ?", a: "Fermez le petit robinet d'arrêt d'eau mural (robinet Shell), videz la chasse, et versez 1 litre de vinaigre blanc chaud directement dans le réservoir vide. Laissez agir toute la nuit (ou au moins 4 heures). Le vinaigre dissoudra le calcaire accumulé sur le mécanisme de la cloche."},
+  {q: "Le plombier peut-il réparer un WC suspendu qui fuit (Geberit) ?", a: "Oui. Beaucoup de gens craignent de devoir casser le carrelage si leur WC suspendu (bâti-support Geberit ou autre) coule. Rassurez-vous, nos plombiers accèdent à tout le mécanisme (flotteur et cloche) simplement en retirant la plaque de commande rectangulaire (les boutons poussoirs) sur le mur."},
+  {q: "Quel est le prix pour changer un mécanisme de chasse d'eau ?", a: "À Bruxelles, le remplacement complet du mécanisme interne d'un WC classique (flotteur + mécanisme de vidange) par un plombier professionnel coûte en moyenne entre 100 € et 150 €, pièces de rechange, main-d'œuvre et déplacement inclus."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Fuite WC et Chasse d'Eau</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🚽 Dépannage Sanitaire</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 6 min de lecture</span>
+      </div>
+
+      <h1>Fuite WC Bruxelles : Réparer une Chasse d'Eau qui Coule en Continu</h1>
+
+      <p class="blog-intro"><strong>Vous entendez un léger sifflement dans vos toilettes ou vous voyez un filet d'eau permanent glisser le long de la cuvette ? Ce petit dysfonctionnement silencieux est un véritable gouffre financier. À Bruxelles, une chasse d'eau qui coule en continu peut faire doubler votre facture annuelle d'eau Vivaqua.</strong> Que le problème vienne d'un joint entartré, d'un flotteur déréglé ou d'un mécanisme de cloche vétuste, ignorer cette fuite vous coûtera bien plus cher que l'intervention d'un plombier. Découvrez les causes de ces fuites agaçantes, comment couper l'eau en urgence, et pourquoi nos experts sont les mieux placés pour réparer vos WC classiques ou suspendus (Geberit).</p>
+
+      <p class="blog-intro">C'est la panne la plus classique de la plomberie domestique. Le réservoir des toilettes est un système ingénieux composé de deux éléments clés : le mécanisme de remplissage (le robinet flotteur) et le mécanisme de vidange (la cloche ou soupape). Mais ces pièces en plastique, constamment immergées dans l'eau dure de la Région Bruxelloise, subissent de plein fouet les attaques du calcaire. En quelques années, les joints durcissent, le tartre bloque les axes, et l'étanchéité n'est plus assurée. Avant d'appeler notre service de dépannage, voici comment comprendre ce qui se passe dans le réservoir de vos toilettes.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Stopper la fuite du WC</h2>
+        <ol>
+          <li><a href="#cout">Le vrai coût d'une fuite de toilette (Ne l'ignorez pas)</a></li>
+          <li><a href="#flotteur">Cause 1 : Le problème du flotteur (L'eau déborde)</a></li>
+          <li><a href="#cloche">Cause 2 : Le joint de la cloche (L'eau fuit par le bas)</a></li>
+          <li><a href="#suspendu">Le cas particulier du WC suspendu (Bâti-support)</a></li>
+          <li><a href="#intervention">Remplacement du mécanisme complet par le plombier</a></li>
+          <li><a href="#faq">FAQ : Vos questions sur les chasses d'eau</a></li>
+        </ol>
+      </div>
+
+      <h2 id="cout">Le vrai coût d'une fuite de toilette (Ne l'ignorez pas)</h2>
+      <p>Une petite goutte qui tombe d'un robinet de cuisine, c'est agaçant. Mais le mince filet d'eau (parfois à peine visible) qui coule en permanence sur la faïence de votre WC est beaucoup plus grave.</p>
+      <p>Un WC qui coule faiblement perd environ 15 à 20 litres d'eau par heure. Si le mécanisme est vraiment coincé, cela peut monter à 40 litres par heure, <strong>soit près de 1000 litres d'eau potable gâchés chaque jour</strong>. Au tarif actuel de l'eau à Bruxelles (Vivaqua), ce problème vous coûtera plusieurs centaines d'euros en fin d'année. Dès que vous repérez ce filet d'eau, <strong>fermez le petit robinet mural (robinet Shell)</strong> situé à côté de votre toilette pour stopper l'hémorragie financière jusqu'à la réparation.</p>
+
+      <h2 id="flotteur">Cause 1 : Le problème du flotteur (L'eau déborde)</h2>
+      <p>Ouvrez le couvercle en céramique de votre réservoir (si c'est un WC classique posé au sol) et regardez le niveau de l'eau.</p>
+      <p>Si l'eau monte jusqu'en haut, dépasse l'orifice du tube central creux (le trop-plein) et s'y déverse, le problème vient du <strong>robinet flotteur</strong>. Son rôle est de couper l'arrivée d'eau quand le réservoir est plein (comme la bouée d'un carburateur). S'il est percé (il a pris l'eau et coule), ou si son bras est bloqué par le calcaire, il ne remonte plus assez haut pour fermer la valve. L'eau ne s'arrête jamais d'entrer.</p>
+      <p><strong>Astuce provisoire :</strong> Vous pouvez tordre légèrement la tige métallique (si c'est un vieux modèle) vers le bas pour forcer le flotteur à se fermer plus tôt, mais le remplacement de la pièce sera nécessaire.</p>
+
+      <div class="blog-cta card">
+        <h3>🚽 Votre WC n'arrête pas de couler ?</h3>
+        <p>Ne laissez pas l'eau et votre argent s'écouler dans les égouts. Nos plombiers remplacent les mécanismes de chasse de toutes marques (Geberit, Grohe, Siamp) à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Dépannage WC Urgent : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="cloche">Cause 2 : Le joint de la cloche (L'eau fuit par le bas)</h2>
+      <p>Si le niveau de l'eau dans le réservoir est normal (il ne déborde pas par le tuyau central), mais que l'eau coule quand même dans la cuvette, le problème vient du fond.</p>
+      <p>Le <strong>mécanisme de vidange (la cloche)</strong> se lève quand vous appuyez sur le bouton, puis retombe au fond pour sceller le trou. À sa base se trouve un gros joint circulaire en caoutchouc. À cause du calcaire très présent à Bruxelles, ou simplement de la vieillesse, ce joint s'effrite, se gondole ou se couvre de tartre granuleux. Il n'est plus étanche.</p>
+      <p>Le plombier démontera le mécanisme central pour inspecter ce joint. S'il est nettoyable, il le détartrera. Sinon, il installera un mécanisme de vidange neuf universel (souvent à double touche 3L/6L pour faire des économies d'eau).</p>
+
+      <h2 id="suspendu">Le cas particulier du WC suspendu (Bâti-support)</h2>
+      <p>C'est la grande angoisse de nos clients à Ixelles ou Uccle qui ont opté pour l'esthétique du WC suspendu : <em>"Mon WC suspendu coule, allez-vous devoir casser tout le mur en carrelage pour le réparer ?"</em></p>
+      <p><strong>La réponse est non.</strong> Les ingénieurs de marques comme Geberit ou Grohe ont conçu ces bâtis-supports intelligemment. En "déclipsant" la plaque de commande rectangulaire sur le mur, le plombier accède à une trappe de visite. À travers ce petit espace (souvent de 15 x 25 cm), nos artisans expérimentés arrivent à glisser leurs mains pour extraire le flotteur et le mécanisme central, les remplacer, puis les remettre en place, sans toucher à un seul carreau de faïence.</p>
+
+      <h2 id="intervention">Remplacement du mécanisme complet par le plombier</h2>
+      <p>Si votre mécanisme a plus de 10 ans et est recouvert de calcaire blanc, le détartrage au vinaigre n'est qu'une solution de survie qui durera quelques mois. La vraie solution rentable est de faire appel à notre entreprise pour remplacer l'intégralité du système (Flotteur + Mécanisme central).</p>
+      <p>Nous installons des mécanismes <strong>double bouton-poussoir</strong> silencieux et certifiés NF. L'intervention prend généralement moins d'une heure. Vous retrouverez le silence dans la salle de bain et verrez votre facture Vivaqua drastiquement diminuer au prochain relevé.</p>
+
+      <h2 id="faq">FAQ : Vos questions sur les chasses d'eau</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Stoppez le Gaspillage d'Eau Immédiatement" subtitle="Flotteur cassé ou joint entartré ? Nos plombiers spécialistes des mécanismes de chasse d'eau classiques et suspendus (Geberit) interviennent sur Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Chauffage par le Sol Bruxelles : Avantages et Entretien";
+const description = "Envie d'un chauffage par le sol à Bruxelles ? Découvrez ses avantages, son couplage idéal avec une pompe à chaleur, et comment l'entretenir. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Le chauffage par le sol est-il compatible avec une rénovation à Bruxelles ?", a: "Oui, mais c'est un défi technique. Les systèmes traditionnels nécessitent une chape épaisse de 6 à 8 cm. Dans une ancienne maison bruxelloise, cette hauteur n'est souvent pas disponible sans rehausser les portes. La solution est le système de chauffage au sol 'mince' ou fraisé directement dans la chape existante."},
+  {q: "Peut-on mettre du parquet sur un chauffage au sol ?", a: "Tout à fait, mais il faut choisir le bon parquet. Évitez les parquets massifs trop épais (chêne de 20mm) qui agissent comme un isolant. Privilégiez les parquets contrecollés spécifiques pour sol chauffant, et la pose doit impérativement être collée (pas flottante) pour assurer le transfert thermique."},
+  {q: "Le chauffage au sol consomme-t-il plus qu'un radiateur classique ?", a: "Non, c'est exactement l'inverse ! Le chauffage par le sol fonctionne à 'basse température' (l'eau circule à 35°C au lieu de 65°C pour des radiateurs). Couplé à une chaudière à condensation ou une pompe à chaleur, il permet de réduire la facture d'énergie de 15% à 20% en moyenne."},
+  {q: "Faut-il entretenir un chauffage par le sol ?", a: "Oui. L'eau qui circule à basse température favorise le développement de boues organiques (des bactéries) dans les tuyaux. Tous les 5 à 7 ans, il faut faire appel à un chauffagiste pour réaliser un 'désembouage' complet du circuit, afin d'éviter que ces boues ne bouchent les tuyaux et n'abîment la chaudière."},
+  {q: "Le chauffage au sol donne-t-il la sensation de 'jambes lourdes' ?", a: "C'est un mythe qui date des années 1960, lorsque l'eau circulait à 60°C dans les sols. Les systèmes modernes à basse température maintiennent le sol à une douce température d'environ 25°C maximum. Il n'y a donc plus aucun problème médical ou d'inconfort lié à ce système, bien au contraire."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Chauffage par le Sol Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🌡️ Chauffage & Confort</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 7 min de lecture</span>
+      </div>
+
+      <h1>Chauffage par le Sol Bruxelles : Avantages, Inconvénients et Entretien</h1>
+
+      <p class="blog-intro"><strong>Fini les murs encombrés par de vieux radiateurs et la sensation de carrelage glacé en plein hiver ! Le chauffage par le sol est la solution thermique la plus confortable et la plus prisée lors des rénovations lourdes à Bruxelles.</strong> En diffusant une chaleur douce et uniforme sur toute la surface de la pièce, il s'associe parfaitement aux pompes à chaleur modernes pour faire chuter vos factures énergétiques. Cependant, son installation dans les bâtisses anciennes de la capitale (Ixelles, Schaerbeek) soulève des défis d'épaisseur de plancher. Découvrez les avantages de ce système invisible, les techniques de pose, et l'importance cruciale de son entretien par nos chauffagistes spécialisés.</p>
+
+      <p class="blog-intro">Si vous marchez pieds nus chez des amis au mois de janvier et que vous ressentez une douce tiédeur enveloppante venant du sol, vous expérimentez le summum du confort thermique moderne. Le chauffage au sol (ou plancher chauffant hydraulique) n'est plus un luxe réservé aux villas neuves du Brabant Wallon. Il s'invite de plus en plus dans les rénovations d'appartements et de maisons de maître à Bruxelles. Mais ce système est très différent d'un chauffage central classique. Comment fonctionne-t-il ? Peut-on poser n'importe quel revêtement dessus ? Et surtout, comment éviter que les tuyaux ne s'encrassent avec le temps ? Suivez le guide de nos experts thermiques.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Le confort invisible</h2>
+        <ol>
+          <li><a href="#fonctionnement">Comment fonctionne un plancher chauffant hydraulique ?</a></li>
+          <li><a href="#avantages">Les 4 avantages : Confort, Espace, Santé et Économies</a></li>
+          <li><a href="#renovation">Le défi bruxellois : L'installation en rénovation</a></li>
+          <li><a href="#revetement">Quel revêtement de sol choisir ? (Carrelage, Parquet)</a></li>
+          <li><a href="#entretien">Le désembouage : L'entretien obligatoire tous les 5 ans</a></li>
+          <li><a href="#faq">FAQ : Vos questions sur le chauffage au sol</a></li>
+        </ol>
+      </div>
+
+      <h2 id="fonctionnement">Comment fonctionne un plancher chauffant hydraulique ?</h2>
+      <p>Le principe est simple mais redoutablement efficace. Un réseau de tuyaux flexibles en PER (Polyéthylène Réticulé) est déroulé en forme d'escargot ou de serpentin sur toute la surface de la pièce, au-dessus d'une plaque d'isolation. Ces tuyaux sont ensuite noyés dans une chape de béton fluide (ou chape anhydrite). La chaudière envoie de l'eau tiède (entre 30°C et 35°C) dans ces tuyaux. La chape de béton emmagasine cette chaleur et la restitue par rayonnement de manière parfaitement uniforme, transformant tout votre sol en un immense radiateur basse température.</p>
+
+      <h2 id="avantages">Les 4 avantages : Confort, Espace, Santé et Économies</h2>
+      <p>Ce n'est pas un hasard si le chauffage par le sol est le système préféré des architectes bruxellois pour les projets haut de gamme.</p>
+
+      <h3>1. Le confort thermique absolu (Le rayonnement)</h3>
+      <p>Un radiateur classique chauffe par convection (il chauffe l'air qui monte au plafond). Le sol chauffant chauffe par rayonnement (il chauffe la matière). La température est homogène partout dans la pièce, sans courant d'air ni zone froide près des fenêtres.</p>
+
+      <h3>2. Les économies d'énergie spectaculaires</h3>
+      <p>Parce qu'il chauffe une surface immense, l'eau n'a besoin d'être chauffée qu'à 35°C (contre 65°C pour un radiateur). Cet abaissement de température fait le bonheur absolu des chaudières à condensation et des <a href="/blog/pompe-a-chaleur-bruxelles-guide-installation/" style="color:var(--color-accent);text-decoration:underline;">pompes à chaleur</a>, qui atteignent alors leur rendement maximal. On observe couramment une baisse de 15% de la facture d'énergie.</p>
+
+      <h3>3. Le gain d'espace (Zéro radiateur)</h3>
+      <p>Dans un petit appartement urbain, retirer 3 gros radiateurs libère des mètres carrés de murs précieux. L'aménagement des meubles (canapés, bibliothèques) devient totalement libre.</p>
+
+      <h3>4. L'avantage santé (Pas de poussière)</h3>
+      <p>La convection d'un radiateur classique brasse l'air en permanence, soulevant des particules de poussière (un calvaire pour les asthmatiques). Le chauffage par rayonnement ne crée aucun mouvement d'air, garantissant un environnement intérieur beaucoup plus sain.</p>
+
+      <h2 id="renovation">Le défi bruxellois : L'installation en rénovation</h2>
+      <p>Dans une construction neuve, l'installation est aisée. Mais si vous rénovez une maison des années 30 à Schaerbeek ou un appartement à Ixelles, le système traditionnel pose un problème : l'épaisseur. Il faut environ 8 à 10 cm d'épaisseur totale (isolant + tuyaux + chape) pour l'installer. Si vous ajoutez cette hauteur sur un plancher existant, vous ne pourrez plus fermer vos portes !</p>
+      
+      <p><strong>La solution de rénovation :</strong> Nos chauffagistes utilisent des <strong>systèmes minces</strong> (les tuyaux s'emboîtent dans des plaques ultra-fines ne mesurant que 2 à 3 cm d'épaisseur) ou encore la technique du <strong>fraisage</strong>. Une machine spéciale creuse des sillons directement dans la chape existante de votre maison pour y insérer les tuyaux, n'ajoutant aucune hauteur supplémentaire au sol.</p>
+
+      <div class="blog-cta card">
+        <h3>🌡️ Envie de passer au chauffage par le sol ?</h3>
+        <p>Nos artisans chauffagistes étudient vos planchers et dimensionnent l'installation pour un confort optimal sans surélever vos portes à Bruxelles.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander un devis installation : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="revetement">Quel revêtement de sol choisir ? (Carrelage, Parquet)</h2>
+      <p>Contrairement aux idées reçues, vous n'êtes pas obligé de mettre du carrelage partout.</p>
+      <ul>
+        <li><strong>Le Carrelage ou la Pierre Naturelle :</strong> C'est le duo parfait. La pierre a une excellente inertie thermique, elle conduit la chaleur instantanément.</li>
+        <li><strong>Le Parquet :</strong> Il est parfaitement possible de poser du bois. Il faut cependant choisir un parquet "contrecollé" (plus stable que le massif) et ne pas dépasser 15 mm d'épaisseur. Il doit impérativement être collé en plein sur la chape pour éviter la création d'une lame d'air isolante.</li>
+        <li><strong>Le Vinyle / LVT :</strong> Très tendance, il offre une excellente conductivité thermique. Attention aux moquettes qui agissent comme un isolant pur et dur et bloquent la chaleur.</li>
+      </ul>
+
+      <h2 id="entretien">Le désembouage : L'entretien obligatoire tous les 5 ans</h2>
+      <p>C'est l'inconvénient caché du système. Le chauffage par le sol fonctionne avec de l'eau tiède (30°C). C'est la température rêvée pour la prolifération de bactéries. Avec les années, ces micro-organismes transforment l'eau claire en une "boue" noire et visqueuse.</p>
+      <p>Si rien n'est fait, cette boue organique va boucher les tuyaux (créant des zones froides sur votre sol) et remonter jusqu'à la chaudière, détruisant son échangeur thermique. C'est pourquoi un entretien spécifique appelé <strong>le désembouage</strong> est nécessaire tous les 5 à 7 ans. Nos techniciens viennent avec une pompe hydropneumatique professionnelle qui injecte un mélange d'eau et d'air sous pression pour nettoyer chaque boucle du réseau et éliminer toutes les boues, avant d'injecter un produit "inhibiteur" de protection.</p>
+
+      <h2 id="faq">FAQ : Vos questions sur le chauffage au sol</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Rénovez Votre Chauffage avec l'Excellence" subtitle="Installation, fraisage de chape ou désembouage. Confiez votre projet de chauffage par le sol à nos experts thermiques actifs sur tout Bruxelles." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Pompe à Chaleur Bruxelles : Guide d'Installation";
+const description = "Passez à la pompe à chaleur à Bruxelles ! Guide d'installation, prix, fonctionnement et Primes RENOLUTION pour un chauffage écologique. 📞 0465 68 51 58.";
+const faqs = [
+  {q: "Une pompe à chaleur est-elle efficace en plein hiver à Bruxelles ?", a: "Oui, les pompes à chaleur air-eau modernes sont conçues pour extraire de la chaleur même par des températures négatives (jusqu'à -15°C ou -20°C). Leur rendement diminue légèrement lors de grands froids, mais elles assurent parfaitement le chauffage des habitations bruxelloises bien isolées."},
+  {q: "Est-il possible d'installer une pompe à chaleur dans une vieille maison bruxelloise ?", a: "C'est possible, mais cela requiert souvent une pompe à chaleur haute température pour s'adapter aux anciens radiateurs en fonte. Cependant, l'isolation du toit et des fenêtres doit être irréprochable avant l'installation, sinon la surconsommation électrique rendra l'investissement inutile."},
+  {q: "Ai-je besoin d'un permis d'urbanisme pour l'unité extérieure de la PAC ?", a: "À Bruxelles, l'installation du groupe extérieur d'une pompe à chaleur est souvent soumise à une déclaration ou un permis d'urbanisme, principalement pour des questions d'esthétique (façade visible) et de nuisances sonores pour le voisinage direct. Informez-vous auprès du service urbanisme de votre commune."},
+  {q: "Quel est le prix moyen d'une pompe à chaleur à Bruxelles ?", a: "L'installation complète d'une pompe à chaleur air-eau classique coûte entre 8 000 € et 15 000 €. Toutefois, avec l'intervention massive des Primes RENOLUTION bruxelloises, ce coût de départ est considérablement allégé, rendant le système très compétitif sur le long terme."},
+  {q: "La pompe à chaleur produit-elle aussi l'eau chaude sanitaire ?", a: "Tout à fait. La majorité des installations de pompes à chaleur air-eau sont réversibles (elles peuvent rafraîchir en été) et sont couplées à un ballon d'accumulation (un boiler) pour garantir une production d'eau chaude sanitaire abondante pour toute la famille."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Pompe à Chaleur Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🍃 Chauffage Écologique</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 8 min de lecture</span>
+      </div>
+
+      <h1>Pompe à Chaleur Bruxelles : Guide Complet pour une Installation Écologique et Économique</h1>
+
+      <p class="blog-intro"><strong>La pompe à chaleur (PAC) est la solution de chauffage de l'avenir à Bruxelles, permettant de diviser vos factures d'énergie tout en sortant des combustibles fossiles.</strong> En extrayant les calories de l'air extérieur pour chauffer l'eau de vos radiateurs, ce système ultra-performant bénéficie des généreuses Primes RENOLUTION de la Région Bruxelloise. Attention cependant, une installation réussie dans les maisons urbaines (à Ixelles, Uccle ou Schaerbeek) requiert une excellente isolation préalable et l'expertise d'un chauffagiste agréé. Découvrez le fonctionnement, les prix, et nos conseils pour réussir la transition énergétique de votre foyer.</p>
+
+      <p class="blog-intro">Face à l'urgence climatique et à la volatilité des prix du gaz naturel, le chauffage résidentiel amorce une révolution sans précédent en Belgique. À l'horizon 2026, la pompe à chaleur s'impose comme l'alternative numéro un pour remplacer les vieilles chaudières polluantes. Cependant, Bruxelles possède un parc immobilier très spécifique : maisons mitoyennes étroites, jardins réduits, et parfois une isolation d'un autre temps. Installer une PAC (Pompe À Chaleur) ne s'improvise donc pas. C'est un investissement réfléchi. Comment fonctionne-t-elle exactement ? Fait-elle du bruit ? Quel est son coût réel après déduction des aides régionales ? Suivez notre guide ultime.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Tout savoir sur la PAC</h2>
+        <ol>
+          <li><a href="#fonctionnement">Comment fonctionne une pompe à chaleur (Air/Eau) ?</a></li>
+          <li><a href="#isolation">Le prérequis indispensable : L'isolation du bâtiment</a></li>
+          <li><a href="#urbanisme">Bruit et règles d'urbanisme à Bruxelles</a></li>
+          <li><a href="#prix-primes">Prix d'installation et Primes RENOLUTION 2026</a></li>
+          <li><a href="#pro">L'importance du dimensionnement par un expert</a></li>
+          <li><a href="#faq">FAQ : Questions courantes sur les pompes à chaleur</a></li>
+        </ol>
+      </div>
+
+      <h2 id="fonctionnement">Comment fonctionne une pompe à chaleur (Air/Eau) ?</h2>
+      <p>Le principe de la pompe à chaleur est fascinant car il repose sur une thermodynamique simple : récupérer de l'énergie gratuite dans l'environnement. Dans la Région bruxelloise, le modèle de loin le plus installé en rénovation est la pompe à chaleur <strong>Air/Eau</strong>.</p>
+      
+      <h3>Le principe de base</h3>
+      <p>Même lorsqu'il fait froid dehors (jusqu'à -15°C), l'air contient toujours des "calories", c'est-à-dire de l'énergie thermique. Le groupe extérieur de la PAC (un grand ventilateur souvent placé dans le jardin ou sur un toit plat) aspire cet air extérieur. À l'intérieur du groupe circule un fluide frigorigène très froid qui va capter ces calories et s'évaporer. Le compresseur électrique va ensuite compresser ce gaz, ce qui a pour effet d'augmenter fortement sa température. Cette chaleur intense est enfin transmise à l'eau du circuit de chauffage central (vos radiateurs ou votre plancher chauffant) via un échangeur, avant que le fluide ne retourne à l'extérieur pour recommencer son cycle.</p>
+
+      <h3>Une efficacité redoutable (Le COP)</h3>
+      <p>L'avantage majeur de ce système est son "Coefficient de Performance" (COP). Une bonne pompe à chaleur possède un COP de 3 ou 4. Cela signifie que pour 1 kWh d'électricité consommée par le compresseur, la machine restitue 3 à 4 kWh de chaleur dans votre maison. Le reste de l'énergie (les 2 à 3 kWh supplémentaires) est 100% gratuit car extrait de l'air environnant !</p>
+
+      <h2 id="isolation">Le prérequis indispensable : L'isolation du bâtiment</h2>
+      <p>C'est la règle d'or que tout chauffagiste honnête vous dira : <strong>il ne sert à rien de mettre un moteur de Ferrari dans une carrosserie trouée</strong>.</p>
+      <p>Les pompes à chaleur modernes sont conçues pour fournir de l'eau à "basse température" (généralement entre 35°C et 45°C), contrairement aux vieilles chaudières au gaz qui propulsent de l'eau à 70°C. Si votre maison bruxelloise est une "passoire thermique" (toiture non isolée, fenêtres à simple vitrage), la chaleur douce de la pompe à chaleur s'échappera immédiatement. La machine tournera en permanence à plein régime pour compenser la perte, faisant exploser votre facture d'électricité.</p>
+      <p>Avant d'envisager l'installation d'une PAC, assurez-vous que l'enveloppe de votre maison (spécialement le toit et les châssis) est correctement isolée. Si c'est une vieille maison de maître, les pompes à chaleur dites "Haute Température" existent, ou alors un système hybride (PAC + Gaz) sera privilégié.</p>
+
+      <div class="blog-cta card">
+        <h3>🏡 Votre maison est-elle compatible avec une PAC ?</h3>
+        <p>Demandez un audit énergétique complet. Nos techniciens viennent chez vous évaluer la faisabilité technique de l'installation pour éviter les mauvaises surprises électriques.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Réserver une visite technique : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="urbanisme">Bruit et règles d'urbanisme à Bruxelles</h2>
+      <p>La capitale belge est très dense. Les jardins de ville ou les cours intérieures sont souvent très petites. C'est ici que se pose le défi de l'installation du "groupe extérieur" qui contient le ventilateur et le compresseur.</p>
+
+      <h3>La question du bruit (Les nuisances sonores)</h3>
+      <p>Les anciennes générations de pompes à chaleur étaient réputées bruyantes, ce qui posait problème avec les voisins proches. Heureusement, les modèles récents des grandes marques (Daikin, Vaillant, Viessmann) sont devenus ultra-silencieux (souvent autour de 40 dB à quelques mètres, soit l'équivalent d'un réfrigérateur moderne). Cependant, il est crucial de placer cette unité à un endroit stratégique, en évitant la proximité directe avec la fenêtre de chambre du voisin.</p>
+
+      <h3>Permis d'urbanisme et copropriétés</h3>
+      <p>Selon les communes bruxelloises, l'installation d'une unité extérieure visible depuis l'espace public (en façade) requiert très souvent un permis d'urbanisme. Si l'unité est cachée sur un toit plat arrière ou au fond d'un jardin privé, une simple déclaration suffit parfois. Si vous habitez dans un immeuble à appartements (copropriété), vous devrez impérativement obtenir l'accord de l'assemblée générale des copropriétaires avant de fixer quoi que ce soit sur une façade ou un toit commun.</p>
+
+      <h2 id="prix-primes">Prix d'installation et Primes RENOLUTION 2026</h2>
+      <p>L'investissement initial d'une pompe à chaleur est sensiblement supérieur à celui d'une chaudière gaz classique, mais c'est là qu'intervient la politique régionale agressive.</p>
+      
+      <p>Le coût moyen d'une PAC air-eau complète (unité extérieure, module hydraulique intérieur, raccordement et ballon d'eau chaude sanitaire) varie entre <strong>8 000 € et 15 000 € TTC</strong>. Cela représente une somme importante.</p>
+      
+      <p>Cependant, la Région de Bruxelles-Capitale veut bannir les énergies fossiles. C'est pourquoi le système des <a href="/blog/primes-renolution-bruxelles-2026-chauffage/" style="color:var(--color-accent);text-decoration:underline;">Primes RENOLUTION</a> finance massivement ces installations. Selon vos revenus, la prime pour l'installation d'une PAC Air/Eau en 2026 atteint plusieurs milliers d'euros. Pour les ménages à faibles revenus (Catégorie III), la prime peut absorber jusqu'à 50% de la facture finale. Le retour sur investissement est alors de seulement quelques années grâce à l'effondrement de la facture de chauffage mensuelle.</p>
+
+      <h2 id="pro">L'importance du dimensionnement par un expert</h2>
+      <p>Une pompe à chaleur mal dimensionnée est un désastre écologique et financier. Si l'installateur choisit une machine "trop petite" (sous-dimensionnée), elle fonctionnera avec sa résistance électrique de secours tout l'hiver (comme un énorme radiateur électrique), ruinant votre portefeuille. Si elle est "trop grande" (sur-dimensionnée), elle multipliera les cycles courts (démarrage/arrêt constants), ce qui usera le compresseur prématurément.</p>
+      
+      <p>L'intervention d'un <strong>installateur certifié (ResCert)</strong> est obligatoire non seulement pour obtenir les primes régionales, mais surtout pour réaliser un calcul de déperdition thermique pièce par pièce. Nos experts calculent le volume exact de votre habitation, la qualité de vos fenêtres et la puissance de vos radiateurs actuels pour vous prescrire la machine parfaite.</p>
+      <p>Nous installons et entretenons des pompes à chaleur sur l'ensemble de la Région Bruxelloise, d'Anderlecht à Woluwe-Saint-Pierre, en passant par Ixelles et Jette. Faites le pas vers l'autonomie énergétique !</p>
+
+      <h2 id="faq">FAQ : Questions courantes sur les pompes à chaleur</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Prêt à Réduire votre Facture Énergétique par Trois ?" subtitle="Contactez nos experts pour une étude thermique gratuite de votre habitation à Bruxelles. Installation de Pompe à Chaleur certifiée et éligible aux Primes." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>

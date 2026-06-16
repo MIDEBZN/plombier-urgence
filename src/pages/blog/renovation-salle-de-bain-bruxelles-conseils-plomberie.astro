@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const title = "Rénovation Salle de Bain Bruxelles : Conseils Plomberie";
+const description = "Projet de rénovation de salle de bain à Bruxelles ? Découvrez nos conseils en plomberie, du choix de la douche italienne à la tuyauterie. 📞 0465 68 51 58";
+const faqs = [
+  {q: "Est-il possible d'installer une douche italienne dans un appartement à Bruxelles ?", a: "Oui, mais cela nécessite souvent des travaux d'adaptation. Les anciens appartements bruxellois ont rarement la profondeur de chape suffisante pour encastrer le siphon d'une vraie douche à l'italienne. Une solution fréquente est de surélever très légèrement le receveur ou de créer une estrade pour l'évacuation."},
+  {q: "Combien coûte la rénovation de la plomberie d'une salle de bain ?", a: "Le coût moyen pour refaire intégralement la plomberie d'une salle de bain (tirage des tuyaux multicouches, nouvelles évacuations, pose des raccordements) varie entre 1500 € et 3000 € selon la taille de la pièce. Cela n'inclut pas le prix des sanitaires ni la pose du carrelage."},
+  {q: "Faut-il obligatoirement remplacer les vieux tuyaux en plomb ?", a: "Absolument. Outre les risques évidents pour la santé liés au saturnisme (si l'eau est ingérée), les vieilles canalisations en plomb et en acier galvanisé de Bruxelles finissent inévitablement par rouiller et fuir. Profitez d'une rénovation pour tout passer en multicouche ou PER."},
+  {q: "Quelles sont les normes électriques à respecter dans une salle de bain ?", a: "Le RGIE (Règlement Général sur les Installations Électriques) impose des volumes de sécurité très stricts autour de la baignoire et de la douche (Volumes 0, 1, 2, 3). Toute prise électrique doit se trouver à une distance minimale de 60 cm du point d'eau et être reliée à un disjoncteur différentiel de 30mA."},
+  {q: "Combien de temps durent les travaux de rénovation de salle de bain ?", a: "Une rénovation complète (plomberie, électricité, plafonnage, carrelage et pose des sanitaires) prend généralement entre 2 et 3 semaines complètes de travaux, selon les temps de séchage nécessaires pour les chapes et l'étanchéité."}
+];
+---
+
+<Layout title={title} description={description} faqs={faqs}>
+
+  <section class="bc-section"><div class="container"><nav class="bc"><a href="/">Accueil</a><span>›</span><a href="/blog/">Blog</a><span>›</span><span class="bc--current">Rénovation Salle de Bain Bruxelles</span></nav></div></section>
+
+  <article class="blog-article">
+    <div class="container blog-container">
+      <div class="blog-meta">
+        <span class="blog-tag">🛁 Rénovation & Sanitaire</span>
+        <span class="blog-date">Mis à jour : {new Date().toLocaleDateString('fr-BE', {month: 'long', year: 'numeric'})}</span>
+        <span class="blog-read">⏱ 8 min de lecture</span>
+      </div>
+
+      <h1>Rénovation Salle de Bain Bruxelles : Conseils Plomberie pour un Projet Réussi</h1>
+
+      <p class="blog-intro"><strong>Vous rêvez d'une nouvelle salle de bain à Bruxelles mais la plomberie vous effraie ? Remplacer une vieille baignoire par une douche à l'italienne ou refaire les arrivées d'eau nécessite l'expertise d'un artisan plombier qualifié.</strong> Dans les maisons bruxelloises souvent anciennes, la rénovation sanitaire implique souvent le remplacement complet des vieux tuyaux en plomb ou galvanisé pour éviter les futurs dégâts des eaux. De l'étanchéité des murs au choix de la robinetterie encastrée, découvrez les conseils de nos experts pour concevoir un espace bien-être durable. Nos équipes interviennent de Schaerbeek à Uccle pour transformer votre projet en réalité.</p>
+
+      <p class="blog-intro">La salle de bain n'est plus seulement une pièce fonctionnelle, c'est devenu le véritable sanctuaire de bien-être de la maison. C'est la pièce que l'on rénove avec le plus de plaisir, mais c'est aussi celle qui demande la plus grande rigueur technique. À Bruxelles, où l'on rénove fréquemment des appartements des années 60 ou des maisons de maître centenaires, on ne peut pas simplement poser un nouveau carrelage sur l'ancien. Derrière les beaux miroirs et les faïences modernes se cache un réseau complexe de tuyauterie qui doit être parfaitement pensé et réalisé. Un mauvais raccord, et c'est l'inondation assurée chez le voisin du dessous. Voici notre guide complet pour aborder sereinement les travaux de plomberie de votre future salle de bain.</p>
+
+      <div class="blog-toc card">
+        <h2>Sommaire : Les étapes de votre rénovation</h2>
+        <ol>
+          <li><a href="#démolition">La démolition et l'évaluation de l'existant</a></li>
+          <li><a href="#tuyauterie">Le réseau d'eau : Cuivre, PER ou Multicouche ?</a></li>
+          <li><a href="#douche-italienne">Le défi de la douche à l'italienne à Bruxelles</a></li>
+          <li><a href="#etancheite">L'étanchéité : Le secret d'une salle de bain durable</a></li>
+          <li><a href="#ventilation">L'importance cruciale de la ventilation (VMC)</a></li>
+          <li><a href="#faq">FAQ : Vos questions sur la rénovation sanitaire</a></li>
+        </ol>
+      </div>
+
+      <h2 id="démolition">La démolition et l'évaluation de l'existant</h2>
+      <p>Avant de feuilleter les catalogues de design, il faut regarder la réalité en face. La première étape d'une rénovation réussie commence par la mise à nu des murs (la démolition). À Bruxelles, on découvre très souvent des surprises derrière le vieux carrelage.</p>
+      
+      <h3>Remplacer les anciennes conduites</h3>
+      <p>Si vous découvrez des tuyaux en plomb (très fréquents dans les maisons construites avant 1950) ou en acier galvanisé rouillé, la question ne se pose pas : il faut tout remplacer. Ces vieux matériaux sont toxiques, se bouchent avec le tartre et finiront par se percer d'une année à l'autre. C'est le moment idéal pour créer de nouvelles "saignées" dans les murs et faire courir de nouveaux tuyaux propres et garantis pour les 50 prochaines années. Refaire la plomberie "à neuf" de A à Z coûte un peu plus cher au départ, mais c'est l'assurance absolue de ne plus avoir à casser votre nouveau carrelage dans 3 ans à cause d'une fuite encastrée.</p>
+
+      <h2 id="tuyauterie">Le réseau d'eau : Cuivre, PER ou Multicouche ?</h2>
+      <p>Aujourd'hui, l'artisan plombier a le choix entre plusieurs matériaux pour tirer vos nouvelles lignes d'eau chaude et d'eau froide.</p>
+      <ul>
+        <li><strong>Le cuivre :</strong> Le matériau noble et traditionnel par excellence. Il est antibactérien, ultra-solide et ne se déforme pas. Cependant, son coût a explosé ces dernières années et il demande des compétences poussées en soudure.</li>
+        <li><strong>Le PER (Polyéthylène Réticulé) :</strong> C'est du plastique souple. Il est très bon marché et facile à dérouler dans les chapes. En revanche, il craint les UV et se dilate beaucoup avec la chaleur.</li>
+        <li><strong>Le Multicouche :</strong> C'est la révolution de la plomberie moderne à Bruxelles. Il combine les avantages des deux : un tube en aluminium pris en sandwich entre deux couches de PER. Il est flexible, ne rouille jamais, et s'assemble par "sertissage" (des raccords pressés mécaniquement, sans soudure). C'est le matériau que nous recommandons pour 90% des rénovations de salles de bain, car il est indéstructible s'il est posé par un pro.</li>
+      </ul>
+
+      <h2 id="douche-italienne">Le défi de la douche à l'italienne à Bruxelles</h2>
+      <p>C'est la demande numéro 1 de nos clients à Ixelles, Uccle ou Woluwe : remplacer la vieille baignoire par une vaste douche de plain-pied, souvent appelée "douche à l'italienne".</p>
+      
+      <h3>Le problème de l'évacuation</h3>
+      <p>Dans une vraie douche à l'italienne, le sol de la douche est exactement au même niveau que le sol du reste de la pièce. Cela signifie que le siphon (qui fait environ 7 à 10 cm d'épaisseur) et le tuyau d'évacuation doivent être encastrés dans la chape de béton (le sol). Dans les anciens immeubles bruxellois, l'épaisseur du sol est souvent insuffisante pour y cacher le siphon en respectant la pente d'écoulement (2 cm par mètre pour éviter l'eau stagnante).</p>
+
+      <h3>Les solutions alternatives</h3>
+      <p>Si la profondeur est insuffisante, le plombier vous proposera deux solutions :</p>
+      <ul>
+        <li><strong>Le receveur extra-plat :</strong> Il se pose sur le sol fini, créant une micro-marche de 3 ou 4 cm, ce qui reste très esthétique.</li>
+        <li><strong>La surélévation (L'estrade) :</strong> On crée une petite estrade carrelée de 10 cm de hauteur qui accueillera toute la douche, permettant de cacher le siphon et la tuyauterie en dessous.</li>
+      </ul>
+
+      <div class="blog-cta card">
+        <h3>🚿 Envie d'une vraie douche à l'italienne ?</h3>
+        <p>Nos plombiers étudient la configuration de votre plancher pour vous proposer la solution d'encastrement la plus esthétique et la plus sûre contre les dégâts des eaux.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:0465685158" class="btn btn-primary">📞 Demander un devis rénovation : 0465 68 51 58</a>
+        </div>
+      </div>
+
+      <h2 id="etancheite">L'étanchéité : Le secret d'une salle de bain durable</h2>
+      <p>L'eau s'infiltre partout. Et un joint de carrelage (le ciment entre les carreaux) n'est jamais 100% étanche. Si vous faites couler de l'eau sur un mur carrelé pendant des mois, l'humidité finira par traverser et faire pourrir le mur ou le plafond de votre voisin.</p>
+      <p>C'est pourquoi une salle de bain rénovée dans les règles de l'art implique la pose d'un <strong>système d'étanchéité sous carrelage (SPEC)</strong>. Il s'agit souvent d'une natte imperméable (comme la fameuse natte orange Schlüter) ou d'une résine liquide bleue que l'on applique sur tous les murs de la douche et sur le sol avant de coller le carrelage. C'est l'étape invisible, mais c'est la plus importante de toute votre rénovation. Exigez que votre artisan la réalise.</p>
+
+      <h2 id="ventilation">L'importance cruciale de la ventilation (VMC)</h2>
+      <p>On l'oublie souvent lors des travaux de plomberie, mais que devient l'énorme quantité de vapeur générée par vos douches chaudes ? Si votre salle de bain bruxelloise ne dispose pas d'une bonne fenêtre, cette vapeur va se condenser sur les murs froids, créant des moisissures noires en quelques semaines et écaillant vos belles peintures neuves.</p>
+      <p>Lors d'une rénovation complète, prévoyez toujours le passage d'une gaine pour l'installation d'un <strong>extracteur d'air mécanique (VMC)</strong>, relié à un interrupteur hygrostat (qui s'allume tout seul quand le taux d'humidité monte). C'est le seul moyen de conserver une salle de bain saine, surtout dans les petits appartements de la capitale.</p>
+
+      <h2 id="faq">FAQ : Vos questions sur la rénovation sanitaire</h2>
+      <div class="faq-section">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <h3>{faq.q}</h3>
+            <p>{faq.a}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </article>
+
+  <CTABanner title="Un Projet de Rénovation de Salle de Bain à Bruxelles ?" subtitle="Faites appel à nos artisans plombiers pour réaliser vos réseaux d'eau, douches italiennes et raccordements sanitaires dans les règles de l'art." />
+</Layout>
+
+<style>
+  .bc-section{padding:var(--space-lg) 0 0}.bc{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--font-size-sm);color:var(--color-text-dim);flex-wrap:wrap}.bc a{color:var(--color-text-muted);transition:color var(--transition-fast)}.bc a:hover{color:var(--color-accent)}.bc--current{color:var(--color-text);font-weight:600}
+  .blog-article{padding:var(--space-2xl) 0 var(--space-3xl)}.blog-container{max-width:760px}.blog-meta{display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;margin-bottom:var(--space-xl)}.blog-tag{background:var(--color-accent-glow);color:var(--color-accent);padding:.3rem .8rem;border-radius:999px;font-size:var(--font-size-xs);font-weight:700}.blog-date,.blog-read{color:var(--color-text-dim);font-size:var(--font-size-xs)}.blog-article h1{font-size:var(--font-size-4xl);font-weight:900;line-height:1.15;margin-bottom:var(--space-xl)}.blog-intro{font-size:var(--font-size-lg);line-height:1.8;color:var(--color-text-muted);margin-bottom:var(--space-2xl)}.blog-toc{padding:var(--space-xl);margin-bottom:var(--space-2xl)}.blog-toc h2{font-size:var(--font-size-base);font-weight:700;margin-bottom:var(--space-md)}.blog-toc ol{padding-left:1.2rem;display:flex;flex-direction:column;gap:var(--space-sm)}.blog-toc a{color:var(--color-accent);font-size:var(--font-size-sm)}.blog-article h2{font-size:var(--font-size-2xl);font-weight:800;margin:var(--space-2xl) 0 var(--space-lg);padding-top:var(--space-md)}.blog-article h3{font-size:var(--font-size-xl);font-weight:700;margin:var(--space-xl) 0 var(--space-md);color:var(--color-heading)}.blog-article p{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-md);font-size:var(--font-size-base)}.blog-article ul,.blog-article ol{color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-lg);padding-left:1.5rem;font-size:var(--font-size-base)}.blog-article li{margin-bottom:var(--space-sm)}
+  .blog-cta{padding:var(--space-xl);margin:var(--space-xl) 0;text-align:center}.blog-cta h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-sm)}.blog-cta p{color:var(--color-text-muted);font-size:var(--font-size-sm);margin-bottom:var(--space-md)}
+  .faq-section{margin-top:var(--space-2xl)}.faq-item{margin-bottom:var(--space-xl)}.faq-item h3{font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-xs);color:var(--color-heading)}.faq-item p{font-size:var(--font-size-sm);color:var(--color-text-muted);line-height:1.6}
+</style>
