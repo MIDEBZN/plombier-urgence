@@ -41,6 +41,63 @@ const {
   robots = "index, follow"
 } = Astro.props;
 
+// Reviews for schema
+const isBruxelles = Astro.url.pathname.includes('bruxelles');
+
+const reviewsBruxelles = [
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Marie L." },
+    "reviewBody": "Intervention en moins de 20 minutes pour une fuite urgente un dimanche soir. Travail propre et soigné. Prix annoncé respecté. Je recommande vivement !"
+  },
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Antoine D." },
+    "reviewBody": "Canalisation débouchée rapidement et proprement. Le plombier m'a bien expliqué le problème et les prix étaient très clairs. Super service."
+  },
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Camille L." },
+    "reviewBody": "J'ai appelé pour un tuyau percé en pleine nuit. 25 minutes plus tard, ils étaient chez moi. Rapides, efficaces et très polis."
+  },
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Paul B." },
+    "reviewBody": "Super équipe ! J'avais une fuite que je ne trouvais pas. Ils ont détecté ça sans rien casser. Très pros et prix justes."
+  }
+];
+
+const reviewsGeneral = [
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Marie L." },
+    "reviewBody": "Intervention en moins de 20 minutes pour une fuite urgente un dimanche soir. Travail propre et soigné. Prix annoncé respecté. Je recommande vivement !"
+  },
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Pierre D." },
+    "reviewBody": "Chaudière réparée en une heure. Très professionnel, a tout expliqué clairement. Tarif correct et facture immédiate. Merci !"
+  },
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Sophie B." },
+    "reviewBody": "J'ai envoyé une photo par WhatsApp, j'ai eu un prix en 5 minutes et le plombier était là en 25 min. C'est la première fois qu'un plombier affiche ses prix. Enfin !"
+  },
+  {
+    "@type": "Review",
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Jean M." },
+    "reviewBody": "Rénovation complète de notre salle de bain. Résultat magnifique, dans le budget annoncé et dans les délais. Équipe sérieuse et soignée."
+  }
+];
+
 // LocalBusiness schema
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -93,6 +150,7 @@ const localBusinessSchema = {
     "reviewCount": "523",
     "bestRating": "5"
   },
+  "review": isBruxelles ? reviewsBruxelles : reviewsGeneral,
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Services de plomberie",
