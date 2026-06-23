@@ -20,10 +20,10 @@ const { icon, title, description, href = '/services', image } = Astro.props;
     <div class="service-card__icon">{icon}</div>
     <h3 class="service-card__title">{title}</h3>
     <p class="service-card__desc">{description}</p>
-    <a href={href} class="service-card__link">
+    <span class="service-card__link">
       En savoir plus
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-    </a>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+    </span>
   </div>
 </div>
 

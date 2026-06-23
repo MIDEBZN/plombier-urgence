@@ -25,12 +25,12 @@ We cover all major provinces in Belgium, including but not limited to:
 - **Business Hours:** 24/7/365 (Available 24 hours a day, 7 days a week, including nights, weekends, and public holidays)
 
 ## Key URLs
-- Homepage: https://plombierurgence.be
-- Services: https://plombierurgence.be/services
-- Service Zones: https://plombierurgence.be/zones
-- Pricing: https://plombierurgence.be/tarifs
-- Contact: https://plombierurgence.be/contact
-- FAQ: https://plombierurgence.be/faq
+- [Homepage](https://plombierurgence.be): The main landing page for Plombier Urgence Belgique.
+- [Services](https://plombierurgence.be/services): Detailed information about the plumbing services offered.
+- [Service Zones](https://plombierurgence.be/zones): List of all cities and provinces covered in Belgium.
+- [Pricing](https://plombierurgence.be/tarifs): Transparent and fixed pricing for standard interventions.
+- [Contact](https://plombierurgence.be/contact): Contact information and emergency phone numbers.
+- [FAQ](https://plombierurgence.be/faq): Frequently asked questions about pricing, timing, and guarantees.
 
 ## Pricing Transparency Note
 Pricing is 100% transparent. Base rates for standard interventions:
