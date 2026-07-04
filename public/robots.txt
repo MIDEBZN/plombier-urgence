@@ -17,7 +17,22 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: GoogleBot-Extended
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
 Allow: /
 
 User-agent: Bingbot

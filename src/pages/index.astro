@@ -21,8 +21,8 @@ const faqs = [
     a: "Oui, Plombier Urgence est disponible 24h/24, 7j/7, y compris la nuit, les dimanches et les jours fériés belges. Un supplément de 30% à 50% peut s'appliquer pour les interventions entre 20h et 7h ou les week-ends — ce montant est toujours communiqué avant l'intervention."
   },
   {
-    q: "Que faire en cas de fuite d'eau urgente chez soi en Belgique ?",
-    a: "En cas de fuite d'eau urgente : 1) Fermez immédiatement le robinet d'arrêt général (généralement sous l'évier ou dans la cave). 2) Coupez l'électricité dans les zones humides. 3) Appelez Plombier Urgence au 0465 68 51 58 — nos techniciens arrivent en moins de 30 minutes. Une fuite non traitée peut causer jusqu'à 150 litres de perte par jour et aggraver les dommages structurels."
+    q: "Que dois-je faire immédiatement en cas de fuite d'eau majeure ?",
+    a: "Pour minimiser les dégâts des eaux avant notre arrivée, suivez ces 3 étapes critiques : 1) Coupez l'eau en fermant immédiatement le robinet d'arrêt général (souvent situé près du compteur ou dans la cave). 2) Coupez le courant si l'eau s'approche de prises électriques. 3) Contactez un pro en appelant notre ligne d'urgence au 0465 68 51 58. Nos plombiers certifiés arrivent en moins de 30 minutes."
   },
   {
     q: "Comment déboucher un WC bouché rapidement ?",
@@ -174,6 +174,37 @@ const faqs = [
     </div>
   </section>
 
+  <!-- Meet the Team -->
+  <section class="section team" id="equipe">
+    <div class="container text-center">
+      <p class="section-label">Notre Équipe</p>
+      <h2 class="section-title">Des Experts Agréés à Votre Service</h2>
+      <p class="section-subtitle" style="max-width: 800px; margin: 0 auto var(--space-xl);">
+        Chez Plombier Urgence, vous n'accueillez pas des inconnus. Notre équipe est dirigée par des maîtres-plombiers et chauffagistes certifiés Cerga/Cedicol. Chaque technicien possède au minimum 5 ans d'expérience sur le terrain en Belgique.
+      </p>
+    </div>
+    <div class="container grid grid-3">
+      <div class="team-card card text-center" style="padding: var(--space-xl);">
+        <div style="font-size: 3rem; margin-bottom: var(--space-md);">👷‍♂️</div>
+        <h3 style="margin-bottom: var(--space-xs);">Marc D.</h3>
+        <p style="color: var(--color-accent); font-weight: 600; margin-bottom: var(--space-sm);">Chef Plombier (15 ans d'exp.)</p>
+        <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">Expert en diagnostic thermique et réparation de canalisations complexes. Certification CP1.</p>
+      </div>
+      <div class="team-card card text-center" style="padding: var(--space-xl);">
+        <div style="font-size: 3rem; margin-bottom: var(--space-md);">🔧</div>
+        <h3 style="margin-bottom: var(--space-xs);">Julien V.</h3>
+        <p style="color: var(--color-accent); font-weight: 600; margin-bottom: var(--space-sm);">Chauffagiste Agréé Cerga</p>
+        <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">Spécialiste des dépannages chaudière d'urgence. Plus de 2000 interventions réussies.</p>
+      </div>
+      <div class="team-card card text-center" style="padding: var(--space-xl);">
+        <div style="font-size: 3rem; margin-bottom: var(--space-md);">👩‍🔧</div>
+        <h3 style="margin-bottom: var(--space-xs);">Sophie L.</h3>
+        <p style="color: var(--color-accent); font-weight: 600; margin-bottom: var(--space-sm);">Spécialiste Sanitaire</p>
+        <p style="font-size: var(--font-size-sm); color: var(--color-text-muted);">Recherche de fuite non destructive et rénovations complètes. Précision et propreté garanties.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials -->
   <section class="section testimonials" id="avis">
     <div class="container text-center">
@@ -188,34 +219,37 @@ const faqs = [
     <div class="container grid grid-3">
       <div class="testimonial-card card">
         <div class="testimonial-card__stars">★★★★★</div>
-        <p class="testimonial-card__text">"Intervention en moins de 20 minutes pour une fuite urgente. Travail propre et soigné. Je recommande vivement !"</p>
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Fuite invisible sous plancher (Bruxelles, Ixelles)</h3>
+        <p class="testimonial-card__text">"Infiltration d'eau dans le salon. Détection par caméra thermique en 15 minutes, réparation du tuyau en cuivre sans casser le carrelage. Intervention en moins de 20 minutes pour cette urgence. Travail très propre !"</p>
         <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar">ML</div>
+          <div class="testimonial-card__avatar">TV</div>
           <div>
-            <strong>Marie L.</strong>
-            <span>Bruxelles</span>
+            <strong>Thomas V.</strong>
+            <span>Intervention d'Urgence</span>
           </div>
         </div>
       </div>
       <div class="testimonial-card card">
         <div class="testimonial-card__stars">★★★★★</div>
-        <p class="testimonial-card__text">"Chaudière réparée en une heure un dimanche soir. Très professionnel et tarif correct. Merci !"</p>
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Chaudière en panne à 21h (Waterloo)</h3>
+        <p class="testimonial-card__text">"Plus d'eau chaude avec des enfants en bas âge. Le technicien est arrivé en 25 minutes avec la pièce de rechange dans sa camionnette. Réparé en 1h. Prix fixe annoncé d'avance."</p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar">PD</div>
           <div>
             <strong>Pierre D.</strong>
-            <span>Waterloo</span>
+            <span>Dépannage Chaudière</span>
           </div>
         </div>
       </div>
       <div class="testimonial-card card">
         <div class="testimonial-card__stars">★★★★★</div>
-        <p class="testimonial-card__text">"Rénovation complète de notre salle de bain. Résultat magnifique et dans le budget annoncé. Top !"</p>
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Canalisation bouchée récalcitrante (Namur)</h3>
+        <p class="testimonial-card__text">"Après avoir tout essayé nous-mêmes, l'équipe est venue avec un hydrocureur haute pression. Ils ont extrait un bouchon de calcaire énorme et ont passé une caméra pour vérifier que tout était propre. Très pros."</p>
         <div class="testimonial-card__author">
           <div class="testimonial-card__avatar">SB</div>
           <div>
             <strong>Sophie B.</strong>
-            <span>Namur</span>
+            <span>Débouchage Haute Pression</span>
           </div>
         </div>
       </div>
@@ -320,7 +354,6 @@ const faqs = [
     font-size: var(--font-size-sm);
     font-weight: 600;
     margin-bottom: var(--space-xl);
-    animation: fadeInUp 0.6s ease;
   }
 
   .hero__title {
@@ -330,7 +363,6 @@ const faqs = [
     max-width: 700px;
     margin-bottom: var(--space-lg);
     color: #ffffff;
-    animation: fadeInUp 0.6s ease 0.1s both;
   }
 
   .hero__title .text-accent {
