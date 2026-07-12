@@ -34,12 +34,66 @@ const organizationSchema = {
     "https://fr-be.trustpilot.com/review/plombierurgence.be"
   ]
 };
+
+const profileSchemaMarc = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Marc D.",
+    "jobTitle": "Chef Plombier",
+    "description": "Chef Plombier avec plus de 15 ans d'expérience. Expert en diagnostic thermique et réparation de canalisations complexes. Titulaire de la certification CP1.",
+    "url": "https://www.plombierurgence.be/a-propos/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Plombier Urgence",
+      "url": "https://www.plombierurgence.be/"
+    },
+    "knowsAbout": ["Diagnostic thermique", "Réparation de canalisations", "Plomberie d'urgence", "Installation sanitaire"]
+  }
+};
+
+const profileSchemaJulien = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Julien V.",
+    "jobTitle": "Chauffagiste Agréé Cerga",
+    "description": "Spécialiste des dépannages chaudière d'urgence. Plus de 2000 interventions réussies.",
+    "url": "https://www.plombierurgence.be/a-propos/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Plombier Urgence",
+      "url": "https://www.plombierurgence.be/"
+    },
+    "knowsAbout": ["Dépannage chaudière", "Entretien chaudière", "Chauffage", "Installation gaz"]
+  }
+};
+
+const profileSchemaSophie = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Sophie L.",
+    "jobTitle": "Spécialiste Sanitaire",
+    "description": "Recherche de fuite non destructive et rénovations complètes. Précision et propreté garanties.",
+    "url": "https://www.plombierurgence.be/a-propos/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Plombier Urgence",
+      "url": "https://www.plombierurgence.be/"
+    },
+    "knowsAbout": ["Recherche de fuite", "Rénovation salle de bain", "Sanitaire", "Plomberie générale"]
+  }
+};
 ---
 
 <Layout 
   title="À Propos — Plombier Urgence Belgique | 15 Ans d'Expérience, Certifié & Agréé" 
   description="15 ans d'expertise, techniciens certifiés CP1/CP2, garantie 2 ans. Votre plombier d'urgence de confiance en Belgique — disponible 24h/24."
-  extraSchemas={[organizationSchema]}
+  extraSchemas={[organizationSchema, profileSchemaMarc, profileSchemaJulien, profileSchemaSophie]}
   preloadHero={true}
 >
 

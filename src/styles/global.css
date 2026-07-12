@@ -7,20 +7,20 @@
 
 /* --- Custom Properties --- */
 :root {
-  /* Colors */
-  --color-bg: #0a0f1a;
-  --color-bg-alt: #111827;
-  --color-surface: #1a2332;
-  --color-surface-hover: #243044;
-  --color-border: #1e293b;
-  --color-accent: #50a0e2;
-  --color-accent-hover: #3b8fd4;
-  --color-accent-glow: rgba(80, 160, 226, 0.15);
-  --color-accent-glow-strong: rgba(80, 160, 226, 0.3);
-  --color-text: #f0f4f8;
-  --color-text-muted: #94a3b8;
-  --color-text-dim: #64748b;
-  --color-success: #22c55e;
+  /* Colors - Light Theme based on target design */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4fbff; /* Light blue/gray for hero and alternate sections */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-accent: #3b36e4; /* Vibrant blue/purple */
+  --color-accent-hover: #2d29ba;
+  --color-accent-glow: rgba(59, 54, 228, 0.1);
+  --color-accent-glow-strong: rgba(59, 54, 228, 0.2);
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-dim: #94a3b8;
+  --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-danger: #ef4444;
 
@@ -49,20 +49,20 @@
 
   /* Layout */
   --max-width: 1200px;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
 
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
-  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
-  --shadow-accent: 0 4px 20px rgba(80,160,226,0.25);
+  /* Shadows - Lighter shadows for light theme */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
+  --shadow-md: 0 10px 25px rgba(0,0,0,0.05);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.08);
+  --shadow-accent: 0 8px 25px rgba(59, 54, 228, 0.25);
 }
 
 /* --- Reset --- */

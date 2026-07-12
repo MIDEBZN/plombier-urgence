@@ -350,11 +350,7 @@
             "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
-        {
-            "source": "/politique-de-confidentialite(.*)",
-            "destination": "/politique-de-confidentialite/",
-            "permanent": true
-        },
+
         {
             "source": "/mentions-legales(.*)",
             "destination": "/politique-de-confidentialite/",

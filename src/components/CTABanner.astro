@@ -9,15 +9,21 @@ const { title = "Une urgence ? Ne perdez pas de temps.", subtitle = "Nos technic
 
 <section class="cta-banner">
   <div class="container cta-banner__inner">
-    <div class="cta-banner__glow"></div>
-    <h2 class="cta-banner__title">{title}</h2>
-    <p class="cta-banner__text">{subtitle}</p>
-    <div class="cta-banner__actions">
-      <a href="tel:0465685158" class="btn btn-primary btn-lg">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
-        Appeler le 0465 68 51 58
-      </a>
-      <a href="/contact/" class="btn btn-outline btn-lg">Demander un devis</a>
+    <div class="cta-banner__content">
+      <span class="cta-banner__label">Contactez-nous</span>
+      <h2 class="cta-banner__title">Une urgence ? Ne perdez pas de temps.</h2>
+      <p class="cta-banner__text">Nos techniciens sont sur la route. Déplacement en moins de 30 minutes dans votre région.</p>
+      
+      <div class="cta-banner__actions">
+        <a href="tel:0465685158" class="btn btn-outline btn-lg" style="color:white; border-color:white;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+          Appeler le 0465 68 51 58
+        </a>
+        <a href="/contact/" class="btn btn-primary btn-lg" style="background:#fff; color:var(--color-accent);">Demander un devis</a>
+      </div>
+    </div>
+    <div class="cta-banner__image-col">
+      <img src="/images/service-chaudiere.webp" alt="Plumber" class="cta-banner__img" />
     </div>
   </div>
 </section>
@@ -26,47 +32,74 @@ const { title = "Une urgence ? Ne perdez pas de temps.", subtitle = "Nos technic
   .cta-banner {
     position: relative;
     padding: var(--space-4xl) 0;
-    background: var(--color-bg-alt);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+    background: #3b36e4; /* Vibrant purple */
+    color: #fff;
     overflow: hidden;
   }
 
-  .cta-banner__glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
-    pointer-events: none;
+  .cta-banner__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+    position: relative;
   }
 
-  .cta-banner__inner {
-    position: relative;
-    text-align: center;
+  .cta-banner__label {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: var(--space-sm);
   }
 
   .cta-banner__title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-4xl);
     font-weight: 800;
-    color: var(--color-text);
+    color: #ffffff;
     margin-bottom: var(--space-md);
   }
 
   .cta-banner__text {
     font-size: var(--font-size-lg);
-    color: var(--color-text-muted);
-    max-width: 550px;
-    margin: 0 auto var(--space-xl);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 500px;
+    margin-bottom: var(--space-xl);
   }
 
   .cta-banner__actions {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: var(--space-md);
     flex-wrap: wrap;
+  }
+  
+  .cta-banner__image-col {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .cta-banner__img {
+    max-width: 100%;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .cta-banner__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .cta-banner__text {
+      margin: 0 auto var(--space-xl);
+    }
+    .cta-banner__actions {
+      justify-content: center;
+    }
+    .cta-banner__image-col {
+      display: none;
+    }
   }
 </style>

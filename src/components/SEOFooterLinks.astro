@@ -34,8 +34,13 @@ const allCommunes = getAllCommunes();
 
     <div class="seo-footer-links__section">
       <h4 class="seo-footer-links__subtitle">Toutes nos communes d'intervention</h4>
-      <div class="seo-footer-links__grid">
-        <a href="/zones/" class="seo-footer-links__item seo-footer-links__item--bold">
+      <div class="seo-footer-links__grid seo-footer-links__grid--dense">
+        {allCommunes.map(commune => (
+          <a href={`/zones/${commune.provinceSlug}/${commune.slug}/`} class="seo-footer-links__item">
+            Plombier {commune.name}
+          </a>
+        ))}
+        <a href="/zones/" class="seo-footer-links__item seo-footer-links__item--bold" style="grid-column: 1 / -1; margin-top: var(--space-sm);">
           Voir toutes nos zones d'intervention sur la carte (Plus de 70 communes couvertes) →
         </a>
       </div>
