@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const profileSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Julien V.",
+    "jobTitle": "Chauffagiste Agréé",
+    "description": "Chauffagiste agréé avec 15 ans d'expérience. Expert en diagnostic thermique, réparation de chaudières complexes et installation de pompes à chaleur. Certifié Cerga.",
+    "url": "https://www.plombierurgence.be/expert/julien-v/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Plombier Urgence",
+      "url": "https://www.plombierurgence.be/"
+    },
+    "knowsAbout": [
+      "Dépannage chaudière",
+      "Rénovation thermique",
+      "Recherche de fuite"
+    ]
+  }
+};
+---
+
+<Layout 
+  title="Julien V. - Chauffagiste Agréé | Plombier Urgence" 
+  description="Profil de Julien V., chauffagiste agréé chez Plombier Urgence. 15 ans d'expérience, certifié Cerga."
+  extraSchemas={[profileSchema]}
+>
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <a href="/a-propos/">À Propos</a><span>›</span>
+        <span class="bc--current">Julien V.</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Profil d'Expert : Julien V.</h1>
+      
+      <div class="card" style="max-width: 600px; margin: 0 auto; text-align: left; padding: 2rem;">
+        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+          <div style="font-size: 4rem; margin-right: 1.5rem;">👤</div>
+          <div>
+            <h2 style="margin: 0; font-size: 1.5rem;">Julien V.</h2>
+            <p style="margin: 0; color: var(--color-accent); font-weight: bold;">Chauffagiste Agréé</p>
+          </div>
+        </div>
+        
+        <p><strong>Expérience :</strong> 15 ans</p>
+        <p><strong>Certifications :</strong> Agréé Cerga, Expert technique E-E-A-T</p>
+        
+        <h3 style="margin-top: 1.5rem;">À propos</h3>
+        <p style="color: var(--color-text-dim); line-height: 1.6;">
+          Julien est le référent technique principal pour toutes les interventions liées au chauffage et au gaz au sein de notre réseau. Il supervise la création et la révision de nos guides techniques pour s'assurer de leur totale conformité avec les réglementations du bâtiment (CSTC, Synergrid).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner 
+    title="Besoin d'un dépannage rapide ?"
+    subtitle="L'équipe de Julien intervient en 30 minutes partout en Belgique."
+  />
+</Layout>

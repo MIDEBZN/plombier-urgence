@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import CTABanner from '../components/CTABanner.astro';
+import { PRICING } from '../data/pricing';
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -32,7 +33,7 @@ const localBusinessSchema = {
       "closes": "23:59"
     }
   ],
-  "priceRange": "Dès 60€",
+  "priceRange": `Dès ${PRICING.debouchage.start}€`,
   "areaServed": [
     { "@type": "AdministrativeArea", "name": "Bruxelles-Capitale" },
     { "@type": "AdministrativeArea", "name": "Brabant Wallon" },
@@ -51,7 +52,7 @@ const localBusinessSchema = {
 const faqs = [
   {
     q: "Quel est le tarif pour un débouchage de canalisation en Belgique ?",
-    a: "Chez Plombier Urgence, le tarif pour un débouchage de canalisation démarre à 60€ TTC, inspection caméra incluse. Pour un WC bouché, le tarif est de 75€ à 150€ selon la complexité. Ces prix sont fixes et communiqués avant toute intervention, conformément à la loi belge sur la transparence des services."
+    a: `Chez Plombier Urgence, le tarif pour un débouchage de canalisation démarre à ${PRICING.debouchage.start}€ TTC, inspection caméra incluse. Ces prix sont fixes et communiqués avant toute intervention, conformément à la loi belge sur la transparence des services.`
   },
   {
     q: "En combien de temps un plombier d'urgence peut-il intervenir en Belgique ?",
@@ -63,7 +64,7 @@ const faqs = [
   },
   {
     q: "Plombier Urgence intervient-il la nuit et le week-end ?",
-    a: "Oui, Plombier Urgence est disponible 24h/24, 7j/7, y compris la nuit, les dimanches et les jours fériés belges. Un supplément de 30% à 50% peut s'appliquer pour les interventions entre 20h et 7h ou les week-ends — ce montant est toujours communiqué avant l'intervention."
+    a: `Oui, Plombier Urgence est disponible 24h/24, 7j/7, y compris la nuit, les dimanches et les jours fériés belges. ${PRICING.surcharge.description}`
   },
   {
     q: "Que dois-je faire immédiatement en cas de fuite d'eau majeure ?",
@@ -71,7 +72,7 @@ const faqs = [
   },
   {
     q: "Comment déboucher un WC bouché rapidement ?",
-    a: "Pour déboucher un WC : commencez par une ventouse (5 à 10 pompes vigoureuses). Si cela échoue, un furet mécanique peut atteindre les bouchons à 1–3 mètres de profondeur. Évitez les produits chimiques — ils corrodent les canalisations anciennes en PVC. Si le problème persiste, notre équipe intervient dès 75€ avec hydrocurage haute pression, garantie 6 mois."
+    a: `Pour déboucher un WC : commencez par une ventouse (5 à 10 pompes vigoureuses). Si cela échoue, un furet mécanique peut atteindre les bouchons à 1–3 mètres de profondeur. Évitez les produits chimiques — ils corrodent les canalisations anciennes en PVC. Si le problème persiste, notre équipe intervient dès ${PRICING.debouchage.start}€ avec hydrocurage haute pression, garantie 6 mois.`
   },
   {
     q: "Plombier Urgence couvre-t-il toute la Belgique ?",
@@ -81,8 +82,8 @@ const faqs = [
 ---
 
 <Layout 
-  title="Plombier Bruxelles | Urgence Plomberie 24/7 | Dès 60€" 
-  description="Artisan plombier Bruxelles 24h/24 : entreprise de plomberie pour débouchage, fuite. Urgence plomberie Bruxelles en 30 min. Prix fixes. ☎ 0465 68 51 58"
+  title={`Plombier Bruxelles | Urgence Plomberie 24/7 | Dès ${PRICING.debouchage.start}€`}
+  description={`Artisan plombier Bruxelles 24h/24 : entreprise de plomberie pour débouchage, fuite. Urgence plomberie Bruxelles en 30 min. Prix fixes. ☎ 0465 68 51 58`}
   faqs={faqs}
   extraSchemas={[localBusinessSchema]}
   preloadHero={true}
@@ -99,7 +100,7 @@ const faqs = [
           Plombier Bruxelles <br/><span class="text-accent">Urgence 24/7</span> en 30 min
         </h1>
         <p class="hero__subtitle">
-          Votre <strong>entreprise de plomberie à Bruxelles</strong>. <strong>Artisan plombier Bruxelles</strong> agréé qui affiche ses prix avant d'intervenir. Temps de réponse moyen : <strong>23 minutes</strong>. Débouchage dès 60€ | Fuite dès 95€.
+          Votre <strong>entreprise de plomberie à Bruxelles</strong>. <strong>Artisan plombier Bruxelles</strong> agréé qui affiche ses prix avant d'intervenir. Temps de réponse moyen : <strong>23 minutes</strong>. Débouchage dès {PRICING.debouchage.start}€ | Fuite dès {PRICING.fuite.start}€.
         </p>
         <div class="hero__actions">
           <a href="tel:0465685158" class="btn btn-primary btn-lg">
@@ -124,27 +125,27 @@ const faqs = [
       <p class="section-subtitle">Trouvez un <strong>bon plombier expert à Bruxelles</strong> pour tous vos problèmes. Interventions rapides et efficaces dans les 19 communes de la capitale.</p>
     </div>
     <div class="container grid grid-3">
-      <a href="/service/debouchage-canalisation/" class="service-link" aria-label="Service de Débouchage Canalisation">
+      <a href="/service/debouchage-canalisation/" class="service-link" aria-label="Service de Débouchage Canalisation Bruxelles">
         <ServiceCard
           icon="🚿"
-          title="Débouchage Canalisation"
-          description="WC, évier, douche ou baignoire bouchés ? Nous intervenons avec du matériel haute pression pour un débouchage immédiat. Dès 80€."
+          title="Débouchage Canalisation Bruxelles"
+          description={`WC, évier, douche ou baignoire bouchés ? Nous intervenons avec du matériel haute pression pour un débouchage immédiat à Bruxelles. Dès ${PRICING.debouchage.start}€.`}
           image="/images/service-debouchage.webp"
         />
       </a>
-      <a href="/service/recherche-fuite/" class="service-link" aria-label="Service de Recherche de Fuite">
+      <a href="/service/recherche-fuite/" class="service-link" aria-label="Service de Recherche Fuite Bruxelles">
         <ServiceCard
           icon="🔍"
-          title="Recherche de Fuite"
-          description="Détection précise de fuites d'eau sans casse grâce à nos caméras thermiques et acoustiques. Réparation rapide garantie. Dès 95€."
+          title="Recherche Fuite Bruxelles"
+          description="Détection précise de fuites d'eau sans casse grâce à nos caméras thermiques et acoustiques. Réparation rapide garantie à Bruxelles. Dès 95€."
           image="/images/service-fuite.webp"
         />
       </a>
-      <a href="/service/depannage-chaudiere/" class="service-link" aria-label="Service de Dépannage Chaudière">
+      <a href="/service/depannage-chaudiere/" class="service-link" aria-label="Service de Dépannage Chaudière Bruxelles">
         <ServiceCard
           icon="🔥"
-          title="Dépannage Chaudière"
-          description="Votre chaudière est en panne ? Plus d'eau chaude ? Nos chauffagistes agréés interviennent sur toutes les marques. Dès 100€."
+          title="Dépannage Chaudière Bruxelles"
+          description={`Votre chaudière est en panne ? Plus d'eau chaude ? Nos chauffagistes bruxellois agréés interviennent sur toutes les marques. Dès ${PRICING.chaudiere.start}€.`}
           image="/images/service-chaudiere.webp"
         />
       </a>
@@ -152,7 +153,7 @@ const faqs = [
         <ServiceCard
           icon="🔧"
           title="Réparation Robinetterie"
-          description="Remplacement de robinets, mitigeurs, chasse d'eau qui coule. Installation de nouveaux sanitaires. Dès 60€."
+          description={`Remplacement de robinets, mitigeurs, chasse d'eau qui coule. Installation de nouveaux sanitaires. Dès ${PRICING.robinetterie.start}€.`}
           image="/images/service-robinetterie.webp"
         />
       </a>
@@ -179,7 +180,7 @@ const faqs = [
   <section class="section why-us" id="pourquoi-nous">
     <div class="container text-center">
       <p class="section-label">Pourquoi Nous Choisir</p>
-      <h2 class="section-title">Le Meilleur Plombier Agréé de Bruxelles</h2>
+      <h2 class="section-title">Plombier Disponible 24h/24 à Bruxelles</h2>
     </div>
     <div class="container why-us__grid">
       <div class="why-us__image-col">
@@ -240,7 +241,7 @@ const faqs = [
   <section class="section testimonials" id="avis">
     <div class="container text-center">
       <p class="section-label">Témoignages & Validation</p>
-      <h2 class="section-title">Avis Clients — Meilleur Plombier Belgique</h2>
+      <h2 class="section-title">Avis Clients — +500 Avis Google Positifs</h2>
       
       <blockquote style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--color-surface);border-left:4px solid var(--color-accent);border-radius:0 var(--radius-lg) var(--radius-lg) 0;text-align:left;">
         <p style="font-size:1.1rem;font-weight:600;font-style:italic;margin-bottom:0.5rem;">"Une urgence plomberie bien gérée, c'est 80% du dommage évité."</p>
@@ -296,14 +297,14 @@ const faqs = [
     </div>
     <div class="container">
       <div class="zones-grid">
-        <a href="/urgence/bruxelles/" class="zone-chip">Plombier Bruxelles</a>
+        <a href="/" class="zone-chip">Plombier Bruxelles</a>
         <a href="/zones/brabant-wallon/waterloo/" class="zone-chip">Plombier Waterloo</a>
-        <a href="/urgence/namur/" class="zone-chip">Plombier Namur</a>
-        <a href="/urgence/liege/" class="zone-chip">Plombier Liège</a>
-        <a href="/urgence/charleroi/" class="zone-chip">Plombier Charleroi</a>
+        <a href="/zones/province-de-namur/namur/" class="zone-chip">Plombier Namur</a>
+        <a href="/zones/province-de-liege/liege/" class="zone-chip">Plombier Liège</a>
+        <a href="/zones/hainaut/charleroi/" class="zone-chip">Plombier Charleroi</a>
         <a href="/zones/hainaut/mons/" class="zone-chip">Plombier Mons</a>
         <a href="/zones/brabant-wallon/nivelles/" class="zone-chip">Plombier Nivelles</a>
-        <a href="/urgence/wavre/" class="zone-chip">Plombier Wavre</a>
+        <a href="/zones/brabant-wallon/wavre/" class="zone-chip">Plombier Wavre</a>
         <a href="/zones/brabant-wallon/ottignies-louvain-la-neuve/" class="zone-chip">Plombier Ottignies</a>
         <a href="/zones/bruxelles-capitale/uccle/" class="zone-chip">Plombier Uccle</a>
         <a href="/zones/bruxelles-capitale/ixelles/" class="zone-chip">Plombier Ixelles</a>

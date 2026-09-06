@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTABanner from '../components/CTABanner.astro';
+import { PRICING } from '../data/pricing';
 
 const categories = [
   {
@@ -53,7 +54,7 @@ const categories = [
       },
       {
         q: "Combien coûte un débouchage de canalisation ?",
-        a: "En Belgique (Bruxelles, Wallonie), le prix d'un débouchage standard varie généralement entre 60€ et 150€ pour une intervention classique avec pompe ou furet. Ce tarif peut atteindre 250€ à 350€ ou plus si une inspection technique par caméra vidéo et un hydrocurage complet par camion pompe haute pression sont requis."
+        a: `En Belgique (Bruxelles, Wallonie), le prix d'un débouchage standard varie généralement entre ${PRICING.debouchage.start}€ et 150€ pour une intervention classique avec pompe ou furet. Ce tarif peut atteindre 250€ à 350€ ou plus si une inspection technique par caméra vidéo et un hydrocurage complet par camion pompe haute pression sont requis.`
       },
       {
         q: "Quelle est la différence entre débouchage mécanique et hydrocurage ?",
@@ -65,7 +66,7 @@ const categories = [
       },
       {
         q: "Combien coûte un débouchage à domicile ?",
-        a: "Le coût global dépend du forfait de déplacement, de l'état du bouchon et des jours d'intervention. Pour un évier bouché à domicile en pleine journée, comptez autour de 60€ à 90€. Des frais supplémentaires s'appliquent systématiquement lors des appels de nuit ou les jours fériés."
+        a: `Le coût global dépend du forfait de déplacement, de l'état du bouchon et des jours d'intervention. Pour un évier bouché à domicile en pleine journée, comptez autour de ${PRICING.debouchage.start}€ à 150€. Des frais supplémentaires s'appliquent systématiquement lors des appels de nuit ou les jours fériés. ${PRICING.surcharge.description}`
       },
       {
         q: "Peut-on déboucher soi-même ou faut-il un plombier ?",
@@ -119,7 +120,7 @@ const categories = [
       },
       {
         q: "Quels sont les tarifs d’un plombier en urgence ?",
-        a: "Un dépannage urgent classique de plomberie intègre le coût de déplacement d'urgence du véhicule ainsi que de la main d'œuvre spécialisée. Prévoyez généralement un forfait global débutant autour de 85€-150€ TTC pendant les jours ouvrés."
+        a: `Un dépannage urgent classique de plomberie intègre le coût de déplacement d'urgence du véhicule ainsi que de la main d'œuvre spécialisée. Prévoyez généralement un forfait global débutant autour de ${PRICING.debouchage.start}€ TTC pendant les jours ouvrés.`
       },
       {
         q: "Comment éviter les arnaques en dépannage urgent ?",
@@ -189,7 +190,7 @@ const categories = [
       },
       {
         q: "Combien coûte une recherche de fuite ?",
-        a: "Le tarif conventionné avec du matériel très haut de gamme se détermine selon le coût précis des diagnostics qui oscillent d'ordre national autour de la fraction 140€ sur du classique extérieur, pour croître en rapport avec l’intérieur encastré."
+        a: `Le tarif conventionné se détermine selon le coût précis des diagnostics qui oscillent autour de ${PRICING.fuite.start}€ à 300€ selon la complexité et l'encastrement.`
       },
       {
         q: "Quand une fuite d’eau devient-elle une urgence ?",
@@ -208,7 +209,7 @@ const allFaqs = categories.flatMap(c => c.questions);
 
 <Layout 
   title="Foire Aux Questions (FAQ) — Plombier Urgence" 
-  description="Trouvez les réponses détaillées à toutes vos questions sur la plomberie : débouchage, urgences et recherche de fuite. Informations certifiées E-E-A-T."
+  description="Trouvez les réponses détaillées à toutes vos questions sur la plomberie : débouchage, urgences et recherche de fuite. Informations validées par nos experts."
   faqs={allFaqs}
 >
   <!-- Hero -->
@@ -228,14 +229,17 @@ const allFaqs = categories.flatMap(c => c.questions);
   <section class="section faq-page-content">
     <div class="container">
       
-      <!-- EEAT Trust Badge -->
+      <!-- Expert Review Badge -->
       <div class="eeat-badge card">
-        <div class="eeat-badge__icon">🛡️</div>
+        <div class="eeat-badge__icon">👤</div>
         <div class="eeat-badge__content">
-          <strong>Contenu Validé et Certifié par des Professionnels de la Plomberie</strong>
-          <p>
-            Toutes les réponses fournies sur cette page respectent les standards E-E-A-T <i>(Expérience, Expertise, Autorité, Fiabilité)</i>. Nos informations techniques ont été directement rédigées par nos artisans plombiers et technico-commerciaux belges cumulant 15 ans d'expérience au sein du réseau Plombier Urgence. Nos recommandations sont en totale conformité avec les réglementations du bâtiment (CSTC, Synergrid).
-          </p>
+          <strong>Révisé par <a href="/expert/julien-v/" style="color:var(--color-accent); text-decoration:underline;">Julien V.</a></strong>
+          <ul style="list-style:none; padding:0; margin: 0.5rem 0; font-size: 0.95rem;">
+            <li>✓ Chauffagiste agréé</li>
+            <li>✓ 15 ans d'expérience</li>
+            <li>✓ Dernière révision: 4 septembre 2026</li>
+            <li>✓ Sources: <a href="https://environnement.brussels/" target="_blank" rel="noopener noreferrer">Bruxelles Environnement</a>, <a href="https://www.cerga.be/" target="_blank" rel="noopener noreferrer">Cerga</a>, <a href="https://www.buildwise.be/" target="_blank" rel="noopener noreferrer">Buildwise</a></li>
+          </ul>
         </div>
       </div>
 

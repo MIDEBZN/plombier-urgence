@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const caseStudies = [
+  {
+    title: "Débouchage complexe d'une colonne générale à Ixelles",
+    description: "Comment nous avons résolu un problème de refoulement persistant dans un immeuble de 4 étages en utilisant l'hydrocurage à haute pression et l'inspection par caméra.",
+    category: "Débouchage",
+    date: "Mars 2026",
+    link: "#"
+  },
+  {
+    title: "Recherche de fuite non destructive dans une maison de maître",
+    description: "Utilisation de la caméra thermique pour localiser une fuite encastrée derrière un mur en marbre sans endommager le revêtement historique.",
+    category: "Recherche de fuite",
+    date: "Août 2026",
+    link: "#"
+  },
+  {
+    title: "Remplacement d'urgence d'une chaudière en plein hiver",
+    description: "Intervention rapide par -5°C pour remplacer une chaudière au gaz défaillante, rétablissant le chauffage en moins de 24h.",
+    category: "Dépannage Chaudière",
+    date: "Janvier 2026",
+    link: "#"
+  }
+];
+---
+
+<Layout 
+  title="Cas d'Études et Réalisations | Plombier Urgence" 
+  description="Découvrez nos interventions de plomberie les plus complexes à Bruxelles et en Belgique. Études de cas en débouchage, recherche de fuite et chauffage."
+>
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a><span>›</span>
+        <span class="bc--current">Cas d'Études</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="tarif-hero" style="padding-top: 3rem; padding-bottom: 3rem; background: var(--color-bg-alt);">
+    <div class="container text-center">
+      <h1 class="tarif-hero__title">Nos <span class="text-accent">Cas d'Études</span></h1>
+      <p class="tarif-hero__text" style="max-width: 800px; margin: 1rem auto;">
+        Découvrez comment nos experts résolvent les problèmes de plomberie les plus complexes. De la recherche de fuite invisible à l'hydrocurage d'immeubles, voici des exemples concrets de nos interventions sur le terrain.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tarif-grid">
+        {caseStudies.map(study => (
+          <div class="card" style="padding: 1.5rem; text-align: left;">
+            <div style="color: var(--color-accent); font-size: 0.9rem; font-weight: bold; margin-bottom: 0.5rem; text-transform: uppercase;">
+              {study.category} • {study.date}
+            </div>
+            <h3 style="margin-bottom: 1rem;">{study.title}</h3>
+            <p style="color: var(--color-text-dim); margin-bottom: 1.5rem;">{study.description}</p>
+            <a href={study.link} class="btn btn-outline" style="width: 100%; text-align: center;">Lire l'étude de cas</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner 
+    title="Besoin d'une intervention experte ?"
+    subtitle="Nos techniciens qualifiés sont prêts à intervenir sur votre problème."
+  />
+</Layout>

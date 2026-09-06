@@ -1,3 +1,4 @@
+import { PRICING } from './pricing';
 // Detailed data for individual service pages
 export interface ServicePageData {
     slug: string;
@@ -39,10 +40,10 @@ export const servicePages: ServicePageData[] = [
     {
         slug: 'debouchage-canalisation',
         icon: '🚿',
-        title: 'Débouchage Canalisation',
-        metaTitle: 'Débouchage Canalisation Belgique — Urgence 24/7 | Tarif 2025 dès 60€',
-        metaDescription: 'Débouchage canalisation en Belgique : WC, évier, douche, égout. Intervention en 30 min, 24h/24. Tarif 2025 dès 60€. Inspection caméra incluse. ☎ 0465 68 51 58',
-        heroSubtitle: 'Canalisation bouchée ? Notre équipe intervient en 30 minutes avec du matériel haute pression professionnel. 80% des bouchons sont résolus en moins d\'1 heure. Résultat garanti, prix fixe communiqué AVANT intervention.',
+        title: 'Débouchage Canalisation Bruxelles',
+        metaTitle: 'Débouchage Canalisation Bruxelles & Belgique — Urgence 24/7 | Tarif dès 60€',
+        metaDescription: 'Débouchage canalisation à Bruxelles et partout en Belgique : WC, évier, douche, égout. Intervention en 30 min, 24h/24. Tarif dès 60€. ☎ 0465 68 51 58',
+        heroSubtitle: 'Canalisation bouchée à Bruxelles ou ailleurs en Belgique ? Notre équipe bruxelloise intervient en 30 minutes avec du matériel haute pression professionnel. 80% des bouchons sont résolus en moins d\'1 heure. Résultat garanti, prix fixe communiqué AVANT intervention.',
         priceFrom: '80 €',
         priceRange: '80 € – 350 €',
         included: [
@@ -103,10 +104,10 @@ export const servicePages: ServicePageData[] = [
     {
         slug: 'recherche-fuite',
         icon: '🔍',
-        title: 'Recherche & Réparation de Fuite',
-        metaTitle: 'Détection Fuite d\'Eau Belgique — Sans Casse | Caméra Thermique | Tarif 2025',
-        metaDescription: 'Détection fuite d\'eau en Belgique sans destruction. Caméra thermique et acoustique. Réparation immédiate. Tarif 2025 dès 95€. Intervention 24/7. ☎ 0465 68 51 58',
-        heroSubtitle: 'Fuite d\'eau visible ou cachée ? Une fuite non détectée coûte en moyenne 400€ de plus sur la facture d\'eau annuelle. Nous localisons et réparons toutes les fuites avec des technologies non invasives. Pas de casse inutile.',
+        title: 'Recherche de Fuite Bruxelles',
+        metaTitle: 'Détection & Recherche Fuite d\'Eau Bruxelles — Sans Casse | Tarif 2025',
+        metaDescription: 'Détection fuite d\'eau à Bruxelles et en Belgique sans destruction. Caméra thermique et acoustique. Réparation immédiate. Intervention 24/7. ☎ 0465 68 51 58',
+        heroSubtitle: 'Fuite d\'eau visible ou cachée à Bruxelles ? Une fuite non détectée coûte cher. Nous localisons et réparons toutes les fuites avec des technologies non invasives dans la capitale et sur tout le territoire national. Pas de casse inutile.',
         priceFrom: '95 €',
         priceRange: '95 € – 300 €',
         included: [
@@ -162,10 +163,10 @@ export const servicePages: ServicePageData[] = [
     {
         slug: 'depannage-chaudiere',
         icon: '🔥',
-        title: 'Dépannage & Entretien Chaudière',
-        metaTitle: 'Dépannage Chaudière Belgique — Toutes Marques 24/7 | Tarif 2025 dès 100€',
-        metaDescription: 'Dépannage chaudière en Belgique : gaz, mazout, condensation. Chauffagiste agréé, toutes marques. Entretien annuel dès 100€. Intervention 24/7. ☎ 0465 68 51 58',
-        heroSubtitle: 'Chaudière en panne ou entretien obligatoire ? Une panne de chaudière en hiver sans intervention rapide peut causer des dégâts de gel estimés à plus de 2 000€. Nos chauffagistes agréés interviennent sur toutes les marques pour un dépannage le jour même.',
+        title: 'Dépannage Chaudière Bruxelles',
+        metaTitle: 'Dépannage Chaudière Bruxelles & Belgique — Toutes Marques 24/7',
+        metaDescription: 'Dépannage chaudière à Bruxelles et en Belgique : gaz, mazout. Chauffagiste agréé, toutes marques. Entretien annuel. Intervention 24/7. ☎ 0465 68 51 58',
+        heroSubtitle: 'Chaudière en panne à Bruxelles ou en Belgique ? Nos chauffagistes agréés interviennent sur toutes les marques pour un dépannage le jour même dans la capitale et les provinces voisines.',
         priceFrom: '100 €',
         priceRange: '100 € – 500 €',
         included: [
@@ -203,7 +204,7 @@ export const servicePages: ServicePageData[] = [
         faqs: [
             { q: 'L\'entretien de chaudière est-il obligatoire en Belgique ?', a: 'Oui. En Wallonie, l\'entretien est obligatoire tous les ans pour le mazout et tous les 2 ans pour le gaz. À Bruxelles, tous les 2 ans pour le gaz et annuel pour le mazout.' },
             { q: 'Combien coûte un entretien de chaudière ?', a: 'L\'entretien annuel coûte entre 100€ et 180€ selon le type de chaudière (gaz ou mazout, murale ou sol). Attestation officielle incluse.' },
-            { q: 'Combien coûte un dépannage de chaudière ?', a: 'Un dépannage simple (réinitialisation, purge, réglage de pression) coûte 100€ à 150€. Un remplacement de pièce varie de 150€ à 500€ selon la pièce.' },
+            { q: 'Combien coûte un dépannage de chaudière ?', a: `Un dépannage simple (réinitialisation, purge, réglage de pression) coûte ${PRICING.chaudiere.start}€ à 150€. Un remplacement de pièce varie de 150€ à 500€ selon la pièce.` },
             { q: 'Intervenez-vous sur les chaudières au mazout ?', a: 'Oui, nos techniciens sont agréés pour le gaz ET le mazout. Toutes marques et tous modèles.' },
             { q: 'Pouvez-vous installer une nouvelle chaudière ?', a: 'Oui. Nous conseillons, fournissons et installons des chaudières neuves (condensation gaz, pompe à chaleur). Nous vous aidons aussi à obtenir les primes énergie régionales.' },
         ],
@@ -222,11 +223,11 @@ export const servicePages: ServicePageData[] = [
         slug: 'reparation-robinetterie',
         icon: '🔧',
         title: 'Réparation Robinetterie & Sanitaires',
-        metaTitle: 'Réparation Robinetterie & Sanitaires Belgique — Tarif 2025 dès 60€',
-        metaDescription: 'Réparation robinet, mitigeur, chasse d\'eau, WC, chauffe-eau en Belgique. Remplacement et installation sanitaires. Dès 60€. Intervention rapide. ☎ 0465 68 51 58',
+        metaTitle: `Réparation Robinetterie & Sanitaires Belgique — Tarif dès ${PRICING.robinetterie.start}€`,
+        metaDescription: `Réparation robinet, mitigeur, chasse d'eau, WC, chauffe-eau en Belgique. Remplacement et installation sanitaires. Dès ${PRICING.robinetterie.start}€. Intervention rapide. ☎ 0465 68 51 58`,
         heroSubtitle: 'Robinet qui fuit, chasse d\'eau qui coule, sanitaire à remplacer ? Nos plombiers interviennent rapidement pour toutes vos réparations et installations.',
-        priceFrom: '60 €',
-        priceRange: '60 € – 400 €',
+        priceFrom: `${PRICING.robinetterie.start} €`,
+        priceRange: PRICING.robinetterie.range,
         included: [
             { item: 'Réparation robinet et mitigeur', detail: 'Remplacement de cartouche, joint, aérateur ou robinet complet' },
             { item: 'Résolution chasse d\'eau', detail: 'Réglage, remplacement du mécanisme ou du flotteur' },
@@ -281,11 +282,11 @@ export const servicePages: ServicePageData[] = [
         slug: 'renovation-salle-de-bain',
         icon: '🛁',
         title: 'Prix pour Renover une Salle de Bain & Rénovation Salle de Bain Prix',
-        metaTitle: 'Prix pour Renover une Salle de Bain & Rénovation Salle de Bain Prix 2025',
+        metaTitle: 'Prix pour Renover une Salle de Bain & Rénovation Salle de Bain Prix',
         metaDescription: 'Rénovation salle de bain en Belgique : douche italienne, carrelage, mobilier, plomberie. Devis gratuit, TVA 6%. Résultat garanti. ☎ 0465 68 51 58',
         heroSubtitle: 'Transformez votre espace en une nouvelle salle de bains moderne et fonctionnelle. La rénovation salle de bain prix varie, car le prix dépend directement du choix des matériaux et de l\'ampleur du projet. Nous utilisons des matériaux résistant à l\'eau pour garantir un investissement sur le long terme. Faire appel à nos experts, c\'est l\'assurance d\'un travail soigné.',
-        priceFrom: '5 000 €',
-        priceRange: '5 000 € – 15 000 €',
+        priceFrom: `${PRICING.renovation.start} €`,
+        priceRange: PRICING.renovation.range,
         included: [
             { item: 'Conception et design', detail: 'Étude de votre espace, plan 3D, sélection des matériaux et équipements avec vous' },
             { item: 'Travaux préparatoires', detail: 'Travaux de démolition propres de l\'existant, évacuation des gravats incluse' },
@@ -344,7 +345,7 @@ export const servicePages: ServicePageData[] = [
         metaTitle: 'Urgence Plomberie Belgique — Intervention 24/7 en 30 min',
         metaDescription: 'Urgence plomberie en Belgique : dépannage rapide 24h/24 et 7j/7. Fuite, débouchage, chauffage, inondation. Prix fixe. ☎ 0465 68 51 58',
         heroSubtitle: 'Une urgence n\'attend pas. Fuite majeure, canalisation bloquée, dégât des eaux ou panne de chauffage : notre équipe de garde est disponible 24h/24 pour intervenir en 30 minutes.',
-        priceFrom: '95 €',
+        priceFrom: `${PRICING.fuite.start} €`,
         priceRange: '95 € – 400 €',
         included: [
             { item: 'Diagnostic immédiat', detail: 'Identification rapide de la cause de l\'urgence (fuite, bouchon, panne)' },

@@ -50,7 +50,7 @@ export const longTailFaqs: LongTailFAQ[] = [
     question: 'Quel est le prix d\'un débouchage de WC en Belgique ?',
     metaTitle: 'Prix Débouchage WC Belgique — Tarif 2025 dès 80€ | Plombier Urgence',
     metaDescription: 'Débouchage WC en Belgique : prix 2025 à partir de 80€. WC bouché, toilettes qui débordent. Intervention en 30 min. Prix fixe communiqué avant. ☎ 0465 68 51 58',
-    directAnswer: 'Le prix d\'un débouchage de WC en Belgique est de 80€ à 150€ TTC en 2025. Ce tarif comprend le déplacement, le diagnostic, le débouchage par furet ou pompe, et l\'inspection caméra de contrôle. Un supplément de 50€ s\'applique pour les interventions de nuit, le week-end ou les jours fériés.',
+    directAnswer: 'Le prix d\'un débouchage de WC en Belgique est de 80€ à 150€ TTC. Ce tarif comprend le déplacement, le diagnostic, le débouchage par furet ou pompe, et l\'inspection caméra de contrôle. Un supplément de 50€ s\'applique pour les interventions de nuit, le week-end ou les jours fériés.',
     bodyContent: `
       <p>Un WC bouché est l'une des urgences plomberie les plus fréquentes en Belgique. Le prix varie selon la cause du bouchon et la technique nécessaire.</p>
       <h3>Causes fréquentes de WC bouché</h3>
@@ -151,10 +151,10 @@ export const longTailFaqs: LongTailFAQ[] = [
   // ─── TARIFS GÉNÉRAL ─────────────────────────────
   {
     slug: 'tarif-plombier-urgence-belgique-2025',
-    question: 'Quels sont les tarifs d\'un plombier d\'urgence en Belgique en 2025 ?',
+    question: 'Quels sont les tarifs d\'un plombier d\'urgence en Belgique ?',
     metaTitle: 'Tarifs Plombier Urgence Belgique 2025 — Prix Fixes & Transparents',
     metaDescription: 'Tarifs plombier urgence Belgique 2025 : débouchage dès 80€, fuite dès 95€, chaudière dès 100€. Prix fixe annoncé avant intervention. ☎ 0465 68 51 58',
-    directAnswer: 'Les tarifs d\'un plombier d\'urgence en Belgique en 2025 sont : débouchage canalisation dès 80€, recherche et réparation de fuite dès 95€, dépannage chaudière dès 100€, remplacement robinetterie dès 60€. Tous nos prix sont fixes, communiqués AVANT l\'intervention, et incluent le déplacement, la main d\'œuvre et la garantie.',
+    directAnswer: 'Les tarifs d\'un plombier d\'urgence en Belgique sont : débouchage canalisation dès 80€, recherche et réparation de fuite dès 95€, dépannage chaudière dès 100€, remplacement robinetterie dès 60€. Tous nos prix sont fixes, communiqués AVANT l\'intervention, et incluent le déplacement, la main d\'œuvre et la garantie.',
     bodyContent: `
       <h3>Grille tarifaire complète 2025</h3>
       <ul>

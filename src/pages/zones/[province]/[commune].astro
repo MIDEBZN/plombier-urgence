@@ -5,7 +5,9 @@ import { provinces, type Commune, type Province } from '../../../data/communes';
 
 export function getStaticPaths() {
   return provinces.flatMap(province =>
-    province.communes.map(commune => ({
+    province.communes
+      .filter(commune => commune.slug !== 'bruxelles')
+      .map(commune => ({
       params: {
         province: province.slug,
         commune: commune.slug,
@@ -97,7 +99,14 @@ const areaServed = [
         {commune.services.map((service, index) => {
           const icons = ['🚿', '🔍', '🔥', '🔧', '🛁', '🚨'];
           const icon = icons[index % icons.length];
-          const serviceLinks = ['#debouchage', '#fuite', '#chaudiere', '#robinetterie', '#renovation', '#urgence-plomberie'];
+          const serviceLinks = [
+            'debouchage-canalisation',
+            'recherche-fuite',
+            'depannage-chaudiere',
+            'reparation-robinetterie',
+            'renovation-salle-de-bain',
+            'urgence-plomberie'
+          ];
           const link = serviceLinks[index % serviceLinks.length];
           
           return (
@@ -105,13 +114,110 @@ const areaServed = [
               <div class="service-mini__icon">{icon}</div>
               <h3>{service}</h3>
               <p>Besoin d'un expert pour {service.toLowerCase()} ? Nous intervenons rapidement à {commune.name} avec tout le matériel nécessaire pour un résultat impeccable.</p>
-              <a href={`/services/${link}`} class="service-mini__link">En savoir plus →</a>
+              <a href={`/service/${link}/`} class="service-mini__link">En savoir plus →</a>
             </div>
           );
         })}
       </div>
     </div>
   </section>
+
+  <!-- Local Rich Content (Conditionally Rendered) -->
+  {(commune.buildingStock || commune.commonProblems || commune.technician) && (
+    <section class="section local-details bg-light">
+      <div class="container">
+        <div class="grid grid-2" style="gap: var(--space-2xl);">
+          
+          <div class="local-details__left">
+            <p class="section-label">Context Local</p>
+            <h2 class="section-title">Notre Expertise à {commune.name}</h2>
+            
+            {commune.buildingStock && (
+              <div class="local-detail-box">
+                <h4><span class="icon">🏠</span> Type d'habitations</h4>
+                <p>{commune.buildingStock}</p>
+              </div>
+            )}
+            
+            {commune.commonProblems && (
+              <div class="local-detail-box">
+                <h4><span class="icon">🔧</span> Problèmes fréquents</h4>
+                <p>{commune.commonProblems}</p>
+              </div>
+            )}
+            
+            {commune.waterHardness && (
+              <div class="local-detail-box">
+                <h4><span class="icon">💧</span> Dureté de l'eau</h4>
+                <p>{commune.waterHardness}</p>
+              </div>
+            )}
+            
+            {(commune.parkingAccess || commune.averageArrival) && (
+              <div class="local-detail-box">
+                <h4><span class="icon">🚐</span> Intervention & Accès</h4>
+                {commune.averageArrival && <p><strong>Délai moyen :</strong> {commune.averageArrival}</p>}
+                {commune.parkingAccess && <p>{commune.parkingAccess}</p>}
+              </div>
+            )}
+            
+            {commune.neighbourhoods && (
+              <div class="local-detail-box">
+                <h4><span class="icon">📍</span> Quartiers desservis</h4>
+                <p>{commune.neighbourhoods.join(', ')}</p>
+              </div>
+            )}
+          </div>
+          
+          <div class="local-details__right">
+            {commune.technician && (
+              <div class="technician-card card">
+                <div class="technician-card__header">
+                  <div class="technician-card__avatar">👨‍🔧</div>
+                  <div>
+                    <h3 class="technician-card__name">{commune.technician.name}</h3>
+                    <p class="technician-card__role">{commune.technician.role}</p>
+                    <p class="technician-card__exp">{commune.technician.experience}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {commune.recentIntervention && (
+              <div class="case-study-card card" style="margin-top: var(--space-md);">
+                <h4 class="case-study-card__title">Dernière intervention</h4>
+                <p style="font-weight: 600; margin-bottom: 4px;">{commune.recentIntervention.title}</p>
+                <p style="color: var(--color-text-muted); font-size: var(--font-size-sm);">{commune.recentIntervention.desc}</p>
+              </div>
+            )}
+            
+            {commune.customerReview && (
+              <div class="review-card card" style="margin-top: var(--space-md);">
+                <div class="review-stars" style="color: #f59e0b; font-size: 1.2rem; margin-bottom: 8px;">{'★'.repeat(commune.customerReview.rating)}</div>
+                <p class="review-text" style="font-style: italic; margin-bottom: 8px;">"{commune.customerReview.text}"</p>
+                <p class="review-author" style="font-size: var(--font-size-sm); font-weight: 600;">— {commune.customerReview.author}, {commune.customerReview.area}</p>
+              </div>
+            )}
+            
+            {commune.servicePricing && (
+              <div class="pricing-card card" style="margin-top: var(--space-md);">
+                <h4 style="margin-bottom: var(--space-sm);">Tarifs indicatifs sur {commune.name}</h4>
+                <ul class="pricing-list" style="list-style: none; padding: 0;">
+                  {commune.servicePricing.map(p => (
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding: 8px 0;">
+                      <span>{p.service}</span>
+                      <span style="font-weight: 700; color: var(--color-accent);">{p.price}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Why choose us for this commune -->
   <section class="section why-local">
@@ -462,5 +568,68 @@ const areaServed = [
     .nearby-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+  }
+
+  /* Local Details */
+  .bg-light {
+    background-color: var(--color-bg-alt);
+  }
+  .local-details__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .local-detail-box {
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+  .local-detail-box h4 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text);
+  }
+  .local-detail-box p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  .technician-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+  .technician-card__avatar {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-alt);
+    border-radius: 50%;
+  }
+  .technician-card__name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+  }
+  .technician-card__role {
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+  .technician-card__exp {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .case-study-card__title {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
   }
 </style>

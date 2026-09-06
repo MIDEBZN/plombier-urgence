@@ -20,6 +20,16 @@ export interface Commune {
   population?: string;
   h1?: string;
   title?: string;
+  buildingStock?: string;
+  commonProblems?: string;
+  waterHardness?: string;
+  parkingAccess?: string;
+  averageArrival?: string;
+  technician?: { name: string; role: string; experience: string };
+  customerReview?: { text: string; author: string; area: string; rating: number };
+  recentIntervention?: { title: string; desc: string };
+  neighbourhoods?: string[];
+  servicePricing?: { service: string; price: string }[];
 }
 
 export interface Province {
@@ -69,17 +79,59 @@ export const provinces: Province[] = [
         landmarks: 'Place Flagey, Étangs d\'Ixelles, Université Libre de Bruxelles, Quartier Matongé',
         title: 'Plomberie Ixelles | Dépannage Urgent & Débouchage 24/7',
         h1: '<span class="text-accent">Plomberie Ixelles</span> : Votre Expert de Confiance',
-        description: 'Une fuite d eau dans votre logement ? Faites appel à notre service de plomberie ixelles pour une intervention rapide. Nous gérons tout dépannage urgent, que ce soit pour des canalisations bouchées ou pour limiter les dégâts des eaux. Une simple fuite d\'eau peut vite s\'aggraver, c\'est pourquoi nos artisans interviennent près de la Place Flagey et de l\'ULB en moins de 30 minutes. Disponibles 24h/24.'
+        description: 'Une fuite d eau dans votre logement ? Faites appel à notre service de plomberie ixelles pour une intervention rapide. Nous gérons tout dépannage urgent, que ce soit pour des canalisations bouchées ou pour limiter les dégâts des eaux. Une simple fuite d\'eau peut vite s\'aggraver, c\'est pourquoi nos artisans interviennent près de la Place Flagey et de l\'ULB en moins de 30 minutes. Disponibles 24h/24.',
+        buildingStock: 'Maisons de maître bruxelloises, appartements des années 60 et nombreux kots étudiants.',
+        commonProblems: 'Tuyauterie vétuste en plomb nécessitant un remplacement, dépôts de calcaire importants sur les chauffe-eaux et problèmes de pression dans les immeubles hauts.',
+        waterHardness: 'Dureté de l\'eau élevée (environ 32 à 36 °f), forte tendance à l\'entartrage.',
+        parkingAccess: 'Le stationnement est très difficile près de Flagey et du Châtelain. Nos techniciens utilisent des véhicules utilitaires compacts pour s\'y garer facilement.',
+        averageArrival: '15 à 25 minutes',
+        technician: { name: 'Marc D.', role: 'Chef Plombier Ixelles', experience: '12 ans sur la commune' },
+        customerReview: { text: "Débouchage express de mon évier un dimanche soir près de Flagey. Le technicien a été très poli et a tout laissé propre.", author: "Sophie T.", area: "Quartier Flagey", rating: 5 },
+        recentIntervention: { title: "Remplacement Chauffe-eau près de l\'ULB", desc: "Intervention d\'urgence dans un kot étudiant pour remplacer un boiler électrique percé par le calcaire. Remise en eau en 2 heures." },
+        neighbourhoods: ["Cimetière d\'Ixelles", "Châtelain", "Flagey", "Matongé", "Quartier Louise", "Boondael"],
+        servicePricing: [
+          { service: 'Débouchage WC/Évier', price: 'Dès 75€' },
+          { service: 'Recherche de fuite (sans casse)', price: 'Dès 95€' },
+          { service: 'Dépannage chauffe-eau', price: 'Dès 85€' }
+        ]
       }),
       makeCommune('Uccle', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
         population: '83 000', 
         landmarks: 'Forêt de Soignes, Observatoire Royal, Parc de Wolvendael, Avenue Brugmann',
-        description: 'Plombier à Uccle pour interventions résidentielles de haute qualité. Recherche de fuite non-destructive et rénovation de salle de bain de luxe à Uccle. Disponibilité totale jour et nuit.'
+        description: 'Plombier à Uccle pour interventions résidentielles de haute qualité. Recherche de fuite non-destructive et rénovation de salle de bain de luxe à Uccle. Disponibilité totale jour et nuit.',
+        buildingStock: 'Villas spacieuses, résidences de standing et maisons familiales luxueuses.',
+        commonProblems: 'Entretien des chaudières haut de gamme, rénovation de salles de bain anciennes, et problèmes d\'évacuation vers le réseau public.',
+        waterHardness: 'Dureté élevée justifiant souvent l\'installation d\'adoucisseurs d\'eau.',
+        parkingAccess: 'Le stationnement est généralement aisé dans les quartiers résidentiels (Fort-Jaco, Prince d\'Orange).',
+        averageArrival: '15 à 25 minutes',
+        technician: { name: 'Julien V.', role: 'Maître Plombier', experience: '15 ans de service haut de gamme' },
+        customerReview: { text: "Service impeccable pour la réparation de notre chauffage par le sol. Artisan propre, discret et très poli.", author: "Marie-Claire D.", area: "Fort-Jaco", rating: 5 },
+        recentIntervention: { title: "Installation d\'un adoucisseur d\'eau", desc: "Mise en place d\'un système anti-calcaire complet pour une villa 4 salles de bain au Prince d\'Orange." },
+        neighbourhoods: ["Fort-Jaco", "Prince d\'Orange", "Observatoire", "Saint-Job", "Dieweg"],
+        servicePricing: [
+          { service: 'Recherche de fuite (sans casse)', price: 'Dès 95€' },
+          { service: 'Pose adoucisseur d\'eau', price: 'Sur devis' },
+          { service: 'Dépannage chaudière gaz', price: 'Dès 100€' }
+        ]
       }),
       makeCommune('Schaerbeek', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
         population: '133 000', 
         landmarks: 'Parc Josaphat, Gare de Schaerbeek, Maison Autrique, Boulevard Lambermont',
-        description: 'Plombier Schaerbeek : intervention rapide 24/7 dans la cité des ânes. Spécialiste du dépannage de plomberie ancienne et de l\'entretien de chaudière à Schaerbeek. Prix fixes garantis avant intervention.'
+        description: 'Plombier Schaerbeek : intervention rapide 24/7 dans la cité des ânes. Spécialiste du dépannage de plomberie ancienne et de l\'entretien de chaudière à Schaerbeek. Prix fixes garantis avant intervention.',
+        buildingStock: 'Large mix de maisons bourgeoises 1900 et de logements collectifs plus récents.',
+        commonProblems: 'Canalisations bouchées à cause de diamètres d\'évacuation trop petits dans les anciennes maisons, usure des conduites en fonte.',
+        waterHardness: 'Dureté moyenne à forte (30°f - 34°f).',
+        parkingAccess: 'Le quartier Josaphat et Dailly peut être congestionné, mais nos camionnettes sont équipées d\'un macaron d\'intervention rapide.',
+        averageArrival: '20 à 30 minutes',
+        technician: { name: 'Karim S.', role: 'Expert Sanitaire', experience: '8 ans d\'intervention à Schaerbeek' },
+        customerReview: { text: "Fuite d\'eau réparée en un temps record près du Parc Josaphat. Très professionnel et tarif correct.", author: "Antoine L.", area: "Quartier des Fleurs", rating: 5 },
+        recentIntervention: { title: "Dégât des eaux près de la Maison Autrique", desc: "Recherche de fuite non-destructive par thermographie suite à une infiltration. Tuyau en cuivre encastré remplacé avec succès." },
+        neighbourhoods: ["Quartier Josaphat", "Dailly", "Plasky", "Quartier des Fleurs", "Gare de Schaerbeek"],
+        servicePricing: [
+          { service: 'Débouchage WC/Évier', price: 'Dès 75€' },
+          { service: 'Recherche de fuite (sans casse)', price: 'Dès 95€' },
+          { service: 'Dépannage chaudière', price: 'Dès 100€' }
+        ]
       }),
       makeCommune('Etterbeek', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '48 000', landmarks: 'Parc du Cinquantenaire, Quartier des Casernes' }),
       makeCommune('Woluwe-Saint-Lambert', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '56 000', landmarks: 'Roodebeek, Shopping Center Woluwe, Parc de Woluwe' }),
@@ -148,7 +200,21 @@ export const provinces: Province[] = [
       makeCommune('Liège', 'Province de Liège', 'province-de-liege', { 
         population: '197 000', 
         landmarks: 'Gare de Liège-Guillemins, Montagne de Bueren, Cathédrale Saint-Paul, Outremeuse',
-        description: 'Plombier Liège : Dépannage en 30 minutes dans toute la Cité Ardente et la région liégeoise. Experts en recherche de fuite et débouchage de canalisation à Liège. Certifié Cerga pour vos interventions gaz.'
+        description: 'Plombier Liège : Dépannage en 30 minutes dans toute la Cité Ardente et la région liégeoise. Experts en recherche de fuite et débouchage de canalisation à Liège. Certifié Cerga pour vos interventions gaz.',
+        buildingStock: 'Habitations typiques liégeoises anciennes (Outremeuse, Saint-Léonard), avec un fort besoin de rénovation sanitaire.',
+        commonProblems: 'Canalisations vétustes en fonte ou grès, bouchons fréquents dus au calcaire et aux graisses, pannes de chaudières anciennes.',
+        waterHardness: 'Dureté élevée à très élevée (parfois > 38°f), le placement d\'un adoucisseur est fortement recommandé.',
+        parkingAccess: 'Le centre-ville et Outremeuse sont difficiles d\'accès, nos camionnettes sont optimisées pour ce type d\'environnement urbain.',
+        averageArrival: '20 à 30 minutes au centre-ville',
+        technician: { name: 'Laurent B.', role: 'Spécialiste Dépannage', experience: '14 ans sur le bassin liégeois' },
+        customerReview: { text: "Excellente intervention pour une fuite invisible. Ils ont utilisé une caméra thermique pour ne pas casser tout mon carrelage. Merci !", author: "Nadine F.", area: "Guillemins", rating: 5 },
+        recentIntervention: { title: "Débouchage égouts en Outremeuse", desc: "Passage caméra et hydrocurage haute pression pour désintégrer un bouchon de calcaire et racines dans une cave voûtée." },
+        neighbourhoods: ["Outremeuse", "Guillemins", "Saint-Léonard", "Cointe", "Amercœur"],
+        servicePricing: [
+          { service: 'Débouchage égout', price: 'Dès 95€' },
+          { service: 'Recherche de fuite (caméra)', price: 'Dès 120€' },
+          { service: 'Entretien chaudière gaz', price: 'Dès 105€' }
+        ]
       }),
       makeCommune('Seraing', 'Province de Liège', 'province-de-liege', { 
         population: '64 000', 
@@ -181,7 +247,21 @@ export const provinces: Province[] = [
       makeCommune('Namur', 'Province de Namur', 'province-de-namur', { 
         population: '112 000', 
         landmarks: 'Citadelle de Namur, Confluent Sambre-Meuse, Parlement Wallon, Vieux Namur',
-        description: 'Plombier Namur : Intervention rapide au pied de la Citadelle et dans tout le Grand Namur. Débouchage, fuite et chaudière. Service professionnel 24h/24 pour particuliers et pros.'
+        description: 'Plombier Namur : Intervention rapide au pied de la Citadelle et dans tout le Grand Namur. Débouchage, fuite et chaudière. Service professionnel 24h/24 pour particuliers et pros.',
+        buildingStock: 'Maisons de ville anciennes, villas sur les hauteurs (Jambes, Bouge) et immeubles modernes en bord de Meuse.',
+        commonProblems: 'Humidité liée à la proximité des fleuves, problèmes de pression d\'eau dans les zones vallonnées, refoulement d\'égouts en cas de fortes pluies.',
+        waterHardness: 'Dureté moyenne à forte (28°f - 35°f) selon le captage.',
+        parkingAccess: 'Le vieux Namur présente des défis de stationnement, mais nos équipes sont équipées pour intervenir rapidement même dans les piétonniers.',
+        averageArrival: '30 minutes dans le centre, 45 minutes périphérie',
+        technician: { name: 'Thomas G.', role: 'Chef d\'équipe Namurois', experience: '10 ans sur la province' },
+        customerReview: { text: "Canalisation bouchée un samedi. Ils sont intervenus très vite malgré l\'accès difficile dans les petites rues du vieux Namur.", author: "Pierre W.", area: "Vieux Namur", rating: 5 },
+        recentIntervention: { title: "Dépannage chaudière à Jambes", desc: "Remplacement du circulateur d\'une chaudière tombée en panne en plein hiver. Remise en service le jour même." },
+        neighbourhoods: ["Vieux Namur", "Jambes", "Salzinnes", "Bouge", "Erpent", "Flawinne"],
+        servicePricing: [
+          { service: 'Débouchage WC/Évier', price: 'Dès 75€' },
+          { service: 'Hydrocurage', price: 'Dès 140€' },
+          { service: 'Dépannage fuite d\'eau', price: 'Dès 85€' }
+        ]
       }),
       makeCommune('Dinant', 'Province de Namur', 'province-de-namur', { population: '14 000', landmarks: 'Citadelle de Dinant, Collégiale Notre-Dame, Adolphe Sax' }),
       makeCommune('Sambreville', 'Province Namur', 'province-de-namur', { population: '28 000', landmarks: 'Abbaye d\'Aulne, Sambre' }),
@@ -202,7 +282,21 @@ export const provinces: Province[] = [
       makeCommune('Charleroi', 'Hainaut', 'hainaut', { 
         population: '202 000', 
         landmarks: 'Musée de la Photographie, Bois du Cazier, Rive Gauche, Ville Haute',
-        description: 'Plombier Charleroi : SOS Plombier disponible immédiatement dans le Pays Noir. Spécialistes du débouchage de canalisation par hydrocurage et de la réparation urgente de fuite à Charleroi.'
+        description: 'Plombier Charleroi : SOS Plombier disponible immédiatement dans le Pays Noir. Spécialistes du débouchage de canalisation par hydrocurage et de la réparation urgente de fuite à Charleroi.',
+        buildingStock: 'Fort héritage industriel, maisons mitoyennes classiques, immeubles de rapport et nouvelles constructions au centre.',
+        commonProblems: 'Remontées d\'égouts, tuyauteries obsolètes, problèmes d\'isolation des canalisations extérieures (gel hivernal).',
+        waterHardness: 'Dureté moyenne à forte, nécessitant un entretien régulier des chaudières.',
+        parkingAccess: 'Nos véhicules d\'intervention accèdent facilement à la plupart des quartiers de la périphérie carolo.',
+        averageArrival: '25 à 35 minutes sur le grand Charleroi',
+        technician: { name: 'Alain M.', role: 'Plombier Chauffagiste', experience: '20 ans d\'expérience' },
+        customerReview: { text: "Un vrai pro. Arrivé à l\'heure à Gosselies, il a réparé la fuite de mon WC en 30 minutes sans surfacturer.", author: "Michel R.", area: "Gosselies", rating: 5 },
+        recentIntervention: { title: "Dépannage pompe de relevage", desc: "Remplacement d\'une pompe de relevage de cave inondée suite à des fortes pluies à Marcinelle. Opération réalisée le dimanche." },
+        neighbourhoods: ["Ville Basse", "Ville Haute", "Marcinelle", "Gosselies", "Jumet", "Marchienne-au-Pont"],
+        servicePricing: [
+          { service: 'Débouchage canalisation', price: 'Dès 80€' },
+          { service: 'Réparation fuite WC', price: 'Dès 65€' },
+          { service: 'Intervention urgence inondation', price: 'Dès 120€' }
+        ]
       }),
       makeCommune('Mons', 'Hainaut', 'hainaut', { 
         population: '95 000', 
@@ -217,7 +311,21 @@ export const provinces: Province[] = [
       makeCommune('Tournai', 'Hainaut', 'hainaut', { 
         population: '69 000', 
         landmarks: 'Cathédrale Notre-Dame, Beffroi, Grand-Place, Escaut, Pont des Trous',
-        description: 'Plombier Tournai : intervention en 30 minutes dans la plus ancienne ville de Belgique. Expertise en plomberie historique et moderne à Tournai. Disponible 24/7.'
+        description: 'Plombier Tournai : intervention en 30 minutes dans la plus ancienne ville de Belgique. Expertise en plomberie historique et moderne à Tournai. Disponible 24/7.',
+        buildingStock: 'Centre historique dense avec des bâtiments patrimoniaux, maisons de ville anciennes et quelques constructions récentes en périphérie.',
+        commonProblems: 'Mise aux normes des installations sanitaires dans des bâtiments très anciens, fuites encastrées dans des murs épais, refoulements liés au niveau de l\'Escaut.',
+        waterHardness: 'Dureté élevée (supérieure à 35°f), fort impact sur la robinetterie et les chauffe-eaux.',
+        parkingAccess: 'Le centre historique pavé et étroit rend le stationnement difficile, mais nos artisans ont l\'habitude d\'y intervenir rapidement.',
+        averageArrival: '30 minutes',
+        technician: { name: 'Thierry D.', role: 'Plombier Urgence', experience: '9 ans d\'expertise locale' },
+        customerReview: { text: "Très réactifs ! Notre baignoire fuyait au travers du plafond. Ils ont localisé et réparé la fuite rapidement sans abîmer notre carrelage ancien.", author: "Élise C.", area: "Centre Historique", rating: 5 },
+        recentIntervention: { title: "Rénovation de la tuyauterie en plomb", desc: "Remplacement complet de l\'arrivée d\'eau en plomb par du multicouche dans une bâtisse des années 1920." },
+        neighbourhoods: ["Centre Historique", "Quartier Saint-Piat", "Froyennes", "Kain", "Gaurain"],
+        servicePricing: [
+          { service: 'Débouchage WC', price: 'Dès 75€' },
+          { service: 'Remplacement robinetterie', price: 'Dès 90€' },
+          { service: 'Recherche fuite encastrée', price: 'Dès 110€' }
+        ]
       }),
       makeCommune('Mouscron', 'Hainaut', 'hainaut', { 
         population: '58 000', 

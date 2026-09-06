@@ -144,11 +144,11 @@ const extraSchemas = [faqPageSchema, breadcrumbSchema];
         {faq.relatedCommunes.map(name => {
           const slug = name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
           let link = `/zones/`;
-          if (name === 'Bruxelles') link = `/urgence/bruxelles/`;
-          else if (name === 'Liège') link = `/urgence/liege/`;
-          else if (name === 'Namur') link = `/urgence/namur/`;
-          else if (name === 'Charleroi') link = `/urgence/charleroi/`;
-          else if (name === 'Wavre') link = `/urgence/wavre/`;
+          if (name === 'Bruxelles') link = `/zones/bruxelles-capitale/`;
+          else if (name === 'Liège') link = `/zones/province-de-liege/liege/`;
+          else if (name === 'Namur') link = `/zones/province-de-namur/namur/`;
+          else if (name === 'Charleroi') link = `/zones/hainaut/charleroi/`;
+          else if (name === 'Wavre') link = `/zones/brabant-wallon/wavre/`;
           else if (name === 'Mons') link = `/zones/hainaut/mons/`;
           else if (name === 'Waterloo') link = `/zones/brabant-wallon/waterloo/`;
           else link = `/zones/`;

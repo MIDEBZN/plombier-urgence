@@ -1,15 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CTABanner from '../components/CTABanner.astro';
+import { PRICING } from '../data/pricing';
 
 const faqs = [
   {
     q: "Quel est le prix d'un débouchage d'évier ou de lavabo en Belgique ?",
-    a: "Le débouchage d'un évier ou lavabo coûte entre 60€ et 120€ TTC chez Plombier Urgence. Ce tarif comprend le déplacement, le diagnostic, et l'intervention. Pour un débouchage haute pression (hydrocurage), comptez entre 120€ et 220€. Tarif fixe communiqué avant toute intervention."
+    a: `Le débouchage d'un évier ou lavabo coûte entre ${PRICING.debouchage.start}€ et 150€ TTC chez Plombier Urgence. Ce tarif comprend le déplacement, le diagnostic, et l'intervention. Pour un débouchage haute pression (hydrocurage), comptez à partir de 200€. Tarif fixe communiqué avant toute intervention.`
   },
   {
     q: "Y a-t-il des frais supplémentaires pour une intervention en urgence la nuit ?",
-    a: "Un supplément de 30% à 50% s'applique entre 20h et 7h, ainsi que les week-ends et jours fériés belges. Ce montant est toujours confirmé par téléphone avant l'intervention. Exemple : une intervention à 60€ de jour revient à environ 78€–90€ de nuit."
+    a: PRICING.surcharge.description
   },
   {
     q: "La TVA est-elle incluse dans les tarifs affichés ?",
@@ -17,7 +18,7 @@ const faqs = [
   },
   {
     q: "Quel est le tarif pour un dépannage chaudière en Belgique ?",
-    a: "Le dépannage chaudière démarre à 150€ TTC chez Plombier Urgence. Ce tarif comprend le diagnostic, la main d'œuvre, et les petites pièces courantes. Pour les pannes complexes nécessitant le remplacement de pièces importantes, un devis détaillé est fourni sur place avant toute intervention."
+    a: `Le dépannage chaudière démarre à ${PRICING.chaudiere.start}€ TTC chez Plombier Urgence. Ce tarif comprend le diagnostic, la main d'œuvre, et les petites pièces courantes. Pour les pannes complexes nécessitant le remplacement de pièces importantes, un devis détaillé est fourni sur place avant toute intervention.`
   },
   {
     q: "Plombier Urgence intervient-il dans toute la Belgique au même tarif ?",
@@ -27,8 +28,8 @@ const faqs = [
 ---
 
 <Layout 
-  title="Tarif Plombier Bruxelles 2025 | Prix Débouchage, Fuite & Dépannage" 
-  description="Tarifs plombier Bruxelles 2025 : débouchage dès 60€, fuite dès 95€, chaudière dès 150€. Plombier pas cher Bruxelles. Prix fixes. ☎ 0465 68 51 58"
+  title={`Tarif Plombier Bruxelles | Prix Débouchage, Fuite & Dépannage`} 
+  description={`Tarifs plombier Bruxelles : débouchage dès ${PRICING.debouchage.start}€, fuite dès ${PRICING.fuite.start}€, chaudière dès ${PRICING.chaudiere.start}€. Plombier pas cher Bruxelles. Prix fixes. ☎ 0465 68 51 58`}
   {faqs}
 >
 
@@ -44,9 +45,10 @@ const faqs = [
   <section class="tarif-hero">
     <div class="tarif-hero__bg"></div>
     <div class="container tarif-hero__inner">
-      <p class="label">Nos Tarifs 2025</p>
-      <h1 class="tarif-hero__title">Tarif Plombier Bruxelles 2025 : <span class="text-accent">Prix Fixes, Sans Surprise</span></h1>
-      <p class="tarif-hero__text"><strong>Voici nos tarifs exacts.</strong> Communiqués avant toute intervention. Pas de devis surprise à la fin. Débouchage dès <strong>60€ TTC</strong> &bull; Fuite d'eau dès <strong>95€ TTC</strong> &bull; Chaudière dès <strong>150€ TTC</strong>. Selon la <a href="https://www.confederationconstruction.be" target="_blank" rel="noopener noreferrer">Confédération Construction Belge</a>, le tarif horaire moyen d'un plombier agréé en Belgique est de 90€ à 130€ HTVA (2024). Nos forfaits fixes sont souvent <strong>20 à 35% moins chers</strong> qu'une facturation à l'heure.</p>
+      <p class="label">Nos Tarifs</p>
+      <h1 class="tarif-hero__title">Tarif Plombier Bruxelles : <span class="text-accent">Prix Fixes, Sans Surprise</span></h1>
+      <p style="margin-top: 1rem; color: var(--color-text-dim); font-size: 0.9rem; font-style: italic;">Tarifs mis à jour le 5 septembre 2026</p>
+      <p class="tarif-hero__text"><strong>Voici nos tarifs exacts.</strong> Communiqués avant toute intervention. Pas de devis surprise à la fin. Débouchage dès <strong>{PRICING.debouchage.start}€ TTC</strong> &bull; Fuite d'eau dès <strong>{PRICING.fuite.start}€ TTC</strong> &bull; Chaudière dès <strong>{PRICING.chaudiere.start}€ TTC</strong>. Selon la <a href="https://www.confederationconstruction.be" target="_blank" rel="noopener noreferrer">Confédération Construction Belge</a>, le tarif horaire moyen d'un plombier agréé en Belgique est de 90€ à 130€ HTVA (2024). Nos forfaits fixes sont souvent <strong>20 à 35% moins chers</strong> qu'une facturation à l'heure.</p>
       
       <blockquote class="expert-quote-box" style="margin-top:2rem;text-align:left;background:rgba(255,255,255,0.05);padding:1.5rem;border-left:4px solid var(--color-accent);border-radius:0 var(--radius-lg) var(--radius-lg) 0;">
         <p style="font-style:italic;font-size:1.1rem;margin-bottom:0.5rem;">"La transparence des tarifs avant intervention est une exigence légale en Belgique depuis la loi du 21 décembre 2013 sur les services."</p>
@@ -65,9 +67,9 @@ const faqs = [
           <div class="tarif-card__icon">🚿</div>
           <h3>Débouchage</h3>
           <div class="tarif-card__items">
-            <div class="tarif-line"><span>Débouchage évier / lavabo</span><span class="tarif-price">60€ – 120€</span></div>
-            <div class="tarif-line"><span>Débouchage WC</span><span class="tarif-price">60€ – 150€</span></div>
-            <div class="tarif-line"><span>Débouchage canalisation principale</span><span class="tarif-price">150€ – 350€</span></div>
+            <div class="tarif-line"><span>Débouchage évier / lavabo</span><span class="tarif-price">{PRICING.debouchage.start}€ – 150€</span></div>
+            <div class="tarif-line"><span>Débouchage WC</span><span class="tarif-price">{PRICING.debouchage.start}€ – 150€</span></div>
+            <div class="tarif-line"><span>Débouchage canalisation principale</span><span class="tarif-price">{PRICING.debouchage.range}</span></div>
             <div class="tarif-line"><span>Curage haute pression</span><span class="tarif-price">200€ – 500€</span></div>
             <div class="tarif-line"><span>Détartrage canalisation</span><span class="tarif-price">120€ – 250€</span></div>
             <div class="tarif-line"><span>Inspection caméra</span><span class="tarif-price">100€ – 200€</span></div>
@@ -92,8 +94,8 @@ const faqs = [
             <div class="tarif-line"><span>Installation chauffe-eau électrique</span><span class="tarif-price">300€ – 500€</span></div>
             <div class="tarif-line"><span>Installation chauffe-eau gaz</span><span class="tarif-price">400€ – 800€</span></div>
             <div class="tarif-line"><span>Remplacement chauffe-eau</span><span class="tarif-price">400€ – 900€</span></div>
-            <div class="tarif-line"><span>Entretien chaudière annuel</span><span class="tarif-price">100€ – 180€</span></div>
-            <div class="tarif-line"><span>Dépannage chaudière</span><span class="tarif-price">120€ – 300€</span></div>
+            <div class="tarif-line"><span>Entretien chaudière annuel</span><span class="tarif-price">{PRICING.chaudiere.start}€ – 250€</span></div>
+            <div class="tarif-line"><span>Dépannage chaudière</span><span class="tarif-price">{PRICING.chaudiere.range}</span></div>
           </div>
         </div>
 
@@ -116,7 +118,7 @@ const faqs = [
         <ul>
           <li><strong>Devis gratuit</strong> : un technicien évalue sur place et vous fournit un prix fixe avant intervention.</li>
           <li><strong>Pas de frais cachés</strong> : le montant annoncé inclut déplacement, main d'œuvre et pièces (sauf remplacement majeur).</li>
-          <li><strong>Même prix nuit & week-end</strong> : pas de majoration abusive pour les urgences.</li>
+          <li><strong>Transparence nuit & week-end</strong> : {PRICING.surcharge.description}</li>
           <li><strong>Garantie 2 ans</strong> : toutes nos interventions sont couvertes 2 ans pièces et main d'œuvre.</li>
         </ul>
       </div>
@@ -131,7 +133,7 @@ const faqs = [
       <div class="faq-list">
         <details class="faq-item card">
           <summary class="faq-q">Quel est le prix d'un plombier à Bruxelles ?</summary>
-          <p class="faq-a">Le tarif d'un plombier à Bruxelles dépend du type d'intervention. Un dépannage simple coûte entre 60€ et 150€. Des travaux plus complexes (remplacement tuyauterie, installation) peuvent aller de 200€ à 1 000€+. Nous fournissons toujours un devis gratuit avant de commencer.</p>
+          <p class="faq-a">Le tarif d'un plombier à Bruxelles dépend du type d'intervention. Un dépannage simple coûte entre {PRICING.debouchage.start}€ et 150€. Des travaux plus complexes (remplacement tuyauterie, installation) peuvent aller de 200€ à 1 000€+. Nous fournissons toujours un devis gratuit avant de commencer.</p>
         </details>
         <details class="faq-item card">
           <summary class="faq-q">Existe-t-il un plombier pas cher à Bruxelles ?</summary>
@@ -139,7 +141,7 @@ const faqs = [
         </details>
         <details class="faq-item card">
           <summary class="faq-q">Combien coûte le débouchage d'une canalisation à Bruxelles ?</summary>
-          <p class="faq-a">Le prix d'un débouchage de canalisation à Bruxelles varie de 60€ pour un débouchage simple (évier, WC) à 350€ pour une canalisation principale nécessitant un hydrocurage. Devis gratuit sur place.</p>
+          <p class="faq-a">Le prix d'un débouchage de canalisation à Bruxelles varie de {PRICING.debouchage.start}€ pour un débouchage simple (évier, WC) à 350€ pour une canalisation principale nécessitant un hydrocurage. Devis gratuit sur place.</p>
         </details>
         <details class="faq-item card">
           <summary class="faq-q">Combien coûte l'installation d'un chauffe-eau à Bruxelles ?</summary>

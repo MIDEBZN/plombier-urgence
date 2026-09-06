@@ -5,15 +5,15 @@ import CTABanner from '../../components/CTABanner.astro';
 const faqs = [
   {
     "q": "Quel est le supplément pour un plombier le samedi à Bruxelles ?",
-    "a": "En moyenne à Bruxelles, le supplément pour une intervention un samedi se situe entre 30% et 50% du tarif de base. Par exemple, si le déplacement et la main-d'œuvre coûtent 80€ en semaine, ils seront facturés environ 110€ à 120€ le samedi. Plombier Urgence garantit des tarifs majorés clairs avant toute intervention."
+    "a": "En moyenne à Bruxelles, beaucoup de plombiers majorent leurs prix. Chez Plombier Urgence, nous appliquons un supplément fixe et transparent de +50€ pour toute intervention le week-end, sans pourcentage caché."
   },
   {
     "q": "Les tarifs de débouchage le dimanche sont-ils plus chers que le samedi ?",
-    "a": "Oui, généralement. Le dimanche est considéré comme un jour de repos légal strict en Belgique. Le supplément peut atteindre 50% à 100% (jusqu'à double tarif) selon les entreprises. Chez Plombier Urgence, notre politique de transparence évite les surcoûts injustifiés, notre majoration dominicale est capée."
+    "a": "Le dimanche est considéré comme un jour de repos légal en Belgique, et de nombreuses entreprises doublent leurs tarifs. Chez Plombier Urgence, notre politique de transparence évite les surcoûts : le supplément dominical reste fixe à +50€."
   },
   {
     "q": "Y a-t-il un supplément pour un débouchage de nuit (après 20h) ?",
-    "a": "Absolument. Les interventions dites 'de nuit' ou 'soirée' (entre 20h00 et 06h00) impliquent une majoration nocturne légale. Le surcoût varie mais s'établit souvent autour de +50%. Ce tarif rembourse la disponibilité du technicien d'astreinte hors des heures normales de bureau."
+    "a": "Absolument. Les interventions dites 'de nuit' ou 'soirée' (entre 20h00 et 07h00) impliquent une majoration. Chez nous, ce surcoût est également plafonné à un montant fixe de +50€, sans frais cachés."
   },
   {
     "q": "Refuser de payer un supplément de week-end non annoncé, est-ce légal ?",
@@ -79,26 +79,20 @@ const faqs = [
       <h2 id="grille-tarifaire">2. Grille tarifaire moyenne : Samedi vs Dimanche vs Jours Fériés</h2>
       <p>Pour vous aider à ne pas vous faire plumer, voici une estimation honnête (basée sur une moyenne de vraies sociétés ayant pignon sur rue à Bruxelles, pas sur des entreprises d'escroquerie logées dans des boîtes postales) :</p>
       
-      <h3>🔧 Le samedi (en journée de 08h00 à 18h00)</h3>
-      <p>Le samedi est de plus en plus considéré comme un jour ouvrable régulier par de nombreuses sociétés.
-      <br><strong>Majoration de la main d'œuvre :</strong> de +0% à +50%.
-      <br><strong>Exemple de prix pour un débouchage d'évier :</strong> Un prix de 80€ (semaine) passera généralement à 100€/120€ TTC le samedi.</p>
+      <h3>🔧 Le samedi, le dimanche et jours fériés</h3>
+      <p>Le week-end et les jours fériés sont soumis à des suppléments, car assurer une permanence implique le versement de primes au personnel. De nombreuses sociétés vont doubler le prix (majoration de +100%).</p>
+      <p><strong>Chez Plombier Urgence :</strong> Nous appliquons un supplément fixe et unique de <strong>+50€</strong> sur le prix forfaitaire normal, et cela pour tous les week-ends et jours fériés, sans exception.</p>
 
-      <h3>🔴 Le dimanche et jours fériés (en journée)</h3>
-      <p>Le dimanche est un jour de repos dominical légal très encadré. Payer le personnel le dimanche coûte extrêmement cher à une entreprise (majoration de masse salariale).</p>
-      <p><strong>Majoration de la main d'œuvre :</strong> de +50% à +100% (le tarif double).
-      <br><strong>Exemple de prix pour un débouchage WC :</strong> S'il coûte 100€ un mardi, attendez-vous à payer entre 150€ et 200€ un dimanche.</p>
-
-      <h3>🌙 Les tarifs de NUIT (entre 20h00 et 06h00)</h3>
-      <p>N'appelez de nuit QUE si la fuite risque de détruire votre appartement ou s'il s'agit des seules toilettes du domicile et que vous êtes malade.
-      <br><strong>Majoration de la main d'œuvre :</strong> de +50% (soirée) à +100% (pleine nuit, minuit). Un déplacement seul peut être facturé 100€ avant même que le plombier ne touche un outil.</p>
+      <h3>🌙 Les tarifs de NUIT (entre 20h00 et 07h00)</h3>
+      <p>N'appelez de nuit QUE si la fuite risque de détruire votre appartement ou s'il s'agit des seules toilettes du domicile et que vous êtes malade.</p>
+      <p><strong>Chez Plombier Urgence :</strong> De la même manière, le supplément de nuit est strictement fixé à <strong>+50€</strong>, que vous appeliez à 21h ou à 4h du matin.</p>
 
       <div class="blog-cta card" style="background:var(--color-surface);border:1px solid var(--color-accent);box-shadow:var(--shadow-md);">
         <h3>Faites des économies sans perdre en efficacité !</h3>
         <p>Plombier Urgence s'engage sur la transparence totale de ses tarifs, y compris de nuit et le dimanche à Schaerbeek, Ixelles, Uccle ou partout sur Bruxelles. Aucun supplément caché.</p>
         <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-top:1.2rem;">
           <a href="/tarifs/" class="btn btn-outline" style="color:var(--color-accent);text-decoration:underline;font-size:1.05rem;">Voir notre grille de prix Fixes</a>
-          <a href="/services/debouchage-canalisation/" class="btn btn-primary" style="font-size:1.1rem;box-shadow:var(--shadow-accent);">Nos Services de Débouchage</a>
+          <a href="/service/debouchage-canalisation/" class="btn btn-primary" style="font-size:1.1rem;box-shadow:var(--shadow-accent);">Nos Services de Débouchage</a>
         </div>
       </div>
 
