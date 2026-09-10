@@ -139,8 +139,21 @@ export const provinces: Province[] = [
       makeCommune('Auderghem', 'Bruxelles-Capitale', 'bruxelles-capitale', { 
         population: '34 000', 
         landmarks: 'Rouge-Cloître, Forêt de Soignes, Prieuré de Val Duchesse',
-        h1: '<span class="text-accent">Plombier Auderghem</span> : Plombier Urgence Bruxelles',
-        description: 'Vous résidez à Auderghem et faites face à un imprévu sanitaire ? En tant que véritable plombier urgence Bruxelles, nous mettons notre expertise locale à votre service. Votre plombier Auderghem intervient en moins de 30 minutes (Rouge-Cloître, Val Duchesse, etc.). Nous offrons des solutions transparentes, durables et rapides pour toute fuite d\'eau, débouchage ou panne de chaudière. Ne laissez pas un petit souci gâcher votre confort !'
+        title: 'Plombier Auderghem 24h/24 | Intervention Rapide',
+        h1: 'Plombier Auderghem 24h/24',
+        description: 'Vous résidez à Auderghem et faites face à un imprévu sanitaire ? Plombier urgence Bruxelles intervient en 30 minutes. Fuites, débouchage, chaudière. 24h/24.',
+        buildingStock: 'Maisons unifamiliales, villas en bordure de forêt et appartements résidentiels.',
+        commonProblems: 'Infiltrations d\'eau et problèmes de toiture/gouttières liés à la proximité de la forêt.',
+        waterHardness: 'Dureté moyenne à forte.',
+        averageArrival: '20 minutes',
+        technician: { name: 'Olivier F.', role: 'Spécialiste Auderghem', experience: '10 ans' },
+        customerReview: { text: "Dépannage chauffage un dimanche matin. Rapide et efficace.", author: "Benoît H.", area: "Herrmann-Debroux", rating: 5 },
+        recentIntervention: { title: "Débouchage égouts", desc: "Passage caméra et curage haute pression près du Rouge-Cloître." },
+        neighbourhoods: ["Saint-Julien", "Herrmann-Debroux", "Rouge-Cloître", "Val Duchesse"],
+        servicePricing: [
+          { service: 'Débouchage WC', price: 'Dès 75€' },
+          { service: 'Recherche fuite d\'eau', price: 'Dès 95€' }
+        ]
       }),
       makeCommune('Forest', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '56 000', landmarks: 'Parc de Forest, Abbaye de Forest, Forest National' }),
       makeCommune('Saint-Gilles', 'Bruxelles-Capitale', 'bruxelles-capitale', { population: '50 000', landmarks: 'Parvis de Saint-Gilles, Hôtel de Ville, Barrière de Saint-Gilles' }),
@@ -172,11 +185,59 @@ export const provinces: Province[] = [
         population: '30 000', 
         landmarks: 'Butte du Lion, Mémorial de la Bataille de Waterloo, Centre de Waterloo',
         title: 'Plomberie Waterloo | Dépannage & Urgence 24h/24',
-        h1: '<span class="text-accent">Plomberie Waterloo</span> : Dépannage & Urgence',
-        description: 'Besoin d\'un dépannage urgent à Waterloo ? Nos plombiers interviennent rapidement pour tous vos problèmes sanitaires avec un excellent rapport qualité prix. Que vous soyez un particulier ou un commerce, nous proposons des services sur mesure : pose d\'adoucisseurs d eau, débouchage haute pression et réparation de chaudière. Intervention garantie 24h/24.'
+        h1: 'Plomberie Waterloo : Dépannage & Urgence',
+        description: 'Besoin d\'un dépannage urgent à Waterloo ? Nos plombiers interviennent rapidement pour tous vos problèmes sanitaires. Débouchage et réparation de chaudière. Intervention 24h/24.',
+        buildingStock: 'Villas de standing, résidences familiales spacieuses et commerces au centre.',
+        commonProblems: 'Entretien de chaudières haut de gamme et installation d\'adoucisseurs d\'eau.',
+        waterHardness: 'Dureté très élevée, adoucisseur fortement conseillé.',
+        averageArrival: '20 minutes',
+        technician: { name: 'Antoine M.', role: 'Expert Plombier', experience: '15 ans à Waterloo' },
+        customerReview: { text: "Service impeccable et courtois pour une fuite dans la salle de bain.", author: "Marie V.", area: "Chenois", rating: 5 },
+        recentIntervention: { title: "Rénovation Sanitaire", desc: "Remplacement complet de la robinetterie dans une villa." },
+        neighbourhoods: ["Faubourg", "Chenois", "Mont-Saint-Jean", "Joli-Bois", "Centre"],
+        servicePricing: [
+          { service: 'Dépannage chaudière', price: 'Dès 105€' },
+          { service: 'Pose adoucisseur', price: 'Sur devis' }
+        ]
       }),
-      makeCommune('Wavre', 'Brabant Wallon', 'brabant-wallon', { population: '35 000', landmarks: 'Walibi Belgium, Hôtel de Ville, Maca' }),
-      makeCommune('Nivelles', 'Brabant Wallon', 'brabant-wallon', { population: '28 000', landmarks: 'Collégiale Sainte-Gertrude, Grand-Place de Nivelles' }),
+      makeCommune('Wavre', 'Brabant Wallon', 'brabant-wallon', { 
+        population: '35 000', 
+        landmarks: 'Walibi Belgium, Hôtel de Ville, Maca',
+        title: 'Plombier Wavre 24h/24 | Dépannage Urgence & Fuites',
+        h1: 'Plombier Wavre 24h/24',
+        description: 'Urgence plomberie à Wavre ? Intervention rapide 24h/24. Dépannage chaudière, recherche de fuite et débouchage. Appelez le 0465 68 51 58.',
+        buildingStock: 'Maisons de ville au centre et nombreuses villas résidentielles en périphérie.',
+        commonProblems: 'Canalisations bouchées et pannes de chaudières fréquentes en hiver.',
+        waterHardness: 'Dureté moyenne (environ 25°f).',
+        averageArrival: '20 à 30 minutes',
+        technician: { name: 'Kevin R.', role: 'Expert Wavrien', experience: '12 ans sur Wavre' },
+        customerReview: { text: "Intervention rapide et propre pour un évier bouché. Prix annoncé respecté.", author: "Lucie D.", area: "Centre Wavre", rating: 5 },
+        recentIntervention: { title: "Dépannage Chaudière", desc: "Remplacement d'une pompe de circulation sur une chaudière gaz." },
+        neighbourhoods: ["Centre Wavre", "Limal", "Bierges", "Profondsart"],
+        servicePricing: [
+          { service: 'Débouchage WC/Évier', price: 'Dès 75€' },
+          { service: 'Dépannage chaudière', price: 'Dès 95€' }
+        ]
+      }),
+      makeCommune('Nivelles', 'Brabant Wallon', 'brabant-wallon', { 
+        population: '28 000', 
+        landmarks: 'Collégiale Sainte-Gertrude, Grand-Place de Nivelles',
+        title: 'Plombier Nivelles 24h/24 | Dépannage et Urgence',
+        h1: 'Plombier Nivelles 24h/24',
+        description: 'Besoin d\'un plombier à Nivelles ? Dépannage rapide 24h/24. Débouchage, fuites et chauffage. Appelez le 0465 68 51 58.',
+        buildingStock: 'Centre historique dense et quartiers résidentiels récents.',
+        commonProblems: 'Entartrage des chauffe-eaux et canalisations anciennes dans le centre.',
+        waterHardness: 'Dureté élevée (32°f), adoucisseur recommandé.',
+        averageArrival: '30 minutes',
+        technician: { name: 'Sébastien L.', role: 'Plombier Nivellois', experience: '8 ans' },
+        customerReview: { text: "Fuite d'eau réparée en 40 minutes après mon appel. Top !", author: "Marc P.", area: "Quartier de la Collégiale", rating: 5 },
+        recentIntervention: { title: "Installation adoucisseur", desc: "Pose d'un système anti-calcaire complet pour une famille." },
+        neighbourhoods: ["Centre-ville", "Baulers", "Monstreux", "Bornival", "Thines"],
+        servicePricing: [
+          { service: 'Recherche de fuite', price: 'Dès 95€' },
+          { service: 'Installation WC', price: 'Sur devis' }
+        ]
+      }),
       makeCommune('Ottignies-Louvain-la-Neuve', 'Brabant Wallon', 'brabant-wallon', { population: '32 000', landmarks: 'UCLouvain, Aula Magna, Musée Hergé' }),
       makeCommune('Braine-l\'Alleud', 'Brabant Wallon', 'brabant-wallon', { 
         population: '40 000', 
@@ -229,7 +290,23 @@ export const provinces: Province[] = [
       makeCommune('Verviers', 'Province de Liège', 'province-de-liege', { 
         population: '56 000', 
         landmarks: 'Grand Théâtre, Musée des Beaux-Arts, La Vesdre, Place du Marché',
-        description: 'Plombier Verviers : intervention rapide 24/7 dans la cité lainière. Spécialiste du dépannage de plomberie après inondation et entretien chaudière à Verviers. Devis gratuit.'
+        title: 'Plombier Verviers 24h/24 | Dépannage et urgence',
+        h1: 'Plombier Verviers 24h/24',
+        description: 'Urgence plomberie à Verviers ? Dépannage rapide 24h/24 dans la cité lainière. Spécialistes du débouchage et des fuites. Appelez le 0465 68 51 58.',
+        buildingStock: 'Maisons de ville traditionnelles, anciens bâtiments industriels réhabilités et nouvelles constructions en périphérie.',
+        commonProblems: 'Dégâts des eaux fréquents liés aux crues historiques de la Vesdre, vétusté des évacuations.',
+        waterHardness: 'Dureté de l\'eau faible à moyenne (idéal pour les chauffe-eaux).',
+        parkingAccess: 'Nos camionnettes accèdent facilement au centre-ville et aux quartiers résidentiels.',
+        averageArrival: '20 à 30 minutes',
+        technician: { name: 'David M.', role: 'Expert Plombier Verviétois', experience: '11 ans sur Verviers' },
+        customerReview: { text: "Intervention très rapide suite à une fuite dans la salle de bain. Le plombier a été de très bon conseil.", author: "Caroline D.", area: "Centre Verviers", rating: 5 },
+        recentIntervention: { title: "Dépannage chaudière à Lambermont", desc: "Remplacement en urgence d\'une vanne thermostatique bloquée en plein hiver." },
+        neighbourhoods: ["Centre Verviers", "Lambermont", "Petit-Rechain", "Heusy", "Ensival"],
+        servicePricing: [
+          { service: 'Débouchage WC', price: 'Dès 75€' },
+          { service: 'Réparation de fuite', price: 'Dès 95€' },
+          { service: 'Dépannage chauffage', price: 'Dès 105€' }
+        ]
       }),
       makeCommune('Ans', 'Province de Liège', 'province-de-liege', { population: '28 000', landmarks: 'Château d\'Ans, Parc Communal' }),
       makeCommune('Grâce-Hollogne', 'Province de Liège', 'province-de-liege', { population: '23 000', landmarks: 'Aéroport de Liège, Liège Airport Business Park' }),
@@ -247,7 +324,9 @@ export const provinces: Province[] = [
       makeCommune('Namur', 'Province de Namur', 'province-de-namur', { 
         population: '112 000', 
         landmarks: 'Citadelle de Namur, Confluent Sambre-Meuse, Parlement Wallon, Vieux Namur',
-        description: 'Plombier Namur : Intervention rapide au pied de la Citadelle et dans tout le Grand Namur. Débouchage, fuite et chaudière. Service professionnel 24h/24 pour particuliers et pros.',
+        title: 'Plombier Urgence Namur 24h/24 | Intervention rapide',
+        h1: 'Plombier urgence Namur 24h/24',
+        description: 'Besoin d\'un plombier à Namur ? Intervention rapide 24h/24 au pied de la Citadelle et dans le Grand Namur. Débouchage et fuites. Appelez le 0465 68 51 58.',
         buildingStock: 'Maisons de ville anciennes, villas sur les hauteurs (Jambes, Bouge) et immeubles modernes en bord de Meuse.',
         commonProblems: 'Humidité liée à la proximité des fleuves, problèmes de pression d\'eau dans les zones vallonnées, refoulement d\'égouts en cas de fortes pluies.',
         waterHardness: 'Dureté moyenne à forte (28°f - 35°f) selon le captage.',
