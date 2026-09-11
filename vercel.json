@@ -474,6 +474,496 @@
             "source": "/urgence/wavre(.*)",
             "destination": "/zones/brabant-wallon/wavre/",
             "permanent": true
+        },
+        {
+            "source": "/urgence-bruxelles/",
+            "destination": "/urgence/bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/services/debouchage-canalisation/",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/services/recherche-fuite/",
+            "destination": "/service/recherche-fuite/",
+            "permanent": true
+        },
+        {
+            "source": "/services/reparation-robinetterie",
+            "destination": "/service/reparation-robinetterie/",
+            "permanent": true
+        },
+        {
+            "source": "/services/depannage-chaudiere",
+            "destination": "/service/depannage-chaudiere/",
+            "permanent": true
+        },
+        {
+            "source": "/services/urgence-plomberie",
+            "destination": "/service/urgence-plomberie/",
+            "permanent": true
+        },
+        {
+            "source": "/services/debouchage-canalisation",
+            "destination": "/service/debouchage-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/services/recherche-fuite",
+            "destination": "/service/recherche-fuite/",
+            "permanent": true
+        },
+        {
+            "source": "/services/reparation-robinetterie/",
+            "destination": "/service/reparation-robinetterie/",
+            "permanent": true
+        },
+        {
+            "source": "/services/urgence-plomberie/",
+            "destination": "/service/urgence-plomberie/",
+            "permanent": true
+        },
+        {
+            "source": "/services/depannage-chaudiere/",
+            "destination": "/service/depannage-chaudiere/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-woluwe-saint-lambert/",
+            "destination": "/zones/bruxelles-capitale/woluwe-saint-lambert/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-liege/",
+            "destination": "/location/liege/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-woluwe-saint-pierre/",
+            "destination": "/zones/bruxelles-capitale/woluwe-saint-pierre/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-anderlecht/",
+            "destination": "/zones/bruxelles-capitale/anderlecht/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-koekelberg/",
+            "destination": "/zones/bruxelles-capitale/koekelberg/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-charleroi/",
+            "destination": "/location/charleroi/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-uccle/",
+            "destination": "/zones/bruxelles-capitale/uccle/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-ganshoren/",
+            "destination": "/zones/bruxelles-capitale/ganshoren/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-ixelles/",
+            "destination": "/zones/bruxelles-capitale/ixelles/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-auderghem/",
+            "destination": "/zones/bruxelles-capitale/auderghem/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-jette/",
+            "destination": "/zones/bruxelles-capitale/jette/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-namur/",
+            "destination": "/location/namur/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-forest/",
+            "destination": "/zones/bruxelles-capitale/forest/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-watermael-boitsfort/",
+            "destination": "/zones/bruxelles-capitale/watermael-boitsfort/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-saint-josse-ten-noode/",
+            "destination": "/zones/bruxelles-capitale/saint-josse-ten-noode/",
+            "permanent": true
+        },
+        {
+            "source": "/plombier-a-saint-gilles/",
+            "destination": "/zones/bruxelles-capitale/saint-gilles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/bruit-tuyaux",
+            "destination": "/blog/bruit-tuyaux/",
+            "permanent": true
+        },
+        {
+            "source": "/devis",
+            "destination": "/devis/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/woluwe-saint-pierre",
+            "destination": "/zones/bruxelles-capitale/woluwe-saint-pierre/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-namur/andenne",
+            "destination": "/zones/province-de-namur/andenne/",
+            "permanent": true
+        },
+        {
+            "source": "/service/renovation-salle-de-bain",
+            "destination": "/service/renovation-salle-de-bain/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/uccle",
+            "destination": "/zones/bruxelles-capitale/uccle/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-wallon/genappe",
+            "destination": "/zones/brabant-wallon/genappe/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-liege/seraing",
+            "destination": "/zones/province-de-liege/seraing/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/anderlecht",
+            "destination": "/zones/bruxelles-capitale/anderlecht/",
+            "permanent": true
+        },
+        {
+            "source": "/service/recherche-fuite",
+            "destination": "/service/recherche-fuite/",
+            "permanent": true
+        },
+        {
+            "source": "/services",
+            "destination": "/services/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/comment-prevenir-tartre-canalisations",
+            "destination": "/blog/comment-prevenir-tartre-canalisations/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/forest",
+            "destination": "/zones/bruxelles-capitale/forest/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/jette",
+            "destination": "/zones/bruxelles-capitale/jette/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/berchem-sainte-agathe",
+            "destination": "/zones/bruxelles-capitale/berchem-sainte-agathe/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/bruxelles-capitale/saint-josse",
+            "destination": "/zones/bruxelles-capitale/saint-josse/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/hainaut/braine-le-comte",
+            "destination": "/zones/hainaut/braine-le-comte/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-namur/mettet",
+            "destination": "/zones/province-de-namur/mettet/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-wallon/jodoigne",
+            "destination": "/zones/brabant-wallon/jodoigne/",
+            "permanent": true
+        },
+        {
+            "source": "/tarifs",
+            "destination": "/tarifs/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-wallon/nivelles",
+            "destination": "/zones/brabant-wallon/nivelles/",
+            "permanent": true
+        },
+        {
+            "source": "/service/depannage-chaudiere",
+            "destination": "/service/depannage-chaudiere/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/hainaut/la-louviere",
+            "destination": "/zones/hainaut/la-louviere/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-flamand/louvain",
+            "destination": "/zones/brabant-flamand/louvain/",
+            "permanent": true
+        },
+        {
+            "source": "/a-propos",
+            "destination": "/a-propos/",
+            "permanent": true
+        },
+        {
+            "source": "/service/urgence-plomberie",
+            "destination": "/service/urgence-plomberie/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/hainaut/mons",
+            "destination": "/zones/hainaut/mons/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-namur/fosses-la-ville",
+            "destination": "/zones/province-de-namur/fosses-la-ville/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-liege/verviers",
+            "destination": "/zones/province-de-liege/verviers/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/comment-deboucher-evier-bouche-naturellement",
+            "destination": "/blog/comment-deboucher-evier-bouche-naturellement/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cout-plombier-nuit-weekend",
+            "destination": "/blog/cout-plombier-nuit-weekend/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/debouchage-chambre-visite-bruxelles-qui-intervient",
+            "destination": "/blog/debouchage-chambre-visite-bruxelles-qui-intervient/",
+            "permanent": true
+        },
+        {
+            "source": "/services/fuite-eau-bruxelles",
+            "destination": "/services/fuite-eau-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-flamand/zaventem",
+            "destination": "/zones/brabant-flamand/zaventem/",
+            "permanent": true
+        },
+        {
+            "source": "/zones",
+            "destination": "/zones/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/debouchage-camera-inspection-bruxelles-cout",
+            "destination": "/blog/debouchage-camera-inspection-bruxelles-cout/",
+            "permanent": true
+        },
+        {
+            "source": "/location/wavre",
+            "destination": "/location/wavre/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-namur/rochefort",
+            "destination": "/zones/province-de-namur/rochefort/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/deboucher-canalisation-vinaigre-blanc",
+            "destination": "/blog/deboucher-canalisation-vinaigre-blanc/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-flamand/dilbeek",
+            "destination": "/zones/brabant-flamand/dilbeek/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/bicarbonate-de-soude-deboucher-canalisation",
+            "destination": "/blog/bicarbonate-de-soude-deboucher-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/comment-couper-eau-rapidement-fuite-bruxelles",
+            "destination": "/blog/comment-couper-eau-rapidement-fuite-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/province-de-liege/ans",
+            "destination": "/zones/province-de-liege/ans/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/qu-est-ce-qui-cause-wc-bouches",
+            "destination": "/blog/qu-est-ce-qui-cause-wc-bouches/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/tarif-debouchage",
+            "destination": "/blog/tarif-debouchage/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/hainaut/charleroi",
+            "destination": "/zones/hainaut/charleroi/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-flamand/hal",
+            "destination": "/zones/brabant-flamand/hal/",
+            "permanent": true
+        },
+        {
+            "source": "/zones/brabant-wallon/braine-l-alleud",
+            "destination": "/zones/brabant-wallon/braine-l-alleud/",
+            "permanent": true
+        },
+        {
+            "source": "/services/chauffage-charleroi",
+            "destination": "/services/chauffage-charleroi/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/reconnaitre-vraie-urgence-debouchage-plomberie",
+            "destination": "/blog/reconnaitre-vraie-urgence-debouchage-plomberie/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/tarif-plombier",
+            "destination": "/blog/tarif-plombier/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/pourquoi-canalisation-bouchee",
+            "destination": "/blog/pourquoi-canalisation-bouchee/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/cout-plombier-urgence",
+            "destination": "/blog/cout-plombier-urgence/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/eviter-arnaques-plombier-urgence-bruxelles",
+            "destination": "/blog/eviter-arnaques-plombier-urgence-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/panne-chauffe-eau",
+            "destination": "/blog/panne-chauffe-eau/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/debouchage-collectif-immeuble-bruxelles-responsable",
+            "destination": "/blog/debouchage-collectif-immeuble-bruxelles-responsable/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/qui-paie-debouchage-locataire-proprietaire",
+            "destination": "/blog/qui-paie-debouchage-locataire-proprietaire/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/depannage-plomberie-bruxelles-materiel",
+            "destination": "/blog/depannage-plomberie-bruxelles-materiel/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/debouchage-colonne-generale-bruxelles",
+            "destination": "/blog/debouchage-colonne-generale-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/deboucher-wc",
+            "destination": "/blog/deboucher-wc/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/plombier-moins-30-minutes-bruxelles",
+            "destination": "/blog/plombier-moins-30-minutes-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/signes-chauffe-eau-panne",
+            "destination": "/blog/signes-chauffe-eau-panne/",
+            "permanent": true
+        },
+        {
+            "source": "/location/mons",
+            "destination": "/location/mons/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/delai-intervention-plombier-bruxelles",
+            "destination": "/blog/delai-intervention-plombier-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/prix-debouchage-canalisation-bruxelles-guide",
+            "destination": "/blog/prix-debouchage-canalisation-bruxelles-guide/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/debouchage-urgent-wc-bruxelles-qui-appeler",
+            "destination": "/blog/debouchage-urgent-wc-bruxelles-qui-appeler/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/plombier-dimanche-nuit-bruxelles",
+            "destination": "/blog/plombier-dimanche-nuit-bruxelles/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/deboucher-canalisation",
+            "destination": "/blog/deboucher-canalisation/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/plombier-urgence-immeuble-syndic",
+            "destination": "/blog/plombier-urgence-immeuble-syndic/",
+            "permanent": true
+        },
+        {
+            "source": "/blog/deboucheur-bruxelles-disponible-24h-24",
+            "destination": "/blog/deboucheur-bruxelles-disponible-24h-24/",
+            "permanent": true
+        },
+        {
+            "source": "/services/chauffe-eau-bruxelles",
+            "destination": "/services/chauffe-eau-bruxelles/",
+            "permanent": true
         }
     ]
 }
