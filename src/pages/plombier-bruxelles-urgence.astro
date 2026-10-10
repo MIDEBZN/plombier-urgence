@@ -1,0 +1,972 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { PRICING } from '../data/pricing';
+
+const faqs = [
+  {
+    q: "Quel est le délai d'intervention pour un plombier Bruxelles urgence ?",
+    a: "Nos techniciens interviennent en moyenne en 23 à 30 minutes dans l'ensemble des 19 communes de la Région de Bruxelles-Capitale (1000 Bruxelles, Ixelles, Uccle, Schaerbeek, Anderlecht, Etterbeek, etc.). Grâce à notre réseau de plombiers motorisés répartis stratégiquement, nous garantissons une prise en charge immédiate 24h/24 et 7j/7."
+  },
+  {
+    q: "Quels sont les tarifs d'un plombier à Bruxelles en urgence ?",
+    a: `Chez Plombier Urgence, nos tarifs sont fixes, transparents et annoncés avant le début de toute intervention : débouchage canalisation dès ${PRICING.debouchage.start}€ TTC, réparation de fuite d'eau dès ${PRICING.fuite.start}€ TTC, et dépannage chaudière dès ${PRICING.chaudiere.start}€ TTC. Pour les interventions de nuit (20h-7h) et week-ends, nous appliquons un supplément fixe bloqué à +50€, sans frais cachés.`
+  },
+  {
+    q: "Comment réagir en cas d'inondation ou de fuite d'eau majeure avant votre arrivée ?",
+    a: "1) Fermez immédiatement le robinet d'arrêt général d'eau situé à côté du compteur d'eau Vivaqua (souvent dans la cave ou sous l'évier). 2) Coupez le disjoncteur général si l'eau s'approche des prises électriques ou de tableaux de répartition. 3) Contactez immédiatement notre permanence au 0465 68 51 58. 4) Épongez l'eau stagnante et prenez des photos pour votre assurance habitation."
+  },
+  {
+    q: "Vos plombiers d'urgence interviennent-ils la nuit, le dimanche et les jours fériés ?",
+    a: "Oui, notre service plombier Bruxelles urgence est actif sans interruption 365 jours par an, 24 heures sur 24. Nos permanences de nuit et de week-end disposent de camionnettes tout équipées prêtes à intervenir en urgence absolue pour fuite de gaz, dégât des eaux ou WC bouché."
+  },
+  {
+    q: "Les interventions de votre service d'urgence sont-elles couvertes par l'assurance habitation ?",
+    a: "Oui. En Belgique, la plupart des contrats d'assurance habitation (assurance incendie et dégâts des eaux) prennent en charge les frais de recherche de fuite non-destructive et les réparations urgentes pour stopper le sinistre. Nous vous délivrons une facture détaillée avec rapport d'intervention conforme pour votre assureur."
+  },
+  {
+    q: "Comment éviter les arnaques au dépannage d'urgence en plomberie à Bruxelles ?",
+    a: "Exigez toujours un prix fixe communiqué avant intervention, vérifiez l'existence d'un numéro d'entreprise belge (BCE), refusez les devis vierges à signer d'urgence et privilégiez les artisans qui affichent clairement leurs coordonnées et leurs barèmes tarifaires, comme nous le faisons sur plombierurgence.be."
+  }
+];
+
+const plumbingServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "PlumbingService"],
+  "name": "Plombier Bruxelles Urgence — Dépannage 24h/24",
+  "url": "https://www.plombierurgence.be/plombier-bruxelles-urgence/",
+  "image": "https://www.plombierurgence.be/images/og-default.jpg",
+  "telephone": "+32465685158",
+  "email": "contact@plombierurgence.be",
+  "priceRange": `Dès ${PRICING.debouchage.start}€`,
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Bancontact, Virement instantané",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "25 Boulevard de l'Abattoir",
+    "addressLocality": "Bruxelles",
+    "postalCode": "1000",
+    "addressCountry": "BE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "50.8444",
+    "longitude": "4.3399"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Bruxelles" },
+    { "@type": "AdministrativeArea", "name": "Région de Bruxelles-Capitale" },
+    { "@type": "City", "name": "Ixelles" },
+    { "@type": "City", "name": "Uccle" },
+    { "@type": "City", "name": "Schaerbeek" },
+    { "@type": "City", "name": "Anderlecht" },
+    { "@type": "City", "name": "Etterbeek" },
+    { "@type": "City", "name": "Saint-Gilles" },
+    { "@type": "City", "name": "Molenbeek-Saint-Jean" },
+    { "@type": "City", "name": "Woluwe-Saint-Lambert" },
+    { "@type": "City", "name": "Woluwe-Saint-Pierre" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Dépannage Urgence Bruxelles",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Débouchage WC & Canalisation Urgence",
+          "description": "Débouchage rapide haute pression et furet mécanique dans les 19 communes de Bruxelles."
+        },
+        "price": PRICING.debouchage.start,
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Recherche et Réparation de Fuite d'Eau Urgence",
+          "description": "Détection non-destructive thermographique et colmatage d'urgence 24h/24."
+        },
+        "price": PRICING.fuite.start,
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dépannage Chaudière et Chauffe-eau d'Urgence",
+          "description": "Remise en route chaudière gaz et réparation chauffe-eau percé en 30 minutes."
+        },
+        "price": PRICING.chaudiere.start,
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+};
+
+const howToEmergencySchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Comment gérer une urgence plomberie à Bruxelles avant l'arrivée du technicien",
+  "description": "Étapes essentielles pour limiter les dégâts des eaux à Bruxelles en attendant votre plombier d'urgence.",
+  "totalTime": "PT5M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Fermer l'arrivée d'eau générale",
+      "text": "Localisez la vanne générale à côté du compteur d'eau (souvent dans la cave ou sous l'évier) et tournez-la d'un quart de tour pour couper l'alimentation."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Couper le courant électrique de la zone touchée",
+      "text": "Si l'eau s'écoule près d'interrupteurs, de prises ou du sol, disjonctez immédiatement la ligne au tableau électrique."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Appeler un plombier Bruxelles urgence agréé",
+      "text": "Composez le 0465 68 51 58 pour mobiliser un technicien local en moins de 30 minutes avec un tarif fixe garanti."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Prendre des photos pour l'assurance",
+      "text": "Photographiez la fuite et les dégâts visibles pour constituer votre dossier d'indemnisation habitation."
+    }
+  ]
+};
+
+const brusselsCommunes = [
+  { name: "1000 Bruxelles (Centre)", slug: "bruxelles", time: "15-25 min", badge: "Centre-Ville & Pentagone" },
+  { name: "1050 Ixelles", slug: "ixelles", time: "15-20 min", badge: "Flagey & Châtelain" },
+  { name: "1180 Uccle", slug: "uccle", time: "20-25 min", badge: "Fort-Jaco & Brugmann" },
+  { name: "1030 Schaerbeek", slug: "schaerbeek", time: "15-20 min", badge: "Josaphat & Meiser" },
+  { name: "1040 Etterbeek", slug: "etterbeek", time: "15-20 min", badge: "Jourdan & Cinquantenaire" },
+  { name: "1070 Anderlecht", slug: "anderlecht", time: "15-25 min", badge: "Clemenceau & Ceria" },
+  { name: "1060 Saint-Gilles", slug: "saint-gilles", time: "15-20 min", badge: "Parvis & Porte de Hal" },
+  { name: "1080 Molenbeek", slug: "molenbeek-saint-jean", time: "15-20 min", badge: "Étangs Noirs & Tour & Taxis" },
+  { name: "1200 Woluwe-St-Lambert", slug: "woluwe-saint-lambert", time: "20-25 min", badge: "Roodebeek & Shopping" },
+  { name: "1150 Woluwe-St-Pierre", slug: "woluwe-saint-pierre", time: "20-25 min", badge: "Stockel & Chant d'Oiseau" },
+  { name: "1160 Auderghem", slug: "auderghem", time: "20-25 min", badge: "Herrmann-Debroux" },
+  { name: "1190 Forest", slug: "forest", time: "15-20 min", badge: "Altitude Cent & Albert" },
+  { name: "1140 Evere", slug: "evere", time: "20-25 min", badge: "Bordet & Paduwa" },
+  { name: "1090 Jette", slug: "jette", time: "20-25 min", badge: "Miroir & Brugmann" },
+  { name: "1170 Watermael-Boitsfort", slug: "watermael-boitsfort", time: "20-25 min", badge: "Wiener & Keym" },
+  { name: "1081 Koekelberg", slug: "koekelberg", time: "15-20 min", badge: "Basilique & Simonis" }
+];
+---
+
+<Layout
+  title="Plombier Bruxelles Urgence 24h/24 | Dépannage en 30 Min Dès 80€"
+  description="Besoin d'un plombier Bruxelles urgence ? Intervention garantie en 30 min, 24h/24 et 7j/7 dans les 19 communes. Fuite, débouchage, chaudière. Tarifs fixes dès 80€. ☎ 0465 68 51 58"
+  faqs={faqs}
+  extraSchemas={[plumbingServiceSchema, howToEmergencySchema]}
+>
+
+  <!-- Breadcrumbs -->
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc" aria-label="Fil d'Ariane">
+        <a href="/">Accueil</a>
+        <span>›</span>
+        <a href="/zones/bruxelles-capitale/">Bruxelles</a>
+        <span>›</span>
+        <span class="bc--current">Plombier Bruxelles Urgence</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <header class="pbu-hero">
+    <div class="container pbu-hero__inner">
+      <div class="pbu-hero__content">
+        <div class="pbu-badge">
+          <span class="pbu-badge__dot"></span>
+          <span>Intervention 24h/24 & 7j/7 — 19 communes de Bruxelles</span>
+        </div>
+
+        <h1 class="pbu-hero__title">
+          Plombier Bruxelles Urgence : <span class="text-accent">Dépannage 24/7 en 30 Minutes Chrono</span>
+        </h1>
+
+        <p class="pbu-hero__lead">
+          Vous faites face à un tuyau percé, un WC qui déborde ou une panne totale d'eau chaude ? Notre service <strong>plombier Bruxelles urgence</strong> dépêche chez vous un artisan certifié en moins de 30 minutes. Tarifs clairs et fixes annoncés <strong>avant</strong> travaux, matériel professionnel haute pression et garantie pièces & main-d'œuvre.
+        </p>
+
+        <div class="pbu-hero__chips">
+          <div class="pbu-chip">⚡ <strong>Arrivée moyenne :</strong> 23 min</div>
+          <div class="pbu-chip">💰 <strong>Prix fixe :</strong> Dès {PRICING.debouchage.start}€ TTC</div>
+          <div class="pbu-chip">🛡️ <strong>Agréé assurances</strong> belges</div>
+          <div class="pbu-chip">⭐ <strong>4.9 / 5</strong> (+520 avis)</div>
+        </div>
+
+        <div class="pbu-hero__actions">
+          <a href="tel:0465685158" class="btn btn-primary btn-lg pbu-cta-pulse">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/></svg>
+            Appel d'Urgence : 0465 68 51 58
+          </a>
+          <a href="https://wa.me/32465685158?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20%C3%A0%20Bruxelles" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
+            💬 Photo WhatsApp (Devis Express)
+          </a>
+        </div>
+      </div>
+
+      <div class="pbu-hero__card card">
+        <div class="pbu-hero__card-header">
+          <div class="pbu-hero__status">
+            <span class="pbu-ping"></span>
+            <strong>3 techniciens d'astreinte</strong> disponibles immédiatement
+          </div>
+        </div>
+        <ul class="pbu-features-list">
+          <li>
+            <span class="pbu-feat-icon">⏱️</span>
+            <div>
+              <strong>Arrivée ultra-rapide</strong>
+              <p>Techniciens motorisés géolocalisés sur Bruxelles</p>
+            </div>
+          </li>
+          <li>
+            <span class="pbu-feat-icon">🧾</span>
+            <div>
+              <strong>Prix fixe avant de commencer</strong>
+              <p>Zéro mauvaise surprise sur la facture finale</p>
+            </div>
+          </li>
+          <li>
+            <span class="pbu-feat-icon">🌙</span>
+            <div>
+              <strong>Majoration nuit/week-end fixe</strong>
+              <p>Seulement +50€, jamais de pourcentage abusif</p>
+            </div>
+          </li>
+          <li>
+            <span class="pbu-feat-icon">🔧</span>
+            <div>
+              <strong>Camionnettes 100% équipées</strong>
+              <p>Furet électrique, hydrocureur, caméra et raccords cuivre/multicouche</p>
+            </div>
+          </li>
+        </ul>
+        <div class="pbu-hero__card-footer">
+          <a href="/tarifs/" class="pbu-link-more">Consulter tous nos forfaits transparents →</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1 : Tarifs clairs & Types d'urgences -->
+  <section class="section" id="tarifs-urgences">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="label">Transparence Tarifaire</span>
+        <h2 class="section-title">Tarifs fixes de notre service plombier Bruxelles urgence</h2>
+        <p class="section-sub">
+          Contrairement aux plateformes qui gonflent les prix dans les moments de panique, notre équipe applique des forfaits transparents communiqués dès le premier appel téléphonique.
+        </p>
+      </div>
+
+      <div class="pbu-tarifs-grid">
+        <div class="pbu-tarif-card card">
+          <div class="pbu-tarif-card__icon">🚿</div>
+          <span class="pbu-tarif-tag">Le plus demandé</span>
+          <h3>Débouchage Express</h3>
+          <div class="pbu-tarif-price">Dès {PRICING.debouchage.start}€ <span class="pbu-price-ttc">TTC</span></div>
+          <ul class="pbu-tarif-items">
+            <li>WC, évier, lavabo ou baignoire engorgés</li>
+            <li>Débouchage mécanique au furet professionnel</li>
+            <li>Inspection caméra de contrôle incluse</li>
+            <li>Nettoyage complet de la zone d'intervention</li>
+          </ul>
+          <a href="/service/debouchage-canalisation/" class="btn btn-outline" style="width:100%; text-align:center;">Détails débouchage</a>
+        </div>
+
+        <div class="pbu-tarif-card card card--highlight">
+          <div class="pbu-tarif-card__icon">💧</div>
+          <span class="pbu-tarif-tag pbu-tarif-tag--accent">Urgence Absolue</span>
+          <h3>Recherche & Colmatage de Fuite</h3>
+          <div class="pbu-tarif-price">Dès {PRICING.fuite.start}€ <span class="pbu-price-ttc">TTC</span></div>
+          <ul class="pbu-tarif-items">
+            <li>Tuyau percé, fuite encastrée ou apparente</li>
+            <li>Détection acoustique & caméra thermique (sans casse)</li>
+            <li>Arrêt immédiat de l'inondation & raccord certifié</li>
+            <li>Rapport technique pour dossier d'assurance habitation</li>
+          </ul>
+          <a href="/service/recherche-fuite/" class="btn btn-primary" style="width:100%; text-align:center;">Détails fuite d'eau</a>
+        </div>
+
+        <div class="pbu-tarif-card card">
+          <div class="pbu-tarif-card__icon">🔥</div>
+          <span class="pbu-tarif-tag">Confort & Chauffage</span>
+          <h3>Dépannage Chaudière & Boiler</h3>
+          <div class="pbu-tarif-price">Dès {PRICING.chaudiere.start}€ <span class="pbu-price-ttc">TTC</span></div>
+          <ul class="pbu-tarif-items">
+            <li>Plus d'eau chaude ou radiateurs gelés en plein hiver</li>
+            <li>Diagnostic circuit gaz, vase d'expansion & circulateur</li>
+            <li>Chauffe-eau électrique percé ou court-circuité</li>
+            <li>Chauffagistes agréés gaz (CP1 / CP2 Bruxelles)</li>
+          </ul>
+          <a href="/service/depannage-chaudiere/" class="btn btn-outline" style="width:100%; text-align:center;">Détails chaudière</a>
+        </div>
+      </div>
+
+      <div class="pbu-note-box card" style="margin-top:2rem;">
+        <div class="pbu-note-box__inner">
+          <span style="font-size:2rem;">🌙</span>
+          <div>
+            <strong>Interventions de Nuit, Dimanche & Jours Fériés à Bruxelles</strong>
+            <p>
+              Besoin d'un dépannage à 2h du matin ou un dimanche après-midi ? Un forfait unique de majoration de <strong>seulement +50€</strong> s'applique sur l'intervention de base. Pas de tarif horaire qui triple, pas d'abus. Tout est fixé d'avance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 : Pourquoi faire appel à notre service ? -->
+  <section class="section section--alt" id="pourquoi-choisir">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="label">Savoir-faire Local</span>
+        <h2 class="section-title">Pourquoi choisir notre équipe de plombier Bruxelles urgence ?</h2>
+        <p class="section-sub">
+          Bruxelles possède un parc immobilier très spécifique : maisons de maître centenaires, canalisations anciennes en plomb ou en fonte, fortes variations de pression et eau extrêmement calcaire (plus de 35°f). Nos techniciens connaissent parfaitement ces contraintes.
+        </p>
+      </div>
+
+      <div class="pbu-reasons-grid">
+        <div class="pbu-reason card">
+          <div class="pbu-reason__num">01</div>
+          <h3>Intervention en 30 minutes garantie</h3>
+          <p>
+            Plutôt que d'envoyer un artisan depuis l'autre bout du pays, nous coordonnons des équipes réparties dans Bruxelles (Pentagone, Flagey, Montgomery, Basilique). Votre technicien arrive sans délai.
+          </p>
+        </div>
+
+        <div class="pbu-reason card">
+          <div class="pbu-reason__num">02</div>
+          <h3>Spécialistes des canalisations bruxelloises</h3>
+          <p>
+            Nous intervenons quotidiennement sur des colonnes d'immeubles hauts des années 1930, des siphons en plomb sous plancher et des égouts anciens nécessitant une expertise pointue sans démolition inutile.
+          </p>
+        </div>
+
+        <div class="pbu-reason card">
+          <div class="pbu-reason__num">03</div>
+          <h3>Agrément toutes compagnies d'assurances</h3>
+          <p>
+            Toutes nos interventions d'urgence s'accompagnent d'un devis initial, d'une facture officielle avec numéro de TVA et d'un rapport de sinistre détaillé, facilitant votre remboursement par votre assureur.
+          </p>
+        </div>
+
+        <div class="pbu-reason card">
+          <div class="pbu-reason__num">04</div>
+          <h3>Zéro produit chimique toxique</h3>
+          <p>
+            Pour les débouchages urgents, nous bannissons l'acide chlorhydrique et les produits corrosifs qui détruisent la fonte et les joints PVC. Nous traitons 100% des cas mécaniquement et par hydrocurage haute pression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 : Processus d'urgence étape par étape -->
+  <section class="section" id="processus-intervention">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="label">Protocole d'Intervention</span>
+        <h2 class="section-title">Comment se déroule un dépannage plombier Bruxelles urgence ?</h2>
+        <p class="section-sub">Un déroulement clair, rapide et sans stress pour résoudre votre panne dès aujourd'hui.</p>
+      </div>
+
+      <div class="pbu-steps-container">
+        <div class="pbu-step-item">
+          <div class="pbu-step-badge">1</div>
+          <div class="pbu-step-content">
+            <h3>Appel immédiat & pré-diagnostic</h3>
+            <p>
+              Vous composez le <a href="tel:0465685158">0465 68 51 58</a> ou nous envoyez une photo par WhatsApp. Notre répartiteur identifie l'ampleur de la fuite ou de l'engorgement et vous communique le tarif fixe forfaitaire.
+            </p>
+          </div>
+        </div>
+
+        <div class="pbu-step-item">
+          <div class="pbu-step-badge">2</div>
+          <div class="pbu-step-content">
+            <h3>Départ du plombier le plus proche</h3>
+            <p>
+              L'artisan de garde pour votre commune prend la route immédiatement dans un utilitaire compact équipé de toutes les pièces détachées standards (joints, robinets d'arrêt, flexibles, réducteurs).
+            </p>
+          </div>
+        </div>
+
+        <div class="pbu-step-item">
+          <div class="pbu-step-badge">3</div>
+          <div class="pbu-step-content">
+            <h3>Mise en sécurité & réparation définitive</h3>
+            <p>
+              Arrivé sur place, l'artisan sécurise l'installation, valide le diagnostic sous vos yeux et procède à la réparation avec un outillage professionnel. Aucun supplément non validé au préalable.
+            </p>
+          </div>
+        </div>
+
+        <div class="pbu-step-item">
+          <div class="pbu-step-badge">4</div>
+          <div class="pbu-step-content">
+            <h3>Test de débit, propreté & facture officielle</h3>
+            <p>
+              Nous effectuons un test de remise en eau sous pression et laissons la pièce propre. Vous réglez sur place par Bancontact, virement ou espèces avec délivrance de facture avec garantie.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 : Couverture locale des 19 communes de Bruxelles -->
+  <section class="section section--alt" id="communes-bruxelles">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="label">Proximité Immédiate</span>
+        <h2 class="section-title">Présence dans les 19 communes de Bruxelles-Capitale</h2>
+        <p class="section-sub">
+          Nos techniciens d'astreinte patrouillent en continu. Cliquez sur votre commune pour connaître nos spécificités d'intervention locale :
+        </p>
+      </div>
+
+      <div class="pbu-communes-grid">
+        {brusselsCommunes.map((commune) => (
+          <a href={`/zones/bruxelles-capitale/${commune.slug}/`} class="pbu-commune-card card">
+            <div class="pbu-commune-top">
+              <strong>{commune.name}</strong>
+              <span class="pbu-commune-time">⚡ {commune.time}</span>
+            </div>
+            <p class="pbu-commune-badge">{commune.badge}</p>
+            <span class="pbu-commune-link">Voir l'équipe locale →</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+          Nous intervenons également dans la périphérie bruxelloise : Zaventem, Vilvorde, Kraainem, Wezembeek-Oppem, Drogenbos, Linkebeek et Wemmel.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 : Gestes d'urgence (Guide pratique pour le client) -->
+  <section class="section" id="gestes-urgence">
+    <div class="container">
+      <div class="pbu-guide-box card">
+        <div class="pbu-guide-header">
+          <span class="label" style="color: var(--color-danger);">Guide Réflexe</span>
+          <h2 style="font-size: var(--font-size-2xl); margin-top: 0.5rem;">Que faire en attendant votre plombier Bruxelles urgence ?</h2>
+          <p style="color: var(--color-text-muted);">
+            En cas de rupture de canalisation ou d'eau qui refoule, chaque seconde compte pour limiter les dommages sur vos parquets, plafonds et mobilier.
+          </p>
+        </div>
+
+        <div class="pbu-guide-steps">
+          <div class="pbu-guide-step">
+            <span class="pbu-step-num">1</span>
+            <div>
+              <strong>Coupez la vanne générale d'eau Vivaqua</strong>
+              <p>Elle se situe généralement près du compteur d'eau en cave ou dans le hall d'entrée. Tournez la manette d'un quart de tour dans le sens horaire.</p>
+            </div>
+          </div>
+          <div class="pbu-guide-step">
+            <span class="pbu-step-num">2</span>
+            <div>
+              <strong>Isolez l'électricité de la zone inondée</strong>
+              <p>Si l'eau touche des plinthes ou menace des prises électriques murales, abaissez immédiatement les disjoncteurs correspondants.</p>
+            </div>
+          </div>
+          <div class="pbu-guide-step">
+            <span class="pbu-step-num">3</span>
+            <div>
+              <strong>Ne tirez plus aucune chasse d'eau</strong>
+              <p>Si vous suspectez un bouchon sur la colonne principale, l'évacuation des voisins du dessus peut refouler chez vous. Prévenez-les immédiatement.</p>
+            </div>
+          </div>
+          <div class="pbu-guide-step">
+            <span class="pbu-step-num">4</span>
+            <div>
+              <strong>Photographiez les dégâts et séchez la surface</strong>
+              <p>Prenez des clichés clairs pour l'expert d'assurance, puis contenez l'eau à l'aide de serviettes pour protéger les étages inférieurs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6 : FAQ Détaillée -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="label">Questions Fréquentes</span>
+        <h2 class="section-title">Foire aux questions — Plombier Bruxelles Urgence</h2>
+        <p class="section-sub">Toutes les réponses à vos interrogations sur nos délais, tarifs et interventions.</p>
+      </div>
+
+      <div class="pbu-faq-list">
+        {faqs.map((faq) => (
+          <details class="pbu-faq-item card">
+            <summary class="pbu-faq-question">
+              <span>{faq.q}</span>
+              <span class="pbu-faq-toggle">+</span>
+            </summary>
+            <div class="pbu-faq-answer">
+              <p>{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Final -->
+  <CTABanner
+    title="Une fuite d'eau ou un WC bouché à Bruxelles ?"
+    subtitle="Notre équipe plombier Bruxelles urgence est mobilisée 24h/24. Arrivée en moins de 30 minutes chez vous au tarif annoncé."
+  />
+
+</Layout>
+
+<style>
+  /* Header / Hero */
+  .pbu-hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    padding: var(--space-3xl) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .pbu-hero__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+  @media (max-width: 960px) {
+    .pbu-hero__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+  .pbu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e0e7ff;
+    color: var(--color-accent);
+    padding: 0.35rem 0.85rem;
+    border-radius: 99px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+  .pbu-badge__dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
+  }
+  .pbu-hero__title {
+    font-size: var(--font-size-3xl);
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+  .pbu-hero__lead {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+  }
+  .pbu-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--space-xl);
+  }
+  .pbu-chip {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius);
+    font-size: var(--font-size-xs);
+    color: var(--color-text);
+    box-shadow: var(--shadow-sm);
+  }
+  .pbu-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .pbu-cta-pulse {
+    animation: gentleGlow 2.5s infinite;
+  }
+  @keyframes gentleGlow {
+    0%, 100% { box-shadow: 0 4px 15px rgba(59, 54, 228, 0.25); }
+    50% { box-shadow: 0 8px 30px rgba(59, 54, 228, 0.45); }
+  }
+
+  /* Hero Side Card */
+  .pbu-hero__card {
+    padding: var(--space-xl);
+    background: #fff;
+    border: 1px solid rgba(59, 54, 228, 0.15);
+    box-shadow: var(--shadow-lg);
+  }
+  .pbu-hero__status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-md);
+  }
+  .pbu-ping {
+    width: 10px;
+    height: 10px;
+    background: #10b981;
+    border-radius: 50%;
+  }
+  .pbu-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .pbu-features-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .pbu-feat-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .pbu-features-list strong {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+  }
+  .pbu-features-list p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+  .pbu-hero__card-footer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px dashed var(--color-border);
+    text-align: center;
+  }
+  .pbu-link-more {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  /* Tarifs Grid */
+  .pbu-tarifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  .pbu-tarif-card {
+    padding: var(--space-xl);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--color-border);
+  }
+  .card--highlight {
+    border: 2px solid var(--color-accent);
+    box-shadow: var(--shadow-accent);
+  }
+  .pbu-tarif-card__icon {
+    font-size: 2.25rem;
+    margin-bottom: var(--space-sm);
+  }
+  .pbu-tarif-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #f1f5f9;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+  }
+  .pbu-tarif-tag--accent {
+    background: #fee2e2;
+    color: var(--color-danger);
+  }
+  .pbu-tarif-price {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-accent);
+    margin: 0.5rem 0 var(--space-md);
+  }
+  .pbu-price-ttc {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+  .pbu-tarif-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-xl) 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+  .pbu-tarif-items li {
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .pbu-tarif-items li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+  }
+
+  /* Note Box */
+  .pbu-note-box {
+    padding: var(--space-lg);
+    background: #fff;
+    border-left: 4px solid var(--color-accent);
+  }
+  .pbu-note-box__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+  .pbu-note-box p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin: 0.25rem 0 0;
+  }
+
+  /* Reasons Grid */
+  .pbu-reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  .pbu-reason {
+    padding: var(--space-lg);
+    background: #fff;
+  }
+  .pbu-reason__num {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+  }
+  .pbu-reason h3 {
+    font-size: var(--font-size-base);
+    margin-bottom: 0.5rem;
+  }
+  .pbu-reason p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  /* Step Timeline */
+  .pbu-steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  .pbu-step-item {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    position: relative;
+  }
+  .pbu-step-badge {
+    width: 36px;
+    height: 36px;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-sm);
+  }
+  .pbu-step-content h3 {
+    font-size: var(--font-size-base);
+    margin-bottom: 0.5rem;
+  }
+  .pbu-step-content p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  /* Communes Grid */
+  .pbu-communes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+  }
+  .pbu-commune-card {
+    padding: var(--space-md);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .pbu-commune-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+  }
+  .pbu-commune-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-sm);
+    margin-bottom: 0.25rem;
+  }
+  .pbu-commune-time {
+    font-size: var(--font-size-xs);
+    color: var(--color-success);
+    font-weight: 600;
+  }
+  .pbu-commune-badge {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+  }
+  .pbu-commune-link {
+    font-size: var(--font-size-xs);
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* Practical Guide Box */
+  .pbu-guide-box {
+    padding: var(--space-2xl);
+    background: #fff;
+    border: 1px solid var(--color-border);
+  }
+  .pbu-guide-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  .pbu-guide-step {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .pbu-step-num {
+    background: #fee2e2;
+    color: var(--color-danger);
+    font-weight: 800;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .pbu-guide-step strong {
+    display: block;
+    font-size: var(--font-size-sm);
+    margin-bottom: 0.25rem;
+  }
+  .pbu-guide-step p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* FAQ List */
+  .pbu-faq-list {
+    max-width: 800px;
+    margin: var(--space-xl) auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .pbu-faq-item {
+    background: #fff;
+    padding: var(--space-md) var(--space-lg);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+  }
+  .pbu-faq-question {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: var(--font-size-base);
+  }
+  .pbu-faq-question::-webkit-details-marker {
+    display: none;
+  }
+  .pbu-faq-toggle {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    font-weight: bold;
+  }
+  .pbu-faq-answer {
+    padding-top: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* General Utilities */
+  .section-head {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .text-center {
+    text-align: center;
+  }
+</style>
