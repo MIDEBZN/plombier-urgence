@@ -142,15 +142,24 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
       <h3 class="before-after__title">Résultats de nos Interventions</h3>
       <div class="before-after__grid">
         <div class="before-after__item">
-          <img src="/images/before-after-bruxelles.webp" alt="Débouchage canalisation avant après à Bruxelles" width="400" height="300" loading="lazy" />
+          <picture>
+            <source srcset="/images/before-after-bruxelles.webp" type="image/webp" />
+            <img src="/images/before-after-bruxelles.jpg" alt="Débouchage canalisation avant après à Bruxelles" width="400" height="300" loading="lazy" decoding="async" />
+          </picture>
           <div class="before-after__caption">Intervention Débouchage — <strong>Bruxelles</strong></div>
         </div>
         <div class="before-after__item">
-          <img src="/images/before-after-liege.webp" alt="Réparation fuite d'eau sous évier à Liège" width="400" height="300" loading="lazy" />
+          <picture>
+            <source srcset="/images/before-after-liege.webp" type="image/webp" />
+            <img src="/images/before-after-liege.jpg" alt="Réparation fuite d'eau sous évier à Liège" width="400" height="300" loading="lazy" decoding="async" />
+          </picture>
           <div class="before-after__caption">Réparation Fuite — <strong>Liège</strong></div>
         </div>
         <div class="before-after__item">
-          <img src="/images/before-after-namur.webp" alt="Remplacement chaudière murale à Namur" width="400" height="300" loading="lazy" />
+          <picture>
+            <source srcset="/images/before-after-namur.webp" type="image/webp" />
+            <img src="/images/before-after-namur.jpg" alt="Remplacement chaudière murale à Namur" width="400" height="300" loading="lazy" decoding="async" />
+          </picture>
           <div class="before-after__caption">Dépannage Chaudière — <strong>Namur</strong></div>
         </div>
       </div>
@@ -247,7 +256,7 @@ const isBruxelles = Astro.url.pathname.includes('bruxelles');
   .before-after__title { text-align: center; font-size: var(--font-size-xl); margin-bottom: var(--space-xl); }
   .before-after__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
   .before-after__item { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); background: var(--color-surface); }
-  .before-after__item img { width: 100%; height: auto; display: block; }
+  .before-after__item picture, .before-after__item img { width: 100%; height: 260px; object-fit: cover; display: block; }
   .before-after__caption { padding: var(--space-md); text-align: center; font-size: var(--font-size-sm); color: var(--color-text); }
   
   .review-badges-container { display: flex; justify-content: center; gap: var(--space-xl); margin-top: var(--space-2xl); flex-wrap: wrap; }
