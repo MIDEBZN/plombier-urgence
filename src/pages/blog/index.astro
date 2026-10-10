@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTABanner from '../../components/CTABanner.astro';
+import articlesData from '../../data/blog-articles.json';
+
+const categories = [
+  'Tous',
+  '🚿 Débouchage',
+  '💧 Recherche de Fuite',
+  '🔥 Chauffage',
+  '💰 Tarifs & Prix',
+  'Dépannage & Conseils'
+];
+
+const blogCollectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Guides & Conseils Plomberie Belgique — Blog Plombier Urgence",
+  "description": "Tous nos guides experts et conseils pratiques sur la plomberie en Belgique : débouchage, détection de fuite, entretien chaudière et tarifs transparents.",
+  "url": "https://www.plombierurgence.be/blog/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Plombier Urgence",
+    "url": "https://www.plombierurgence.be"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Plomberie et Dépannage d'Urgence en Belgique"
+  }
+};
+---
+
+<Layout
+  title="Guides & Conseils Plomberie Belgique | Blog Plombier Urgence"
+  description="Tous nos guides experts et conseils pratiques sur la plomberie en Belgique : débouchage, détection de fuite, entretien chaudière et tarifs transparents. ☎ 0465 68 51 58"
+  extraSchemas={[blogCollectionSchema]}
+>
+
+  <!-- Breadcrumbs -->
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc" aria-label="Fil d'Ariane">
+        <a href="/">Accueil</a>
+        <span>›</span>
+        <span class="bc--current">Blog & Guides</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero Header -->
+  <header class="blog-index-hero">
+    <div class="container text-center">
+      <div class="blog-index-badge">📚 Espace Conseils & Guides d'Experts</div>
+      <h1 class="blog-index-title">
+        Guides, Conseils & Astuces <span class="text-accent">Plomberie en Belgique</span>
+      </h1>
+      <p class="blog-index-subtitle">
+        Retrouvez plus de 100 articles, tutoriels pas-à-pas et analyses de tarifs rédigés par nos maîtres artisans plombiers agréés à Bruxelles et en Wallonie.
+      </p>
+    </div>
+  </header>
+
+  <!-- Listing Section -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Featured Quick Links -->
+      <div class="featured-guides-grid">
+        <a href="/blog/filtre-a-eau-robinet/" class="featured-card card">
+          <span class="featured-badge">Nouveau Guide 2026</span>
+          <h3>Filtre à eau robinet : guide d'achat & efficacité</h3>
+          <p>Comment filtrer le calcaire et le plomb de l'eau du robinet à Bruxelles ? Comparatif et tuto d'installation.</p>
+          <span class="card-link">Découvrir le guide →</span>
+        </a>
+        <a href="/plombier-bruxelles-urgence/" class="featured-card card featured-card--accent">
+          <span class="featured-badge featured-badge--urgent">⚡ Intervention 24/7</span>
+          <h3>Plombier Bruxelles Urgence : Arrivée en 30 Min</h3>
+          <p>Dépannage d'urgence immédiat dans les 19 communes de Bruxelles. Fuite, WC bouché, chaudière dès 80€.</p>
+          <span class="card-link">Consulter les disponibilités →</span>
+        </a>
+        <a href="/tarifs/" class="featured-card card">
+          <span class="featured-badge">Transparence Prix</span>
+          <h3>Grille Tarifaire Fixe Plomberie 2026</h3>
+          <p>Consultez tous nos prix forfaitaires affichés avant travaux sans aucun frais caché ni mauvaise surprise.</p>
+          <span class="card-link">Voir tous les forfaits →</span>
+        </a>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="articles-grid" id="articles-container">
+        {articlesData.map((article) => (
+          <article class="article-card card" data-tag={article.tag}>
+            <div class="article-card__header">
+              <span class="article-tag">{article.tag}</span>
+              <span class="article-read">⏱ {article.readTime}</span>
+            </div>
+            <h2 class="article-card__title">
+              <a href={`/blog/${article.slug}/`}>{article.title}</a>
+            </h2>
+            <p class="article-card__desc">{article.desc}</p>
+            <div class="article-card__footer">
+              <a href={`/blog/${article.slug}/`} class="article-card__link">
+                Lire l'article complet →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <CTABanner
+    title="Une question ou une urgence plomberie ?"
+    subtitle="Nos techniciens sont sur la route 24h/24 et 7j/7. Déplacement en moins de 30 minutes partout en Belgique."
+  />
+
+</Layout>
+
+<style>
+  .blog-index-hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+    padding: var(--space-3xl) 0 var(--space-2xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .blog-index-badge {
+    display: inline-block;
+    background: #e0e7ff;
+    color: var(--color-accent);
+    padding: 0.35rem 0.85rem;
+    border-radius: 99px;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+  }
+  .blog-index-title {
+    font-size: var(--font-size-3xl);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+  }
+  .blog-index-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Featured Guides */
+  .featured-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+  }
+  .featured-card {
+    padding: var(--space-xl);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--color-border);
+    background: #fff;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+  }
+  .featured-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+  }
+  .featured-card--accent {
+    border: 2px solid var(--color-accent);
+    background: #fcfcff;
+  }
+  .featured-badge {
+    display: inline-block;
+    background: #f1f5f9;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-sm);
+  }
+  .featured-badge--urgent {
+    background: #fee2e2;
+    color: var(--color-danger);
+  }
+  .featured-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+  }
+  .featured-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+  }
+  .card-link {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  /* Articles Grid */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+  }
+  .article-card {
+    padding: var(--space-xl);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  .article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .article-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-xs);
+  }
+  .article-tag {
+    background: #eef2ff;
+    color: var(--color-accent);
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius);
+  }
+  .article-read {
+    color: var(--color-text-dim);
+  }
+  .article-card__title {
+    font-size: var(--font-size-lg);
+    line-height: 1.35;
+    margin-bottom: var(--space-sm);
+  }
+  .article-card__title a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .article-card__title a:hover {
+    color: var(--color-accent);
+  }
+  .article-card__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-lg);
+  }
+  .article-card__footer {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+  .article-card__link {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .article-card__link:hover {
+    text-decoration: underline;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+</style>
