@@ -61,22 +61,22 @@
     ],
     "redirects": [
         {
-            "source": "/blog/tarif-plombier/?",
+            "source": "/blog/tarif-plombier/",
             "destination": "/tarifs/",
             "permanent": true
         },
         {
-            "source": "/blog/debouchage-egout-bruxelles-cout/?",
+            "source": "/blog/debouchage-egout-bruxelles-cout/",
             "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
         {
-            "source": "/blog/deboucher-wc/?",
+            "source": "/blog/deboucher-wc/",
             "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
         {
-            "source": "/blog/deboucher-canalisation/?",
+            "source": "/blog/deboucher-canalisation/",
             "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
@@ -86,12 +86,12 @@
             "permanent": true
         },
         {
-            "source": "/blog/entretien-canalisations-conseils-reguliers/?",
+            "source": "/blog/entretien-canalisations-conseils-reguliers/",
             "destination": "/blog/debouchage-preventif-astuces-canalisations-propres-bruxelles/",
             "permanent": true
         },
         {
-            "source": "/blog/deboucheur-bruxelles-disponible-24h-24/?",
+            "source": "/blog/deboucheur-bruxelles-disponible-24h-24/",
             "destination": "/blog/debouchage-bruxelles-disponible-24h-24-7j-7/",
             "permanent": true
         },
@@ -101,132 +101,132 @@
             "permanent": true
         },
         {
-            "source": "/blog/combien-coute-debouchage-wc-bruxelles/?",
+            "source": "/blog/combien-coute-debouchage-wc-bruxelles/",
             "destination": "/blog/prix-debouchage-canalisation-bruxelles/",
             "permanent": true
         },
         {
-            "source": "/blog/combien-coute-plombier-bruxelles-2025/?",
+            "source": "/blog/combien-coute-plombier-bruxelles-2025/",
             "destination": "/tarifs/",
             "permanent": true
         },
         {
-            "source": "/blog/plombier-urgence-immeuble-syndic/?",
+            "source": "/blog/plombier-urgence-immeuble-syndic/",
             "destination": "/blog/debouchage-collectif-immeuble-bruxelles-responsable/",
             "permanent": true
         },
         {
-            "source": "/blog/eviter-lingettes-bouchent-wc/?",
+            "source": "/blog/eviter-lingettes-bouchent-wc/",
             "destination": "/blog/comment-eviter-canalisation-bouchee-nouveau/",
             "permanent": true
         },
         {
-            "source": "/blog/signes-chauffe-eau-panne/?",
+            "source": "/blog/signes-chauffe-eau-panne/",
             "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
         {
-            "source": "/blog/debouchage-douche-bouchee-conseils/?",
+            "source": "/blog/debouchage-douche-bouchee-conseils/",
             "destination": "/blog/debouchage-canalisations-douche-italienne-particularites/",
             "permanent": true
         },
         {
-            "source": "/blog/panne-chaudiere/?",
+            "source": "/blog/panne-chaudiere/",
             "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
         {
-            "source": "/blog/depannage-plomberie-nuit-weekend-bruxelles/?",
+            "source": "/blog/depannage-plomberie-nuit-weekend-bruxelles/",
             "destination": "/blog/cout-plombier-nuit-weekend/",
             "permanent": true
         },
         {
-            "source": "/blog/choisir-plombier-bruxelles-pieges-a-eviter/?",
+            "source": "/blog/choisir-plombier-bruxelles-pieges-a-eviter/",
             "destination": "/blog/eviter-arnaques-plombier-urgence-bruxelles/",
             "permanent": true
         },
         {
-            "source": "/blog/certificat-peb-bruxelles-impact-systeme-chauffage/?",
+            "source": "/blog/certificat-peb-bruxelles-impact-systeme-chauffage/",
             "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
         {
-            "source": "/blog/installation-chauffe-eau-bruxelles-choisir-modele/?",
+            "source": "/blog/installation-chauffe-eau-bruxelles-choisir-modele/",
             "destination": "/service/depannage-chaudiere/",
             "permanent": true
         },
         {
-            "source": "/blog/adoucisseur-eau-bruxelles-solution-calcaire/?",
+            "source": "/blog/adoucisseur-eau-bruxelles-solution-calcaire/",
             "destination": "/blog/filtre-a-eau-robinet/",
             "permanent": true
         },
         {
-            "source": "/blog/importance-entretien-plomberie-regulier-bruxelles/?",
+            "source": "/blog/importance-entretien-plomberie-regulier-bruxelles/",
             "destination": "/blog/debouchage-preventif-astuces-canalisations-propres-bruxelles/",
             "permanent": true
         },
         {
-            "source": "/blog/reconnaitre-vraie-urgence-debouchage-plomberie/?",
+            "source": "/blog/reconnaitre-vraie-urgence-debouchage-plomberie/",
             "destination": "/blog/debouchage-urgent-week-end-bruxelles-tarifs/",
             "permanent": true
         },
         {
-            "source": "/blog/comment-couper-eau-rapidement-fuite-bruxelles/?",
+            "source": "/blog/comment-couper-eau-rapidement-fuite-bruxelles/",
             "destination": "/blog/fuite-eau-bruxelles-detection-reparation/",
             "permanent": true
         },
         {
-            "source": "/blog/urgence-plombier-bruxelles-fuite-eau-majeure/?",
+            "source": "/blog/urgence-plombier-bruxelles-fuite-eau-majeure/",
             "destination": "/blog/quel-plombier-urgence-fuite-eau-bruxelles-24h-24/",
             "permanent": true
         },
         {
-            "source": "/blog/fuite-eau-que-faire/?",
+            "source": "/blog/fuite-eau-que-faire/",
             "destination": "/blog/fuite-eau-bruxelles-detection-reparation/",
             "permanent": true
         },
         {
-            "source": "/blog/odeurs-egout-maison-causes-solutions-plomberie-bruxelles/?",
+            "source": "/blog/odeurs-egout-maison-causes-solutions-plomberie-bruxelles/",
             "destination": "/blog/mauvaises-odeurs-canalisations-bruxelles-remedier/",
             "permanent": true
         },
         {
-            "source": "/blog/eclairage-led-bruxelles-reduire-facture-electricite/?",
+            "source": "/blog/eclairage-led-bruxelles-reduire-facture-electricite/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/blog/electricite-salle-de-bain-volumes-securite-rgie/?",
+            "source": "/blog/electricite-salle-de-bain-volumes-securite-rgie/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/blog/plan-electrique-maison-schema-unifilaire-rgie/?",
+            "source": "/blog/plan-electrique-maison-schema-unifilaire-rgie/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/blog/rgie-securite-risques-electriques-bruxelles/?",
+            "source": "/blog/rgie-securite-risques-electriques-bruxelles/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/blog/comment-bien-choisir-electricien-bruxelles/?",
+            "source": "/blog/comment-bien-choisir-electricien-bruxelles/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/blog/domotique-maison-intelligente-bruxelles/?",
+            "source": "/blog/domotique-maison-intelligente-bruxelles/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/blog/cablage-reseau-rj45-bureau-domicile-bruxelles/?",
+            "source": "/blog/cablage-reseau-rj45-bureau-domicile-bruxelles/",
             "destination": "/blog/",
             "permanent": true
         },
         {
-            "source": "/tarif-debouchage-canalisation-bruxelles/?",
+            "source": "/tarif-debouchage-canalisation-bruxelles/",
             "destination": "/tarifs/",
             "permanent": true
         },
@@ -236,57 +236,57 @@
             "permanent": true
         },
         {
-            "source": "/debouchage-wc-bruxelles-2/?",
+            "source": "/debouchage-wc-bruxelles-2/",
             "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
         {
-            "source": "/services/chauffage-charleroi/?",
+            "source": "/services/chauffage-charleroi/",
             "destination": "/zones/hainaut/charleroi/",
             "permanent": true
         },
         {
-            "source": "/services/chauffe-eau-namur/?",
+            "source": "/services/chauffe-eau-namur/",
             "destination": "/zones/province-de-namur/namur/",
             "permanent": true
         },
         {
-            "source": "/services/debouchage-charleroi/?",
+            "source": "/services/debouchage-charleroi/",
             "destination": "/zones/hainaut/charleroi/",
             "permanent": true
         },
         {
-            "source": "/services/chauffage-mons/?",
+            "source": "/services/chauffage-mons/",
             "destination": "/zones/hainaut/mons/",
             "permanent": true
         },
         {
-            "source": "/services/debouchage-bruxelles/?",
+            "source": "/services/debouchage-bruxelles/",
             "destination": "/service/debouchage-canalisation/",
             "permanent": true
         },
         {
-            "source": "/services/debouchage-liege/?",
+            "source": "/services/debouchage-liege/",
             "destination": "/zones/province-de-liege/liege/",
             "permanent": true
         },
         {
-            "source": "/services/plomberie-bruxelles/?",
+            "source": "/services/plomberie-bruxelles/",
             "destination": "/plombier-bruxelles-urgence/",
             "permanent": true
         },
         {
-            "source": "/location/namur/?",
+            "source": "/location/namur/",
             "destination": "/zones/province-de-namur/namur/",
             "permanent": true
         },
         {
-            "source": "/location/mons/?",
+            "source": "/location/mons/",
             "destination": "/zones/hainaut/mons/",
             "permanent": true
         },
         {
-            "source": "/location/tournai/?",
+            "source": "/location/tournai/",
             "destination": "/zones/hainaut/tournai/",
             "permanent": true
         },
@@ -306,7 +306,7 @@
             "permanent": true
         },
         {
-            "source": "/plombier-bruxelles/?",
+            "source": "/plombier-bruxelles/",
             "destination": "/",
             "permanent": true
         },
