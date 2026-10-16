@@ -3,8 +3,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TrustSection from '../components/TrustSection.astro';
 import ContactForm from '../components/ContactForm.astro';
+import BlogTransversalLinks from '../components/BlogTransversalLinks.astro';
 import '../styles/global.css';
 import { getAllCommunes } from '../data/communes';
+import { PRICING } from '../data/pricing';
 
 const allCommunesList = getAllCommunes();
 const allCommunesAreaServed = allCommunesList.map(c => ({
@@ -29,7 +31,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Plombier d'urgence Belgique — Intervention rapide 24h/24, 7j/7. Tarifs 2025. Prix affichés avant intervention. Débouchage dès 60€, fuites dès 95€. Bruxelles, Liège, Namur, Charleroi. ☎ 0465 68 51 58", 
+  description = `Plombier d'urgence Belgique — Intervention rapide 24h/24, 7j/7. Prix affichés avant intervention. Débouchage dès ${PRICING.debouchage.start}€, fuites dès ${PRICING.fuite.start}€. Bruxelles, Liège, Namur, Charleroi. ☎ 0465 68 51 58`, 
   faqs = [],
   ogImage = 'https://www.plombierurgence.be/images/og-default.jpg',
   ogType = 'website',
@@ -98,25 +100,31 @@ const reviewsGeneral = [
   }
 ];
 
-// LocalBusiness schema
+// LocalBusiness schema (Canonical Single Node)
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "Plumber"],
+  "@id": "https://www.plombierurgence.be/#organization",
   "name": "Plombier Urgence",
-  "description": "Plombier d'urgence en Belgique. Intervention en 30 minutes, 24h/24 et 7j/7. Débouchage dès 60€, réparation fuite dès 95€, dépannage chaudière dès 150€. Prix fixe avant intervention. Certifié et agréé.",
-  "url": "https://www.plombierurgence.be",
+  "description": `Plombier d'urgence en Belgique. Intervention en 30 minutes, 24h/24 et 7j/7. Débouchage dès ${PRICING.debouchage.start}€, réparation fuite dès ${PRICING.fuite.start}€, dépannage chaudière dès ${PRICING.chaudiere.start}€. Prix fixe avant intervention. Certifié et agréé.`,
+  "url": "https://www.plombierurgence.be/",
   "telephone": "+32465685158",
   "email": "contact@plombierurgence.be",
-  "priceRange": "60€–500€",
+  "priceRange": `${PRICING.debouchage.start}€–500€`,
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Cash, Card, Bank Transfer",
   "image": "https://www.plombierurgence.be/images/og-default.jpg",
   "logo": "https://www.plombierurgence.be/images/logo.png",
   "sameAs": [
-    "https://www.wikipedia.org",
-    "https://www.wikidata.org",
-    "https://www.linkedin.com",
-    "https://x.com"
+    "https://www.instagram.com/plom.bierurgence/",
+    "https://www.tiktok.com/@plombierurgence",
+    "https://www.facebook.com/plombierurgencee/",
+    "https://www.pinterest.com/PlombierUrgenceBruxelles/",
+    "https://www.youtube.com/@PlombierUrgenceBruxelles",
+    "https://twitter.com/plombierurgence",
+    "https://www.linkedin.com/company/plombierurgence",
+    "https://maps.app.goo.gl/o5ncKidk5CEoTWMr8",
+    "https://sites.google.com/view/plombier-urgence-bxl/accueil"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -128,8 +136,8 @@ const localBusinessSchema = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "50.8503",
-    "longitude": "4.3517"
+    "latitude": "50.8454",
+    "longitude": "4.3399"
   },
   "knowsLanguage": [
     {
@@ -165,20 +173,20 @@ const localBusinessSchema = {
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Débouchage canalisation" },
-        "price": "60",
+        "price": String(PRICING.debouchage.start),
         "priceCurrency": "EUR",
         "eligibleRegion": "Belgique"
       },
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Réparation fuite d'eau" },
-        "price": "95",
+        "price": String(PRICING.fuite.start),
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "itemOffered": { "@type": "Service", "name": "Dépannage chaudière" },
-        "price": "150",
+        "price": String(PRICING.chaudiere.start),
         "priceCurrency": "EUR"
       },
       {
@@ -196,16 +204,7 @@ const localBusinessSchema = {
       "name": "Certification CP1/CP2 Synergrid"
     }
   ],
-  "foundingDate": "2009",
-  "sameAs": [
-    "https://www.instagram.com/plom.bierurgence/",
-    "https://www.tiktok.com/@plombierurgence",
-    "https://www.facebook.com/plombierurgencee/",
-    "https://www.pinterest.com/PlombierUrgenceBruxelles/",
-    "https://www.youtube.com/@PlombierUrgenceBruxelles",
-    "https://maps.app.goo.gl/o5ncKidk5CEoTWMr8",
-    "https://sites.google.com/view/plombier-urgence-bxl/accueil"
-  ]
+  "foundingDate": "2009"
 };
 
 const isThankYou = Astro.url.pathname.includes('thank-you');
@@ -217,18 +216,26 @@ const resolvedOgImage = ogImage.startsWith('http') ? ogImage : `https://www.plom
 const resolvedTwitterTitle = twitterTitle || title;
 const resolvedTwitterDescription = twitterDescription || description;
 
-// WebPage schema with BreadcrumbList
+// WebPage schema with BreadcrumbList & Entity Linkage
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": `${canonicalUrl}#webpage`,
   "name": title,
   "description": description,
   "url": canonicalUrl,
   "inLanguage": "fr-BE",
   "isPartOf": {
     "@type": "WebSite",
+    "@id": "https://www.plombierurgence.be/#website",
     "name": "Plombier Urgence",
     "url": "https://www.plombierurgence.be"
+  },
+  "about": {
+    "@id": "https://www.plombierurgence.be/#organization"
+  },
+  "publisher": {
+    "@id": "https://www.plombierurgence.be/#organization"
   },
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -249,34 +256,47 @@ const webPageSchema = {
   }
 };
 
-const allSchemas = [...extraSchemas, webPageSchema];
+const websiteSchema = Astro.url.pathname === '/' ? {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.plombierurgence.be/#website",
+  "name": "Plombier Urgence",
+  "url": "https://www.plombierurgence.be",
+  "inLanguage": "fr-BE",
+  "publisher": {
+    "@id": "https://www.plombierurgence.be/#organization"
+  }
+} : null;
 
-// Auto-inject Article Schema for blog posts
+// Auto-inject Article Schema for blog posts (only if not already provided in extraSchemas)
 const isBlog = Astro.url.pathname.startsWith('/blog/') && Astro.url.pathname !== '/blog/' && Astro.url.pathname !== '/blog';
-if (isBlog) {
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": title,
-    "description": description,
-    "image": resolvedOgImage,
-    "author": {
-      "@type": "Organization",
-      "name": "Plombier Urgence"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Plombier Urgence",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.plombierurgence.be/favicon.png"
-      }
-    },
-    "datePublished": "2025-02-15T08:00:00+01:00",
-    "dateModified": new Date().toISOString()
-  };
-  allSchemas.push(articleSchema);
-}
+const hasCustomArticle = extraSchemas.some((s: any) => s && (s['@type'] === 'Article' || s['@type'] === 'BlogPosting'));
+
+const autoArticleSchema = (isBlog && !hasCustomArticle) ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": resolvedOgImage,
+  "author": {
+    "@type": "Organization",
+    "name": "Plombier Urgence",
+    "@id": "https://www.plombierurgence.be/#organization"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plombier Urgence",
+    "@id": "https://www.plombierurgence.be/#organization",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.plombierurgence.be/favicon.png"
+    }
+  },
+  "datePublished": "2025-02-15T08:00:00+01:00",
+  "dateModified": new Date().toISOString()
+} : null;
+
+const allSchemas = [...extraSchemas, webPageSchema, websiteSchema, autoArticleSchema].filter(Boolean);
 ---
 
 <!doctype html>
@@ -374,6 +394,8 @@ if (isBlog) {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="fr_BE" />
@@ -410,6 +432,7 @@ if (isBlog) {
     <Header />
     <main>
       <slot />
+      {isBlog && <BlogTransversalLinks />}
     </main>
 
     <!-- Trust Section (on every page except thank-you) -->

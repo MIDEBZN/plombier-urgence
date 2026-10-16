@@ -52,8 +52,10 @@ import { provinces, slugify } from '../data/communes';
           <div class="region-card card" id={province.slug}>
             <div class="region-card__header">
               <span class="region-card__icon">{province.icon}</span>
-              <h3 class="region-card__name">{province.name}</h3>
-              <span class="region-card__count">{province.communes.length} communes</span>
+              <a href={`/zones/${province.slug}/`} class="region-card__title-link">
+                <h3 class="region-card__name">{province.name}</h3>
+              </a>
+              <a href={`/zones/${province.slug}/`} class="region-card__count">{province.communes.length} communes →</a>
             </div>
             <div class="region-card__cities">
               {province.communes.map(commune => (
@@ -162,18 +164,33 @@ import { provinces, slugify } from '../data/communes';
     font-size: 1.5rem;
   }
 
+  .region-card__title-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+  }
+  .region-card__title-link:hover .region-card__name {
+    color: var(--color-accent);
+  }
+
   .region-card__name {
     font-size: var(--font-size-lg);
     font-weight: 700;
-    flex: 1;
   }
 
   .region-card__count {
     font-size: var(--font-size-xs);
-    color: var(--color-text-dim);
+    color: var(--color-accent);
     background: var(--color-bg);
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background var(--transition-fast);
+  }
+  .region-card__count:hover {
+    background: var(--color-accent-glow);
   }
 
   .region-card__cities {

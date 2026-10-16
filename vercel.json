@@ -59,7 +59,28 @@
             ]
         }
     ],
+    "rewrites": [
+        {
+            "source": "/sitemap.xml",
+            "destination": "/sitemap-index.xml"
+        },
+        {
+            "source": "/sitemap_index.xml",
+            "destination": "/sitemap-index.xml"
+        }
+    ],
     "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "plombierurgence.be"
+                }
+            ],
+            "destination": "https://www.plombierurgence.be/:path*",
+            "permanent": true
+        },
         {
             "source": "/blog/tarif-plombier/",
             "destination": "/tarifs/",

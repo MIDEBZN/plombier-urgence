@@ -6,5 +6,13 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.plombierurgence.be',
   trailingSlash: 'always',
-  integrations: [sitemap()]
+  integrations: [
+    sitemap({
+      lastmod: new Date(),
+      serialize(item) {
+        item.lastmod = new Date();
+        return item;
+      }
+    })
+  ]
 });

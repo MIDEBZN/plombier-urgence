@@ -4,51 +4,6 @@ import ServiceCard from '../components/ServiceCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 import { PRICING } from '../data/pricing';
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "PlumbingService"],
-  "name": "Plombier Urgence",
-  "description": "Artisan plombier agréé en Belgique. Intervention rapide 24h/24 et 7j/7 pour débouchage, recherche de fuite et urgence plomberie. Temps de réponse moyen de 30 minutes.",
-  "url": "https://www.plombierurgence.be/",
-  "telephone": "+32465685158",
-  "email": "contact@plombierurgence.be",
-  "image": "https://www.plombierurgence.be/images/og-default.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "25 Boulevard de l'Abattoir",
-    "addressLocality": "Bruxelles",
-    "postalCode": "1000",
-    "addressCountry": "BE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "50.8444",
-    "longitude": "4.3399"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  ],
-  "priceRange": `Dès ${PRICING.debouchage.start}€`,
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Bruxelles-Capitale" },
-    { "@type": "AdministrativeArea", "name": "Brabant Wallon" },
-    { "@type": "AdministrativeArea", "name": "Province de Liège" },
-    { "@type": "AdministrativeArea", "name": "Province de Namur" },
-    { "@type": "AdministrativeArea", "name": "Hainaut" },
-    { "@type": "AdministrativeArea", "name": "Brabant Flamand" }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/plombierurgence",
-    "https://twitter.com/plombierurgence",
-    "https://www.linkedin.com/company/plombierurgence"
-  ]
-};
-
 const faqs = [
   {
     q: "Quel est le tarif pour un débouchage de canalisation en Belgique ?",
@@ -85,7 +40,6 @@ const faqs = [
   title={`Plombier Urgence Bruxelles 24h/24 | Dès ${PRICING.debouchage.start}€`}
   description={`Besoin d'un plombier en urgence à Bruxelles ? Intervention 24h/24 et 7j/7. Débouchage dès ${PRICING.debouchage.start} €, fuite dès ${PRICING.fuite.start} €. Appelez le 0465 68 51 58.`}
   faqs={faqs}
-  extraSchemas={[localBusinessSchema]}
   preloadHero={true}
 >
 

@@ -2,6 +2,8 @@
 import Layout from '../../../layouts/Layout.astro';
 import { provinces } from '../../../data/communes';
 
+import blogArticles from '../../../data/blog-articles.json';
+
 export function getStaticPaths() {
   return provinces.map(province => ({
     params: { province: province.slug },
@@ -15,6 +17,17 @@ const areaServed = province.communes.map(c => ({
   "@type": "City",
   "name": c.name
 }));
+
+const otherProvinces = provinces.filter(p => p.slug !== province.slug);
+
+// Deterministic selection of 3 guides for this province
+let hash = 0;
+for (let i = 0; i < province.slug.length; i++) {
+  hash = (hash << 5) - hash + province.slug.charCodeAt(i);
+  hash |= 0;
+}
+const startIndex = Math.abs(hash) % blogArticles.length;
+const provinceGuides = [0, 1, 2].map(i => blogArticles[(startIndex + i * 5) % blogArticles.length]);
 ---
 
 <Layout 
@@ -22,10 +35,23 @@ const areaServed = province.communes.map(c => ({
   description={`Besoin d'un plombier en ${province.name} ? Nos techniciens interviennent en 30 min pour débouchage, fuite et chaudière. Intervention 24h/24 et 7j/7.`}
   areaServed={areaServed}
 >
+  <!-- Breadcrumb -->
+  <section class="bc-section">
+    <div class="container">
+      <nav class="bc">
+        <a href="/">Accueil</a>
+        <span>›</span>
+        <a href="/zones/">Zones</a>
+        <span>›</span>
+        <span class="bc--current">{province.name}</span>
+      </nav>
+    </div>
+  </section>
+
   <section class="province-hero">
     <div class="container">
       <h1 class="hero-title">Plombier en <span class="text-accent">{province.name}</span></h1>
-      <p class="hero-subtitle">Nos plombiers et chauffagistes interviennent dans toutes les communes de la {province.name}.</p>
+      <p class="hero-subtitle">Nos plombiers et chauffagistes certifiés interviennent dans toutes les communes de la {province.name} en 30 minutes, 24h/24 et 7j/7.</p>
     </div>
   </section>
 
@@ -36,8 +62,40 @@ const areaServed = province.communes.map(c => ({
         {province.communes.map(commune => (
           <a href={`/zones/${province.slug}/${commune.slug}/`} class="commune-card card">
             <h3>{commune.name}</h3>
-            <p>Intervention en 30 min à {commune.name}</p>
-            <span class="card-link">Voir plus →</span>
+            <p>Intervention express 24h/24 à {commune.name}</p>
+            <span class="card-link">Voir la page d'intervention →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Guides for Province -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="section-title">Guides & Conseils Plomberie Recommandés</h2>
+      <p class="hero-subtitle" style="margin-bottom: 2rem;">Nos conseils d'experts pour prévenir et résoudre vos soucis de plomberie en {province.name}.</p>
+      <div class="communes-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        {provinceGuides.map(guide => (
+          <a href={`/blog/${guide.slug}/`} class="commune-card card">
+            <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-accent);">{guide.tag}</span>
+            <h3>{guide.title}</h3>
+            {guide.desc && <p>{guide.desc.slice(0, 110)}...</p>}
+            <span class="card-link">Lire le guide →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Provinces Links -->
+  <section class="section">
+    <div class="container text-center">
+      <h2 class="section-title">Autres Régions Couvertes en Belgique</h2>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+        {otherProvinces.map(p => (
+          <a href={`/zones/${p.slug}/`} class="btn btn-outline">
+            {p.icon} {p.name}
           </a>
         ))}
       </div>
@@ -77,4 +135,10 @@ const areaServed = province.communes.map(c => ({
   .commune-card h3 { color: var(--color-accent); font-size: 1.5rem; font-weight: 700; }
   .commune-card p { color: var(--color-text-muted); font-size: 0.9rem; }
   .card-link { color: var(--color-accent); font-weight: 600; margin-top: auto; }
+
+  .bc-section { padding: var(--space-lg) 0 0; }
+  .bc { display: flex; align-items: center; gap: var(--space-sm); font-size: var(--font-size-sm); color: var(--color-text-dim); flex-wrap: wrap; }
+  .bc a { color: var(--color-text-muted); text-decoration: none; }
+  .bc a:hover { color: var(--color-accent); }
+  .bc--current { color: var(--color-text); font-weight: 600; }
 </style>

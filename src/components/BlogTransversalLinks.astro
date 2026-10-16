@@ -1,0 +1,247 @@
+---
+import blogArticles from '../data/blog-articles.json';
+import { provinces } from '../data/communes';
+
+const currentPath = Astro.url.pathname;
+const currentSlug = currentPath.replace(/^\/blog\//, '').replace(/\/$/, '');
+
+// Find current article index
+const currentIndex = blogArticles.findIndex(a => a.slug === currentSlug);
+
+// Deterministic selection of 4 related articles
+let relatedArticles: typeof blogArticles = [];
+if (currentIndex !== -1) {
+  const currentArticle = blogArticles[currentIndex];
+  // Prioritize same tag if available
+  const sameTag = blogArticles.filter(a => a.slug !== currentSlug && a.tag === currentArticle.tag);
+  for (const a of sameTag) {
+    if (relatedArticles.length >= 2) break;
+    relatedArticles.push(a);
+  }
+  // Fill with circularly adjacent articles so all 103 articles are linked in an unbroken chain
+  for (let i = 1; relatedArticles.length < 4 && i < blogArticles.length; i++) {
+    const candidate = blogArticles[(currentIndex + i) % blogArticles.length];
+    if (candidate.slug !== currentSlug && !relatedArticles.some(r => r.slug === candidate.slug)) {
+      relatedArticles.push(candidate);
+    }
+  }
+} else {
+  relatedArticles = blogArticles.slice(0, 4);
+}
+
+// Flatten all communes with province slug
+const allCommunes = provinces.flatMap(p => 
+  p.communes
+    .filter(c => c.slug !== 'bruxelles')
+    .map(c => ({ ...c, provinceSlug: p.slug, provinceName: p.name }))
+);
+
+// Deterministic hash to distribute communes across all blog articles
+let hash = 0;
+for (let i = 0; i < currentSlug.length; i++) {
+  hash = (hash << 5) - hash + currentSlug.charCodeAt(i);
+  hash |= 0;
+}
+const startIndex = Math.abs(hash) % allCommunes.length;
+const rotatingCommunes = [];
+for (let i = 0; i < 8; i++) {
+  const c = allCommunes[(startIndex + i * 11) % allCommunes.length];
+  if (c && !rotatingCommunes.some(rc => rc.slug === c.slug)) {
+    rotatingCommunes.push(c);
+  }
+}
+---
+
+<section class="blog-transversal">
+  <div class="container">
+    <!-- Related Articles -->
+    <div class="blog-transversal__articles">
+      <div class="blog-transversal__header">
+        <span class="blog-transversal__eyebrow">Poursuivez votre lecture</span>
+        <h2 class="blog-transversal__title">Articles & Guides Liés</h2>
+      </div>
+      <div class="blog-transversal__grid">
+        {relatedArticles.map(article => (
+          <a href={`/blog/${article.slug}/`} class="blog-transversal__card card">
+            <span class="blog-transversal__tag">{article.tag}</span>
+            <h3 class="blog-transversal__card-title">{article.title}</h3>
+            {article.desc && <p class="blog-transversal__desc">{article.desc.slice(0, 110)}...</p>}
+            <span class="blog-transversal__link">Consulter le dossier →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Local Interventions Mesh -->
+    <div class="blog-transversal__zones">
+      <div class="blog-transversal__header">
+        <span class="blog-transversal__eyebrow">Dépannage d'Urgence 24h/24 & 7j/7</span>
+        <h3 class="blog-transversal__title">Nos Plombiers Interviennent Immédiatement Près de Chez Vous</h3>
+        <p class="blog-transversal__subtitle">Nos artisans et techniciens qualifiés sont positionnés dans les principales communes belges avec un délai d'arrivée moyen de 30 minutes :</p>
+      </div>
+
+      <div class="blog-transversal__chips">
+        <a href="/plombier-bruxelles-urgence/" class="zone-badge zone-badge--highlight">
+          📍 Plombier Bruxelles Centre & 19 communes (24/7)
+        </a>
+        {rotatingCommunes.map(commune => (
+          <a href={`/zones/${commune.provinceSlug}/${commune.slug}/`} class="zone-badge">
+            Plombier {commune.name} ({commune.provinceName})
+          </a>
+        ))}
+      </div>
+
+      <div class="blog-transversal__footer">
+        <a href="/zones/" class="btn btn-outline">
+          🗺️ Explorer l'ensemble de nos 88 communes couvertes
+        </a>
+        <a href="/tarifs/" class="btn btn-outline">
+          💰 Consulter notre grille tarifaire officielle
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog-transversal {
+    margin-top: var(--space-3xl);
+    padding: var(--space-3xl) 0;
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .blog-transversal__header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .blog-transversal__eyebrow {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+  }
+
+  .blog-transversal__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+  }
+
+  .blog-transversal__subtitle {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    max-width: 720px;
+  }
+
+  .blog-transversal__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+  }
+
+  .blog-transversal__card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .blog-transversal__card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  }
+
+  .blog-transversal__tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+  }
+
+  .blog-transversal__card-title {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+  }
+
+  .blog-transversal__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-transversal__link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: auto;
+  }
+
+  .blog-transversal__zones {
+    padding-top: var(--space-2xl);
+    border-top: 1px dashed var(--color-border);
+  }
+
+  .blog-transversal__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .zone-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .zone-badge:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: var(--color-accent-glow);
+    transform: translateY(-2px);
+  }
+
+  .zone-badge--highlight {
+    background: var(--color-accent-glow);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .blog-transversal__footer {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .blog-transversal__grid {
+      grid-template-columns: 1fr;
+    }
+    .blog-transversal__footer {
+      flex-direction: column;
+    }
+  }
+</style>

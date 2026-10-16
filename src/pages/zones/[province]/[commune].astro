@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import CTABanner from '../../../components/CTABanner.astro';
 import { provinces, type Commune, type Province } from '../../../data/communes';
+import blogArticles from '../../../data/blog-articles.json';
 
 export function getStaticPaths() {
   return provinces.flatMap(province =>
@@ -24,8 +25,38 @@ interface Props {
 
 const { commune, province } = Astro.props;
 
-// Get nearby communes (same province, different commune)
-const nearby = province.communes.filter(c => c.slug !== commune.slug).slice(0, 5);
+// Deterministic circular sliding window across communes so 100% of communes get linked reciprocally
+const otherCommunes = province.communes.filter(c => c.slug !== commune.slug);
+const currentIdx = otherCommunes.findIndex(c => c.slug === commune.slug);
+const nearbyCount = Math.min(6, otherCommunes.length);
+const nearby: typeof otherCommunes = [];
+for (let i = 0; i < nearbyCount; i++) {
+  const target = otherCommunes[(currentIdx + 1 + i) % otherCommunes.length];
+  if (target) nearby.push(target);
+}
+
+// Supplement with external communes if province is small so every page has 6 links
+if (nearby.length < 6) {
+  const externalCommunes = provinces
+    .filter(p => p.slug !== province.slug)
+    .flatMap(p => p.communes.slice(0, 2));
+  for (const ext of externalCommunes) {
+    if (nearby.length >= 6) break;
+    if (!nearby.some(c => c.slug === ext.slug)) {
+      nearby.push(ext);
+    }
+  }
+}
+
+// Deterministic selection of 4 blog guides based on commune slug hash
+let hash = 0;
+for (let i = 0; i < commune.slug.length; i++) {
+  hash = (hash << 5) - hash + commune.slug.charCodeAt(i);
+  hash |= 0;
+}
+const startIndex = Math.abs(hash) % blogArticles.length;
+const relatedGuides = [0, 1, 2, 3].map(i => blogArticles[(startIndex + i * 7) % blogArticles.length]);
+
 const areaServed = [
   { "@type": "City", "name": commune.name },
   { "@type": "State", "name": commune.province }
@@ -46,7 +77,7 @@ const areaServed = [
         <span class="breadcrumb__sep">›</span>
         <a href="/zones/">Zones</a>
         <span class="breadcrumb__sep">›</span>
-        <a href={`/zones#${province.slug}`}>{province.name}</a>
+        <a href={`/zones/${province.slug}/`}>{province.name}</a>
         <span class="breadcrumb__sep">›</span>
         <span class="breadcrumb__current">{commune.name}</span>
       </nav>
@@ -114,7 +145,7 @@ const areaServed = [
               <div class="service-mini__icon">{icon}</div>
               <h3>{service}</h3>
               <p>Besoin d'un expert pour {service.toLowerCase()} ? Nous intervenons rapidement à {commune.name} avec tout le matériel nécessaire pour un résultat impeccable.</p>
-              <a href={`/service/${link}/`} class="service-mini__link">En savoir plus →</a>
+              <a href={`/service/${link}/`} class="service-mini__link">Intervention & tarifs {service} à {commune.name} →</a>
             </div>
           );
         })}
@@ -283,7 +314,7 @@ const areaServed = [
         <h2 class="section-title">Nous Intervenons Aussi Près de {commune.name}</h2>
         <div class="nearby-grid">
           {nearby.map(c => (
-            <a href={`/zones/${province.slug}/${c.slug}/`} class="nearby-card card">
+            <a href={`/zones/${c.provinceSlug || province.slug}/${c.slug}/`} class="nearby-card card">
               <h3>{c.name}</h3>
               {c.population && <span class="nearby-card__pop">{c.population} hab.</span>}
               <span class="nearby-card__link">Voir la page →</span>
@@ -296,6 +327,28 @@ const areaServed = [
       </div>
     </section>
   )}
+
+  <!-- Practical Guides & Blog Interlinking -->
+  <section class="section commune-guides-section">
+    <div class="container">
+      <p class="section-label">Conseils & Dépannage</p>
+      <h2 class="section-title">Guides Pratiques Recommandés à {commune.name}</h2>
+      <p class="section-subtitle">Consultez nos dossiers d'experts pour diagnostiquer vos fuites, entretenir vos canalisations et éviter les pannes à {commune.name}.</p>
+      <div class="commune-guides-grid">
+        {relatedGuides.map(guide => (
+          <a href={`/blog/${guide.slug}/`} class="guide-card card">
+            <span class="guide-card__tag">{guide.tag}</span>
+            <h3 class="guide-card__title">{guide.title}</h3>
+            {guide.desc && <p class="guide-card__desc">{guide.desc.slice(0, 110)}...</p>}
+            <span class="guide-card__link">Lire le guide complet →</span>
+          </a>
+        ))}
+      </div>
+      <div style="text-align:center; margin-top: var(--space-xl);">
+        <a href="/blog/" class="btn btn-outline">Consulter tous nos guides & articles →</a>
+      </div>
+    </div>
+  </section>
 
   <CTABanner
     title={`Besoin d'un plombier à ${commune.name} ?`}
@@ -631,5 +684,55 @@ const areaServed = [
     font-weight: 700;
     color: var(--color-accent);
     margin-bottom: var(--space-xs);
+  }
+
+  /* Commune Guides Section */
+  .commune-guides-section {
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+  }
+  .commune-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .guide-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  }
+  .guide-card__tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+  }
+  .guide-card__title {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+  }
+  .guide-card__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+  }
+  .guide-card__link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: auto;
   }
 </style>

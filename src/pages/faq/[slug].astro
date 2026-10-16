@@ -41,18 +41,7 @@ const faqPageSchema = {
   ]
 };
 
-// Breadcrumb schema
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.plombierurgence.be/" },
-    { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.plombierurgence.be/faq/" },
-    { "@type": "ListItem", "position": 3, "name": faq.question, "item": `https://www.plombierurgence.be/faq/${faq.slug}/` }
-  ]
-};
-
-const extraSchemas = [faqPageSchema, breadcrumbSchema];
+const extraSchemas = [faqPageSchema];
 ---
 
 <Layout
@@ -127,7 +116,7 @@ const extraSchemas = [faqPageSchema, breadcrumbSchema];
               <div class="related-card__icon">{r.icon}</div>
               <h3 class="related-card__title">{r.title}</h3>
               <p class="related-card__price">Dès {r.priceFrom}</p>
-              <span class="related-card__link">En savoir plus →</span>
+              <span class="related-card__link">Voir les détails de {r.title} →</span>
             </a>
           ))}
         </div>
@@ -167,7 +156,7 @@ const extraSchemas = [faqPageSchema, breadcrumbSchema];
       <p class="label">Autres questions fréquentes</p>
       <h2 class="section-title">D'autres questions que vous pourriez poser</h2>
       <div class="other-faqs-grid">
-        {longTailFaqs.filter(f => f.slug !== faq.slug).slice(0, 4).map(f => (
+        {longTailFaqs.filter(f => f.slug !== faq.slug).map(f => (
           <a href={`/faq/${f.slug}/`} class="other-faq-card card">
             <h3 class="other-faq-card__title">{f.question}</h3>
             <span class="other-faq-card__link">Lire la réponse →</span>

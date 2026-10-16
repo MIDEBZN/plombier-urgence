@@ -30,50 +30,20 @@ const faqs = [
   }
 ];
 
-const plumbingServiceSchema = {
+const brusselsServiceSchema = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "PlumbingService"],
-  "name": "Plombier Bruxelles Urgence — Dépannage 24h/24",
+  "@type": "Service",
+  "name": "Dépannage Plombier Bruxelles Urgence 24h/24",
+  "serviceType": "Dépannage Plomberie d'Urgence",
+  "provider": {
+    "@id": "https://www.plombierurgence.be/#organization"
+  },
   "url": "https://www.plombierurgence.be/plombier-bruxelles-urgence/",
   "image": "https://www.plombierurgence.be/images/og-default.jpg",
-  "telephone": "+32465685158",
-  "email": "contact@plombierurgence.be",
-  "priceRange": `Dès ${PRICING.debouchage.start}€`,
-  "currenciesAccepted": "EUR",
-  "paymentAccepted": "Cash, Bancontact, Virement instantané",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "25 Boulevard de l'Abattoir",
-    "addressLocality": "Bruxelles",
-    "postalCode": "1000",
-    "addressCountry": "BE"
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Région de Bruxelles-Capitale"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "50.8444",
-    "longitude": "4.3399"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  ],
-  "areaServed": [
-    { "@type": "City", "name": "Bruxelles" },
-    { "@type": "AdministrativeArea", "name": "Région de Bruxelles-Capitale" },
-    { "@type": "City", "name": "Ixelles" },
-    { "@type": "City", "name": "Uccle" },
-    { "@type": "City", "name": "Schaerbeek" },
-    { "@type": "City", "name": "Anderlecht" },
-    { "@type": "City", "name": "Etterbeek" },
-    { "@type": "City", "name": "Saint-Gilles" },
-    { "@type": "City", "name": "Molenbeek-Saint-Jean" },
-    { "@type": "City", "name": "Woluwe-Saint-Lambert" },
-    { "@type": "City", "name": "Woluwe-Saint-Pierre" }
-  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Services Dépannage Urgence Bruxelles",
@@ -85,7 +55,7 @@ const plumbingServiceSchema = {
           "name": "Débouchage WC & Canalisation Urgence",
           "description": "Débouchage rapide haute pression et furet mécanique dans les 19 communes de Bruxelles."
         },
-        "price": PRICING.debouchage.start,
+        "price": String(PRICING.debouchage.start),
         "priceCurrency": "EUR"
       },
       {
@@ -95,7 +65,7 @@ const plumbingServiceSchema = {
           "name": "Recherche et Réparation de Fuite d'Eau Urgence",
           "description": "Détection non-destructive thermographique et colmatage d'urgence 24h/24."
         },
-        "price": PRICING.fuite.start,
+        "price": String(PRICING.fuite.start),
         "priceCurrency": "EUR"
       },
       {
@@ -105,41 +75,11 @@ const plumbingServiceSchema = {
           "name": "Dépannage Chaudière et Chauffe-eau d'Urgence",
           "description": "Remise en route chaudière gaz et réparation chauffe-eau percé en 30 minutes."
         },
-        "price": PRICING.chaudiere.start,
+        "price": String(PRICING.chaudiere.start),
         "priceCurrency": "EUR"
       }
     ]
   }
-};
-
-const howToEmergencySchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Comment gérer une urgence plomberie à Bruxelles avant l'arrivée du technicien",
-  "description": "Étapes essentielles pour limiter les dégâts des eaux à Bruxelles en attendant votre plombier d'urgence.",
-  "totalTime": "PT5M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Fermer l'arrivée d'eau générale",
-      "text": "Localisez la vanne générale à côté du compteur d'eau (souvent dans la cave ou sous l'évier) et tournez-la d'un quart de tour pour couper l'alimentation."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Couper le courant électrique de la zone touchée",
-      "text": "Si l'eau s'écoule près d'interrupteurs, de prises ou du sol, disjonctez immédiatement la ligne au tableau électrique."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Appeler un plombier Bruxelles urgence agréé",
-      "text": "Composez le 0465 68 51 58 pour mobiliser un technicien local en moins de 30 minutes avec un tarif fixe garanti."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Prendre des photos pour l'assurance",
-      "text": "Photographiez la fuite et les dégâts visibles pour constituer votre dossier d'indemnisation habitation."
-    }
-  ]
 };
 
 const brusselsCommunes = [
@@ -166,7 +106,7 @@ const brusselsCommunes = [
   title="Plombier Bruxelles Urgence 24h/24 | Dépannage en 30 Min Dès 80€"
   description="Besoin d'un plombier Bruxelles urgence ? Intervention garantie en 30 min, 24h/24 et 7j/7 dans les 19 communes. Fuite, débouchage, chaudière. Tarifs fixes dès 80€. ☎ 0465 68 51 58"
   faqs={faqs}
-  extraSchemas={[plumbingServiceSchema, howToEmergencySchema]}
+  extraSchemas={[brusselsServiceSchema]}
 >
 
   <!-- Breadcrumbs -->

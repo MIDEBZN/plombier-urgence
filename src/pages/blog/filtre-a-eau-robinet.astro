@@ -40,6 +40,7 @@ const articleSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "Plombier Urgence",
+    "@id": "https://www.plombierurgence.be/#organization",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.plombierurgence.be/logo.png"
@@ -49,48 +50,13 @@ const articleSchema = {
   "dateModified": "2026-03-20T08:00:00+01:00",
   "mainEntityOfPage": "https://www.plombierurgence.be/blog/filtre-a-eau-robinet/"
 };
-
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "Comment installer un filtre à eau sur son robinet de cuisine",
-  "description": "Guide étape par étape pour installer un filtre sur l'embout d'un mitigeur d'évier en moins de 10 minutes.",
-  "totalTime": "PT10M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Dévisser le mousseur d'origine",
-      "text": "Dévissez l'embout aérateur (mousseur) au bout du bec du mitigeur à la main ou avec une pince protégée par un chiffon pour ne pas rayer le chrome."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Nettoyer le filetage du bec",
-      "text": "Éliminez les dépôts de tartre accumulés sur le filetage avec un peu de vinaigre blanc et une brosse pour garantir une étanchéité parfaite."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Sélectionner et visser le bon adaptateur",
-      "text": "Choisissez l'adaptateur M22 ou M24 fourni avec le filtre, insérez le joint en silicone et vissez fermement l'écrou de fixation."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Enclencher le boîtier filtrant et la cartouche",
-      "text": "Fixez le corps du filtre sur l'adaptateur et insérez la cartouche neuve en vérifiant que le levier de sélection (eau filtrée / jet normal) bascule sans forcer."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Rincer la cartouche pendant 2 minutes",
-      "text": "Ouvrez l'eau froide en position 'eau filtrée' pendant 90 à 120 secondes pour chasser les poussières résiduelles de charbon actif avant la première gorgée."
-    }
-  ]
-};
 ---
 
 <Layout
   title="Filtre à Eau Robinet : Guide d'Achat, Efficacité & Pose (2026)"
   description="Tout savoir sur le filtre à eau robinet : élimination du calcaire et du plomb à Bruxelles, comparatif des meilleurs modèles, tutoriel de pose et avis de plombier."
   faqs={faqs}
-  extraSchemas={[articleSchema, howToSchema]}
+  extraSchemas={[articleSchema]}
 >
 
   <!-- Breadcrumbs -->

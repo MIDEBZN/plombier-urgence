@@ -22,10 +22,7 @@ const serviceSchema = {
   "@type": "Service",
   "name": service.title,
   "provider": {
-    "@type": "LocalBusiness",
-    "name": "Plombier Urgence",
-    "telephone": "+32465685158",
-    "image": "https://www.plombierurgence.be/images/og-default.jpg"
+    "@id": "https://www.plombierurgence.be/#organization"
   },
   "areaServed": {
     "@type": "Country",
@@ -36,45 +33,11 @@ const serviceSchema = {
     "@type": "Offer",
     "price": numericPrice,
     "priceCurrency": "EUR",
-    "url": `https://www.plombierurgence.be/service/${service.slug}`
+    "url": `https://www.plombierurgence.be/service/${service.slug}/`
   }
 };
 
 const extraSchemas: any[] = [serviceSchema];
-
-// Add HowTo schema conditionally for debouchage and fuite
-if (service.slug === 'debouchage-canalisation' || service.slug === 'urgence-plomberie') {
-  extraSchemas.push({
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": `Comment se déroule notre intervention pour : ${service.title}`,
-    "description": service.metaDescription,
-    "step": service.process.map((step: any, index: number) => ({
-      "@type": "HowToStep",
-      "url": `https://www.plombierurgence.be/service/${service.slug}#step${index + 1}`,
-      "name": step.title,
-      "itemListElement": [{
-        "@type": "HowToDirection",
-        "text": step.description
-      }]
-    }))
-  });
-}
-// Add FAQPage schema
-if (service.faqs && service.faqs.length > 0) {
-  extraSchemas.push({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": service.faqs.map((faq: any) => ({
-      "@type": "Question",
-      "name": faq.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.a
-      }
-    }))
-  });
-}
 ---
 
 <Layout 
@@ -275,8 +238,14 @@ if (service.faqs && service.faqs.length > 0) {
       <div class="zones-chips">
         {service.serviceAreas.map((area: string) => {
           let link = "/zones/";
-          
-          
+          const lower = area.toLowerCase();
+          if (lower.includes('bruxelles')) link = "/zones/bruxelles-capitale/";
+          else if (lower.includes('liège') || lower.includes('liege')) link = "/zones/liege/";
+          else if (lower.includes('namur')) link = "/zones/province-de-namur/";
+          else if (lower.includes('charleroi')) link = "/zones/hainaut/charleroi/";
+          else if (lower.includes('mons') || lower.includes('hainaut')) link = "/zones/hainaut/";
+          else if (lower.includes('brabant wallon')) link = "/zones/brabant-wallon/";
+          else if (lower.includes('ottignies')) link = "/zones/brabant-wallon/ottignies-louvain-la-neuve/";
           return <a href={link} class="zone-chip">{area}</a>;
         })}
       </div>
@@ -298,7 +267,7 @@ if (service.faqs && service.faqs.length > 0) {
               <div class="related-card__icon">{r.icon}</div>
               <h3 class="related-card__title">{r.title}</h3>
               <p class="related-card__price">Dès {r.priceFrom}</p>
-              <span class="related-card__link">En savoir plus →</span>
+              <span class="related-card__link">Découvrir le service {r.title} →</span>
             </a>
           ))}
         </div>
