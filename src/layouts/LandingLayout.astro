@@ -324,16 +324,6 @@ const currentYear = new Date().getFullYear();
       </div>
     </footer>
 
-    <!-- Cookie Consent Banner (reuses existing setup) -->
-    <div id="cookie-banner" class="cookie-banner cookie-banner--hidden">
-      <div class="container cookie-banner__inner">
-        <p class="cookie-banner__text">
-          Nous utilisons des cookies analytiques et de mesure d'audience pour améliorer votre expérience. En poursuivant votre navigation, vous acceptez notre <a href="/politique-de-confidentialite/">politique de confidentialité</a>.
-        </p>
-        <button id="accept-cookies" class="btn btn-primary btn-sm">Accepter</button>
-      </div>
-    </div>
-
     <!-- Analytics & Funnel Tracking Script -->
     <script is:inline>
       // 1. Phone Link Click Tracking
@@ -366,19 +356,6 @@ const currentYear = new Date().getFullYear();
           }
         }
       });
-
-      // 2. Cookie banner logic
-      const cookieBanner = document.getElementById('cookie-banner');
-      const acceptCookiesBtn = document.getElementById('accept-cookies');
-      if (cookieBanner && acceptCookiesBtn) {
-        if (!localStorage.getItem('cookiesAccepted')) {
-          cookieBanner.classList.remove('cookie-banner--hidden');
-        }
-        acceptCookiesBtn.addEventListener('click', function() {
-          localStorage.setItem('cookiesAccepted', 'true');
-          cookieBanner.classList.add('cookie-banner--hidden');
-        });
-      }
     </script>
   </body>
 </html>
