@@ -1,0 +1,386 @@
+---
+import { LANDING_CONFIG } from '../../data/landing-config';
+
+interface Props {
+  serviceName: string;
+  formId?: string;
+}
+
+const { serviceName, formId = 'lp-callback-form' } = Astro.props;
+---
+
+<div class="lp-form-card card" id={formId}>
+  <div class="lp-form-card__header">
+    <span class="lp-form-card__tag">Formulaire d'Urgence / Rappel</span>
+    <h3 class="lp-form-card__title">Être rappelé par un technicien</h3>
+    <p class="lp-form-card__subtitle">
+      Remplissez ce formulaire court ou privilégiez l'appel direct au <a href={LANDING_CONFIG.phoneTel} class="lp-form-card__tel-highlight">{LANDING_CONFIG.phoneDisplay}</a> pour un départ immédiat.
+    </p>
+  </div>
+
+  <form
+    class="lp-ajax-form"
+    id={`${formId}-form`}
+    data-form-id={formId}
+    data-service={serviceName}
+    novalidate
+  >
+    <!-- Spam honeypot -->
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+    <input type="hidden" name="service" value={serviceName} />
+    <input type="hidden" name="_subject" value={`Nouvelle demande Ads: ${serviceName}`} />
+
+    <div class="form-group">
+      <label for={`${formId}-name`}>Votre Nom & Prénom *</label>
+      <input
+        type="text"
+        id={`${formId}-name`}
+        name="name"
+        placeholder="ex. Jean Dupont"
+        required
+        autocomplete="name"
+      />
+      <span class="lp-form-error" data-error="name"></span>
+    </div>
+
+    <div class="form-group">
+      <label for={`${formId}-phone`}>Numéro de téléphone *</label>
+      <input
+        type="tel"
+        id={`${formId}-phone`}
+        name="phone"
+        placeholder="ex. 0465 68 51 58"
+        required
+        autocomplete="tel"
+      />
+      <span class="lp-form-error" data-error="phone"></span>
+    </div>
+
+    <div class="form-group">
+      <label for={`${formId}-commune`}>Commune ou Code Postal (Bruxelles / Périphérie) *</label>
+      <input
+        type="text"
+        id={`${formId}-commune`}
+        name="commune"
+        placeholder="ex. 1050 Ixelles, 1180 Uccle, Waterloo..."
+        required
+      />
+      <span class="lp-form-error" data-error="commune"></span>
+    </div>
+
+    <div class="form-group">
+      <label for={`${formId}-message`}>Description de votre problème *</label>
+      <textarea
+        id={`${formId}-message`}
+        name="message"
+        rows="3"
+        placeholder="Décrivez brièvement la fuite, l'engorgement ou l'urgence..."
+        required
+      ></textarea>
+      <span class="lp-form-error" data-error="message"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary lp-form-submit-btn">
+      <span class="lp-btn-label">Demander un Rappel Immédiat</span>
+      <span class="lp-btn-spinner" style="display:none;" aria-hidden="true">⏳ Envoi...</span>
+    </button>
+
+    <p class="lp-form-privacy-note">
+      🔒 Vos informations sont strictement confidentielles et utilisées uniquement pour traiter votre dépannage conformément au RGPD.
+    </p>
+
+    <div class="lp-form-alert lp-form-alert--success" style="display:none;" role="alert">
+      <strong>✓ Demande enregistrée avec succès !</strong>
+      <p class="lp-alert-lead-id"></p>
+      <p>Un dispatcheur examine votre demande et vous rappelle immédiatement. Pour toute urgence critique avec risque d'inondation, appelez directement le <a href={LANDING_CONFIG.phoneTel}>{LANDING_CONFIG.phoneDisplay}</a>.</p>
+    </div>
+
+    <div class="lp-form-alert lp-form-alert--error" style="display:none;" role="alert">
+      <strong>⚠️ L'envoi n'a pas pu aboutir.</strong>
+      <p>Veuillez nous contacter directement par téléphone au <a href={LANDING_CONFIG.phoneTel}>{LANDING_CONFIG.phoneDisplay}</a> (ligne d'urgence prioritaire ouverte 24h/24).</p>
+    </div>
+  </form>
+</div>
+
+<style>
+  .lp-form-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  .lp-form-card__header {
+    margin-bottom: 1.25rem;
+  }
+  .lp-form-card__tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    background: rgba(59, 54, 228, 0.08);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+  }
+  .lp-form-card__title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin-bottom: 0.35rem;
+  }
+  .lp-form-card__subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+  .lp-form-card__tel-highlight {
+    color: #dc2626;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  .form-group {
+    margin-bottom: 0.9rem;
+    text-align: left;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.25rem;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 54, 228, 0.15);
+  }
+  .lp-form-error {
+    display: block;
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-top: 0.2rem;
+    min-height: 1rem;
+  }
+  .lp-form-submit-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    background: var(--color-accent);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .lp-form-submit-btn:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px);
+  }
+  .lp-form-submit-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+  .lp-form-privacy-note {
+    font-size: 0.725rem;
+    color: #64748b;
+    margin-top: 0.75rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .lp-form-alert {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .lp-form-alert--success {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+  }
+  .lp-form-alert--error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+  }
+  .lp-alert-lead-id {
+    font-weight: 700;
+    font-family: monospace;
+    margin: 0.25rem 0;
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll('.lp-ajax-form').forEach(function(form) {
+    let formStarted = false;
+    const formId = form.getAttribute('data-form-id') || 'form';
+    const nameInput = form.querySelector('input[name="name"]');
+    const phoneInput = form.querySelector('input[name="phone"]');
+    const communeInput = form.querySelector('input[name="commune"]');
+    const messageInput = form.querySelector('textarea[name="message"]');
+    const submitBtn = form.querySelector('.lp-form-submit-btn');
+    const labelSpan = submitBtn ? submitBtn.querySelector('.lp-btn-label') : null;
+    const spinnerSpan = submitBtn ? submitBtn.querySelector('.lp-btn-spinner') : null;
+    const successAlert = form.querySelector('.lp-form-alert--success');
+    const errorAlert = form.querySelector('.lp-form-alert--error');
+    const leadIdP = form.querySelector('.lp-alert-lead-id');
+
+    // Funnel event: form_start (fired once when user interacts with fields)
+    form.addEventListener('focusin', function() {
+      if (!formStarted) {
+        formStarted = true;
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'form_start', {
+            event_category: 'lead_funnel',
+            form_id: formId,
+            service: form.getAttribute('data-service') || 'generic'
+          });
+        }
+      }
+    }, { once: true });
+
+    function clearErrors() {
+      form.querySelectorAll('.lp-form-error').forEach(function(el) {
+        el.textContent = '';
+      });
+    }
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      clearErrors();
+      if (successAlert) successAlert.style.display = 'none';
+      if (errorAlert) errorAlert.style.display = 'none';
+
+      let isValid = true;
+
+      // Validation
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      if (!nameVal || nameVal.length < 2) {
+        const errEl = form.querySelector('[data-error="name"]');
+        if (errEl) errEl.textContent = 'Veuillez saisir votre nom complet.';
+        isValid = false;
+      }
+
+      const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+      const phoneDigits = phoneVal.replace(/[^0-9+]/g, '');
+      if (!phoneDigits || phoneDigits.length < 8) {
+        const errEl = form.querySelector('[data-error="phone"]');
+        if (errEl) errEl.textContent = 'Veuillez entrer un numéro de téléphone valide.';
+        isValid = false;
+      }
+
+      const communeVal = communeInput ? communeInput.value.trim() : '';
+      if (!communeVal || communeVal.length < 2) {
+        const errEl = form.querySelector('[data-error="commune"]');
+        if (errEl) errEl.textContent = 'Veuillez indiquer votre commune ou code postal.';
+        isValid = false;
+      }
+
+      const messageVal = messageInput ? messageInput.value.trim() : '';
+      if (!messageVal || messageVal.length < 5) {
+        const errEl = form.querySelector('[data-error="message"]');
+        if (errEl) errEl.textContent = 'Veuillez préciser la nature de votre problème.';
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      // Anti-spam honeypot
+      const honeyVal = (form.querySelector('input[name="_honey"]')) ? (form.querySelector('input[name="_honey"]')).value : '';
+      if (honeyVal) {
+        // Silent bot discard
+        if (successAlert) successAlert.style.display = 'block';
+        return;
+      }
+
+      // De-duplication check: prevent multiple submissions in same session
+      const submissionKey = 'lead_submitted_' + formId;
+      if (sessionStorage.getItem(submissionKey)) {
+        if (leadIdP) leadIdP.textContent = 'Référence : ' + sessionStorage.getItem(submissionKey);
+        if (successAlert) successAlert.style.display = 'block';
+        return;
+      }
+
+      // UI Loading state
+      if (submitBtn) submitBtn.disabled = true;
+      if (labelSpan) labelSpan.style.display = 'none';
+      if (spinnerSpan) spinnerSpan.style.display = 'inline';
+
+      const serviceVal = form.getAttribute('data-service') || 'Dépannage plomberie';
+      const leadId = 'LEAD-' + Math.random().toString(36).substring(2, 8).toUpperCase() + '-' + Date.now().toString().slice(-4);
+
+      try {
+        const payload = {
+          name: nameVal,
+          phone: phoneVal,
+          commune: communeVal,
+          message: messageVal,
+          service: serviceVal,
+          lead_id: leadId,
+          _subject: 'Nouvelle demande Ads [' + serviceVal + '] - ' + leadId
+        };
+
+        const response = await fetch('https://formsubmit.co/ajax/contact@plombierurgence.be', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          // Store in sessionStorage to prevent duplicate fires on reload/repeat
+          sessionStorage.setItem(submissionKey, leadId);
+
+          // Funnel event: form_submit_success (Qualified Lead stage)
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'form_submit_success', {
+              event_category: 'lead_funnel',
+              event_label: serviceVal,
+              lead_id: leadId,
+              commune: communeVal,
+              form_id: formId
+            });
+          }
+
+          // UI update
+          if (leadIdP) leadIdP.textContent = 'Référence de demande : ' + leadId;
+          if (successAlert) successAlert.style.display = 'block';
+          form.reset();
+        } else {
+          throw new Error('Réponse serveur non valide');
+        }
+      } catch (err) {
+        console.error('Erreur formulaire:', err);
+        if (errorAlert) errorAlert.style.display = 'block';
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (labelSpan) labelSpan.style.display = 'inline';
+        if (spinnerSpan) spinnerSpan.style.display = 'none';
+      }
+    });
+  });
+</script>

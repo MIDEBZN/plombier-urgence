@@ -43,7 +43,7 @@ for (let i = 0; i < currentSlug.length; i++) {
   hash |= 0;
 }
 const startIndex = Math.abs(hash) % allCommunes.length;
-const rotatingCommunes = [];
+const rotatingCommunes: typeof allCommunes = [];
 for (let i = 0; i < 8; i++) {
   const c = allCommunes[(startIndex + i * 11) % allCommunes.length];
   if (c && !rotatingCommunes.some(rc => rc.slug === c.slug)) {

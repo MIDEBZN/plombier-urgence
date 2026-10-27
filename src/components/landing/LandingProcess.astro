@@ -1,0 +1,152 @@
+---
+import { LANDING_CONFIG } from '../../data/landing-config';
+
+interface Props {
+  serviceName?: string;
+}
+
+const { serviceName = "votre dépannage" } = Astro.props;
+---
+
+<section class="lp-process-section" id="processus">
+  <div class="container">
+    <div class="lp-section-header text-center">
+      <span class="lp-badge">Déroulement Transparent</span>
+      <h2 class="lp-section-title">Comment se passe votre intervention ?</h2>
+      <p class="lp-section-subtitle">
+        De votre premier appel jusqu'à la remise en eau ou au débouchage complet, notre méthode est directe et sans mauvaise surprise.
+      </p>
+    </div>
+
+    <div class="lp-process-grid">
+      <div class="lp-step-card card">
+        <div class="lp-step-card__num">1</div>
+        <h3 class="lp-step-card__title">Appel & Consignes d'urgence</h3>
+        <p class="lp-step-card__text">
+          Vous contactez notre permanence au <a href={LANDING_CONFIG.phoneTel} class="lp-step-tel">{LANDING_CONFIG.phoneDisplay}</a>. Nous analysons l'urgence et vous guidons sur les gestes conservatoires immédiats (ex. fermeture vanne d'arrêt générale).
+        </p>
+      </div>
+
+      <div class="lp-step-card card">
+        <div class="lp-step-card__num">2</div>
+        <h3 class="lp-step-card__title">Tarif indicatif & Départ</h3>
+        <p class="lp-step-card__text">
+          Nous vous indiquons la base tarifaire correspondant à {serviceName}. Dès votre confirmation verbale, nous dépêchons le technicien le plus proche de votre secteur.
+        </p>
+      </div>
+
+      <div class="lp-step-card card">
+        <div class="lp-step-card__num">3</div>
+        <h3 class="lp-step-card__title">Diagnostic & Devis validé</h3>
+        <p class="lp-step-card__text">
+          Le plombier examine l'installation sur place. Il vous présente un devis précis et détaillé. <strong>Aucun travail n'est engagé sans votre validation préalable.</strong>
+        </p>
+      </div>
+
+      <div class="lp-step-card card">
+        <div class="lp-step-card__num">4</div>
+        <h3 class="lp-step-card__title">Réparation & Facture officielle</h3>
+        <p class="lp-step-card__text">
+          Réparation avec matériel professionnel, vérification d'étanchéité et nettoyage de la zone de travail. Remise d'une facture conforme utilisable pour votre assurance habitation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lp-process-section {
+    padding: var(--space-3xl) 0;
+    background: #ffffff;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .lp-section-header {
+    max-width: 680px;
+    margin: 0 auto var(--space-2xl);
+  }
+  .lp-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    background: rgba(59, 54, 228, 0.08);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+  .lp-section-title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 900;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .lp-section-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  .lp-process-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .lp-process-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .lp-process-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .lp-step-card {
+    position: relative;
+    padding: 1.75rem 1.25rem;
+    background: #fafbfc;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .lp-step-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    background: #ffffff;
+  }
+  .lp-step-card__num {
+    width: 36px;
+    height: 36px;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(59, 54, 228, 0.3);
+  }
+  .lp-step-card__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .lp-step-card__text {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+  .lp-step-tel {
+    color: #ef4444;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,633 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import LandingForm from '../../components/landing/LandingForm.astro';
+import LandingProcess from '../../components/landing/LandingProcess.astro';
+import LandingTrust from '../../components/landing/LandingTrust.astro';
+import LandingFAQ from '../../components/landing/LandingFAQ.astro';
+import { LANDING_CONFIG } from '../../data/landing-config';
+
+const title = "Recherche & Réparation de Fuite d'Eau Bruxelles 24/7 | Dépannage Immédiat";
+const description = "Fuite d'eau visible ou invisible à Bruxelles ? Détection sans casse (caméra thermique, acoustique) & réparation immédiate 24h/24. Facture pour assurance. ☎ 0465 68 51 58.";
+const canonicalPath = "/lp/fuite/";
+
+const faqs = [
+  {
+    question: "Comment savoir si j'ai une fuite cachée dans mes murs ou sous mon sol ?",
+    answer: "<strong>Le test infaillible du compteur :</strong> Le soir avant de vous coucher, assurez-vous que tous les robinets sont fermés et qu'aucun appareil (machine à laver, lave-vaisselle) ne fonctionne. Notez avec précision l'index de votre compteur d'eau Vivaqua (chiffres noirs et rouges). Le lendemain matin, avant toute utilisation, vérifiez à nouveau l'index. Si le compteur a tourné ou si la petite roulette rouge tourne alors que tout est coupé, vous avez une fuite non visible nécessitant une recherche rapide."
+  },
+  {
+    question: "La recherche et la réparation de fuite sont-elles prises en charge par l'assurance ?",
+    answer: "En Belgique, les polices d'assurance multirisques habitation couvrent très généralement les frais de recherche de fuite et les dommages collatéraux causés par l'eau (murs plâtrés, parquets, plafonds). À l'issue de notre intervention, notre technicien vous fournit une <strong>facture acquittée détaillée</strong> accompagnée d'un rapport précisant l'origine du sinistre et la nature de la réparation effectuée."
+  },
+  {
+    question: "Quelles méthodes utilisez-vous pour localiser une fuite sans destruction ?",
+    answer: "Pour éviter de casser inutilement vos carrelages ou cloisons, nos techniciens utilisent des technologies non destructives : la <strong>caméra thermique infrarouge</strong> pour détecter les variations de température dues aux canalisations d'eau chaude ou de chauffage, l'<strong>écoute acoustique (géophone)</strong> pour capter les ultrasons émis par l'eau sous pression, et des tests de pression différentielle sur les circuits."
+  },
+  {
+    question: "Quel est le tarif d'une réparation de fuite d'eau à Bruxelles ?",
+    answer: `Une réparation de fuite apparente simple (joint, flexible sous évier, raccord accessible) démarre <strong>dès ${LANDING_CONFIG.pricing.fuiteStart}€</strong>. Pour une recherche de fuite non destructive encastrée ou une intervention sur tuyauterie complexe, le tarif est établi sur devis préalable validé avant travaux. Le supplément de nuit (20h - 7h), week-ends et jours fériés est de 50€ conformément à notre barème.`
+  },
+  {
+    question: "Que faire si mon robinet d'arrêt général est grippé ou cassé ?",
+    answer: `Si votre robinet d'arrêt principal refuse de tourner ou fuit lorsque vous le manipulez, ne forcez pas avec une pince au risque de casser la tête de vanne. Contactez immédiatement notre service d'urgence au <a href="${LANDING_CONFIG.phoneTel}">${LANDING_CONFIG.phoneDisplay}</a> : notre technicien se déplace en priorité pour couper l'alimentation en amont et remplacer la vanne défectueuse.`
+  }
+];
+---
+
+<LandingLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  adGroupLabel="Fuite"
+>
+  <!-- Hero Section -->
+  <section class="lp-hero">
+    <div class="container lp-hero__grid">
+      <div class="lp-hero__content">
+        <div class="lp-hero__pill">
+          <span class="lp-pulse-dot"></span>
+          <span>Permanence Recherche & Réparation de Fuite 24/7</span>
+        </div>
+
+        <h1 class="lp-hero__title">
+          Recherche & Réparation de <span class="text-accent">Fuite d'Eau à Bruxelles</span>
+        </h1>
+
+        <p class="lp-hero__lead">
+          Tuyau percé, fuite sous carrelage, tache d'humidité au plafond ou compteur d'eau qui tourne tout seul ? Détection ciblée sans casse et réparation d'urgence à Bruxelles.
+        </p>
+
+        <!-- Emergency Alert Box -->
+        <div class="lp-emergency-box">
+          <div class="lp-emergency-box__icon">💧</div>
+          <div class="lp-emergency-box__text">
+            <strong>Réflexe dégât des eaux :</strong> Coupez la vanne d'arrêt générale au compteur. Prenez des photos nettes de la fuite pour votre dossier d'assurance habitation.
+          </div>
+        </div>
+
+        <!-- Primary Call Action -->
+        <div class="lp-hero__actions">
+          <a
+            href={LANDING_CONFIG.phoneTel}
+            class="btn btn-primary lp-btn-call"
+            data-cta="fuite-hero-call"
+            data-adgroup="Fuite"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <div class="lp-btn-call__text">
+              <span class="lp-btn-call__small">Urgence Fuite d'Eau</span>
+              <span class="lp-btn-call__number">{LANDING_CONFIG.phoneDisplay}</span>
+            </div>
+          </a>
+
+          <a
+            href={LANDING_CONFIG.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn lp-btn-wa"
+            data-cta="fuite-hero-wa"
+            data-adgroup="Fuite"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>Photo par WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="lp-hero__guarantee-pills">
+          <span class="lp-pill">✓ Réparation dès {LANDING_CONFIG.pricing.fuiteStart}€</span>
+          <span class="lp-pill">✓ Détection sans destruction</span>
+          <span class="lp-pill">✓ Rapport d'assurance fourni</span>
+        </div>
+      </div>
+
+      <!-- Hero Callback Form -->
+      <div class="lp-hero__form-wrapper">
+        <LandingForm serviceName="Fuite d'Eau" formId="hero-fuite-form" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Details: Visible vs Hidden Leaks -->
+  <section class="lp-scope-section">
+    <div class="container">
+      <div class="lp-section-header text-center">
+        <span class="lp-badge">Diagnostic & Réparation</span>
+        <h2 class="lp-section-title">Deux types de fuites, deux approches professionnelles</h2>
+        <p class="lp-section-subtitle">
+          Que l'eau s'écoule visiblement sous un meuble ou qu'elle s'infiltre invisiblement dans un mur mitoyen, nous adaptons le procédé.
+        </p>
+      </div>
+
+      <div class="lp-fuite-types-grid">
+        <div class="lp-fuite-card card">
+          <div class="lp-fuite-card__header">
+            <span class="lp-fuite-card__badge">Fuite Visible</span>
+            <h3 class="lp-fuite-card__title">Réparation directe d'urgence</h3>
+          </div>
+          <p class="lp-fuite-card__desc">
+            L'origine est identifiée (joint fendu, flexible sous évier arraché, tuyau d'arrivée d'eau percé, robinetterie ou vanne de chasse d'eau défaillante).
+          </p>
+          <ul class="lp-fuite-card__list">
+            <li>Intervention immédiate avec pièces en camionnette</li>
+            <li>Colmatage ou remplacement de la section cuivre / multicouche / PER</li>
+            <li>Remise en eau et contrôle d'étanchéité sous pression</li>
+            <li><strong>Tarif indicatif :</strong> Dès {LANDING_CONFIG.pricing.fuiteStart} €</li>
+          </ul>
+        </div>
+
+        <div class="lp-fuite-card card">
+          <div class="lp-fuite-card__header">
+            <span class="lp-fuite-card__badge">Fuite Invisible / Encastrée</span>
+            <h3 class="lp-fuite-card__title">Recherche non destructive</h3>
+          </div>
+          <p class="lp-fuite-card__desc">
+            Tache d'humidité qui grandit, salpêtre, moisissures ou compteur qui continue de tourner sans robinet ouvert.
+          </p>
+          <ul class="lp-fuite-card__list">
+            <li>Détection par caméra thermique infrarouge</li>
+            <li>Localisation acoustique par écoute des canalisations</li>
+            <li>Test de pression différentielle</li>
+            <li>Rapport technique complet remis pour remboursement d'assurance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Scope Comparison Box -->
+      <div class="lp-scope-grid" style="margin-top: 2rem;">
+        <div class="lp-scope-col lp-scope-col--included card">
+          <h3 class="lp-scope-title">
+            <span class="lp-icon-check">✓</span> Ce qui est inclus dans notre dépannage
+          </h3>
+          <ul class="lp-scope-list">
+            <li>Localisation de la source exacte de la fuite d'eau.</li>
+            <li>Sécurisation immédiate et fermeture ciblée de la conduite défaillante.</li>
+            <li>Remplacement des joints, raccords et segments de tuyaux percés.</li>
+            <li>Facture détaillée acquittée et rapport pour l'assurance dégâts des eaux.</li>
+          </ul>
+        </div>
+
+        <div class="lp-scope-col lp-scope-col--excluded card">
+          <h3 class="lp-scope-title">
+            <span class="lp-icon-cross">✕</span> Ce qui est pris en charge après réparation
+          </h3>
+          <ul class="lp-scope-list">
+            <li>Travaux de peinture, plâtrerie ou remplacement de parquet suite à l'inondation (ces réfections font l'objet de l'indemnisation de votre assurance après séchage).</li>
+            <li>Fuites situées en voirie publique en amont du compteur général (relevant de Vivaqua).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Details -->
+  <section class="lp-pricing-section">
+    <div class="container">
+      <div class="lp-section-header text-center">
+        <span class="lp-badge">Transparence Financière</span>
+        <h2 class="lp-section-title">Des tarifs fixes annoncés avant intervention</h2>
+        <p class="lp-section-subtitle">
+          Chaque intervention fait l'objet d'un accord clair. Pas de mauvaises surprises sur la facture.
+        </p>
+      </div>
+
+      <div class="lp-pricing-grid">
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Réparation fuite simple</h3>
+          <p class="lp-pricing-card__start">Dès {LANDING_CONFIG.pricing.fuiteStart} €</p>
+          <p class="lp-pricing-card__text">
+            Comprend le diagnostic sur place, la main d'œuvre de base et le colmatage/remplacement de raccord accessible.
+          </p>
+        </div>
+
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Recherche de fuite</h3>
+          <p class="lp-pricing-card__start">Sur devis préalable</p>
+          <p class="lp-pricing-card__text">
+            Investigation acoustique ou caméra thermique sans casse, avec rapport technique destiné à votre assurance.
+          </p>
+        </div>
+
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Remplacement vanne d'arrêt</h3>
+          <p class="lp-pricing-card__start">Sur devis annoncé</p>
+          <p class="lp-pricing-card__text">
+            Pour robinet général grippé ou vanne d'isolement défaillante nécessitant une intervention d'urgence.
+          </p>
+        </div>
+
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Nuit & Week-end</h3>
+          <p class="lp-pricing-card__start">+{LANDING_CONFIG.pricing.surchargeNuitWeekend} € fixe</p>
+          <p class="lp-pricing-card__text">
+            Supplément forfaitaire transparent pour interventions de nuit (20h - 7h), samedis, dimanches et jours fériés.
+          </p>
+        </div>
+      </div>
+
+      <div class="lp-pricing-callout">
+        <p><strong>Un tuyau qui fuit ou un plafond humide ?</strong> Appelez notre permanence pour bloquer le sinistre :</p>
+        <a href={LANDING_CONFIG.phoneTel} class="btn btn-primary" data-cta="fuite-pricing-call" data-adgroup="Fuite">
+          📞 Appeler le {LANDING_CONFIG.phoneDisplay} (Ligne Urgence 24/7)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Component -->
+  <LandingProcess serviceName="votre fuite d'eau" />
+
+  <!-- Trust Component -->
+  <LandingTrust />
+
+  <!-- FAQ Component -->
+  <LandingFAQ faqs={faqs} title="Questions fréquentes sur les fuites d'eau à Bruxelles" />
+
+  <!-- Final CTA Banner -->
+  <section class="lp-final-cta">
+    <div class="container text-center">
+      <h2 class="lp-final-cta__title">Chaque minute compte face à une fuite d'eau</h2>
+      <p class="lp-final-cta__lead">
+        Nos plombiers dépanneurs sont disponibles 24h/24 dans toutes les communes de Bruxelles. Devis validé avant travaux.
+      </p>
+      <div class="lp-final-cta__buttons">
+        <a
+          href={LANDING_CONFIG.phoneTel}
+          class="btn btn-primary lp-btn-call"
+          data-cta="fuite-final-call"
+          data-adgroup="Fuite"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <div class="lp-btn-call__text">
+            <span class="lp-btn-call__small">Urgence Fuite d'Eau</span>
+            <span class="lp-btn-call__number">{LANDING_CONFIG.phoneDisplay}</span>
+          </div>
+        </a>
+
+        <a
+          href={LANDING_CONFIG.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn lp-btn-wa"
+          data-cta="fuite-final-wa"
+          data-adgroup="Fuite"
+        >
+          <span>Envoyer une photo par WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  /* Hero Styles */
+  .lp-hero {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .lp-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  @media (min-width: 992px) {
+    .lp-hero__grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+    }
+  }
+  .lp-hero__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1rem;
+  }
+  .lp-pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+  }
+  .lp-hero__title {
+    font-size: clamp(2rem, 4vw, 2.85rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .lp-hero__lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .lp-emergency-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid var(--color-accent);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #1e40af;
+    line-height: 1.45;
+  }
+  .lp-emergency-box__icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  .lp-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .lp-btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .lp-btn-call:hover {
+    background: #dc2626;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  .lp-btn-call__text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .lp-btn-call__small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    font-weight: 700;
+  }
+  .lp-btn-call__number {
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  .lp-btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  .lp-btn-wa:hover {
+    background: #f0fdf4;
+    color: #166534;
+  }
+  .lp-hero__guarantee-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+  }
+  .lp-pill {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+  }
+
+  /* Fuite Types Grid */
+  .lp-fuite-types-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .lp-fuite-types-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .lp-fuite-card {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+  }
+  .lp-fuite-card__header {
+    margin-bottom: 0.85rem;
+  }
+  .lp-fuite-card__badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    background: rgba(59, 54, 228, 0.08);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  .lp-fuite-card__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text);
+  }
+  .lp-fuite-card__desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .lp-fuite-card__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.875rem;
+    color: #334155;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1rem;
+  }
+  .lp-fuite-card__list li {
+    position: relative;
+    padding-left: 1.25rem;
+  }
+  .lp-fuite-card__list li::before {
+    content: "•";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+  }
+
+  /* Scope Styles */
+  .lp-scope-section {
+    padding: var(--space-3xl) 0;
+    background: #ffffff;
+  }
+  .lp-scope-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .lp-scope-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .lp-scope-col {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+  }
+  .lp-scope-col--included {
+    border-top: 4px solid #16a34a;
+  }
+  .lp-scope-col--excluded {
+    border-top: 4px solid #94a3b8;
+    background: #f8fafc;
+  }
+  .lp-scope-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .lp-icon-check {
+    color: #16a34a;
+    font-weight: 900;
+  }
+  .lp-icon-cross {
+    color: #94a3b8;
+    font-weight: 900;
+  }
+  .lp-scope-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    font-size: 0.925rem;
+    line-height: 1.55;
+    color: #334155;
+  }
+
+  /* Pricing Section */
+  .lp-pricing-section {
+    padding: var(--space-3xl) 0;
+    background: #f8fafc;
+    border-top: 1px solid var(--color-border);
+  }
+  .lp-pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .lp-pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .lp-pricing-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .lp-pricing-card {
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: var(--radius);
+  }
+  .lp-pricing-card__title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+  }
+  .lp-pricing-card__start {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .lp-pricing-card__text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+  .lp-pricing-callout {
+    margin-top: 2rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .lp-pricing-callout {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  /* Final CTA Banner */
+  .lp-final-cta {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: #ffffff;
+  }
+  .lp-final-cta__title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+  }
+  .lp-final-cta__lead {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+  }
+  .lp-final-cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

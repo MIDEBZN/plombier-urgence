@@ -1,0 +1,607 @@
+---
+import LandingLayout from '../../layouts/LandingLayout.astro';
+import LandingForm from '../../components/landing/LandingForm.astro';
+import LandingProcess from '../../components/landing/LandingProcess.astro';
+import LandingTrust from '../../components/landing/LandingTrust.astro';
+import LandingFAQ from '../../components/landing/LandingFAQ.astro';
+import { LANDING_CONFIG } from '../../data/landing-config';
+
+const title = "Débouchage Urgent Bruxelles 24/7 | WC, Évier & Canalisations";
+const description = "WC bouché, toilettes qui débordent, évier ou canalisation bouchée à Bruxelles ? Intervention rapide 24h/24. Débouchage mécanique & hydrocurage. ☎ 0465 68 51 58.";
+const canonicalPath = "/lp/debouchage/";
+
+const faqs = [
+  {
+    question: "Combien coûte le débouchage d'un WC ou d'un évier à Bruxelles ?",
+    answer: `Un débouchage simple démarre <strong>à partir de ${LANDING_CONFIG.pricing.debouchageStart}€</strong> pour une intervention mécanique courante (débouchage manuel ou furet d'appoint sur siphon accessible). Le tarif varie selon la localisation du bouchon (dans le sanitaire ou dans la colonne générale) et le matériel requis (furet rotatif motorisé ou camion hydrocureur). Le tarif de base vous est communiqué dès votre appel au <a href="${LANDING_CONFIG.phoneTel}">${LANDING_CONFIG.phoneDisplay}</a>, et le devis final est validé sur place avant tout travail.`
+  },
+  {
+    question: "Pourquoi déconseillez-vous les déboucheurs chimiques du commerce ?",
+    answer: "Les gels et liquides à base de soude caustique ou d'acide sulfurique stagnent dans la cuvette en cas d'engorgement complet sans dissoudre les bouchons organiques profonds ou les lingettes. En plus de corroder vos joints en PVC et d'émettre des vapeurs toxiques, ils représentent un grave danger de brûlure chimique pour le technicien intervenant."
+  },
+  {
+    question: "Qui doit payer le débouchage : le propriétaire ou le locataire ?",
+    answer: "En Belgique (droit du bail en Région bruxelloise et wallonne), l'engorgement lié à l'usage normal ou à l'accumulation de graisses/cheveux incombe généralement au <strong>locataire</strong> au titre de l'entretien locatif. En revanche, si le bouchon est dû à une déformation de tuyau, un affaissement de sol ou des racines d'arbres dans les conduites extérieures, les frais incombent au <strong>propriétaire</strong>."
+  },
+  {
+    question: "Quels équipements utilisez-vous pour déboucher les canalisations ?",
+    answer: "Nos techniciens disposent de matériel de déboucheur professionnel : pompes à pression manuelles professionnelles, furets mécaniques électriques rotatifs capables de traverser les coudes sans endommager la tuyauterie, et systèmes d'hydrocurage haute pression pour dégraisser et déboucher les colonnes collectives ou sterfputs."
+  },
+  {
+    question: "Intervenez-vous la nuit et le dimanche pour un WC bouché ?",
+    answer: `Oui, notre permanence fonctionne <strong>24h/24 et 7j/7</strong>. Pour les interventions effectuées la nuit (entre 20h et 7h), le samedi, le dimanche et les jours fériés légaux, un supplément fixe transparent de 50€ est appliqué conformément à notre barème.`
+  }
+];
+---
+
+<LandingLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+  adGroupLabel="Debouchage"
+>
+  <!-- Hero Section -->
+  <section class="lp-hero">
+    <div class="container lp-hero__grid">
+      <div class="lp-hero__content">
+        <div class="lp-hero__pill">
+          <span class="lp-pulse-dot"></span>
+          <span>Service Débouchage Express 24h/24 — 7j/7</span>
+        </div>
+
+        <h1 class="lp-hero__title">
+          Débouchage Urgent à Bruxelles : <span class="text-accent">WC, Évier & Canalisations</span>
+        </h1>
+
+        <p class="lp-hero__lead">
+          Toilettes qui débordent, eaux usées qui refoulent, douche qui ne s'évacue plus ou odeurs nauséabondes ? Intervention rapide d'un déboucheur qualifié à Bruxelles et communes limitrophes.
+        </p>
+
+        <!-- Warning Box -->
+        <div class="lp-warning-box">
+          <div class="lp-warning-box__icon">⚠️</div>
+          <div class="lp-warning-box__text">
+            <strong>Conseil immédiat :</strong> Ne tirez plus la chasse d'eau et n'ajoutez pas de produits chimiques corrosifs. Appelez notre dispatching pour bloquer tout débordement.
+          </div>
+        </div>
+
+        <!-- Primary Call Action -->
+        <div class="lp-hero__actions">
+          <a
+            href={LANDING_CONFIG.phoneTel}
+            class="btn btn-primary lp-btn-call"
+            data-cta="debouchage-hero-call"
+            data-adgroup="Debouchage"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <div class="lp-btn-call__text">
+              <span class="lp-btn-call__small">Appel Débouchage Immédiat</span>
+              <span class="lp-btn-call__number">{LANDING_CONFIG.phoneDisplay}</span>
+            </div>
+          </a>
+
+          <a
+            href={LANDING_CONFIG.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn lp-btn-wa"
+            data-cta="debouchage-hero-wa"
+            data-adgroup="Debouchage"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>Photo par WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="lp-hero__guarantee-pills">
+          <span class="lp-pill">✓ Débouchage dès {LANDING_CONFIG.pricing.debouchageStart}€</span>
+          <span class="lp-pill">✓ Outillage professionnel</span>
+          <span class="lp-pill">✓ Devis validé avant travaux</span>
+        </div>
+      </div>
+
+      <!-- Hero Callback Form -->
+      <div class="lp-hero__form-wrapper">
+        <LandingForm serviceName="Débouchage" formId="hero-debouchage-form" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Details & Scope -->
+  <section class="lp-scope-section">
+    <div class="container">
+      <div class="lp-section-header text-center">
+        <span class="lp-badge">Prestations Spécialisées</span>
+        <h2 class="lp-section-title">Quels types de bouchons traitons-nous ?</h2>
+        <p class="lp-section-subtitle">
+          Chaque sanitaire nécessite une technique adaptée pour libérer l'évacuation sans endommager l'émail ni la tuyauterie.
+        </p>
+      </div>
+
+      <div class="lp-services-grid">
+        <div class="lp-service-item card">
+          <div class="lp-service-item__icon">🚽</div>
+          <h3 class="lp-service-item__title">Débouchage WC & Toilettes</h3>
+          <p class="lp-service-item__text">
+            Bouchon de papier toilette, lingettes ou objets tombés dans la cuvette. Débouchage à la pompe professionnelle ou au furet sans rayer la céramique.
+          </p>
+        </div>
+
+        <div class="lp-service-item card">
+          <div class="lp-service-item__icon">🍽️</div>
+          <h3 class="lp-service-item__title">Débouchage Évier de Cuisine</h3>
+          <p class="lp-service-item__text">
+            Accumulation de résidus alimentaires et de graisses solidifiées dans le siphon et la conduite d'évacuation. Dégraissage et remise en écoulement fluide.
+          </p>
+        </div>
+
+        <div class="lp-service-item card">
+          <div class="lp-service-item__icon">🚿</div>
+          <h3 class="lp-service-item__title">Douche, Baignoire & Lavabo</h3>
+          <p class="lp-service-item__text">
+            Accumulation de savon, calcaire et cheveux dans la bonde ou le siphon de douche à l'italienne. Démontage propre et désobstruction mécanique.
+          </p>
+        </div>
+
+        <div class="lp-service-item card">
+          <div class="lp-service-item__icon">🏢</div>
+          <h3 class="lp-service-item__title">Canalisations & Colonnes</h3>
+          <p class="lp-service-item__text">
+            Refoulement général au rez-de-chaussée, sterfput qui déborde ou odeurs d'égout récurrentes. Intervention au furet électrique motorisé ou hydrocureuse.
+          </p>
+        </div>
+      </div>
+
+      <!-- Scope Comparison Box -->
+      <div class="lp-scope-grid" style="margin-top: 2rem;">
+        <div class="lp-scope-col lp-scope-col--included card">
+          <h3 class="lp-scope-title">
+            <span class="lp-icon-check">✓</span> Ce qui est inclus dans le service débouchage
+          </h3>
+          <ul class="lp-scope-list">
+            <li>Diagnostic visuel de l'écoulement et localisation du point de blocage.</li>
+            <li>Mise en œuvre du procédé adapté : pompe manuelle, furet mécanique ou rotatif.</li>
+            <li>Nettoyage et remontage soigné des siphons démontés.</li>
+            <li>Test de passage d'eau et contrôle d'étanchéité devant vous.</li>
+            <li>Chantier laissé propre et remise de facture conforme.</li>
+          </ul>
+        </div>
+
+        <div class="lp-scope-col lp-scope-col--excluded card">
+          <h3 class="lp-scope-title">
+            <span class="lp-icon-cross">✕</span> Ce qui nécessite des travaux lourds
+          </h3>
+          <ul class="lp-scope-list">
+            <li>Réparation de canalisation souterraine affaissée ou écrasée par des racines (nécessite passage caméra puis devis terrassement).</li>
+            <li>Réseau d'égouttage public extérieur communal (relevant du gestionnaire de réseau public Vivaqua).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Details -->
+  <section class="lp-pricing-section">
+    <div class="container">
+      <div class="lp-section-header text-center">
+        <span class="lp-badge">Tarification Débouchage</span>
+        <h2 class="lp-section-title">Des prix transparents annoncés à l'avance</h2>
+        <p class="lp-section-subtitle">
+          Aucun travail n'est engagé sans la présentation préalable d'un devis conforme.
+        </p>
+      </div>
+
+      <div class="lp-pricing-grid">
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Débouchage simple</h3>
+          <p class="lp-pricing-card__start">Dès {LANDING_CONFIG.pricing.debouchageStart} €</p>
+          <p class="lp-pricing-card__text">
+            Pour WC, lavabo ou évier avec siphon accessible et engorgement courant traité par méthode mécanique standard.
+          </p>
+        </div>
+
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Débouchage furet motorisé</h3>
+          <p class="lp-pricing-card__start">Sur devis annoncé</p>
+          <p class="lp-pricing-card__text">
+            Pour bouchons profonds dans les canalisations d'évacuation nécessitant un furet mécanique rotatif longue distance.
+          </p>
+        </div>
+
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Hydrocurage haute pression</h3>
+          <p class="lp-pricing-card__start">Sur devis annoncé</p>
+          <p class="lp-pricing-card__text">
+            Pour colonnes générales d'immeuble, sterfputs et collecteurs engorgés par tartre et résidus graisseux.
+          </p>
+        </div>
+
+        <div class="lp-pricing-card card">
+          <h3 class="lp-pricing-card__title">Nuit & Week-end</h3>
+          <p class="lp-pricing-card__start">+{LANDING_CONFIG.pricing.surchargeNuitWeekend} € fixe</p>
+          <p class="lp-pricing-card__text">
+            Majoration fixe claire pour les interventions réalisées entre 20h et 7h, les samedis, dimanches et jours fériés.
+          </p>
+        </div>
+      </div>
+
+      <div class="lp-pricing-callout">
+        <p><strong>Toilettes ou évier bouché ?</strong> Obtenez le tarif de votre intervention par téléphone avant déplacement :</p>
+        <a href={LANDING_CONFIG.phoneTel} class="btn btn-primary" data-cta="debouchage-pricing-call" data-adgroup="Debouchage">
+          📞 Appeler pour un tarif immédiat : {LANDING_CONFIG.phoneDisplay}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Component -->
+  <LandingProcess serviceName="votre débouchage" />
+
+  <!-- Trust Component -->
+  <LandingTrust />
+
+  <!-- FAQ Component -->
+  <LandingFAQ faqs={faqs} title="Questions fréquentes sur le débouchage à Bruxelles" />
+
+  <!-- Final CTA Banner -->
+  <section class="lp-final-cta">
+    <div class="container text-center">
+      <h2 class="lp-final-cta__title">Une canalisation bouchée ne se règle pas toute seule</h2>
+      <p class="lp-final-cta__lead">
+        Évitez le débordement et les dégâts des eaux. Nos déboucheurs interviennent partout à Bruxelles 24h/24.
+      </p>
+      <div class="lp-final-cta__buttons">
+        <a
+          href={LANDING_CONFIG.phoneTel}
+          class="btn btn-primary lp-btn-call"
+          data-cta="debouchage-final-call"
+          data-adgroup="Debouchage"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.1.31.03.66-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <div class="lp-btn-call__text">
+            <span class="lp-btn-call__small">Urgence Débouchage</span>
+            <span class="lp-btn-call__number">{LANDING_CONFIG.phoneDisplay}</span>
+          </div>
+        </a>
+
+        <a
+          href={LANDING_CONFIG.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn lp-btn-wa"
+          data-cta="debouchage-final-wa"
+          data-adgroup="Debouchage"
+        >
+          <span>Envoyer une photo par WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</LandingLayout>
+
+<style>
+  /* Hero Styles */
+  .lp-hero {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .lp-hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  @media (min-width: 992px) {
+    .lp-hero__grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+    }
+  }
+  .lp-hero__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e293b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1rem;
+  }
+  .lp-pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+  }
+  .lp-hero__title {
+    font-size: clamp(2rem, 4vw, 2.85rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .lp-hero__lead {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .lp-warning-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #92400e;
+    line-height: 1.45;
+  }
+  .lp-warning-box__icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  .lp-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .lp-btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .lp-btn-call:hover {
+    background: #dc2626;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  .lp-btn-call__text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .lp-btn-call__small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    font-weight: 700;
+  }
+  .lp-btn-call__number {
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  .lp-btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  .lp-btn-wa:hover {
+    background: #f0fdf4;
+    color: #166534;
+  }
+  .lp-hero__guarantee-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+  }
+  .lp-pill {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+  }
+
+  /* Services Grid */
+  .lp-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .lp-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .lp-services-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .lp-service-item {
+    padding: 1.5rem;
+    text-align: left;
+    background: #ffffff;
+  }
+  .lp-service-item__icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+  .lp-service-item__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+  .lp-service-item__text {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+
+  /* Scope Styles */
+  .lp-scope-section {
+    padding: var(--space-3xl) 0;
+    background: #ffffff;
+  }
+  .lp-scope-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .lp-scope-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .lp-scope-col {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+  }
+  .lp-scope-col--included {
+    border-top: 4px solid #16a34a;
+  }
+  .lp-scope-col--excluded {
+    border-top: 4px solid #94a3b8;
+    background: #f8fafc;
+  }
+  .lp-scope-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .lp-icon-check {
+    color: #16a34a;
+    font-weight: 900;
+  }
+  .lp-icon-cross {
+    color: #94a3b8;
+    font-weight: 900;
+  }
+  .lp-scope-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    font-size: 0.925rem;
+    line-height: 1.55;
+    color: #334155;
+  }
+
+  /* Pricing Section */
+  .lp-pricing-section {
+    padding: var(--space-3xl) 0;
+    background: #f8fafc;
+    border-top: 1px solid var(--color-border);
+  }
+  .lp-pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .lp-pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .lp-pricing-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .lp-pricing-card {
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: var(--radius);
+  }
+  .lp-pricing-card__title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+  }
+  .lp-pricing-card__start {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+  }
+  .lp-pricing-card__text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+  .lp-pricing-callout {
+    margin-top: 2rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .lp-pricing-callout {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  /* Final CTA Banner */
+  .lp-final-cta {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: #ffffff;
+  }
+  .lp-final-cta__title {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+  }
+  .lp-final-cta__lead {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+  }
+  .lp-final-cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

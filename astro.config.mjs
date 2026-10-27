@@ -8,9 +8,10 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     sitemap({
+      filter: (page) => !page.includes('/lp/'),
       lastmod: new Date(),
       serialize(item) {
-        item.lastmod = new Date();
+        item.lastmod = new Date().toISOString();
         return item;
       }
     })
