@@ -39,6 +39,8 @@ const { serviceName, formId = 'lp-callback-form' } = Astro.props;
         placeholder="ex. Jean Dupont"
         required
         autocomplete="name"
+        inputmode="text"
+        autocapitalize="words"
       />
       <span class="lp-form-error" data-error="name"></span>
     </div>
@@ -52,6 +54,7 @@ const { serviceName, formId = 'lp-callback-form' } = Astro.props;
         placeholder="ex. 0465 68 51 58"
         required
         autocomplete="tel"
+        inputmode="tel"
       />
       <span class="lp-form-error" data-error="phone"></span>
     </div>
@@ -64,6 +67,7 @@ const { serviceName, formId = 'lp-callback-form' } = Astro.props;
         name="commune"
         placeholder="ex. 1050 Ixelles, 1180 Uccle, Waterloo..."
         required
+        inputmode="text"
       />
       <span class="lp-form-error" data-error="commune"></span>
     </div>
@@ -156,14 +160,20 @@ const { serviceName, formId = 'lp-callback-form' } = Astro.props;
   .form-group input,
   .form-group textarea {
     width: 100%;
-    padding: 0.65rem 0.85rem;
-    font-size: 0.9rem;
+    padding: 0.75rem 0.85rem;
+    font-size: 16px; /* Prevents iOS auto-zoom */
+    min-height: 48px; /* Accessible touch target */
     font-family: inherit;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     background-color: #f8fafc;
     color: #0f172a;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    touch-action: manipulation;
+  }
+  .form-group textarea {
+    min-height: 90px;
+    resize: vertical;
   }
   .form-group input:focus,
   .form-group textarea:focus {
@@ -183,7 +193,8 @@ const { serviceName, formId = 'lp-callback-form' } = Astro.props;
     width: 100%;
     justify-content: center;
     padding: 0.85rem 1.25rem;
-    font-size: 1rem;
+    min-height: 50px;
+    font-size: 1.05rem;
     font-weight: 700;
     border-radius: 8px;
     background: var(--color-accent);
@@ -191,15 +202,27 @@ const { serviceName, formId = 'lp-callback-form' } = Astro.props;
     border: none;
     cursor: pointer;
     margin-top: 0.5rem;
-    transition: background 0.15s ease, transform 0.15s ease;
+    touch-action: manipulation;
+    transition: background 0.15s ease, transform 0.1s ease;
   }
   .lp-form-submit-btn:hover:not(:disabled) {
     background: var(--color-accent-hover);
-    transform: translateY(-1px);
+  }
+  .lp-form-submit-btn:active:not(:disabled) {
+    transform: scale(0.98);
   }
   .lp-form-submit-btn:disabled {
     opacity: 0.75;
     cursor: not-allowed;
+  }
+  @media (max-width: 640px) {
+    .lp-form-card {
+      padding: 1.25rem 1rem;
+      border-radius: 12px;
+    }
+    .lp-form-card__title {
+      font-size: 1.2rem;
+    }
   }
   .lp-form-privacy-note {
     font-size: 0.725rem;

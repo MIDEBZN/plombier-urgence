@@ -132,4 +132,26 @@ const { faqs, title = "Questions Fréquentes" } = Astro.props;
     text-decoration: underline;
     font-weight: 600;
   }
+  @media (max-width: 768px) {
+    .lp-faq-section {
+      padding: 2.25rem 0;
+    }
+    .lp-section-header {
+      margin-bottom: 1.5rem;
+    }
+    .lp-section-title {
+      font-size: 1.45rem;
+    }
+    .lp-section-subtitle {
+      font-size: 0.9rem;
+    }
+    .lp-faq-question {
+      padding: 0.95rem 1.1rem;
+      font-size: 0.95rem;
+    }
+    .lp-faq-answer {
+      padding: 0 1.1rem 1rem;
+      font-size: 0.875rem;
+    }
+  }
 </style>
